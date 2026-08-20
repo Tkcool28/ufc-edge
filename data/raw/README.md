@@ -16,3 +16,5 @@ Pinned Greco UFCStats snapshots live at:
 `data/raw/greco1899/<source-commit-prefix>/`
 
 The active source revision and expected Git blob SHAs are in `provenance/greco1899.lock.json`.
+
+The first requested snapshot is pinned to Greco1899 commit `8e40eb945e1127bf0ef172ab211a34787948f312` (2026-08-18 UTC). The ingestion workflow must verify every selected source Git blob before the snapshot is eligible to merge.
