@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 
 CONTRACT = Path("schemas/canonical_data_contract_v0.json")
-ALLOWED_TYPES = {"string", "integer", "number", "boolean", "date", "enum"}
+ALLOWED_TYPES = {"string", "integer", "number", "boolean", "date", "timestamp", "enum"}
 ALLOWED_UNITS = {"cm", "lb", "sec", "percent"}
 
 REQUIRED_CORE = {
@@ -23,10 +23,10 @@ REQUIRED_CORE = {
     "fighter_round_stats": {
         "fight_id", "fighter_id", "opponent_id", "round", "knockdowns", "control_sec", "reversals",
         "submission_attempts", "sig_strikes_landed", "sig_strikes_attempted", "total_strikes_landed",
-        "total_strikes_attempted", "takedowns_landed", "takedowns_attempted", "head_landed",
-        "head_attempted", "body_landed", "body_attempted", "leg_landed", "leg_attempted",
-        "distance_landed", "distance_attempted", "clinch_landed", "clinch_attempted", "ground_landed",
-        "ground_attempted",
+        "total_strikes_attempted", "takedowns_landed", "takedowns_attempted", "sig_head_landed",
+        "sig_head_attempted", "sig_body_landed", "sig_body_attempted", "sig_leg_landed", "sig_leg_attempted",
+        "sig_distance_landed", "sig_distance_attempted", "sig_clinch_landed", "sig_clinch_attempted",
+        "sig_ground_landed", "sig_ground_attempted",
     },
 }
 
@@ -48,6 +48,8 @@ def main() -> int:
         fail("display-name-only identity must not be trusted")
     if rules.get("round_zero_is_actual_round") is not False:
         fail("round zero must not be treated as an actual round")
+    if rules.get("strike_split_fields_are_significant_strikes") is not True:
+        fail("strike split family must stay explicitly significant-strike scoped")
 
     field_count = 0
     for table_name, table in tables.items():
@@ -109,10 +111,15 @@ def main() -> int:
         if round_spec.get("min") != 1:
             fail(f"{table_name}.round must have min=1")
 
+    # A concept should have one canonical home. General control time belongs in
+    # fighter_round_stats; the position table contains only richer positional splits.
+    if "control_sec" in tables["fighter_round_position"]["fields"]:
+        fail("fighter_round_position must not duplicate canonical control_sec")
+
     print(
         "CONTRACT_OK "
         f"version={payload.get('contract_version')} tables={len(tables)} fields={field_count} "
-        "missing_is_not_zero=true round_zero_actual=false"
+        "missing_is_not_zero=true round_zero_actual=false sig_splits=true"
     )
     return 0
 
