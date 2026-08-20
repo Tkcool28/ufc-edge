@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "source_repository": "rfordatascience/tidytuesday",
+  "source_commit": "107ff6c70de02dd807169e13aee7dc9d86ff88b6",
+  "source_commit_date": "2026-07-05T15:31:18-05:00",
+  "source_commit_message": "UFC Athletes and Fight Data (#1037)",
+  "raw_snapshot_directory": "data/raw/tidytuesday_ufc_rankings/107ff6c70de0",
+  "source_provenance": {
+    "tidytuesday_data_source": "benyamindsmith/fightr",
+    "tidytuesday_intro_note": "The fightr package compiles datasets from UFC athlete profiles, UFCStats, Kaggle Ultimate UFC Dataset, and Octagon API.",
+    "specific_rankings_upstream_not_fully_disambiguated": true,
+    "license_note": "No dataset-specific license was established during this acquisition pass. Preserve source provenance and use this snapshot for private research/modeling unless upstream terms are clarified further."
+  },
+  "files": [
+    {
+      "source_path": "data/2026/2026-07-07/ufc_rankings_dataset.csv",
+      "destination_name": "ufc_rankings_dataset.csv",
+      "size_bytes": 4361248,
+      "git_blob_sha1": "f7ec9c6a8e0100f6dbd63aa3e1707c030373c77b",
+      "role": "Historical UFC ranking observations"
+    },
+    {
+      "source_path": "data/2026/2026-07-07/ufc_rankings_dataset.md",
+      "destination_name": "ufc_rankings_dataset.md",
+      "size_bytes": 549,
+      "git_blob_sha1": "e4f057a1b752b6df38caad954286627a87edd88e",
+      "role": "Published data dictionary"
+    },
+    {
+      "source_path": "data/2026/2026-07-07/intro.md",
+      "destination_name": "UPSTREAM_INTRO.md",
+      "size_bytes": 1432,
+      "git_blob_sha1": "736449a406b1353252880ec43c45324c6ee158f2",
+      "role": "TidyTuesday source/provenance description"
+    }
+  ],
+  "semantics": {
+    "columns": ["date", "weightclass", "fighter", "rank"],
+    "rank_zero_meaning": "typically reigning champion",
+    "historical_feature_rule": "For a target fight, only ranking observations with ranking_date strictly before the target information cutoff may be used. Never take the nearest future ranking.",
+    "identity_warning": "Fighter is name text, not a stable source fighter ID. Match into canonical UFC Edge identity separately and fail closed on ambiguity.",
+    "coverage_start_observed": "2013-02-04",
+    "source_namespace": "tidytuesday_fightr_rankings"
+  },
+  "canonicalization_status": "RAW_ONLY_PENDING_PROVENANCE_IDENTITY_AND_ASOF_QA"
+}
