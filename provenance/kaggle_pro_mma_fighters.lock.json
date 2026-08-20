@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "source_platform": "Kaggle",
+  "dataset_handle": "binduvr/pro-mma-fighters",
+  "dataset_version": 1,
+  "dataset_title": "All Pro MMA Fighters - UFC, Bellator, One",
+  "license": "CC0-1.0 / Public Domain",
+  "upstream_origin": "Scraped from Sherdog by dataset publisher; retrieval state through 2021-08-11",
+  "raw_snapshot_directory": "data/raw/kaggle_pro_mma_fighters/v1",
+  "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_AND_TEMPORAL_QA",
+  "expected": {
+    "archive_file": "pro_mma_fighters.csv",
+    "data_rows": 5151
+  },
+  "semantics": {
+    "purpose": "Companion source profiles for the already-ingested CC0 UFC/Bellator/ONE fight-history snapshot.",
+    "point_in_time_career_totals": true,
+    "historical_backfill_allowed": false,
+    "missing_is_not_zero": true,
+    "notes": [
+      "Profile records and source URLs can assist identity reconciliation across the companion fight-history table.",
+      "Career record/stat totals reflect the publisher's 2021-08-11 retrieval state and must never be injected into earlier fight targets.",
+      "Canonical UFC identity remains independent of this secondary source."
+    ]
+  }
+}
