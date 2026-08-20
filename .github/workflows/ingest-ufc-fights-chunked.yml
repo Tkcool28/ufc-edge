@@ -1,0 +1,164 @@
+name: Snapshot official UFC fights in durable chunks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/ingest_ufc_fights_chunked.py"
+      - ".github/workflows/ingest-ufc-fights-chunked.yml"
+      - "provenance/ufc_com_fights_active_series.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-ufc-fights-chunked-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out writable branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Acquire and commit bounded chunks
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p provenance/runs
+
+          state="provenance/ufc_com_fights_active_series.json"
+          series="$(python -c 'import json; print(json.load(open("provenance/ufc_com_fights_active_series.json"))["series_id"])')"
+          status="$(python -c 'import json; print(json.load(open("provenance/ufc_com_fights_active_series.json"))["status"])')"
+          offset="$(python -c 'import json; print(json.load(open("provenance/ufc_com_fights_active_series.json"))["next_offset"])')"
+          max_pages="$(python -c 'import json; print(json.load(open("provenance/ufc_com_fights_active_series.json"))["chunk_max_pages"])')"
+
+          if [ "$status" = "completed" ]; then
+            echo "Series $series is already complete."
+            exit 0
+          fi
+
+          for chunk_index in $(seq 1 12); do
+            log="provenance/runs/ufc_com_fights_chunked_${GITHUB_RUN_ID}_${offset}.log"
+            echo "Starting series=$series offset=$offset max_pages=$max_pages"
+
+            set +e
+            timeout --signal=TERM --kill-after=30s 1200s \
+              python pipelines/ingest_ufc_fights_chunked.py \
+                --series-id "$series" chunk --start-offset "$offset" --max-pages "$max_pages" \
+                >"$log" 2>&1
+            code=$?
+            set -e
+
+            if [ "$code" -ne 0 ]; then
+              python - "$state" "$series" "$offset" "$code" "$log" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          path, series, offset, code, log = sys.argv[1:]
+          data = json.load(open(path, encoding="utf-8"))
+          data.update({
+              "series_id": series,
+              "status": "chunk_failed",
+              "next_offset": int(offset),
+              "last_exit_code": int(code),
+              "last_log": log,
+              "last_github_run_id": os.environ.get("GITHUB_RUN_ID"),
+              "updated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+          })
+          with open(path, "w", encoding="utf-8") as fh:
+              json.dump(data, fh, indent=2, sort_keys=True)
+              fh.write("\n")
+          PY
+              git add "$state" "$log"
+              git commit -m "Record UFC fight chunk failure at offset ${offset} [skip ci]"
+              git pull --rebase origin "${{ github.ref_name }}"
+              git push origin "HEAD:${{ github.ref_name }}"
+              exit "$code"
+            fi
+
+            manifest="data/raw/ufc_com_resources/fights/${series}/chunks/offset_$(printf '%06d' "$offset")/chunk_manifest.json"
+            if [ ! -f "$manifest" ]; then
+              echo "Missing expected chunk manifest: $manifest" >&2
+              exit 2
+            fi
+
+            terminal="$(python - "$manifest" <<'PY'
+          import json, sys
+          print("true" if json.load(open(sys.argv[1], encoding="utf-8"))["terminal"] else "false")
+          PY
+          )"
+            next_offset="$(python - "$manifest" <<'PY'
+          import json, sys
+          data=json.load(open(sys.argv[1], encoding="utf-8"))
+          print("" if data["next_offset"] is None else data["next_offset"])
+          PY
+          )"
+
+            python - "$state" "$series" "$offset" "$next_offset" "$terminal" "$log" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          path, series, offset, next_offset, terminal, log = sys.argv[1:]
+          data = json.load(open(path, encoding="utf-8"))
+          data.update({
+              "series_id": series,
+              "status": "finalizing" if terminal == "true" else "active",
+              "last_completed_offset": int(offset),
+              "next_offset": None if terminal == "true" else int(next_offset),
+              "last_log": log,
+              "last_github_run_id": os.environ.get("GITHUB_RUN_ID"),
+              "updated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+          })
+          with open(path, "w", encoding="utf-8") as fh:
+              json.dump(data, fh, indent=2, sort_keys=True)
+              fh.write("\n")
+          PY
+
+            git add "$state" "$log" "data/raw/ufc_com_resources/fights/${series}/chunks/offset_$(printf '%06d' "$offset")"
+            git commit -m "Import UFC fight chunk offset ${offset} [skip ci]"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+
+            if [ "$terminal" = "true" ]; then
+              python pipelines/ingest_ufc_fights_chunked.py --series-id "$series" finalize
+              python - "$state" "$series" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          path, series = sys.argv[1:]
+          data = json.load(open(path, encoding="utf-8"))
+          data.update({
+              "series_id": series,
+              "status": "completed",
+              "next_offset": None,
+              "final_manifest": f"data/raw/ufc_com_resources/fights/{series}/manifest.json",
+              "last_github_run_id": os.environ.get("GITHUB_RUN_ID"),
+              "updated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+          })
+          with open(path, "w", encoding="utf-8") as fh:
+              json.dump(data, fh, indent=2, sort_keys=True)
+              fh.write("\n")
+          PY
+              git add "$state" "data/raw/ufc_com_resources/fights/${series}/manifest.json"
+              git commit -m "Finalize complete UFC fight resource snapshot [skip ci]"
+              git pull --rebase origin "${{ github.ref_name }}"
+              git push origin "HEAD:${{ github.ref_name }}"
+              exit 0
+            fi
+
+            offset="$next_offset"
+          done
+
+          echo "Chunk loop ended before terminal page; state is durable at offset=$offset" >&2
+          exit 3
