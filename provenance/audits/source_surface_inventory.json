@@ -1,0 +1,685 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "collection": "20260820T123114Z",
+      "http_status_counts": {
+        "competitor_stats": {
+          "200": 18794,
+          "404": 28
+        },
+        "event_detail": {
+          "200": 911
+        },
+        "officials": {
+          "200": 9412
+        },
+        "plays": {
+          "200": 9412
+        },
+        "scoreboard": {
+          "200": 34
+        },
+        "status": {
+          "200": 9412
+        }
+      },
+      "manifest": "data/raw/espn_mma/20260820T123114Z/manifest.json",
+      "snapshot": "20260820T123114Z",
+      "source": "espn_mma"
+    },
+    {
+      "collection": "ufc_event_details",
+      "columns": [
+        "EVENT",
+        "URL",
+        "DATE",
+        "LOCATION"
+      ],
+      "path": "data/raw/greco1899/8e40eb945e11/ufc_event_details.csv",
+      "rows": 784,
+      "snapshot": "8e40eb945e11",
+      "source": "greco1899_ufcstats"
+    },
+    {
+      "collection": "ufc_fight_details",
+      "columns": [
+        "EVENT",
+        "BOUT",
+        "URL"
+      ],
+      "path": "data/raw/greco1899/8e40eb945e11/ufc_fight_details.csv",
+      "rows": 8859,
+      "snapshot": "8e40eb945e11",
+      "source": "greco1899_ufcstats"
+    },
+    {
+      "collection": "ufc_fight_results",
+      "columns": [
+        "EVENT",
+        "BOUT",
+        "OUTCOME",
+        "WEIGHTCLASS",
+        "METHOD",
+        "ROUND",
+        "TIME",
+        "TIME FORMAT",
+        "REFEREE",
+        "DETAILS",
+        "URL"
+      ],
+      "path": "data/raw/greco1899/8e40eb945e11/ufc_fight_results.csv",
+      "rows": 8859,
+      "snapshot": "8e40eb945e11",
+      "source": "greco1899_ufcstats"
+    },
+    {
+      "collection": "ufc_fight_stats",
+      "columns": [
+        "EVENT",
+        "BOUT",
+        "ROUND",
+        "FIGHTER",
+        "KD",
+        "SIG.STR.",
+        "SIG.STR. %",
+        "TOTAL STR.",
+        "TD",
+        "TD %",
+        "SUB.ATT",
+        "REV.",
+        "CTRL",
+        "HEAD",
+        "BODY",
+        "LEG",
+        "DISTANCE",
+        "CLINCH",
+        "GROUND"
+      ],
+      "path": "data/raw/greco1899/8e40eb945e11/ufc_fight_stats.csv",
+      "rows": 41672,
+      "snapshot": "8e40eb945e11",
+      "source": "greco1899_ufcstats"
+    },
+    {
+      "collection": "ufc_fighter_details",
+      "columns": [
+        "FIRST",
+        "LAST",
+        "NICKNAME",
+        "URL"
+      ],
+      "path": "data/raw/greco1899/8e40eb945e11/ufc_fighter_details.csv",
+      "rows": 4600,
+      "snapshot": "8e40eb945e11",
+      "source": "greco1899_ufcstats"
+    },
+    {
+      "collection": "ufc_fighter_tott",
+      "columns": [
+        "FIGHTER",
+        "HEIGHT",
+        "WEIGHT",
+        "REACH",
+        "STANCE",
+        "DOB",
+        "URL"
+      ],
+      "path": "data/raw/greco1899/8e40eb945e11/ufc_fighter_tott.csv",
+      "rows": 4601,
+      "snapshot": "8e40eb945e11",
+      "source": "greco1899_ufcstats"
+    },
+    {
+      "collection": "binduvr/pro-mma-fighters",
+      "columns": [
+        "url",
+        "fighter_name",
+        "nickname",
+        "birth_date",
+        "age",
+        "death_date",
+        "location",
+        "country",
+        "height",
+        "weight",
+        "association",
+        "weight_class",
+        "wins",
+        "wins_ko",
+        "wins_submission",
+        "wins_decision",
+        "wins_other",
+        "lossess",
+        "losses_ko",
+        "losses_submission",
+        "losses_decision",
+        "losses_other"
+      ],
+      "manifest": "data/raw/kaggle_pro_mma_fighters/v1/manifest.json",
+      "rows": 5151,
+      "snapshot": "v1",
+      "source": "kaggle_pro_mma_fighters"
+    },
+    {
+      "collection": "binduvr/pro-mma-fights",
+      "columns": [
+        "url",
+        "event_title",
+        "organisation",
+        "date",
+        "location",
+        "match_nr",
+        "fighter1_url",
+        "fighter2_url",
+        "fighter1_name",
+        "fighter2_name",
+        "fighter1_result",
+        "fighter2_result",
+        "win_method",
+        "win_details",
+        "referee",
+        "round",
+        "time"
+      ],
+      "manifest": "data/raw/kaggle_pro_mma_fights/v1/manifest.json",
+      "rows": 10448,
+      "snapshot": "v1",
+      "source": "kaggle_pro_mma_fights"
+    },
+    {
+      "collection": "107ff6c70de0",
+      "manifest": "data/raw/tidytuesday_ufc_rankings/107ff6c70de0/manifest.json",
+      "snapshot": "107ff6c70de0",
+      "source": "tidytuesday_ufc_rankings"
+    },
+    {
+      "attributes": [
+        "age",
+        "athlete_short_bio",
+        "broadcast_flag",
+        "changed",
+        "content_translation_outdated",
+        "content_translation_source",
+        "created",
+        "custom_name_override",
+        "default_langcode",
+        "dob",
+        "dod",
+        "don_best_id",
+        "drupal_internal__nid",
+        "drupal_internal__vid",
+        "ds_switch",
+        "facebook",
+        "facebook_id",
+        "facts",
+        "fight_pass",
+        "fightmetric_id",
+        "flip_card_style",
+        "hashtag",
+        "hero_priority",
+        "hub_id",
+        "include_in_top_results",
+        "instagram",
+        "langcode",
+        "metatag",
+        "metatags",
+        "mma_id",
+        "name",
+        "nickname",
+        "octagon_debut",
+        "old_id",
+        "old_url",
+        "origin",
+        "path",
+        "pfp_rank",
+        "pfp_rank_previous",
+        "promote",
+        "publish_on",
+        "qna",
+        "qna_facts",
+        "qna_teaser",
+        "qna_ufc",
+        "qna_wec",
+        "quote",
+        "rank",
+        "rank_previous",
+        "residence",
+        "revision_timestamp",
+        "revision_translation_affected",
+        "short_description",
+        "stats_bottom_6_spots",
+        "stats_height",
+        "stats_reach_arm",
+        "stats_reach_leg",
+        "stats_top_3_spots",
+        "stats_weight",
+        "status",
+        "sticky",
+        "store",
+        "strengths",
+        "takedown_accuracy",
+        "text_admin_notes",
+        "title",
+        "twitter",
+        "ufc_override",
+        "unpublish_on"
+      ],
+      "collection": "athletes",
+      "complete_collection_snapshot": true,
+      "manifest": "data/raw/ufc_com_resources/athletes/20260820T173134Z/manifest.json",
+      "pages": 84,
+      "relationship_linkage_counts": null,
+      "relationship_names": [
+        "athlete_card_image",
+        "athlete_ranking",
+        "athlete_stat",
+        "athlete_status",
+        "athlete_type",
+        "attributes",
+        "fighting_style",
+        "gallery_content",
+        "gender",
+        "gym",
+        "image",
+        "image_body_left",
+        "image_body_right",
+        "image_fight_pass",
+        "image_grappling",
+        "image_hero",
+        "image_left",
+        "image_profile_titleholder",
+        "image_ranking_pfp",
+        "image_right",
+        "image_store",
+        "image_striking",
+        "node_type",
+        "revision_uid",
+        "stats_weight_class",
+        "uid",
+        "video_bg_large",
+        "video_bg_medium",
+        "video_bg_small",
+        "video_bg_xs",
+        "video_hero"
+      ],
+      "rows": 4160,
+      "snapshot": "20260820T173134Z",
+      "source": "ufc_com_official"
+    },
+    {
+      "attributes": [
+        "changed",
+        "closed",
+        "computed_broadcast",
+        "content_translation_outdated",
+        "content_translation_source",
+        "created",
+        "cta_links",
+        "default_langcode",
+        "don_best_id",
+        "drupal_internal__nid",
+        "drupal_internal__vid",
+        "ds_switch",
+        "event_blurb",
+        "event_card_location",
+        "event_teaser",
+        "fight_card_time_early",
+        "fight_card_time_main",
+        "fight_card_time_prelims",
+        "fightmetric_id",
+        "hashtag",
+        "hero_athlete_1",
+        "hero_athlete_2",
+        "hero_footer_links",
+        "hub_id",
+        "include_in_top_results",
+        "langcode",
+        "main_card_time_localized",
+        "main_fight_name",
+        "metatag",
+        "metatags",
+        "number",
+        "old_id",
+        "old_url",
+        "override_time_early",
+        "override_time_main",
+        "override_time_prelims",
+        "path",
+        "promote",
+        "publish_on",
+        "replay_link",
+        "revision_timestamp",
+        "revision_translation_affected",
+        "save_these_dates",
+        "simulate_event_start",
+        "simulate_speed",
+        "status",
+        "sticky",
+        "subtitle",
+        "text_admin_notes",
+        "ticket_presale_fc_datetime",
+        "ticket_presale_nl_datetime",
+        "ticket_resale_link",
+        "ticket_sale_datetime",
+        "ticket_sale_link",
+        "ticket_vip_link",
+        "title",
+        "ufc_override",
+        "unpublish_on",
+        "use_meta_fight_rankings"
+      ],
+      "collection": "events",
+      "complete_collection_snapshot": true,
+      "manifest": "data/raw/ufc_com_resources/events/20260820T194553Z/manifest.json",
+      "pages": 16,
+      "relationship_linkage_counts": null,
+      "relationship_names": [
+        "event_status",
+        "event_type",
+        "fight_card_broadcast",
+        "fights",
+        "hero_buttons",
+        "image_event",
+        "image_hero",
+        "image_poster",
+        "node_type",
+        "partner_primary",
+        "recap",
+        "related_sub_events",
+        "results",
+        "revision_uid",
+        "ticket_status",
+        "ticket_vip_status",
+        "title_fight",
+        "uid",
+        "venue",
+        "video_bg_large",
+        "video_bg_medium",
+        "video_bg_small",
+        "video_bg_xs",
+        "video_promo"
+      ],
+      "rows": 799,
+      "snapshot": "20260820T194553Z",
+      "source": "ufc_com_official"
+    },
+    {
+      "collection": "3268146c0521",
+      "manifest": "data/raw/ufc_datalab_scorecards/3268146c0521/manifest.json",
+      "snapshot": "3268146c0521",
+      "source": "ufc_datalab_scorecards"
+    },
+    {
+      "attributes": [
+        "combined",
+        "drupal_internal__id",
+        "fightmetric_id",
+        "metatag",
+        "rank",
+        "round",
+        "statname",
+        "value"
+      ],
+      "collection": "fight_roundboard",
+      "distinct_nonnull_fightmetric_ids": 131,
+      "manifest": "data/raw/ufc_fightmetric_official/20260820T123046Z/manifest.json",
+      "pages": 8,
+      "relationship_names": [],
+      "round_value_counts": {
+        "1": 102,
+        "2": 105,
+        "3": 152,
+        "4": 6,
+        "5": 9
+      },
+      "rows": 374,
+      "selected_coverage": {
+        "fightmetric_id": {
+          "nonnull_fraction": 1.0,
+          "nonnull_rows": 374,
+          "seen_rows": 374
+        },
+        "round": {
+          "nonnull_fraction": 1.0,
+          "nonnull_rows": 374,
+          "seen_rows": 374
+        }
+      },
+      "snapshot": "20260820T123046Z",
+      "source": "ufc_fightmetric_official"
+    },
+    {
+      "attributes": [
+        "back_ctl_time",
+        "body_sig_str_att",
+        "body_sig_str_land",
+        "body_str_att",
+        "body_str_land",
+        "clinch_body_str_att",
+        "clinch_body_str_land",
+        "clinch_head_str_att",
+        "clinch_head_str_land",
+        "clinch_leg_str_att",
+        "clinch_leg_str_land",
+        "clinch_sig_kick_att",
+        "clinch_sig_kick_land",
+        "clinch_sig_punch_att",
+        "clinch_sig_punch_land",
+        "clinch_sig_str_att",
+        "clinch_sig_str_land",
+        "clinch_str_att",
+        "clinch_str_land",
+        "clinch_time",
+        "color",
+        "control_time",
+        "dist_body_kick_att",
+        "dist_body_kick_land",
+        "dist_body_punch_att",
+        "dist_body_punch_land",
+        "dist_body_str_att",
+        "dist_body_str_land",
+        "dist_head_kick_att",
+        "dist_head_kick_land",
+        "dist_head_punch_att",
+        "dist_head_punch_land",
+        "dist_head_str_att",
+        "dist_head_str_land",
+        "dist_legs_kick_att",
+        "dist_legs_kick_land",
+        "dist_legs_str_att",
+        "dist_legs_str_land",
+        "dist_str_att",
+        "dist_str_land",
+        "distance_time",
+        "drupal_internal__id",
+        "fightmetric_id",
+        "grap_rev_land",
+        "grap_stand_land",
+        "grap_sub_att",
+        "grap_take_att",
+        "grap_take_land",
+        "ground_body_str_att",
+        "ground_body_str_land",
+        "ground_ctl_time",
+        "ground_head_str_att",
+        "ground_head_str_land",
+        "ground_leg_str_att",
+        "ground_leg_str_land",
+        "ground_sig_kick_att",
+        "ground_sig_kick_land",
+        "ground_sig_punch_att",
+        "ground_sig_punch_land",
+        "ground_sig_str_att",
+        "ground_sig_str_land",
+        "ground_str_att",
+        "ground_str_land",
+        "ground_time",
+        "guard_ctl_time",
+        "half_guard_ctl_time",
+        "head_sig_str_att",
+        "head_sig_str_land",
+        "head_str_att",
+        "head_str_land",
+        "kicks_att",
+        "kicks_land",
+        "knock_down",
+        "legs_sig_str_att",
+        "legs_sig_str_land",
+        "legs_str_att",
+        "legs_str_land",
+        "metatag",
+        "mount_ctl_time",
+        "msc_ground_ctl__time",
+        "neutral_time",
+        "punches_att",
+        "punches_land",
+        "round",
+        "side_ctl_time",
+        "sig_str_att",
+        "sig_str_land",
+        "standing_time",
+        "tot_str_att",
+        "tot_str_land"
+      ],
+      "collection": "fight_stat",
+      "distinct_nonnull_fightmetric_ids": 8008,
+      "manifest": "data/raw/ufc_fightmetric_official/20260820T123046Z/manifest.json",
+      "pages": 1148,
+      "relationship_names": [],
+      "round_value_counts": {
+        "0": 16229,
+        "1": 16229,
+        "2": 11572,
+        "3": 8873,
+        "4": 690,
+        "5": 594
+      },
+      "rows": 57382,
+      "selected_coverage": {
+        "back_ctl_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "clinch_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "color": {
+          "nonnull_fraction": 0.9443205186295354,
+          "nonnull_rows": 54187,
+          "seen_rows": 57382
+        },
+        "control_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "distance_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "fightmetric_id": {
+          "nonnull_fraction": 0.9443205186295354,
+          "nonnull_rows": 54187,
+          "seen_rows": 57382
+        },
+        "grap_rev_land": {
+          "nonnull_fraction": 0.8412916942595239,
+          "nonnull_rows": 48275,
+          "seen_rows": 57382
+        },
+        "grap_stand_land": {
+          "nonnull_fraction": 0.6211181206650169,
+          "nonnull_rows": 35641,
+          "seen_rows": 57382
+        },
+        "grap_sub_att": {
+          "nonnull_fraction": 0.9443205186295354,
+          "nonnull_rows": 54187,
+          "seen_rows": 57382
+        },
+        "grap_take_att": {
+          "nonnull_fraction": 0.9443205186295354,
+          "nonnull_rows": 54187,
+          "seen_rows": 57382
+        },
+        "grap_take_land": {
+          "nonnull_fraction": 0.9443205186295354,
+          "nonnull_rows": 54187,
+          "seen_rows": 57382
+        },
+        "ground_ctl_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "ground_time": {
+          "nonnull_fraction": 0.299153044508731,
+          "nonnull_rows": 17166,
+          "seen_rows": 57382
+        },
+        "guard_ctl_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "half_guard_ctl_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "knock_down": {
+          "nonnull_fraction": 0.8544665574570423,
+          "nonnull_rows": 49031,
+          "seen_rows": 57382
+        },
+        "mount_ctl_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "round": {
+          "nonnull_fraction": 0.9443205186295354,
+          "nonnull_rows": 54187,
+          "seen_rows": 57382
+        },
+        "side_ctl_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "sig_str_att": {
+          "nonnull_fraction": 0.6649123418493604,
+          "nonnull_rows": 38154,
+          "seen_rows": 57382
+        },
+        "sig_str_land": {
+          "nonnull_fraction": 0.9443205186295354,
+          "nonnull_rows": 54187,
+          "seen_rows": 57382
+        },
+        "standing_time": {
+          "nonnull_fraction": 0.6481997839043603,
+          "nonnull_rows": 37195,
+          "seen_rows": 57382
+        },
+        "tot_str_att": {
+          "nonnull_fraction": 0.9443030915618138,
+          "nonnull_rows": 54186,
+          "seen_rows": 57382
+        },
+        "tot_str_land": {
+          "nonnull_fraction": 0.9443030915618138,
+          "nonnull_rows": 54186,
+          "seen_rows": 57382
+        }
+      },
+      "snapshot": "20260820T123046Z",
+      "source": "ufc_fightmetric_official"
+    }
+  ]
+}
