@@ -7,6 +7,13 @@ on:
       - ".github/workflows/ingest-greco.yml"
       - "pipelines/ingest_greco1899.py"
       - "provenance/greco1899.lock.json"
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/ingest-greco.yml"
+      - "pipelines/ingest_greco1899.py"
+      - "provenance/greco1899.lock.json"
+      - "data/raw/README.md"
   workflow_dispatch:
 
 permissions:
@@ -16,8 +23,10 @@ jobs:
   import-raw-snapshot:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out UFC Edge
+      - name: Check out writable source branch
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,4 +48,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Import pinned Greco1899 UFCStats snapshot [skip ci]"
-          git push
+          git push origin "HEAD:${{ github.head_ref || github.ref_name }}"
