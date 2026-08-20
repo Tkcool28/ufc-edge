@@ -1,0 +1,27 @@
+name: Validate canonical data contract
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "schemas/canonical_data_contract_v0.json"
+      - "schemas/canonical_data_contract_v0.md"
+      - "schemas/source_adapter_contract_v0.md"
+      - "pipelines/validate_canonical_contract.py"
+      - ".github/workflows/validate-canonical-contract.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate contract structure and core invariants
+        run: python pipelines/validate_canonical_contract.py
