@@ -1,6 +1,6 @@
 # Official UFC FightMetric semantics audit
 
-Generated: 2026-08-20T17:33:42.807093Z
+Generated: 2026-08-20T17:36:07.273156Z
 Snapshot: `data/raw/ufc_fightmetric_official/20260820T123046Z`
 
 ## Round 0

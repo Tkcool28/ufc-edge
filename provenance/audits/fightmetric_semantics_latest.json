@@ -924,7 +924,7 @@
     "rows_in_duplicate_keys": 1428
   },
   "fightmetric_snapshot": "data/raw/ufc_fightmetric_official/20260820T123046Z",
-  "generated_at_utc": "2026-08-20T17:33:42.807093Z",
+  "generated_at_utc": "2026-08-20T17:36:07.273156Z",
   "greco_inventory": {
     "files": {
       "ufc_event_details.csv": {
