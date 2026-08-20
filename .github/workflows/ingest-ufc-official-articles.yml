@@ -1,0 +1,39 @@
+name: Snapshot official UFC weigh-ins and scorecards
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ingest-ufc-official-articles.yml"
+      - "pipelines/ingest_ufc_official_articles.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Snapshot official UFC article families
+        run: python pipelines/ingest_ufc_official_articles.py
+      - name: Commit immutable article snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/raw/ufc_official_articles
+          if git diff --cached --quiet; then
+            echo "No official UFC article changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Snapshot official UFC weigh-ins and scorecards [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
