@@ -1,0 +1,49 @@
+name: Snapshot free UFC.com additive data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ingest-ufc-com.yml"
+      - "pipelines/ingest_ufc_com.py"
+      - "provenance/ufc_com_jsonapi_candidate.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-ufc-com-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out writable branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Snapshot official UFC.com JSON:API
+        run: python pipelines/ingest_ufc_com.py
+
+      - name: Commit immutable raw snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/raw/ufc_com
+          if git diff --cached --quiet; then
+            echo "No UFC.com snapshot changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Snapshot free UFC.com additive data [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
