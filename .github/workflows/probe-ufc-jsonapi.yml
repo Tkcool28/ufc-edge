@@ -1,0 +1,38 @@
+name: Probe UFC.com JSON API resources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/probe-ufc-jsonapi.yml"
+      - "pipelines/probe_ufc_jsonapi_resources.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probe official UFC JSON API resource catalog
+        run: python pipelines/probe_ufc_jsonapi_resources.py
+      - name: Commit probe result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add provenance/ufc_jsonapi_resource_probe.json provenance/ufc_jsonapi_resource_probe.raw.json
+          if git diff --cached --quiet; then
+            echo "No resource-catalog change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record UFC JSON API resource catalog [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
