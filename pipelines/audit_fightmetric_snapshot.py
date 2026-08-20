@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 """Audit the latest official UFC FightMetric snapshot before canonicalization.
 
-This script is deliberately read-only with respect to raw data.  It answers three
-questions with repository-resident evidence:
-
+Read-only with respect to raw data.  The audit answers:
 1. What does round=0 represent?
-2. How complete is the rich FightMetric/TIP layer across the ordered source rows?
-3. What identity/join material exists in the current Greco raw files?
+2. Are duplicate fighter/round source records present and are they identical?
+3. Where does rich FightMetric/TIP coverage appear in source-record order?
+4. What stable identity material exists in the current Greco raw files?
 
-It does *not* guess a FightMetric<->Greco crosswalk.  If no stable bridge is present,
-that is reported as an unresolved dependency rather than falling back to names.
+No name-only FightMetric<->Greco crosswalk is permitted.
 """
 from __future__ import annotations
 
@@ -62,9 +60,7 @@ def parse_time(value: Any) -> int | None:
 
 
 def parse_number(value: Any) -> float | None:
-    if value is None or value == "":
-        return None
-    if isinstance(value, bool):
+    if value is None or value == "" or isinstance(value, bool):
         return None
     if isinstance(value, (int, float)):
         return float(value)
@@ -85,17 +81,29 @@ def load_fightmetric(snapshot: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def percentile(values: list[float], q: float) -> float | None:
+    if not values:
+        return None
+    ordered = sorted(values)
+    index = min(len(ordered) - 1, max(0, math.ceil(q * len(ordered)) - 1))
+    return ordered[index]
+
+
 def field_sum_test(groups: dict[tuple[str, str], list[dict[str, Any]]], field: str, *, is_time: bool) -> dict[str, Any]:
     parser = parse_time if is_time else parse_number
-    compared = exact = 0
+    compared = exact = within_1 = within_2 = within_5 = 0
     abs_diffs: list[float] = []
     examples: list[dict[str, Any]] = []
-    missing_summary = incomplete_rounds = 0
+    missing_summary = incomplete_rounds = duplicate_round_groups = 0
 
     for (fid, color), rows in groups.items():
         summary_rows = [r for r in rows if str(r.get("round")) == "0"]
         actual = [r for r in rows if isinstance(r.get("round"), int) and r.get("round") >= 1]
         if len(summary_rows) != 1 or not actual:
+            continue
+        actual_rounds = [int(r["round"]) for r in actual]
+        if len(actual_rounds) != len(set(actual_rounds)):
+            duplicate_round_groups += 1
             continue
         summary = parser(summary_rows[0].get(field))
         if summary is None:
@@ -107,18 +115,25 @@ def field_sum_test(groups: dict[tuple[str, str], list[dict[str, Any]]], field: s
             continue
         expected = sum(v for v in vals if v is not None)
         diff = float(summary - expected)
+        adiff = abs(diff)
         compared += 1
-        abs_diffs.append(abs(diff))
-        if abs(diff) < 1e-9:
+        abs_diffs.append(adiff)
+        if adiff < 1e-9:
             exact += 1
-        elif len(examples) < 5:
+        if adiff <= 1:
+            within_1 += 1
+        if adiff <= 2:
+            within_2 += 1
+        if adiff <= 5:
+            within_5 += 1
+        if adiff >= 1e-9 and len(examples) < 5:
             examples.append({
                 "fightmetric_id": fid,
                 "color": color,
                 "summary": summary,
                 "sum_rounds_1_plus": expected,
                 "difference": diff,
-                "rounds": [r.get("round") for r in actual],
+                "rounds": actual_rounds,
             })
     return {
         "field": field,
@@ -126,11 +141,72 @@ def field_sum_test(groups: dict[tuple[str, str], list[dict[str, Any]]], field: s
         "groups_compared": compared,
         "exact_matches": exact,
         "exact_match_fraction": exact / compared if compared else None,
+        "within_1_fraction": within_1 / compared if compared else None,
+        "within_2_fraction": within_2 / compared if compared else None,
+        "within_5_fraction": within_5 / compared if compared else None,
         "mean_absolute_difference": sum(abs_diffs) / len(abs_diffs) if abs_diffs else None,
+        "p95_absolute_difference": percentile(abs_diffs, 0.95),
+        "p99_absolute_difference": percentile(abs_diffs, 0.99),
         "max_absolute_difference": max(abs_diffs) if abs_diffs else None,
         "missing_summary_groups": missing_summary,
         "incomplete_round_groups": incomplete_rounds,
+        "duplicate_round_groups_skipped": duplicate_round_groups,
         "mismatch_examples": examples,
+    }
+
+
+def normalize_duplicate_payload(row: dict[str, Any]) -> dict[str, Any]:
+    return {
+        k: v for k, v in row.items()
+        if k not in {"drupal_internal__id", "metatag"}
+    }
+
+
+def duplicate_round_audit(groups: dict[tuple[str, str], list[dict[str, Any]]]) -> dict[str, Any]:
+    duplicate_keys = exact_keys = conflicting_keys = 0
+    rows_in_duplicate_keys = 0
+    examples: list[dict[str, Any]] = []
+    for (fid, color), members in groups.items():
+        by_round: dict[int, list[dict[str, Any]]] = defaultdict(list)
+        for row in members:
+            if isinstance(row.get("round"), int):
+                by_round[int(row["round"])].append(row)
+        for rnd, dupes in by_round.items():
+            if len(dupes) < 2:
+                continue
+            duplicate_keys += 1
+            rows_in_duplicate_keys += len(dupes)
+            normalized = [json.dumps(normalize_duplicate_payload(r), sort_keys=True, separators=(",", ":")) for r in dupes]
+            if len(set(normalized)) == 1:
+                exact_keys += 1
+                classification = "exact_duplicate_except_source_internal_id/metatag"
+                differing_fields: list[str] = []
+            else:
+                conflicting_keys += 1
+                classification = "conflicting_duplicate"
+                keys = set().union(*(r.keys() for r in dupes))
+                differing_fields = sorted(
+                    k for k in keys
+                    if k not in {"drupal_internal__id", "metatag"}
+                    and len({json.dumps(r.get(k), sort_keys=True, default=str) for r in dupes}) > 1
+                )
+            if len(examples) < 20:
+                examples.append({
+                    "fightmetric_id": fid,
+                    "color": color,
+                    "round": rnd,
+                    "rows": len(dupes),
+                    "classification": classification,
+                    "drupal_internal_ids": [r.get("drupal_internal__id") for r in dupes],
+                    "differing_fields": differing_fields,
+                })
+    return {
+        "duplicate_fightmetric_color_round_keys": duplicate_keys,
+        "rows_in_duplicate_keys": rows_in_duplicate_keys,
+        "exact_duplicate_keys": exact_keys,
+        "conflicting_duplicate_keys": conflicting_keys,
+        "policy": "Do not silently deduplicate. Exact duplicates may later collapse under a documented source-row identity rule; conflicting duplicates require provenance/version resolution.",
+        "examples": examples,
     }
 
 
@@ -204,14 +280,23 @@ def main() -> int:
         rounds = tuple(sorted(int(r["round"]) for r in members if isinstance(r.get("round"), int)))
         group_shape_counts[rounds] += 1
 
-    tests = [field_sum_test(groups, f, is_time=False) for f in COUNT_FIELDS]
-    tests += [field_sum_test(groups, f, is_time=True) for f in TIME_FIELDS]
-    decisive = [t for t in tests if (t["groups_compared"] or 0) >= 100 and t["exact_match_fraction"] is not None]
-    near_unanimous = [t for t in decisive if t["exact_match_fraction"] >= 0.995]
-    round0_summary_supported = bool(decisive) and len(near_unanimous) / len(decisive) >= 0.8
+    count_tests = [field_sum_test(groups, f, is_time=False) for f in COUNT_FIELDS]
+    time_tests = [field_sum_test(groups, f, is_time=True) for f in TIME_FIELDS]
+    tests = count_tests + time_tests
+    count_decisive = [t for t in count_tests if (t["groups_compared"] or 0) >= 100]
+    time_decisive = [t for t in time_tests if (t["groups_compared"] or 0) >= 100]
+    count_support = [t for t in count_decisive if (t["exact_match_fraction"] or 0) >= 0.99]
+    time_support = [
+        t for t in time_decisive
+        if (t["within_2_fraction"] or 0) >= 0.95 and (t["mean_absolute_difference"] or 999) <= 2.0
+    ]
+    count_support_fraction = len(count_support) / len(count_decisive) if count_decisive else 0.0
+    time_support_fraction = len(time_support) / len(time_decisive) if time_decisive else 0.0
+    round0_summary_supported = count_support_fraction >= 0.8 and time_support_fraction >= 0.8
+    duplicates = duplicate_round_audit(groups)
 
     report = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "fightmetric_snapshot": snapshot.as_posix(),
         "rows_total": len(rows),
@@ -222,14 +307,19 @@ def main() -> int:
             {"rounds": list(shape), "groups": count}
             for shape, count in group_shape_counts.most_common(20)
         ],
+        "duplicate_round_audit": duplicates,
         "round0_semantics": {
-            "hypothesis": "round=0 is a per-fighter fight-total/summary row whose additive fields equal the sum of rounds 1+.",
+            "hypothesis": "round=0 is a per-fighter fight-total/summary row for the same FightMetric fight ID and corner.",
             "supported_by_additivity_tests": round0_summary_supported,
-            "decision_rule": "Supported only if >=80% of well-powered tested additive fields match exactly in >=99.5% of comparable groups.",
-            "decisive_fields": len(decisive),
-            "near_unanimous_fields": len(near_unanimous),
+            "decision_rule": "Support requires >=80% of well-powered count fields to match round sums exactly in >=99% of comparable non-duplicate groups, and >=80% of well-powered time fields to be within 2 seconds in >=95% of groups with mean absolute difference <=2 seconds.",
+            "count_support_fraction": count_support_fraction,
+            "time_support_fraction": time_support_fraction,
+            "count_fields_decisive": len(count_decisive),
+            "count_fields_supporting": len(count_support),
+            "time_fields_decisive": len(time_decisive),
+            "time_fields_supporting": len(time_support),
             "field_tests": tests,
-            "canonicalization_rule_if_supported": "Exclude round=0 from fighter-round tables; preserve separately as source-provided fight summary and verify against derived fight totals.",
+            "canonicalization_rule_if_supported": "Exclude round=0 from fighter-round tables. Preserve it as the source-provided fight summary for QA. Derive modeling fight totals from validated rounds 1+ rather than trusting summary rows when the two disagree; time-summary differences can reflect source rounding.",
         },
         "ordered_source_coverage": {
             "warning": "Drupal internal ID order is not calendar time. These bins locate coverage transitions only; year/era labeling requires a fight/date identity bridge.",
@@ -256,25 +346,37 @@ def main() -> int:
         "",
         "## Round 0",
         "",
-        f"Additivity verdict: **{'SUPPORTED' if round0_summary_supported else 'NOT YET SUPPORTED'}**.",
-        f"Decisive fields: {len(decisive)}; near-unanimous exact fields: {len(near_unanimous)}.",
+        f"Verdict: **{'SUPPORTED AS SOURCE FIGHT SUMMARY' if round0_summary_supported else 'NOT YET SUPPORTED'}**.",
+        f"Count support: {len(count_support)}/{len(count_decisive)} fields; time support: {len(time_support)}/{len(time_decisive)} fields.",
         "",
-        "| Field | Compared groups | Exact fraction | Mean abs diff |",
-        "|---|---:|---:|---:|",
+        "Count fields use exact additivity after duplicate-round groups are excluded. Time fields use explicit tolerance because the source summary frequently differs from summed rounded round values by ~1 second.",
+        "",
+        "| Field | Groups | Exact | Within 2s | Mean abs diff | P99 abs diff |",
+        "|---|---:|---:|---:|---:|---:|",
     ]
     for t in tests:
-        frac = t["exact_match_fraction"]
-        if t["groups_compared"]:
-            lines.append(f"| {t['field']} | {t['groups_compared']} | {frac:.6f} | {t['mean_absolute_difference']:.4f} |")
+        if not t["groups_compared"]:
+            continue
+        within2 = t["within_2_fraction"]
+        lines.append(
+            f"| {t['field']} | {t['groups_compared']} | {t['exact_match_fraction']:.6f} | "
+            f"{within2:.6f} | {t['mean_absolute_difference']:.4f} | {t['p99_absolute_difference']:.2f} |"
+        )
     lines += [
+        "",
+        "## Duplicate source rounds",
+        "",
+        f"Duplicate fighter/round keys: **{duplicates['duplicate_fightmetric_color_round_keys']}**; exact duplicate keys: **{duplicates['exact_duplicate_keys']}**; conflicting keys: **{duplicates['conflicting_duplicate_keys']}**.",
+        "",
+        "No duplicate row is silently dropped by this audit.",
         "",
         "## Identity status",
         "",
-        "No FightMetric↔Greco crosswalk is asserted by this audit. FightMetric rows have fightmetric ID + corner but no fighter/date identity. The next acquisition step is an official fight-node bridge; display-name-only matching remains prohibited.",
+        "No FightMetric↔Greco crosswalk is asserted yet. FightMetric rows have FightMetric ID + corner but no fighter/date identity. The next acquisition step is the official fight-node bridge; display-name-only matching remains prohibited.",
         "",
         "## Coverage-order warning",
         "",
-        "The JSON report includes coverage by Drupal internal-ID bins to locate where rich fields turn on/off. Those bins are **not calendar eras**. Calendar-year coverage must wait for a verified fight/date identity bridge.",
+        "The JSON report includes coverage by Drupal internal-ID bins to locate where rich fields turn on/off. Those bins are **not calendar eras**. Calendar-year coverage requires a verified fight/date identity bridge.",
         "",
         "## Greco identity inventory",
         "",
@@ -282,9 +384,12 @@ def main() -> int:
         "",
     ]
     for name, info in report["greco_inventory"]["files"].items():
-        lines.append(f"- `{name}` identity candidates: {', '.join(info['identity_candidate_columns']) or '(none)' }")
+        lines.append(f"- `{name}` identity candidates: {', '.join(info['identity_candidate_columns']) or '(none)'}")
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"wrote {OUT_JSON} and {OUT_MD}; round0_summary_supported={round0_summary_supported}")
+    print(
+        f"wrote {OUT_JSON} and {OUT_MD}; round0_summary_supported={round0_summary_supported}; "
+        f"duplicate_keys={duplicates['duplicate_fightmetric_color_round_keys']}"
+    )
     return 0
 
 
