@@ -1,0 +1,10 @@
+ERROR: RuntimeError: Duplicate fight resource IDs inside chunk: ['001f090b-deb0-4865-a78d-2ad5d02670dd', '010e45b8-e035-4b2b-93c4-15b2f544f044', '0225bfe6-0cdd-499a-85fd-605e351b6279', '02971e80-72b7-4254-beff-403b3e1bf7e9', '03c48874-3acd-4b11-8402-be7f0e0d9b77', '04c71b06-9251-42fb-ae8e-69787a54847d', '0550d42e-283c-4c27-a49e-90077e23976e', '06555a0f-0eda-4781-930c-75cc76fcad26', '083cfd88-1fc8-452e-a5df-8bd52a1cc64f', '084db87d-1215-42eb-bf4a-8e4319057556']
+Traceback (most recent call last):
+  File "/home/runner/work/ufc-edge/ufc-edge/pipelines/ingest_ufc_fights_chunked.py", line 386, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/runner/work/ufc-edge/ufc-edge/pipelines/ingest_ufc_fights_chunked.py", line 378, in main
+    collect_chunk(args.series_id, args.start_offset, args.max_pages)
+  File "/home/runner/work/ufc-edge/ufc-edge/pipelines/ingest_ufc_fights_chunked.py", line 208, in collect_chunk
+    raise RuntimeError(
+RuntimeError: Duplicate fight resource IDs inside chunk: ['001f090b-deb0-4865-a78d-2ad5d02670dd', '010e45b8-e035-4b2b-93c4-15b2f544f044', '0225bfe6-0cdd-499a-85fd-605e351b6279', '02971e80-72b7-4254-beff-403b3e1bf7e9', '03c48874-3acd-4b11-8402-be7f0e0d9b77', '04c71b06-9251-42fb-ae8e-69787a54847d', '0550d42e-283c-4c27-a49e-90077e23976e', '06555a0f-0eda-4781-930c-75cc76fcad26', '083cfd88-1fc8-452e-a5df-8bd52a1cc64f', '084db87d-1215-42eb-bf4a-8e4319057556']

@@ -1,10 +1,14 @@
 {
+  "chunk_max_pages": 40,
+  "last_exit_code": 1,
+  "last_github_run_id": "32413923436",
+  "last_log": "provenance/runs/ufc_com_fights_chunked_32413923436_0.log",
+  "next_offset": 0,
+  "notes": "Bounded chunks are committed immutably; this small state file is operational resume state and may change until the series is finalized.",
+  "promotion_rule": "Only data/raw/ufc_com_resources/fights/<series_id>/manifest.json marks a complete collection snapshot.",
   "schema_version": 1,
   "series_id": "20260820T202500Z",
-  "status": "active",
-  "next_offset": 0,
-  "chunk_max_pages": 40,
   "source": "Official UFC.com Drupal JSON:API /node/fight",
-  "promotion_rule": "Only data/raw/ufc_com_resources/fights/<series_id>/manifest.json marks a complete collection snapshot.",
-  "notes": "Bounded chunks are committed immutably; this small state file is operational resume state and may change until the series is finalized."
+  "status": "chunk_failed",
+  "updated_at_utc": "2026-08-20T20:29:00.134006Z"
 }
