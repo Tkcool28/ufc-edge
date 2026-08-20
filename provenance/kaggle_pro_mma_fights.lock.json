@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "source_platform": "Kaggle",
+  "dataset_handle": "binduvr/pro-mma-fights",
+  "dataset_version": 1,
+  "dataset_title": "All Pro MMA Fights - UFC, Bellator, One",
+  "retrieval_date_description": "Dataset states that fight data were retrieved through 2021-08-11.",
+  "upstream_origin": "Scraped from Sherdog by the Kaggle dataset author.",
+  "license": "CC0-1.0 / Public Domain dedication as displayed by Kaggle",
+  "expected": {
+    "archive_file": "pro_mma_fights.csv",
+    "data_rows": 10448,
+    "columns": 17
+  },
+  "raw_snapshot_directory": "data/raw/kaggle_pro_mma_fights/v1",
+  "semantics": {
+    "raw_only": true,
+    "coverage": "Professional fights in UFC, Bellator MMA and ONE Championship through the author's 2021-08-11 retrieval date.",
+    "primary_use_candidate": "Pre-UFC and cross-promotion professional fight-history context for fighters who later appear in UFC Edge canonical identity.",
+    "limitations": [
+      "This is a 2021 frozen snapshot and is not a complete worldwide MMA history.",
+      "Source fighter names/URLs must be identity-resolved before joining Greco UFCStats history.",
+      "A fight appearing in both this dataset and Greco must not be double-counted.",
+      "Method labels and promotion/event strings are source vocabulary and must be normalized only in the canonical layer.",
+      "Historical record/experience features must be rebuilt chronologically from fight rows, never from later career totals."
+    ]
+  },
+  "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_DEDUP_AND_CHRONOLOGY_QA"
+}
