@@ -1,0 +1,39 @@
+name: Import CC0 cross-promotion MMA fighter profiles
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ingest-kaggle-pro-mma-fighters.yml"
+      - "pipelines/ingest_kaggle_pro_mma_fighters.py"
+      - "provenance/kaggle_pro_mma_fighters.lock.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Import pinned CC0 fighter profiles
+        run: python pipelines/ingest_kaggle_pro_mma_fighters.py
+      - name: Commit immutable raw snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/raw/kaggle_pro_mma_fighters/v1
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Import CC0 cross-promotion MMA fighter profiles [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
