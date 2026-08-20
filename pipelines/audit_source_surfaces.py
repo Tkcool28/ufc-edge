@@ -123,6 +123,59 @@ def csv_from_manifest(m: dict[str, Any]) -> tuple[Path, str] | None:
     return None
 
 
+def add_espn(out: list[dict[str, Any]]) -> None:
+    manifest_path = latest([p for p in (ROOT / "espn_mma").glob("*/manifest.json") if p.is_file()])
+    if not manifest_path:
+        return
+    m = load_json(manifest_path)
+    counts = m.get("counts") or {}
+    discovery = m.get("discovery") or {}
+    schema = m.get("schema_observed") or {}
+    snapshot = m.get("snapshot_id") or manifest_path.parent.name
+    http = m.get("http_status_counts") or {}
+
+    out.append({
+        "source": "espn_mma",
+        "collection": "competitor_stats",
+        "snapshot": snapshot,
+        "manifest": manifest_path.as_posix(),
+        "rows": (http.get("competitor_stats") or {}).get("200"),
+        "attributes": schema.get("competitor_stat_names") or [],
+        "competition_count": counts.get("competitions"),
+        "event_count": discovery.get("event_count"),
+        "http_status_counts": http.get("competitor_stats"),
+    })
+    out.append({
+        "source": "espn_mma",
+        "collection": "plays",
+        "snapshot": snapshot,
+        "manifest": manifest_path.as_posix(),
+        "rows": (http.get("plays") or {}).get("200"),
+        "attributes": schema.get("play_type_names") or [],
+        "competition_count": counts.get("competitions"),
+        "http_status_counts": http.get("plays"),
+    })
+    out.append({
+        "source": "espn_mma",
+        "collection": "officials",
+        "snapshot": snapshot,
+        "manifest": manifest_path.as_posix(),
+        "rows": (http.get("officials") or {}).get("200"),
+        "attributes": schema.get("official_position_names") or [],
+        "competition_count": counts.get("competitions"),
+        "http_status_counts": http.get("officials"),
+    })
+    out.append({
+        "source": "espn_mma",
+        "collection": "results",
+        "snapshot": snapshot,
+        "manifest": manifest_path.as_posix(),
+        "rows": counts.get("competitions"),
+        "attributes": schema.get("result_names") or [],
+        "competition_count": counts.get("competitions"),
+    })
+
+
 def add_manifest_source(out: list[dict[str, Any]], source: str, glob_pattern: str) -> None:
     manifest_path = latest([p for p in ROOT.glob(glob_pattern) if p.is_file()])
     if not manifest_path:
@@ -135,24 +188,20 @@ def add_manifest_source(out: list[dict[str, Any]], source: str, glob_pattern: st
         "manifest": manifest_path.as_posix(),
     }
 
-    # Common direct fields.
     for key in ("rows", "pages", "http_status_counts"):
         if key in m:
             item[key] = m[key]
 
-    # Kaggle-style one-file manifest.
     file_info = m.get("file")
     if isinstance(file_info, dict):
         item["rows"] = item.get("rows", file_info.get("data_rows"))
         item["columns"] = file_info.get("columns") or []
 
-    # Published CSV manifests (rankings, OCR scorecards, etc.). Count the actual
-    # committed CSV so the inventory never confuses absent manifest counters with
-    # absent data.
     csv_ref = csv_from_manifest(m)
     if csv_ref:
         path, delimiter = csv_ref
         surface = csv_surface(path, delimiter=delimiter)
+        item["collection"] = path.stem
         item["rows"] = surface["rows"]
         item["columns"] = surface["columns"]
         item["data_path"] = surface["path"]
@@ -162,26 +211,10 @@ def add_manifest_source(out: list[dict[str, Any]], source: str, glob_pattern: st
         published = semantics.get("columns") or semantics.get("published_columns")
         if published and not item.get("columns"):
             item["columns"] = published
-        for key in ("coverage_start_observed", "canonicalization_status"):
-            if key in semantics:
-                item[key] = semantics[key]
-
-    # ESPN has deliberately different manifest structure.
-    if source == "espn_mma":
-        counts = m.get("counts") or {}
-        discovery = m.get("discovery") or {}
-        schema = m.get("schema_observed") or {}
-        item.update({
-            "rows": counts.get("competitions"),
-            "event_count": discovery.get("event_count"),
-            "competition_count": counts.get("competitions"),
-            "competitor_stat_requests": counts.get("competitor_stat_requests"),
-            "http_status_counts": m.get("http_status_counts"),
-            "attributes": schema.get("competitor_stat_names") or [],
-            "play_types": schema.get("play_type_names") or [],
-            "official_positions": schema.get("official_position_names") or [],
-            "result_names": schema.get("result_names") or [],
-        })
+        if "coverage_start_observed" in semantics:
+            item["coverage_start_observed"] = semantics["coverage_start_observed"]
+    if "canonicalization_status" in m:
+        item["canonicalization_status"] = m["canonicalization_status"]
 
     out.append(item)
 
@@ -208,8 +241,6 @@ def markdown(items: list[dict[str, Any]]) -> str:
             surface_parts.append(f"rels: {', '.join(str(x) for x in rels[:8])}")
         if item.get("event_count") is not None:
             surface_parts.append(f"events: {item['event_count']}")
-        if item.get("play_types"):
-            surface_parts.append(f"play types: {len(item['play_types'])}")
         surface = "<br>".join(surface_parts).replace("|", "\\|")
         lines.append(
             f"| {item.get('source','')} | {item.get('collection','')} | {item.get('rows','')} | "
@@ -233,7 +264,7 @@ def main() -> int:
     add_greco(items)
     add_fightmetric(items)
     add_ufc_resources(items)
-    add_manifest_source(items, "espn_mma", "espn_mma/*/manifest.json")
+    add_espn(items)
     add_manifest_source(items, "tidytuesday_ufc_rankings", "tidytuesday_ufc_rankings/*/manifest.json")
     add_manifest_source(items, "kaggle_pro_mma_fights", "kaggle_pro_mma_fights/*/manifest.json")
     add_manifest_source(items, "kaggle_pro_mma_fighters", "kaggle_pro_mma_fighters/*/manifest.json")
