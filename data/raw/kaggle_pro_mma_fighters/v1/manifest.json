@@ -1,0 +1,57 @@
+{
+  "archive": {
+    "bytes": 273205,
+    "content_type": "application/zip",
+    "sha256": "2306744b44f1fd77f484ceff3e47527931243ef83a649bf12548b3090ce12ee3"
+  },
+  "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_AND_TEMPORAL_QA",
+  "dataset_handle": "binduvr/pro-mma-fighters",
+  "dataset_title": "All Pro MMA Fighters - UFC, Bellator, One",
+  "dataset_version": 1,
+  "download_url": "https://www.kaggle.com/api/v1/datasets/download/binduvr/pro-mma-fighters?datasetVersionNumber=1",
+  "file": {
+    "bytes": 805830,
+    "columns": [
+      "url",
+      "fighter_name",
+      "nickname",
+      "birth_date",
+      "age",
+      "death_date",
+      "location",
+      "country",
+      "height",
+      "weight",
+      "association",
+      "weight_class",
+      "wins",
+      "wins_ko",
+      "wins_submission",
+      "wins_decision",
+      "wins_other",
+      "lossess",
+      "losses_ko",
+      "losses_submission",
+      "losses_decision",
+      "losses_other"
+    ],
+    "data_rows": 5151,
+    "path": "data/raw/kaggle_pro_mma_fighters/v1/pro_mma_fighters.csv",
+    "sha256": "f1c7d49b117b922ffabe3e82ee25dc69d573e02254d66812513efb4272d111a8"
+  },
+  "license": "CC0-1.0 / Public Domain",
+  "schema_version": 1,
+  "semantics": {
+    "historical_backfill_allowed": false,
+    "missing_is_not_zero": true,
+    "notes": [
+      "Profile records and source URLs can assist identity reconciliation across the companion fight-history table.",
+      "Career record/stat totals reflect the publisher's 2021-08-11 retrieval state and must never be injected into earlier fight targets.",
+      "Canonical UFC identity remains independent of this secondary source."
+    ],
+    "point_in_time_career_totals": true,
+    "purpose": "Companion source profiles for the already-ingested CC0 UFC/Bellator/ONE fight-history snapshot."
+  },
+  "source_platform": "Kaggle",
+  "upstream_origin": "Scraped from Sherdog by dataset publisher; retrieval state through 2021-08-11"
+}
