@@ -47,37 +47,35 @@
         "totalStrikesLanded",
         "wallclock"
       ],
-      "collection": "20260820T123114Z",
+      "collection": "competitor_stats",
       "competition_count": 9412,
-      "competitor_stat_requests": 18822,
       "event_count": 911,
       "http_status_counts": {
-        "competitor_stats": {
-          "200": 18794,
-          "404": 28
-        },
-        "event_detail": {
-          "200": 911
-        },
-        "officials": {
-          "200": 9412
-        },
-        "plays": {
-          "200": 9412
-        },
-        "scoreboard": {
-          "200": 34
-        },
-        "status": {
-          "200": 9412
-        }
+        "200": 18794,
+        "404": 28
       },
       "manifest": "data/raw/espn_mma/20260820T123114Z/manifest.json",
-      "official_positions": [
+      "rows": 18794,
+      "snapshot": "20260820T123114Z",
+      "source": "espn_mma"
+    },
+    {
+      "attributes": [
         "Judge",
         "Referee"
       ],
-      "play_types": [
+      "collection": "officials",
+      "competition_count": 9412,
+      "http_status_counts": {
+        "200": 9412
+      },
+      "manifest": "data/raw/espn_mma/20260820T123114Z/manifest.json",
+      "rows": 9412,
+      "snapshot": "20260820T123114Z",
+      "source": "espn_mma"
+    },
+    {
+      "attributes": [
         "Fight Complete",
         "Fight Open",
         "Fight Over",
@@ -102,7 +100,18 @@
         "Unofficial Winner Submission",
         "Walkout"
       ],
-      "result_names": [
+      "collection": "plays",
+      "competition_count": 9412,
+      "http_status_counts": {
+        "200": 9412
+      },
+      "manifest": "data/raw/espn_mma/20260820T123114Z/manifest.json",
+      "rows": 9412,
+      "snapshot": "20260820T123114Z",
+      "source": "espn_mma"
+    },
+    {
+      "attributes": [
         "decision",
         "decision---majority",
         "decision---majority-draw",
@@ -121,6 +130,9 @@
         "tko",
         "tko---doctors-stoppage"
       ],
+      "collection": "results",
+      "competition_count": 9412,
+      "manifest": "data/raw/espn_mma/20260820T123114Z/manifest.json",
       "rows": 9412,
       "snapshot": "20260820T123114Z",
       "source": "espn_mma"
@@ -228,6 +240,7 @@
       "source": "greco1899_ufcstats"
     },
     {
+      "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_AND_TEMPORAL_QA",
       "collection": "binduvr/pro-mma-fighters",
       "columns": [
         "url",
@@ -259,6 +272,7 @@
       "source": "kaggle_pro_mma_fighters"
     },
     {
+      "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_DEDUP_AND_CHRONOLOGY_QA",
       "collection": "binduvr/pro-mma-fights",
       "columns": [
         "url",
@@ -285,7 +299,8 @@
       "source": "kaggle_pro_mma_fights"
     },
     {
-      "collection": "107ff6c70de0",
+      "canonicalization_status": "RAW_ONLY_PENDING_PROVENANCE_IDENTITY_AND_ASOF_QA",
+      "collection": "ufc_rankings_dataset",
       "columns": [
         "date",
         "weightclass",
@@ -511,7 +526,8 @@
       "source": "ufc_com_official"
     },
     {
-      "collection": "3268146c0521",
+      "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_AND_SCORE_QA",
+      "collection": "SCORECARDS",
       "columns": [
         "red_fighter_name",
         "blue_fighter_name",
