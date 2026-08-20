@@ -1,0 +1,44 @@
+name: Import pinned free UFC historical rankings
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ingest-tidytuesday-ufc-rankings.yml"
+      - "pipelines/ingest_tidytuesday_ufc_rankings.py"
+      - "provenance/tidytuesday_ufc_rankings.lock.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-rankings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out writable branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and verify pinned historical rankings
+        run: python pipelines/ingest_tidytuesday_ufc_rankings.py
+
+      - name: Commit immutable raw snapshot if absent
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/raw/tidytuesday_ufc_rankings
+          if git diff --cached --quiet; then
+            echo "Pinned ranking snapshot already present; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Import pinned free UFC historical rankings [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
