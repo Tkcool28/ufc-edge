@@ -1,11 +1,11 @@
-name: Snapshot free UFC.com additive data
+name: Snapshot free UFC.com resources
 
 on:
   push:
     branches: [main]
     paths:
       - ".github/workflows/ingest-ufc-com.yml"
-      - "pipelines/ingest_ufc_com.py"
+      - "pipelines/ingest_ufc_com_resource.py"
       - "provenance/ufc_com_jsonapi_candidate.md"
   workflow_dispatch:
 
@@ -17,9 +17,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  snapshot:
+  snapshot-resources:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
     steps:
       - name: Check out writable branch
         uses: actions/checkout@v4
@@ -32,34 +32,46 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Snapshot official UFC.com JSON:API
-        id: ingest
+      - name: Snapshot and commit UFC.com resources independently
         shell: bash
         run: |
-          set +e
+          set -u
           mkdir -p provenance/runs
-          started="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          log="provenance/runs/ufc_com_${GITHUB_RUN_ID}.log"
-          status="provenance/runs/ufc_com_${GITHUB_RUN_ID}.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          sid="$(date -u +%Y%m%dT%H%M%SZ)"
+          overall=0
 
-          timeout --signal=TERM --kill-after=30s 2100s \
-            python pipelines/ingest_ufc_com.py >"$log" 2>&1
-          code=$?
-          ended="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          # Fights first because this is the critical FightMetric/identity bridge.
+          for resource in fights events athletes; do
+            started="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            log="provenance/runs/ufc_com_${resource}_${GITHUB_RUN_ID}.log"
+            status="provenance/runs/ufc_com_${resource}_${GITHUB_RUN_ID}.json"
 
-          if [ "$code" -eq 0 ]; then
-            result="success"
-          elif [ "$code" -eq 124 ] || [ "$code" -eq 137 ]; then
-            result="process_timeout"
-          else
-            result="failed"
-          fi
+            set +e
+            UFC_EDGE_SNAPSHOT_ID="$sid" timeout --signal=TERM --kill-after=30s 2100s \
+              python pipelines/ingest_ufc_com_resource.py --collection "$resource" >"$log" 2>&1
+            code=$?
+            set -e
+            ended="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
-          python - "$status" "$started" "$ended" "$result" "$code" "$log" <<'PY'
+            if [ "$code" -eq 0 ]; then
+              result="success"
+            elif [ "$code" -eq 124 ] || [ "$code" -eq 137 ]; then
+              result="process_timeout"
+              overall=1
+            else
+              result="failed"
+              overall=1
+            fi
+
+            python - "$status" "$resource" "$sid" "$started" "$ended" "$result" "$code" "$log" <<'PY'
           import json, os, sys
-          path, started, ended, result, code, log = sys.argv[1:]
+          path, resource, sid, started, ended, result, code, log = sys.argv[1:]
           payload = {
-              "pipeline": "ufc_com",
+              "pipeline": "ufc_com_resource",
+              "resource": resource,
+              "snapshot_id": sid,
               "github_run_id": os.environ.get("GITHUB_RUN_ID"),
               "github_run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT"),
               "trigger_sha": os.environ.get("GITHUB_SHA"),
@@ -70,35 +82,23 @@ jobs:
               "exit_code": int(code),
               "process_timeout_seconds": 2100,
               "log_path": log,
+              "promotion_rule": "Raw resource is committed only when manifest exists and process exits 0.",
           }
           with open(path, "w", encoding="utf-8") as fh:
               json.dump(payload, fh, indent=2, sort_keys=True)
               fh.write("\n")
           PY
 
-          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
-          exit "$code"
+            git add "$status" "$log"
+            if [ "$result" = "success" ] && [ -f "data/raw/ufc_com_resources/${resource}/${sid}/manifest.json" ]; then
+              git add "data/raw/ufc_com_resources/${resource}/${sid}"
+            fi
 
-      - name: Commit raw snapshot and durable run diagnostics
-        if: always()
-        shell: bash
-        env:
-          INGEST_OUTCOME: ${{ steps.ingest.outcome }}
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            if ! git diff --cached --quiet; then
+              git commit -m "Record UFC.com ${resource} run ${GITHUB_RUN_ID} (${result}) [skip ci]"
+              git pull --rebase origin "${{ github.ref_name }}"
+              git push origin "HEAD:${{ github.ref_name }}"
+            fi
+          done
 
-          git add provenance/runs/ufc_com_${GITHUB_RUN_ID}.json provenance/runs/ufc_com_${GITHUB_RUN_ID}.log
-          if [ "$INGEST_OUTCOME" = "success" ]; then
-            git add data/raw/ufc_com
-          fi
-
-          if git diff --cached --quiet; then
-            echo "No UFC.com output or diagnostics to commit."
-            exit 0
-          fi
-
-          git commit -m "Record UFC.com run ${GITHUB_RUN_ID} (${INGEST_OUTCOME}) [skip ci]"
-          git pull --rebase origin "${{ github.ref_name }}"
-          git push origin "HEAD:${{ github.ref_name }}"
+          exit "$overall"
