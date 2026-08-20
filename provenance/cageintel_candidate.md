@@ -1,14 +1,16 @@
-# Cage Intel — Historical Positional / Sparse Play-by-Play Candidate
+# Cage Intel — Historical Positional / Sparse Play-by-Play Evidence
 
 Status date: 2026-08-19 (America/Denver)
 
-Status: **PUBLIC WEB DATA; BULK-USE PERMISSION / PROVENANCE NOT YET RESOLVED**
+Status: **REFERENCE ONLY — DOMAIN CURRENTLY INACTIVE / FOR SALE**
 
-This note records a potentially high-value historical data source discovered during the Markov-data acquisition pass. Do **not** bulk ingest it until source provenance and acceptable use are clarified.
+Cage Intel is **not a current UFC Edge acquisition source**. Current web search resolves `cageintel.com` to a domain-for-sale page. Search engines still retain indexed fight pages from when the project was active, and those historical pages are useful evidence about what FightMetric/IMG-style UFC data existed.
 
-## Why it matters
+Do not design a production ingestion dependency around Cage Intel.
 
-Cage Intel publicly displays fight-level and round-level UFC data that goes materially beyond the Greco/UFCStats tables already ingested by UFC Edge.
+## Why the archived pages matter
+
+Indexed Cage Intel fight pages display data materially richer than the Greco/UFCStats tables already ingested by UFC Edge.
 
 Observed fields include:
 
@@ -35,9 +37,9 @@ Observed fields include:
 
 These time-in-position fields closely resemble the richer FightMetric / current IMG Arena UFC stat vocabulary and directly address a known limitation of the Holmes-McHale-Zychaluk Markov simulator, which did not have time spent in specific ground positions.
 
-## Sparse play-by-play
+## Sparse play-by-play evidence
 
-Cage Intel also exposes a fight timeline under `Play-By-Play`.
+Archived Cage Intel pages also contain a `Play-By-Play` timeline.
 
 Observed event types include:
 
@@ -55,58 +57,40 @@ Observed event types include:
 - outcome announced
 - fight complete
 
-For newer fights, events may include both round clock and real-world UTC timestamp. Older timelines may have UTC timestamps but `N/A` round clock.
+For newer fights, events include round clock and real-world UTC timestamps. Older timelines can contain UTC timestamps with `N/A` round clock.
 
-### Verified examples
+Verified indexed examples during discovery:
 
-- Michael Chiesa vs Tony Ferguson (2024): takedown attempt at R1 1:47, successful takedown at 1:45, submission attempt at 1:28; same page reports back-control time and other positional durations.
+- Michael Chiesa vs Tony Ferguson (2024): takedown attempt at R1 1:47, successful takedown at 1:45, submission attempt at 1:28; position-time fields include back control.
 - Glover Teixeira vs Jan Blachowicz (2021): multiple timestamped takedown attempts, successful takedowns and submission attempts.
 - Aljamain Sterling vs Pedro Munhoz (2019): timestamped takedown attempts.
-- Curtis Blaydes vs Alistair Overeem (2018): successful takedowns, knockdown, submission attempt; the page has timestamps even where the source round clock is unavailable.
+- Curtis Blaydes vs Alistair Overeem (2018): successful takedowns, knockdown and submission attempt; timestamps exist even where source round clock is unavailable.
 - Demetrious Johnson vs Ali Bagautinov (2014-06-14): timeline exists with successful takedowns and round markers.
 
-Cage Intel pages explicitly state on older fights that **Play-By-Play data started approximately mid-2014**.
+Archived pages explicitly state that **Play-By-Play data started approximately mid-2014**. Pre-mid-2014 pages state no play-by-play is available.
 
 ## Important limitation
 
-The public timeline is **not strike-by-strike play-by-play**. Ordinary strikes are absent. It is best understood as a sparse high-value action feed for grappling/knockdown/round-state events, combined with rich aggregate positional exposure.
+The archived timeline is **not strike-by-strike play-by-play**. Ordinary strikes are absent. It is best understood as a sparse high-value action feed for grappling/knockdown/round-state events, combined with rich aggregate positional exposure.
 
-Therefore:
-
-- it can help estimate takedown-attempt → takedown-success timing and some submission/knockdown hazards;
-- it can anchor phase-duration / position-occupancy models through TIP fields;
-- it cannot, by itself, empirically estimate every standing-strike transition or combination sequence.
+Therefore it demonstrates that a useful historical action layer existed, but it does not prove availability of fully atomic standing-strike sequences.
 
 FightGeek PRECISION remains the strongest discovered source for truly rich sequential strike/action data.
 
-## Historical positional coverage
+## Historical positional coverage evidence
 
-Cage Intel exposes position-time fields on fights well before its play-by-play start. Examples found during discovery include UFC fights from 2007 and 2011 with guard / half-guard / side / mount / back-control time.
+Cage Intel's indexed fight pages expose position-time fields on fights well before its play-by-play start, including UFC fights from the 2000s and early 2010s. This is consistent with academic work using the original FightMetric database.
 
-Academic work using the original FightMetric database confirms that FightMetric historically tracked over 100 round-level performance statistics, including time in clinch, guard, half guard, side control, mount and back control. That research notes that some older events did not have Time In Position (TIP) tracked, so missingness must be treated as source coverage rather than zero exposure.
+Patrick Gift's study, “The impact of new judging criteria on 10-8 scores in MMA” (DOI `10.3233/JSA-200478`), states that FightMetric tracked over 100 round-level performance statistics including time in clinch, guard, half guard, side control, mount and back control. The paper notes that some older events lacked Time In Position (TIP), so historical missingness must be modeled as source coverage rather than interpreted as zero exposure.
 
-Reference:
+## Provenance conclusion
 
-Patrick Gift, “The impact of new judging criteria on 10-8 scores in MMA,” Journal of Sports Analytics, DOI `10.3233/JSA-200478`.
+When Cage Intel was active, its About page described it as a solo university-student project intended to collate deep UFC analysis data. The pages inspected did not identify a bulk-data license or clearly identify the upstream provider.
 
-## Provenance / access problem
-
-Cage Intel's About page describes it as a solo university-student project intended to collate deep UFC analysis data. The public pages inspected during discovery did not state the upstream data provider or a bulk-data license.
-
-Because many fields strongly resemble FightMetric / IMG Arena data and the play-by-play structure resembles provider fight-detail feeds, UFC Edge must **not infer redistribution or bulk-scraping rights from public page visibility alone**.
-
-Before ingestion, resolve:
-
-1. What upstream source(s) generated the position-time and play-by-play data?
-2. Does Cage Intel have authority to redistribute/export it?
-3. May UFC Edge store a private historical copy for modeling?
-4. Is there an API/export or preferred respectful acquisition method rather than crawling HTML?
-5. What is the true historical field-coverage matrix by fight/year?
-
-Cage Intel's public contact address is listed on its About page. If we pursue this source, requesting a direct export/permission is preferable to bulk crawling.
+Because the domain is now inactive, and because the rich fields resemble FightMetric / IMG Arena data, UFC Edge should treat Cage Intel only as evidence pointing us toward the underlying data family—not as a dataset to reconstruct from search caches.
 
 ## UFC Edge decision
 
-**High-priority candidate pending permission/provenance.**
+**REFERENCE ONLY.**
 
-If legitimate private-modeling access can be obtained, this could fill much of the position-time gap at far lower friction than a commercial live-data contract, while FightGeek PRECISION would remain the higher-ceiling option for fully sequential strike/action transitions.
+Use the archived evidence to define acquisition questions for FightGeek, Sportradar/IMG Arena, or another legitimate historical FightMetric export. Do not scrape search-engine caches or the inactive domain into UFC Edge.
