@@ -4,6 +4,19 @@ Status date: 2026-08-20 (America/Denver)
 
 Purpose: exhaust the credible **free** additive-data landscape before feature contracts are frozen. This is an acquisition record, not permission to merge fields or use mutable snapshots as historical features.
 
+## Closeout addendum
+
+The closeout rule is strict: a triggered workflow does not count as ingestion. A source is only considered landed when the timestamped raw snapshot and its `manifest.json` are committed and auditable.
+
+At closeout:
+
+- official UFC FightMetric rich stats had been triggered but had **no raw snapshot commit yet**; the 120-minute job window had not yet expired, so status remains **UNVERIFIED / NOT YET LANDED**;
+- general UFC.com athlete/event/fight acquisition had exceeded its 45-minute workflow window with **no raw result commit**, so it is **NOT LANDED** pending workflow-log diagnosis;
+- ESPN MMA acquisition had been triggered but had **no raw snapshot commit yet**; the 120-minute job window had not yet expired, so it remains **UNVERIFIED / NOT YET LANDED**;
+- the official UFC article workflow exceeded its 45-minute window with no result commit, consistent with the independently verified HTTP 403 on `/jsonapi/node/article`; that JSON:API route remains **BLOCKED / NOT ACQUIRED**.
+
+See `provenance/acquisition_closeout_2026-08-20.md` for trigger commits, timeout evidence, expected result commits, and tomorrow's resume point.
+
 ## Acquisition status
 
 ### 1. Greco1899 / UFCStats backbone
@@ -36,11 +49,12 @@ The bounded surface probe confirmed `fight_stat` and `fight_roundboard` return H
 
 ### 3. Official UFC.com rich FightMetric `fight_stat`
 
-Status: **BULK SNAPSHOT PIPELINE STARTED; SCHEMA VERIFIED LIVE**
+Status: **SCHEMA VERIFIED; BULK SNAPSHOT TRIGGERED / NO RAW RESULT COMMIT AT CLOSEOUT**
 
 Pipeline: `pipelines/ingest_ufc_fight_stat.py`
 Workflow: `.github/workflows/ingest-ufc-fightmetric.yml`
 Raw namespace: `data/raw/ufc_fightmetric_official/<snapshot_id>/`
+Trigger commit: `af42270858ba782e7dfde58e0fcd45dcbb4c7c11`
 
 The verified live schema materially exceeds Greco's round table and includes:
 
@@ -78,27 +92,33 @@ The verified live schema materially exceeds Greco's round table and includes:
 
 This is a major simulator-data discovery. The first unsorted legacy sample rows contained null stats, so historical coverage must be measured rather than assumed. The bulk snapshot manifest computes non-null counts/fractions for every field and specifically all TIP fields.
 
+Closeout note: no expected `Snapshot official UFC FightMetric rich stats [skip ci]` commit was present. Because the workflow's 120-minute maximum had not yet elapsed, this is unverified rather than confirmed failed. Do not promote until the raw manifest actually lands and is inspected.
+
 `fight_roundboard` is also being preserved, but it is a record-book surface, not assumed to enumerate every fighter-round.
 
 ### 4. Official UFC.com athlete/event/fight point-in-time snapshot
 
-Status: **PIPELINE STARTED; FINAL RAW COMMIT NOT YET VERIFIED**
+Status: **NOT LANDED; 45-MIN WORKFLOW WINDOW ELAPSED WITHOUT RAW RESULT COMMIT**
 
 Pipeline: `pipelines/ingest_ufc_com.py`
 Workflow: `.github/workflows/ingest-ufc-com.yml`
 Raw namespace: `data/raw/ufc_com/<snapshot_id>/`
+Pipeline trigger/change commit: `bb6c5cd84f557f6667ec7dac78b51184d24935b1`
 
 Targeted additive fields include leg reach, gym, style, Octagon debut, official FightMetric identity, event/fight IDs and current context.
+
+Closeout note: the successful pipeline path necessarily creates a timestamped immutable snapshot, but no expected `Snapshot free UFC.com additive data [skip ci]` commit appeared after the workflow's 45-minute window. The exact in-job failure/timeout reason was not exposed by the current connector view and must be read from the workflow log before retrying.
 
 Leakage warning: current career totals/rates, rankings, streaks and status are point-in-time state and **must not be backfilled** into older target fights.
 
 ### 5. ESPN public MMA APIs
 
-Status: **PIPELINE STARTED; FINAL RAW COMMIT NOT YET VERIFIED**
+Status: **TRIGGERED / NO RAW RESULT COMMIT AT CLOSEOUT / UNVERIFIED**
 
 Pipeline: `pipelines/ingest_espn_mma.py`
 Workflow: `.github/workflows/ingest-espn-mma.yml`
 Raw namespace: `data/raw/espn_mma/<snapshot_id>/`
+Trigger commit: `a18df5f3fccaff4432c2102140c34418eed481bc`
 
 The historical pass attempts to preserve:
 
@@ -110,6 +130,8 @@ The historical pass attempts to preserve:
 - per-fight competitor statistics
 
 The manifest records HTTP coverage and observed stat/play/official vocabularies. Optional missing endpoints remain missing-source evidence rather than zeroes.
+
+Closeout note: no expected `Snapshot free ESPN MMA additive data [skip ci]` commit was present. Because the 120-minute workflow maximum had not yet elapsed, this is unverified rather than confirmed failed. ESPN remains additive/QA only until a committed manifest demonstrates actual historical coverage.
 
 ### 6. UFC-DataLab OCR scorecard snapshot
 
@@ -169,13 +191,13 @@ Primary value: pre-UFC and cross-promotion professional experience/context for f
 
 ### 9. Official UFC weigh-in result articles
 
-Status: **FREE / HIGH VALUE / JSON:API ARTICLE COLLECTION BLOCKED**
+Status: **FREE / HIGH VALUE / JSON:API ARTICLE COLLECTION BLOCKED; SNAPSHOT DID NOT LAND**
 
 Current UFC pages clearly publish fight-specific scale weights and explicit miss/catchweight/purse-penalty notes.
 
-The JSON:API resource catalog advertises `/jsonapi/node/article`, but a bounded live collection request returned HTTP 403. Therefore the initial plan to enumerate all weigh-in articles directly through JSON:API is **not currently viable**.
+The JSON:API resource catalog advertises `/jsonapi/node/article`, but a bounded live collection request returned HTTP 403. The later workflow exceeded its 45-minute window without producing an immutable result commit. Therefore the initial plan to enumerate all weigh-in articles directly through JSON:API is **not viable in its current form**.
 
-A queued filtered article snapshot may also fail for this reason; do not count it as acquired until a raw commit exists.
+Do not count the attempted article snapshot as acquired.
 
 Still desired:
 
@@ -190,7 +212,7 @@ Next free acquisition path should use a respectful official UFC index/search/sit
 
 ### 10. Official UFC scorecard articles
 
-Status: **FREE / HIGH VALUE / JSON:API ARTICLE COLLECTION BLOCKED**
+Status: **FREE / HIGH VALUE / JSON:API ARTICLE COLLECTION BLOCKED; SNAPSHOT DID NOT LAND**
 
 Official UFC scorecard pages exist publicly, but the same article-collection 403 blocks the clean JSON:API enumeration path.
 
@@ -224,12 +246,12 @@ The CC0 10,448-fight dataset gives us UFC/Bellator/ONE history through August 20
 
 ## Current free-data priority order
 
-1. Finish and audit the official UFC `fight_stat` bulk snapshot — this is now the highest-value free data task.
-2. Finish and validate the general UFC.com athlete/event/fight snapshot.
-3. Finish and validate ESPN history + additive fight surfaces.
-4. Crosswalk the three already-ingested additive datasets only after raw acquisition is stable: scorecards, dated rankings, cross-promotion fights.
-5. Revisit official weigh-ins via a clean enumeration route because fight-specific scale weights remain a real gap.
-6. Use MMA Decisions only if the scorecard QA shows the OCR layer is insufficient.
+1. Inspect the final outcome of the official UFC `fight_stat` bulk run; if a raw commit landed after closeout, audit its manifest before doing anything else.
+2. Diagnose the general UFC.com athlete/event/fight workflow from its job log before retrying.
+3. Inspect the final ESPN run outcome and audit its manifest if it landed.
+4. Crosswalk the already-ingested additive datasets only after raw acquisition is stable: scorecards, dated rankings, cross-promotion fights.
+5. Revisit official weigh-ins through a clean non-403 enumeration route because fight-specific scale weights remain a real gap.
+6. Use MMA Decisions only if scorecard QA shows the OCR layer is insufficient.
 7. Keep historical odds on a separate market-data track.
 
 ## Gate before feature freezing
