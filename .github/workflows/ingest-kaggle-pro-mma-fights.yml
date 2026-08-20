@@ -1,0 +1,39 @@
+name: Import CC0 cross-promotion MMA history
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ingest-kaggle-pro-mma-fights.yml"
+      - "pipelines/ingest_kaggle_pro_mma_fights.py"
+      - "provenance/kaggle_pro_mma_fights.lock.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-history:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download and validate pinned public-domain dataset
+        run: python pipelines/ingest_kaggle_pro_mma_fights.py
+      - name: Commit immutable raw snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/raw/kaggle_pro_mma_fights
+          if git diff --cached --quiet; then
+            echo "CC0 MMA history snapshot already present."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Import CC0 cross-promotion MMA history [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
