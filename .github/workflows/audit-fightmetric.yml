@@ -1,0 +1,45 @@
+name: Audit official UFC FightMetric semantics
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/audit-fightmetric.yml"
+      - "pipelines/audit_fightmetric_snapshot.py"
+      - "data/raw/ufc_fightmetric_official/**"
+      - "data/raw/greco1899/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audit-ufc-fightmetric-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit full FightMetric snapshot and Greco identity surface
+        run: python pipelines/audit_fightmetric_snapshot.py
+      - name: Commit audit artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add provenance/audits/fightmetric_semantics_latest.json provenance/audits/fightmetric_semantics_latest.md
+          if git diff --cached --quiet; then
+            echo "No FightMetric audit changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Audit official UFC FightMetric semantics [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
