@@ -1,0 +1,16 @@
+{
+  "ended_at_utc": "2026-08-20T20:20:53Z",
+  "exit_code": 124,
+  "github_run_attempt": "1",
+  "github_run_id": "32410416979",
+  "log_path": "provenance/runs/ufc_com_fights_32410416979.log",
+  "pipeline": "ufc_com_resource",
+  "process_timeout_seconds": 2100,
+  "promotion_rule": "Raw resource is committed only when manifest exists and process exits 0.",
+  "ref": "main",
+  "resource": "fights",
+  "result": "process_timeout",
+  "snapshot_id": "20260820T194553Z",
+  "started_at_utc": "2026-08-20T19:45:53Z",
+  "trigger_sha": "33068668a1a085f2be55a5f1ab0c534e49991d71"
+}
