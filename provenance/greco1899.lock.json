@@ -8,12 +8,12 @@
   "selected_files": [
     {
       "path": "ufc_event_details.csv",
-      "git_blob_sha": "132a5881a5612c3822724216442326588982edb1",
+      "git_blob_sha": "132a752dd5af87bdd8b0f2736f1b2afa6f8a3fd1",
       "role": "event identity, date, and location"
     },
     {
       "path": "ufc_fight_details.csv",
-      "git_blob_sha": "5b7f594bed5c4975170d94657132c52fba3acb65",
+      "git_blob_sha": "5b7f26c6d320bb832b263b78793acee04f73b780",
       "role": "event-to-bout identity and fight URL"
     },
     {
@@ -28,12 +28,12 @@
     },
     {
       "path": "ufc_fighter_details.csv",
-      "git_blob_sha": "ea02446781c52fe3b66251c94347abb98e4e098b",
+      "git_blob_sha": "ea0247a83dbd6bdadd57f034bffa91d52f3af9ee",
       "role": "fighter name, nickname, and stable UFCStats URL identity"
     },
     {
       "path": "ufc_fighter_tott.csv",
-      "git_blob_sha": "3b86db74de534940cec657511aba6c706192a5ba",
+      "git_blob_sha": "3b86d0f368801b0747aaf7d813f675a6af484611",
       "role": "tale-of-the-tape height, weight snapshot, reach, stance snapshot, and DOB"
     }
   ],
