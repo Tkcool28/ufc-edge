@@ -1,0 +1,2337 @@
+{
+  "distinct_fightmetric_color_groups": 16015,
+  "fightmetric_snapshot": "data/raw/ufc_fightmetric_official/20260820T123046Z",
+  "generated_at_utc": "2026-08-20T17:30:28.583936Z",
+  "greco_inventory": {
+    "files": {
+      "ufc_event_details.csv": {
+        "first_rows": [
+          {
+            "DATE": "August 15, 2026",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+            "LOCATION": "Philadelphia, Pennsylvania, USA",
+            "URL": "http://ufcstats.com/event-details/b96619b3acd7d9da"
+          },
+          {
+            "DATE": "August 08, 2026",
+            "EVENT": "UFC Fight Night: Gamrot vs. Salkilld",
+            "LOCATION": "Las Vegas, Nevada, USA",
+            "URL": "http://ufcstats.com/event-details/495add4fbede0a44"
+          },
+          {
+            "DATE": "August 01, 2026",
+            "EVENT": "UFC Fight Night: Medic vs. Rodriguez",
+            "LOCATION": "Belgrade, Vojvodina, Serbia",
+            "URL": "http://ufcstats.com/event-details/1a50e734bb54861a"
+          }
+        ],
+        "headers": [
+          "EVENT",
+          "URL",
+          "DATE",
+          "LOCATION"
+        ],
+        "identity_candidate_columns": [
+          "EVENT",
+          "URL"
+        ]
+      },
+      "ufc_fight_details.csv": {
+        "first_rows": [
+          {
+            "BOUT": "Islam Makhachev vs. Ian Machado Garry",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+            "URL": "http://ufcstats.com/fight-details/365fd759c03e93cf"
+          },
+          {
+            "BOUT": "Mackenzie Dern vs. Gillian Robertson",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+            "URL": "http://ufcstats.com/fight-details/4700d42c9869674a"
+          },
+          {
+            "BOUT": "Jalin Turner vs. Kaue Fernandes",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+            "URL": "http://ufcstats.com/fight-details/d4bd456d70965734"
+          }
+        ],
+        "headers": [
+          "EVENT",
+          "BOUT",
+          "URL"
+        ],
+        "identity_candidate_columns": [
+          "EVENT",
+          "URL"
+        ]
+      },
+      "ufc_fight_results.csv": {
+        "first_rows": [
+          {
+            "BOUT": "Islam Makhachev vs. Ian Machado Garry",
+            "DETAILS": "Sal D'amato 46 - 49.Mike Bell 46 - 49.Eric Colon 47 - 48.",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+            "METHOD": "Decision - Unanimous ",
+            "OUTCOME": "W/L",
+            "REFEREE": "Herb Dean",
+            "ROUND": "5",
+            "TIME": "5:00",
+            "TIME FORMAT": "5 Rnd (5-5-5-5-5)",
+            "URL": "http://ufcstats.com/fight-details/365fd759c03e93cf",
+            "WEIGHTCLASS": "UFC Welterweight Title Bout"
+          },
+          {
+            "BOUT": "Mackenzie Dern vs. Gillian Robertson",
+            "DETAILS": "Sal D'amato 46 - 49.Chris Bolinski 46 - 49.Rick Winter 47 - 48.",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+            "METHOD": "Decision - Unanimous ",
+            "OUTCOME": "W/L",
+            "REFEREE": "Keith Peterson",
+            "ROUND": "5",
+            "TIME": "5:00",
+            "TIME FORMAT": "5 Rnd (5-5-5-5-5)",
+            "URL": "http://ufcstats.com/fight-details/4700d42c9869674a",
+            "WEIGHTCLASS": "UFC Women's Strawweight Title Bout"
+          },
+          {
+            "BOUT": "Jalin Turner vs. Kaue Fernandes",
+            "DETAILS": "Punches to Head On Ground ",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+            "METHOD": "KO/TKO ",
+            "OUTCOME": "W/L",
+            "REFEREE": "Jason Herzog",
+            "ROUND": "1",
+            "TIME": "0:39",
+            "TIME FORMAT": "3 Rnd (5-5-5)",
+            "URL": "http://ufcstats.com/fight-details/d4bd456d70965734",
+            "WEIGHTCLASS": "Lightweight Bout"
+          }
+        ],
+        "headers": [
+          "EVENT",
+          "BOUT",
+          "OUTCOME",
+          "WEIGHTCLASS",
+          "METHOD",
+          "ROUND",
+          "TIME",
+          "TIME FORMAT",
+          "REFEREE",
+          "DETAILS",
+          "URL"
+        ],
+        "identity_candidate_columns": [
+          "EVENT",
+          "URL"
+        ]
+      },
+      "ufc_fight_stats.csv": {
+        "first_rows": [
+          {
+            "BODY": "0 of 0",
+            "BOUT": "Islam Makhachev vs. Ian Machado Garry",
+            "CLINCH": "0 of 1",
+            "CTRL": "3:38",
+            "DISTANCE": "2 of 3",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+            "FIGHTER": "Islam Makhachev",
+            "GROUND": "1 of 1",
+            "HEAD": "1 of 3",
+            "KD": "0",
+            "LEG": "2 of 2",
+            "REV.": "0",
+            "ROUND": "Round 1",
+            "SIG.STR.": "3 of 5",
+            "SIG.STR. %": "60%",
+            "SUB.ATT": "0",
+            "TD": "1 of 5",
+            "TD %": "20%",
+            "TOTAL STR.": "23 of 25"
+          },
+          {
+            "BODY": "2 of 2",
+            "BOUT": "Islam Makhachev vs. Ian Machado Garry",
+            "CLINCH": "5 of 5",
+            "CTRL": "2:19",
+            "DISTANCE": "6 of 15",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+            "FIGHTER": "Islam Makhachev",
+            "GROUND": "0 of 0",
+            "HEAD": "6 of 15",
+            "KD": "1",
+            "LEG": "3 of 3",
+            "REV.": "0",
+            "ROUND": "Round 2",
+            "SIG.STR.": "11 of 20",
+            "SIG.STR. %": "55%",
+            "SUB.ATT": "0",
+            "TD": "1 of 1",
+            "TD %": "100%",
+            "TOTAL STR.": "24 of 35"
+          },
+          {
+            "BODY": "1 of 1",
+            "BOUT": "Islam Makhachev vs. Ian Machado Garry",
+            "CLINCH": "0 of 0",
+            "CTRL": "0:16",
+            "DISTANCE": "5 of 10",
+            "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+            "FIGHTER": "Islam Makhachev",
+            "GROUND": "0 of 0",
+            "HEAD": "1 of 6",
+            "KD": "0",
+            "LEG": "3 of 3",
+            "REV.": "0",
+            "ROUND": "Round 3",
+            "SIG.STR.": "5 of 10",
+            "SIG.STR. %": "50%",
+            "SUB.ATT": "0",
+            "TD": "1 of 2",
+            "TD %": "50%",
+            "TOTAL STR.": "5 of 10"
+          }
+        ],
+        "headers": [
+          "EVENT",
+          "BOUT",
+          "ROUND",
+          "FIGHTER",
+          "KD",
+          "SIG.STR.",
+          "SIG.STR. %",
+          "TOTAL STR.",
+          "TD",
+          "TD %",
+          "SUB.ATT",
+          "REV.",
+          "CTRL",
+          "HEAD",
+          "BODY",
+          "LEG",
+          "DISTANCE",
+          "CLINCH",
+          "GROUND"
+        ],
+        "identity_candidate_columns": [
+          "EVENT",
+          "FIGHTER"
+        ]
+      },
+      "ufc_fighter_details.csv": {
+        "first_rows": [
+          {
+            "FIRST": "Tom",
+            "LAST": "Aaron",
+            "NICKNAME": "",
+            "URL": "http://ufcstats.com/fighter-details/93fe7332d16c6ad9"
+          },
+          {
+            "FIRST": "Danny",
+            "LAST": "Abbadi",
+            "NICKNAME": "The Assassin",
+            "URL": "http://ufcstats.com/fighter-details/15df64c02b6b0fde"
+          },
+          {
+            "FIRST": "Nariman",
+            "LAST": "Abbasov",
+            "NICKNAME": "Bayraktar",
+            "URL": "http://ufcstats.com/fighter-details/59a9d6dac61c2540"
+          }
+        ],
+        "headers": [
+          "FIRST",
+          "LAST",
+          "NICKNAME",
+          "URL"
+        ],
+        "identity_candidate_columns": [
+          "URL"
+        ]
+      },
+      "ufc_fighter_tott.csv": {
+        "first_rows": [
+          {
+            "DOB": "Jul 13, 1978",
+            "FIGHTER": "Tom Aaron",
+            "HEIGHT": "--",
+            "REACH": "--",
+            "STANCE": "",
+            "URL": "http://ufcstats.com/fighter-details/93fe7332d16c6ad9",
+            "WEIGHT": "155 lbs."
+          },
+          {
+            "DOB": "Jul 03, 1983",
+            "FIGHTER": "Danny Abbadi",
+            "HEIGHT": "5' 11\"",
+            "REACH": "--",
+            "STANCE": "Orthodox",
+            "URL": "http://ufcstats.com/fighter-details/15df64c02b6b0fde",
+            "WEIGHT": "155 lbs."
+          },
+          {
+            "DOB": "Feb 01, 1994",
+            "FIGHTER": "Nariman Abbasov",
+            "HEIGHT": "5' 8\"",
+            "REACH": "66\"",
+            "STANCE": "Orthodox",
+            "URL": "http://ufcstats.com/fighter-details/59a9d6dac61c2540",
+            "WEIGHT": "155 lbs."
+          }
+        ],
+        "headers": [
+          "FIGHTER",
+          "HEIGHT",
+          "WEIGHT",
+          "REACH",
+          "STANCE",
+          "DOB",
+          "URL"
+        ],
+        "identity_candidate_columns": [
+          "FIGHTER",
+          "URL"
+        ]
+      }
+    },
+    "identity_candidate_columns_union": [
+      "EVENT",
+      "FIGHTER",
+      "URL"
+    ],
+    "policy": "Candidate columns are inventory only; no display-name-only crosswalk is authorized.",
+    "snapshot": "data/raw/greco1899/8e40eb945e11"
+  },
+  "identity_status": {
+    "crosswalk_created": false,
+    "prohibited_fallback": "Do not join by display name alone.",
+    "reason": "FightMetric rows contain fightmetric_id/color but no fighter/date attributes. A stable official fight/athlete bridge must be acquired before matching to Greco."
+  },
+  "most_common_round_shapes": [
+    {
+      "groups": 7946,
+      "rounds": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "groups": 4537,
+      "rounds": [
+        0,
+        1
+      ]
+    },
+    {
+      "groups": 2620,
+      "rounds": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "groups": 590,
+      "rounds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "groups": 116,
+      "rounds": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "groups": 96,
+      "rounds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "groups": 58,
+      "rounds": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "groups": 40,
+      "rounds": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "groups": 2,
+      "rounds": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "groups": 2,
+      "rounds": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "groups": 2,
+      "rounds": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "groups": 2,
+      "rounds": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5
+      ]
+    },
+    {
+      "groups": 2,
+      "rounds": [
+        0
+      ]
+    },
+    {
+      "groups": 1,
+      "rounds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "groups": 1,
+      "rounds": [
+        1,
+        2
+      ]
+    }
+  ],
+  "ordered_source_coverage": {
+    "control_time": [
+      {
+        "drupal_internal_id_max": 16920,
+        "drupal_internal_id_min": 12405,
+        "nonnull": 3488,
+        "nonnull_fraction": 0.7723649247121346,
+        "row_end": 4516,
+        "row_start": 1,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 21439,
+        "drupal_internal_id_min": 16921,
+        "nonnull": 4496,
+        "nonnull_fraction": 0.995571302037201,
+        "row_end": 9032,
+        "row_start": 4517,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 25955,
+        "drupal_internal_id_min": 21440,
+        "nonnull": 4494,
+        "nonnull_fraction": 0.9951284322409212,
+        "row_end": 13548,
+        "row_start": 9033,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 30510,
+        "drupal_internal_id_min": 25956,
+        "nonnull": 2593,
+        "nonnull_fraction": 0.5741806908768822,
+        "row_end": 18064,
+        "row_start": 13549,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 35026,
+        "drupal_internal_id_min": 30511,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 22580,
+        "row_start": 18065,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 39542,
+        "drupal_internal_id_min": 35027,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 27096,
+        "row_start": 22581,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 44058,
+        "drupal_internal_id_min": 39543,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 31612,
+        "row_start": 27097,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 50442,
+        "drupal_internal_id_min": 44059,
+        "nonnull": 4065,
+        "nonnull_fraction": 0.900132860938884,
+        "row_end": 36128,
+        "row_start": 31613,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 55308,
+        "drupal_internal_id_min": 50443,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 40644,
+        "row_start": 36129,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 60221,
+        "drupal_internal_id_min": 55309,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 45160,
+        "row_start": 40645,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 64895,
+        "drupal_internal_id_min": 60222,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 49676,
+        "row_start": 45161,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 69918,
+        "drupal_internal_id_min": 64896,
+        "nonnull": 4511,
+        "nonnull_fraction": 1.0,
+        "row_end": 54187,
+        "row_start": 49677,
+        "rows": 4511
+      }
+    ],
+    "guard_ctl_time": [
+      {
+        "drupal_internal_id_max": 16920,
+        "drupal_internal_id_min": 12405,
+        "nonnull": 3488,
+        "nonnull_fraction": 0.7723649247121346,
+        "row_end": 4516,
+        "row_start": 1,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 21439,
+        "drupal_internal_id_min": 16921,
+        "nonnull": 4496,
+        "nonnull_fraction": 0.995571302037201,
+        "row_end": 9032,
+        "row_start": 4517,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 25955,
+        "drupal_internal_id_min": 21440,
+        "nonnull": 4494,
+        "nonnull_fraction": 0.9951284322409212,
+        "row_end": 13548,
+        "row_start": 9033,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 30510,
+        "drupal_internal_id_min": 25956,
+        "nonnull": 2593,
+        "nonnull_fraction": 0.5741806908768822,
+        "row_end": 18064,
+        "row_start": 13549,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 35026,
+        "drupal_internal_id_min": 30511,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 22580,
+        "row_start": 18065,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 39542,
+        "drupal_internal_id_min": 35027,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 27096,
+        "row_start": 22581,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 44058,
+        "drupal_internal_id_min": 39543,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 31612,
+        "row_start": 27097,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 50442,
+        "drupal_internal_id_min": 44059,
+        "nonnull": 4065,
+        "nonnull_fraction": 0.900132860938884,
+        "row_end": 36128,
+        "row_start": 31613,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 55308,
+        "drupal_internal_id_min": 50443,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 40644,
+        "row_start": 36129,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 60221,
+        "drupal_internal_id_min": 55309,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 45160,
+        "row_start": 40645,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 64895,
+        "drupal_internal_id_min": 60222,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 49676,
+        "row_start": 45161,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 69918,
+        "drupal_internal_id_min": 64896,
+        "nonnull": 4511,
+        "nonnull_fraction": 1.0,
+        "row_end": 54187,
+        "row_start": 49677,
+        "rows": 4511
+      }
+    ],
+    "sig_str_att": [
+      {
+        "drupal_internal_id_max": 16920,
+        "drupal_internal_id_min": 12405,
+        "nonnull": 4496,
+        "nonnull_fraction": 0.995571302037201,
+        "row_end": 4516,
+        "row_start": 1,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 21439,
+        "drupal_internal_id_min": 16921,
+        "nonnull": 4486,
+        "nonnull_fraction": 0.9933569530558016,
+        "row_end": 9032,
+        "row_start": 4517,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 25955,
+        "drupal_internal_id_min": 21440,
+        "nonnull": 4502,
+        "nonnull_fraction": 0.9968999114260407,
+        "row_end": 13548,
+        "row_start": 9033,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 30510,
+        "drupal_internal_id_min": 25956,
+        "nonnull": 2519,
+        "nonnull_fraction": 0.5577945084145262,
+        "row_end": 18064,
+        "row_start": 13549,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 35026,
+        "drupal_internal_id_min": 30511,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 22580,
+        "row_start": 18065,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 39542,
+        "drupal_internal_id_min": 35027,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 27096,
+        "row_start": 22581,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 44058,
+        "drupal_internal_id_min": 39543,
+        "nonnull": 0,
+        "nonnull_fraction": 0.0,
+        "row_end": 31612,
+        "row_start": 27097,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 50442,
+        "drupal_internal_id_min": 44059,
+        "nonnull": 4092,
+        "nonnull_fraction": 0.9061116031886626,
+        "row_end": 36128,
+        "row_start": 31613,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 55308,
+        "drupal_internal_id_min": 50443,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 40644,
+        "row_start": 36129,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 60221,
+        "drupal_internal_id_min": 55309,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 45160,
+        "row_start": 40645,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 64895,
+        "drupal_internal_id_min": 60222,
+        "nonnull": 4516,
+        "nonnull_fraction": 1.0,
+        "row_end": 49676,
+        "row_start": 45161,
+        "rows": 4516
+      },
+      {
+        "drupal_internal_id_max": 69918,
+        "drupal_internal_id_min": 64896,
+        "nonnull": 4511,
+        "nonnull_fraction": 1.0,
+        "row_end": 54187,
+        "row_start": 49677,
+        "rows": 4511
+      }
+    ],
+    "warning": "Drupal internal ID order is not calendar time. These bins locate coverage transitions only; year/era labeling requires a fight/date identity bridge."
+  },
+  "round0_semantics": {
+    "canonicalization_rule_if_supported": "Exclude round=0 from fighter-round tables; preserve separately as source-provided fight summary and verify against derived fight totals.",
+    "decision_rule": "Supported only if >=80% of well-powered tested additive fields match exactly in >=99.5% of comparable groups.",
+    "decisive_fields": 29,
+    "field_tests": [
+      {
+        "exact_match_fraction": 0.9874018623333942,
+        "exact_matches": 10816,
+        "field": "knock_down",
+        "groups_compared": 10954,
+        "incomplete_round_groups": 2,
+        "kind": "count",
+        "max_absolute_difference": 3.0,
+        "mean_absolute_difference": 0.013328464487858316,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "1672",
+            "rounds": [
+              1
+            ],
+            "sum_rounds_1_plus": 0.0,
+            "summary": 1.0
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "925",
+            "rounds": [
+              1
+            ],
+            "sum_rounds_1_plus": 0.0,
+            "summary": 1.0
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "2715",
+            "rounds": [
+              1
+            ],
+            "sum_rounds_1_plus": 0.0,
+            "summary": 1.0
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "3881",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0.0,
+            "summary": 1.0
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4292",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0.0,
+            "summary": 1.0
+          }
+        ],
+        "missing_summary_groups": 4839
+      },
+      {
+        "exact_match_fraction": 0.9998174016251256,
+        "exact_matches": 10951,
+        "field": "sig_str_att",
+        "groups_compared": 10953,
+        "incomplete_round_groups": 2,
+        "kind": "count",
+        "max_absolute_difference": 130.0,
+        "mean_absolute_difference": 0.02264219848443349,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -118.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 118.0,
+            "summary": 0.0
+          },
+          {
+            "color": "1",
+            "difference": -130.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 130.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 4840
+      },
+      {
+        "exact_match_fraction": 0.9997467553023108,
+        "exact_matches": 15791,
+        "field": "sig_str_land",
+        "groups_compared": 15795,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 50.0,
+        "mean_absolute_difference": 0.006774295663184552,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -2.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 4.0,
+            "summary": 2.0
+          },
+          {
+            "color": "0",
+            "difference": -49.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 49.0,
+            "summary": 0.0
+          },
+          {
+            "color": "1",
+            "difference": -6.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 12.0,
+            "summary": 6.0
+          },
+          {
+            "color": "1",
+            "difference": -50.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 50.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.9998100544510574,
+        "exact_matches": 15791,
+        "field": "tot_str_att",
+        "groups_compared": 15794,
+        "incomplete_round_groups": 1,
+        "kind": "count",
+        "max_absolute_difference": 130.0,
+        "mean_absolute_difference": 0.017031784221856403,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -21.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 42.0,
+            "summary": 21.0
+          },
+          {
+            "color": "0",
+            "difference": -118.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 118.0,
+            "summary": 0.0
+          },
+          {
+            "color": "1",
+            "difference": -130.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 130.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.9998100544510574,
+        "exact_matches": 15791,
+        "field": "tot_str_land",
+        "groups_compared": 15794,
+        "incomplete_round_groups": 1,
+        "kind": "count",
+        "max_absolute_difference": 50.0,
+        "mean_absolute_difference": 0.007344561225781943,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -17.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 34.0,
+            "summary": 17.0
+          },
+          {
+            "color": "0",
+            "difference": -49.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 49.0,
+            "summary": 0.0
+          },
+          {
+            "color": "1",
+            "difference": -50.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 50.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.9997467553023108,
+        "exact_matches": 15791,
+        "field": "grap_take_att",
+        "groups_compared": 15795,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 9.0,
+        "mean_absolute_difference": 0.0010129787907565686,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -9.0,
+            "fightmetric_id": "5246",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 17.0,
+            "summary": 8.0
+          },
+          {
+            "color": "0",
+            "difference": -2.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 4.0,
+            "summary": 2.0
+          },
+          {
+            "color": "1",
+            "difference": -1.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 2.0,
+            "summary": 1.0
+          },
+          {
+            "color": "1",
+            "difference": -4.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 4.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.9999366888255777,
+        "exact_matches": 15794,
+        "field": "grap_take_land",
+        "groups_compared": 15795,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 1.0,
+        "mean_absolute_difference": 6.331117442228554e-05,
+        "mismatch_examples": [
+          {
+            "color": "1",
+            "difference": -1.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 2.0,
+            "summary": 1.0
+          }
+        ],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.9999366888255777,
+        "exact_matches": 15794,
+        "field": "grap_sub_att",
+        "groups_compared": 15795,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 1.0,
+        "mean_absolute_difference": 6.331117442228554e-05,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -1.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 2.0,
+            "summary": 1.0
+          }
+        ],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.9998580855743986,
+        "exact_matches": 14091,
+        "field": "grap_rev_land",
+        "groups_compared": 14093,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 1.0,
+        "mean_absolute_difference": 0.00014191442560136238,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -1.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 2.0,
+            "summary": 1.0
+          },
+          {
+            "color": "1",
+            "difference": -1.0,
+            "fightmetric_id": "1772",
+            "rounds": [
+              1,
+              1
+            ],
+            "sum_rounds_1_plus": 2.0,
+            "summary": 1.0
+          }
+        ],
+        "missing_summary_groups": 1702
+      },
+      {
+        "exact_match_fraction": 1.0,
+        "exact_matches": 10447,
+        "field": "grap_stand_land",
+        "groups_compared": 10447,
+        "incomplete_round_groups": 4,
+        "kind": "count",
+        "max_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "mismatch_examples": [],
+        "missing_summary_groups": 5344
+      },
+      {
+        "exact_match_fraction": 0.9998733616159058,
+        "exact_matches": 15791,
+        "field": "dist_str_att",
+        "groups_compared": 15793,
+        "incomplete_round_groups": 2,
+        "kind": "count",
+        "max_absolute_difference": 127.0,
+        "mean_absolute_difference": 0.015449882859494713,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -117.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 117.0,
+            "summary": 0.0
+          },
+          {
+            "color": "1",
+            "difference": -127.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 127.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.9998733616159058,
+        "exact_matches": 15791,
+        "field": "dist_str_land",
+        "groups_compared": 15793,
+        "incomplete_round_groups": 2,
+        "kind": "count",
+        "max_absolute_difference": 50.0,
+        "mean_absolute_difference": 0.006205280820616729,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -48.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 48.0,
+            "summary": 0.0
+          },
+          {
+            "color": "1",
+            "difference": -50.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 50.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.9998181818181818,
+        "exact_matches": 10998,
+        "field": "clinch_str_att",
+        "groups_compared": 11000,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 3.0,
+        "mean_absolute_difference": 0.0003636363636363636,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -1.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 1.0,
+            "summary": 0.0
+          },
+          {
+            "color": "1",
+            "difference": -3.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 3.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 4795
+      },
+      {
+        "exact_match_fraction": 0.9999090909090909,
+        "exact_matches": 10999,
+        "field": "clinch_str_land",
+        "groups_compared": 11000,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 1.0,
+        "mean_absolute_difference": 9.09090909090909e-05,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": -1.0,
+            "fightmetric_id": "7641",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 1.0,
+            "summary": 0.0
+          }
+        ],
+        "missing_summary_groups": 4795
+      },
+      {
+        "exact_match_fraction": 1.0,
+        "exact_matches": 15793,
+        "field": "ground_str_att",
+        "groups_compared": 15793,
+        "incomplete_round_groups": 2,
+        "kind": "count",
+        "max_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "mismatch_examples": [],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 1.0,
+        "exact_matches": 15793,
+        "field": "ground_str_land",
+        "groups_compared": 15793,
+        "incomplete_round_groups": 2,
+        "kind": "count",
+        "max_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "mismatch_examples": [],
+        "missing_summary_groups": 0
+      },
+      {
+        "exact_match_fraction": 0.5298872180451127,
+        "exact_matches": 5638,
+        "field": "standing_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 60.0,
+        "mean_absolute_difference": 0.6389097744360902,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4336",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 4
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4339",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 9,
+            "summary": 10
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4338",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 5,
+            "summary": 6
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4340",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 7,
+            "summary": 8
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4342",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 10,
+            "summary": 12
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.4697254606995111,
+        "exact_matches": 4996,
+        "field": "neutral_time",
+        "groups_compared": 10636,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 59.0,
+        "mean_absolute_difference": 0.7286573899962392,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4336",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 4
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4338",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4340",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 7,
+            "summary": 8
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4342",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 4,
+            "summary": 6
+          },
+          {
+            "color": "0",
+            "difference": 3.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 4,
+            "summary": 7
+          }
+        ],
+        "missing_summary_groups": 5121
+      },
+      {
+        "exact_match_fraction": 0.4456766917293233,
+        "exact_matches": 4742,
+        "field": "distance_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 60.0,
+        "mean_absolute_difference": 0.7567669172932331,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4339",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 8,
+            "summary": 9
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4338",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4340",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 6,
+            "summary": 7
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4342",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 4,
+            "summary": 5
+          },
+          {
+            "color": "0",
+            "difference": 3.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 4,
+            "summary": 7
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.6757518796992481,
+        "exact_matches": 7190,
+        "field": "clinch_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 4.0,
+        "mean_absolute_difference": 0.37030075187969924,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4339",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4338",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 4
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4342",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 5,
+            "summary": 6
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4372",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 2
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.6885245901639344,
+        "exact_matches": 3360,
+        "field": "ground_time",
+        "groups_compared": 4880,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 119.0,
+        "mean_absolute_difference": 0.5413934426229509,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4338",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 7,
+            "summary": 8
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4340",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 4
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4372",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 4,
+            "summary": 5
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 11,
+            "summary": 13
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4376",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          }
+        ],
+        "missing_summary_groups": 10877
+      },
+      {
+        "exact_match_fraction": 0.7254699248120301,
+        "exact_matches": 7719,
+        "field": "control_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 60.0,
+        "mean_absolute_difference": 0.34041353383458645,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4339",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 5
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4340",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4342",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 5
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 11,
+            "summary": 13
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4362",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.8403195488721804,
+        "exact_matches": 8941,
+        "field": "ground_ctl_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 60.0,
+        "mean_absolute_difference": 0.19689849624060152,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4339",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 4
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4338",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 5,
+            "summary": 7
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4340",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4372",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 3.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 10,
+            "summary": 13
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.9583646616541354,
+        "exact_matches": 10197,
+        "field": "guard_ctl_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 2.0,
+        "mean_absolute_difference": 0.04492481203007519,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4391",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4406",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4418",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 4
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4445",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.9652255639097744,
+        "exact_matches": 10270,
+        "field": "half_guard_ctl_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 3.0,
+        "mean_absolute_difference": 0.037406015037593984,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 3
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4445",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4477",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 2,
+            "summary": 3
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4495",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 2
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4523",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.9875,
+        "exact_matches": 10507,
+        "field": "side_ctl_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 2.0,
+        "mean_absolute_difference": 0.013345864661654135,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 4
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4391",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4445",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4477",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4531",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 2,
+            "summary": 3
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.9747180451127819,
+        "exact_matches": 10371,
+        "field": "mount_ctl_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 59.0,
+        "mean_absolute_difference": 0.03270676691729323,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4426",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4413",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4428",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4587",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4511",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.9858082706766917,
+        "exact_matches": 10489,
+        "field": "back_ctl_time",
+        "groups_compared": 10640,
+        "incomplete_round_groups": 38,
+        "kind": "time_seconds",
+        "max_absolute_difference": 2.0,
+        "mean_absolute_difference": 0.01494360902255639,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4603",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 6,
+            "summary": 7
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4747",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4736",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 2,
+            "summary": 3
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4860",
+            "rounds": [
+              1,
+              2
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4922",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          }
+        ],
+        "missing_summary_groups": 5117
+      },
+      {
+        "exact_match_fraction": 0.9256292906178489,
+        "exact_matches": 9708,
+        "field": "msc_ground_ctl__time",
+        "groups_compared": 10488,
+        "incomplete_round_groups": 72,
+        "kind": "time_seconds",
+        "max_absolute_difference": 3.0,
+        "mean_absolute_difference": 0.07999618611746759,
+        "mismatch_examples": [
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4339",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4338",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 5,
+            "summary": 6
+          },
+          {
+            "color": "0",
+            "difference": 2.0,
+            "fightmetric_id": "4363",
+            "rounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "sum_rounds_1_plus": 1,
+            "summary": 3
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4405",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 0,
+            "summary": 1
+          },
+          {
+            "color": "0",
+            "difference": 1.0,
+            "fightmetric_id": "4396",
+            "rounds": [
+              1,
+              2,
+              3
+            ],
+            "sum_rounds_1_plus": 3,
+            "summary": 4
+          }
+        ],
+        "missing_summary_groups": 5235
+      }
+    ],
+    "hypothesis": "round=0 is a per-fighter fight-total/summary row whose additive fields equal the sum of rounds 1+.",
+    "near_unanimous_fields": 15,
+    "supported_by_additivity_tests": false
+  },
+  "round_counts_usable": {
+    "0": 16229,
+    "1": 16229,
+    "2": 11572,
+    "3": 8873,
+    "4": 690,
+    "5": 594
+  },
+  "rows_total": 57382,
+  "rows_with_fightmetric_id_and_color": 54187,
+  "schema_version": 1
+}
