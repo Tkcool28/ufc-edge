@@ -2,12 +2,13 @@
 """Snapshot one public UFC.com Drupal JSON:API resource at a time.
 
 Resource-scoped snapshots replace the earlier all-or-nothing UFC.com acquisition.
-A resource is canonical raw only after its manifest exists.  Partial directories left
+A resource is canonical raw only after its manifest exists. Partial directories left
 by an interrupted process are staging evidence and must not be promoted/committed.
 """
 from __future__ import annotations
 
 import argparse
+import collections
 import hashlib
 import json
 import os
@@ -24,7 +25,7 @@ BASE = "https://www.ufc.com/jsonapi"
 OUT_ROOT = Path("data/raw/ufc_com_resources")
 PAGE_LIMIT = 50
 MIN_INTERVAL_SECONDS = 2.0
-USER_AGENT = "ufc-edge-data/0.2 (private modeling research; respectful resource snapshotter)"
+USER_AGENT = "ufc-edge-data/0.3 (private modeling research; respectful resource snapshotter)"
 ACCEPT = "application/vnd.api+json"
 
 COLLECTIONS: dict[str, dict[str, Any]] = {
@@ -35,11 +36,13 @@ COLLECTIONS: dict[str, dict[str, Any]] = {
             "page[limit]": str(PAGE_LIMIT),
             "include": "athlete_stat,athlete_ranking,stats_weight_class,fighting_style,gym,athlete_status",
         },
+        "required_relationship_linkage": [],
         "notes": "Point-in-time official athlete/profile snapshot. Mutable career/ranking/status fields are not historical-backfill safe.",
     },
     "events": {
         "path": "/node/event",
         "params": {"sort": "fight_card_time_main", "page[limit]": str(PAGE_LIMIT)},
+        "required_relationship_linkage": [],
         "notes": "Official event metadata and stable source identity surface.",
     },
     "fights": {
@@ -47,9 +50,12 @@ COLLECTIONS: dict[str, dict[str, Any]] = {
         "params": {
             "sort": "created",
             "page[limit]": str(PAGE_LIMIT),
-            "include": "red_corner,blue_corner,fight_final_winner",
         },
-        "notes": "Official fight/corner/winner identity surface; intended bridge to FightMetric and historical sources after audit.",
+        "required_relationship_linkage": ["red_corner", "blue_corner"],
+        "notes": (
+            "Official fight identity surface. Full related athlete objects are intentionally not included on every page; "
+            "the manifest audits base JSON:API relationship linkage and fails closed if red/blue linkage is absent."
+        ),
     },
 }
 
@@ -123,7 +129,20 @@ def next_url(payload: dict[str, Any]) -> str | None:
     return None
 
 
-def summarize_surface(data: list[Any], attrs: set[str], relationships: set[str], types: set[str]) -> None:
+def linkage_id(value: Any) -> str | None:
+    if isinstance(value, dict) and value.get("id") not in (None, ""):
+        return str(value["id"])
+    return None
+
+
+def summarize_surface(
+    data: list[Any],
+    attrs: set[str],
+    relationships: set[str],
+    types: set[str],
+    linkage_counts: collections.Counter[str],
+    linkage_type_counts: dict[str, collections.Counter[str]],
+) -> None:
     for item in data:
         if not isinstance(item, dict):
             continue
@@ -133,8 +152,25 @@ def summarize_surface(data: list[Any], attrs: set[str], relationships: set[str],
         if isinstance(item_attrs, dict):
             attrs.update(str(k) for k in item_attrs)
         rels = item.get("relationships")
-        if isinstance(rels, dict):
-            relationships.update(str(k) for k in rels)
+        if not isinstance(rels, dict):
+            continue
+        relationships.update(str(k) for k in rels)
+        for name, rel in rels.items():
+            if not isinstance(rel, dict):
+                continue
+            rel_data = rel.get("data")
+            if isinstance(rel_data, dict):
+                if linkage_id(rel_data):
+                    linkage_counts[str(name)] += 1
+                if rel_data.get("type"):
+                    linkage_type_counts[str(name)][str(rel_data["type"])] += 1
+            elif isinstance(rel_data, list):
+                ids = [linkage_id(v) for v in rel_data]
+                if any(v is not None for v in ids):
+                    linkage_counts[str(name)] += 1
+                for v in rel_data:
+                    if isinstance(v, dict) and v.get("type"):
+                        linkage_type_counts[str(name)][str(v["type"])] += 1
 
 
 def main() -> int:
@@ -156,6 +192,8 @@ def main() -> int:
     attribute_names: set[str] = set()
     relationship_names: set[str] = set()
     resource_types: set[str] = set()
+    linkage_counts: collections.Counter[str] = collections.Counter()
+    linkage_type_counts: dict[str, collections.Counter[str]] = collections.defaultdict(collections.Counter)
     seen: set[str] = set()
     started = utc_now()
 
@@ -172,7 +210,14 @@ def main() -> int:
         path = out_dir / f"page_{page:04d}.json"
         path.write_bytes(body)
         rows += len(data)
-        summarize_surface(data, attribute_names, relationship_names, resource_types)
+        summarize_surface(
+            data,
+            attribute_names,
+            relationship_names,
+            resource_types,
+            linkage_counts,
+            linkage_type_counts,
+        )
         files.append({
             "path": path.as_posix(),
             "url": url,
@@ -191,8 +236,16 @@ def main() -> int:
     if rows == 0:
         raise RuntimeError(f"UFC.com {name} collection returned zero rows")
 
+    required_linkage = spec.get("required_relationship_linkage", [])
+    missing_required = [rel for rel in required_linkage if linkage_counts.get(rel, 0) == 0]
+    if missing_required:
+        raise RuntimeError(
+            f"{name} base resource lacks required relationship linkage: {missing_required}; "
+            "refusing lean snapshot promotion"
+        )
+
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source": "Official UFC.com Drupal JSON:API",
         "collection": name,
         "snapshot_id": sid,
@@ -206,6 +259,11 @@ def main() -> int:
         "resource_types": sorted(resource_types),
         "attribute_names": sorted(attribute_names),
         "relationship_names": sorted(relationship_names),
+        "relationship_linkage_rows": {k: int(v) for k, v in sorted(linkage_counts.items())},
+        "relationship_linkage_types": {
+            k: dict(sorted(v.items())) for k, v in sorted(linkage_type_counts.items())
+        },
+        "required_relationship_linkage": required_linkage,
         "files": files,
         "semantics": {
             "raw_only": True,
@@ -218,6 +276,12 @@ def main() -> int:
     }
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(f"[ufc.com:{name}] complete rows={rows} pages={page - 1} snapshot={sid}")
+    if required_linkage:
+        print(
+            "[ufc.com:%s] required linkage rows: %s" %
+            (name, ", ".join(f"{r}={linkage_counts.get(r, 0)}" for r in required_linkage)),
+            flush=True,
+        )
     return 0
 
 
