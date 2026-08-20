@@ -1,0 +1,13 @@
+{
+  "ended_at_utc": "2026-08-20T14:11:26Z",
+  "exit_code": 0,
+  "github_run_attempt": "1",
+  "github_run_id": "32369259448",
+  "log_path": "provenance/runs/espn_mma_32369259448.log",
+  "pipeline": "espn_mma",
+  "process_timeout_seconds": 6300,
+  "ref": "main",
+  "result": "success",
+  "started_at_utc": "2026-08-20T12:31:13Z",
+  "trigger_sha": "526e1df35301429a27f05d9a4d50376d11eb3124"
+}

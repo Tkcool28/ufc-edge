@@ -1,0 +1,7 @@
+{
+  "bytes": 914245,
+  "content_type": "application/json;charset=UTF-8",
+  "http_status": 200,
+  "sha256": "76105440d8624f08166b51a3b6eaaae4370840b5c9261d33f5751e9ce178d53f",
+  "url": "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates=20140101-20141231&limit=1000"
+}
