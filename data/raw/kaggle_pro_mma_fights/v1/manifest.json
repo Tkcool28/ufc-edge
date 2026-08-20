@@ -1,0 +1,53 @@
+{
+  "archive": {
+    "bytes": 496431,
+    "content_type": "application/zip",
+    "sha256": "094b3744ee5dbe23856a1faeb9b6a0fe339c03bfc4acd88036402cbc8d8b066c"
+  },
+  "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_DEDUP_AND_CHRONOLOGY_QA",
+  "dataset_handle": "binduvr/pro-mma-fights",
+  "dataset_title": "All Pro MMA Fights - UFC, Bellator, One",
+  "dataset_version": 1,
+  "download_url": "https://www.kaggle.com/api/v1/datasets/download/binduvr/pro-mma-fights?datasetVersionNumber=1",
+  "file": {
+    "bytes": 3302947,
+    "columns": [
+      "url",
+      "event_title",
+      "organisation",
+      "date",
+      "location",
+      "match_nr",
+      "fighter1_url",
+      "fighter2_url",
+      "fighter1_name",
+      "fighter2_name",
+      "fighter1_result",
+      "fighter2_result",
+      "win_method",
+      "win_details",
+      "referee",
+      "round",
+      "time"
+    ],
+    "data_rows": 10448,
+    "path": "data/raw/kaggle_pro_mma_fights/v1/pro_mma_fights.csv",
+    "sha256": "5959737f9c912f868a17d6f6bc586224721be7a4f6ef3faf36045d5e3c560c78"
+  },
+  "license": "CC0-1.0 / Public Domain dedication as displayed by Kaggle",
+  "schema_version": 1,
+  "semantics": {
+    "coverage": "Professional fights in UFC, Bellator MMA and ONE Championship through the author's 2021-08-11 retrieval date.",
+    "limitations": [
+      "This is a 2021 frozen snapshot and is not a complete worldwide MMA history.",
+      "Source fighter names/URLs must be identity-resolved before joining Greco UFCStats history.",
+      "A fight appearing in both this dataset and Greco must not be double-counted.",
+      "Method labels and promotion/event strings are source vocabulary and must be normalized only in the canonical layer.",
+      "Historical record/experience features must be rebuilt chronologically from fight rows, never from later career totals."
+    ],
+    "primary_use_candidate": "Pre-UFC and cross-promotion professional fight-history context for fighters who later appear in UFC Edge canonical identity.",
+    "raw_only": true
+  },
+  "source_platform": "Kaggle",
+  "upstream_origin": "Scraped from Sherdog by the Kaggle dataset author."
+}
