@@ -1,0 +1,52 @@
+{
+  "canonicalization_status": "RAW_ONLY_PENDING_PROVENANCE_IDENTITY_AND_ASOF_QA",
+  "files": [
+    {
+      "bytes": 4361248,
+      "destination": "data/raw/tidytuesday_ufc_rankings/107ff6c70de0/ufc_rankings_dataset.csv",
+      "git_blob_sha1": "f7ec9c6a8e0100f6dbd63aa3e1707c030373c77b",
+      "role": "Historical UFC ranking observations",
+      "sha256": "830bac4f4d110a1dbc5162fc324865010faccab973d9d4c8acac14be1b23cc0c",
+      "source_path": "data/2026/2026-07-07/ufc_rankings_dataset.csv"
+    },
+    {
+      "bytes": 549,
+      "destination": "data/raw/tidytuesday_ufc_rankings/107ff6c70de0/ufc_rankings_dataset.md",
+      "git_blob_sha1": "e4f057a1b752b6df38caad954286627a87edd88e",
+      "role": "Published data dictionary",
+      "sha256": "7d499d401ef1b61c744a94a5ef071a7fcafec4923feb75e5884688d3963440e9",
+      "source_path": "data/2026/2026-07-07/ufc_rankings_dataset.md"
+    },
+    {
+      "bytes": 1432,
+      "destination": "data/raw/tidytuesday_ufc_rankings/107ff6c70de0/UPSTREAM_INTRO.md",
+      "git_blob_sha1": "736449a406b1353252880ec43c45324c6ee158f2",
+      "role": "TidyTuesday source/provenance description",
+      "sha256": "e679d428e3aab56131b70a450766713e38eff72512162937b75184c2deec5857",
+      "source_path": "data/2026/2026-07-07/intro.md"
+    }
+  ],
+  "schema_version": 1,
+  "semantics": {
+    "columns": [
+      "date",
+      "weightclass",
+      "fighter",
+      "rank"
+    ],
+    "coverage_start_observed": "2013-02-04",
+    "historical_feature_rule": "For a target fight, only ranking observations with ranking_date strictly before the target information cutoff may be used. Never take the nearest future ranking.",
+    "identity_warning": "Fighter is name text, not a stable source fighter ID. Match into canonical UFC Edge identity separately and fail closed on ambiguity.",
+    "rank_zero_meaning": "typically reigning champion",
+    "source_namespace": "tidytuesday_fightr_rankings"
+  },
+  "source_commit": "107ff6c70de02dd807169e13aee7dc9d86ff88b6",
+  "source_commit_date": "2026-07-05T15:31:18-05:00",
+  "source_provenance": {
+    "license_note": "No dataset-specific license was established during this acquisition pass. Preserve source provenance and use this snapshot for private research/modeling unless upstream terms are clarified further.",
+    "specific_rankings_upstream_not_fully_disambiguated": true,
+    "tidytuesday_data_source": "benyamindsmith/fightr",
+    "tidytuesday_intro_note": "The fightr package compiles datasets from UFC athlete profiles, UFCStats, Kaggle Ultimate UFC Dataset, and Octagon API."
+  },
+  "source_repository": "rfordatascience/tidytuesday"
+}
