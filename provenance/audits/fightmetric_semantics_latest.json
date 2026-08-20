@@ -1,7 +1,930 @@
 {
   "distinct_fightmetric_color_groups": 16015,
+  "duplicate_round_audit": {
+    "conflicting_duplicate_keys": 714,
+    "duplicate_fightmetric_color_round_keys": 714,
+    "exact_duplicate_keys": 0,
+    "examples": [
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "grap_rev_land",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "sig_str_att"
+        ],
+        "drupal_internal_ids": [
+          28672,
+          45019
+        ],
+        "fightmetric_id": "1775",
+        "round": 1,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "grap_rev_land",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "knock_down",
+          "legs_str_att",
+          "legs_str_land",
+          "sig_str_att"
+        ],
+        "drupal_internal_ids": [
+          28674,
+          45021
+        ],
+        "fightmetric_id": "1775",
+        "round": 0,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "body_str_att",
+          "clinch_body_str_att",
+          "clinch_body_str_land",
+          "clinch_head_str_att",
+          "clinch_head_str_land",
+          "clinch_leg_str_att",
+          "clinch_leg_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "dist_body_str_att",
+          "dist_body_str_land",
+          "dist_head_str_att",
+          "dist_head_str_land",
+          "dist_legs_str_att",
+          "dist_legs_str_land",
+          "dist_str_att",
+          "dist_str_land",
+          "grap_stand_land",
+          "ground_body_str_att",
+          "ground_body_str_land",
+          "ground_head_str_att",
+          "ground_head_str_land",
+          "ground_leg_str_att",
+          "ground_leg_str_land",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "knock_down"
+        ],
+        "drupal_internal_ids": [
+          28680,
+          44462
+        ],
+        "fightmetric_id": "1772",
+        "round": 1,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          29358,
+          68535
+        ],
+        "fightmetric_id": "1573",
+        "round": 1,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          29359,
+          68536
+        ],
+        "fightmetric_id": "1573",
+        "round": 2,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "knock_down",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          29362,
+          68539
+        ],
+        "fightmetric_id": "1573",
+        "round": 0,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          31731,
+          60481
+        ],
+        "fightmetric_id": "554",
+        "round": 1,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "knock_down",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          31733,
+          60483
+        ],
+        "fightmetric_id": "554",
+        "round": 0,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          32501,
+          65797
+        ],
+        "fightmetric_id": "312",
+        "round": 1,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          32502,
+          65798
+        ],
+        "fightmetric_id": "312",
+        "round": 2,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_leg_str_land",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          32503,
+          65799
+        ],
+        "fightmetric_id": "312",
+        "round": 3,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_leg_str_land",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          32504,
+          65800
+        ],
+        "fightmetric_id": "312",
+        "round": 4,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          32505,
+          65801
+        ],
+        "fightmetric_id": "312",
+        "round": 5,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_leg_str_land",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "knock_down",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          32511,
+          65807
+        ],
+        "fightmetric_id": "312",
+        "round": 0,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          35373,
+          67924
+        ],
+        "fightmetric_id": "2296",
+        "round": 1,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          35374,
+          67925
+        ],
+        "fightmetric_id": "2296",
+        "round": 2,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "knock_down",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          35377,
+          67928
+        ],
+        "fightmetric_id": "2296",
+        "round": 0,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          36453,
+          56627
+        ],
+        "fightmetric_id": "2872",
+        "round": 1,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "kicks_att",
+          "kicks_land",
+          "knock_down",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          36455,
+          56629
+        ],
+        "fightmetric_id": "2872",
+        "round": 0,
+        "rows": 2
+      },
+      {
+        "classification": "conflicting_duplicate",
+        "color": "0",
+        "differing_fields": [
+          "back_ctl_time",
+          "body_str_att",
+          "body_str_land",
+          "clinch_sig_kick_att",
+          "clinch_sig_kick_land",
+          "clinch_sig_punch_att",
+          "clinch_sig_punch_land",
+          "clinch_str_att",
+          "clinch_str_land",
+          "clinch_time",
+          "control_time",
+          "distance_time",
+          "grap_stand_land",
+          "ground_ctl_time",
+          "ground_sig_kick_att",
+          "ground_sig_kick_land",
+          "ground_sig_str_att",
+          "ground_sig_str_land",
+          "ground_str_att",
+          "ground_str_land",
+          "guard_ctl_time",
+          "half_guard_ctl_time",
+          "head_str_att",
+          "head_str_land",
+          "kicks_att",
+          "kicks_land",
+          "legs_str_att",
+          "legs_str_land",
+          "mount_ctl_time",
+          "msc_ground_ctl__time",
+          "neutral_time",
+          "side_ctl_time",
+          "sig_str_att",
+          "standing_time"
+        ],
+        "drupal_internal_ids": [
+          36891,
+          56631
+        ],
+        "fightmetric_id": "2962",
+        "round": 1,
+        "rows": 2
+      }
+    ],
+    "policy": "Do not silently deduplicate. Exact duplicates may later collapse under a documented source-row identity rule; conflicting duplicates require provenance/version resolution.",
+    "rows_in_duplicate_keys": 1428
+  },
   "fightmetric_snapshot": "data/raw/ufc_fightmetric_official/20260820T123046Z",
-  "generated_at_utc": "2026-08-20T17:30:28.583936Z",
+  "generated_at_utc": "2026-08-20T17:33:42.807093Z",
   "greco_inventory": {
     "files": {
       "ufc_event_details.csv": {
@@ -781,11 +1704,14 @@
     "warning": "Drupal internal ID order is not calendar time. These bins locate coverage transitions only; year/era labeling requires a fight/date identity bridge."
   },
   "round0_semantics": {
-    "canonicalization_rule_if_supported": "Exclude round=0 from fighter-round tables; preserve separately as source-provided fight summary and verify against derived fight totals.",
-    "decision_rule": "Supported only if >=80% of well-powered tested additive fields match exactly in >=99.5% of comparable groups.",
-    "decisive_fields": 29,
+    "canonicalization_rule_if_supported": "Exclude round=0 from fighter-round tables. Preserve it as the source-provided fight summary for QA. Derive modeling fight totals from validated rounds 1+ rather than trusting summary rows when the two disagree; time-summary differences can reflect source rounding.",
+    "count_fields_decisive": 16,
+    "count_fields_supporting": 15,
+    "count_support_fraction": 0.9375,
+    "decision_rule": "Support requires >=80% of well-powered count fields to match round sums exactly in >=99% of comparable non-duplicate groups, and >=80% of well-powered time fields to be within 2 seconds in >=95% of groups with mean absolute difference <=2 seconds.",
     "field_tests": [
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9874018623333942,
         "exact_matches": 10816,
         "field": "knock_down",
@@ -850,9 +1776,15 @@
             "summary": 1.0
           }
         ],
-        "missing_summary_groups": 4839
+        "missing_summary_groups": 4837,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 1.0,
+        "within_1_fraction": 0.9993609640314041,
+        "within_2_fraction": 0.9999087091473434,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9998174016251256,
         "exact_matches": 10951,
         "field": "sig_str_att",
@@ -887,29 +1819,24 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 4840
+        "missing_summary_groups": 4838,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 0.9998174016251256,
+        "within_2_fraction": 0.9998174016251256,
+        "within_5_fraction": 0.9998174016251256
       },
       {
-        "exact_match_fraction": 0.9997467553023108,
+        "duplicate_round_groups_skipped": 2,
+        "exact_match_fraction": 0.9998733616159058,
         "exact_matches": 15791,
         "field": "sig_str_land",
-        "groups_compared": 15795,
+        "groups_compared": 15793,
         "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 50.0,
-        "mean_absolute_difference": 0.006774295663184552,
+        "mean_absolute_difference": 0.006268600012663839,
         "mismatch_examples": [
-          {
-            "color": "0",
-            "difference": -2.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 4.0,
-            "summary": 2.0
-          },
           {
             "color": "0",
             "difference": -49.0,
@@ -924,17 +1851,6 @@
           },
           {
             "color": "1",
-            "difference": -6.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 12.0,
-            "summary": 6.0
-          },
-          {
-            "color": "1",
             "difference": -50.0,
             "fightmetric_id": "7641",
             "rounds": [
@@ -946,29 +1862,24 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 0
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 0.9998733616159058,
+        "within_2_fraction": 0.9998733616159058,
+        "within_5_fraction": 0.9998733616159058
       },
       {
-        "exact_match_fraction": 0.9998100544510574,
+        "duplicate_round_groups_skipped": 2,
+        "exact_match_fraction": 0.9998733616159058,
         "exact_matches": 15791,
         "field": "tot_str_att",
-        "groups_compared": 15794,
-        "incomplete_round_groups": 1,
+        "groups_compared": 15793,
+        "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 130.0,
-        "mean_absolute_difference": 0.017031784221856403,
+        "mean_absolute_difference": 0.01570315962768315,
         "mismatch_examples": [
-          {
-            "color": "0",
-            "difference": -21.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 42.0,
-            "summary": 21.0
-          },
           {
             "color": "0",
             "difference": -118.0,
@@ -994,29 +1905,24 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 0
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 0.9998733616159058,
+        "within_2_fraction": 0.9998733616159058,
+        "within_5_fraction": 0.9998733616159058
       },
       {
-        "exact_match_fraction": 0.9998100544510574,
+        "duplicate_round_groups_skipped": 2,
+        "exact_match_fraction": 0.9998733616159058,
         "exact_matches": 15791,
         "field": "tot_str_land",
-        "groups_compared": 15794,
-        "incomplete_round_groups": 1,
+        "groups_compared": 15793,
+        "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 50.0,
-        "mean_absolute_difference": 0.007344561225781943,
+        "mean_absolute_difference": 0.006268600012663839,
         "mismatch_examples": [
-          {
-            "color": "0",
-            "difference": -17.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 34.0,
-            "summary": 17.0
-          },
           {
             "color": "0",
             "difference": -49.0,
@@ -1042,17 +1948,23 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 0
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 0.9998733616159058,
+        "within_2_fraction": 0.9998733616159058,
+        "within_5_fraction": 0.9998733616159058
       },
       {
-        "exact_match_fraction": 0.9997467553023108,
+        "duplicate_round_groups_skipped": 2,
+        "exact_match_fraction": 0.9998733616159058,
         "exact_matches": 15791,
         "field": "grap_take_att",
-        "groups_compared": 15795,
+        "groups_compared": 15793,
         "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 9.0,
-        "mean_absolute_difference": 0.0010129787907565686,
+        "mean_absolute_difference": 0.0008231494966124232,
         "mismatch_examples": [
           {
             "color": "0",
@@ -1064,28 +1976,6 @@
             ],
             "sum_rounds_1_plus": 17.0,
             "summary": 8.0
-          },
-          {
-            "color": "0",
-            "difference": -2.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 4.0,
-            "summary": 2.0
-          },
-          {
-            "color": "1",
-            "difference": -1.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 2.0,
-            "summary": 1.0
           },
           {
             "color": "1",
@@ -1100,109 +1990,92 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 0
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 0.9998733616159058,
+        "within_2_fraction": 0.9998733616159058,
+        "within_5_fraction": 0.9999366808079528
       },
       {
-        "exact_match_fraction": 0.9999366888255777,
-        "exact_matches": 15794,
-        "field": "grap_take_land",
-        "groups_compared": 15795,
-        "incomplete_round_groups": 0,
-        "kind": "count",
-        "max_absolute_difference": 1.0,
-        "mean_absolute_difference": 6.331117442228554e-05,
-        "mismatch_examples": [
-          {
-            "color": "1",
-            "difference": -1.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 2.0,
-            "summary": 1.0
-          }
-        ],
-        "missing_summary_groups": 0
-      },
-      {
-        "exact_match_fraction": 0.9999366888255777,
-        "exact_matches": 15794,
-        "field": "grap_sub_att",
-        "groups_compared": 15795,
-        "incomplete_round_groups": 0,
-        "kind": "count",
-        "max_absolute_difference": 1.0,
-        "mean_absolute_difference": 6.331117442228554e-05,
-        "mismatch_examples": [
-          {
-            "color": "0",
-            "difference": -1.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 2.0,
-            "summary": 1.0
-          }
-        ],
-        "missing_summary_groups": 0
-      },
-      {
-        "exact_match_fraction": 0.9998580855743986,
-        "exact_matches": 14091,
-        "field": "grap_rev_land",
-        "groups_compared": 14093,
-        "incomplete_round_groups": 0,
-        "kind": "count",
-        "max_absolute_difference": 1.0,
-        "mean_absolute_difference": 0.00014191442560136238,
-        "mismatch_examples": [
-          {
-            "color": "0",
-            "difference": -1.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 2.0,
-            "summary": 1.0
-          },
-          {
-            "color": "1",
-            "difference": -1.0,
-            "fightmetric_id": "1772",
-            "rounds": [
-              1,
-              1
-            ],
-            "sum_rounds_1_plus": 2.0,
-            "summary": 1.0
-          }
-        ],
-        "missing_summary_groups": 1702
-      },
-      {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 1.0,
-        "exact_matches": 10447,
-        "field": "grap_stand_land",
-        "groups_compared": 10447,
-        "incomplete_round_groups": 4,
+        "exact_matches": 15793,
+        "field": "grap_take_land",
+        "groups_compared": 15793,
+        "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 0.0,
         "mean_absolute_difference": 0.0,
         "mismatch_examples": [],
-        "missing_summary_groups": 5344
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 1.0,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
+        "exact_match_fraction": 1.0,
+        "exact_matches": 15793,
+        "field": "grap_sub_att",
+        "groups_compared": 15793,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "mismatch_examples": [],
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 1.0,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
+      },
+      {
+        "duplicate_round_groups_skipped": 2,
+        "exact_match_fraction": 1.0,
+        "exact_matches": 14091,
+        "field": "grap_rev_land",
+        "groups_compared": 14091,
+        "incomplete_round_groups": 0,
+        "kind": "count",
+        "max_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "mismatch_examples": [],
+        "missing_summary_groups": 1702,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 1.0,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
+      },
+      {
+        "duplicate_round_groups_skipped": 2,
+        "exact_match_fraction": 1.0,
+        "exact_matches": 10447,
+        "field": "grap_stand_land",
+        "groups_compared": 10447,
+        "incomplete_round_groups": 2,
+        "kind": "count",
+        "max_absolute_difference": 0.0,
+        "mean_absolute_difference": 0.0,
+        "mismatch_examples": [],
+        "missing_summary_groups": 5344,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 1.0,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
+      },
+      {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9998733616159058,
         "exact_matches": 15791,
         "field": "dist_str_att",
         "groups_compared": 15793,
-        "incomplete_round_groups": 2,
+        "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 127.0,
         "mean_absolute_difference": 0.015449882859494713,
@@ -1232,14 +2105,20 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 0
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 0.9998733616159058,
+        "within_2_fraction": 0.9998733616159058,
+        "within_5_fraction": 0.9998733616159058
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9998733616159058,
         "exact_matches": 15791,
         "field": "dist_str_land",
         "groups_compared": 15793,
-        "incomplete_round_groups": 2,
+        "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 50.0,
         "mean_absolute_difference": 0.006205280820616729,
@@ -1269,9 +2148,15 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 0
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 0.9998733616159058,
+        "within_2_fraction": 0.9998733616159058,
+        "within_5_fraction": 0.9998733616159058
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9998181818181818,
         "exact_matches": 10998,
         "field": "clinch_str_att",
@@ -1306,9 +2191,15 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 4795
+        "missing_summary_groups": 4793,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 0.9999090909090909,
+        "within_2_fraction": 0.9999090909090909,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9999090909090909,
         "exact_matches": 10999,
         "field": "clinch_str_land",
@@ -1331,33 +2222,51 @@
             "summary": 0.0
           }
         ],
-        "missing_summary_groups": 4795
+        "missing_summary_groups": 4793,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 1.0,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 1.0,
         "exact_matches": 15793,
         "field": "ground_str_att",
         "groups_compared": 15793,
-        "incomplete_round_groups": 2,
+        "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 0.0,
         "mean_absolute_difference": 0.0,
         "mismatch_examples": [],
-        "missing_summary_groups": 0
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 1.0,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 1.0,
         "exact_matches": 15793,
         "field": "ground_str_land",
         "groups_compared": 15793,
-        "incomplete_round_groups": 2,
+        "incomplete_round_groups": 0,
         "kind": "count",
         "max_absolute_difference": 0.0,
         "mean_absolute_difference": 0.0,
         "mismatch_examples": [],
-        "missing_summary_groups": 0
+        "missing_summary_groups": 0,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 0.0,
+        "within_1_fraction": 1.0,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.5298872180451127,
         "exact_matches": 5638,
         "field": "standing_time",
@@ -1427,9 +2336,15 @@
             "summary": 12
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 2.0,
+        "p99_absolute_difference": 2.0,
+        "within_1_fraction": 0.8941729323308271,
+        "within_2_fraction": 0.9915413533834586,
+        "within_5_fraction": 0.9988721804511278
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.4697254606995111,
         "exact_matches": 4996,
         "field": "neutral_time",
@@ -1501,9 +2416,15 @@
             "summary": 7
           }
         ],
-        "missing_summary_groups": 5121
+        "missing_summary_groups": 5119,
+        "p95_absolute_difference": 2.0,
+        "p99_absolute_difference": 2.0,
+        "within_1_fraction": 0.8854832643851072,
+        "within_2_fraction": 0.9904099285445657,
+        "within_5_fraction": 0.9984956750658143
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.4456766917293233,
         "exact_matches": 4742,
         "field": "distance_time",
@@ -1576,9 +2497,15 @@
             "summary": 7
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 2.0,
+        "p99_absolute_difference": 3.0,
+        "within_1_fraction": 0.8734962406015038,
+        "within_2_fraction": 0.9889097744360902,
+        "within_5_fraction": 0.9986842105263158
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.6757518796992481,
         "exact_matches": 7190,
         "field": "clinch_time",
@@ -1650,9 +2577,15 @@
             "summary": 2
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 1.0,
+        "p99_absolute_difference": 2.0,
+        "within_1_fraction": 0.9569548872180451,
+        "within_2_fraction": 0.9971804511278195,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.6885245901639344,
         "exact_matches": 3360,
         "field": "ground_time",
@@ -1724,9 +2657,15 @@
             "summary": 2
           }
         ],
-        "missing_summary_groups": 10877
+        "missing_summary_groups": 10875,
+        "p95_absolute_difference": 1.0,
+        "p99_absolute_difference": 2.0,
+        "within_1_fraction": 0.9590163934426229,
+        "within_2_fraction": 0.9963114754098361,
+        "within_5_fraction": 0.9971311475409836
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.7254699248120301,
         "exact_matches": 7719,
         "field": "control_time",
@@ -1798,9 +2737,15 @@
             "summary": 2
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 1.0,
+        "p99_absolute_difference": 2.0,
+        "within_1_fraction": 0.962687969924812,
+        "within_2_fraction": 0.9976503759398496,
+        "within_5_fraction": 0.9995300751879699
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.8403195488721804,
         "exact_matches": 8941,
         "field": "ground_ctl_time",
@@ -1872,9 +2817,15 @@
             "summary": 13
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 1.0,
+        "p99_absolute_difference": 2.0,
+        "within_1_fraction": 0.9848684210526316,
+        "within_2_fraction": 0.9989661654135338,
+        "within_5_fraction": 0.999624060150376
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9583646616541354,
         "exact_matches": 10197,
         "field": "guard_ctl_time",
@@ -1947,9 +2898,15 @@
             "summary": 1
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 1.0,
+        "within_1_fraction": 0.9967105263157895,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9652255639097744,
         "exact_matches": 10270,
         "field": "half_guard_ctl_time",
@@ -2022,9 +2979,15 @@
             "summary": 1
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 1.0,
+        "within_1_fraction": 0.9974624060150376,
+        "within_2_fraction": 0.999906015037594,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9875,
         "exact_matches": 10507,
         "field": "side_ctl_time",
@@ -2097,9 +3060,15 @@
             "summary": 3
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 1.0,
+        "within_1_fraction": 0.9991541353383459,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9747180451127819,
         "exact_matches": 10371,
         "field": "mount_ctl_time",
@@ -2169,9 +3138,15 @@
             "summary": 1
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 1.0,
+        "within_1_fraction": 0.9979323308270677,
+        "within_2_fraction": 0.999906015037594,
+        "within_5_fraction": 0.999906015037594
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9858082706766917,
         "exact_matches": 10489,
         "field": "back_ctl_time",
@@ -2241,9 +3216,15 @@
             "summary": 1
           }
         ],
-        "missing_summary_groups": 5117
+        "missing_summary_groups": 5115,
+        "p95_absolute_difference": 0.0,
+        "p99_absolute_difference": 1.0,
+        "within_1_fraction": 0.9992481203007518,
+        "within_2_fraction": 1.0,
+        "within_5_fraction": 1.0
       },
       {
+        "duplicate_round_groups_skipped": 2,
         "exact_match_fraction": 0.9256292906178489,
         "exact_matches": 9708,
         "field": "msc_ground_ctl__time",
@@ -2316,12 +3297,19 @@
             "summary": 4
           }
         ],
-        "missing_summary_groups": 5235
+        "missing_summary_groups": 5233,
+        "p95_absolute_difference": 1.0,
+        "p99_absolute_difference": 1.0,
+        "within_1_fraction": 0.9944698703279939,
+        "within_2_fraction": 0.9999046529366895,
+        "within_5_fraction": 1.0
       }
     ],
-    "hypothesis": "round=0 is a per-fighter fight-total/summary row whose additive fields equal the sum of rounds 1+.",
-    "near_unanimous_fields": 15,
-    "supported_by_additivity_tests": false
+    "hypothesis": "round=0 is a per-fighter fight-total/summary row for the same FightMetric fight ID and corner.",
+    "supported_by_additivity_tests": true,
+    "time_fields_decisive": 13,
+    "time_fields_supporting": 13,
+    "time_support_fraction": 1.0
   },
   "round_counts_usable": {
     "0": 16229,
@@ -2333,5 +3321,5 @@
   },
   "rows_total": 57382,
   "rows_with_fightmetric_id_and_color": 54187,
-  "schema_version": 1
+  "schema_version": 2
 }

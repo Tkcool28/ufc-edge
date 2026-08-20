@@ -1,52 +1,60 @@
 # Official UFC FightMetric semantics audit
 
-Generated: 2026-08-20T17:30:28.583936Z
+Generated: 2026-08-20T17:33:42.807093Z
 Snapshot: `data/raw/ufc_fightmetric_official/20260820T123046Z`
 
 ## Round 0
 
-Additivity verdict: **NOT YET SUPPORTED**.
-Decisive fields: 29; near-unanimous exact fields: 15.
+Verdict: **SUPPORTED AS SOURCE FIGHT SUMMARY**.
+Count support: 15/16 fields; time support: 13/13 fields.
 
-| Field | Compared groups | Exact fraction | Mean abs diff |
-|---|---:|---:|---:|
-| knock_down | 10954 | 0.987402 | 0.0133 |
-| sig_str_att | 10953 | 0.999817 | 0.0226 |
-| sig_str_land | 15795 | 0.999747 | 0.0068 |
-| tot_str_att | 15794 | 0.999810 | 0.0170 |
-| tot_str_land | 15794 | 0.999810 | 0.0073 |
-| grap_take_att | 15795 | 0.999747 | 0.0010 |
-| grap_take_land | 15795 | 0.999937 | 0.0001 |
-| grap_sub_att | 15795 | 0.999937 | 0.0001 |
-| grap_rev_land | 14093 | 0.999858 | 0.0001 |
-| grap_stand_land | 10447 | 1.000000 | 0.0000 |
-| dist_str_att | 15793 | 0.999873 | 0.0154 |
-| dist_str_land | 15793 | 0.999873 | 0.0062 |
-| clinch_str_att | 11000 | 0.999818 | 0.0004 |
-| clinch_str_land | 11000 | 0.999909 | 0.0001 |
-| ground_str_att | 15793 | 1.000000 | 0.0000 |
-| ground_str_land | 15793 | 1.000000 | 0.0000 |
-| standing_time | 10640 | 0.529887 | 0.6389 |
-| neutral_time | 10636 | 0.469725 | 0.7287 |
-| distance_time | 10640 | 0.445677 | 0.7568 |
-| clinch_time | 10640 | 0.675752 | 0.3703 |
-| ground_time | 4880 | 0.688525 | 0.5414 |
-| control_time | 10640 | 0.725470 | 0.3404 |
-| ground_ctl_time | 10640 | 0.840320 | 0.1969 |
-| guard_ctl_time | 10640 | 0.958365 | 0.0449 |
-| half_guard_ctl_time | 10640 | 0.965226 | 0.0374 |
-| side_ctl_time | 10640 | 0.987500 | 0.0133 |
-| mount_ctl_time | 10640 | 0.974718 | 0.0327 |
-| back_ctl_time | 10640 | 0.985808 | 0.0149 |
-| msc_ground_ctl__time | 10488 | 0.925629 | 0.0800 |
+Count fields use exact additivity after duplicate-round groups are excluded. Time fields use explicit tolerance because the source summary frequently differs from summed rounded round values by ~1 second.
+
+| Field | Groups | Exact | Within 2s | Mean abs diff | P99 abs diff |
+|---|---:|---:|---:|---:|---:|
+| knock_down | 10954 | 0.987402 | 0.999909 | 0.0133 | 1.00 |
+| sig_str_att | 10953 | 0.999817 | 0.999817 | 0.0226 | 0.00 |
+| sig_str_land | 15793 | 0.999873 | 0.999873 | 0.0063 | 0.00 |
+| tot_str_att | 15793 | 0.999873 | 0.999873 | 0.0157 | 0.00 |
+| tot_str_land | 15793 | 0.999873 | 0.999873 | 0.0063 | 0.00 |
+| grap_take_att | 15793 | 0.999873 | 0.999873 | 0.0008 | 0.00 |
+| grap_take_land | 15793 | 1.000000 | 1.000000 | 0.0000 | 0.00 |
+| grap_sub_att | 15793 | 1.000000 | 1.000000 | 0.0000 | 0.00 |
+| grap_rev_land | 14091 | 1.000000 | 1.000000 | 0.0000 | 0.00 |
+| grap_stand_land | 10447 | 1.000000 | 1.000000 | 0.0000 | 0.00 |
+| dist_str_att | 15793 | 0.999873 | 0.999873 | 0.0154 | 0.00 |
+| dist_str_land | 15793 | 0.999873 | 0.999873 | 0.0062 | 0.00 |
+| clinch_str_att | 11000 | 0.999818 | 0.999909 | 0.0004 | 0.00 |
+| clinch_str_land | 11000 | 0.999909 | 1.000000 | 0.0001 | 0.00 |
+| ground_str_att | 15793 | 1.000000 | 1.000000 | 0.0000 | 0.00 |
+| ground_str_land | 15793 | 1.000000 | 1.000000 | 0.0000 | 0.00 |
+| standing_time | 10640 | 0.529887 | 0.991541 | 0.6389 | 2.00 |
+| neutral_time | 10636 | 0.469725 | 0.990410 | 0.7287 | 2.00 |
+| distance_time | 10640 | 0.445677 | 0.988910 | 0.7568 | 3.00 |
+| clinch_time | 10640 | 0.675752 | 0.997180 | 0.3703 | 2.00 |
+| ground_time | 4880 | 0.688525 | 0.996311 | 0.5414 | 2.00 |
+| control_time | 10640 | 0.725470 | 0.997650 | 0.3404 | 2.00 |
+| ground_ctl_time | 10640 | 0.840320 | 0.998966 | 0.1969 | 2.00 |
+| guard_ctl_time | 10640 | 0.958365 | 1.000000 | 0.0449 | 1.00 |
+| half_guard_ctl_time | 10640 | 0.965226 | 0.999906 | 0.0374 | 1.00 |
+| side_ctl_time | 10640 | 0.987500 | 1.000000 | 0.0133 | 1.00 |
+| mount_ctl_time | 10640 | 0.974718 | 0.999906 | 0.0327 | 1.00 |
+| back_ctl_time | 10640 | 0.985808 | 1.000000 | 0.0149 | 1.00 |
+| msc_ground_ctl__time | 10488 | 0.925629 | 0.999905 | 0.0800 | 1.00 |
+
+## Duplicate source rounds
+
+Duplicate fighter/round keys: **714**; exact duplicate keys: **0**; conflicting keys: **714**.
+
+No duplicate row is silently dropped by this audit.
 
 ## Identity status
 
-No FightMetric↔Greco crosswalk is asserted by this audit. FightMetric rows have fightmetric ID + corner but no fighter/date identity. The next acquisition step is an official fight-node bridge; display-name-only matching remains prohibited.
+No FightMetric↔Greco crosswalk is asserted yet. FightMetric rows have FightMetric ID + corner but no fighter/date identity. The next acquisition step is the official fight-node bridge; display-name-only matching remains prohibited.
 
 ## Coverage-order warning
 
-The JSON report includes coverage by Drupal internal-ID bins to locate where rich fields turn on/off. Those bins are **not calendar eras**. Calendar-year coverage must wait for a verified fight/date identity bridge.
+The JSON report includes coverage by Drupal internal-ID bins to locate where rich fields turn on/off. Those bins are **not calendar eras**. Calendar-year coverage requires a verified fight/date identity bridge.
 
 ## Greco identity inventory
 
