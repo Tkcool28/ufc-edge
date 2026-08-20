@@ -1,0 +1,19 @@
+{
+  "decision": {
+    "detail_crawl_started": false,
+    "rule": "No detail-page acquisition is authorized by this probe. First require readable robots policy and acceptable annual-index coverage."
+  },
+  "generated_at_utc": "2026-08-20T17:47:27.289352Z",
+  "robots": {
+    "annual_event_index_allowed": false,
+    "bytes": 967,
+    "content_type": "text/html;charset=utf-8",
+    "sha256": "d3589589f091e41bbb0b69640156567dbe5931725ea8cb33c5067b47184394eb",
+    "status": 404,
+    "text": "<html><head><title>Apache Tomcat/7.0.68 (Ubuntu) - Error report</title><style><!--H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} H2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} H3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} B {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} P {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;}A {color : black;}A.name {color : black;}HR {color : #525D76;}--></style> </head><body><h1>HTTP Status 404 - </h1><HR size=\"1\" noshade=\"noshade\"><p><b>type</b> Status report</p><p><b>message</b> <u></u></p><p><b>description</b> <u>The requested resource is not available.</u></p><HR size=\"1\" noshade=\"noshade\"><h3>Apache Tomcat/7.0.68 (Ubuntu)</h3></body></html>",
+    "url": "https://mmadecisions.com/robots.txt"
+  },
+  "schema_version": 1,
+  "summary": {},
+  "years": []
+}
