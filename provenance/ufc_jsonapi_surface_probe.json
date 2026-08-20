@@ -1,0 +1,1008 @@
+{
+  "acquired_at_utc": "2026-08-20T06:58:30.879594Z",
+  "bounded_probe": true,
+  "errors": [
+    {
+      "error": "<HTTPError 403: 'Forbidden'>",
+      "name": "article",
+      "path": "/node/article"
+    }
+  ],
+  "probe_semantics": {
+    "note": "Unsupported or failing CMS collections are recorded as source-coverage evidence and do not invalidate successful surface samples.",
+    "partial_success_is_valid": true
+  },
+  "schema_version": 1,
+  "source": "Official UFC.com Drupal JSON:API",
+  "surfaces": [
+    {
+      "attribute_keys": [
+        "back_ctl_time",
+        "body_sig_str_att",
+        "body_sig_str_land",
+        "body_str_att",
+        "body_str_land",
+        "clinch_body_str_att",
+        "clinch_body_str_land",
+        "clinch_head_str_att",
+        "clinch_head_str_land",
+        "clinch_leg_str_att",
+        "clinch_leg_str_land",
+        "clinch_sig_kick_att",
+        "clinch_sig_kick_land",
+        "clinch_sig_punch_att",
+        "clinch_sig_punch_land",
+        "clinch_sig_str_att",
+        "clinch_sig_str_land",
+        "clinch_str_att",
+        "clinch_str_land",
+        "clinch_time",
+        "color",
+        "control_time",
+        "dist_body_kick_att",
+        "dist_body_kick_land",
+        "dist_body_punch_att",
+        "dist_body_punch_land",
+        "dist_body_str_att",
+        "dist_body_str_land",
+        "dist_head_kick_att",
+        "dist_head_kick_land",
+        "dist_head_punch_att",
+        "dist_head_punch_land",
+        "dist_head_str_att",
+        "dist_head_str_land",
+        "dist_legs_kick_att",
+        "dist_legs_kick_land",
+        "dist_legs_str_att",
+        "dist_legs_str_land",
+        "dist_str_att",
+        "dist_str_land",
+        "distance_time",
+        "drupal_internal__id",
+        "fightmetric_id",
+        "grap_rev_land",
+        "grap_stand_land",
+        "grap_sub_att",
+        "grap_take_att",
+        "grap_take_land",
+        "ground_body_str_att",
+        "ground_body_str_land",
+        "ground_ctl_time",
+        "ground_head_str_att",
+        "ground_head_str_land",
+        "ground_leg_str_att",
+        "ground_leg_str_land",
+        "ground_sig_kick_att",
+        "ground_sig_kick_land",
+        "ground_sig_punch_att",
+        "ground_sig_punch_land",
+        "ground_sig_str_att",
+        "ground_sig_str_land",
+        "ground_str_att",
+        "ground_str_land",
+        "ground_time",
+        "guard_ctl_time",
+        "half_guard_ctl_time",
+        "head_sig_str_att",
+        "head_sig_str_land",
+        "head_str_att",
+        "head_str_land",
+        "kicks_att",
+        "kicks_land",
+        "knock_down",
+        "legs_sig_str_att",
+        "legs_sig_str_land",
+        "legs_str_att",
+        "legs_str_land",
+        "metatag",
+        "mount_ctl_time",
+        "msc_ground_ctl__time",
+        "neutral_time",
+        "punches_att",
+        "punches_land",
+        "round",
+        "side_ctl_time",
+        "sig_str_att",
+        "sig_str_land",
+        "standing_time",
+        "tot_str_att",
+        "tot_str_land"
+      ],
+      "content_type": "application/vnd.api+json",
+      "has_next_page": true,
+      "http_status": 200,
+      "name": "fight_stat",
+      "raw_path": "provenance/ufc_jsonapi_surface_probe_raw/fight_stat.json",
+      "raw_sha256": "5e325470821ef60a15b37ab0377007732ca8cf3d1aedb382715f958eb93a1d9f",
+      "relationship_keys": [],
+      "resource_types": [
+        "fight_stat--fight_stat"
+      ],
+      "sample_count": 5,
+      "samples": [
+        {
+          "attributes": {
+            "back_ctl_time": null,
+            "body_sig_str_att": null,
+            "body_sig_str_land": null,
+            "body_str_att": null,
+            "body_str_land": null,
+            "clinch_body_str_att": null,
+            "clinch_body_str_land": null,
+            "clinch_head_str_att": null,
+            "clinch_head_str_land": null,
+            "clinch_leg_str_att": null,
+            "clinch_leg_str_land": null,
+            "clinch_sig_kick_att": null,
+            "clinch_sig_kick_land": null,
+            "clinch_sig_punch_att": null,
+            "clinch_sig_punch_land": null,
+            "clinch_sig_str_att": null,
+            "clinch_sig_str_land": null,
+            "clinch_str_att": null,
+            "clinch_str_land": null,
+            "clinch_time": null,
+            "color": null,
+            "control_time": null,
+            "dist_body_kick_att": null,
+            "dist_body_kick_land": null,
+            "dist_body_punch_att": null,
+            "dist_body_punch_land": null,
+            "dist_body_str_att": null,
+            "dist_body_str_land": null,
+            "dist_head_kick_att": null,
+            "dist_head_kick_land": null,
+            "dist_head_punch_att": null,
+            "dist_head_punch_land": null,
+            "dist_head_str_att": null,
+            "dist_head_str_land": null,
+            "dist_legs_kick_att": null,
+            "dist_legs_kick_land": null,
+            "dist_legs_str_att": null,
+            "dist_legs_str_land": null,
+            "dist_str_att": null,
+            "dist_str_land": null,
+            "distance_time": null,
+            "drupal_internal__id": 44464,
+            "fightmetric_id": null,
+            "grap_rev_land": null,
+            "grap_stand_land": null,
+            "grap_sub_att": null,
+            "grap_take_att": null,
+            "grap_take_land": null,
+            "ground_body_str_att": null,
+            "ground_body_str_land": null,
+            "ground_ctl_time": null,
+            "ground_head_str_att": null,
+            "ground_head_str_land": null,
+            "ground_leg_str_att": null,
+            "ground_leg_str_land": null,
+            "ground_sig_kick_att": null,
+            "ground_sig_kick_land": null,
+            "ground_sig_punch_att": null,
+            "ground_sig_punch_land": null,
+            "ground_sig_str_att": null,
+            "ground_sig_str_land": null,
+            "ground_str_att": null,
+            "ground_str_land": null,
+            "ground_time": null,
+            "guard_ctl_time": null,
+            "half_guard_ctl_time": null,
+            "head_sig_str_att": null,
+            "head_sig_str_land": null,
+            "head_str_att": null,
+            "head_str_land": null,
+            "kicks_att": null,
+            "kicks_land": null,
+            "knock_down": null,
+            "legs_sig_str_att": null,
+            "legs_sig_str_land": null,
+            "legs_str_att": null,
+            "legs_str_land": null,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_stat/fight_stat",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "mount_ctl_time": null,
+            "msc_ground_ctl__time": null,
+            "neutral_time": null,
+            "punches_att": null,
+            "punches_land": null,
+            "round": null,
+            "side_ctl_time": null,
+            "sig_str_att": null,
+            "sig_str_land": null,
+            "standing_time": null,
+            "tot_str_att": null,
+            "tot_str_land": null
+          },
+          "id": "7e86b97a-2150-48e3-9308-d2860d6d1391",
+          "relationship_keys": [],
+          "type": "fight_stat--fight_stat"
+        },
+        {
+          "attributes": {
+            "back_ctl_time": null,
+            "body_sig_str_att": null,
+            "body_sig_str_land": null,
+            "body_str_att": null,
+            "body_str_land": null,
+            "clinch_body_str_att": null,
+            "clinch_body_str_land": null,
+            "clinch_head_str_att": null,
+            "clinch_head_str_land": null,
+            "clinch_leg_str_att": null,
+            "clinch_leg_str_land": null,
+            "clinch_sig_kick_att": null,
+            "clinch_sig_kick_land": null,
+            "clinch_sig_punch_att": null,
+            "clinch_sig_punch_land": null,
+            "clinch_sig_str_att": null,
+            "clinch_sig_str_land": null,
+            "clinch_str_att": null,
+            "clinch_str_land": null,
+            "clinch_time": null,
+            "color": null,
+            "control_time": null,
+            "dist_body_kick_att": null,
+            "dist_body_kick_land": null,
+            "dist_body_punch_att": null,
+            "dist_body_punch_land": null,
+            "dist_body_str_att": null,
+            "dist_body_str_land": null,
+            "dist_head_kick_att": null,
+            "dist_head_kick_land": null,
+            "dist_head_punch_att": null,
+            "dist_head_punch_land": null,
+            "dist_head_str_att": null,
+            "dist_head_str_land": null,
+            "dist_legs_kick_att": null,
+            "dist_legs_kick_land": null,
+            "dist_legs_str_att": null,
+            "dist_legs_str_land": null,
+            "dist_str_att": null,
+            "dist_str_land": null,
+            "distance_time": null,
+            "drupal_internal__id": 44465,
+            "fightmetric_id": null,
+            "grap_rev_land": null,
+            "grap_stand_land": null,
+            "grap_sub_att": null,
+            "grap_take_att": null,
+            "grap_take_land": null,
+            "ground_body_str_att": null,
+            "ground_body_str_land": null,
+            "ground_ctl_time": null,
+            "ground_head_str_att": null,
+            "ground_head_str_land": null,
+            "ground_leg_str_att": null,
+            "ground_leg_str_land": null,
+            "ground_sig_kick_att": null,
+            "ground_sig_kick_land": null,
+            "ground_sig_punch_att": null,
+            "ground_sig_punch_land": null,
+            "ground_sig_str_att": null,
+            "ground_sig_str_land": null,
+            "ground_str_att": null,
+            "ground_str_land": null,
+            "ground_time": null,
+            "guard_ctl_time": null,
+            "half_guard_ctl_time": null,
+            "head_sig_str_att": null,
+            "head_sig_str_land": null,
+            "head_str_att": null,
+            "head_str_land": null,
+            "kicks_att": null,
+            "kicks_land": null,
+            "knock_down": null,
+            "legs_sig_str_att": null,
+            "legs_sig_str_land": null,
+            "legs_str_att": null,
+            "legs_str_land": null,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_stat/fight_stat",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "mount_ctl_time": null,
+            "msc_ground_ctl__time": null,
+            "neutral_time": null,
+            "punches_att": null,
+            "punches_land": null,
+            "round": null,
+            "side_ctl_time": null,
+            "sig_str_att": null,
+            "sig_str_land": null,
+            "standing_time": null,
+            "tot_str_att": null,
+            "tot_str_land": null
+          },
+          "id": "6efdc0b8-bce9-4f10-8128-d2d8d8900a65",
+          "relationship_keys": [],
+          "type": "fight_stat--fight_stat"
+        },
+        {
+          "attributes": {
+            "back_ctl_time": null,
+            "body_sig_str_att": null,
+            "body_sig_str_land": null,
+            "body_str_att": null,
+            "body_str_land": null,
+            "clinch_body_str_att": null,
+            "clinch_body_str_land": null,
+            "clinch_head_str_att": null,
+            "clinch_head_str_land": null,
+            "clinch_leg_str_att": null,
+            "clinch_leg_str_land": null,
+            "clinch_sig_kick_att": null,
+            "clinch_sig_kick_land": null,
+            "clinch_sig_punch_att": null,
+            "clinch_sig_punch_land": null,
+            "clinch_sig_str_att": null,
+            "clinch_sig_str_land": null,
+            "clinch_str_att": null,
+            "clinch_str_land": null,
+            "clinch_time": null,
+            "color": null,
+            "control_time": null,
+            "dist_body_kick_att": null,
+            "dist_body_kick_land": null,
+            "dist_body_punch_att": null,
+            "dist_body_punch_land": null,
+            "dist_body_str_att": null,
+            "dist_body_str_land": null,
+            "dist_head_kick_att": null,
+            "dist_head_kick_land": null,
+            "dist_head_punch_att": null,
+            "dist_head_punch_land": null,
+            "dist_head_str_att": null,
+            "dist_head_str_land": null,
+            "dist_legs_kick_att": null,
+            "dist_legs_kick_land": null,
+            "dist_legs_str_att": null,
+            "dist_legs_str_land": null,
+            "dist_str_att": null,
+            "dist_str_land": null,
+            "distance_time": null,
+            "drupal_internal__id": 44466,
+            "fightmetric_id": null,
+            "grap_rev_land": null,
+            "grap_stand_land": null,
+            "grap_sub_att": null,
+            "grap_take_att": null,
+            "grap_take_land": null,
+            "ground_body_str_att": null,
+            "ground_body_str_land": null,
+            "ground_ctl_time": null,
+            "ground_head_str_att": null,
+            "ground_head_str_land": null,
+            "ground_leg_str_att": null,
+            "ground_leg_str_land": null,
+            "ground_sig_kick_att": null,
+            "ground_sig_kick_land": null,
+            "ground_sig_punch_att": null,
+            "ground_sig_punch_land": null,
+            "ground_sig_str_att": null,
+            "ground_sig_str_land": null,
+            "ground_str_att": null,
+            "ground_str_land": null,
+            "ground_time": null,
+            "guard_ctl_time": null,
+            "half_guard_ctl_time": null,
+            "head_sig_str_att": null,
+            "head_sig_str_land": null,
+            "head_str_att": null,
+            "head_str_land": null,
+            "kicks_att": null,
+            "kicks_land": null,
+            "knock_down": null,
+            "legs_sig_str_att": null,
+            "legs_sig_str_land": null,
+            "legs_str_att": null,
+            "legs_str_land": null,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_stat/fight_stat",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "mount_ctl_time": null,
+            "msc_ground_ctl__time": null,
+            "neutral_time": null,
+            "punches_att": null,
+            "punches_land": null,
+            "round": null,
+            "side_ctl_time": null,
+            "sig_str_att": null,
+            "sig_str_land": null,
+            "standing_time": null,
+            "tot_str_att": null,
+            "tot_str_land": null
+          },
+          "id": "a784c375-47de-437f-b377-8c641b366099",
+          "relationship_keys": [],
+          "type": "fight_stat--fight_stat"
+        },
+        {
+          "attributes": {
+            "back_ctl_time": null,
+            "body_sig_str_att": null,
+            "body_sig_str_land": null,
+            "body_str_att": null,
+            "body_str_land": null,
+            "clinch_body_str_att": null,
+            "clinch_body_str_land": null,
+            "clinch_head_str_att": null,
+            "clinch_head_str_land": null,
+            "clinch_leg_str_att": null,
+            "clinch_leg_str_land": null,
+            "clinch_sig_kick_att": null,
+            "clinch_sig_kick_land": null,
+            "clinch_sig_punch_att": null,
+            "clinch_sig_punch_land": null,
+            "clinch_sig_str_att": null,
+            "clinch_sig_str_land": null,
+            "clinch_str_att": null,
+            "clinch_str_land": null,
+            "clinch_time": null,
+            "color": null,
+            "control_time": null,
+            "dist_body_kick_att": null,
+            "dist_body_kick_land": null,
+            "dist_body_punch_att": null,
+            "dist_body_punch_land": null,
+            "dist_body_str_att": null,
+            "dist_body_str_land": null,
+            "dist_head_kick_att": null,
+            "dist_head_kick_land": null,
+            "dist_head_punch_att": null,
+            "dist_head_punch_land": null,
+            "dist_head_str_att": null,
+            "dist_head_str_land": null,
+            "dist_legs_kick_att": null,
+            "dist_legs_kick_land": null,
+            "dist_legs_str_att": null,
+            "dist_legs_str_land": null,
+            "dist_str_att": null,
+            "dist_str_land": null,
+            "distance_time": null,
+            "drupal_internal__id": 44467,
+            "fightmetric_id": null,
+            "grap_rev_land": null,
+            "grap_stand_land": null,
+            "grap_sub_att": null,
+            "grap_take_att": null,
+            "grap_take_land": null,
+            "ground_body_str_att": null,
+            "ground_body_str_land": null,
+            "ground_ctl_time": null,
+            "ground_head_str_att": null,
+            "ground_head_str_land": null,
+            "ground_leg_str_att": null,
+            "ground_leg_str_land": null,
+            "ground_sig_kick_att": null,
+            "ground_sig_kick_land": null,
+            "ground_sig_punch_att": null,
+            "ground_sig_punch_land": null,
+            "ground_sig_str_att": null,
+            "ground_sig_str_land": null,
+            "ground_str_att": null,
+            "ground_str_land": null,
+            "ground_time": null,
+            "guard_ctl_time": null,
+            "half_guard_ctl_time": null,
+            "head_sig_str_att": null,
+            "head_sig_str_land": null,
+            "head_str_att": null,
+            "head_str_land": null,
+            "kicks_att": null,
+            "kicks_land": null,
+            "knock_down": null,
+            "legs_sig_str_att": null,
+            "legs_sig_str_land": null,
+            "legs_str_att": null,
+            "legs_str_land": null,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_stat/fight_stat",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "mount_ctl_time": null,
+            "msc_ground_ctl__time": null,
+            "neutral_time": null,
+            "punches_att": null,
+            "punches_land": null,
+            "round": null,
+            "side_ctl_time": null,
+            "sig_str_att": null,
+            "sig_str_land": null,
+            "standing_time": null,
+            "tot_str_att": null,
+            "tot_str_land": null
+          },
+          "id": "e84f893e-238f-4805-9dd9-7b61069aed80",
+          "relationship_keys": [],
+          "type": "fight_stat--fight_stat"
+        },
+        {
+          "attributes": {
+            "back_ctl_time": null,
+            "body_sig_str_att": null,
+            "body_sig_str_land": null,
+            "body_str_att": null,
+            "body_str_land": null,
+            "clinch_body_str_att": null,
+            "clinch_body_str_land": null,
+            "clinch_head_str_att": null,
+            "clinch_head_str_land": null,
+            "clinch_leg_str_att": null,
+            "clinch_leg_str_land": null,
+            "clinch_sig_kick_att": null,
+            "clinch_sig_kick_land": null,
+            "clinch_sig_punch_att": null,
+            "clinch_sig_punch_land": null,
+            "clinch_sig_str_att": null,
+            "clinch_sig_str_land": null,
+            "clinch_str_att": null,
+            "clinch_str_land": null,
+            "clinch_time": null,
+            "color": null,
+            "control_time": null,
+            "dist_body_kick_att": null,
+            "dist_body_kick_land": null,
+            "dist_body_punch_att": null,
+            "dist_body_punch_land": null,
+            "dist_body_str_att": null,
+            "dist_body_str_land": null,
+            "dist_head_kick_att": null,
+            "dist_head_kick_land": null,
+            "dist_head_punch_att": null,
+            "dist_head_punch_land": null,
+            "dist_head_str_att": null,
+            "dist_head_str_land": null,
+            "dist_legs_kick_att": null,
+            "dist_legs_kick_land": null,
+            "dist_legs_str_att": null,
+            "dist_legs_str_land": null,
+            "dist_str_att": null,
+            "dist_str_land": null,
+            "distance_time": null,
+            "drupal_internal__id": 44468,
+            "fightmetric_id": null,
+            "grap_rev_land": null,
+            "grap_stand_land": null,
+            "grap_sub_att": null,
+            "grap_take_att": null,
+            "grap_take_land": null,
+            "ground_body_str_att": null,
+            "ground_body_str_land": null,
+            "ground_ctl_time": null,
+            "ground_head_str_att": null,
+            "ground_head_str_land": null,
+            "ground_leg_str_att": null,
+            "ground_leg_str_land": null,
+            "ground_sig_kick_att": null,
+            "ground_sig_kick_land": null,
+            "ground_sig_punch_att": null,
+            "ground_sig_punch_land": null,
+            "ground_sig_str_att": null,
+            "ground_sig_str_land": null,
+            "ground_str_att": null,
+            "ground_str_land": null,
+            "ground_time": null,
+            "guard_ctl_time": null,
+            "half_guard_ctl_time": null,
+            "head_sig_str_att": null,
+            "head_sig_str_land": null,
+            "head_str_att": null,
+            "head_str_land": null,
+            "kicks_att": null,
+            "kicks_land": null,
+            "knock_down": null,
+            "legs_sig_str_att": null,
+            "legs_sig_str_land": null,
+            "legs_str_att": null,
+            "legs_str_land": null,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_stat/fight_stat",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "mount_ctl_time": null,
+            "msc_ground_ctl__time": null,
+            "neutral_time": null,
+            "punches_att": null,
+            "punches_land": null,
+            "round": null,
+            "side_ctl_time": null,
+            "sig_str_att": null,
+            "sig_str_land": null,
+            "standing_time": null,
+            "tot_str_att": null,
+            "tot_str_land": null
+          },
+          "id": "4b3dc936-1874-43c1-a4d6-eedc55228381",
+          "relationship_keys": [],
+          "type": "fight_stat--fight_stat"
+        }
+      ],
+      "url": "https://www.ufc.com/jsonapi/fight_stat/fight_stat?page%5Blimit%5D=5"
+    },
+    {
+      "attribute_keys": [
+        "combined",
+        "drupal_internal__id",
+        "fightmetric_id",
+        "metatag",
+        "rank",
+        "round",
+        "statname",
+        "value"
+      ],
+      "content_type": "application/vnd.api+json",
+      "has_next_page": true,
+      "http_status": 200,
+      "name": "fight_roundboard",
+      "raw_path": "provenance/ufc_jsonapi_surface_probe_raw/fight_roundboard.json",
+      "raw_sha256": "1f5413f9470f1b46c8b966af1d3de6dc18d69ebff80392906974a8701ef1ff01",
+      "relationship_keys": [],
+      "resource_types": [
+        "fight_roundboard--fight_roundboard"
+      ],
+      "sample_count": 5,
+      "samples": [
+        {
+          "attributes": {
+            "combined": false,
+            "drupal_internal__id": 601,
+            "fightmetric_id": 4769,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_roundboard/fight_roundboard",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "rank": 4,
+            "round": 2,
+            "statname": "Submission Attempts",
+            "value": "4"
+          },
+          "id": "01e7830e-38bf-4b85-9403-5c6a9f446fb6",
+          "relationship_keys": [],
+          "type": "fight_roundboard--fight_roundboard"
+        },
+        {
+          "attributes": {
+            "combined": false,
+            "drupal_internal__id": 738,
+            "fightmetric_id": 8044,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_roundboard/fight_roundboard",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "rank": 7,
+            "round": 2,
+            "statname": "Takedowns Attempted",
+            "value": "9"
+          },
+          "id": "02b2321f-0d30-4957-a921-c84fa7075b79",
+          "relationship_keys": [],
+          "type": "fight_roundboard--fight_roundboard"
+        },
+        {
+          "attributes": {
+            "combined": false,
+            "drupal_internal__id": 585,
+            "fightmetric_id": 5933,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_roundboard/fight_roundboard",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "rank": 5,
+            "round": 3,
+            "statname": "Takedowns Landed",
+            "value": "6"
+          },
+          "id": "02fb956a-fa8e-45a4-91ea-c15191910830",
+          "relationship_keys": [],
+          "type": "fight_roundboard--fight_roundboard"
+        },
+        {
+          "attributes": {
+            "combined": false,
+            "drupal_internal__id": 718,
+            "fightmetric_id": 494,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_roundboard/fight_roundboard",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "rank": 10,
+            "round": 1,
+            "statname": "Submission Attempts",
+            "value": "3"
+          },
+          "id": "04f6130a-79e1-4f03-b391-dd89be7c6073",
+          "relationship_keys": [],
+          "type": "fight_roundboard--fight_roundboard"
+        },
+        {
+          "attributes": {
+            "combined": true,
+            "drupal_internal__id": 742,
+            "fightmetric_id": 5962,
+            "metatag": [
+              {
+                "attributes": {
+                  "content": "| UFC",
+                  "name": "title"
+                },
+                "tag": "meta"
+              },
+              {
+                "attributes": {
+                  "href": "https://www.ufc.com/jsonapi/fight_roundboard/fight_roundboard",
+                  "rel": "canonical"
+                },
+                "tag": "link"
+              },
+              {
+                "attributes": {
+                  "content": "origin",
+                  "name": "referrer"
+                },
+                "tag": "meta"
+              }
+            ],
+            "rank": 7,
+            "round": 2,
+            "statname": "Total Strikes Landed",
+            "value": "151"
+          },
+          "id": "0512eca9-423b-4536-ad9d-21609106a946",
+          "relationship_keys": [],
+          "type": "fight_roundboard--fight_roundboard"
+        }
+      ],
+      "url": "https://www.ufc.com/jsonapi/fight_roundboard/fight_roundboard?page%5Blimit%5D=5"
+    },
+    {
+      "attribute_keys": [],
+      "content_type": "application/vnd.api+json",
+      "has_next_page": true,
+      "http_status": 200,
+      "name": "athlete_pairing",
+      "raw_path": "provenance/ufc_jsonapi_surface_probe_raw/athlete_pairing.json",
+      "raw_sha256": "971701bd8237727f43f36cfb813d77925c75cd33bbaad3cfbd94d8b8649a275a",
+      "relationship_keys": [],
+      "resource_types": [],
+      "sample_count": 0,
+      "samples": [],
+      "url": "https://www.ufc.com/jsonapi/athlete_pairing/athlete_pairing?page%5Blimit%5D=5"
+    },
+    {
+      "attribute_keys": [],
+      "content_type": "application/vnd.api+json",
+      "has_next_page": true,
+      "http_status": 200,
+      "name": "event_leaderboard",
+      "raw_path": "provenance/ufc_jsonapi_surface_probe_raw/event_leaderboard.json",
+      "raw_sha256": "0a31a1d72b4ccc94eff82aac0f5a459cff6c9e8d93aa9911642c0b086f80b15a",
+      "relationship_keys": [],
+      "resource_types": [],
+      "sample_count": 0,
+      "samples": [],
+      "url": "https://www.ufc.com/jsonapi/event_leaderboard/event_leaderboard?page%5Blimit%5D=5"
+    },
+    {
+      "attribute_keys": [],
+      "content_type": "application/vnd.api+json",
+      "has_next_page": true,
+      "http_status": 200,
+      "name": "interactive_fight_card",
+      "raw_path": "provenance/ufc_jsonapi_surface_probe_raw/interactive_fight_card.json",
+      "raw_sha256": "10ca2ee0f3f77df714f3f58333b320646b4510258cb490ed778cb3e187dcf9c5",
+      "relationship_keys": [],
+      "resource_types": [
+        "interactive_fight_card--interactive_fight_card"
+      ],
+      "sample_count": 5,
+      "samples": [
+        {
+          "attributes": null,
+          "id": "d1f3a8be-2f96-4141-a927-eb749c3d906f",
+          "relationship_keys": [],
+          "type": "interactive_fight_card--interactive_fight_card"
+        },
+        {
+          "attributes": null,
+          "id": "e3f3befe-b025-498f-8fe5-b5fba193b917",
+          "relationship_keys": [],
+          "type": "interactive_fight_card--interactive_fight_card"
+        },
+        {
+          "attributes": null,
+          "id": "50f0368d-c3cc-442a-85c8-a571a1525f87",
+          "relationship_keys": [],
+          "type": "interactive_fight_card--interactive_fight_card"
+        },
+        {
+          "attributes": null,
+          "id": "7a5c1bbe-b306-407b-b068-1c1aa6ca7a97",
+          "relationship_keys": [],
+          "type": "interactive_fight_card--interactive_fight_card"
+        },
+        {
+          "attributes": null,
+          "id": "253ea8e7-5bd6-435d-8368-875ed799998c",
+          "relationship_keys": [],
+          "type": "interactive_fight_card--interactive_fight_card"
+        }
+      ],
+      "url": "https://www.ufc.com/jsonapi/interactive_fight_card/interactive_fight_card?page%5Blimit%5D=5"
+    }
+  ]
+}
