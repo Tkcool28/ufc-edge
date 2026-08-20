@@ -1,0 +1,55 @@
+{
+  "source_name": "Greco1899 UFCStats scrape",
+  "source_repository": "Greco1899/scrape_ufc_stats",
+  "source_commit": "8e40eb945e1127bf0ef172ab211a34787948f312",
+  "source_commit_date_utc": "2026-08-18T09:32:37Z",
+  "license": "GPL-3.0",
+  "raw_snapshot_directory": "data/raw/greco1899/8e40eb945e11",
+  "selected_files": [
+    {
+      "path": "ufc_event_details.csv",
+      "git_blob_sha": "132a5881a5612c3822724216442326588982edb1",
+      "role": "event identity, date, and location"
+    },
+    {
+      "path": "ufc_fight_details.csv",
+      "git_blob_sha": "5b7f594bed5c4975170d94657132c52fba3acb65",
+      "role": "event-to-bout identity and fight URL"
+    },
+    {
+      "path": "ufc_fight_results.csv",
+      "git_blob_sha": "0498f94a5ffef947599dc6ecbb32330f00b2cb9e",
+      "role": "outcome, weight class, method, ending round/time, and fight metadata"
+    },
+    {
+      "path": "ufc_fight_stats.csv",
+      "git_blob_sha": "52b9b7f1869e3ff27c52270de2c6691c6843da73",
+      "role": "round-level fighter statistics"
+    },
+    {
+      "path": "ufc_fighter_details.csv",
+      "git_blob_sha": "ea02446781c52fe3b66251c94347abb98e4e098b",
+      "role": "fighter name, nickname, and stable UFCStats URL identity"
+    },
+    {
+      "path": "ufc_fighter_tott.csv",
+      "git_blob_sha": "3b86db74de534940cec657511aba6c706192a5ba",
+      "role": "tale-of-the-tape height, weight snapshot, reach, stance snapshot, and DOB"
+    }
+  ],
+  "excluded_or_generated": [
+    {
+      "path": "ufc_fight_stats_long_format.csv",
+      "reason": "not present at the pinned commit; UFC Edge will generate its own canonical one-fighter-per-row representation"
+    },
+    {
+      "path": "unscraped_event_urls.txt",
+      "reason": "not present at the pinned commit and therefore not part of the reproducible snapshot"
+    }
+  ],
+  "source_semantics": [
+    "ufc_fight_stats.csv is round-level. The upstream scraper skips the fight-summary table and emits individual-round rows.",
+    "ufc_fighter_tott.csv is physical/tale-of-the-tape metadata, not career aggregate statistics.",
+    "Source red/blue ordering is transport structure only and must not become a model feature or semantic fighter identity."
+  ]
+}
