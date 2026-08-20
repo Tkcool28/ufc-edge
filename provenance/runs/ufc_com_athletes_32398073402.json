@@ -1,0 +1,16 @@
+{
+  "ended_at_utc": "2026-08-20T18:20:25Z",
+  "exit_code": 0,
+  "github_run_attempt": "1",
+  "github_run_id": "32398073402",
+  "log_path": "provenance/runs/ufc_com_athletes_32398073402.log",
+  "pipeline": "ufc_com_resource",
+  "process_timeout_seconds": 2100,
+  "promotion_rule": "Raw resource is committed only when manifest exists and process exits 0.",
+  "ref": "main",
+  "resource": "athletes",
+  "result": "success",
+  "snapshot_id": "20260820T173134Z",
+  "started_at_utc": "2026-08-20T18:09:13Z",
+  "trigger_sha": "2b9e5ef087b7423c29ce17ba0d9ab567d85f92bf"
+}

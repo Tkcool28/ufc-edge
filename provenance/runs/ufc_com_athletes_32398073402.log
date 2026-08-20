@@ -1,0 +1,4 @@
+[ufc.com:athletes] page=25 rows=1250
+[ufc.com:athletes] page=50 rows=2500
+[ufc.com:athletes] page=75 rows=3750
+[ufc.com:athletes] complete rows=4160 pages=84 snapshot=20260820T173134Z
