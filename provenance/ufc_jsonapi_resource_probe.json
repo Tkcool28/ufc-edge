@@ -1,0 +1,2071 @@
+{
+  "acquired_at_utc": "2026-08-20T06:55:05.580509Z",
+  "all_resources": [
+    {
+      "href": "https://www.ufc.com/jsonapi/access_token/access_token",
+      "keyword_match": [],
+      "rel": "access_token--access_token"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/action/action",
+      "keyword_match": [],
+      "rel": "action--action"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/athlete_pairing/athlete_pairing",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "athlete_pairing--athlete_pairing"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/athlete_pairing_type/athlete_pairing_type",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "athlete_pairing_type--athlete_pairing_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/athlete_ranking/athlete_ranking",
+      "keyword_match": [
+        "athlete",
+        "rank"
+      ],
+      "rel": "athlete_ranking--athlete_ranking"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/athlete_stat/athlete_stat",
+      "keyword_match": [
+        "athlete",
+        "stat"
+      ],
+      "rel": "athlete_stat--athlete_stat"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/base_field_override/base_field_override",
+      "keyword_match": [],
+      "rel": "base_field_override--base_field_override"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/bio/bio",
+      "keyword_match": [],
+      "rel": "bio--bio"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/bio_type/bio_type",
+      "keyword_match": [],
+      "rel": "bio_type--bio_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/block/block",
+      "keyword_match": [],
+      "rel": "block--block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/block_content/basic_block",
+      "keyword_match": [],
+      "rel": "block_content--basic_block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/block_content/content_block",
+      "keyword_match": [],
+      "rel": "block_content--content_block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/block_content/headlines",
+      "keyword_match": [],
+      "rel": "block_content--headlines"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/block_content/hero_block",
+      "keyword_match": [],
+      "rel": "block_content--hero_block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/block_content/instagram_block",
+      "keyword_match": [],
+      "rel": "block_content--instagram_block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/block_content_type/block_content_type",
+      "keyword_match": [],
+      "rel": "block_content_type--block_content_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/config_split/config_split",
+      "keyword_match": [],
+      "rel": "config_split--config_split"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/configurable_language/configurable_language",
+      "keyword_match": [],
+      "rel": "configurable_language--configurable_language"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/consumer/consumer",
+      "keyword_match": [],
+      "rel": "consumer--consumer"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/crop/focal_point",
+      "keyword_match": [],
+      "rel": "crop--focal_point"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/crop_type/crop_type",
+      "keyword_match": [],
+      "rel": "crop_type--crop_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/date_format/date_format",
+      "keyword_match": [],
+      "rel": "date_format--date_format"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/dfp_tag/dfp_tag",
+      "keyword_match": [],
+      "rel": "dfp_tag--dfp_tag"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/eck_entity_bundle/eck_entity_bundle",
+      "keyword_match": [],
+      "rel": "eck_entity_bundle--eck_entity_bundle"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/eck_entity_type/eck_entity_type",
+      "keyword_match": [],
+      "rel": "eck_entity_type--eck_entity_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/editor/editor",
+      "keyword_match": [],
+      "rel": "editor--editor"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/encryption_profile/encryption_profile",
+      "keyword_match": [],
+      "rel": "encryption_profile--encryption_profile"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/entity_browser/entity_browser",
+      "keyword_match": [],
+      "rel": "entity_browser--entity_browser"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/entity_form_display/entity_form_display",
+      "keyword_match": [],
+      "rel": "entity_form_display--entity_form_display"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/entity_form_mode/entity_form_mode",
+      "keyword_match": [],
+      "rel": "entity_form_mode--entity_form_mode"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/entity_queue/entity_queue",
+      "keyword_match": [],
+      "rel": "entity_queue--entity_queue"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/entity_subqueue/featured_program_episode",
+      "keyword_match": [],
+      "rel": "entity_subqueue--featured_program_episode"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/entity_view_display/entity_view_display",
+      "keyword_match": [],
+      "rel": "entity_view_display--entity_view_display"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/entity_view_mode/entity_view_mode",
+      "keyword_match": [],
+      "rel": "entity_view_mode--entity_view_mode"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/event_leaderboard/event_leaderboard",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "event_leaderboard--event_leaderboard"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/facets_facet/facets_facet",
+      "keyword_match": [],
+      "rel": "facets_facet--facets_facet"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/facets_facet_source/facets_facet_source",
+      "keyword_match": [],
+      "rel": "facets_facet_source--facets_facet_source"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/field_config/field_config",
+      "keyword_match": [],
+      "rel": "field_config--field_config"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/field_storage_config/field_storage_config",
+      "keyword_match": [],
+      "rel": "field_storage_config--field_storage_config"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/fight_card_broadcast/fight_card_broadcast",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "fight_card_broadcast--fight_card_broadcast"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/fight_card_broadcast_type/fight_card_broadcast_type",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "fight_card_broadcast_type--fight_card_broadcast_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/fight_roundboard/fight_roundboard",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "fight_roundboard--fight_roundboard"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/fight_stat/fight_stat",
+      "keyword_match": [
+        "fight",
+        "stat"
+      ],
+      "rel": "fight_stat--fight_stat"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/file/file",
+      "keyword_match": [],
+      "rel": "file--file"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/filter_format/filter_format",
+      "keyword_match": [],
+      "rel": "filter_format--filter_format"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/font/font",
+      "keyword_match": [],
+      "rel": "font--font"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/font_display/font_display",
+      "keyword_match": [],
+      "rel": "font_display--font_display"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/google_tag_container/google_tag_container",
+      "keyword_match": [],
+      "rel": "google_tag_container--google_tag_container"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/grid/early",
+      "keyword_match": [],
+      "rel": "grid--early"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/grid/late",
+      "keyword_match": [],
+      "rel": "grid--late"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/grid/valley",
+      "keyword_match": [],
+      "rel": "grid--valley"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/grid_type/grid_type",
+      "keyword_match": [],
+      "rel": "grid_type--grid_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/how_to_watch_channels/default",
+      "keyword_match": [],
+      "rel": "how_to_watch_channels--default"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/how_to_watch_channels_type/how_to_watch_channels_type",
+      "keyword_match": [],
+      "rel": "how_to_watch_channels_type--how_to_watch_channels_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/image_style/image_style",
+      "keyword_match": [],
+      "rel": "image_style--image_style"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/interactive_fight_card/interactive_fight_card",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "interactive_fight_card--interactive_fight_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/key/key",
+      "keyword_match": [],
+      "rel": "key--key"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/key_config_override/key_config_override",
+      "keyword_match": [],
+      "rel": "key_config_override--key_config_override"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/language_content_settings/language_content_settings",
+      "keyword_match": [],
+      "rel": "language_content_settings--language_content_settings"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/local_font_config_entity/local_font_config_entity",
+      "keyword_match": [],
+      "rel": "local_font_config_entity--local_font_config_entity"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/device",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--device"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/embeddable_video",
+      "keyword_match": [
+        "media",
+        "video"
+      ],
+      "rel": "media--embeddable_video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/facebook",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--facebook"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/gallery",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--gallery"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/image",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--image"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/instagram",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--instagram"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/oembed",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--oembed"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/playlist",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--playlist"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/tweet",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--tweet"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/vector",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--vector"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/video",
+      "keyword_match": [
+        "media",
+        "video"
+      ],
+      "rel": "media--video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/video_clip",
+      "keyword_match": [
+        "media",
+        "video"
+      ],
+      "rel": "media--video_clip"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media_bulk_config/media_bulk_config",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media_bulk_config--media_bulk_config"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media_type/media_type",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media_type--media_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/menu/menu",
+      "keyword_match": [],
+      "rel": "menu--menu"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/menu_link_content/menu_link_content",
+      "keyword_match": [],
+      "rel": "menu_link_content--menu_link_content"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/metatag_defaults/metatag_defaults",
+      "keyword_match": [],
+      "rel": "metatag_defaults--metatag_defaults"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/micro_site/micro_site",
+      "keyword_match": [],
+      "rel": "micro_site--micro_site"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/name_format/name_format",
+      "keyword_match": [],
+      "rel": "name_format--name_format"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/name_list_format/name_list_format",
+      "keyword_match": [],
+      "rel": "name_list_format--name_list_format"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/next_entity_type_config/next_entity_type_config",
+      "keyword_match": [],
+      "rel": "next_entity_type_config--next_entity_type_config"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/next_site/next_site",
+      "keyword_match": [],
+      "rel": "next_site--next_site"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/article",
+      "keyword_match": [
+        "article"
+      ],
+      "rel": "node--article"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/athlete",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "node--athlete"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/campaign",
+      "keyword_match": [],
+      "rel": "node--campaign"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/event",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "node--event"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/fight",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "node--fight"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/gallery",
+      "keyword_match": [],
+      "rel": "node--gallery"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/landing",
+      "keyword_match": [],
+      "rel": "node--landing"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/link",
+      "keyword_match": [],
+      "rel": "node--link"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/page",
+      "keyword_match": [],
+      "rel": "node--page"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/partner",
+      "keyword_match": [],
+      "rel": "node--partner"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/profile",
+      "keyword_match": [],
+      "rel": "node--profile"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/program_episode",
+      "keyword_match": [],
+      "rel": "node--program_episode"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/video",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "node--video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node_type/node_type",
+      "keyword_match": [],
+      "rel": "node_type--node_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/oauth2_scope/oauth2_scope",
+      "keyword_match": [],
+      "rel": "oauth2_scope--oauth2_scope"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/oauth2_token_type/oauth2_token_type",
+      "keyword_match": [],
+      "rel": "oauth2_token_type--oauth2_token_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/oembed_provider/oembed_provider",
+      "keyword_match": [],
+      "rel": "oembed_provider--oembed_provider"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/oembed_provider_bucket/oembed_provider_bucket",
+      "keyword_match": [],
+      "rel": "oembed_provider_bucket--oembed_provider_bucket"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/page/page",
+      "keyword_match": [],
+      "rel": "page--page"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/page_variant/page_variant",
+      "keyword_match": [],
+      "rel": "page_variant--page_variant"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/anchor_bar",
+      "keyword_match": [],
+      "rel": "paragraph--anchor_bar"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/athlete_spotlight",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "paragraph--athlete_spotlight"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/athlete_stats",
+      "keyword_match": [
+        "athlete",
+        "stat"
+      ],
+      "rel": "paragraph--athlete_stats"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/bio",
+      "keyword_match": [],
+      "rel": "paragraph--bio"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/bio_card",
+      "keyword_match": [],
+      "rel": "paragraph--bio_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/block",
+      "keyword_match": [],
+      "rel": "paragraph--block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/bundle_card",
+      "keyword_match": [],
+      "rel": "paragraph--bundle_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/bundle_selector",
+      "keyword_match": [],
+      "rel": "paragraph--bundle_selector"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/campaign_link",
+      "keyword_match": [],
+      "rel": "paragraph--campaign_link"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/card",
+      "keyword_match": [],
+      "rel": "paragraph--card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/carousel_item",
+      "keyword_match": [],
+      "rel": "paragraph--carousel_item"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/component",
+      "keyword_match": [],
+      "rel": "paragraph--component"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/connect_content",
+      "keyword_match": [],
+      "rel": "paragraph--connect_content"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/content_by_category",
+      "keyword_match": [],
+      "rel": "paragraph--content_by_category"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/content_card",
+      "keyword_match": [],
+      "rel": "paragraph--content_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/content_card_across",
+      "keyword_match": [],
+      "rel": "paragraph--content_card_across"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/content_grid",
+      "keyword_match": [],
+      "rel": "paragraph--content_grid"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/cta",
+      "keyword_match": [],
+      "rel": "paragraph--cta"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/cta_banner",
+      "keyword_match": [],
+      "rel": "paragraph--cta_banner"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/decoupled_article_listing",
+      "keyword_match": [
+        "article"
+      ],
+      "rel": "paragraph--decoupled_article_listing"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/decoupled_hero",
+      "keyword_match": [],
+      "rel": "paragraph--decoupled_hero"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/decoupled_hero_item",
+      "keyword_match": [],
+      "rel": "paragraph--decoupled_hero_item"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/event",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "paragraph--event"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/event_scheduler",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "paragraph--event_scheduler"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/event_scheduler_single",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "paragraph--event_scheduler_single"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/faq",
+      "keyword_match": [],
+      "rel": "paragraph--faq"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/faq_items",
+      "keyword_match": [],
+      "rel": "paragraph--faq_items"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/feature_card",
+      "keyword_match": [],
+      "rel": "paragraph--feature_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/feature_cards",
+      "keyword_match": [],
+      "rel": "paragraph--feature_cards"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/featured_athlete",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "paragraph--featured_athlete"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/fighpass_playlist",
+      "keyword_match": [],
+      "rel": "paragraph--fighpass_playlist"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/fight_card_broadcast_region",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "paragraph--fight_card_broadcast_region"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/four_item_content_image",
+      "keyword_match": [],
+      "rel": "paragraph--four_item_content_image"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/fp_cta_banner",
+      "keyword_match": [],
+      "rel": "paragraph--fp_cta_banner"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/fullwidth_dfp_ad",
+      "keyword_match": [],
+      "rel": "paragraph--fullwidth_dfp_ad"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/gallery",
+      "keyword_match": [],
+      "rel": "paragraph--gallery"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/gallery_extended",
+      "keyword_match": [],
+      "rel": "paragraph--gallery_extended"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/gallery_items",
+      "keyword_match": [],
+      "rel": "paragraph--gallery_items"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/games_and_apps_attributes",
+      "keyword_match": [],
+      "rel": "paragraph--games_and_apps_attributes"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/hall_of_fame_wings",
+      "keyword_match": [],
+      "rel": "paragraph--hall_of_fame_wings"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/headlines_and_text",
+      "keyword_match": [],
+      "rel": "paragraph--headlines_and_text"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/hero",
+      "keyword_match": [],
+      "rel": "paragraph--hero"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/hero_slider",
+      "keyword_match": [],
+      "rel": "paragraph--hero_slider"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/heros",
+      "keyword_match": [],
+      "rel": "paragraph--heros"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/highlight_card",
+      "keyword_match": [],
+      "rel": "paragraph--highlight_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/highlight_cards_grid",
+      "keyword_match": [],
+      "rel": "paragraph--highlight_cards_grid"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/hof_member",
+      "keyword_match": [],
+      "rel": "paragraph--hof_member"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/hof_wing",
+      "keyword_match": [],
+      "rel": "paragraph--hof_wing"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/homepage_card",
+      "keyword_match": [],
+      "rel": "paragraph--homepage_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/how_to_watch",
+      "keyword_match": [],
+      "rel": "paragraph--how_to_watch"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/image",
+      "keyword_match": [],
+      "rel": "paragraph--image"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/image_and_card",
+      "keyword_match": [],
+      "rel": "paragraph--image_and_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/image_and_text",
+      "keyword_match": [],
+      "rel": "paragraph--image_and_text"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/interactive_fight_card",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "paragraph--interactive_fight_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/landing_grid",
+      "keyword_match": [],
+      "rel": "paragraph--landing_grid"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/landing_grid_item",
+      "keyword_match": [],
+      "rel": "paragraph--landing_grid_item"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/landing_hero",
+      "keyword_match": [],
+      "rel": "paragraph--landing_hero"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/landing_hero_story",
+      "keyword_match": [],
+      "rel": "paragraph--landing_hero_story"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/links",
+      "keyword_match": [],
+      "rel": "paragraph--links"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/logos",
+      "keyword_match": [],
+      "rel": "paragraph--logos"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/merch_card",
+      "keyword_match": [],
+      "rel": "paragraph--merch_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/most_picked_athletes",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "paragraph--most_picked_athletes"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/newsletter_signup",
+      "keyword_match": [
+        "news"
+      ],
+      "rel": "paragraph--newsletter_signup"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/oembed",
+      "keyword_match": [],
+      "rel": "paragraph--oembed"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/partner_sponsor",
+      "keyword_match": [],
+      "rel": "paragraph--partner_sponsor"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/partners",
+      "keyword_match": [],
+      "rel": "paragraph--partners"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/poll",
+      "keyword_match": [],
+      "rel": "paragraph--poll"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/ppv_block",
+      "keyword_match": [],
+      "rel": "paragraph--ppv_block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/product_validator",
+      "keyword_match": [],
+      "rel": "paragraph--product_validator"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/profiles",
+      "keyword_match": [],
+      "rel": "paragraph--profiles"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/promo_milestones",
+      "keyword_match": [],
+      "rel": "paragraph--promo_milestones"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/quote",
+      "keyword_match": [],
+      "rel": "paragraph--quote"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/recommended_content",
+      "keyword_match": [],
+      "rel": "paragraph--recommended_content"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/region_fight_card_broadcasters",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "paragraph--region_fight_card_broadcasters"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/related_content",
+      "keyword_match": [],
+      "rel": "paragraph--related_content"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/related_event_link",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "paragraph--related_event_link"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/schedule_item",
+      "keyword_match": [],
+      "rel": "paragraph--schedule_item"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/social_listing",
+      "keyword_match": [],
+      "rel": "paragraph--social_listing"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/social_post",
+      "keyword_match": [],
+      "rel": "paragraph--social_post"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/solr_search_results",
+      "keyword_match": [
+        "result"
+      ],
+      "rel": "paragraph--solr_search_results"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/sponsor_card",
+      "keyword_match": [],
+      "rel": "paragraph--sponsor_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/static_dynamic_media",
+      "keyword_match": [
+        "stat",
+        "media"
+      ],
+      "rel": "paragraph--static_dynamic_media"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/stories_carousel",
+      "keyword_match": [],
+      "rel": "paragraph--stories_carousel"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/stories_carousel_item",
+      "keyword_match": [],
+      "rel": "paragraph--stories_carousel_item"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/story",
+      "keyword_match": [],
+      "rel": "paragraph--story"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/subtitles",
+      "keyword_match": [],
+      "rel": "paragraph--subtitles"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/system_block",
+      "keyword_match": [],
+      "rel": "paragraph--system_block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/text",
+      "keyword_match": [],
+      "rel": "paragraph--text"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/timeline",
+      "keyword_match": [],
+      "rel": "paragraph--timeline"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/timeline_item",
+      "keyword_match": [],
+      "rel": "paragraph--timeline_item"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/timeline_octagon",
+      "keyword_match": [],
+      "rel": "paragraph--timeline_octagon"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/timeline_slider",
+      "keyword_match": [],
+      "rel": "paragraph--timeline_slider"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/tweet",
+      "keyword_match": [],
+      "rel": "paragraph--tweet"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/tweets_multiple",
+      "keyword_match": [],
+      "rel": "paragraph--tweets_multiple"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/two_column_text",
+      "keyword_match": [],
+      "rel": "paragraph--two_column_text"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/ufc_video",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "paragraph--ufc_video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/video",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "paragraph--video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/video_and_card",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "paragraph--video_and_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/video_carousel",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "paragraph--video_carousel"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/yext_search_results",
+      "keyword_match": [
+        "result"
+      ],
+      "rel": "paragraph--yext_search_results"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraphs_type/paragraphs_type",
+      "keyword_match": [],
+      "rel": "paragraphs_type--paragraphs_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/path_alias/path_alias",
+      "keyword_match": [],
+      "rel": "path_alias--path_alias"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/pathauto_pattern/pathauto_pattern",
+      "keyword_match": [],
+      "rel": "pathauto_pattern--pathauto_pattern"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/poll/poll",
+      "keyword_match": [],
+      "rel": "poll--poll"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/poll_choice/poll_choice",
+      "keyword_match": [],
+      "rel": "poll_choice--poll_choice"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/brand_voice",
+      "keyword_match": [],
+      "rel": "promo--brand_voice"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/carousel",
+      "keyword_match": [],
+      "rel": "promo--carousel"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/connect_featured_event",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "promo--connect_featured_event"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/connect_games_apps",
+      "keyword_match": [],
+      "rel": "promo--connect_games_apps"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/connect_social_embeds",
+      "keyword_match": [],
+      "rel": "promo--connect_social_embeds"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/connect_social_follow",
+      "keyword_match": [],
+      "rel": "promo--connect_social_follow"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/content_footer",
+      "keyword_match": [],
+      "rel": "promo--content_footer"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/generic_block",
+      "keyword_match": [],
+      "rel": "promo--generic_block"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/hero",
+      "keyword_match": [],
+      "rel": "promo--hero"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/how_to_watch_alt_cards",
+      "keyword_match": [],
+      "rel": "promo--how_to_watch_alt_cards"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/how_to_watch_apps",
+      "keyword_match": [],
+      "rel": "promo--how_to_watch_apps"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/how_to_watch_ch",
+      "keyword_match": [],
+      "rel": "promo--how_to_watch_ch"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/how_to_watch_events",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "promo--how_to_watch_events"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/marketing_event",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "promo--marketing_event"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/marketing_headlines",
+      "keyword_match": [],
+      "rel": "promo--marketing_headlines"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/merchandise_product",
+      "keyword_match": [],
+      "rel": "promo--merchandise_product"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/merchandise_slide",
+      "keyword_match": [],
+      "rel": "promo--merchandise_slide"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/milestone",
+      "keyword_match": [],
+      "rel": "promo--milestone"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/product",
+      "keyword_match": [],
+      "rel": "promo--product"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/red_banner",
+      "keyword_match": [],
+      "rel": "promo--red_banner"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/social_listing",
+      "keyword_match": [],
+      "rel": "promo--social_listing"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/static_advert",
+      "keyword_match": [
+        "stat"
+      ],
+      "rel": "promo--static_advert"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/subscription",
+      "keyword_match": [],
+      "rel": "promo--subscription"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/trending_athlete",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "promo--trending_athlete"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo_type/promo_type",
+      "keyword_match": [],
+      "rel": "promo_type--promo_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/redirect/redirect",
+      "keyword_match": [],
+      "rel": "redirect--redirect"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/fan_experience",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "related_event--fan_experience"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/media_day",
+      "keyword_match": [
+        "event",
+        "media"
+      ],
+      "rel": "related_event--media_day"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/open_workouts",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "related_event--open_workouts"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/press_conference",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "related_event--press_conference"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/weighin",
+      "keyword_match": [
+        "weigh",
+        "event"
+      ],
+      "rel": "related_event--weighin"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event_type/related_event_type",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "related_event_type--related_event_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/responsive_image_style/responsive_image_style",
+      "keyword_match": [],
+      "rel": "responsive_image_style--responsive_image_style"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/rest_resource_config/rest_resource_config",
+      "keyword_match": [],
+      "rel": "rest_resource_config--rest_resource_config"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/search_api_autocomplete_search/search_api_autocomplete_search",
+      "keyword_match": [],
+      "rel": "search_api_autocomplete_search--search_api_autocomplete_search"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/search_api_index/search_api_index",
+      "keyword_match": [],
+      "rel": "search_api_index--search_api_index"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/search_api_server/search_api_server",
+      "keyword_match": [],
+      "rel": "search_api_server--search_api_server"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/search_api_task/search_api_task",
+      "keyword_match": [],
+      "rel": "search_api_task--search_api_task"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi",
+      "keyword_match": [],
+      "rel": "self"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/shortcut/default",
+      "keyword_match": [],
+      "rel": "shortcut--default"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/shortcut_set/shortcut_set",
+      "keyword_match": [],
+      "rel": "shortcut_set--shortcut_set"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/solr_cache/solr_cache",
+      "keyword_match": [],
+      "rel": "solr_cache--solr_cache"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/solr_field_type/solr_field_type",
+      "keyword_match": [],
+      "rel": "solr_field_type--solr_field_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/solr_request_dispatcher/solr_request_dispatcher",
+      "keyword_match": [],
+      "rel": "solr_request_dispatcher--solr_request_dispatcher"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/solr_request_handler/solr_request_handler",
+      "keyword_match": [],
+      "rel": "solr_request_handler--solr_request_handler"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/attributes",
+      "keyword_match": [],
+      "rel": "taxonomy_term--attributes"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/broadcaster",
+      "keyword_match": [],
+      "rel": "taxonomy_term--broadcaster"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/canvas",
+      "keyword_match": [],
+      "rel": "taxonomy_term--canvas"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/category",
+      "keyword_match": [],
+      "rel": "taxonomy_term--category"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/country",
+      "keyword_match": [],
+      "rel": "taxonomy_term--country"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/device_types",
+      "keyword_match": [],
+      "rel": "taxonomy_term--device_types"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/fighting_style",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "taxonomy_term--fighting_style"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/font_classification",
+      "keyword_match": [],
+      "rel": "taxonomy_term--font_classification"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/font_designer",
+      "keyword_match": [],
+      "rel": "taxonomy_term--font_designer"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/font_foundry",
+      "keyword_match": [],
+      "rel": "taxonomy_term--font_foundry"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/font_tags",
+      "keyword_match": [],
+      "rel": "taxonomy_term--font_tags"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/gender",
+      "keyword_match": [],
+      "rel": "taxonomy_term--gender"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/glossary",
+      "keyword_match": [],
+      "rel": "taxonomy_term--glossary"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/gym",
+      "keyword_match": [],
+      "rel": "taxonomy_term--gym"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/images",
+      "keyword_match": [],
+      "rel": "taxonomy_term--images"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/languages_supported",
+      "keyword_match": [],
+      "rel": "taxonomy_term--languages_supported"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/leaderboard_images",
+      "keyword_match": [],
+      "rel": "taxonomy_term--leaderboard_images"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/page",
+      "keyword_match": [],
+      "rel": "taxonomy_term--page"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/program",
+      "keyword_match": [],
+      "rel": "taxonomy_term--program"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/promo_page",
+      "keyword_match": [],
+      "rel": "taxonomy_term--promo_page"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/region",
+      "keyword_match": [],
+      "rel": "taxonomy_term--region"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/stats_weight_class",
+      "keyword_match": [
+        "weigh",
+        "stat"
+      ],
+      "rel": "taxonomy_term--stats_weight_class"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/status",
+      "keyword_match": [
+        "stat"
+      ],
+      "rel": "taxonomy_term--status"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/tag",
+      "keyword_match": [],
+      "rel": "taxonomy_term--tag"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/type",
+      "keyword_match": [],
+      "rel": "taxonomy_term--type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/usage",
+      "keyword_match": [],
+      "rel": "taxonomy_term--usage"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/venue",
+      "keyword_match": [],
+      "rel": "taxonomy_term--venue"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_vocabulary/taxonomy_vocabulary",
+      "keyword_match": [],
+      "rel": "taxonomy_vocabulary--taxonomy_vocabulary"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/ultimate_cron_job/ultimate_cron_job",
+      "keyword_match": [],
+      "rel": "ultimate_cron_job--ultimate_cron_job"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/user/user",
+      "keyword_match": [],
+      "rel": "user--user"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/user_role/user_role",
+      "keyword_match": [],
+      "rel": "user_role--user_role"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/view/view",
+      "keyword_match": [],
+      "rel": "view--view"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/webform/webform",
+      "keyword_match": [],
+      "rel": "webform--webform"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/webform_options/webform_options",
+      "keyword_match": [],
+      "rel": "webform_options--webform_options"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/webform_submission/brazil_whats_app",
+      "keyword_match": [],
+      "rel": "webform_submission--brazil_whats_app"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/webform_submission/contact",
+      "keyword_match": [],
+      "rel": "webform_submission--contact"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/webform_submission/newsletter",
+      "keyword_match": [
+        "news"
+      ],
+      "rel": "webform_submission--newsletter"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/webform_submission/purchase_pay_per_view_your_way",
+      "keyword_match": [],
+      "rel": "webform_submission--purchase_pay_per_view_your_way"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/xmlsitemap/xmlsitemap",
+      "keyword_match": [],
+      "rel": "xmlsitemap--xmlsitemap"
+    }
+  ],
+  "content_type": "application/vnd.api+json",
+  "http_status": 200,
+  "keyword_matches": [
+    {
+      "href": "https://www.ufc.com/jsonapi/athlete_pairing/athlete_pairing",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "athlete_pairing--athlete_pairing"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/athlete_pairing_type/athlete_pairing_type",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "athlete_pairing_type--athlete_pairing_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/athlete_ranking/athlete_ranking",
+      "keyword_match": [
+        "athlete",
+        "rank"
+      ],
+      "rel": "athlete_ranking--athlete_ranking"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/athlete_stat/athlete_stat",
+      "keyword_match": [
+        "athlete",
+        "stat"
+      ],
+      "rel": "athlete_stat--athlete_stat"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/event_leaderboard/event_leaderboard",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "event_leaderboard--event_leaderboard"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/fight_card_broadcast/fight_card_broadcast",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "fight_card_broadcast--fight_card_broadcast"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/fight_card_broadcast_type/fight_card_broadcast_type",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "fight_card_broadcast_type--fight_card_broadcast_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/fight_roundboard/fight_roundboard",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "fight_roundboard--fight_roundboard"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/fight_stat/fight_stat",
+      "keyword_match": [
+        "fight",
+        "stat"
+      ],
+      "rel": "fight_stat--fight_stat"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/interactive_fight_card/interactive_fight_card",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "interactive_fight_card--interactive_fight_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/device",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--device"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/embeddable_video",
+      "keyword_match": [
+        "media",
+        "video"
+      ],
+      "rel": "media--embeddable_video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/facebook",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--facebook"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/gallery",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--gallery"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/image",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--image"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/instagram",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--instagram"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/oembed",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--oembed"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/playlist",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--playlist"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/tweet",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--tweet"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/vector",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media--vector"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/video",
+      "keyword_match": [
+        "media",
+        "video"
+      ],
+      "rel": "media--video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media/video_clip",
+      "keyword_match": [
+        "media",
+        "video"
+      ],
+      "rel": "media--video_clip"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media_bulk_config/media_bulk_config",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media_bulk_config--media_bulk_config"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/media_type/media_type",
+      "keyword_match": [
+        "media"
+      ],
+      "rel": "media_type--media_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/article",
+      "keyword_match": [
+        "article"
+      ],
+      "rel": "node--article"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/athlete",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "node--athlete"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/event",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "node--event"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/fight",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "node--fight"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/node/video",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "node--video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/athlete_spotlight",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "paragraph--athlete_spotlight"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/athlete_stats",
+      "keyword_match": [
+        "athlete",
+        "stat"
+      ],
+      "rel": "paragraph--athlete_stats"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/decoupled_article_listing",
+      "keyword_match": [
+        "article"
+      ],
+      "rel": "paragraph--decoupled_article_listing"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/event",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "paragraph--event"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/event_scheduler",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "paragraph--event_scheduler"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/event_scheduler_single",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "paragraph--event_scheduler_single"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/featured_athlete",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "paragraph--featured_athlete"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/fight_card_broadcast_region",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "paragraph--fight_card_broadcast_region"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/interactive_fight_card",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "paragraph--interactive_fight_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/most_picked_athletes",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "paragraph--most_picked_athletes"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/newsletter_signup",
+      "keyword_match": [
+        "news"
+      ],
+      "rel": "paragraph--newsletter_signup"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/region_fight_card_broadcasters",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "paragraph--region_fight_card_broadcasters"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/related_event_link",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "paragraph--related_event_link"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/solr_search_results",
+      "keyword_match": [
+        "result"
+      ],
+      "rel": "paragraph--solr_search_results"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/static_dynamic_media",
+      "keyword_match": [
+        "stat",
+        "media"
+      ],
+      "rel": "paragraph--static_dynamic_media"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/ufc_video",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "paragraph--ufc_video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/video",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "paragraph--video"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/video_and_card",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "paragraph--video_and_card"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/video_carousel",
+      "keyword_match": [
+        "video"
+      ],
+      "rel": "paragraph--video_carousel"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/paragraph/yext_search_results",
+      "keyword_match": [
+        "result"
+      ],
+      "rel": "paragraph--yext_search_results"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/connect_featured_event",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "promo--connect_featured_event"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/how_to_watch_events",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "promo--how_to_watch_events"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/marketing_event",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "promo--marketing_event"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/static_advert",
+      "keyword_match": [
+        "stat"
+      ],
+      "rel": "promo--static_advert"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/promo/trending_athlete",
+      "keyword_match": [
+        "athlete"
+      ],
+      "rel": "promo--trending_athlete"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/fan_experience",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "related_event--fan_experience"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/media_day",
+      "keyword_match": [
+        "event",
+        "media"
+      ],
+      "rel": "related_event--media_day"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/open_workouts",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "related_event--open_workouts"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/press_conference",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "related_event--press_conference"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event/weighin",
+      "keyword_match": [
+        "weigh",
+        "event"
+      ],
+      "rel": "related_event--weighin"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/related_event_type/related_event_type",
+      "keyword_match": [
+        "event"
+      ],
+      "rel": "related_event_type--related_event_type"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/fighting_style",
+      "keyword_match": [
+        "fight"
+      ],
+      "rel": "taxonomy_term--fighting_style"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/stats_weight_class",
+      "keyword_match": [
+        "weigh",
+        "stat"
+      ],
+      "rel": "taxonomy_term--stats_weight_class"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/taxonomy_term/status",
+      "keyword_match": [
+        "stat"
+      ],
+      "rel": "taxonomy_term--status"
+    },
+    {
+      "href": "https://www.ufc.com/jsonapi/webform_submission/newsletter",
+      "keyword_match": [
+        "news"
+      ],
+      "rel": "webform_submission--newsletter"
+    }
+  ],
+  "notes": [
+    "This is a discovery inventory, not a canonical data source.",
+    "Resource existence does not imply every historical article/entity is complete or stable.",
+    "Any new collection promoted to raw ingestion needs its own coverage and leakage rules."
+  ],
+  "raw_sha256": "2fc30f4ffc2676d78b47174db45da19f4b31214702a9d6a675818ea8b6acdc3d",
+  "resource_count": 291,
+  "schema_version": 1,
+  "source_url": "https://www.ufc.com/jsonapi"
+}
