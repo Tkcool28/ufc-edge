@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/audit-fightmetric.yml"
       - "pipelines/audit_fightmetric_snapshot.py"
+      - "pipelines/audit_fightmetric_duplicate_versions.py"
       - "data/raw/ufc_fightmetric_official/**"
       - "data/raw/greco1899/**"
   workflow_dispatch:
@@ -25,16 +26,22 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Audit full FightMetric snapshot and Greco identity surface
         run: python pipelines/audit_fightmetric_snapshot.py
+      - name: Audit conflicting FightMetric source versions
+        run: python pipelines/audit_fightmetric_duplicate_versions.py
       - name: Commit audit artifacts
         shell: bash
         run: |
           set -euo pipefail
-          git add provenance/audits/fightmetric_semantics_latest.json provenance/audits/fightmetric_semantics_latest.md
+          git add provenance/audits/fightmetric_semantics_latest.json \
+                  provenance/audits/fightmetric_semantics_latest.md \
+                  provenance/audits/fightmetric_duplicate_versions_latest.json \
+                  provenance/audits/fightmetric_duplicate_versions_latest.md
           if git diff --cached --quiet; then
             echo "No FightMetric audit changes."
             exit 0
@@ -42,4 +49,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Audit official UFC FightMetric semantics [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
           git push origin "HEAD:${{ github.ref_name }}"
