@@ -1,0 +1,42 @@
+name: Import pinned Greco UFCStats snapshot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ingest-greco.yml"
+      - "pipelines/ingest_greco1899.py"
+      - "provenance/greco1899.lock.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-raw-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out UFC Edge
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and verify pinned source bytes
+        run: python pipelines/ingest_greco1899.py
+
+      - name: Commit immutable raw snapshot if absent
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/raw/greco1899
+          if git diff --cached --quiet; then
+            echo "Pinned raw snapshot already present; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Import pinned Greco1899 UFCStats snapshot [skip ci]"
+          git push
