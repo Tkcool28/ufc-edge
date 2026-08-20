@@ -1,0 +1,44 @@
+name: Import pinned free UFC scorecards
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ingest-ufc-datalab-scorecards.yml"
+      - "pipelines/ingest_ufc_datalab_scorecards.py"
+      - "provenance/ufc_datalab_scorecards.lock.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-scorecards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out writable branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and verify pinned scorecard source
+        run: python pipelines/ingest_ufc_datalab_scorecards.py
+
+      - name: Commit immutable raw snapshot if absent
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/raw/ufc_datalab_scorecards
+          if git diff --cached --quiet; then
+            echo "Pinned UFC scorecard snapshot already present; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Import pinned free UFC scorecard snapshot [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
