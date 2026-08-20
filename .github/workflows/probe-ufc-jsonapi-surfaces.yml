@@ -1,0 +1,38 @@
+name: Probe high-value UFC JSON API surfaces
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/probe-ufc-jsonapi-surfaces.yml"
+      - "pipelines/probe_ufc_jsonapi_surfaces.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probe bounded official UFC JSON API surfaces
+        run: python pipelines/probe_ufc_jsonapi_surfaces.py
+      - name: Commit surface probe
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add provenance/ufc_jsonapi_surface_probe.json provenance/ufc_jsonapi_surface_probe_raw
+          if git diff --cached --quiet; then
+            echo "No surface-probe changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record UFC JSON API surface samples [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
