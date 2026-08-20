@@ -4,18 +4,16 @@ Status date: 2026-08-20 (America/Denver)
 
 Purpose: durable manifest of every material data source investigated during the current acquisition pass, including what succeeded, what failed, why, what each source contains, potential uses, and how much UFC Edge should trust it for future refreshes.
 
-This document summarizes source status. Detailed acquisition evidence remains in source-specific lock files, probe manifests, raw manifests, `free_source_sweep_2026-08-20.md`, and `acquisition_closeout_2026-08-20.md`.
+Detailed acquisition evidence remains in source-specific lock files, raw manifests, `provenance/runs/`, `free_source_sweep_2026-08-20.md`, and `acquisition_closeout_2026-08-20.md`.
 
-## Closeout update
+## Latest self-reporting rerun update
 
-The overnight closeout applied the repository's fail-closed rule: **a trigger commit is not ingestion, and a workflow result is not accepted without a committed immutable raw snapshot plus manifest**.
+The fail-closed runner diagnostics changed two source statuses materially:
 
-- Official UFC FightMetric rich stats: trigger exists, but no expected raw bot commit was present at closeout; run was still within its 120-minute maximum window. **UNVERIFIED / NOT YET LANDED**.
-- General UFC.com athlete/event/fight snapshot: more than the 45-minute workflow window elapsed with no expected raw bot commit. **NOT LANDED**; exact job failure/timeout reason must be read from the workflow log before retrying.
-- ESPN MMA snapshot: trigger exists, but no expected raw bot commit was present at closeout; run was still within its 120-minute maximum window. **UNVERIFIED / NOT YET LANDED**.
-- Official UFC weigh-in/scorecard article snapshot: more than the 45-minute window elapsed with no result commit, and bounded probing already established HTTP 403 on `/jsonapi/node/article`. **FAILED TO LAND / JSON:API ARTICLE ROUTE BLOCKED**.
-
-Do not promote any of those sources until their raw artifacts and manifests actually exist in repository history and pass audit.
+- **Official UFC FightMetric rich stats: LANDED / RAW QA REQUIRED.** Run `32369217813` completed successfully (`exit_code=0`) and committed immutable snapshot `data/raw/ufc_fightmetric_official/20260820T123046Z/` plus manifest. The `fight_stat` collection contains **57,382 rows across 1,148 pages and 8,008 distinct non-null FightMetric IDs**. Standard fight-stat fields are populated on roughly 94.4% of rows; the main Time In Position/control-time family is populated on roughly 64.8% overall. This is strong enough to make official UFC FightMetric a real primary-source candidate, but coverage still varies by field/era and identity/time crosswalks are not yet audited.
+- **Official UFC.com athlete/event/fight snapshot: PROCESS TIMEOUT / NOT LANDED.** Run `32369240290` hit the explicit 2,100-second process timeout (`exit_code=124`). Before timeout it fully fetched **4,160 athlete records across 84 pages** and **799 event records across 16 pages**, then stalled/ran too long while snapshotting the fights collection. This is not evidence of an HTTP rejection. Fail-closed behavior correctly prevented partial raw promotion.
+- **ESPN MMA self-reporting rerun: still unresolved at this check.** No success/failure diagnostic commit is present yet. Its process window is longer than the elapsed check interval; do not classify it as failed until its durable diagnostic appears.
+- **Official UFC article collection remains BLOCKED** through `/jsonapi/node/article` because bounded collection access returns HTTP 403. It was intentionally not rerun.
 
 ## Rating key
 
@@ -31,240 +29,143 @@ Scores are independent and use 1 (weak) to 5 (strong):
 
 | Source | Current status | Authority | History | Refresh | Canonical role | What it contains / why we care |
 |---|---|---:|---:|---:|---|---|
-| **Official UFC.com FightMetric `fight_stat`** | **TRIGGERED; NO RAW SNAPSHOT COMMIT AT CLOSEOUT / UNVERIFIED** | 5 | ? | 4 | Intended PRIMARY if coverage passes | Official rich fighter/round stats; Time In Position; control positions; detailed striking; TD/sub/reversal/standup; knockdowns. Highest-value free simulator discovery. |
-| **Official UFC.com `fight_roundboard`** | **TRIGGERED; NO RAW SNAPSHOT COMMIT AT CLOSEOUT / UNVERIFIED** | 5 | 2? | 4 | ADDITIVE / QA | FightMetric IDs, round, stat name/value/rank. Appears record-book oriented; must not be mistaken for full fighter-round history. |
-| **Official UFC.com athlete/event/fight JSON:API** | **NOT LANDED; 45-MIN WORKFLOW WINDOW ELAPSED WITHOUT RESULT COMMIT** | 5 | ? | 4 | Intended PRIMARY/ADDITIVE by field | Official IDs, fighter profiles, event/fight context, FightMetric identity, gym/style/physical context where populated. Current snapshots can leak if backfilled historically. |
-| **Greco1899 UFCStats scrape** | **INGESTED** | 3 | 4 | 3 | Historical PRIMARY today; future SECONDARY/QA if UFC official coverage passes | Pinned reproducible UFCStats-derived event, fight, result, fighter, tale-of-tape and round aggregates. Strong historical backbone; no ordered intra-round actions or rich TIP. |
-| **ESPN public MMA APIs** | **TRIGGERED; NO RAW SNAPSHOT COMMIT AT CLOSEOUT / UNVERIFIED** | 4 | ? | 3 | ADDITIVE / QA | Event/fight detail, officials, sparse plays, competitor stats, result context, identity cross-checks. Not assumed to be full action-level play-by-play. |
-| **UFC-DataLab OCR scorecards** | **INGESTED RAW / QA REQUIRED** | 2 | 3 | 2 | RAW-ONLY pending validation | Three judge totals per corner from official scorecard images. Sample QA exposed obvious fighter-pair/OCR association errors; cannot be canonical without fight/date/opponent validation. |
-| **TidyTuesday / fightr dated UFC rankings** | **INGESTED RAW / QA REQUIRED** | 3 | 4 for 2013+ | 2 | ADDITIVE / historical context | Date, weight class, fighter, rank; observed coverage begins 2013-02-04. Useful only with strict as-of joins. Dataset-specific provenance/license remains partially unresolved. |
-| **Kaggle `binduvr/pro-mma-fights` CC0** | **INGESTED RAW / QA REQUIRED** | 2 | 3 | 1 | ADDITIVE | 10,448 UFC/Bellator/ONE fights through 2021-08-11, originally scraped from Sherdog. Useful for pre-UFC/cross-promotion experience after identity mapping and UFC overlap deduplication. |
-| **Kaggle `binduvr/pro-mma-fighters` CC0 companion** | **PUBLIC / READY TO INGEST** | 2 | 3 | 1 | ADDITIVE / identity aid | 5,151 UFC/Bellator/ONE fighter profiles through 2021-08-11; potential mapping/context companion to cross-promotion fight history. |
-| **Official UFC weigh-in articles** | **JSON:API ARTICLE ROUTE BLOCKED; SNAPSHOT FAILED TO LAND** | 5 | ? | 2 | Desired PRIMARY for weigh-in data | Exact scale weights, misses, pounds over, catchweights, second attempts, purse penalties. Public pages exist, but `/jsonapi/node/article` collection returned HTTP 403; clean enumeration route unresolved. |
-| **Official UFC scorecard articles** | **JSON:API ARTICLE ROUTE BLOCKED; SNAPSHOT FAILED TO LAND** | 5 | ? | 2 | Desired PRIMARY for judge scorecards | Public official scorecard pages exist, but clean JSON:API article collection returned HTTP 403. Do not count as acquired. |
-| **MMA Decisions** | **PUBLIC / NOT INGESTED** | 3 | 4 | 3 | Potential ADDITIVE/SECONDARY | Official judge names and round-by-round scores plus media/fan scores. If used, official judge data must remain separate from fan/media scores. |
-| **BestFightOdds** | **PUBLIC / NOT INGESTED** | 3 | 4 since ~2007 | 3 | MARKET DATA ONLY | Historical odds archive for later model-vs-market and price/value analysis. Sportsbook prices stay outside the independent core forecast model. |
-| **FightMatrix** | **AVAILABLE / DELIBERATELY DEPRIORITIZED** | 3 | 4 | 3 | REFERENCE | Proprietary historical/generated ratings. Useful benchmark, but dated UFC ranking data reduces need to import external ratings into core fighter state. |
-| **FightGeek PRECISION** | **ACCESS / PERMISSION REQUIRED** | 4 | 4? | 2 | Future high-value sequential source | Timestamped post-bout actions, position/stance time, initiated/counter strikes, combinations, strike source/methods. Strongest demonstrated historical sequential archive found; no legitimate public bulk download found. |
-| **FightGeek SPEED** | **ACCESS / PERMISSION REQUIRED / TRIAL** | 4 | 2? | 3 | Future first-party collection candidate | Real-time/retroactive smaller action vocabulary. Trial does not imply entitlement to the historical PRECISION archive. |
-| **Sportradar / IMG Arena UFC Fight Stats** | **ACCESS / PERMISSION REQUIRED** | 5 | ? | 5 if licensed | Future official live PRIMARY | Official live rich fight/round stats with sequence/timestamps and detailed Time In Position. Public docs do not prove multi-year historical packet backfill. |
-| **IMG Arena Fight Details / Fight Actions** | **ACCESS REQUIRED; UFC ACTION ENDPOINT NOT VERIFIED** | 5 if UFC-equivalent verified | ? | ? | Future sequential source | PFL docs show event-level actions nearly ideal for empirical Markov transitions. Equivalent detailed UFC action entitlement/endpoint remains unverified. |
-| **CageIntel** | **REFERENCE ONLY / DEAD LEAD** | 1 | 1 | 1 | None | Domain found parked/for sale. Do not plan features around it. |
-| **Stats Fight** | **ACTIVE / BULK ACCESS UNRESOLVED** | 3 | ? | 2 | Potential future ADDITIVE | Rich action/position presentation and different stat semantics. No public bulk raw API/export found during sweep. Deferred for later access investigation. |
-| **Live blogs / prose play-by-play** | **DELIBERATELY EXCLUDED as canonical** | 1–2 | 2 | 2 | REFERENCE ONLY | Editorial prose is inconsistent, omits actions, and is hard to normalize/timestamp reliably. |
-| **Manual / computer-vision video annotation** | **FALLBACK ONLY** | potentially 5 if validated | configurable | 1 | Future fallback | Could generate frame/action-level truth but is expensive and validation-heavy. Only consider if legitimate sequential feeds cannot be obtained. |
+| **Official UFC.com FightMetric `fight_stat`** | **INGESTED RAW / COVERAGE + IDENTITY QA REQUIRED** | 5 | 4? | 4 | PRIMARY candidate | 57,382 official rows; 8,008 distinct FightMetric IDs; rich fighter/round stats, Time In Position, control positions, detailed striking, TD/sub/reversal/standup, knockdowns. |
+| **Official UFC.com `fight_roundboard`** | **INGESTED RAW / RECORD-BOOK SURFACE** | 5 | 2 | 4 | ADDITIVE / QA | 374 rows, 131 distinct FightMetric IDs, stat/rank/round records. Not full fighter-round history. |
+| **Official UFC.com athlete/event/fight JSON:API** | **PROCESS TIMEOUT / NOT LANDED** | 5 | ? | 3 | Intended PRIMARY/ADDITIVE by field | Run fetched 4,160 athletes and 799 events, then exceeded 35 minutes during fights pagination. Needs split/resumable acquisition rather than blind timeout increase. |
+| **Greco1899 UFCStats scrape** | **INGESTED** | 3 | 4 | 3 | Historical PRIMARY today; future SECONDARY/QA if official UFC coverage passes | Pinned reproducible UFCStats-derived event, fight, result, fighter, tale-of-tape and round aggregates. Strong historical backbone; no ordered intra-round actions or rich TIP. |
+| **ESPN public MMA APIs** | **SELF-REPORTING RERUN PENDING** | 4 | ? | 3 | ADDITIVE / QA | Event/fight detail, officials, sparse plays, competitor stats, result context, identity cross-checks. Not assumed to be full action-level play-by-play. |
+| **UFC-DataLab OCR scorecards** | **INGESTED RAW / QA REQUIRED** | 2 | 3 | 2 | RAW-ONLY pending validation | Three judge totals per corner from official scorecard images. Sample QA exposed obvious fighter-pair/OCR association errors. |
+| **TidyTuesday / fightr dated UFC rankings** | **INGESTED RAW / QA REQUIRED** | 3 | 4 for 2013+ | 2 | ADDITIVE / historical context | Date, weight class, fighter, rank; observed coverage begins 2013-02-04. Strict historical as-of joins only. |
+| **Kaggle `binduvr/pro-mma-fights` CC0** | **INGESTED RAW / QA REQUIRED** | 2 | 3 | 1 | ADDITIVE | 10,448 UFC/Bellator/ONE fights through 2021-08-11. Useful for pre-UFC/cross-promotion experience after identity mapping and UFC-overlap deduplication. |
+| **Kaggle `binduvr/pro-mma-fighters` CC0 companion** | **PUBLIC / READY TO INGEST** | 2 | 3 | 1 | ADDITIVE / identity aid | 5,151 UFC/Bellator/ONE fighter profiles through 2021-08-11. |
+| **Official UFC weigh-in articles** | **JSON:API ARTICLE ROUTE BLOCKED** | 5 | ? | 2 | Desired PRIMARY for weigh-ins | Exact scale weights, misses, pounds over, catchweights, second attempts, purse penalties. Public pages exist; clean enumeration route unresolved. |
+| **Official UFC scorecard articles** | **JSON:API ARTICLE ROUTE BLOCKED** | 5 | ? | 2 | Desired PRIMARY for judge scorecards | Public official scorecard pages exist, but collection access through JSON:API is 403. |
+| **MMA Decisions** | **PUBLIC / NOT INGESTED** | 3 | 4 | 3 | Potential ADDITIVE/SECONDARY | Official judge names and round-by-round scores plus media/fan scores. Keep official scores separate from fan/media scores. |
+| **BestFightOdds** | **PUBLIC / NOT INGESTED** | 3 | 4 since ~2007 | 3 | MARKET DATA ONLY | Historical odds archive for later model-vs-market and price/value analysis. |
+| **FightMatrix** | **AVAILABLE / DELIBERATELY DEPRIORITIZED** | 3 | 4 | 3 | REFERENCE | Proprietary historical/generated ratings; useful benchmark. |
+| **FightGeek PRECISION** | **ACCESS / PERMISSION REQUIRED** | 4 | 4? | 2 | Future high-value sequential source | Timestamped post-bout actions, position/stance time, initiated/counter strikes, combinations, strike source/methods. |
+| **FightGeek SPEED** | **ACCESS / PERMISSION REQUIRED / TRIAL** | 4 | 2? | 3 | Future first-party collection candidate | Real-time/retroactive smaller action vocabulary. |
+| **Sportradar / IMG Arena UFC Fight Stats** | **ACCESS / PERMISSION REQUIRED** | 5 | ? | 5 if licensed | Future official live PRIMARY | Official live rich fight/round stats with sequence/timestamps and detailed Time In Position. |
+| **IMG Arena Fight Details / Fight Actions** | **ACCESS REQUIRED; UFC ACTION ENDPOINT NOT VERIFIED** | 5 if UFC-equivalent verified | ? | ? | Future sequential source | PFL docs show event-level actions ideal for empirical Markov transitions; equivalent UFC entitlement remains unverified. |
+| **CageIntel** | **REFERENCE ONLY / DEAD LEAD** | 1 | 1 | 1 | None | Domain parked/for sale. |
+| **Stats Fight** | **ACTIVE / BULK ACCESS UNRESOLVED** | 3 | ? | 2 | Potential future ADDITIVE | Rich action/position presentation; no public bulk raw API/export found. |
+| **Live blogs / prose play-by-play** | **DELIBERATELY EXCLUDED as canonical** | 1–2 | 2 | 2 | REFERENCE ONLY | Editorial prose is inconsistent, incomplete and difficult to normalize reliably. |
+| **Manual / computer-vision video annotation** | **FALLBACK ONLY** | potentially 5 if validated | configurable | 1 | Future fallback | Potential frame/action truth but expensive and validation-heavy. |
 
 ## Source-by-source decisions and failure notes
 
 ### 1. Official UFC.com FightMetric
 
-**What passed**
+**Acquisition evidence**
 
-- UFC JSON:API resource catalog is publicly readable.
-- `/jsonapi/fight_stat/fight_stat` returned HTTP 200 in bounded probes.
-- `/jsonapi/fight_roundboard/fight_roundboard` returned HTTP 200.
-- `fight_stat` exposes a much richer official FightMetric schema than the Greco round aggregate table.
+Self-reporting run `32369217813` started `2026-08-20T12:30:45Z`, ended `2026-08-20T13:32:23Z`, and returned `exit_code=0`. Immutable snapshot ID: `20260820T123046Z`.
 
-**Important fields discovered**
+`fight_stat` manifest summary:
 
-Time/position:
+- **57,382 rows**
+- **1,148 pages** at 50-row pagination
+- **8,008 distinct non-null FightMetric IDs**
+- round values: round 0 = 16,229; round 1 = 16,229; round 2 = 11,572; round 3 = 8,873; round 4 = 690; round 5 = 594
+- FightMetric ID populated on 54,187 rows (**94.43%**)
+- standard head/body/leg significant-strike and takedown/submission fields: about **94.43%** populated
+- knockdowns: **49,031 / 57,382 = 85.45%**
+- reversals: **48,275 / 57,382 = 84.13%**
+- standups: **35,641 / 57,382 = 62.11%**
 
-- `standing_time`
-- `neutral_time`
-- `distance_time`
-- `clinch_time`
-- `ground_time`
-- `control_time`
-- `ground_ctl_time`
-- `guard_ctl_time`
-- `half_guard_ctl_time`
-- `side_ctl_time`
-- `mount_ctl_time`
-- `back_ctl_time`
-- misc ground-control time
+Time In Position / control coverage:
 
-Grappling:
+- standing, distance, clinch, control, ground-control, guard, half-guard, side, mount, back: **37,195 / 57,382 = 64.82%** each
+- neutral time: **37,185 / 57,382 = 64.80%**
+- miscellaneous ground control: **36,695 / 57,382 = 63.95%**
+- `ground_time`: **17,166 / 57,382 = 29.92%**
 
-- takedown attempted/landed
-- submission attempts
-- reversals
-- standups
+Some newer/more granular weapon-position combinations are much sparser: several kick-related families are around **31.52%**, while several distance punch/kick combination fields are around **3.86%**. Missing must remain missing, never zero-filled.
 
-Striking:
+`fight_roundboard` manifest summary:
 
-- significant/total attempted and landed
-- punches/kicks
-- head/body/legs
-- distance/clinch/ground
-- detailed target/weapon/position combinations
-- knockdowns
+- **374 rows**
+- **8 pages**
+- **131 distinct non-null FightMetric IDs**
+- clearly a record-book/ranking surface, not full round history
 
-**Potential uses**
+**Important fields**
 
-- primary official fighter-round stat source
-- environment/control component models
-- standing/clinch/ground exposure
-- positional control burden
-- takedown/submission/standup/reversal rates
-- richer striking exposure and finish-hazard inputs
-- simulator transition-duration calibration
+Time/position: `standing_time`, `neutral_time`, `distance_time`, `clinch_time`, `ground_time`, `control_time`, `ground_ctl_time`, `guard_ctl_time`, `half_guard_ctl_time`, `side_ctl_time`, `mount_ctl_time`, `back_ctl_time`, misc ground-control time.
 
-**Closeout state**
+Grappling: takedown attempted/landed, submission attempts, reversals, standups.
 
-Trigger commit `af42270858ba782e7dfde58e0fcd45dcbb4c7c11` exists, but no expected `Snapshot official UFC FightMetric rich stats [skip ci]` result commit was present at closeout. The trigger was still inside the workflow's 120-minute maximum runtime, so this remains **unverified rather than confirmed failed**.
+Striking: significant/total attempted and landed, head/body/legs, distance/clinch/ground, richer target/weapon/position combinations, knockdowns.
 
-**What remains unresolved**
+**Decision**
 
-The first unsorted samples included legacy/null rows. Schema existence does not prove populated historical coverage. The bulk snapshot manifest must quantify non-null coverage by field/era before promotion.
+This is no longer merely a promising schema. It is a successfully acquired official bulk source and should become the leading candidate for rich UFC round/stat data. Do **not** yet replace Greco wholesale: first audit FightMetric IDs against fight/fighter identities, interpret round 0 semantics, quantify coverage by historical era, and compare overlapping values to Greco/UFCStats.
 
 ### 2. Official UFC athlete/event/fight JSON:API
 
-**What passed**
+**What passed during the failed run**
 
-The resource catalog advertises structured sport resources including athletes, athlete stats/rankings, events and fights.
+Run `32369240290` demonstrated that the public collections are readable and pagination works:
 
-**Potential uses**
+- athletes: **4,160 records / 84 pages completed**
+- events: **799 records / 16 pages completed**
 
-- primary UFC identity crosswalk
-- event/fight IDs
-- FightMetric ID bridge
-- leg reach / gym / style / debut/context fields where available
-- current official fighter state
+The process then entered `snapshotting fights...` and hit the workflow's explicit **2,100-second process timeout**, yielding `exit_code=124` and result `process_timeout`.
 
-**Closeout state**
+**Concrete failure cause**
 
-The path-triggered workflow associated with pipeline commit `bb6c5cd84f557f6667ec7dac78b51184d24935b1` has a 45-minute maximum runtime. More than that window elapsed with no expected `Snapshot free UFC.com additive data [skip ci]` result commit. Therefore the snapshot is **not landed**. The current connector view did not expose the exact in-job exception, so the failure cause must be read from the workflow log before retrying.
+The pipeline exceeded its allotted 35-minute process window while collecting the fights resource. There is no diagnostic evidence of HTTP 403/429 or another request exception in this run. Because the pipeline is atomic/fail-closed, completed athlete/event partial output was correctly not promoted.
+
+**Best next fix**
+
+Split athlete, event and fight collections into independently checkpointed/resumable acquisition units, or add page-level resume state for the fights collection. This avoids throwing away completed collections and avoids solving a pagination/runtime design problem by simply increasing a monolithic timeout.
 
 **Risk**
 
-Many athlete fields are current mutable snapshots. They cannot be injected into old fights unless an as-of history is available or the state is reconstructed chronologically.
+Many athlete fields are current mutable snapshots. They cannot be injected into old fights unless an as-of history exists or state is reconstructed chronologically.
 
 ### 3. Official UFC article collection
 
-**What failed**
-
-`/jsonapi/node/article` is advertised in the resource catalog but a bounded collection request returned **HTTP 403 Forbidden**. The later article workflow also exceeded its 45-minute window without producing the expected raw snapshot commit.
-
-**Why this matters**
-
-A listed JSON:API resource is not proof of readable collection access. The public HTML weigh-in and scorecard pages remain valuable, but UFC Edge must find a legitimate official index/search/sitemap or another clearly permitted source rather than treating the 403 as something to bypass.
+`/jsonapi/node/article` is advertised but bounded collection access returns **HTTP 403 Forbidden**. Do not bypass the 403. Public HTML weigh-in and scorecard pages remain candidates through a legitimate index/search/sitemap path or another permitted source.
 
 ### 4. Greco1899 UFCStats snapshot
 
-**What passed**
+Pinned source revision and six raw datasets remain stored immutably. Strengths: reproducible historical event/fight/results/fighter/TOTT/round data. Weaknesses: community scrape, no atomic action chronology, and no rich TIP vocabulary in the imported table.
 
-Pinned source revision and six raw datasets are already stored immutably.
-
-**Strengths**
-
-- reproducible historical snapshot
-- stable source URLs/IDs
-- round-level UFCStats aggregates
-- fighter tale-of-tape
-- event/fight/results structure
-
-**Weaknesses**
-
-- independent/community scrape rather than official UFC delivery
-- dependent on upstream scraper maintenance
-- no atomic action order/timestamps
-- no rich official FightMetric TIP vocabulary in the imported round table
-
-**Future role**
-
-Keep as a historical backbone until official UFC coverage is proven. If UFC official data proves sufficiently complete, retain Greco as redundancy, gap-fill candidate, and cross-source QA rather than blindly discarding it.
+**Future role:** retain as historical backbone and QA redundancy until official UFC coverage is audited sufficiently to replace specific families.
 
 ### 5. ESPN public MMA APIs
 
-**What appears available**
-
-- yearly event discovery
-- event/competition details
-- competitor stats
-- officials
-- sparse plays/status/result structures
-
-**Closeout state**
-
-Trigger commit `a18df5f3fccaff4432c2102140c34418eed481bc` exists, but no expected `Snapshot free ESPN MMA additive data [skip ci]` result commit was present at closeout. The trigger was still within the workflow's 120-minute maximum runtime, so this remains **unverified rather than confirmed failed**.
-
-**What is not assumed**
-
-The plays feed is not assumed to be strike-by-strike empirical action data.
-
-**Promotion condition**
-
-A completed snapshot manifest must show credible event counts by year, endpoint coverage, observed stat vocabulary and failure rates.
+Potential fields include yearly event discovery, event/competition details, competitor stats, officials, sparse plays/status/result structures. The current self-reporting rerun has not yet emitted its terminal diagnostic, so status remains **pending**. Do not infer success or failure from elapsed time before the configured process window ends.
 
 ### 6. UFC-DataLab OCR scorecards
 
-**What passed**
-
-Pinned MIT source snapshot imported successfully.
-
-**What failed QA**
-
-Inspection found obviously wrong fighter-pair/OCR associations and impossible-looking rows.
-
-**Rule**
-
-No OCR scorecard row becomes canonical until matched to an independently verified fight by date/opponents and score plausibility. OCR output is evidence, not truth.
+Pinned MIT snapshot imported. Sample inspection exposed incorrect fighter-pair/OCR associations. No row becomes canonical until independently matched by date/opponents and score plausibility.
 
 ### 7. Dated rankings snapshot
 
-**What passed**
-
-Large dated ranking table successfully imported; observed history starts 2013-02-04.
-
-**Potential uses**
-
-- pre-fight ranking/champion status
-- ranking movement
-- ranked/unranked context
-- opponent-ranking context
-
-**Rule**
-
-Only the latest ranking strictly before prediction cutoff may be used. Never nearest future ranking.
+Historical ranking table imported; observed history starts 2013-02-04. Only the latest ranking strictly before prediction cutoff may be joined. Never use a nearest future ranking.
 
 ### 8. CC0 cross-promotion fights
 
-**What passed**
-
-10,448 fight rows imported from UFC/Bellator/ONE through 2021-08-11.
-
-**Potential uses**
-
-- pre-UFC professional experience
-- external promotion win/loss/method history
-- experience depth before UFC debut
-
-**Risks**
-
-- historical snapshot is stale for current refresh
-- identity crosswalk required
-- UFC overlap with Greco must be deduplicated
-- original upstream was Sherdog via a derived Kaggle dataset
+10,448 UFC/Bellator/ONE fight rows through 2021-08-11 are imported. Requires fighter identity crosswalk, UFC-overlap deduplication, and explicit acknowledgement that the historical snapshot is stale for current refresh.
 
 ## Data-family ownership — provisional
 
-These are acquisition preferences only, not frozen feature contracts.
-
 | Data family | Preferred source today | Backup/additive | Status before contract freeze |
 |---|---|---|---|
-| UFC fight/event identity | Official UFC JSON:API if snapshot succeeds | Greco, ESPN | UNRESOLVED until full snapshot audited |
-| UFC fighter identity / FightMetric IDs | Official UFC | Greco, ESPN | UNRESOLVED |
-| Historical fighter-round aggregates | Greco today | Official UFC `fight_stat` | May invert if official historical coverage passes |
-| Rich position/TIP stats | Official UFC `fight_stat` | Sportradar/IMG later | Highest free-data priority |
+| UFC fight/event identity | Official UFC JSON:API | Greco, ESPN | Source readable; monolithic ingestion needs split/resume fix |
+| UFC fighter identity / FightMetric IDs | Official UFC | Greco, ESPN | Crosswalk not yet audited |
+| Historical fighter-round aggregates | Greco + official UFC `fight_stat` | cross-source QA | Official raw now landed; overlap/era audit required before inversion |
+| Rich position/TIP stats | **Official UFC `fight_stat`** | Sportradar/IMG later | **RAW LANDED; ~64.8% overall TIP coverage; era QA required** |
 | Cross-promotion fight history | CC0 pro-mma-fights | broader source later if needed | RAW / QA REQUIRED |
 | Historical UFC rankings | dated TidyTuesday/fightr snapshot | FightMatrix benchmark | RAW / QA REQUIRED |
 | Official judge round scores | Official UFC pages desired | MMA Decisions; OCR totals | GAP / acquisition unresolved |
 | Fight-specific weigh-ins | Official UFC pages desired | other permitted source TBD | GAP / acquisition unresolved |
-| Officials/referees | ESPN + UFC/Greco where available | cross-promotion source | Snapshot/QA pending |
+| Officials/referees | ESPN + UFC/Greco where available | cross-promotion source | ESPN result pending |
 | Market odds | BestFightOdds / sportsbook later | user DraftKings prices | Separate from core model |
 | Empirical action sequence | FightGeek / official partner if licensed | future annotation | DEFERRED / ACCESS-GATED |
 
-## Nightly acquisition closeout rule
+## Acquisition closeout rule
 
 Before ending an acquisition session:
 
@@ -278,6 +179,6 @@ Before ending an acquisition session:
 
 ## Next gate
 
-The next major project phase after this source sweep is **canonical data-contract design**, not feature engineering.
+After ESPN reaches a terminal diagnostic and the UFC.com pagination design is repaired, the next major project phase remains **canonical data-contract design**, not feature engineering.
 
 Contracts should freeze grain, IDs, types, units, clocks, null semantics, provenance, conflict resolution, temporal availability, and validation thresholds. Feature families should be frozen only after the source inventory and contracts make the available information surface explicit.
