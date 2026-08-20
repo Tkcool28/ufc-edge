@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source_repository": "komaksym/UFC-DataLab",
+  "source_commit": "3268146c05211de9deab8b9b4c0bb4a954815f0b",
+  "source_commit_date_utc": "2026-07-10T21:41:28Z",
+  "source_commit_message": "Merge pull request #11 from komaksym/data-refresh-2026-07-10 — data: refresh UFC datasets through 2026-06-27",
+  "upstream_license": {
+    "type": "MIT",
+    "license_file": "LICENSE",
+    "note": "The upstream repository includes an MIT license. Preserve the license alongside the pinned source snapshot."
+  },
+  "raw_snapshot_directory": "data/raw/ufc_datalab_scorecards/3268146c0521",
+  "files": [
+    {
+      "source_path": "data/scorecards/OCR_parsed_scorecards/SCORECARDS.csv",
+      "destination_name": "SCORECARDS.csv",
+      "size_bytes": 128717,
+      "git_blob_sha1": "f5d9bebdc5afebc60d171f9c41f041a13500aaf0",
+      "role": "OCR-parsed UFC official scorecard totals as published by UFC-DataLab"
+    },
+    {
+      "source_path": "LICENSE",
+      "destination_name": "UPSTREAM_LICENSE",
+      "size_bytes": 1065,
+      "git_blob_sha1": "71189b70114cb6c68fe9703fc106a0f39a258cc0",
+      "role": "Upstream MIT license text"
+    }
+  ],
+  "semantics": {
+    "source_is_derived": true,
+    "source_origin": "UFC official scorecard images scraped and OCR-parsed by UFC-DataLab",
+    "delimiter": ";",
+    "published_columns": [
+      "red_fighter_name",
+      "blue_fighter_name",
+      "event_date",
+      "red_fighter_total_pts",
+      "blue_fighter_total_pts"
+    ],
+    "important_limitations": [
+      "This file contains OCR-derived values, not hand-verified official scorecard transcription.",
+      "Observed sample rows include obvious fighter-pair/OCR association errors. No row is canonical until matched against the Greco fight table and validated.",
+      "The published file stores three judges' fight/elapsed totals per corner rather than a complete judge-by-round structured table.",
+      "Dash values occur for fights/rounds without score totals and must remain missing rather than becoming numeric zero.",
+      "Fighter names are not stable identifiers; canonical joins must use fight/date/opponent context and fail closed on ambiguity."
+    ]
+  },
+  "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_AND_SCORE_QA"
+}
