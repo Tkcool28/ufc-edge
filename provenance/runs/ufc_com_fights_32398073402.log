@@ -1,0 +1,6 @@
+[ufc.com:fights] page=25 rows=1250
+[ufc.com:fights] page=50 rows=2500
+[ufc.com:fights] page=75 rows=3750
+[ufc.com:fights] page=100 rows=5000
+[ufc.com:fights] page=125 rows=6250
+[ufc.com:fights] page=150 rows=7500
