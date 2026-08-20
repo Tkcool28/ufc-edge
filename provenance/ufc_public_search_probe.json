@@ -1,0 +1,161 @@
+{
+  "decision": {
+    "article_jsonapi_used": false,
+    "promotion_gate": "Use as article enumeration source only if query pagination is stable and returned links are official UFC article pages with acceptable precision/recall."
+  },
+  "generated_at_utc": "2026-08-20T17:46:42.989800Z",
+  "probes": [
+    {
+      "article_links": [
+        {
+          "classification": "weigh_in",
+          "text": "Dana White's Contender Series 2 days ago Official Weigh-In Results | Dana White's Contender\u2026 The Official Weights Of The Athletes Competing For UFC Contracts In 2026",
+          "url": "https://www.ufc.com/news/official-weigh-in-results-dana-whites-contender-series-season-10"
+        },
+        {
+          "classification": "weigh_in",
+          "text": "Weigh-in 6 days ago Official Weigh-In Results | UFC 330: Makhachev vs\u2026 The Official Weights Of The Athletes Competing August 15 At Xfinity Mobile Arena In Philadelphia",
+          "url": "https://www.ufc.com/news/official-weigh-results-ufc-330-makhachev-vs-machado-garry"
+        },
+        {
+          "classification": "weigh_in",
+          "text": "Weigh-in 1 week ago Official Weigh-In Results | UFC Fight Night: Gamrot\u2026 The Official Weights Of The Athletes Competing On Saturday, August 8 At Meta APEX In Las Vegas",
+          "url": "https://www.ufc.com/news/ufc-fight-night-gamrot-vs-salkilld-official-weigh-in-results"
+        },
+        {
+          "classification": "weigh_in",
+          "text": "Zuffa Boxing 1 week ago Zuffa Boxing 10 Official Weigh-In Results The Official Weights Of The Athletes Competing At McKenna vs Oliha Happens August 8 At 3Arena From Dublin, Ireland, O",
+          "url": "https://www.ufc.com/news/zuffa-boxing-10-official-weigh-results"
+        }
+      ],
+      "article_links_count": 4,
+      "bytes": 65172,
+      "classified_scorecard_count": 0,
+      "classified_weigh_in_count": 4,
+      "content_type": "text/html; charset=UTF-8",
+      "page": 0,
+      "pagination_links": [],
+      "query": "Official Weigh-In Results",
+      "sha256": "f054676d528c381b92be1030113028c33563dfc41053ed9ba88038715ad70ca4",
+      "url": "https://www.ufc.com/search?query=Official+Weigh-In+Results",
+      "visible_result_count": null
+    },
+    {
+      "article_links": [
+        {
+          "classification": "weigh_in",
+          "text": "Dana White's Contender Series 2 days ago Official Weigh-In Results | Dana White's Contender\u2026 The Official Weights Of The Athletes Competing For UFC Contracts In 2026",
+          "url": "https://www.ufc.com/news/official-weigh-in-results-dana-whites-contender-series-season-10"
+        },
+        {
+          "classification": "weigh_in",
+          "text": "Weigh-in 6 days ago Official Weigh-In Results | UFC 330: Makhachev vs\u2026 The Official Weights Of The Athletes Competing August 15 At Xfinity Mobile Arena In Philadelphia",
+          "url": "https://www.ufc.com/news/official-weigh-results-ufc-330-makhachev-vs-machado-garry"
+        },
+        {
+          "classification": "weigh_in",
+          "text": "Weigh-in 1 week ago Official Weigh-In Results | UFC Fight Night: Gamrot\u2026 The Official Weights Of The Athletes Competing On Saturday, August 8 At Meta APEX In Las Vegas",
+          "url": "https://www.ufc.com/news/ufc-fight-night-gamrot-vs-salkilld-official-weigh-in-results"
+        },
+        {
+          "classification": "weigh_in",
+          "text": "Zuffa Boxing 1 week ago Zuffa Boxing 10 Official Weigh-In Results The Official Weights Of The Athletes Competing At McKenna vs Oliha Happens August 8 At 3Arena From Dublin, Ireland, O",
+          "url": "https://www.ufc.com/news/zuffa-boxing-10-official-weigh-results"
+        }
+      ],
+      "article_links_count": 4,
+      "bytes": 65183,
+      "classified_scorecard_count": 0,
+      "classified_weigh_in_count": 4,
+      "content_type": "text/html; charset=UTF-8",
+      "page": 1,
+      "pagination_links": [
+        {
+          "text": "Skip to main content",
+          "url": "https://www.ufc.com/search?query=Official+Weigh-In+Results&page=1#main-content"
+        }
+      ],
+      "query": "Official Weigh-In Results",
+      "sha256": "afbb45af74fa4a4d73da8e0977fe763e74801b4b707329df388c7823264485ed",
+      "url": "https://www.ufc.com/search?query=Official+Weigh-In+Results&page=1",
+      "visible_result_count": null
+    },
+    {
+      "article_links": [
+        {
+          "classification": "scorecard",
+          "text": "Scorecards 4 days ago Official Scorecards | UFC 330: Makhachev vs Machado\u2026 See How The Judges Score Every Round Of Every Fight From UFC 330: Makhachev vs Machado Garry, Live From Philadelphia",
+          "url": "https://www.ufc.com/news/ufc-330-official-scorecards"
+        },
+        {
+          "classification": "scorecard",
+          "text": "Scorecards 1 week ago Official Scorecards | UFC Fight Night: Gamrot vs\u2026 View The Official Judges' Scorecards From Every Bout At UFC Fight Night: Gamrot vs Salkilld, Live From Meta APEX In L",
+          "url": "https://www.ufc.com/news/ufc-fight-night-gamrot-vs-salkilld-official-scorecards-judges"
+        },
+        {
+          "classification": "scorecard",
+          "text": "Scorecards 2 weeks ago Official Scorecards | UFC Belgrade View The Official Judges' Scorecards From Every Bout At UFC Fight Night: Medi\u0107 vs Rodriguez, Live From Belgrade Arena",
+          "url": "https://www.ufc.com/news/ufc-belgrade-official-scorecards"
+        },
+        {
+          "classification": "scorecard",
+          "text": "Scorecards 3 weeks ago Official Scorecards | UFC Abu Dhabi View The Official Judges' Scorecards From Every Bout At UFC Fight Night: Ankalaev vs Guskov, Live From Etihad Arena I",
+          "url": "https://www.ufc.com/news/ufc-abu-dhabi-official-scorecards"
+        }
+      ],
+      "article_links_count": 4,
+      "bytes": 65186,
+      "classified_scorecard_count": 4,
+      "classified_weigh_in_count": 0,
+      "content_type": "text/html; charset=UTF-8",
+      "page": 0,
+      "pagination_links": [],
+      "query": "Official Scorecards",
+      "sha256": "465ae7a7079618e09feab3e8d012d2d2c3b61c3955818bbf60cb198cff96473d",
+      "url": "https://www.ufc.com/search?query=Official+Scorecards",
+      "visible_result_count": null
+    },
+    {
+      "article_links": [
+        {
+          "classification": "scorecard",
+          "text": "Scorecards 4 days ago Official Scorecards | UFC 330: Makhachev vs Machado\u2026 See How The Judges Score Every Round Of Every Fight From UFC 330: Makhachev vs Machado Garry, Live From Philadelphia",
+          "url": "https://www.ufc.com/news/ufc-330-official-scorecards"
+        },
+        {
+          "classification": "scorecard",
+          "text": "Scorecards 1 week ago Official Scorecards | UFC Fight Night: Gamrot vs\u2026 View The Official Judges' Scorecards From Every Bout At UFC Fight Night: Gamrot vs Salkilld, Live From Meta APEX In L",
+          "url": "https://www.ufc.com/news/ufc-fight-night-gamrot-vs-salkilld-official-scorecards-judges"
+        },
+        {
+          "classification": "scorecard",
+          "text": "Scorecards 2 weeks ago Official Scorecards | UFC Belgrade View The Official Judges' Scorecards From Every Bout At UFC Fight Night: Medi\u0107 vs Rodriguez, Live From Belgrade Arena",
+          "url": "https://www.ufc.com/news/ufc-belgrade-official-scorecards"
+        },
+        {
+          "classification": "scorecard",
+          "text": "Scorecards 3 weeks ago Official Scorecards | UFC Abu Dhabi View The Official Judges' Scorecards From Every Bout At UFC Fight Night: Ankalaev vs Guskov, Live From Etihad Arena I",
+          "url": "https://www.ufc.com/news/ufc-abu-dhabi-official-scorecards"
+        }
+      ],
+      "article_links_count": 4,
+      "bytes": 65197,
+      "classified_scorecard_count": 4,
+      "classified_weigh_in_count": 0,
+      "content_type": "text/html; charset=UTF-8",
+      "page": 1,
+      "pagination_links": [
+        {
+          "text": "Skip to main content",
+          "url": "https://www.ufc.com/search?query=Official+Scorecards&page=1#main-content"
+        }
+      ],
+      "query": "Official Scorecards",
+      "sha256": "74f68a7c00ff18921a9fc6a2caf692bde06bcd0d43ef08883d64e90e8131e828",
+      "url": "https://www.ufc.com/search?query=Official+Scorecards&page=1",
+      "visible_result_count": null
+    }
+  ],
+  "route": "https://www.ufc.com/search",
+  "schema_version": 1
+}
