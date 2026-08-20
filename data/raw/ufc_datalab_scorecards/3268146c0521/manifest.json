@@ -1,0 +1,49 @@
+{
+  "canonicalization_status": "RAW_ONLY_PENDING_IDENTITY_AND_SCORE_QA",
+  "files": [
+    {
+      "bytes": 128717,
+      "destination": "data/raw/ufc_datalab_scorecards/3268146c0521/SCORECARDS.csv",
+      "git_blob_sha1": "f5d9bebdc5afebc60d171f9c41f041a13500aaf0",
+      "role": "OCR-parsed UFC official scorecard totals as published by UFC-DataLab",
+      "sha256": "83d32d673aaa8a595bfc4d9a252624fa0aa719ad39b13972741fe0f4967d38ba",
+      "source_path": "data/scorecards/OCR_parsed_scorecards/SCORECARDS.csv"
+    },
+    {
+      "bytes": 1065,
+      "destination": "data/raw/ufc_datalab_scorecards/3268146c0521/UPSTREAM_LICENSE",
+      "git_blob_sha1": "71189b70114cb6c68fe9703fc106a0f39a258cc0",
+      "role": "Upstream MIT license text",
+      "sha256": "09254d46c2df0be90f58a0b002c168cc5349b9ae43cc65e1abb283b14c7e2e3f",
+      "source_path": "LICENSE"
+    }
+  ],
+  "schema_version": 1,
+  "semantics": {
+    "delimiter": ";",
+    "important_limitations": [
+      "This file contains OCR-derived values, not hand-verified official scorecard transcription.",
+      "Observed sample rows include obvious fighter-pair/OCR association errors. No row is canonical until matched against the Greco fight table and validated.",
+      "The published file stores three judges' fight/elapsed totals per corner rather than a complete judge-by-round structured table.",
+      "Dash values occur for fights/rounds without score totals and must remain missing rather than becoming numeric zero.",
+      "Fighter names are not stable identifiers; canonical joins must use fight/date/opponent context and fail closed on ambiguity."
+    ],
+    "published_columns": [
+      "red_fighter_name",
+      "blue_fighter_name",
+      "event_date",
+      "red_fighter_total_pts",
+      "blue_fighter_total_pts"
+    ],
+    "source_is_derived": true,
+    "source_origin": "UFC official scorecard images scraped and OCR-parsed by UFC-DataLab"
+  },
+  "source_commit": "3268146c05211de9deab8b9b4c0bb4a954815f0b",
+  "source_commit_date_utc": "2026-07-10T21:41:28Z",
+  "source_repository": "komaksym/UFC-DataLab",
+  "upstream_license": {
+    "license_file": "LICENSE",
+    "note": "The upstream repository includes an MIT license. Preserve the license alongside the pinned source snapshot.",
+    "type": "MIT"
+  }
+}
