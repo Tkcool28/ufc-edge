@@ -1,0 +1,45 @@
+name: Audit acquired raw source surfaces
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/audit_source_surfaces.py"
+      - ".github/workflows/audit-source-surfaces.yml"
+      - "schemas/canonical_data_contract_v0.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out writable branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate canonical contract
+        run: python pipelines/validate_canonical_contract.py
+      - name: Generate source surface inventory
+        run: python pipelines/audit_source_surfaces.py
+      - name: Commit audit outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add provenance/audits/source_surface_inventory.json provenance/audits/source_surface_inventory.md
+          if git diff --cached --quiet; then
+            echo "No source-surface changes."
+            exit 0
+          fi
+          git commit -m "Audit acquired raw source surfaces [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
