@@ -1,0 +1,38 @@
+name: Probe official UFC trending index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/probe-ufc-trending-index.yml"
+      - "pipelines/probe_ufc_trending_index.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Probe public UFC Trending index
+        run: python pipelines/probe_ufc_trending_index.py
+      - name: Commit probe evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add provenance/ufc_trending_index_probe.json provenance/ufc_trending_index_probe.raw.html
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Record UFC public trending-index probe [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
