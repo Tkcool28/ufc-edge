@@ -20,9 +20,9 @@ def latest(paths: list[Path]) -> Path | None:
     return sorted(paths, key=lambda p: p.as_posix())[-1] if paths else None
 
 
-def csv_surface(path: Path) -> dict[str, Any]:
+def csv_surface(path: Path, delimiter: str = ",") -> dict[str, Any]:
     with path.open("r", encoding="utf-8-sig", newline="") as fh:
-        reader = csv.reader(fh)
+        reader = csv.reader(fh, delimiter=delimiter)
         try:
             header = next(reader)
         except StopIteration:
@@ -47,15 +47,6 @@ def add_greco(out: list[dict[str, Any]]) -> None:
         item = csv_surface(path)
         item.update({"source": "greco1899_ufcstats", "collection": path.stem, "snapshot": d.name})
         out.append(item)
-
-
-def add_csv_single(out: list[dict[str, Any]], source: str, pattern: str) -> None:
-    paths = sorted(ROOT.glob(pattern))
-    for path in paths:
-        if path.is_file() and path.suffix.lower() == ".csv":
-            item = csv_surface(path)
-            item.update({"source": source, "collection": path.stem, "snapshot": path.parent.name})
-            out.append(item)
 
 
 def add_fightmetric(out: list[dict[str, Any]]) -> None:
@@ -116,6 +107,22 @@ def add_ufc_resources(out: list[dict[str, Any]]) -> None:
         })
 
 
+def csv_from_manifest(m: dict[str, Any]) -> tuple[Path, str] | None:
+    delimiter = str((m.get("semantics") or {}).get("delimiter") or ",")
+    files = m.get("files")
+    if not isinstance(files, list):
+        return None
+    for file_info in files:
+        if not isinstance(file_info, dict):
+            continue
+        raw_path = file_info.get("destination") or file_info.get("path")
+        if isinstance(raw_path, str) and raw_path.lower().endswith(".csv"):
+            path = Path(raw_path)
+            if path.exists():
+                return path, delimiter
+    return None
+
+
 def add_manifest_source(out: list[dict[str, Any]], source: str, glob_pattern: str) -> None:
     manifest_path = latest([p for p in ROOT.glob(glob_pattern) if p.is_file()])
     if not manifest_path:
@@ -127,16 +134,55 @@ def add_manifest_source(out: list[dict[str, Any]], source: str, glob_pattern: st
         "snapshot": m.get("snapshot_id") or manifest_path.parent.name,
         "manifest": manifest_path.as_posix(),
     }
-    for key in (
-        "rows", "pages", "event_count", "competition_count", "events", "competitions",
-        "observed_competitor_stat_names", "observed_play_types", "observed_official_positions", "http_status_counts"
-    ):
+
+    # Common direct fields.
+    for key in ("rows", "pages", "http_status_counts"):
         if key in m:
             item[key] = m[key]
+
+    # Kaggle-style one-file manifest.
     file_info = m.get("file")
     if isinstance(file_info, dict):
         item["rows"] = item.get("rows", file_info.get("data_rows"))
         item["columns"] = file_info.get("columns") or []
+
+    # Published CSV manifests (rankings, OCR scorecards, etc.). Count the actual
+    # committed CSV so the inventory never confuses absent manifest counters with
+    # absent data.
+    csv_ref = csv_from_manifest(m)
+    if csv_ref:
+        path, delimiter = csv_ref
+        surface = csv_surface(path, delimiter=delimiter)
+        item["rows"] = surface["rows"]
+        item["columns"] = surface["columns"]
+        item["data_path"] = surface["path"]
+
+    semantics = m.get("semantics") or {}
+    if isinstance(semantics, dict):
+        published = semantics.get("columns") or semantics.get("published_columns")
+        if published and not item.get("columns"):
+            item["columns"] = published
+        for key in ("coverage_start_observed", "canonicalization_status"):
+            if key in semantics:
+                item[key] = semantics[key]
+
+    # ESPN has deliberately different manifest structure.
+    if source == "espn_mma":
+        counts = m.get("counts") or {}
+        discovery = m.get("discovery") or {}
+        schema = m.get("schema_observed") or {}
+        item.update({
+            "rows": counts.get("competitions"),
+            "event_count": discovery.get("event_count"),
+            "competition_count": counts.get("competitions"),
+            "competitor_stat_requests": counts.get("competitor_stat_requests"),
+            "http_status_counts": m.get("http_status_counts"),
+            "attributes": schema.get("competitor_stat_names") or [],
+            "play_types": schema.get("play_type_names") or [],
+            "official_positions": schema.get("official_position_names") or [],
+            "result_names": schema.get("result_names") or [],
+        })
+
     out.append(item)
 
 
@@ -160,6 +206,10 @@ def markdown(items: list[dict[str, Any]]) -> str:
             surface_parts.append(preview)
         if rels:
             surface_parts.append(f"rels: {', '.join(str(x) for x in rels[:8])}")
+        if item.get("event_count") is not None:
+            surface_parts.append(f"events: {item['event_count']}")
+        if item.get("play_types"):
+            surface_parts.append(f"play types: {len(item['play_types'])}")
         surface = "<br>".join(surface_parts).replace("|", "\\|")
         lines.append(
             f"| {item.get('source','')} | {item.get('collection','')} | {item.get('rows','')} | "
