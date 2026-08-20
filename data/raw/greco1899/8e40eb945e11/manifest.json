@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "bytes": 101581,
+      "git_blob_sha": "132a752dd5af87bdd8b0f2736f1b2afa6f8a3fd1",
+      "path": "ufc_event_details.csv",
+      "sha256": "f4e4e89d9869e9383fb66ac547b5581e64c98f1806a509f6bc971158234a8456"
+    },
+    {
+      "bytes": 1031488,
+      "git_blob_sha": "5b7f26c6d320bb832b263b78793acee04f73b780",
+      "path": "ufc_fight_details.csv",
+      "sha256": "94edf07c9102d090ca44fc560a19551137dcf806b99004a7404299225805bd7c"
+    },
+    {
+      "bytes": 2081021,
+      "git_blob_sha": "0498f94a5ffef947599dc6ecbb32330f00b2cb9e",
+      "path": "ufc_fight_results.csv",
+      "sha256": "e080cefa88ef03d5a8e76948e79a61ee093d30c941d2647961c1b37bde609b2b"
+    },
+    {
+      "bytes": 7581649,
+      "git_blob_sha": "52b9b7f1869e3ff27c52270de2c6691c6843da73",
+      "path": "ufc_fight_stats.csv",
+      "sha256": "124ce82e3c0a93f6347e08f80bfbcc5346c93a11bbfc6c5eef012f2fdfc9e486"
+    },
+    {
+      "bytes": 338178,
+      "git_blob_sha": "ea0247a83dbd6bdadd57f034bffa91d52f3af9ee",
+      "path": "ufc_fighter_details.csv",
+      "sha256": "03640cc1c6f1afab8cb84f5666d5873f8a7438bdc31c066146451d2ae53f5c54"
+    },
+    {
+      "bytes": 505586,
+      "git_blob_sha": "3b86d0f368801b0747aaf7d813f675a6af484611",
+      "path": "ufc_fighter_tott.csv",
+      "sha256": "43ebc0ccf5cebd45dc5ac32385e8eeba3d8079ab448b478d2d7dc84cde720ac1"
+    }
+  ],
+  "snapshot_id": "8e40eb945e11",
+  "source_commit": "8e40eb945e1127bf0ef172ab211a34787948f312",
+  "source_repository": "Greco1899/scrape_ufc_stats"
+}
