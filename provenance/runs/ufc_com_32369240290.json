@@ -1,0 +1,13 @@
+{
+  "ended_at_utc": "2026-08-20T13:06:00Z",
+  "exit_code": 124,
+  "github_run_attempt": "1",
+  "github_run_id": "32369240290",
+  "log_path": "provenance/runs/ufc_com_32369240290.log",
+  "pipeline": "ufc_com",
+  "process_timeout_seconds": 2100,
+  "ref": "main",
+  "result": "process_timeout",
+  "started_at_utc": "2026-08-20T12:31:00Z",
+  "trigger_sha": "3b500a51678d25fba93ce55520ecc2f2b67dbe3d"
+}
