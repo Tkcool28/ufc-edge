@@ -1,0 +1,108 @@
+{
+  "article_links_on_page": [
+    {
+      "text": "Athletes 17 minutes ago Chris Padilla Knows He Belongs On The Big Stage California Lightweight Is Unbeaten In Five UFC Fights, And Wants To Prove That He Deserves Main Card Billing After UFC Sacramento. Read the story",
+      "url": "https://www.ufc.com/news/chris-padilla-knows-he-belongs-on-the-big-stage-ufc-sacramento"
+    },
+    {
+      "text": "Athletes 50 minutes ago Gregory Rodrigues | Attitude Of Gratitude Middleweight Contender Is Staying Grounded And Grateful As He Prepares For The Biggest Test Of His Career To Date.",
+      "url": "https://www.ufc.com/news/gregory-rodrigues-attitude-of-gratitude-ufc-sacramento"
+    },
+    {
+      "text": "Athletes 17 hours ago Anthony Hernandez | Representing For The 5-3-0 Hometown Middleweight Talks Fighting In Sacramento, Handling Business This Weekend Read the story",
+      "url": "https://www.ufc.com/news/anthony-hernandez-representing-for-the-530-ufc-sacramento"
+    },
+    {
+      "text": "Athletes 21 hours ago Shanelle Dyer | Back For More British Prospect Talks London Debut, Opening Saturday\u2019s Event In Style",
+      "url": "https://www.ufc.com/news/shanelle-dyer-back-for-more-ufc-sacramento"
+    },
+    {
+      "text": "Dana White's Contender Series 23 hours ago Dana White On Contender Series Season 10, Week 2,\u2026 Dana White Fielded Questions From The Media At The Dana White\u2019s Contender Series Season 10, Week 2 Post-Fight Press C",
+      "url": "https://www.ufc.com/news/dana-white-contender-series-season-10-week-2-kaik-brito-cristian-perez-arguing-matchmakers"
+    },
+    {
+      "text": "Dana White's Contender Series 1 day ago Welcome To The UFC | DWCS Week 2, Season 10 Kaik Brito, Trent Miller, Cristian Perez, Alik Lorenz, Roman Gabriel Puga, And Taner Trembley All Earned UFC Contract",
+      "url": "https://www.ufc.com/news/welcome-ufc-dwcs-season-10-week-2"
+    },
+    {
+      "text": "Dana White's Contender Series 1 day ago Week 2 Results + Scorecards | Dana White's Contender\u2026 Live Results, Official Scorecards, Fight Recaps And More From Week 2 Of Dana White's Contender Series Season 10, Live",
+      "url": "https://www.ufc.com/news/dana-whites-contender-series-season-10-week-2-results"
+    }
+  ],
+  "article_links_on_page_count": 7,
+  "bytes": 96187,
+  "content_type": "text/html; charset=UTF-8",
+  "decision": {
+    "article_jsonapi_403_bypassed": false,
+    "purpose": "Discover whether UFC's own public content index can enumerate official weigh-in/scorecard pages without restricted article API access."
+  },
+  "forms": [
+    {
+      "action": "/search",
+      "class": "simple-search-form",
+      "id": "",
+      "method": "get"
+    },
+    {
+      "action": "/trending/all",
+      "class": "views-exposed-form bef-exposed-form",
+      "id": "views-exposed-form-trending-page",
+      "method": "get"
+    }
+  ],
+  "generated_at_utc": "2026-08-20T17:43:48.669433Z",
+  "http_status": 200,
+  "inputs": [
+    {
+      "id": "site-search-input",
+      "name": "query",
+      "placeholder": "Search...",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "id": "",
+      "name": "created",
+      "placeholder": "",
+      "type": "hidden",
+      "value": " 1"
+    },
+    {
+      "id": "edit-submit-trending",
+      "name": "",
+      "placeholder": "",
+      "type": "submit",
+      "value": "Apply"
+    }
+  ],
+  "pagination_or_filter_links": [
+    {
+      "text": "Load More",
+      "url": "https://www.ufc.com/trending/all?page=1"
+    }
+  ],
+  "raw_html_path": "provenance/ufc_trending_index_probe.raw.html",
+  "relevant_weigh_or_scorecard_links": [
+    {
+      "text": "Athletes 17 minutes ago Chris Padilla Knows He Belongs On The Big Stage California Lightweight Is Unbeaten In Five UFC Fights, And Wants To Prove That He Deserves Main Card Billing After UFC Sacramento. Read the story",
+      "url": "https://www.ufc.com/news/chris-padilla-knows-he-belongs-on-the-big-stage-ufc-sacramento"
+    },
+    {
+      "text": "Athletes 50 minutes ago Gregory Rodrigues | Attitude Of Gratitude Middleweight Contender Is Staying Grounded And Grateful As He Prepares For The Biggest Test Of His Career To Date.",
+      "url": "https://www.ufc.com/news/gregory-rodrigues-attitude-of-gratitude-ufc-sacramento"
+    },
+    {
+      "text": "Athletes 17 hours ago Anthony Hernandez | Representing For The 5-3-0 Hometown Middleweight Talks Fighting In Sacramento, Handling Business This Weekend Read the story",
+      "url": "https://www.ufc.com/news/anthony-hernandez-representing-for-the-530-ufc-sacramento"
+    },
+    {
+      "text": "Dana White's Contender Series 1 day ago Week 2 Results + Scorecards | Dana White's Contender\u2026 Live Results, Official Scorecards, Fight Recaps And More From Week 2 Of Dana White's Contender Series Season 10, Live",
+      "url": "https://www.ufc.com/news/dana-whites-contender-series-season-10-week-2-results"
+    }
+  ],
+  "schema_version": 1,
+  "selects": [],
+  "sha256": "3e68665452e17fd6a6e95aaef9d9b7d8d732c2526aa03e32f3487e52e88a38b0",
+  "url": "https://www.ufc.com/trending/all",
+  "visible_story_count": 61699
+}
