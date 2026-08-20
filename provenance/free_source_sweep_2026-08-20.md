@@ -4,163 +4,242 @@ Status date: 2026-08-20 (America/Denver)
 
 Purpose: exhaust the credible **free** additive-data landscape before feature contracts are frozen. This is an acquisition record, not permission to merge fields or use mutable snapshots as historical features.
 
-## Immediately actionable / automated
+## Acquisition status
 
-### 1. Official UFC.com Drupal JSON:API
+### 1. Greco1899 / UFCStats backbone
 
-Status: **PIPELINE ADDED / SNAPSHOT REQUESTED**
+Status: **INGESTED**
+
+Pinned round/fight/event/fighter source remains the canonical historical backbone candidate. It does not contain ordered intra-round actions or the rich Time In Position vocabulary discovered below.
+
+### 2. Official UFC.com Drupal JSON:API — resource catalog
+
+Status: **VERIFIED / RESOURCE CATALOG STORED**
+
+Probe artifacts:
+
+- `provenance/ufc_jsonapi_resource_probe.json`
+- `provenance/ufc_jsonapi_resource_probe.raw.json`
+
+The live catalog exposes hundreds of resource types. High-value verified sport surfaces include:
+
+- `/jsonapi/node/athlete`
+- `/jsonapi/node/event`
+- `/jsonapi/node/fight`
+- `/jsonapi/athlete_stat/athlete_stat`
+- `/jsonapi/athlete_ranking/athlete_ranking`
+- `/jsonapi/fight_stat/fight_stat`
+- `/jsonapi/fight_roundboard/fight_roundboard`
+- `/jsonapi/node/article` (advertised, but collection access currently returns HTTP 403)
+
+The bounded surface probe confirmed `fight_stat` and `fight_roundboard` return HTTP 200.
+
+### 3. Official UFC.com rich FightMetric `fight_stat`
+
+Status: **BULK SNAPSHOT PIPELINE STARTED; SCHEMA VERIFIED LIVE**
+
+Pipeline: `pipelines/ingest_ufc_fight_stat.py`
+Workflow: `.github/workflows/ingest-ufc-fightmetric.yml`
+Raw namespace: `data/raw/ufc_fightmetric_official/<snapshot_id>/`
+
+The verified live schema materially exceeds Greco's round table and includes:
+
+**Time / position**
+
+- standing_time
+- neutral_time
+- distance_time
+- clinch_time
+- ground_time
+- control_time
+- ground_ctl_time
+- guard_ctl_time
+- half_guard_ctl_time
+- side_ctl_time
+- mount_ctl_time
+- back_ctl_time
+- misc ground-control time
+
+**Grappling**
+
+- takedown attempts / landed
+- submission attempts
+- reversals
+- standups
+
+**Striking**
+
+- significant and total attempts / landed
+- punches / kicks
+- head / body / leg
+- distance / clinch / ground
+- detailed combinations such as distance-head-punch and distance-head-kick attempts/landed
+- knockdowns
+
+This is a major simulator-data discovery. The first unsorted legacy sample rows contained null stats, so historical coverage must be measured rather than assumed. The bulk snapshot manifest computes non-null counts/fractions for every field and specifically all TIP fields.
+
+`fight_roundboard` is also being preserved, but it is a record-book surface, not assumed to enumerate every fighter-round.
+
+### 4. Official UFC.com athlete/event/fight point-in-time snapshot
+
+Status: **PIPELINE STARTED; FINAL RAW COMMIT NOT YET VERIFIED**
 
 Pipeline: `pipelines/ingest_ufc_com.py`
 Workflow: `.github/workflows/ingest-ufc-com.yml`
 Raw namespace: `data/raw/ufc_com/<snapshot_id>/`
 
-Point-in-time snapshot includes:
+Targeted additive fields include leg reach, gym, style, Octagon debut, official FightMetric identity, event/fight IDs and current context.
 
-- JSON:API resource index (to preserve the exposed resource catalog for later discovery)
-- all athlete nodes
-- linked athlete FightMetric aggregate stats
-- current ranking relationship
-- weight class
-- fighting style
-- gym
-- athlete status
-- all event nodes
-- all fight nodes with red/blue corners and winner relationships
+Leakage warning: current career totals/rates, rankings, streaks and status are point-in-time state and **must not be backfilled** into older target fights.
 
-High-value fields beyond Greco include leg reach, gym, style, Octagon debut, official FightMetric identity, current ranking/status context and UFC's own event/fight IDs.
+### 5. ESPN public MMA APIs
 
-Leakage warning: present-day career totals/rates, rankings, streaks and status are point-in-time state and **must not be backfilled** into older target fights.
-
-### 2. ESPN public MMA APIs
-
-Status: **PIPELINE ADDED / SNAPSHOT REQUESTED**
+Status: **PIPELINE STARTED; FINAL RAW COMMIT NOT YET VERIFIED**
 
 Pipeline: `pipelines/ingest_espn_mma.py`
 Workflow: `.github/workflows/ingest-espn-mma.yml`
 Raw namespace: `data/raw/espn_mma/<snapshot_id>/`
 
-The historical pass attempts to preserve, by year:
+The historical pass attempts to preserve:
 
-- scoreboard discovery payloads
-- core event details with embedded competitions
-- competition status/result detail
-- officials/judges
+- yearly scoreboard discovery payloads
+- core event details / competitions
+- competition status and detailed result
+- officials / judges
 - sparse play/timeline payloads
 - per-fight competitor statistics
 
-The manifest also records observed ESPN statistic names, play types, official-position labels, HTTP coverage and source gaps. Optional 404/empty payloads remain coverage evidence rather than being converted to zeroes.
+The manifest records HTTP coverage and observed stat/play/official vocabularies. Optional missing endpoints remain missing-source evidence rather than zeroes.
 
-ESPN IDs remain source-specific until a later crosswalk audit.
+### 6. UFC-DataLab OCR scorecard snapshot
+
+Status: **INGESTED / RAW-ONLY PENDING QA**
+
+Source: `komaksym/UFC-DataLab`
+Pinned source commit: `3268146c05211de9deab8b9b4c0bb4a954815f0b`
+License: MIT
+Raw namespace: `data/raw/ufc_datalab_scorecards/3268146c0521/`
+
+Imported only the additive OCR scorecard CSV and upstream license, not the source's duplicate UFCStats datasets.
+
+Important quality finding: sample rows contain obvious fighter-pair/OCR association errors. No row becomes canonical until matched against Greco fight date/opponents and validated. The published CSV contains three judge totals per corner, not a full structured judge-by-round table.
+
+### 7. Historical UFC rankings (TidyTuesday / fightr snapshot)
+
+Status: **INGESTED / RAW-ONLY PENDING PROVENANCE + IDENTITY QA**
+
+Pinned TidyTuesday commit: `107ff6c70de02dd807169e13aee7dc9d86ff88b6`
+Raw namespace: `data/raw/tidytuesday_ufc_rankings/107ff6c70de0/`
+
+File: `ufc_rankings_dataset.csv`
+Published columns:
+
+- date
+- weightclass
+- fighter
+- rank
+
+Observed coverage begins 2013-02-04. This is useful because each ranking observation has an explicit date, enabling a strict historical as-of join later. Never use the nearest future ranking.
+
+Dataset-specific licensing/provenance remains partially unresolved; preserve the source namespace and use for private research/modeling until clarified further.
+
+### 8. CC0 cross-promotion professional fight history
+
+Status: **INGESTED / RAW-ONLY PENDING IDENTITY + DEDUP QA**
+
+Source: Kaggle `binduvr/pro-mma-fights`, version 1
+License: CC0 / Public Domain
+Raw namespace: `data/raw/kaggle_pro_mma_fights/v1/`
+
+Verified contents:
+
+- 10,448 fights
+- 17 columns
+- UFC, Bellator MMA and ONE Championship
+- source retrieval through 2021-08-11
+- upstream originally scraped from Sherdog
+
+Columns include source URLs, event/promotion/date/location, both fighters, result, method/detail, referee, round and time.
+
+Primary value: pre-UFC and cross-promotion professional experience/context for fighters who later enter the UFC. UFC fights overlapping Greco must be deduplicated rather than counted twice.
 
 ---
 
-## Free sources found but NOT bulk-ingested yet
+## Free sources investigated but not yet cleanly ingested
 
-### 3. Official UFC weigh-in result articles
+### 9. Official UFC weigh-in result articles
 
-Status: **FREE / HIGH VALUE / ACQUISITION PATH TO RESOLVE**
+Status: **FREE / HIGH VALUE / JSON:API ARTICLE COLLECTION BLOCKED**
 
-UFC regularly publishes official weigh-in-result pages containing fight-specific scale weights and explicit missed-weight notes. This is directly additive because Greco's fighter `WEIGHT` value is a profile snapshot, not a historical per-fight weigh-in.
+Current UFC pages clearly publish fight-specific scale weights and explicit miss/catchweight/purse-penalty notes.
 
-Potential uses after a leakage-safe historical parser exists:
+The JSON:API resource catalog advertises `/jsonapi/node/article`, but a bounded live collection request returned HTTP 403. Therefore the initial plan to enumerate all weigh-in articles directly through JSON:API is **not currently viable**.
+
+A queued filtered article snapshot may also fail for this reason; do not count it as acquired until a raw commit exists.
+
+Still desired:
 
 - actual scale weight per bout
-- weight miss flag
+- weight-miss flag
 - amount overweight
-- second-attempt success when reported
+- second-attempt result when reported
 - catchweight indication
-- replacement/late-card notes when explicitly reported
+- explicit purse-forfeit note
 
-Preferred acquisition path: inspect the saved UFC.com JSON:API resource catalog for the news/article content type and obtain article data through the official JSON surface if available. Avoid building a separate HTML crawler until that path is checked.
+Next free acquisition path should use a respectful official UFC index/search/sitemap or another source with clear redistribution terms, rather than bypassing the 403.
 
-### 4. Official UFC scorecard articles
+### 10. Official UFC scorecard articles
 
-Status: **FREE / HIGH VALUE / ACQUISITION PATH TO RESOLVE**
+Status: **FREE / HIGH VALUE / JSON:API ARTICLE COLLECTION BLOCKED**
 
-UFC publishes official judges' scorecards for current events. These pages provide official result context and scorecard images/text. This is valuable for the future simulator's decision branch, because Greco contains the fight outcome but not judge-by-judge round scoring.
+Official UFC scorecard pages exist publicly, but the same article-collection 403 blocks the clean JSON:API enumeration path.
 
-Potential uses:
+The already-ingested UFC-DataLab OCR snapshot provides a noisy partial scorecard layer. A future official page/index route or MMA Decisions can fill judge-by-round structure if needed.
 
-- judge identity
-- per-round score by judge
-- 10-8 / 10-10 frequency
-- decision margin
-- judge disagreement / split propensity
-- decision-model training targets
-
-Preferred acquisition path is again the UFC.com JSON:API article resource if the saved resource catalog exposes it.
-
-### 5. MMA Decisions
+### 11. MMA Decisions
 
 Status: **FREE PUBLIC WEBSITE / HIGH VALUE / BULK-USE PATH NOT YET FROZEN**
 
-MMA Decisions has event-by-event decision records dating to the 1990s and exposes judge names, round-by-round scores, referee, tale-of-the-tape context, media scores and fan-score information. The event index currently spans 1995–2026 and includes UFC events throughout that period.
+MMA Decisions exposes event-by-event official judge names and round scores and extends much farther back than UFC's modern scorecard article archive. If ingested, official judge scores must be kept separate from media/fan scoring.
 
-Why it matters:
-
-- broad historical scorecard coverage predating UFC's modern official scorecard article archive
-- round-by-round judging labels for decision modeling
-- judge identity and disagreement analysis
-
-Do not mix fan/media scores with official judge scores. If this source is ingested, official scorecards must be a separate table/field family and raw HTML retained for audit.
-
-### 6. BestFightOdds archive
+### 12. BestFightOdds archive
 
 Status: **FREE PUBLIC ARCHIVE / MARKET-DIAGNOSTIC VALUE / NOT CORE MODEL INPUT**
 
-BestFightOdds states that all odds posted on the site are stored in its archive and that the archive dates back to 2007.
+BestFightOdds states its stored archive dates to 2007. Potential future use is model-vs-market evaluation, opening/closing line history and retrospective value checks. Sportsbook prices remain outside the independent core forecast model.
 
-Potential use:
+### 13. FightMatrix historical rankings
 
-- historical opening/closing market baseline
-- model-vs-market evaluation
-- retrospective price/value analysis
-- market-efficiency diagnostics
+Status: **AVAILABLE / DELIBERATELY DEPRIORITIZED**
 
-Policy for UFC Edge: sportsbook prices remain **outside the independent core forecast model**. Historical odds may be stored later in a separate market namespace and joined only for evaluation/diagnostics.
+FightMatrix publishes historical/proprietary ratings. We now possess dated UFC rankings directly, reducing the need to import a proprietary external rating into the core state engine. FightMatrix can remain a benchmark candidate.
 
-### 7. FightMatrix historical rankings
+### 14. Broader Sherdog Fight Finder history
 
-Status: **FREE WEB RANKINGS / PROPRIETARY RATING / API NOW ASSOCIATED WITH POLYDATA**
+Status: **PARTIALLY COVERED BY CC0 SNAPSHOT / FULL WORLDWIDE HISTORY STILL UNRESOLVED**
 
-FightMatrix publishes current and generated historical rankings and multiple rating systems. It is attractive for opponent-strength and pre-UFC context, but the rating engine is proprietary and 2026 API access is being offered through a PolyData partnership.
-
-Use, if any, should be as an external benchmark/context source rather than silently importing a proprietary rating into UFC Edge's own core state engine.
-
-### 8. Sherdog Fight Finder
-
-Status: **FREE PUBLIC FIGHT-RESULT DATABASE / POSSIBLE NON-UFC HISTORY SOURCE / BULK PATH NOT YET APPROVED**
-
-Sherdog describes Fight Finder as a free worldwide fight-results database. Its main value to UFC Edge would be pre-UFC / non-UFC professional history that UFCStats does not contain.
-
-Potential additive fields:
-
-- complete professional fight chronology before UFC entry
-- promotion/event outside UFC
-- method/round/time
-- opponent identity
-
-This could improve experience, layoff, streak, durability and strength-of-schedule state at a fighter's UFC debut. A stable identity resolver and respectful acquisition method are required before bulk ingestion.
+The CC0 10,448-fight dataset gives us UFC/Bellator/ONE history through August 2021. It does not cover every regional promotion worldwide. A broader Sherdog acquisition should be pursued only if identity/coverage QA shows this remaining gap materially affects UFC debutants.
 
 ---
 
 ## Current free-data priority order
 
-1. Finish and validate UFC.com raw snapshot.
-2. Finish and validate ESPN raw snapshot + schema/coverage summary.
-3. Inspect the stored UFC.com JSON:API index for article/news resources that can expose official weigh-in and scorecard pages without HTML crawling.
-4. If UFC's official historical scorecard coverage is incomplete, evaluate MMA Decisions as the historical judge-scorecard supplement.
-5. Evaluate Sherdog only if Greco/UFCStats + UFC.com/ESPN leave an unacceptable pre-UFC history gap.
-6. Keep BestFightOdds in a separate market-data track for later model-vs-market work.
-7. Treat FightMatrix as a benchmark candidate, not a required input.
+1. Finish and audit the official UFC `fight_stat` bulk snapshot — this is now the highest-value free data task.
+2. Finish and validate the general UFC.com athlete/event/fight snapshot.
+3. Finish and validate ESPN history + additive fight surfaces.
+4. Crosswalk the three already-ingested additive datasets only after raw acquisition is stable: scorecards, dated rankings, cross-promotion fights.
+5. Revisit official weigh-ins via a clean enumeration route because fight-specific scale weights remain a real gap.
+6. Use MMA Decisions only if the scorecard QA shows the OCR layer is insufficient.
+7. Keep historical odds on a separate market-data track.
 
 ## Gate before feature freezing
 
-A data family should be marked one of:
+Every desired data family must be marked one of:
 
 - **INGESTED AND AUDITED**
+- **INGESTED RAW / QA REQUIRED**
 - **AVAILABLE BUT DELIBERATELY EXCLUDED**
 - **ACCESS/PERMISSION REQUIRED**
 - **UNAVAILABLE**
 
-No feature specification should depend on an unresolved `we will find it later` data source.
+No feature specification should depend on an unresolved `we will find it later` source.
