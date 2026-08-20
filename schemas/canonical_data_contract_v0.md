@@ -1,10 +1,11 @@
 # Canonical Data Contract v0
 
-Status: **DATA-PHASE DRAFT — semantic contract, not feature contract**
+Status: **DATA-PHASE DRAFT — semantic contract, not feature contract**  
+Machine contract: `schemas/canonical_data_contract_v0.json` (`0.2.0-draft`)
 
-Purpose: make every accepted source look the same downstream without destroying source provenance or inventing a new definition for the same concept each time a provider changes vocabulary.
+Purpose: every accepted provider can have a different raw format, but downstream UFC Edge code gets one stable definition for each concept.
 
-The master plan's minimum UFC fight/fighter/round requirements remain the core of this contract. This document adds only the identity, provenance, rankings, weigh-in, scorecard, and rich-position structures required by sources already discovered during the data phase.
+The master plan's fight/fighter/round requirements remain the core. Additional structures below exist only because the current data pass has already found dated rankings, official profiles/events, officials, scorecards, weigh-in requirements, external MMA history, and rich FightMetric position data.
 
 ## 1. Boundary
 
@@ -13,190 +14,202 @@ immutable raw source
         ↓
 provider adapter
         ↓
-canonical candidate rows
+canonical candidate observations
         ↓
 identity + conflict reconciliation
         ↓
-canonical tables + provenance
+canonical tables + field provenance
         ↓
-later features/models/simulator
+later features / models / simulator
 ```
 
-Provider-specific names stop at the adapter boundary.
+Provider vocabulary stops at the adapter boundary. A new source may add evidence or coverage; it may not redefine an existing canonical concept.
 
-Examples:
+## 2. Global semantic rules
 
-- Greco `SIG.STR.` and UFC FightMetric `sig_str_land`/`sig_str_att` map to canonical `sig_strikes_landed` / `sig_strikes_attempted` only after their semantics are verified.
-- A source missing a statistic produces `null`, not zero.
-- A new source may improve coverage or become the preferred authority. It does not get to redefine an existing canonical field.
+### IDs
 
-## 2. Global rules
+Canonical IDs are internal, immutable, opaque IDs. UFC IDs, FightMetric IDs, UFCStats URLs, ESPN IDs, Sherdog URLs, etc. are linked through `source_identity_links`.
 
-### 2.1 Canonical IDs
+Display-name-only matching can create a review candidate but never a trusted identity automatically.
 
-Canonical IDs are internal, immutable, opaque identifiers. Provider IDs/URLs are never used as the sole repository-wide identity.
+### Units
 
-Source identities are linked through `source_identity_links`.
+- height/reach: centimeters
+- weight: pounds
+- durations: integer seconds
+- dates: `YYYY-MM-DD`
+- timestamps: ISO-8601 UTC
+- event/stat counts: non-negative integers
 
-Display-name-only matching may create a candidate link for review but may not create a trusted canonical identity by itself.
+Raw strings remain raw; adapters perform deterministic conversion.
 
-### 2.2 Units
+### Missing vs zero
 
-Canonical units are fixed:
+- `0` means observed zero.
+- `null` means unavailable, unknown, unresolved, uncollected, or not applicable.
 
-- heights/reaches: centimeters (`*_cm`)
-- body/fight weights: pounds (`*_lbs`)
-- durations: integer seconds (`*_sec`)
-- dates: ISO `YYYY-MM-DD`
-- UTC timestamps: ISO-8601 with `Z`
-- strike/takedown/submission/reversal/knockdown counts: non-negative integers
-- percentages/rates are not stored when numerator + denominator observations are available; derive them later
+No adapter may zero-fill missing data.
 
-Source text such as `1:42`, `5' 11"`, `72"`, or `14 of 33` is parsed by the source adapter. Raw text remains in the immutable source snapshot.
+### Counts before rates
 
-### 2.3 Missing is not zero
+When landed/attempted counts exist, store the counts. Provider percentages remain provenance/QA evidence and are derived later if needed.
 
-- `0` = the source observation is valid and the event/count/time was observed as zero.
-- `null` = unknown, unavailable, not collected, semantically unresolved, or not applicable.
+### Temporal meaning
 
-No adapter may zero-fill missing source fields.
+Current UFC athlete rank, status, listed weight, gym, record totals, etc. are acquisition-time observations, not historical truth for old fights. Mutable profile fields therefore belong in dated profile/ranking observations rather than being silently backfilled.
 
-### 2.4 Temporal meaning
+### Conflicts
 
-Every source snapshot has acquisition time. Mutable observations must also preserve the time they describe when known.
+Conflicting provider observations are preserved. No generic `newest wins`, `non-null wins`, `largest wins`, or `preferred provider wins` rule is allowed without a field-family audit.
 
-A present-day athlete profile, ranking, record total, gym, status, or listed weight is not automatically valid for an old fight.
+### Round 0
 
-### 2.5 Conflict behavior
-
-Conflicting sources are preserved and audited. Reconciliation selects a canonical value only under a documented source/field rule.
-
-No code may silently select:
-
-- newest row;
-- non-null row;
-- higher numeric value;
-- preferred provider;
-
-unless that selection rule has been audited for the specific field/family.
-
-### 2.6 Round zero
-
-Official UFC FightMetric `round=0` is treated as a source fight-summary record, not an actual round. It remains available for QA/reconciliation but **must not** enter `fighter_round_stats` or `fighter_round_position` as a round.
-
-Canonical fight totals are derived from actual rounds when the required round observations exist.
+Official UFC FightMetric `round=0` is a source fight-summary record, not an actual round. It may be retained for QA/reconciliation but cannot enter canonical round tables.
 
 See `provenance/fightmetric_round0.md`.
+
+### Significant-strike split rule
+
+The master-plan `HEAD`, `BODY`, `LEG`, `DISTANCE`, `CLINCH`, and `GROUND` split family is explicitly the **significant-strike** family used by UFCStats.
+
+Canonical names therefore carry the `sig_` prefix:
+
+- `sig_head_landed` / `sig_head_attempted`
+- `sig_body_landed` / `sig_body_attempted`
+- `sig_leg_landed` / `sig_leg_attempted`
+- `sig_distance_landed` / `sig_distance_attempted`
+- `sig_clinch_landed` / `sig_clinch_attempted`
+- `sig_ground_landed` / `sig_ground_attempted`
+
+This prevents an official UFC field such as total `head_str_land` from being confused with significant `head_sig_str_land`.
 
 ## 3. Core canonical tables
 
 ## `fighters`
 
-Grain: one canonical person/fighter.
+Grain: one canonical fighter/person.
 
-| Field | Type | Null? | Meaning |
-|---|---|---:|---|
-| `fighter_id` | string | no | Internal immutable fighter ID. |
-| `canonical_name` | string | no | Current repository display name; not identity by itself. |
-| `dob` | date | yes | Verified date of birth. |
-| `height_cm` | decimal | yes | Adult listed/measured height after source reconciliation. |
-| `reach_cm` | decimal | yes | Reach after source reconciliation. |
-| `stance` | enum/string | yes | Canonical stance only when source meaning is sufficiently stable. |
+- `fighter_id`
+- `canonical_name` — display name, not identity by itself
+- `dob`
+- `height_cm`
+- `reach_cm`
+- `leg_reach_cm`
+- `stance`
 
-Mutable/current-only profile fields that cannot safely describe historical state stay in source observations/provenance until a dated representation is defined.
+Stable-ish physical values still require source reconciliation. Listed roster weight is deliberately not stored here because it can change.
+
+## `fighter_profile_snapshots`
+
+Grain: one dated point-in-time profile observation.
+
+- `fighter_id`
+- `observed_at_utc`
+- `listed_weight_lbs`
+- `listed_weight_class`
+- `gym_text`
+- `fighting_style_text`
+- `status_text`
+- `residence_text`
+- `origin_text`
+
+This table preserves useful mutable UFC/profile context without pretending a 2026 snapshot describes a 2015 fight.
 
 ## `events`
 
 Grain: one combat-sports event.
 
-| Field | Type | Null? | Meaning |
-|---|---|---:|---|
-| `event_id` | string | no | Internal immutable event ID. |
-| `promotion` | string | no | `UFC`, `Bellator`, `ONE`, etc. |
-| `event_name` | string | no | Canonical event name. |
-| `event_date` | date | no | Local event calendar date used for chronological replay. |
-| `location` | string | yes | Canonical human-readable location. |
+- `event_id`
+- `promotion`
+- `event_name`
+- `event_date`
+- `event_start_utc`
+- `location`
 
 ## `fights`
 
-Grain: one bout. UFC and permitted external professional-MMA history may share this table; source quality/coverage remains explicit in provenance.
+Grain: one bout.
 
-| Field | Type | Null? | Meaning |
-|---|---|---:|---|
-| `fight_id` | string | no | Internal immutable fight ID. |
-| `event_id` | string | no | Canonical event ID. |
-| `fighter_a_id` | string | no | One participant; A/B order is transport context, not predictive meaning. |
-| `fighter_b_id` | string | no | Other participant. |
-| `winner_id` | string | yes | Winner; null for draw/NC/unknown. |
-| `result` | enum | no | `win_loss`, `draw`, `no_contest`, `other`, `unknown`. |
-| `method` | enum/string | yes | Canonical result method family plus source detail retained in provenance. |
-| `finish_round` | integer | yes | Actual ending round. |
-| `finish_time_sec` | integer | yes | Elapsed time within ending round. |
-| `scheduled_rounds` | integer | yes | Scheduled maximum rounds. |
-| `weight_class` | string | yes | Canonical division/weight-class label. |
-| `title_bout` | boolean | yes | Whether a recognized title was at stake. |
-| `promotion` | string | no | Redundant convenience assertion; must agree with event. |
+- `fight_id`
+- `event_id`
+- `fighter_a_id`
+- `fighter_b_id`
+- `winner_id`
+- `result`
+- `method`
+- `finish_round`
+- `finish_time_sec`
+- `scheduled_rounds`
+- `weight_class`
+- `title_bout`
+- `promotion`
 
-Recommended method families for data normalization: `KO_TKO`, `SUBMISSION`, `DECISION`, `DQ`, `DRAW`, `NO_CONTEST`, `OTHER`, `UNKNOWN`. Source-specific detail (e.g. unanimous/split/technical decision; choke type; doctor stoppage) is retained separately until its own canonical field is justified.
+A/B or red/blue order is transport context, not predictive meaning.
+
+Canonical method families: `KO_TKO`, `SUBMISSION`, `DECISION`, `DQ`, `DRAW`, `NO_CONTEST`, `OTHER`, `UNKNOWN`. Detailed source method text remains in provenance until a narrower canonical field is justified.
+
+## `officials`
+
+Grain: one canonical combat-sports official.
+
+- `official_id`
+- `canonical_name`
+
+## `fight_officials`
+
+Grain: one official assignment to one fight and role.
+
+- `fight_id`
+- `official_id`
+- `role` = `referee`, `judge`, or `other`
+
+This gives Greco referees, ESPN officials, and later judge data one common home.
 
 ## `fighter_round_stats`
 
-Grain: **one fighter in one actual round of one fight**.
-
+Grain: **one fighter in one actual round of one fight**.  
 Primary key: `(fight_id, fighter_id, round)`.
 
-Required master-plan fields:
+Core fields:
 
-| Field | Type | Null? |
-|---|---|---:|
-| `fight_id` | string | no |
-| `fighter_id` | string | no |
-| `opponent_id` | string | no |
-| `round` | integer >= 1 | no |
-| `knockdowns` | integer | yes |
-| `control_sec` | integer | yes |
-| `reversals` | integer | yes |
-| `submission_attempts` | integer | yes |
-| `sig_strikes_landed` | integer | yes |
-| `sig_strikes_attempted` | integer | yes |
-| `total_strikes_landed` | integer | yes |
-| `total_strikes_attempted` | integer | yes |
-| `takedowns_landed` | integer | yes |
-| `takedowns_attempted` | integer | yes |
-| `head_landed` | integer | yes |
-| `head_attempted` | integer | yes |
-| `body_landed` | integer | yes |
-| `body_attempted` | integer | yes |
-| `leg_landed` | integer | yes |
-| `leg_attempted` | integer | yes |
-| `distance_landed` | integer | yes |
-| `distance_attempted` | integer | yes |
-| `clinch_landed` | integer | yes |
-| `clinch_attempted` | integer | yes |
-| `ground_landed` | integer | yes |
-| `ground_attempted` | integer | yes |
+- `fight_id`
+- `fighter_id`
+- `opponent_id`
+- `round` (`>=1`)
+- `knockdowns`
+- `control_sec`
+- `reversals`
+- `submission_attempts`
+- `sig_strikes_landed` / `sig_strikes_attempted`
+- `total_strikes_landed` / `total_strikes_attempted`
+- `takedowns_landed` / `takedowns_attempted`
+- `sig_head_landed` / `sig_head_attempted`
+- `sig_body_landed` / `sig_body_attempted`
+- `sig_leg_landed` / `sig_leg_attempted`
+- `sig_distance_landed` / `sig_distance_attempted`
+- `sig_clinch_landed` / `sig_clinch_attempted`
+- `sig_ground_landed` / `sig_ground_attempted`
 
 Rules:
 
-- attempts must be >= landed when both are known;
-- `round=0` is forbidden;
-- percentages from providers are QA evidence, not canonical substitutes for counts;
-- fight totals are derived from actual rounds, not copied from a summary row when actual round rows are available.
+- attempts >= landed when both are known;
+- `round=0` forbidden;
+- source percentages do not replace counts;
+- canonical fight totals are derived from real rounds when complete round observations exist.
 
 ## `fighter_round_position`
 
-Grain: one fighter in one actual round. This is the simulator-oriented extension for official FightMetric/other verified Time In Position data.
+Grain: one fighter in one actual round. This is the simulator-oriented Time In Position extension.
 
-Primary key: `(fight_id, fighter_id, round)`.
-
-Fields may include:
-
+- `fight_id`
+- `fighter_id`
+- `round`
 - `standing_sec`
 - `neutral_sec`
 - `distance_sec`
 - `clinch_sec`
 - `ground_sec`
-- `control_sec`
 - `ground_control_sec`
 - `guard_control_sec`
 - `half_guard_control_sec`
@@ -206,30 +219,26 @@ Fields may include:
 - `misc_ground_control_sec`
 - `standups`
 
-All are nullable. A provider's similar-looking position field is not mapped here until semantics are verified.
+General `control_sec` has one canonical home (`fighter_round_stats`) and is intentionally **not duplicated** here.
 
 ## 4. Additive canonical tables
 
 ## `rankings`
 
-Grain: one fighter/division ranking observation on one as-of date.
-
-Fields:
+One fighter/division ranking observation on one date:
 
 - `ranking_date`
 - `fighter_id`
 - `weight_class`
-- `rank_numeric` (nullable)
-- `is_champion` (nullable boolean)
+- `rank_numeric`
+- `is_champion`
 - `ranking_body`
 
-Historical use requires the observation to be available strictly before the target cutoff.
+Historical use requires the observation to precede the target information cutoff.
 
 ## `weigh_ins`
 
-Grain: one fighter's official fight-specific weigh-in observation for one fight/attempt.
-
-Fields:
+One fight-specific fighter weigh-in attempt:
 
 - `fight_id`
 - `fighter_id`
@@ -241,33 +250,29 @@ Fields:
 - `pounds_over`
 - `catchweight_bout`
 - `purse_penalty_pct`
-- `official_status_text` (nullable source-normalized context, not a model feature by itself)
+- `official_status_text`
 
-A roster/listed weight is not a substitute for `scale_weight_lbs`.
+Roster/listed weight is not a substitute for scale weight.
 
 ## `judge_round_scores`
 
-Grain: one judge's score for one fighter in one actual round of one fight.
-
-Fields:
+One judge score for one fighter in one actual round:
 
 - `fight_id`
 - `round`
-- `judge_id` (nullable until judge identities are canonicalized)
+- `judge_id` (nullable until identity is resolved)
 - `judge_name`
 - `fighter_id`
 - `opponent_id`
 - `points`
 
-Official judge scoring must remain separate from media/fan scoring.
+Official judge scores stay separate from media/fan scores.
 
 ## `source_identity_links`
 
-Grain: one link from a canonical entity to one provider identity.
+One canonical entity ↔ provider identity link:
 
-Fields:
-
-- `entity_type` (`fighter`, `event`, `fight`, `judge`)
+- `entity_type`
 - `canonical_id`
 - `source_name`
 - `source_entity_type`
@@ -276,15 +281,13 @@ Fields:
 - `match_method`
 - `match_confidence`
 - `review_status`
-- `valid_from` / `valid_to` when identity namespace changes are time-bounded
+- `valid_from` / `valid_to`
 
-Provider identity is evidence, not canonical truth by itself.
+Provider identity is evidence, not repository-wide identity by itself.
 
 ## `field_provenance`
 
-Grain: one source contribution/selection record for one canonical field value.
-
-Minimum fields:
+One source contribution/selection record for one canonical field:
 
 - `table_name`
 - `row_key`
@@ -293,42 +296,42 @@ Minimum fields:
 - `source_snapshot_id`
 - `source_record_id`
 - `source_field_name`
-- `selection_status` (`selected`, `agreeing`, `conflicting`, `rejected`, `unmapped`)
+- `selection_status` = `selected`, `agreeing`, `conflicting`, `rejected`, `unmapped`
 - `selection_rule`
 - `quality_note`
 
-This sidecar makes source replacement auditable without changing the canonical field definition.
+This lets UFC later replace Greco as the selected source for a field without changing what the field means.
 
 ## 5. Adapter acceptance gate
 
-A source adapter may emit a canonical candidate only when all are known:
+An adapter may emit a canonical candidate only when all material semantics are known:
 
-1. target canonical table + field;
+1. target table/field;
 2. source record identity;
 3. source snapshot/version;
 4. parse rule;
 5. canonical type;
-6. canonical unit;
-7. null/zero semantics;
+6. unit;
+7. null/zero meaning;
 8. temporal meaning;
 9. identity linkage method;
-10. whether the observation is authoritative, additive, QA-only, or unresolved.
+10. source role (authoritative/additive/QA/unresolved).
 
-If any material semantic is unresolved, preserve the raw source and mark the mapping unresolved. Do not guess.
+If a material point is unresolved, preserve the raw record and mark the mapping unresolved. Do not guess.
 
 ## 6. Data-phase completion checks
 
-Before this contract is promoted from `v0` draft:
+Before v0 can be promoted from draft:
 
 - complete official UFC fight identity bridge;
-- quantify FightMetric calendar-era coverage;
-- reconcile conflicting FightMetric versions;
-- compare overlapping official FightMetric vs Greco/UFCStats fields;
-- verify dated athlete/event/fight identity behavior;
+- quantify FightMetric coverage by calendar era;
+- resolve/confine conflicting FightMetric versions;
+- compare overlapping FightMetric vs Greco/UFCStats fields;
+- verify official athlete/event/fight identity and temporal behavior;
 - settle fight-specific weigh-in source/coverage;
 - settle judge-round score source/coverage;
-- map ESPN additive fields only where semantics match;
+- map ESPN fields only where grain/semantics match;
 - validate rankings and external-MMA identity joins;
-- generate canonical tables through deterministic code and validate them against this contract.
+- generate canonical tables deterministically and validate them against this contract.
 
-Feature formulas are explicitly outside this contract.
+Predictive feature formulas are outside this contract and belong to the next project phase/chat.
