@@ -1,0 +1,39 @@
+name: Audit official UFC fight identity surface
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/audit-ufc-fight-identity.yml"
+      - "pipelines/audit_ufc_fight_identity_surface.py"
+      - "data/raw/ufc_com_resources/fights/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit UFC fight identity surface
+        run: python pipelines/audit_ufc_fight_identity_surface.py
+      - name: Commit audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add provenance/audits/ufc_fight_identity_surface_latest.json provenance/audits/ufc_fight_identity_surface_latest.md
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Audit official UFC fight identity surface [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
