@@ -1,0 +1,25 @@
+[ufc FightMetric] fight_stat: page=50 rows=2500
+[ufc FightMetric] fight_stat: page=100 rows=5000
+[ufc FightMetric] fight_stat: page=150 rows=7500
+[ufc FightMetric] fight_stat: page=200 rows=10000
+[ufc FightMetric] fight_stat: page=250 rows=12500
+[ufc FightMetric] fight_stat: page=300 rows=15000
+[ufc FightMetric] fight_stat: page=350 rows=17500
+[ufc FightMetric] fight_stat: page=400 rows=20000
+[ufc FightMetric] fight_stat: page=450 rows=22500
+[ufc FightMetric] fight_stat: page=500 rows=25000
+[ufc FightMetric] fight_stat: page=550 rows=27500
+[ufc FightMetric] fight_stat: page=600 rows=30000
+[ufc FightMetric] fight_stat: page=650 rows=32500
+[ufc FightMetric] fight_stat: page=700 rows=35000
+[ufc FightMetric] fight_stat: page=750 rows=37500
+[ufc FightMetric] fight_stat: page=800 rows=40000
+[ufc FightMetric] fight_stat: page=850 rows=42500
+[ufc FightMetric] fight_stat: page=900 rows=45000
+[ufc FightMetric] fight_stat: page=950 rows=47500
+[ufc FightMetric] fight_stat: page=1000 rows=50000
+[ufc FightMetric] fight_stat: page=1050 rows=52500
+[ufc FightMetric] fight_stat: page=1100 rows=55000
+[ufc FightMetric] fight_stat: complete rows=57382 pages=1148
+[ufc FightMetric] fight_roundboard: complete rows=374 pages=8
+[ufc FightMetric] snapshot complete: 20260820T123046Z; files=1156

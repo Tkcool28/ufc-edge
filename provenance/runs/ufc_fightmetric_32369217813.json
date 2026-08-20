@@ -1,0 +1,13 @@
+{
+  "ended_at_utc": "2026-08-20T13:32:23Z",
+  "exit_code": 0,
+  "github_run_attempt": "1",
+  "github_run_id": "32369217813",
+  "log_path": "provenance/runs/ufc_fightmetric_32369217813.log",
+  "pipeline": "ufc_fightmetric_official",
+  "process_timeout_seconds": 6300,
+  "ref": "main",
+  "result": "success",
+  "started_at_utc": "2026-08-20T12:30:45Z",
+  "trigger_sha": "aa666bdb64d4d3b4c29c4823f12c7a8ab6dd9b44"
+}
