@@ -24,6 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,18 +32,72 @@ jobs:
           python-version: "3.12"
 
       - name: Snapshot ESPN MMA history and additive fight surfaces
-        run: python pipelines/ingest_espn_mma.py
-
-      - name: Commit immutable raw snapshot
+        id: ingest
         shell: bash
         run: |
-          set -euo pipefail
-          git add data/raw/espn_mma
-          if git diff --cached --quiet; then
-            echo "No ESPN MMA snapshot changes to commit."
-            exit 0
+          set +e
+          mkdir -p provenance/runs
+          started="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          log="provenance/runs/espn_mma_${GITHUB_RUN_ID}.log"
+          status="provenance/runs/espn_mma_${GITHUB_RUN_ID}.json"
+
+          timeout --signal=TERM --kill-after=30s 6300s \
+            python pipelines/ingest_espn_mma.py >"$log" 2>&1
+          code=$?
+          ended="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          if [ "$code" -eq 0 ]; then
+            result="success"
+          elif [ "$code" -eq 124 ] || [ "$code" -eq 137 ]; then
+            result="process_timeout"
+          else
+            result="failed"
           fi
+
+          python - "$status" "$started" "$ended" "$result" "$code" "$log" <<'PY'
+          import json, os, sys
+          path, started, ended, result, code, log = sys.argv[1:]
+          payload = {
+              "pipeline": "espn_mma",
+              "github_run_id": os.environ.get("GITHUB_RUN_ID"),
+              "github_run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT"),
+              "trigger_sha": os.environ.get("GITHUB_SHA"),
+              "ref": os.environ.get("GITHUB_REF_NAME"),
+              "started_at_utc": started,
+              "ended_at_utc": ended,
+              "result": result,
+              "exit_code": int(code),
+              "process_timeout_seconds": 6300,
+              "log_path": log,
+          }
+          with open(path, "w", encoding="utf-8") as fh:
+              json.dump(payload, fh, indent=2, sort_keys=True)
+              fh.write("\n")
+          PY
+
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
+
+      - name: Commit raw snapshot and durable run diagnostics
+        if: always()
+        shell: bash
+        env:
+          INGEST_OUTCOME: ${{ steps.ingest.outcome }}
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Snapshot free ESPN MMA additive data [skip ci]"
+
+          git add provenance/runs/espn_mma_${GITHUB_RUN_ID}.json provenance/runs/espn_mma_${GITHUB_RUN_ID}.log
+          if [ "$INGEST_OUTCOME" = "success" ]; then
+            git add data/raw/espn_mma
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No ESPN MMA output or diagnostics to commit."
+            exit 0
+          fi
+
+          git commit -m "Record ESPN MMA run ${GITHUB_RUN_ID} (${INGEST_OUTCOME}) [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
           git push origin "HEAD:${{ github.ref_name }}"
