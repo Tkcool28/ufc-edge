@@ -1,0 +1,42 @@
+name: Probe deterministic UFC fight pagination
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/probe_ufc_fight_sort.py"
+      - ".github/workflows/probe-ufc-fight-sort.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out writable branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run bounded sort probe
+        run: python pipelines/probe_ufc_fight_sort.py
+      - name: Commit probe result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add provenance/ufc_fight_sort_probe.json
+          if git diff --cached --quiet; then
+            echo "No probe change."
+            exit 0
+          fi
+          git commit -m "Record UFC fight pagination sort probe [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
