@@ -1,5 +1,7 @@
 # UFC Edge — Free Additive Data Sweep
 
+> **HISTORICAL / SUPERSEDED:** This file records the state of the free-source sweep on 2026-08-20 and is intentionally preserved for provenance. It is **not the current status ledger**. Use `provenance/free_data_closeout_2026-08-21.md` for the current acquisition state and `provenance/source_precedence_v0.md` for audited source ownership/semantics.
+
 Status date: 2026-08-20 (America/Denver)
 
 Purpose: exhaust the credible **free** additive-data landscape before feature contracts are frozen. This is an acquisition record, not permission to merge fields or use mutable snapshots as historical features.
@@ -8,7 +10,7 @@ Purpose: exhaust the credible **free** additive-data landscape before feature co
 
 The acquisition workflows now persist terminal diagnostics under `provenance/runs/` and fail closed when a pull is incomplete.
 
-Current evidence:
+Current evidence **as of 2026-08-20 only**:
 
 - **Official UFC FightMetric rich stats: SUCCESS / RAW SNAPSHOT LANDED.** Self-reporting run `32369217813` completed with exit code 0. Snapshot `data/raw/ufc_fightmetric_official/20260820T123046Z/` contains a manifest plus **57,382 `fight_stat` rows across 1,148 pages and 8,008 distinct non-null FightMetric IDs**. The main Time In Position/control fields are populated on about **64.8%** of rows overall; most standard strike/takedown/submission families are populated on about **94.4%**. This is now a real official historical source, not merely a schema lead. It remains RAW/QA until identity, round semantics, era coverage and overlap with Greco are audited.
 - **General UFC.com athlete/event/fight acquisition: PROCESS TIMEOUT / NOT LANDED.** Run `32369240290` hit the 2,100-second process timeout. It fully collected **4,160 athletes across 84 pages** and **799 events across 16 pages**, then timed out while snapshotting fights. No HTTP rejection is present in the diagnostic. Fail-closed behavior prevented partial promotion.
