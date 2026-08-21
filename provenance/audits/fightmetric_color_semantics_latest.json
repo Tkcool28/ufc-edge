@@ -1,0 +1,36 @@
+{
+  "aligned_fights_input": 6904,
+  "decision": {
+    "gate": "winner comparisons>=10000, exact_fraction>=0.95, and exact_fraction gap>=0.25",
+    "mapping_promoted": true,
+    "note": "Numeric color is transport syntax. Canonical adapters must emit red/blue only after this audit passes.",
+    "numeric_to_corner": {
+      "0": "red",
+      "1": "blue"
+    },
+    "winner": "0_red_1_blue"
+  },
+  "generated_at_utc": "2026-08-21T20:46:55.144618Z",
+  "greco_semantic_fighter_round_keys": 32638,
+  "observed_numeric_color_counts": {
+    "0": 18979,
+    "1": 18979
+  },
+  "orientations": {
+    "0_blue_1_red": {
+      "absolute_error_sum": 2661750,
+      "exact": 29405,
+      "exact_fraction": 0.11725323189064606,
+      "field_comparisons": 250782,
+      "fighter_round_keys": 32342
+    },
+    "0_red_1_blue": {
+      "absolute_error_sum": 8547,
+      "exact": 249694,
+      "exact_fraction": 0.9956615706071409,
+      "field_comparisons": 250782,
+      "fighter_round_keys": 32342
+    }
+  },
+  "schema_version": 1
+}

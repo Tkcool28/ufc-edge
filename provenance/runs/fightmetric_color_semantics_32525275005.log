@@ -1,0 +1,1 @@
+{"gate": "winner comparisons>=10000, exact_fraction>=0.95, and exact_fraction gap>=0.25", "mapping_promoted": true, "note": "Numeric color is transport syntax. Canonical adapters must emit red/blue only after this audit passes.", "numeric_to_corner": {"0": "red", "1": "blue"}, "winner": "0_red_1_blue"}
