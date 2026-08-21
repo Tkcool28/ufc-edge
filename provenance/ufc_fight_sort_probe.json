@@ -1,0 +1,4341 @@
+{
+  "candidates": [
+    {
+      "adjacent_page_overlap_counts": [
+        0,
+        0,
+        0
+      ],
+      "distinct_ids": 200,
+      "drupal_internal_nid_present_fraction": 1.0,
+      "drupal_internal_nid_unique_in_sample": true,
+      "duplicate_id_count": 0,
+      "duplicate_ids": [],
+      "page_results": [
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32170,
+              "id": "70596cbb-2269-4058-9b74-5aacca931bf2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32186,
+              "id": "f706e3f4-a39c-42dc-b11d-1e2f8024d963"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32202,
+              "id": "2031405c-ca7a-4ef9-9300-bc877f5ea9c4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32218,
+              "id": "dc2f8800-38fc-4ceb-a841-7bc2b84f041b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32234,
+              "id": "6da0ac6c-462b-41c6-9424-ea8e6c986411"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32250,
+              "id": "768f1154-fb49-4585-85f6-8d27db6b1b42"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32266,
+              "id": "bd750db3-1cf7-4a79-befd-2f73abc95653"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32282,
+              "id": "4d417b77-c7c0-4c7c-a338-28162a046915"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32298,
+              "id": "03fbe33f-2f7e-4156-a0a0-823a9d6e7466"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32314,
+              "id": "782a4a8c-84de-4fab-8d81-61d102d53faa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32330,
+              "id": "29d5982b-6c42-459d-9e6e-0ffea9d9fdad"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32346,
+              "id": "e21d0ef5-7ef7-4c20-bd37-4dce965e6ec2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32362,
+              "id": "b25d23f3-499a-406d-8c75-77aec18a84d0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32378,
+              "id": "561edce5-ea09-4fa1-b264-c37bd9ea4eb6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32394,
+              "id": "dd19e124-a3f0-4e6f-a5cd-7a7cd5bb29d0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32410,
+              "id": "950f4f30-829f-4148-ac5f-4e79b0550cfa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32426,
+              "id": "62228abc-ac0d-4425-b335-f1a50fe6000e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32442,
+              "id": "acbd212a-892e-4886-b497-6c9b702ae50c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32458,
+              "id": "cb0438e1-5d11-4245-9e54-59ac465cb005"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32474,
+              "id": "217368ae-a8fc-4c9d-afa0-fad9fa361dac"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32490,
+              "id": "9f3847b5-9b4f-4042-9c06-68f0eeebb4e0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32506,
+              "id": "25363379-7eac-4da9-a2c6-8d86ba437213"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32522,
+              "id": "2df921c3-4f4d-44de-a284-a5943093a9f5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32538,
+              "id": "a7fe810f-99e5-4af2-b718-053621a3ca70"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32554,
+              "id": "5aa564d5-16c6-4693-957a-ea2f4dd4c18d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32570,
+              "id": "bb1eff02-4b22-444e-a112-f5b5e591f5db"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32586,
+              "id": "91b3b620-2c48-46a0-8ed9-303479abf494"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32602,
+              "id": "fd20580b-0ef7-469c-b7e7-b32bafcdca90"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32618,
+              "id": "650cfb59-5dde-486e-9537-d840211b5dea"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32634,
+              "id": "3af567e0-1bb7-4c61-98e0-03d6e7f2ad0f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32650,
+              "id": "d2032d35-9634-43fa-ba33-3a6f911a24ea"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32666,
+              "id": "c40d16a9-5722-4fb4-a85b-a3f2ec0dbc16"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32682,
+              "id": "eab119d7-68a2-4aa4-a7da-4404ec39ceb3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32698,
+              "id": "8964a633-cdd1-41c3-a4f2-247287897312"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32714,
+              "id": "6125edf1-6d98-4aa3-a359-e02538b7cba3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32730,
+              "id": "ccca6ee0-a63c-4e8d-a165-7d6c14c50b50"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32746,
+              "id": "b133c84d-d6c5-4e26-9395-881ce283b761"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32762,
+              "id": "dc0c4745-41fc-432e-a4d5-69f284dbc876"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32778,
+              "id": "47d18013-3d52-4145-9024-be99d4387a29"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32794,
+              "id": "69081b09-2329-4748-b9fd-0a01671af700"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32810,
+              "id": "63cce692-b61c-4117-9353-371de0a68012"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32826,
+              "id": "44dfe815-a5ce-4378-9cc3-cb53c4a893c3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32842,
+              "id": "eda9e544-9e5a-4bef-9f59-aec7a72e1fc7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32858,
+              "id": "a318bc47-f674-44ac-923c-97f23d335421"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32874,
+              "id": "d1e3bcf6-5732-499c-947e-63757367a00e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28788,
+              "id": "f623b2e4-27af-4913-9fb2-281c57021b0e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32890,
+              "id": "ff8e8ccf-f717-4466-ae47-d283d3fc9388"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28804,
+              "id": "c538811f-fbfd-4ee4-9eaa-88d7b72da8b7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32906,
+              "id": "f1bab5e3-5108-4e81-b717-4458eb4546c9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28820,
+              "id": "5dfde983-0f76-4f33-ade6-61b3f55be410"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created&page%5Blimit%5D=50&page%5Boffset%5D=0"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31778,
+              "id": "54c2b930-d8ee-4964-bead-ada2bc51e5a3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31794,
+              "id": "5ea3b9fe-7f35-433e-a0f1-4f1b7912c04f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31810,
+              "id": "4eafc099-5162-4622-b4da-bcbf6a640dea"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31826,
+              "id": "b3915b2f-21ff-4bcc-a3c4-1570d4bfb8de"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31842,
+              "id": "8c28736f-962c-4bd8-9fe4-02b76a9bed8d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31858,
+              "id": "70c3a679-28a7-42cb-980e-ad6feab60d7e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31874,
+              "id": "d7e14e3f-8818-4a86-8a65-ed4b6d1071c3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31890,
+              "id": "5491468c-3a36-4ee7-8f98-8821c1c6bbbc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31906,
+              "id": "1f82d740-f90c-4881-a954-2afb6271a294"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31922,
+              "id": "c977b7d2-2347-4105-bdef-b41865d9bee9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31938,
+              "id": "67f142cc-f8bc-42c7-a9e5-cab153ab5482"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31954,
+              "id": "52b90093-57e1-44a1-9149-3a2a7cf856c5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31970,
+              "id": "6657745a-b089-40eb-a0bb-5b908e90084f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31986,
+              "id": "42a3dc27-d043-40bf-8930-fa705532761b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32002,
+              "id": "9dfa5b27-e6de-4d96-98bf-e80304928922"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32018,
+              "id": "d8dd6bf0-ce63-4605-bf1e-49b94cae3274"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32034,
+              "id": "05a21623-0f44-4d24-80a1-f4864efb409f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32050,
+              "id": "b5d23e14-72d6-4bd7-a544-f2261ecb87a5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32066,
+              "id": "947dec65-6cbc-444b-96ee-8a9853c037df"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32082,
+              "id": "cdd17d66-4dae-485d-9401-d78f32a855ca"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32098,
+              "id": "ee76b299-25ca-47b0-8aca-95b1cddce3ac"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32114,
+              "id": "1d005f79-591a-4053-b6c3-b6f7984ad5d3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32130,
+              "id": "85e01c99-6603-4199-94ea-37d22893f225"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32146,
+              "id": "1617316e-e7fc-4c75-9174-65d7a0facc06"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32162,
+              "id": "bce11478-19fb-4875-b8a0-ef420f92eaf6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32178,
+              "id": "5f30a9a7-fe6f-4428-af06-cb3d8fa83a55"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32194,
+              "id": "332b627b-25f4-433e-9a6a-4587aec00fc3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32210,
+              "id": "bd6ca38b-f965-42a2-9b3c-1e2e6f2052a1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32226,
+              "id": "f5295df4-63c3-4594-a9d9-766b21453c10"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32242,
+              "id": "7c994b35-1823-46ca-a18e-e931c30375ae"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32258,
+              "id": "07d43bc7-4a33-4a88-b86b-9770ee409e2d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32274,
+              "id": "c0d1ff7f-6c4d-4fe1-9b16-f375e2837749"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32290,
+              "id": "be4ff5ab-26dc-4e47-806c-ea1e946397dc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32306,
+              "id": "8222bf24-ceba-4201-83b5-82252c136e3d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32322,
+              "id": "21ad495e-a15b-46b2-82aa-70f35640a07d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32338,
+              "id": "e48f90a5-5245-4bf8-aa71-4968bd1205ce"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32354,
+              "id": "b3e1b546-dcd6-4c0a-b093-edf079de04f7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32370,
+              "id": "1d75b8f2-f3a0-4cc4-9592-8fb8006e283a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32386,
+              "id": "d40a953d-4ba2-4911-b111-3b93800849e1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32402,
+              "id": "a1525f3e-c5cd-4127-bca5-c0360c54d98f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32418,
+              "id": "57a2998a-1f00-46ae-bfc7-71a396706714"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32434,
+              "id": "89e39806-452a-4959-95d0-59f513d536ad"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32450,
+              "id": "7d86a365-e111-4a59-baed-e99a32d8a20c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32466,
+              "id": "cb16a9c6-12c1-4403-8e23-450e60cf08a6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32482,
+              "id": "1ce164f4-4916-444b-80f3-13bb61e42b9f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32498,
+              "id": "7511979f-19f2-4d61-875a-0116d8500180"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32514,
+              "id": "5a0cbe92-6857-4f4b-96c1-b55c84f554c2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32530,
+              "id": "4529445d-bdf6-457e-92cd-a495ce669d6f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32546,
+              "id": "5c8fba40-433d-4dbf-af4f-76a7228942f3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32562,
+              "id": "70751fcb-86e0-4037-9913-21de785c934a"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created&page%5Blimit%5D=50&page%5Boffset%5D=50"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32318,
+              "id": "b915c9cf-07a3-4c01-90fb-b310da74846a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32334,
+              "id": "966a0b9b-ea2b-4b93-9427-da9890fef220"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32350,
+              "id": "1d3a6384-ede6-47fd-94fa-d7b372204709"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32366,
+              "id": "a080a505-9b94-4777-824d-ea0e46ddf60b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32382,
+              "id": "c5921fcf-ae39-48ca-b4dc-5b07430f76c0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32398,
+              "id": "0e105567-7b45-462a-8d1b-370684f1ebcb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32414,
+              "id": "7f7d62cf-23a0-4d19-a433-9ec67c8bc684"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32430,
+              "id": "2a1aaa38-bf55-466d-9159-46e27417a4e6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32446,
+              "id": "f7731745-bb51-4872-9f07-2b20808b62de"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32462,
+              "id": "3a38844d-054d-4061-9464-e1336f138739"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32478,
+              "id": "1bc131e9-c776-4edf-a5b5-6e0de6fcd8bc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32494,
+              "id": "5c627575-82ac-4432-ab79-f0b271a94cbb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32510,
+              "id": "debbf7e3-c476-404c-9e7d-93e0b41b54b6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32526,
+              "id": "4baefcea-88d3-4ed1-a984-5f6850fc58e5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32542,
+              "id": "d26d5a51-7fe3-49f5-a97f-f2e802bbb045"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32558,
+              "id": "04b0e4ed-e42f-45cd-910a-cb7b8f0e13ab"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32574,
+              "id": "3ee63774-e9d9-4224-94d6-d9c06e7e2d57"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32590,
+              "id": "507fe8b3-8fe1-4324-b6a2-39da977711c0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32606,
+              "id": "e42a1683-7a29-4533-8c09-05a76428e9e7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32622,
+              "id": "b98f4d84-2b54-4d01-b8c7-66b6584031ea"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32638,
+              "id": "adcd3ff6-420a-4d8b-bf97-cb24c8d34337"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32654,
+              "id": "9b5cc5b4-c932-4135-b3a8-027b23bfee23"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32670,
+              "id": "ec947c05-ff83-4422-b293-41b5ecb01b2a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32686,
+              "id": "f361b193-d124-4393-b6cf-38380766f046"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32702,
+              "id": "9745a0df-d7aa-42bb-b3c6-52b22a51a162"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32718,
+              "id": "ded67901-9849-4c3a-878f-35125af38587"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32734,
+              "id": "0b63e9ce-3fd8-4420-9449-354369a22bcc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32750,
+              "id": "9c7cd2b8-50d4-445e-a71c-69d3d2c365d9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32766,
+              "id": "b30a0cdd-6e3f-44f9-9985-7e410f7a5ba6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32782,
+              "id": "c02526a3-4132-462b-829f-117b2fc8628a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32798,
+              "id": "4622dc38-8820-4f28-be69-183b970f5b6d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32814,
+              "id": "4b645779-7e70-4bfa-bbfc-2b118ac82a59"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32830,
+              "id": "9ae281c7-5dc3-4d46-902c-7f79422a4e4c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32846,
+              "id": "6fecbce4-f1b9-418b-8a24-e9755a309fde"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32862,
+              "id": "58b7183e-a5c1-43d0-93e3-ea1a2fefb55b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32878,
+              "id": "5bb58288-207a-4b61-957f-75e1bdaaf7fa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28792,
+              "id": "0efa6dac-04cf-404d-89ef-ddf0cc41067e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32894,
+              "id": "439496a9-c17a-4e6f-b8ed-6fc2dce854ba"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28808,
+              "id": "65531b53-1308-469a-91c7-a078d5f6493c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32910,
+              "id": "a433ae49-c7fa-40a8-ae1f-647452d04db9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28824,
+              "id": "1572e3ff-c4f5-450e-b37c-9746467b6c53"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32926,
+              "id": "f2a01d9d-dd0b-4bb9-80a0-984464fe108d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28840,
+              "id": "693daef0-830c-48b2-8625-738168cc2383"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32942,
+              "id": "1700957f-b8a4-4d53-9300-82af1097c4bb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28856,
+              "id": "4eba6f44-3f46-4819-b200-3fcd4b2bcdf7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32958,
+              "id": "113bf9ab-273d-4bd7-8878-965aa33e8bb1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28872,
+              "id": "92f0bf9b-fadf-4943-86bd-99c8ec333768"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32974,
+              "id": "391c0f10-f304-43cb-a10a-8bb1015f5174"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28888,
+              "id": "92cfc835-0f3b-43a5-89f9-0bb514765e7b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32990,
+              "id": "b47107fb-43e1-4ac8-a885-91d429dff1b1"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created&page%5Blimit%5D=50&page%5Boffset%5D=100"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31478,
+              "id": "d25c3dff-dbfc-4003-a30d-f5ba57cc351f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31494,
+              "id": "90ce7526-8c37-47ac-80e1-9f77a7b41872"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31510,
+              "id": "c5864f1a-b8c7-4d65-bcab-5c2ef7f8a5a6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31526,
+              "id": "b7848f11-5c1f-4fd0-88d2-b20f75037c18"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31542,
+              "id": "31a0ffc2-2a11-49f7-8668-a27d8c823bf6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31558,
+              "id": "f09ce27b-910a-4372-92a6-2f58dc004caa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31574,
+              "id": "5c64bf80-cee5-4e7c-861a-505a292ad2e8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31590,
+              "id": "1769a9b3-2730-4afc-836b-1e413c338aac"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31606,
+              "id": "b61d39ba-46b2-4702-be24-d099ee633d07"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31622,
+              "id": "8e4cf33a-4433-4fff-af2e-d524dc6f80fe"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31638,
+              "id": "0a749ba0-30c9-4824-90b3-98a670bfb0b6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31654,
+              "id": "39a95b67-038b-4dda-be11-4e32dc211bb2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31670,
+              "id": "ea84ce7c-0f6d-40ae-a871-c05a3a8a5fe3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31686,
+              "id": "052926ab-9bf1-4d2c-964b-50cb2c5b768f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31702,
+              "id": "c54ede95-6c44-47ed-a284-75690692301b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31718,
+              "id": "5a4440c8-7497-4579-af59-bb3825cafbbb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31734,
+              "id": "fc74e5d6-0003-4932-af1d-ce0150c80009"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31750,
+              "id": "e1bf53ab-ba9b-41b1-b0f1-e97d797bfa01"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31766,
+              "id": "f0739d54-09f1-44bb-b3de-7e93fc776462"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31782,
+              "id": "db894666-0ba5-4da8-b174-e3acf7518e00"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31798,
+              "id": "653e28ec-48b8-4d64-9a2d-1586b221b122"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31814,
+              "id": "1b20e271-da70-4ecf-8025-5b024de65f8f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31830,
+              "id": "df2f3c74-8fe4-4e0a-8d8a-59c49a3d02b6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31846,
+              "id": "7c284944-5267-40b9-9eb2-b5301df6d8b7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31862,
+              "id": "19d9dcf0-6343-45d6-babf-9bfd4cf4cc9b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31878,
+              "id": "259b0fac-4d7c-4984-88f4-ff788e9b94d3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31894,
+              "id": "009e7c4d-28af-4706-9c30-689df672d424"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31910,
+              "id": "72c5dfac-aa1a-429d-af4a-dd06a2c8e86d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31926,
+              "id": "8aaf1afe-af61-45ed-989f-72322d9bead3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31942,
+              "id": "ccd9a828-c79f-4b52-b4ef-f249be071faf"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31958,
+              "id": "c9fb0ff9-491b-4a7d-a8b6-f5403e924f7d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31974,
+              "id": "5abbcc48-25b7-4c71-b0cf-348c7fc51646"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31990,
+              "id": "ac08f028-c6e8-4a20-bb12-e0a589fc9ef9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32006,
+              "id": "a419348d-1e9a-4435-ae0f-68ce81117a97"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32022,
+              "id": "ab8eb97f-eb6a-482d-9f70-826c1938ad77"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32038,
+              "id": "9806eb1b-106c-47fb-9a9d-a04045093e30"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32054,
+              "id": "e2604bcc-f955-4b16-b668-b44281ab232c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32070,
+              "id": "59d59d62-48d6-427c-beeb-c1ef68643c19"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32086,
+              "id": "6f2ece2c-f880-4265-b504-335ff606e1d7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32102,
+              "id": "564eaad9-f298-4d35-8c31-88806aef1994"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32118,
+              "id": "4b145d24-ef4b-4686-a626-ca98886c4827"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32134,
+              "id": "a5d9a07f-e25e-440f-abfd-8f5ec767d926"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32150,
+              "id": "7a4c8179-f5e8-42b3-9b31-c3cb384877e1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32166,
+              "id": "8f7d517c-fae4-46f2-b84a-d1b4e41ece79"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32182,
+              "id": "5cd7a288-e048-4f5d-8489-5e080c5b109a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32198,
+              "id": "36c835e3-0dca-4c3b-af8f-cc699e7b3e49"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32214,
+              "id": "09aaaeef-0ee3-4e8a-b8ba-a27e05841025"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32230,
+              "id": "f4682424-24a3-46b2-91c9-0a15d456a19e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32246,
+              "id": "3ab25efd-0f36-4702-b0b4-19f7d8140751"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32262,
+              "id": "b91febdb-e1a5-4186-9e45-b81d17aa3aed"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created&page%5Blimit%5D=50&page%5Boffset%5D=150"
+        }
+      ],
+      "pages_ok": 4,
+      "pages_requested": 4,
+      "rows_seen": 200,
+      "sample_first": [
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 32170,
+          "id": "70596cbb-2269-4058-9b74-5aacca931bf2"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 32186,
+          "id": "f706e3f4-a39c-42dc-b11d-1e2f8024d963"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 32202,
+          "id": "2031405c-ca7a-4ef9-9300-bc877f5ea9c4"
+        }
+      ],
+      "sample_last": [
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 32230,
+          "id": "f4682424-24a3-46b2-91c9-0a15d456a19e"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 32246,
+          "id": "3ab25efd-0f36-4702-b0b4-19f7d8140751"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 32262,
+          "id": "b91febdb-e1a5-4186-9e45-b81d17aa3aed"
+        }
+      ],
+      "sort": "created"
+    },
+    {
+      "adjacent_page_overlap_counts": [
+        0,
+        0,
+        0
+      ],
+      "distinct_ids": 200,
+      "drupal_internal_nid_present_fraction": 1.0,
+      "drupal_internal_nid_unique_in_sample": true,
+      "duplicate_id_count": 0,
+      "duplicate_ids": [],
+      "page_results": [
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28788,
+              "id": "f623b2e4-27af-4913-9fb2-281c57021b0e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28789,
+              "id": "b46205da-a669-49ac-aa5e-d3aa167b7d62"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28790,
+              "id": "7d6ab1db-4315-48ab-8747-453de930c526"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28791,
+              "id": "39ba4c02-b0fa-4992-bf0e-0425a20ac96a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28792,
+              "id": "0efa6dac-04cf-404d-89ef-ddf0cc41067e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28793,
+              "id": "f51e3497-034b-44bb-a7f8-ee6399690dc1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28794,
+              "id": "0e670d69-6a1f-4320-9653-52df0ca42fac"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28795,
+              "id": "94a2bf6a-be7f-47ed-b05a-4c62c97860f4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28796,
+              "id": "92dd1476-7c8f-4c8f-9fea-5f4768fb05de"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28797,
+              "id": "88dd3706-7c04-4900-bc5e-80ea4bb6e656"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28798,
+              "id": "a7b25391-3a94-45e3-b46c-68f2a553ebd3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28799,
+              "id": "d731428b-bf21-4e98-bd4d-05ff7071d702"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28800,
+              "id": "351ef62d-8fe1-43dd-847b-9949a37a8027"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28801,
+              "id": "f45f1379-90b1-43aa-a6bc-b15e4639a3f5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28802,
+              "id": "322ea0d5-d8a6-4c34-8e27-fae66cf9020a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28803,
+              "id": "076f530a-98e6-4156-9c6c-0802ed063bc8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28804,
+              "id": "c538811f-fbfd-4ee4-9eaa-88d7b72da8b7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28805,
+              "id": "67e84311-6d43-48e1-aff5-47e6bc3534be"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28806,
+              "id": "728e68c3-a1fa-4936-b9eb-fd61b8588e47"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28807,
+              "id": "e0078023-a234-4c19-8592-5ffe2aa9e253"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28808,
+              "id": "65531b53-1308-469a-91c7-a078d5f6493c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28809,
+              "id": "1f8c5665-748d-4da2-a8a5-16df13d05123"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28810,
+              "id": "56702677-e5ed-456b-9344-d2c1e7908500"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28811,
+              "id": "9c554094-711e-4dd8-957e-92d3b45eba7f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28812,
+              "id": "2e29e686-1aeb-4662-a724-6289fe4450a4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28813,
+              "id": "7d187762-2e15-4b29-8466-55943d8d7859"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28814,
+              "id": "077cf639-797d-4f63-9ff8-43226af4a4f1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28815,
+              "id": "a88d310a-850f-468d-85ed-16282cd6ff7d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28816,
+              "id": "3a74cc37-c7ad-4ddf-8a3e-7abc67c8cbc8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28817,
+              "id": "a270c515-e16c-49d6-b89a-41fa56c99b07"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28818,
+              "id": "42c45e00-783a-4f16-8a80-902c9dcde766"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28819,
+              "id": "9a9e3a35-fc4e-45d9-bcb7-c102f7b36ce9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28820,
+              "id": "5dfde983-0f76-4f33-ade6-61b3f55be410"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28821,
+              "id": "bbef5208-cfa7-4bc1-af42-fc61d4ba8742"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28822,
+              "id": "53fb3a11-35c1-47ae-8c32-83943643ce77"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28823,
+              "id": "86b8585b-9dae-4493-a225-fb44a40382bf"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28824,
+              "id": "1572e3ff-c4f5-450e-b37c-9746467b6c53"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28825,
+              "id": "275db504-d4f2-4283-b90e-ef0b0f66db3e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28826,
+              "id": "d35d7d9d-4721-469c-a45d-f2696de3b786"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28827,
+              "id": "03859f34-f245-40fc-a73e-07a3f63dea1c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28828,
+              "id": "7693593f-32ff-4535-9d50-6b568d0079b9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28829,
+              "id": "bc743594-81d5-459f-bcf5-81c888a100e0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28830,
+              "id": "c226c035-9109-401c-b1bf-c8f724526c77"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28831,
+              "id": "7a7e4e56-de54-4dbc-b726-8bbdd2d13955"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28832,
+              "id": "a30d6155-6de3-44ec-9716-ac6bea26ab1b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28833,
+              "id": "3e126987-00bc-4d6e-8c8e-b7882043f42d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28834,
+              "id": "c0480591-5c0e-4c4d-b3e9-ae7cb5c5d87d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28835,
+              "id": "b8660d6f-b998-48aa-8f01-9d38ecf0edbe"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28836,
+              "id": "1aba316d-5e21-4e53-8bf3-2b4cafe047e9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28837,
+              "id": "f6e81e5d-0ba5-41a0-aaed-50b5c87c4f0a"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=drupal_internal__nid&page%5Blimit%5D=50&page%5Boffset%5D=0"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28838,
+              "id": "199e7bc9-b766-4966-83b4-00115d1e5840"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28839,
+              "id": "44cc3a7f-2178-4687-8614-99bed3ac4f3b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28840,
+              "id": "693daef0-830c-48b2-8625-738168cc2383"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28841,
+              "id": "267a9982-bb1c-477e-aaf1-57b2259b4676"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28842,
+              "id": "854ada41-9d48-4b4b-8a14-f9729bdeaeb4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28843,
+              "id": "fe729d45-3b45-45b2-a39a-0530222da9e8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28844,
+              "id": "2f7ad020-b34c-4f81-a75e-9dfdf69d1c59"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28845,
+              "id": "33eec634-43cc-4918-906b-cad5bda48779"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28846,
+              "id": "e783e0a6-0a80-4cde-9959-3072a347ffae"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28847,
+              "id": "340abfae-871f-4592-a8a0-ba1e3edee2c3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28848,
+              "id": "35a6e95a-606b-4070-b205-75856f327979"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28849,
+              "id": "42060398-db8f-40e2-a47e-126bcbb2d60a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28850,
+              "id": "1d0e0dda-3dec-42ab-908b-9bf313d69cb3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28851,
+              "id": "d482e5ba-d643-49a7-bf69-4d6ea801c9e6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28852,
+              "id": "a13b1d61-19c0-4e80-8f91-b6dfaad60c60"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28853,
+              "id": "81d1f5a0-9770-4f1f-9dd5-29396d9d6a1d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28854,
+              "id": "6c23e7cd-505d-41a3-8b50-c4fad30fb40c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28855,
+              "id": "7d0c64a2-29ba-460e-bd39-b1003dfc47cb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28856,
+              "id": "4eba6f44-3f46-4819-b200-3fcd4b2bcdf7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28857,
+              "id": "8af50202-939f-4c0b-9dcd-f917f865930c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28858,
+              "id": "47b38837-5807-4acd-a64d-661c3fc5987a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28859,
+              "id": "e5a50ca0-0b3d-49db-a005-32e098efd955"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28860,
+              "id": "f69d0de0-343f-46f0-a293-fd4a0aa139f7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28861,
+              "id": "7ed8c6d5-0a01-48d4-a934-f9894e6cc09e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28862,
+              "id": "01ad6b39-20a4-45e5-907c-e6db17f999dc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28863,
+              "id": "d9582002-335f-41a3-811c-141512d12b1e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28864,
+              "id": "6b9c3b8c-4ecf-417d-ac42-d01b94c737b9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28865,
+              "id": "c907c3d7-8724-4943-b9f0-a595aca47dbc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28866,
+              "id": "67fa10af-e8fb-402b-9d64-c1b76c2939ca"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28867,
+              "id": "28e9af90-8c87-4109-85bd-f5a0d23f34be"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28868,
+              "id": "52c5ff2d-6287-4c3a-ab80-97d9cae8614a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28869,
+              "id": "ccf29063-cb6d-4499-876c-b6ab4ef69232"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28870,
+              "id": "9a401faf-8c39-45c1-b3d7-63f8476f4cfb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28871,
+              "id": "0c12b712-a819-458e-afd6-2f42b99e7d61"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28872,
+              "id": "92f0bf9b-fadf-4943-86bd-99c8ec333768"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28873,
+              "id": "ec10c35b-3808-4311-8245-6f3ff2fc7201"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28874,
+              "id": "2984e03f-859a-4401-afb3-ea5455f35f23"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28875,
+              "id": "bb7af2aa-13e0-401d-ab55-91667f738f7d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28876,
+              "id": "73bea29a-6827-452b-8b6b-f9d71ebe6ca9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28877,
+              "id": "cd636645-3658-489c-98d9-cfe017abb222"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28878,
+              "id": "64eab472-a58e-45ca-a1be-21b7df6a1292"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28879,
+              "id": "89585cbe-2155-42fe-86f9-6a5d02e823b8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28880,
+              "id": "f370f2a2-2e27-495e-a9c7-cf2b2df67859"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28881,
+              "id": "4eb0c448-19cc-4260-ad74-7b83319d2b2d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28882,
+              "id": "a6eb64bb-a1af-42b5-b276-b89ff4cef251"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28883,
+              "id": "ed480104-962a-4142-9b27-c6b4e4109513"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28884,
+              "id": "34aa5477-ab06-4047-879f-01a1bdbc6534"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28885,
+              "id": "def5e3e7-955a-40f9-a2a7-b620debee3d7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28886,
+              "id": "1a6fb316-08d6-4c64-b911-78873b42eb00"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28887,
+              "id": "9b91c5dd-3c2b-4836-bd6c-1cfe94e415b0"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=drupal_internal__nid&page%5Blimit%5D=50&page%5Boffset%5D=50"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28888,
+              "id": "92cfc835-0f3b-43a5-89f9-0bb514765e7b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28889,
+              "id": "71499cbc-5d53-4ad3-ac02-da421c086499"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28890,
+              "id": "70a0bb45-08df-46a1-a55f-1ad422f52f29"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28891,
+              "id": "2312747f-cb2f-44dd-8e6a-77b836229147"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28892,
+              "id": "ba9f8a3c-a233-4e46-86d6-733d36981716"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28893,
+              "id": "01247c00-3a7a-4372-803d-74a8ac1b97c0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28894,
+              "id": "2a471c0e-b982-4e54-8671-3b506097a10b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28895,
+              "id": "16cf2d25-41f5-4289-8b7a-3d975d97e2fa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28896,
+              "id": "c82b6a0c-6db1-4227-85b7-7507876303c5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28897,
+              "id": "cc8ebf65-ebc3-4e7d-96f1-00f2d9c6b38e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28898,
+              "id": "9bf347b2-7a42-4a38-8e02-1b3c9b51536d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28899,
+              "id": "1c1c8815-3167-4ab9-9351-050da3dd787f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28900,
+              "id": "867e8e4a-a392-4c46-acbb-ceda36ba577a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28901,
+              "id": "7685b5d2-127e-401a-bccb-c71098e0cce5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28902,
+              "id": "c8bda0dd-9b6e-4868-b56c-c89f79c52f96"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28903,
+              "id": "48a35ec2-5e7d-4e78-857d-6152619cdf0b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28904,
+              "id": "b3ad4937-8a95-4d45-bb58-d02980388d22"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28905,
+              "id": "ed12cb80-4326-4583-b1d1-21c7b1588454"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28906,
+              "id": "0efee78a-e7c6-4f34-b8cc-7f618db41399"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28907,
+              "id": "2cbc98b1-3b07-4df5-bf78-28e71fdcb729"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28908,
+              "id": "4633c475-1c6d-437c-891a-79755959e981"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28909,
+              "id": "1d616f1a-0f0d-45cc-a8e9-69ab7dc6557e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28910,
+              "id": "7695bf10-8fbd-48ee-b728-e7be53d8188d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28911,
+              "id": "5620c67e-a107-4d64-8620-966d7c13ab64"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28912,
+              "id": "32d79288-6195-4d93-afea-e1b5911774d6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28913,
+              "id": "e5e03f73-6c8d-400a-a204-545477e3b974"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28914,
+              "id": "e7254ba3-9be9-4e65-b72f-7597c527890a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28915,
+              "id": "529a14bf-7963-4385-92ba-9c1a15362f8e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28916,
+              "id": "0692420d-dda8-49a6-8e79-e730822e9cfa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28917,
+              "id": "3e2a008a-64c1-47af-b08d-16ecc6d85299"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28918,
+              "id": "f496d08c-7cf8-4200-9c84-df67336efc2c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28919,
+              "id": "20f6313e-406d-414f-bd8d-57300aa31318"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28920,
+              "id": "1d248f09-532f-4676-960d-88b22c7a1925"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28921,
+              "id": "83ad81ef-5407-4e65-a361-dde37cb20a60"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28922,
+              "id": "ccb89202-5220-46f8-84c4-5414abbcab0f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28923,
+              "id": "90c932f0-d279-4cba-8112-7c522b4a4fc9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28924,
+              "id": "12c71f22-5a98-4b6c-8df1-be8e59ad02b1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28925,
+              "id": "e8cbe8a7-d284-4277-ac7d-620971eba425"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28926,
+              "id": "b9b928a4-ce18-4014-a045-fb251e78de6e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28927,
+              "id": "406eae3d-122c-4621-9c1d-affc6cbf56a0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28928,
+              "id": "1eab240f-49a9-4062-9496-283788fbe133"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28929,
+              "id": "1a2908cb-6c6a-40c4-b1d5-ca66b6e2e770"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28930,
+              "id": "a8c270af-8f7d-4b6b-952e-1ce4cb21f530"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28931,
+              "id": "fbcfc85d-372e-4d86-b074-9af01d1fefd2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28932,
+              "id": "372e9665-35b7-43cb-bbab-b92cc4d104fc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28933,
+              "id": "1d54f21b-5882-40dd-b5d4-7f5a01d9773a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28934,
+              "id": "6f72ce41-4a17-414a-8f86-5d81b479c3be"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28935,
+              "id": "a8b5ff14-e04f-42bf-b8bd-066fae8e7dc5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28936,
+              "id": "a95a84ae-a8ce-4e3d-a121-bf722ba9af27"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28937,
+              "id": "a5f65a28-f40a-4453-bc50-61c9b449cbb5"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=drupal_internal__nid&page%5Blimit%5D=50&page%5Boffset%5D=100"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28938,
+              "id": "0e079cdc-8fa4-4bd2-95a9-7da16efe90ea"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28939,
+              "id": "c1206a38-fb11-49b9-ba83-db7c1196d797"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28940,
+              "id": "8b85c1f7-94c6-4d97-b0c1-87b3f44a4a58"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28941,
+              "id": "5c97cb6f-26d6-46ed-a621-6296d2f1bf5f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28942,
+              "id": "7490f772-0d16-4db9-9b98-42f0b68e60cd"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28943,
+              "id": "b6eb1597-2e01-4306-9e0a-5ed81a988909"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28944,
+              "id": "af808da0-6917-4c95-9c65-2ca4db087939"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28945,
+              "id": "a468c42e-ebe1-4f75-a0ab-cf6f24c72fd4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28946,
+              "id": "5ad34b4d-394b-47e2-bfb9-fc3242c1b371"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28947,
+              "id": "abeb4206-843c-4407-b693-4222278ec27b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28948,
+              "id": "00aafae9-cf50-4eb1-b4c6-5f3f5136f1e4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28949,
+              "id": "85096b54-62bc-4dec-a63a-7c24017301ff"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28950,
+              "id": "2411ed4c-f789-4d4c-b2b4-61d966387d22"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28951,
+              "id": "991168a7-21fb-4b69-8bb6-e91fcef317fc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28952,
+              "id": "1c8c3e95-3a33-4d26-a67a-2d7c18fa3f8f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28953,
+              "id": "74945304-01f9-44f5-bcdc-38806cda808a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28954,
+              "id": "bf40a058-586e-4792-9805-4eb3a771e479"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28955,
+              "id": "ef29491f-8444-4581-bfaa-6db3ce23f2cc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28956,
+              "id": "a8db9296-1aa6-437d-9af3-895b6ae16a6b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28957,
+              "id": "716457d9-9a85-49c5-b67b-624b48b22ac9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28958,
+              "id": "2854d665-6410-41e9-85fe-521d3cd597aa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28959,
+              "id": "3ff4df7e-d643-4e7e-a606-2c9ff7ecae18"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28960,
+              "id": "83fd311c-4fbf-42a3-a59e-f1868d84640f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28961,
+              "id": "28c82c8c-3baf-46f5-98a9-e5873a1047b7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28962,
+              "id": "fa91cd43-4a11-4378-9e3a-eeac9880bc17"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28963,
+              "id": "72753114-d199-45b1-9971-240574bc6b79"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28964,
+              "id": "a99d0e3a-b11b-43cb-a3d1-d5d0a6ed767c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28965,
+              "id": "61f15132-7f8e-459a-8c71-6aa42e855db6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28966,
+              "id": "ff085c88-b3ac-4a92-b7d0-9c2c3576c454"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28967,
+              "id": "544fbd61-074c-46e7-bff4-74a9e47cfe3a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28968,
+              "id": "8aff184c-a446-435f-b681-6692d4d1bf4d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28969,
+              "id": "030dd522-b6a9-4ff7-875a-8f6a67c458ba"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28970,
+              "id": "ef260b39-ff27-4276-a724-3b5a841fdc3f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28971,
+              "id": "85af0279-a096-45b7-9260-dde169ba0103"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28972,
+              "id": "1672da97-9967-40d3-9ef6-cd8d417ed403"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28973,
+              "id": "bf27574b-9986-460c-bcf9-6fa33780b553"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28974,
+              "id": "3f21a9a7-97e2-4033-9781-4acc15da1a6f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28975,
+              "id": "fc628202-80d7-446f-a6a6-02c3ccce54fa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28976,
+              "id": "8eb320f4-bde3-4184-9c9b-2b4022338786"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28977,
+              "id": "35f571bd-4a46-4000-84ab-f797f380e068"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28978,
+              "id": "68129f28-9ba1-4793-8616-dc3b80b8fd17"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28979,
+              "id": "c22d3166-cfe6-4f57-a541-33882d365c77"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28980,
+              "id": "3686f7e4-4f5c-4e0f-a870-907023a077b8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28981,
+              "id": "18939093-9fa5-4076-b22e-493309936436"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28982,
+              "id": "9dab368c-8ad9-4c2c-92bd-d2402d13b1f8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28983,
+              "id": "37696651-bfd2-4226-9e4b-67a7bf9c90e2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28984,
+              "id": "0f0e5778-3316-4ac1-aabf-5ca9501e83c0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28985,
+              "id": "49519fba-f70a-4e4b-8b8d-ff40f3efbf29"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28986,
+              "id": "aea6dff0-a188-476b-a862-eaf5706b3bca"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28987,
+              "id": "dc39487b-0552-49ef-86d2-f8f38c1b91c7"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=drupal_internal__nid&page%5Blimit%5D=50&page%5Boffset%5D=150"
+        }
+      ],
+      "pages_ok": 4,
+      "pages_requested": 4,
+      "rows_seen": 200,
+      "sample_first": [
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28788,
+          "id": "f623b2e4-27af-4913-9fb2-281c57021b0e"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28789,
+          "id": "b46205da-a669-49ac-aa5e-d3aa167b7d62"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28790,
+          "id": "7d6ab1db-4315-48ab-8747-453de930c526"
+        }
+      ],
+      "sample_last": [
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28985,
+          "id": "49519fba-f70a-4e4b-8b8d-ff40f3efbf29"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28986,
+          "id": "aea6dff0-a188-476b-a862-eaf5706b3bca"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28987,
+          "id": "dc39487b-0552-49ef-86d2-f8f38c1b91c7"
+        }
+      ],
+      "sort": "drupal_internal__nid"
+    },
+    {
+      "adjacent_page_overlap_counts": [
+        0,
+        0,
+        0
+      ],
+      "distinct_ids": 200,
+      "drupal_internal_nid_present_fraction": 1.0,
+      "drupal_internal_nid_unique_in_sample": true,
+      "duplicate_id_count": 0,
+      "duplicate_ids": [],
+      "page_results": [
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28788,
+              "id": "f623b2e4-27af-4913-9fb2-281c57021b0e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28789,
+              "id": "b46205da-a669-49ac-aa5e-d3aa167b7d62"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28790,
+              "id": "7d6ab1db-4315-48ab-8747-453de930c526"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28791,
+              "id": "39ba4c02-b0fa-4992-bf0e-0425a20ac96a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28792,
+              "id": "0efa6dac-04cf-404d-89ef-ddf0cc41067e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28793,
+              "id": "f51e3497-034b-44bb-a7f8-ee6399690dc1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28794,
+              "id": "0e670d69-6a1f-4320-9653-52df0ca42fac"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28795,
+              "id": "94a2bf6a-be7f-47ed-b05a-4c62c97860f4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28796,
+              "id": "92dd1476-7c8f-4c8f-9fea-5f4768fb05de"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28797,
+              "id": "88dd3706-7c04-4900-bc5e-80ea4bb6e656"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28798,
+              "id": "a7b25391-3a94-45e3-b46c-68f2a553ebd3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28799,
+              "id": "d731428b-bf21-4e98-bd4d-05ff7071d702"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28800,
+              "id": "351ef62d-8fe1-43dd-847b-9949a37a8027"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28801,
+              "id": "f45f1379-90b1-43aa-a6bc-b15e4639a3f5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28802,
+              "id": "322ea0d5-d8a6-4c34-8e27-fae66cf9020a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28803,
+              "id": "076f530a-98e6-4156-9c6c-0802ed063bc8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28804,
+              "id": "c538811f-fbfd-4ee4-9eaa-88d7b72da8b7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28805,
+              "id": "67e84311-6d43-48e1-aff5-47e6bc3534be"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28806,
+              "id": "728e68c3-a1fa-4936-b9eb-fd61b8588e47"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28807,
+              "id": "e0078023-a234-4c19-8592-5ffe2aa9e253"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28808,
+              "id": "65531b53-1308-469a-91c7-a078d5f6493c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28809,
+              "id": "1f8c5665-748d-4da2-a8a5-16df13d05123"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28810,
+              "id": "56702677-e5ed-456b-9344-d2c1e7908500"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28811,
+              "id": "9c554094-711e-4dd8-957e-92d3b45eba7f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28812,
+              "id": "2e29e686-1aeb-4662-a724-6289fe4450a4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28813,
+              "id": "7d187762-2e15-4b29-8466-55943d8d7859"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28814,
+              "id": "077cf639-797d-4f63-9ff8-43226af4a4f1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28815,
+              "id": "a88d310a-850f-468d-85ed-16282cd6ff7d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28816,
+              "id": "3a74cc37-c7ad-4ddf-8a3e-7abc67c8cbc8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28817,
+              "id": "a270c515-e16c-49d6-b89a-41fa56c99b07"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28818,
+              "id": "42c45e00-783a-4f16-8a80-902c9dcde766"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28819,
+              "id": "9a9e3a35-fc4e-45d9-bcb7-c102f7b36ce9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28820,
+              "id": "5dfde983-0f76-4f33-ade6-61b3f55be410"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28821,
+              "id": "bbef5208-cfa7-4bc1-af42-fc61d4ba8742"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28822,
+              "id": "53fb3a11-35c1-47ae-8c32-83943643ce77"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28823,
+              "id": "86b8585b-9dae-4493-a225-fb44a40382bf"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28824,
+              "id": "1572e3ff-c4f5-450e-b37c-9746467b6c53"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28825,
+              "id": "275db504-d4f2-4283-b90e-ef0b0f66db3e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28826,
+              "id": "d35d7d9d-4721-469c-a45d-f2696de3b786"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28827,
+              "id": "03859f34-f245-40fc-a73e-07a3f63dea1c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28828,
+              "id": "7693593f-32ff-4535-9d50-6b568d0079b9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28829,
+              "id": "bc743594-81d5-459f-bcf5-81c888a100e0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28830,
+              "id": "c226c035-9109-401c-b1bf-c8f724526c77"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28831,
+              "id": "7a7e4e56-de54-4dbc-b726-8bbdd2d13955"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28832,
+              "id": "a30d6155-6de3-44ec-9716-ac6bea26ab1b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28833,
+              "id": "3e126987-00bc-4d6e-8c8e-b7882043f42d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28834,
+              "id": "c0480591-5c0e-4c4d-b3e9-ae7cb5c5d87d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28835,
+              "id": "b8660d6f-b998-48aa-8f01-9d38ecf0edbe"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28836,
+              "id": "1aba316d-5e21-4e53-8bf3-2b4cafe047e9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28837,
+              "id": "f6e81e5d-0ba5-41a0-aaed-50b5c87c4f0a"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created%2Cdrupal_internal__nid&page%5Blimit%5D=50&page%5Boffset%5D=0"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28838,
+              "id": "199e7bc9-b766-4966-83b4-00115d1e5840"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28839,
+              "id": "44cc3a7f-2178-4687-8614-99bed3ac4f3b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28840,
+              "id": "693daef0-830c-48b2-8625-738168cc2383"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28841,
+              "id": "267a9982-bb1c-477e-aaf1-57b2259b4676"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28842,
+              "id": "854ada41-9d48-4b4b-8a14-f9729bdeaeb4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28843,
+              "id": "fe729d45-3b45-45b2-a39a-0530222da9e8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28844,
+              "id": "2f7ad020-b34c-4f81-a75e-9dfdf69d1c59"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28845,
+              "id": "33eec634-43cc-4918-906b-cad5bda48779"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28846,
+              "id": "e783e0a6-0a80-4cde-9959-3072a347ffae"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28847,
+              "id": "340abfae-871f-4592-a8a0-ba1e3edee2c3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28848,
+              "id": "35a6e95a-606b-4070-b205-75856f327979"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28849,
+              "id": "42060398-db8f-40e2-a47e-126bcbb2d60a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28850,
+              "id": "1d0e0dda-3dec-42ab-908b-9bf313d69cb3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28851,
+              "id": "d482e5ba-d643-49a7-bf69-4d6ea801c9e6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28852,
+              "id": "a13b1d61-19c0-4e80-8f91-b6dfaad60c60"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28853,
+              "id": "81d1f5a0-9770-4f1f-9dd5-29396d9d6a1d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28854,
+              "id": "6c23e7cd-505d-41a3-8b50-c4fad30fb40c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28855,
+              "id": "7d0c64a2-29ba-460e-bd39-b1003dfc47cb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28856,
+              "id": "4eba6f44-3f46-4819-b200-3fcd4b2bcdf7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28857,
+              "id": "8af50202-939f-4c0b-9dcd-f917f865930c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28858,
+              "id": "47b38837-5807-4acd-a64d-661c3fc5987a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28859,
+              "id": "e5a50ca0-0b3d-49db-a005-32e098efd955"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28860,
+              "id": "f69d0de0-343f-46f0-a293-fd4a0aa139f7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28861,
+              "id": "7ed8c6d5-0a01-48d4-a934-f9894e6cc09e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28862,
+              "id": "01ad6b39-20a4-45e5-907c-e6db17f999dc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28863,
+              "id": "d9582002-335f-41a3-811c-141512d12b1e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28864,
+              "id": "6b9c3b8c-4ecf-417d-ac42-d01b94c737b9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28865,
+              "id": "c907c3d7-8724-4943-b9f0-a595aca47dbc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28866,
+              "id": "67fa10af-e8fb-402b-9d64-c1b76c2939ca"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28867,
+              "id": "28e9af90-8c87-4109-85bd-f5a0d23f34be"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28868,
+              "id": "52c5ff2d-6287-4c3a-ab80-97d9cae8614a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28869,
+              "id": "ccf29063-cb6d-4499-876c-b6ab4ef69232"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28870,
+              "id": "9a401faf-8c39-45c1-b3d7-63f8476f4cfb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28871,
+              "id": "0c12b712-a819-458e-afd6-2f42b99e7d61"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28872,
+              "id": "92f0bf9b-fadf-4943-86bd-99c8ec333768"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28873,
+              "id": "ec10c35b-3808-4311-8245-6f3ff2fc7201"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28874,
+              "id": "2984e03f-859a-4401-afb3-ea5455f35f23"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28875,
+              "id": "bb7af2aa-13e0-401d-ab55-91667f738f7d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28876,
+              "id": "73bea29a-6827-452b-8b6b-f9d71ebe6ca9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28877,
+              "id": "cd636645-3658-489c-98d9-cfe017abb222"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28878,
+              "id": "64eab472-a58e-45ca-a1be-21b7df6a1292"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28879,
+              "id": "89585cbe-2155-42fe-86f9-6a5d02e823b8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28880,
+              "id": "f370f2a2-2e27-495e-a9c7-cf2b2df67859"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28881,
+              "id": "4eb0c448-19cc-4260-ad74-7b83319d2b2d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28882,
+              "id": "a6eb64bb-a1af-42b5-b276-b89ff4cef251"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28883,
+              "id": "ed480104-962a-4142-9b27-c6b4e4109513"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28884,
+              "id": "34aa5477-ab06-4047-879f-01a1bdbc6534"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28885,
+              "id": "def5e3e7-955a-40f9-a2a7-b620debee3d7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28886,
+              "id": "1a6fb316-08d6-4c64-b911-78873b42eb00"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28887,
+              "id": "9b91c5dd-3c2b-4836-bd6c-1cfe94e415b0"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created%2Cdrupal_internal__nid&page%5Blimit%5D=50&page%5Boffset%5D=50"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28888,
+              "id": "92cfc835-0f3b-43a5-89f9-0bb514765e7b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28889,
+              "id": "71499cbc-5d53-4ad3-ac02-da421c086499"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28890,
+              "id": "70a0bb45-08df-46a1-a55f-1ad422f52f29"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28891,
+              "id": "2312747f-cb2f-44dd-8e6a-77b836229147"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28892,
+              "id": "ba9f8a3c-a233-4e46-86d6-733d36981716"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28893,
+              "id": "01247c00-3a7a-4372-803d-74a8ac1b97c0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28894,
+              "id": "2a471c0e-b982-4e54-8671-3b506097a10b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28895,
+              "id": "16cf2d25-41f5-4289-8b7a-3d975d97e2fa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28896,
+              "id": "c82b6a0c-6db1-4227-85b7-7507876303c5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28897,
+              "id": "cc8ebf65-ebc3-4e7d-96f1-00f2d9c6b38e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28898,
+              "id": "9bf347b2-7a42-4a38-8e02-1b3c9b51536d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28899,
+              "id": "1c1c8815-3167-4ab9-9351-050da3dd787f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28900,
+              "id": "867e8e4a-a392-4c46-acbb-ceda36ba577a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28901,
+              "id": "7685b5d2-127e-401a-bccb-c71098e0cce5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28902,
+              "id": "c8bda0dd-9b6e-4868-b56c-c89f79c52f96"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28903,
+              "id": "48a35ec2-5e7d-4e78-857d-6152619cdf0b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28904,
+              "id": "b3ad4937-8a95-4d45-bb58-d02980388d22"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28905,
+              "id": "ed12cb80-4326-4583-b1d1-21c7b1588454"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28906,
+              "id": "0efee78a-e7c6-4f34-b8cc-7f618db41399"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28907,
+              "id": "2cbc98b1-3b07-4df5-bf78-28e71fdcb729"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28908,
+              "id": "4633c475-1c6d-437c-891a-79755959e981"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28909,
+              "id": "1d616f1a-0f0d-45cc-a8e9-69ab7dc6557e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28910,
+              "id": "7695bf10-8fbd-48ee-b728-e7be53d8188d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28911,
+              "id": "5620c67e-a107-4d64-8620-966d7c13ab64"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28912,
+              "id": "32d79288-6195-4d93-afea-e1b5911774d6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28913,
+              "id": "e5e03f73-6c8d-400a-a204-545477e3b974"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28914,
+              "id": "e7254ba3-9be9-4e65-b72f-7597c527890a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28915,
+              "id": "529a14bf-7963-4385-92ba-9c1a15362f8e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28916,
+              "id": "0692420d-dda8-49a6-8e79-e730822e9cfa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28917,
+              "id": "3e2a008a-64c1-47af-b08d-16ecc6d85299"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28918,
+              "id": "f496d08c-7cf8-4200-9c84-df67336efc2c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28919,
+              "id": "20f6313e-406d-414f-bd8d-57300aa31318"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28920,
+              "id": "1d248f09-532f-4676-960d-88b22c7a1925"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28921,
+              "id": "83ad81ef-5407-4e65-a361-dde37cb20a60"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28922,
+              "id": "ccb89202-5220-46f8-84c4-5414abbcab0f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28923,
+              "id": "90c932f0-d279-4cba-8112-7c522b4a4fc9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28924,
+              "id": "12c71f22-5a98-4b6c-8df1-be8e59ad02b1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28925,
+              "id": "e8cbe8a7-d284-4277-ac7d-620971eba425"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28926,
+              "id": "b9b928a4-ce18-4014-a045-fb251e78de6e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28927,
+              "id": "406eae3d-122c-4621-9c1d-affc6cbf56a0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28928,
+              "id": "1eab240f-49a9-4062-9496-283788fbe133"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28929,
+              "id": "1a2908cb-6c6a-40c4-b1d5-ca66b6e2e770"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28930,
+              "id": "a8c270af-8f7d-4b6b-952e-1ce4cb21f530"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28931,
+              "id": "fbcfc85d-372e-4d86-b074-9af01d1fefd2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28932,
+              "id": "372e9665-35b7-43cb-bbab-b92cc4d104fc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28933,
+              "id": "1d54f21b-5882-40dd-b5d4-7f5a01d9773a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28934,
+              "id": "6f72ce41-4a17-414a-8f86-5d81b479c3be"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28935,
+              "id": "a8b5ff14-e04f-42bf-b8bd-066fae8e7dc5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28936,
+              "id": "a95a84ae-a8ce-4e3d-a121-bf722ba9af27"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28937,
+              "id": "a5f65a28-f40a-4453-bc50-61c9b449cbb5"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created%2Cdrupal_internal__nid&page%5Blimit%5D=50&page%5Boffset%5D=100"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28938,
+              "id": "0e079cdc-8fa4-4bd2-95a9-7da16efe90ea"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28939,
+              "id": "c1206a38-fb11-49b9-ba83-db7c1196d797"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28940,
+              "id": "8b85c1f7-94c6-4d97-b0c1-87b3f44a4a58"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28941,
+              "id": "5c97cb6f-26d6-46ed-a621-6296d2f1bf5f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28942,
+              "id": "7490f772-0d16-4db9-9b98-42f0b68e60cd"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28943,
+              "id": "b6eb1597-2e01-4306-9e0a-5ed81a988909"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28944,
+              "id": "af808da0-6917-4c95-9c65-2ca4db087939"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28945,
+              "id": "a468c42e-ebe1-4f75-a0ab-cf6f24c72fd4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28946,
+              "id": "5ad34b4d-394b-47e2-bfb9-fc3242c1b371"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28947,
+              "id": "abeb4206-843c-4407-b693-4222278ec27b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28948,
+              "id": "00aafae9-cf50-4eb1-b4c6-5f3f5136f1e4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28949,
+              "id": "85096b54-62bc-4dec-a63a-7c24017301ff"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28950,
+              "id": "2411ed4c-f789-4d4c-b2b4-61d966387d22"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28951,
+              "id": "991168a7-21fb-4b69-8bb6-e91fcef317fc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28952,
+              "id": "1c8c3e95-3a33-4d26-a67a-2d7c18fa3f8f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28953,
+              "id": "74945304-01f9-44f5-bcdc-38806cda808a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28954,
+              "id": "bf40a058-586e-4792-9805-4eb3a771e479"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28955,
+              "id": "ef29491f-8444-4581-bfaa-6db3ce23f2cc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28956,
+              "id": "a8db9296-1aa6-437d-9af3-895b6ae16a6b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28957,
+              "id": "716457d9-9a85-49c5-b67b-624b48b22ac9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28958,
+              "id": "2854d665-6410-41e9-85fe-521d3cd597aa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28959,
+              "id": "3ff4df7e-d643-4e7e-a606-2c9ff7ecae18"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28960,
+              "id": "83fd311c-4fbf-42a3-a59e-f1868d84640f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28961,
+              "id": "28c82c8c-3baf-46f5-98a9-e5873a1047b7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28962,
+              "id": "fa91cd43-4a11-4378-9e3a-eeac9880bc17"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28963,
+              "id": "72753114-d199-45b1-9971-240574bc6b79"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28964,
+              "id": "a99d0e3a-b11b-43cb-a3d1-d5d0a6ed767c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28965,
+              "id": "61f15132-7f8e-459a-8c71-6aa42e855db6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28966,
+              "id": "ff085c88-b3ac-4a92-b7d0-9c2c3576c454"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28967,
+              "id": "544fbd61-074c-46e7-bff4-74a9e47cfe3a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28968,
+              "id": "8aff184c-a446-435f-b681-6692d4d1bf4d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28969,
+              "id": "030dd522-b6a9-4ff7-875a-8f6a67c458ba"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28970,
+              "id": "ef260b39-ff27-4276-a724-3b5a841fdc3f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28971,
+              "id": "85af0279-a096-45b7-9260-dde169ba0103"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28972,
+              "id": "1672da97-9967-40d3-9ef6-cd8d417ed403"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28973,
+              "id": "bf27574b-9986-460c-bcf9-6fa33780b553"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28974,
+              "id": "3f21a9a7-97e2-4033-9781-4acc15da1a6f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28975,
+              "id": "fc628202-80d7-446f-a6a6-02c3ccce54fa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28976,
+              "id": "8eb320f4-bde3-4184-9c9b-2b4022338786"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28977,
+              "id": "35f571bd-4a46-4000-84ab-f797f380e068"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28978,
+              "id": "68129f28-9ba1-4793-8616-dc3b80b8fd17"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28979,
+              "id": "c22d3166-cfe6-4f57-a541-33882d365c77"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28980,
+              "id": "3686f7e4-4f5c-4e0f-a870-907023a077b8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28981,
+              "id": "18939093-9fa5-4076-b22e-493309936436"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28982,
+              "id": "9dab368c-8ad9-4c2c-92bd-d2402d13b1f8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28983,
+              "id": "37696651-bfd2-4226-9e4b-67a7bf9c90e2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28984,
+              "id": "0f0e5778-3316-4ac1-aabf-5ca9501e83c0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28985,
+              "id": "49519fba-f70a-4e4b-8b8d-ff40f3efbf29"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28986,
+              "id": "aea6dff0-a188-476b-a862-eaf5706b3bca"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28987,
+              "id": "dc39487b-0552-49ef-86d2-f8f38c1b91c7"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created%2Cdrupal_internal__nid&page%5Blimit%5D=50&page%5Boffset%5D=150"
+        }
+      ],
+      "pages_ok": 4,
+      "pages_requested": 4,
+      "rows_seen": 200,
+      "sample_first": [
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28788,
+          "id": "f623b2e4-27af-4913-9fb2-281c57021b0e"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28789,
+          "id": "b46205da-a669-49ac-aa5e-d3aa167b7d62"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28790,
+          "id": "7d6ab1db-4315-48ab-8747-453de930c526"
+        }
+      ],
+      "sample_last": [
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28985,
+          "id": "49519fba-f70a-4e4b-8b8d-ff40f3efbf29"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28986,
+          "id": "aea6dff0-a188-476b-a862-eaf5706b3bca"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 28987,
+          "id": "dc39487b-0552-49ef-86d2-f8f38c1b91c7"
+        }
+      ],
+      "sort": "created,drupal_internal__nid"
+    },
+    {
+      "adjacent_page_overlap_counts": [
+        0,
+        0,
+        0
+      ],
+      "distinct_ids": 200,
+      "drupal_internal_nid_present_fraction": 1.0,
+      "drupal_internal_nid_unique_in_sample": true,
+      "duplicate_id_count": 0,
+      "duplicate_ids": [],
+      "page_results": [
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31393,
+              "id": "000d2b3b-79f3-44e8-b3f6-dcc8a095f2d7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32573,
+              "id": "0018eca8-05f5-45da-982c-7db3d9050e5a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33722,
+              "id": "001f090b-deb0-4865-a78d-2ad5d02670dd"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29367,
+              "id": "00208053-d806-4c31-88ed-0e09888ed391"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34260,
+              "id": "002403d1-2bdc-4b04-baa8-ed05f9a822bc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31192,
+              "id": "004bd96f-4af4-43a2-9c80-65d30f5355b0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34658,
+              "id": "005a6824-223a-4528-af94-dc9ce4ff3baf"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30197,
+              "id": "005f985d-8131-4bc7-acf5-929e959d83f2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31504,
+              "id": "007145b7-e8ee-42a6-b1fe-9c86b74e4244"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32149,
+              "id": "0075d934-3d89-40c6-a909-08d2e88f7421"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34445,
+              "id": "009a66a1-79a0-4c99-9cf9-49f668996ddc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31894,
+              "id": "009e7c4d-28af-4706-9c30-689df672d424"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28948,
+              "id": "00aafae9-cf50-4eb1-b4c6-5f3f5136f1e4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32664,
+              "id": "00ab9214-0a0b-4363-bb88-871f0e81330f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29050,
+              "id": "00b10356-eacb-4be1-938f-104a61920df4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33737,
+              "id": "00ba9971-1120-44b6-ab54-e7d3cda56298"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33640,
+              "id": "00cd8bee-f2dd-45c4-85f7-8e8146bebda8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30393,
+              "id": "00ce7746-6571-457d-a20c-8e1b6960441a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30111,
+              "id": "00dd1ac0-4140-41fc-bbe2-60afe3dac62c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30908,
+              "id": "010e45b8-e035-4b2b-93c4-15b2f544f044"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30794,
+              "id": "01186f93-60bb-4acd-a6c8-a6bf3047aa81"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34682,
+              "id": "011894bf-1e63-4048-8bfe-5f2993c9cef2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30898,
+              "id": "0120def2-71f9-47e8-9ec9-ae3181ffa0b4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32374,
+              "id": "0123de45-a1f9-4528-a345-b9594ba8e1f1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28893,
+              "id": "01247c00-3a7a-4372-803d-74a8ac1b97c0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29542,
+              "id": "012aead1-efab-4571-8cc1-1d9f4aff929b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33001,
+              "id": "01359c77-5685-4489-9640-9ffae29c82c1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30606,
+              "id": "01374713-c70a-468e-ac96-b2d780bd5351"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33571,
+              "id": "0140f45a-53cc-4e7b-94bc-3c9b2d26a8a0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33846,
+              "id": "0154b4a0-12af-4652-ad2e-5c3d8b846f1c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29338,
+              "id": "0168fd9c-7743-4314-9e64-ebfc7e3e4c4a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34627,
+              "id": "016cc97b-fa2e-43a3-8cab-d3a645b0dc9d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29214,
+              "id": "017ab81e-987c-4726-a3e8-37ca00b3def3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33702,
+              "id": "017d4678-2599-473f-b01d-09b76a8a111e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29886,
+              "id": "01884cb0-ce07-4358-8978-f468bc439666"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33477,
+              "id": "018d3070-8d8c-447d-896f-268a65658c40"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29834,
+              "id": "018d5572-eb10-4678-b903-722f3031a5b2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31305,
+              "id": "018d8bb9-42ad-4322-8961-0b4e97ffdbaf"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31762,
+              "id": "018ed548-7084-4de4-8f57-85e25f7231ee"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33605,
+              "id": "01a31db0-757c-42a5-ab62-518d656fcef5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28862,
+              "id": "01ad6b39-20a4-45e5-907c-e6db17f999dc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33161,
+              "id": "01bfbae1-4146-48ea-9971-4707e10c9245"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33668,
+              "id": "01ce4fad-64b2-49ec-b105-a7b9c25dc3ca"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34999,
+              "id": "01d0eac7-cc32-4af6-9712-8c96e9b0ef95"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34828,
+              "id": "01ecd826-c4f1-4c72-ad9a-f02d9fc6a315"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32163,
+              "id": "01ee2453-ac11-42f6-bbf6-9ce7f245916e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30338,
+              "id": "01fae081-1df8-48c2-9dd0-c4d4180e5239"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30508,
+              "id": "0203ecfe-2489-422f-999f-b763595f7ba7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32597,
+              "id": "0219e248-4945-4301-86f2-1d5ba45bfc42"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31148,
+              "id": "0225bfe6-0cdd-499a-85fd-605e351b6279"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created%2Cid&page%5Blimit%5D=50&page%5Boffset%5D=0"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32673,
+              "id": "022f712d-6cfb-43d9-acd4-5947d0c2dbf9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29378,
+              "id": "023b65bb-e16e-4672-a9e8-353a262212a9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34482,
+              "id": "025a834a-e5af-4d21-b654-2331959d6373"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29162,
+              "id": "0273429d-1a81-4bc2-9135-7fa841410189"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34659,
+              "id": "02755540-7de1-4075-9fb1-f11046f1ed93"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33283,
+              "id": "027bd2aa-e999-47ac-9579-313a727ef3ca"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31121,
+              "id": "02860b10-1dcd-46fb-9fdb-8c44f92f8b97"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30427,
+              "id": "02876feb-b9c7-452f-889c-97c9674a2a18"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33163,
+              "id": "0287d0db-b42f-4264-a1de-0c0d8bc6a50a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34167,
+              "id": "028cccb2-c44e-454f-8618-f6c1db6ca3f4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31416,
+              "id": "028e7236-5300-415b-a29d-8ad55ce49018"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31068,
+              "id": "02971e80-72b7-4254-beff-403b3e1bf7e9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34499,
+              "id": "029ba09e-a5f1-4132-9fc2-0c0141d789c8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32896,
+              "id": "029f2235-8cd9-48dd-8dc3-6fce1a711f6d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29287,
+              "id": "02b61a7b-61b8-4452-9c5e-a6412f9f6240"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31965,
+              "id": "02d761b5-c1ff-4603-8072-8bcf4255cd41"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30537,
+              "id": "02e16380-f7d6-4773-bd63-fd50285b8a2b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30303,
+              "id": "02e216d0-f2a5-472c-a9a8-9138d323608e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34932,
+              "id": "02e2a1a9-7598-4f91-beed-5233c3b41f7a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31736,
+              "id": "02e8d910-10bc-4fe3-976e-09f218f95923"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32676,
+              "id": "02ebd171-a293-44ca-abf4-e871e05122ff"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33560,
+              "id": "02f69ea9-da62-4498-9bbe-42a23df4f38e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29098,
+              "id": "02f96be6-1a59-463a-bde9-2fabb1f7873d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32845,
+              "id": "02fd1737-b042-4a7d-9131-6176b8568817"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28969,
+              "id": "030dd522-b6a9-4ff7-875a-8f6a67c458ba"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34113,
+              "id": "03139a21-1cad-4442-9df7-6b5213dd24e9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31621,
+              "id": "0313bdbb-f596-4d4a-8124-75b48c767b20"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32220,
+              "id": "0316dfd9-847f-487b-80ce-406a124e7f63"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33574,
+              "id": "031d0ff2-f0f0-47c6-9a99-8338f0d989eb"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34059,
+              "id": "0334d30a-4f67-4fbc-a01d-b365543fe40e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31803,
+              "id": "0334de09-81d4-47a4-a665-d5647696d2cd"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34757,
+              "id": "0357037c-5b70-497d-8743-4cdcbd5b3796"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29699,
+              "id": "0367e7f1-a02a-452c-959c-64b2a1ca83c2"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31081,
+              "id": "0375c913-6a0d-42c3-81c1-f9996f6db268"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31722,
+              "id": "037de58f-f47d-4391-9c09-dee1ebdff597"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28827,
+              "id": "03859f34-f245-40fc-a73e-07a3f63dea1c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29998,
+              "id": "0394f3b8-b82f-4930-b4a4-2ab2364cb29d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29436,
+              "id": "0398156a-ebfa-4c10-8072-b850ded9c463"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31022,
+              "id": "0398fb1c-0267-4dce-84d0-423b8e154e1b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33192,
+              "id": "03a34c60-9ab4-4c92-a05c-c9275370e0d5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33924,
+              "id": "03ab44ee-581b-4212-ac36-bb5d7133b616"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32989,
+              "id": "03b28276-03f0-45f2-ba5e-8ac45c09fef1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29163,
+              "id": "03c1cdfa-89ab-4d2f-87ff-1967c832a5a9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29605,
+              "id": "03c48874-3acd-4b11-8402-be7f0e0d9b77"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33656,
+              "id": "03cef14f-52a2-484f-b31e-dfaaa3114908"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32298,
+              "id": "03fbe33f-2f7e-4156-a0a0-823a9d6e7466"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29656,
+              "id": "03ff8993-29b1-4579-aa28-edfa4db9ea3c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30959,
+              "id": "040c3eb4-0a3d-4697-94a1-26c3abb5a954"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34011,
+              "id": "04109986-d23e-4b59-bbc0-c51498203bcc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31169,
+              "id": "041f4bd7-43c4-40ac-813b-2f1d1ad0ca7f"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created%2Cid&page%5Blimit%5D=50&page%5Boffset%5D=50"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30999,
+              "id": "04207316-359b-456e-8ecd-77c50c1d693a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34322,
+              "id": "044207c7-ef01-4071-92da-b3a25c4096e6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33974,
+              "id": "04446fc0-3060-407c-b2a8-e64c890bc90b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30637,
+              "id": "045ef983-3388-48e9-9840-f9897adf1445"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31006,
+              "id": "046b8c90-bdff-4fa1-ad69-c2907e35d63c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34542,
+              "id": "04778738-5c7d-4215-894b-0e7edec84482"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30100,
+              "id": "0477876a-f6c9-4ad4-8301-8ab5ba673875"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34241,
+              "id": "04794182-7a58-4934-a3da-c68c4c498fb6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31580,
+              "id": "047c674a-7c76-4c5b-b8bb-fc1bb9d6a433"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29445,
+              "id": "049a05df-cb0c-4afd-9057-7e86d28430ed"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32866,
+              "id": "04a7d4ef-35b4-446a-aed5-46506904e68f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32558,
+              "id": "04b0e4ed-e42f-45cd-910a-cb7b8f0e13ab"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34481,
+              "id": "04c71b06-9251-42fb-ae8e-69787a54847d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32249,
+              "id": "04c79e25-c289-4848-a5d2-f4b11fefd491"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29719,
+              "id": "04c86b1d-1622-48a7-b37a-4e2d8a11c3b3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33189,
+              "id": "04cfcad8-5e2a-4ade-8bbe-0a7fcd5d5206"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29389,
+              "id": "04dacde8-11a8-4fd9-8c0a-9ee1cf6c29bc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33822,
+              "id": "04eaa243-1de0-4d54-b16b-c442a5e5c16e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29131,
+              "id": "0505a9cd-8747-4f56-b06c-a9366505a518"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31686,
+              "id": "052926ab-9bf1-4d2c-964b-50cb2c5b768f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31848,
+              "id": "052ed282-54df-4c19-9306-69a1ecbcd272"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31285,
+              "id": "0533d541-df73-40ce-86a5-775bf7ec6c08"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29820,
+              "id": "0539f834-b8f5-43b4-9e03-059cc65bf643"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30286,
+              "id": "053f5c11-23fd-4f05-9080-bfe1d71ff563"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30555,
+              "id": "054652a6-7663-400b-a218-30cc0288e2be"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29778,
+              "id": "054a1af4-48ad-4fcc-a5e6-ff18b86b7802"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33626,
+              "id": "0550d42e-283c-4c27-a49e-90077e23976e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33298,
+              "id": "0551f821-f929-49e2-a0f5-565a0a3f83fc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32411,
+              "id": "055cb9c4-4129-44fe-8612-97df198df51c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30974,
+              "id": "056a190e-0675-43c8-8424-7dee1949931b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33265,
+              "id": "057a876b-8770-4712-8c3a-b4f455c83f05"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31489,
+              "id": "057f3aea-f036-401c-aa7a-f9e379123c3d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33461,
+              "id": "0592de1c-e1e7-4e8e-900f-3c460567f4e0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29978,
+              "id": "05993acd-5a13-4483-bb34-cd2588b5b310"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30268,
+              "id": "0599ab28-377b-42a1-b1f3-34783608ca6b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29427,
+              "id": "059a4eab-c8eb-4107-9424-2e07066b93d4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32034,
+              "id": "05a21623-0f44-4d24-80a1-f4864efb409f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29024,
+              "id": "05a4dd1f-7efa-4103-8bfc-b88b78d9b7a6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31656,
+              "id": "05aa4b40-9ca6-422e-9892-bef5759901dc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29305,
+              "id": "05b164d8-f5a3-41df-b5bd-e97c7ca177f7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32409,
+              "id": "05bfa51f-ec75-4b4d-88a4-dad2c2bb8175"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34159,
+              "id": "05d728b0-b920-4767-b3ba-46b7c6843a11"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34289,
+              "id": "060667e9-5bb8-4d27-a9c2-83dc3f174953"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34807,
+              "id": "0619376d-56a6-42f8-a183-2d2af26c49e4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33858,
+              "id": "0627eace-b897-4127-82c9-4d017df6956a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32713,
+              "id": "06303f82-9fc6-4904-91cb-c65b5147171c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31972,
+              "id": "0640d5c0-1e55-41b4-a85e-904a44e07bfc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29899,
+              "id": "06489798-7890-4deb-ab61-65bed8acff50"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31962,
+              "id": "0649596f-b980-497b-ae1b-4f65d2315079"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31328,
+              "id": "06496ccc-1ec6-45a6-b077-7589a5b84345"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created%2Cid&page%5Blimit%5D=50&page%5Boffset%5D=100"
+        },
+        {
+          "ok": true,
+          "rows": [
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29120,
+              "id": "064dee6b-b9db-4571-836f-9fe24ec33752"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32177,
+              "id": "06555a0f-0eda-4781-930c-75cc76fcad26"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28916,
+              "id": "0692420d-dda8-49a6-8e79-e730822e9cfa"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34044,
+              "id": "06a1471b-b492-43b6-a0ed-c0126da7c583"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32297,
+              "id": "06a5cf63-f9ae-4b5d-88f8-8e82e3f67732"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31326,
+              "id": "06a8a757-98a6-45c9-8abc-d4de9e26fa45"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34800,
+              "id": "06b71702-6b0f-419d-a775-3c8ecd427fd0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29827,
+              "id": "06b809fb-7ee9-4a46-adc0-9c97178fa02e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33423,
+              "id": "06cbdad3-439f-44f1-a750-7ff148a06060"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31897,
+              "id": "06d9d7ca-5113-49aa-8dc4-14898a353e91"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32175,
+              "id": "06db251c-5c9e-4511-be2c-d90435c3af9a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30241,
+              "id": "06e0b724-d3a1-4085-929e-a98636b28748"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32685,
+              "id": "06ed753f-ee78-4e3a-8500-8f8c44d769ae"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33385,
+              "id": "06ee1e66-c0a1-48df-b7b4-93a1c6870ed4"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31209,
+              "id": "06f37256-cc94-401a-aed3-d561e71b76ef"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29175,
+              "id": "0706eb28-58b4-4c43-b23f-ee0eaf38eb8a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31318,
+              "id": "0710b5bf-4e40-4eb9-9447-a5f771ba33d0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29147,
+              "id": "072476c7-bbc7-42dd-983f-1ec7abca1e5c"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32747,
+              "id": "0724eba8-4f4f-4298-bbef-3defe798bac3"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29705,
+              "id": "0725a528-e6ba-4fe4-8df5-97bf1506bc66"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34637,
+              "id": "0733d73d-f5c9-4e48-b421-c81ac77c34b9"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33991,
+              "id": "0734313f-0552-4848-9ec2-8fe3e6b1c677"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34998,
+              "id": "07386475-fb36-41c0-aac9-325ec507ed57"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29743,
+              "id": "0739d33e-15fe-41ea-9967-182895d67532"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30574,
+              "id": "074cd53d-2b9b-4bb2-b42d-9837994e77e1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32660,
+              "id": "0752fb0a-d1d4-4ab6-91aa-3c1a96d45df5"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32185,
+              "id": "0768954b-1311-47ba-a809-1c34a45aa7ed"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28803,
+              "id": "076f530a-98e6-4156-9c6c-0802ed063bc8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 28814,
+              "id": "077cf639-797d-4f63-9ff8-43226af4a4f1"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31840,
+              "id": "077d1932-4b65-48e7-9129-f441b0a7092e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31797,
+              "id": "078d9f27-31ca-47dc-8bb2-3f3e43114bdc"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30368,
+              "id": "07a24e8d-d790-4190-8556-a1726755442d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30482,
+              "id": "07b15612-189f-4a09-bf69-388aeaf59d26"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34121,
+              "id": "07b49cb7-d257-460d-9cac-92be17994e95"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30390,
+              "id": "07c51dfe-4cdb-4755-b8ea-a571480a0fcf"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32258,
+              "id": "07d43bc7-4a33-4a88-b86b-9770ee409e2d"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 30383,
+              "id": "07dd65d3-9622-46d9-9567-3a4ad3c7409b"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32675,
+              "id": "07edfd85-22ca-414c-a452-3b176198fdc6"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31026,
+              "id": "0800b97b-1626-4884-9f41-2771f7d539ad"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34670,
+              "id": "0805e6a7-135e-4829-adc4-125d41da840f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34408,
+              "id": "08062a6b-42cb-410a-8628-ab48b555dd9e"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34193,
+              "id": "0806679a-36a9-415b-9a25-9586783bb757"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31130,
+              "id": "08151db0-89e5-4afa-88bf-58083154f1e0"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29209,
+              "id": "081a18e9-602d-4942-a2fc-fac0723b5d35"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33272,
+              "id": "083cfd88-1fc8-452e-a5df-8bd52a1cc64f"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 34787,
+              "id": "083e8139-6977-471d-8f51-b77d581581e7"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 33927,
+              "id": "08437eba-081b-4ba9-8d2c-81193a1abdc8"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 32173,
+              "id": "084a0bcf-c265-48fd-973c-ad8a6b0e1b2a"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 31072,
+              "id": "084db87d-1215-42eb-bf4a-8e4319057556"
+            },
+            {
+              "created": "2018-09-14T11:11:50+00:00",
+              "drupal_internal__nid": 29529,
+              "id": "0852b231-df02-4971-98b1-76a10b9d32f2"
+            }
+          ],
+          "status": 200,
+          "url": "https://www.ufc.com/jsonapi/node/fight?sort=created%2Cid&page%5Blimit%5D=50&page%5Boffset%5D=150"
+        }
+      ],
+      "pages_ok": 4,
+      "pages_requested": 4,
+      "rows_seen": 200,
+      "sample_first": [
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 31393,
+          "id": "000d2b3b-79f3-44e8-b3f6-dcc8a095f2d7"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 32573,
+          "id": "0018eca8-05f5-45da-982c-7db3d9050e5a"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 33722,
+          "id": "001f090b-deb0-4865-a78d-2ad5d02670dd"
+        }
+      ],
+      "sample_last": [
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 32173,
+          "id": "084a0bcf-c265-48fd-973c-ad8a6b0e1b2a"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 31072,
+          "id": "084db87d-1215-42eb-bf4a-8e4319057556"
+        },
+        {
+          "created": "2018-09-14T11:11:50+00:00",
+          "drupal_internal__nid": 29529,
+          "id": "0852b231-df02-4971-98b1-76a10b9d32f2"
+        }
+      ],
+      "sort": "created,id"
+    }
+  ],
+  "decision_rule": "A production sort still requires a unique stable tie-breaker; bounded zero overlap alone is not sufficient.",
+  "endpoint": "/jsonapi/node/fight",
+  "offsets": [
+    0,
+    50,
+    100,
+    150
+  ],
+  "page_limit": 50,
+  "probed_at_utc": "2026-08-21T05:53:55.630862Z",
+  "schema_version": 1,
+  "zero_overlap_candidates_in_bounded_sample": [
+    "created",
+    "drupal_internal__nid",
+    "created,drupal_internal__nid",
+    "created,id"
+  ]
+}
