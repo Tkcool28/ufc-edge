@@ -1,0 +1,140 @@
+{
+  "ambiguous_name_examples": [
+    {
+      "greco_candidates": [
+        {
+          "name": "Jean Silva",
+          "url": "http://ufcstats.com/fighter-details/9211aae062b799d6"
+        },
+        {
+          "name": "Jean Silva",
+          "url": "http://ufcstats.com/fighter-details/52ef95b5860fb28c"
+        }
+      ],
+      "normalized_name": "jeansilva",
+      "ranking_fighter_name": "Jean Silva"
+    },
+    {
+      "greco_candidates": [
+        {
+          "name": "Michael McDonald",
+          "url": "http://ufcstats.com/fighter-details/d52ef694108f8235"
+        },
+        {
+          "name": "Michael McDonald",
+          "url": "http://ufcstats.com/fighter-details/d0314416a7f26527"
+        }
+      ],
+      "normalized_name": "michaelmcdonald",
+      "ranking_fighter_name": "Michael McDonald"
+    }
+  ],
+  "candidate_crosswalk_csv": "data/derived/identity/rankings_greco_name_crosswalk_candidate.csv",
+  "candidate_crosswalk_rows": 612,
+  "coverage_by_year": {
+    "2013": {
+      "ambiguous_exact_name": 32,
+      "unique_exact_name": 3366,
+      "unmatched_exact_name": 96
+    },
+    "2014": {
+      "ambiguous_exact_name": 46,
+      "unique_exact_name": 7126,
+      "unmatched_exact_name": 179
+    },
+    "2015": {
+      "ambiguous_exact_name": 37,
+      "unique_exact_name": 6304,
+      "unmatched_exact_name": 135
+    },
+    "2016": {
+      "ambiguous_exact_name": 36,
+      "unique_exact_name": 6177,
+      "unmatched_exact_name": 91
+    },
+    "2017": {
+      "ambiguous_exact_name": 7,
+      "unique_exact_name": 6410,
+      "unmatched_exact_name": 147
+    },
+    "2018": {
+      "unique_exact_name": 6932,
+      "unmatched_exact_name": 183
+    },
+    "2019": {
+      "unique_exact_name": 8317,
+      "unmatched_exact_name": 119
+    },
+    "2020": {
+      "unique_exact_name": 7806,
+      "unmatched_exact_name": 35
+    },
+    "2021": {
+      "unique_exact_name": 8479,
+      "unmatched_exact_name": 7
+    },
+    "2022": {
+      "unique_exact_name": 8470,
+      "unmatched_exact_name": 22
+    },
+    "2023": {
+      "unique_exact_name": 8845,
+      "unmatched_exact_name": 42
+    },
+    "2024": {
+      "unique_exact_name": 8429,
+      "unmatched_exact_name": 20
+    },
+    "2025": {
+      "ambiguous_exact_name": 30,
+      "unique_exact_name": 8565,
+      "unmatched_exact_name": 61
+    },
+    "2026": {
+      "ambiguous_exact_name": 19,
+      "unique_exact_name": 3875,
+      "unmatched_exact_name": 32
+    }
+  },
+  "decision": {
+    "candidate_rule": "Only exact normalized ranking display names resolving to one Greco fighter URL are emitted as candidates.",
+    "canonical_promoted": false,
+    "fuzzy_matching_used": false,
+    "historical_join_rule": "A ranking observation may be used only when ranking_date is strictly before or otherwise valid at the target prediction cutoff; future-nearest joins are prohibited.",
+    "unmatched_rule": "Unmatched or ambiguous names remain unresolved rather than guessed."
+  },
+  "distinct_name_status_counts": {
+    "ambiguous_exact_name": 2,
+    "unique_exact_name": 612,
+    "unmatched_exact_name": 12
+  },
+  "distinct_ranking_display_names": 626,
+  "generated_at_utc": "2026-08-21T21:29:23.745721Z",
+  "greco_normalized_name_collisions": 8,
+  "greco_source": "data/raw/greco1899/8e40eb945e11/ufc_fighter_details.csv",
+  "ranking_date_max": "2026-06-16",
+  "ranking_date_min": "2013-02-04",
+  "ranking_rows": 100477,
+  "rankings_source": "data/raw/tidytuesday_ufc_rankings/107ff6c70de0/ufc_rankings_dataset.csv",
+  "row_status_counts": {
+    "ambiguous_exact_name": 207,
+    "unique_exact_name": 99101,
+    "unmatched_exact_name": 1169
+  },
+  "row_unique_exact_fraction": 0.9863053236063974,
+  "schema_version": 1,
+  "unmatched_name_examples": [
+    "Antonio Rogerio Nogueira",
+    "Bruno Gustavo da Silva",
+    "Costas Philippou",
+    "Cris Cyborg",
+    "Francisco Rivera Jr.",
+    "Luis Henrique Barbosa",
+    "Mara Borella",
+    "NA",
+    "Patricio Freire",
+    "Ronaldo Souza",
+    "Tim Johnson",
+    "Ulka Sasaki"
+  ]
+}
