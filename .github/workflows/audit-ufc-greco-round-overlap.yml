@@ -4,12 +4,12 @@ on:
   push:
     branches: [main]
     paths:
-      - "pipelines/audit_ufc_greco_round_overlap_v2.py"
+      - "pipelines/audit_ufc_greco_round_overlap_v3.py"
       - "src/ufc_edge/data/manifest_readers.py"
       - "src/ufc_edge/data/parsing.py"
+      - "provenance/audits/fightmetric_color_semantics_latest.json"
       - ".github/workflows/audit-ufc-greco-round-overlap.yml"
-      - "data/derived/identity/ufc_fightmetric_fight_crosswalk_candidate.csv"
-      - "data/derived/identity/ufc_fight_event_bridge_candidate.csv"
+      - "data/derived/identity/ufc_greco_fight_alignment_candidate.csv"
   workflow_dispatch:
 
 permissions:
@@ -32,10 +32,10 @@ jobs:
         shell: bash
         run: |
           set -uo pipefail
-          mkdir -p provenance/runs data/derived/identity data/derived/qa
+          mkdir -p provenance/runs data/derived/qa
           log="provenance/runs/ufc_greco_round_overlap_${GITHUB_RUN_ID}.log"
           set +e
-          python pipelines/audit_ufc_greco_round_overlap_v2.py >"$log" 2>&1
+          python pipelines/audit_ufc_greco_round_overlap_v3.py >"$log" 2>&1
           code=$?
           set -e
 
@@ -44,7 +44,7 @@ jobs:
           from datetime import datetime, timezone
           code, log = int(sys.argv[1]), sys.argv[2]
           payload = {
-              "schema_version": 2,
+              "schema_version": 3,
               "audit": "ufc_greco_round_overlap",
               "status": "success" if code == 0 else "failed",
               "exit_code": code,
@@ -55,13 +55,11 @@ jobs:
               "outputs": [
                   "provenance/audits/ufc_greco_round_overlap_latest.json",
                   "provenance/audits/ufc_greco_round_overlap_latest.md",
-                  "data/derived/identity/ufc_greco_fight_alignment_candidate.csv",
                   "data/derived/qa/fightmetric_duplicate_version_greco_scores.csv",
               ] if code == 0 else [],
           }
           with open("provenance/runs/ufc_greco_round_overlap_latest.json", "w", encoding="utf-8") as fh:
-              json.dump(payload, fh, indent=2, sort_keys=True)
-              fh.write("\n")
+              json.dump(payload, fh, indent=2, sort_keys=True); fh.write("\n")
           PY
 
           git config user.name "github-actions[bot]"
@@ -70,7 +68,6 @@ jobs:
           for p in \
             provenance/audits/ufc_greco_round_overlap_latest.json \
             provenance/audits/ufc_greco_round_overlap_latest.md \
-            data/derived/identity/ufc_greco_fight_alignment_candidate.csv \
             data/derived/qa/fightmetric_duplicate_version_greco_scores.csv; do
             if [ -f "$p" ]; then git add "$p"; fi
           done
