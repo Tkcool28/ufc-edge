@@ -1,0 +1,38 @@
+name: Probe official UFC content indexes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/probe_ufc_content_indexes.py"
+      - ".github/workflows/probe-ufc-content-indexes.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run bounded probe
+        run: python pipelines/probe_ufc_content_indexes.py
+      - name: Commit evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add provenance/audits/ufc_content_index_probe_latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Probe official UFC content indexes [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
