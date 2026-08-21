@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "source": "Official UFC.com public news pages enumerated from official sitemap",
+  "series_id": "20260821T210000Z",
+  "catalog_path": "data/derived/discovery/ufc_content_candidates.csv",
+  "catalog_blob_sha": "ea32cabcae7dbc7476e9dacf7ff958d2f54895f4",
+  "chunk_size": 75,
+  "families": {
+    "weigh_in": {
+      "status": "active",
+      "next_index": 0,
+      "candidate_count": 716,
+      "final_manifest": null
+    },
+    "scorecard": {
+      "status": "active",
+      "next_index": 0,
+      "candidate_count": 583,
+      "final_manifest": null
+    }
+  },
+  "rules": {
+    "raw_html_is_immutable": true,
+    "http_404_410_403_are_coverage_evidence": true,
+    "structured_extraction_is_separate": true,
+    "only_cataloged_official_ufc_news_urls_are_fetched": true
+  },
+  "notes": "State is operational only. Family-level manifest.json is the completeness marker."
+}
