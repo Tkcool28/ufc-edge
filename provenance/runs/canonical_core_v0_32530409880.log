@@ -1,0 +1,4 @@
+CONTRACT_OK version=0.3.0-draft tables=13 fields=151 missing_is_not_zero=true round_zero_actual=false sig_splits=true
+SOURCE_MAP_OK version=0.3.0-draft mappings=140 statuses={"provisional": 38, "rejected": 5, "unresolved": 27, "verified": 70} source_count=8
+{"events": 784, "exclusions": 41722, "field_provenance": 0, "fighter_round_stats": 66, "fighters": 4600, "fights": 8769, "source_identity_links": 30347}
+CANONICAL_DATA_INVALID: fighters: header mismatch expected=['canonical_name', 'dob', 'fighter_id', 'height_cm', 'leg_reach_cm', 'reach_cm', 'stance'] got=['fighter_id', 'canonical_name', 'dob', 'height_cm', 'reach_cm', 'leg_reach_cm', 'stance']
