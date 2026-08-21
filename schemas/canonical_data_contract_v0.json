@@ -1,239 +1,1054 @@
 {
-  "contract_version": "0.2.0-draft",
-  "status": "data_phase_draft",
   "canonical_units": {
+    "date": "YYYY-MM-DD",
     "duration": "seconds",
     "height_reach": "centimeters",
-    "weight": "pounds",
-    "date": "YYYY-MM-DD",
-    "timestamp": "ISO-8601 UTC"
+    "quantized_position_time": "whole-minute floor bucket plus explicit interval bounds",
+    "timestamp": "ISO-8601 UTC",
+    "weight": "pounds"
   },
+  "contract_version": "0.3.0-draft",
   "global_rules": {
-    "missing_is_not_zero": true,
-    "source_ids_are_not_canonical_ids": true,
     "display_name_only_identity_is_trusted": false,
-    "round_zero_is_actual_round": false,
+    "missing_is_not_zero": true,
     "percentages_prefer_count_numerators_denominators": true,
+    "quantized_time_must_not_be_fabricated_as_exact_seconds": true,
+    "round_zero_is_actual_round": false,
+    "source_ids_are_not_canonical_ids": true,
     "strike_split_fields_are_significant_strikes": true
   },
+  "status": "data_phase_draft",
   "tables": {
-    "fighters": {
-      "grain": "one canonical fighter/person",
-      "primary_key": ["fighter_id"],
-      "fields": {
-        "fighter_id": {"type": "string", "nullable": false},
-        "canonical_name": {"type": "string", "nullable": false},
-        "dob": {"type": "date", "nullable": true},
-        "height_cm": {"type": "number", "nullable": true, "unit": "cm", "min": 100, "max": 250},
-        "reach_cm": {"type": "number", "nullable": true, "unit": "cm", "min": 100, "max": 280},
-        "leg_reach_cm": {"type": "number", "nullable": true, "unit": "cm", "min": 80, "max": 250},
-        "stance": {"type": "string", "nullable": true}
-      }
-    },
-    "fighter_profile_snapshots": {
-      "grain": "one dated provider-independent profile observation for one fighter",
-      "primary_key": ["fighter_id", "observed_at_utc"],
-      "fields": {
-        "fighter_id": {"type": "string", "nullable": false},
-        "observed_at_utc": {"type": "timestamp", "nullable": false},
-        "listed_weight_lbs": {"type": "number", "nullable": true, "unit": "lb", "min": 80, "max": 400},
-        "listed_weight_class": {"type": "string", "nullable": true},
-        "gym_text": {"type": "string", "nullable": true},
-        "fighting_style_text": {"type": "string", "nullable": true},
-        "status_text": {"type": "string", "nullable": true},
-        "residence_text": {"type": "string", "nullable": true},
-        "origin_text": {"type": "string", "nullable": true}
-      }
-    },
     "events": {
+      "fields": {
+        "event_date": {
+          "nullable": false,
+          "type": "date"
+        },
+        "event_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "event_name": {
+          "nullable": false,
+          "type": "string"
+        },
+        "event_start_utc": {
+          "nullable": true,
+          "type": "timestamp"
+        },
+        "location": {
+          "nullable": true,
+          "type": "string"
+        },
+        "promotion": {
+          "nullable": false,
+          "type": "string"
+        }
+      },
       "grain": "one combat-sports event",
-      "primary_key": ["event_id"],
-      "fields": {
-        "event_id": {"type": "string", "nullable": false},
-        "promotion": {"type": "string", "nullable": false},
-        "event_name": {"type": "string", "nullable": false},
-        "event_date": {"type": "date", "nullable": false},
-        "event_start_utc": {"type": "timestamp", "nullable": true},
-        "location": {"type": "string", "nullable": true}
-      }
+      "primary_key": [
+        "event_id"
+      ]
     },
-    "fights": {
-      "grain": "one bout",
-      "primary_key": ["fight_id"],
+    "field_provenance": {
       "fields": {
-        "fight_id": {"type": "string", "nullable": false},
-        "event_id": {"type": "string", "nullable": false},
-        "fighter_a_id": {"type": "string", "nullable": false},
-        "fighter_b_id": {"type": "string", "nullable": false},
-        "winner_id": {"type": "string", "nullable": true},
-        "result": {"type": "enum", "nullable": false, "values": ["win_loss", "draw", "no_contest", "other", "unknown"]},
-        "method": {"type": "enum", "nullable": true, "values": ["KO_TKO", "SUBMISSION", "DECISION", "DQ", "DRAW", "NO_CONTEST", "OTHER", "UNKNOWN"]},
-        "finish_round": {"type": "integer", "nullable": true, "min": 1, "max": 10},
-        "finish_time_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0, "max": 1800},
-        "scheduled_rounds": {"type": "integer", "nullable": true, "min": 1, "max": 10},
-        "weight_class": {"type": "string", "nullable": true},
-        "title_bout": {"type": "boolean", "nullable": true},
-        "promotion": {"type": "string", "nullable": false}
-      }
-    },
-    "officials": {
-      "grain": "one canonical combat-sports official",
-      "primary_key": ["official_id"],
-      "fields": {
-        "official_id": {"type": "string", "nullable": false},
-        "canonical_name": {"type": "string", "nullable": false}
-      }
+        "field_name": {
+          "nullable": false,
+          "type": "string"
+        },
+        "quality_note": {
+          "nullable": true,
+          "type": "string"
+        },
+        "row_key": {
+          "nullable": false,
+          "type": "string"
+        },
+        "selection_rule": {
+          "nullable": true,
+          "type": "string"
+        },
+        "selection_status": {
+          "nullable": false,
+          "type": "enum",
+          "values": [
+            "selected",
+            "agreeing",
+            "conflicting",
+            "rejected",
+            "unmapped"
+          ]
+        },
+        "source_field_name": {
+          "nullable": true,
+          "type": "string"
+        },
+        "source_name": {
+          "nullable": false,
+          "type": "string"
+        },
+        "source_record_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "source_snapshot_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "table_name": {
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one source contribution/selection for one canonical field",
+      "primary_key": [
+        "table_name",
+        "row_key",
+        "field_name",
+        "source_name",
+        "source_snapshot_id",
+        "source_record_id"
+      ]
     },
     "fight_officials": {
-      "grain": "one official assignment to one fight and role",
-      "primary_key": ["fight_id", "official_id", "role"],
       "fields": {
-        "fight_id": {"type": "string", "nullable": false},
-        "official_id": {"type": "string", "nullable": false},
-        "role": {"type": "enum", "nullable": false, "values": ["referee", "judge", "other"]}
-      }
-    },
-    "fighter_round_stats": {
-      "grain": "one fighter in one actual round of one fight",
-      "primary_key": ["fight_id", "fighter_id", "round"],
-      "row_rules": ["round >= 1", "fighter_id != opponent_id"],
-      "fields": {
-        "fight_id": {"type": "string", "nullable": false},
-        "fighter_id": {"type": "string", "nullable": false},
-        "opponent_id": {"type": "string", "nullable": false},
-        "round": {"type": "integer", "nullable": false, "min": 1, "max": 10},
-        "knockdowns": {"type": "integer", "nullable": true, "min": 0},
-        "control_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "reversals": {"type": "integer", "nullable": true, "min": 0},
-        "submission_attempts": {"type": "integer", "nullable": true, "min": 0},
-        "sig_strikes_landed": {"type": "integer", "nullable": true, "min": 0},
-        "sig_strikes_attempted": {"type": "integer", "nullable": true, "min": 0},
-        "total_strikes_landed": {"type": "integer", "nullable": true, "min": 0},
-        "total_strikes_attempted": {"type": "integer", "nullable": true, "min": 0},
-        "takedowns_landed": {"type": "integer", "nullable": true, "min": 0},
-        "takedowns_attempted": {"type": "integer", "nullable": true, "min": 0},
-        "sig_head_landed": {"type": "integer", "nullable": true, "min": 0},
-        "sig_head_attempted": {"type": "integer", "nullable": true, "min": 0},
-        "sig_body_landed": {"type": "integer", "nullable": true, "min": 0},
-        "sig_body_attempted": {"type": "integer", "nullable": true, "min": 0},
-        "sig_leg_landed": {"type": "integer", "nullable": true, "min": 0},
-        "sig_leg_attempted": {"type": "integer", "nullable": true, "min": 0},
-        "sig_distance_landed": {"type": "integer", "nullable": true, "min": 0},
-        "sig_distance_attempted": {"type": "integer", "nullable": true, "min": 0},
-        "sig_clinch_landed": {"type": "integer", "nullable": true, "min": 0},
-        "sig_clinch_attempted": {"type": "integer", "nullable": true, "min": 0},
-        "sig_ground_landed": {"type": "integer", "nullable": true, "min": 0},
-        "sig_ground_attempted": {"type": "integer", "nullable": true, "min": 0}
+        "fight_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "official_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "role": {
+          "nullable": false,
+          "type": "enum",
+          "values": [
+            "referee",
+            "judge",
+            "other"
+          ]
+        }
       },
-      "pair_rules": [
-        ["sig_strikes_landed", "sig_strikes_attempted"],
-        ["total_strikes_landed", "total_strikes_attempted"],
-        ["takedowns_landed", "takedowns_attempted"],
-        ["sig_head_landed", "sig_head_attempted"],
-        ["sig_body_landed", "sig_body_attempted"],
-        ["sig_leg_landed", "sig_leg_attempted"],
-        ["sig_distance_landed", "sig_distance_attempted"],
-        ["sig_clinch_landed", "sig_clinch_attempted"],
-        ["sig_ground_landed", "sig_ground_attempted"]
+      "grain": "one official assignment to one fight and role",
+      "primary_key": [
+        "fight_id",
+        "official_id",
+        "role"
+      ]
+    },
+    "fighter_profile_snapshots": {
+      "fields": {
+        "fighter_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "fighting_style_text": {
+          "nullable": true,
+          "type": "string"
+        },
+        "gym_text": {
+          "nullable": true,
+          "type": "string"
+        },
+        "listed_weight_class": {
+          "nullable": true,
+          "type": "string"
+        },
+        "listed_weight_lbs": {
+          "max": 400,
+          "min": 80,
+          "nullable": true,
+          "type": "number",
+          "unit": "lb"
+        },
+        "observed_at_utc": {
+          "nullable": false,
+          "type": "timestamp"
+        },
+        "origin_text": {
+          "nullable": true,
+          "type": "string"
+        },
+        "residence_text": {
+          "nullable": true,
+          "type": "string"
+        },
+        "status_text": {
+          "nullable": true,
+          "type": "string"
+        }
+      },
+      "grain": "one dated provider-independent profile observation for one fighter",
+      "primary_key": [
+        "fighter_id",
+        "observed_at_utc"
       ]
     },
     "fighter_round_position": {
+      "fields": {
+        "back_control_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "back_control_lower_sec": {
+          "derived_from": "back_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "back_control_upper_sec": {
+          "derived_from": "back_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "clinch_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "clinch_lower_sec": {
+          "derived_from": "clinch_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "clinch_upper_sec": {
+          "derived_from": "clinch_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "distance_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "distance_lower_sec": {
+          "derived_from": "distance_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "distance_upper_sec": {
+          "derived_from": "distance_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "fight_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "fighter_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "ground_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "ground_control_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "ground_control_lower_sec": {
+          "derived_from": "ground_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "ground_control_upper_sec": {
+          "derived_from": "ground_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "ground_lower_sec": {
+          "derived_from": "ground_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "ground_upper_sec": {
+          "derived_from": "ground_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "guard_control_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "guard_control_lower_sec": {
+          "derived_from": "guard_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "guard_control_upper_sec": {
+          "derived_from": "guard_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "half_guard_control_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "half_guard_control_lower_sec": {
+          "derived_from": "half_guard_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "half_guard_control_upper_sec": {
+          "derived_from": "half_guard_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "misc_ground_control_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "misc_ground_control_lower_sec": {
+          "derived_from": "misc_ground_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "misc_ground_control_upper_sec": {
+          "derived_from": "misc_ground_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "mount_control_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "mount_control_lower_sec": {
+          "derived_from": "mount_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "mount_control_upper_sec": {
+          "derived_from": "mount_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "neutral_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "neutral_lower_sec": {
+          "derived_from": "neutral_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "neutral_upper_sec": {
+          "derived_from": "neutral_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "round": {
+          "max": 10,
+          "min": 1,
+          "nullable": false,
+          "type": "integer"
+        },
+        "side_control_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "side_control_lower_sec": {
+          "derived_from": "side_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "side_control_upper_sec": {
+          "derived_from": "side_control_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "standing_bucket_min": {
+          "min": 0,
+          "nullable": true,
+          "quantization": "floor_whole_minutes",
+          "semantics": "source interval bucket; not an exact duration",
+          "type": "integer",
+          "unit": "min"
+        },
+        "standing_lower_sec": {
+          "derived_from": "standing_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive lower bound = bucket_min * 60",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "standing_upper_sec": {
+          "derived_from": "standing_bucket_min",
+          "min": 0,
+          "nullable": true,
+          "semantics": "inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use",
+          "type": "integer",
+          "unit": "sec"
+        },
+        "standups": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        }
+      },
       "grain": "one fighter in one actual round of one fight",
-      "primary_key": ["fight_id", "fighter_id", "round"],
-      "row_rules": ["round >= 1"],
-      "fields": {
-        "fight_id": {"type": "string", "nullable": false},
-        "fighter_id": {"type": "string", "nullable": false},
-        "round": {"type": "integer", "nullable": false, "min": 1, "max": 10},
-        "standing_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "neutral_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "distance_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "clinch_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "ground_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "ground_control_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "guard_control_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "half_guard_control_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "side_control_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "mount_control_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "back_control_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "misc_ground_control_sec": {"type": "integer", "nullable": true, "unit": "sec", "min": 0},
-        "standups": {"type": "integer", "nullable": true, "min": 0}
-      }
+      "notes": "Official UFC archived position/TIP values are floor whole-minute buckets. Exact control seconds remain in fighter_round_stats.control_sec from a precise source.",
+      "primary_key": [
+        "fight_id",
+        "fighter_id",
+        "round"
+      ],
+      "row_rules": [
+        "round >= 1",
+        "quantized position time must retain bucket semantics",
+        "lower_sec and upper_sec are interval bounds, not observed exact durations"
+      ]
     },
-    "rankings": {
-      "grain": "one fighter/division ranking observation on one date",
-      "primary_key": ["ranking_date", "fighter_id", "weight_class", "ranking_body"],
+    "fighter_round_stats": {
       "fields": {
-        "ranking_date": {"type": "date", "nullable": false},
-        "fighter_id": {"type": "string", "nullable": false},
-        "weight_class": {"type": "string", "nullable": false},
-        "rank_numeric": {"type": "integer", "nullable": true, "min": 0},
-        "is_champion": {"type": "boolean", "nullable": true},
-        "ranking_body": {"type": "string", "nullable": false}
-      }
+        "control_sec": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer",
+          "unit": "sec"
+        },
+        "fight_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "fighter_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "knockdowns": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "opponent_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "reversals": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "round": {
+          "max": 10,
+          "min": 1,
+          "nullable": false,
+          "type": "integer"
+        },
+        "sig_body_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_body_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_clinch_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_clinch_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_distance_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_distance_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_ground_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_ground_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_head_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_head_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_leg_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_leg_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_strikes_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "sig_strikes_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "submission_attempts": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "takedowns_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "takedowns_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "total_strikes_attempted": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "total_strikes_landed": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        }
+      },
+      "grain": "one fighter in one actual round of one fight",
+      "pair_rules": [
+        [
+          "sig_strikes_landed",
+          "sig_strikes_attempted"
+        ],
+        [
+          "total_strikes_landed",
+          "total_strikes_attempted"
+        ],
+        [
+          "takedowns_landed",
+          "takedowns_attempted"
+        ],
+        [
+          "sig_head_landed",
+          "sig_head_attempted"
+        ],
+        [
+          "sig_body_landed",
+          "sig_body_attempted"
+        ],
+        [
+          "sig_leg_landed",
+          "sig_leg_attempted"
+        ],
+        [
+          "sig_distance_landed",
+          "sig_distance_attempted"
+        ],
+        [
+          "sig_clinch_landed",
+          "sig_clinch_attempted"
+        ],
+        [
+          "sig_ground_landed",
+          "sig_ground_attempted"
+        ]
+      ],
+      "primary_key": [
+        "fight_id",
+        "fighter_id",
+        "round"
+      ],
+      "row_rules": [
+        "round >= 1",
+        "fighter_id != opponent_id"
+      ]
     },
-    "weigh_ins": {
-      "grain": "one fighter fight-specific weigh-in attempt",
-      "primary_key": ["fight_id", "fighter_id", "attempt_number"],
+    "fighters": {
       "fields": {
-        "fight_id": {"type": "string", "nullable": false},
-        "fighter_id": {"type": "string", "nullable": false},
-        "weigh_in_date": {"type": "date", "nullable": true},
-        "attempt_number": {"type": "integer", "nullable": false, "min": 1},
-        "scale_weight_lbs": {"type": "number", "nullable": true, "unit": "lb", "min": 80, "max": 400},
-        "contract_limit_lbs": {"type": "number", "nullable": true, "unit": "lb", "min": 80, "max": 400},
-        "missed_weight": {"type": "boolean", "nullable": true},
-        "pounds_over": {"type": "number", "nullable": true, "unit": "lb", "min": 0},
-        "catchweight_bout": {"type": "boolean", "nullable": true},
-        "purse_penalty_pct": {"type": "number", "nullable": true, "unit": "percent", "min": 0, "max": 100},
-        "official_status_text": {"type": "string", "nullable": true}
-      }
+        "canonical_name": {
+          "nullable": false,
+          "type": "string"
+        },
+        "dob": {
+          "nullable": true,
+          "type": "date"
+        },
+        "fighter_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "height_cm": {
+          "max": 250,
+          "min": 100,
+          "nullable": true,
+          "type": "number",
+          "unit": "cm"
+        },
+        "leg_reach_cm": {
+          "max": 250,
+          "min": 80,
+          "nullable": true,
+          "type": "number",
+          "unit": "cm"
+        },
+        "reach_cm": {
+          "max": 280,
+          "min": 100,
+          "nullable": true,
+          "type": "number",
+          "unit": "cm"
+        },
+        "stance": {
+          "nullable": true,
+          "type": "string"
+        }
+      },
+      "grain": "one canonical fighter/person",
+      "primary_key": [
+        "fighter_id"
+      ]
+    },
+    "fights": {
+      "fields": {
+        "event_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "fight_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "fighter_a_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "fighter_b_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "finish_round": {
+          "max": 10,
+          "min": 1,
+          "nullable": true,
+          "type": "integer"
+        },
+        "finish_time_sec": {
+          "max": 1800,
+          "min": 0,
+          "nullable": true,
+          "type": "integer",
+          "unit": "sec"
+        },
+        "method": {
+          "nullable": true,
+          "type": "enum",
+          "values": [
+            "KO_TKO",
+            "SUBMISSION",
+            "DECISION",
+            "DQ",
+            "DRAW",
+            "NO_CONTEST",
+            "OTHER",
+            "UNKNOWN"
+          ]
+        },
+        "promotion": {
+          "nullable": false,
+          "type": "string"
+        },
+        "result": {
+          "nullable": false,
+          "type": "enum",
+          "values": [
+            "win_loss",
+            "draw",
+            "no_contest",
+            "other",
+            "unknown"
+          ]
+        },
+        "scheduled_rounds": {
+          "max": 10,
+          "min": 1,
+          "nullable": true,
+          "type": "integer"
+        },
+        "title_bout": {
+          "nullable": true,
+          "type": "boolean"
+        },
+        "weight_class": {
+          "nullable": true,
+          "type": "string"
+        },
+        "winner_id": {
+          "nullable": true,
+          "type": "string"
+        }
+      },
+      "grain": "one bout",
+      "primary_key": [
+        "fight_id"
+      ]
     },
     "judge_round_scores": {
-      "grain": "one judge score for one fighter in one actual round",
-      "primary_key": ["fight_id", "round", "judge_name", "fighter_id"],
       "fields": {
-        "fight_id": {"type": "string", "nullable": false},
-        "round": {"type": "integer", "nullable": false, "min": 1, "max": 10},
-        "judge_id": {"type": "string", "nullable": true},
-        "judge_name": {"type": "string", "nullable": false},
-        "fighter_id": {"type": "string", "nullable": false},
-        "opponent_id": {"type": "string", "nullable": false},
-        "points": {"type": "integer", "nullable": false, "min": 0, "max": 10}
-      }
+        "fight_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "fighter_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "judge_id": {
+          "nullable": true,
+          "type": "string"
+        },
+        "judge_name": {
+          "nullable": false,
+          "type": "string"
+        },
+        "opponent_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "points": {
+          "max": 10,
+          "min": 0,
+          "nullable": false,
+          "type": "integer"
+        },
+        "round": {
+          "max": 10,
+          "min": 1,
+          "nullable": false,
+          "type": "integer"
+        }
+      },
+      "grain": "one judge score for one fighter in one actual round",
+      "primary_key": [
+        "fight_id",
+        "round",
+        "judge_name",
+        "fighter_id"
+      ]
+    },
+    "officials": {
+      "fields": {
+        "canonical_name": {
+          "nullable": false,
+          "type": "string"
+        },
+        "official_id": {
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one canonical combat-sports official",
+      "primary_key": [
+        "official_id"
+      ]
+    },
+    "rankings": {
+      "fields": {
+        "fighter_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "is_champion": {
+          "nullable": true,
+          "type": "boolean"
+        },
+        "rank_numeric": {
+          "min": 0,
+          "nullable": true,
+          "type": "integer"
+        },
+        "ranking_body": {
+          "nullable": false,
+          "type": "string"
+        },
+        "ranking_date": {
+          "nullable": false,
+          "type": "date"
+        },
+        "weight_class": {
+          "nullable": false,
+          "type": "string"
+        }
+      },
+      "grain": "one fighter/division ranking observation on one date",
+      "primary_key": [
+        "ranking_date",
+        "fighter_id",
+        "weight_class",
+        "ranking_body"
+      ]
     },
     "source_identity_links": {
+      "fields": {
+        "canonical_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "entity_type": {
+          "nullable": false,
+          "type": "enum",
+          "values": [
+            "fighter",
+            "event",
+            "fight",
+            "judge",
+            "official"
+          ]
+        },
+        "match_confidence": {
+          "max": 1,
+          "min": 0,
+          "nullable": true,
+          "type": "number"
+        },
+        "match_method": {
+          "nullable": false,
+          "type": "string"
+        },
+        "review_status": {
+          "nullable": false,
+          "type": "enum",
+          "values": [
+            "trusted",
+            "candidate",
+            "rejected",
+            "needs_review"
+          ]
+        },
+        "source_entity_type": {
+          "nullable": true,
+          "type": "string"
+        },
+        "source_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "source_name": {
+          "nullable": false,
+          "type": "string"
+        },
+        "source_url": {
+          "nullable": true,
+          "type": "string"
+        },
+        "valid_from": {
+          "nullable": true,
+          "type": "date"
+        },
+        "valid_to": {
+          "nullable": true,
+          "type": "date"
+        }
+      },
       "grain": "one canonical-to-provider identity link",
-      "primary_key": ["entity_type", "canonical_id", "source_name", "source_id"],
-      "fields": {
-        "entity_type": {"type": "enum", "nullable": false, "values": ["fighter", "event", "fight", "judge", "official"]},
-        "canonical_id": {"type": "string", "nullable": false},
-        "source_name": {"type": "string", "nullable": false},
-        "source_entity_type": {"type": "string", "nullable": true},
-        "source_id": {"type": "string", "nullable": false},
-        "source_url": {"type": "string", "nullable": true},
-        "match_method": {"type": "string", "nullable": false},
-        "match_confidence": {"type": "number", "nullable": true, "min": 0, "max": 1},
-        "review_status": {"type": "enum", "nullable": false, "values": ["trusted", "candidate", "rejected", "needs_review"]},
-        "valid_from": {"type": "date", "nullable": true},
-        "valid_to": {"type": "date", "nullable": true}
-      }
+      "primary_key": [
+        "entity_type",
+        "canonical_id",
+        "source_name",
+        "source_id"
+      ]
     },
-    "field_provenance": {
-      "grain": "one source contribution/selection for one canonical field",
-      "primary_key": ["table_name", "row_key", "field_name", "source_name", "source_snapshot_id", "source_record_id"],
+    "weigh_ins": {
       "fields": {
-        "table_name": {"type": "string", "nullable": false},
-        "row_key": {"type": "string", "nullable": false},
-        "field_name": {"type": "string", "nullable": false},
-        "source_name": {"type": "string", "nullable": false},
-        "source_snapshot_id": {"type": "string", "nullable": false},
-        "source_record_id": {"type": "string", "nullable": false},
-        "source_field_name": {"type": "string", "nullable": true},
-        "selection_status": {"type": "enum", "nullable": false, "values": ["selected", "agreeing", "conflicting", "rejected", "unmapped"]},
-        "selection_rule": {"type": "string", "nullable": true},
-        "quality_note": {"type": "string", "nullable": true}
-      }
+        "attempt_number": {
+          "min": 1,
+          "nullable": false,
+          "type": "integer"
+        },
+        "catchweight_bout": {
+          "nullable": true,
+          "type": "boolean"
+        },
+        "contract_limit_lbs": {
+          "max": 400,
+          "min": 80,
+          "nullable": true,
+          "type": "number",
+          "unit": "lb"
+        },
+        "fight_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "fighter_id": {
+          "nullable": false,
+          "type": "string"
+        },
+        "missed_weight": {
+          "nullable": true,
+          "type": "boolean"
+        },
+        "official_status_text": {
+          "nullable": true,
+          "type": "string"
+        },
+        "pounds_over": {
+          "min": 0,
+          "nullable": true,
+          "type": "number",
+          "unit": "lb"
+        },
+        "purse_penalty_pct": {
+          "max": 100,
+          "min": 0,
+          "nullable": true,
+          "type": "number",
+          "unit": "percent"
+        },
+        "scale_weight_lbs": {
+          "max": 400,
+          "min": 80,
+          "nullable": true,
+          "type": "number",
+          "unit": "lb"
+        },
+        "weigh_in_date": {
+          "nullable": true,
+          "type": "date"
+        }
+      },
+      "grain": "one fighter fight-specific weigh-in attempt",
+      "primary_key": [
+        "fight_id",
+        "fighter_id",
+        "attempt_number"
+      ]
     }
   }
 }

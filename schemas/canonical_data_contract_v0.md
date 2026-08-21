@@ -1,7 +1,7 @@
 # Canonical Data Contract v0
 
 Status: **DATA-PHASE DRAFT — semantic contract, not feature contract**  
-Machine contract: `schemas/canonical_data_contract_v0.json` (`0.2.0-draft`)
+Machine contract: `schemas/canonical_data_contract_v0.json` (`0.3.0-draft`)
 
 Purpose: every accepted provider can have a different raw format, but downstream UFC Edge code gets one stable definition for each concept.
 
@@ -37,7 +37,8 @@ Display-name-only matching can create a review candidate but never a trusted ide
 
 - height/reach: centimeters
 - weight: pounds
-- durations: integer seconds
+- exact durations: integer seconds
+- archived UFC position/TIP time: floor whole-minute buckets plus explicit interval bounds; never fabricated as exact seconds
 - dates: `YYYY-MM-DD`
 - timestamps: ISO-8601 UTC
 - event/stat counts: non-negative integers
@@ -202,24 +203,22 @@ Rules:
 
 Grain: one fighter in one actual round. This is the simulator-oriented Time In Position extension.
 
+Official UFC archived position/TIP values are **floor whole-minute buckets**, not exact seconds. The audit in `provenance/fightmetric_position_time_semantics.md` showed this directly. Canonical storage therefore preserves the bucket and explicit quantization interval instead of inventing second-level precision.
+
+For each position family (`standing`, `neutral`, `distance`, `clinch`, `ground`, `ground_control`, `guard_control`, `half_guard_control`, `side_control`, `mount_control`, `back_control`, `misc_ground_control`) store:
+
+- `<position>_bucket_min` — observed integer floor-minute bucket
+- `<position>_lower_sec` — inclusive interval lower bound (`bucket_min * 60`)
+- `<position>_upper_sec` — inclusive quantization upper bound (`bucket_min * 60 + 59`), to be intersected with known round duration before use
+
+Also store:
+
 - `fight_id`
 - `fighter_id`
-- `round`
-- `standing_sec`
-- `neutral_sec`
-- `distance_sec`
-- `clinch_sec`
-- `ground_sec`
-- `ground_control_sec`
-- `guard_control_sec`
-- `half_guard_control_sec`
-- `side_control_sec`
-- `mount_control_sec`
-- `back_control_sec`
-- `misc_ground_control_sec`
+- `round` (`>=1`)
 - `standups`
 
-General `control_sec` has one canonical home (`fighter_round_stats`) and is intentionally **not duplicated** here.
+The lower/upper fields are **bounds, not observed exact durations**. General exact `control_sec` has one canonical home (`fighter_round_stats`) and is intentionally not duplicated here.
 
 ## 4. Additive canonical tables
 

@@ -11,7 +11,7 @@ from pathlib import Path
 
 CONTRACT = Path("schemas/canonical_data_contract_v0.json")
 ALLOWED_TYPES = {"string", "integer", "number", "boolean", "date", "timestamp", "enum"}
-ALLOWED_UNITS = {"cm", "lb", "sec", "percent"}
+ALLOWED_UNITS = {"cm", "lb", "sec", "min", "percent"}
 
 REQUIRED_CORE = {
     "fighters": {"fighter_id", "canonical_name", "dob", "height_cm", "reach_cm", "stance"},
@@ -50,6 +50,8 @@ def main() -> int:
         fail("round zero must not be treated as an actual round")
     if rules.get("strike_split_fields_are_significant_strikes") is not True:
         fail("strike split family must stay explicitly significant-strike scoped")
+    if rules.get("quantized_time_must_not_be_fabricated_as_exact_seconds") is not True:
+        fail("quantized position time must not be fabricated as exact seconds")
 
     field_count = 0
     for table_name, table in tables.items():
