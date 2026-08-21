@@ -1,0 +1,2390 @@
+{
+  "clean_0_5_internal_relationships": {
+    "ground_control_minus_subposition_sum": {
+      "comparisons": 25908,
+      "difference_counts": {
+        "0": 22552,
+        "1": 2880,
+        "2": 457,
+        "3": 19
+      },
+      "within_one_bucket_fraction": 0.9816272965879265
+    },
+    "standing_minus_distance_plus_clinch": {
+      "comparisons": 26268,
+      "difference_counts": {
+        "0": 16960,
+        "1": 9308
+      },
+      "within_one_bucket_fraction": 1.0
+    }
+  },
+  "decision": {
+    "canonical_seconds_promoted": false,
+    "dominant_0_5_bucket_encoding": true,
+    "gt_5_values_canonical_eligible": false,
+    "rule": "Treat >5 values in actual-round positional time fields as source anomalies pending independent proof. Preserve all raw rows; future adapters may expose clean 0-5 coarse buckets separately, but must never synthesize seconds."
+  },
+  "fields": {
+    "back_ctl_time": {
+      "gt_5": 2,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26310,
+      "roundscale_0_5_fraction_of_nonnull": 0.9999239890544238
+    },
+    "clinch_time": {
+      "gt_5": 12,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26300,
+      "roundscale_0_5_fraction_of_nonnull": 0.999543934326543
+    },
+    "control_time": {
+      "gt_5": 28,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26284,
+      "roundscale_0_5_fraction_of_nonnull": 0.9989358467619337
+    },
+    "distance_time": {
+      "gt_5": 30,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26282,
+      "roundscale_0_5_fraction_of_nonnull": 0.9988598358163575
+    },
+    "ground_ctl_time": {
+      "gt_5": 23,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26289,
+      "roundscale_0_5_fraction_of_nonnull": 0.9991258741258742
+    },
+    "ground_time": {
+      "gt_5": 46,
+      "missing": 25832,
+      "nonnull": 12126,
+      "roundscale_0_5": 12080,
+      "roundscale_0_5_fraction_of_nonnull": 0.9962064984331189
+    },
+    "guard_ctl_time": {
+      "gt_5": 6,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26306,
+      "roundscale_0_5_fraction_of_nonnull": 0.9997719671632715
+    },
+    "half_guard_ctl_time": {
+      "gt_5": 4,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26308,
+      "roundscale_0_5_fraction_of_nonnull": 0.9998479781088476
+    },
+    "mount_ctl_time": {
+      "gt_5": 4,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26308,
+      "roundscale_0_5_fraction_of_nonnull": 0.9998479781088476
+    },
+    "msc_ground_ctl__time": {
+      "gt_5": 4,
+      "missing": 12028,
+      "nonnull": 25930,
+      "roundscale_0_5": 25926,
+      "roundscale_0_5_fraction_of_nonnull": 0.9998457385268029
+    },
+    "neutral_time": {
+      "gt_5": 30,
+      "missing": 11652,
+      "nonnull": 26306,
+      "roundscale_0_5": 26276,
+      "roundscale_0_5_fraction_of_nonnull": 0.9988595757621835
+    },
+    "side_ctl_time": {
+      "gt_5": 2,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26310,
+      "roundscale_0_5_fraction_of_nonnull": 0.9999239890544238
+    },
+    "standing_time": {
+      "gt_5": 32,
+      "missing": 11646,
+      "nonnull": 26312,
+      "roundscale_0_5": 26280,
+      "roundscale_0_5_fraction_of_nonnull": 0.9987838248707814
+    }
+  },
+  "generated_at_utc": "2026-08-21T21:14:52.286339Z",
+  "identified_actual_round_rows": 37958,
+  "minimum_roundscale_fraction_across_fields": 0.9962064984331189,
+  "outlier_examples": [
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 10,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 10,
+        "side_ctl_time": 0,
+        "standing_time": 10
+      },
+      "color": 0,
+      "drupal_internal__id": 12661,
+      "fightmetric_id": 2356,
+      "outlier_fields": {
+        "distance_time": 10,
+        "neutral_time": 10,
+        "standing_time": 10
+      },
+      "resource_id": "6dcb8076-0b21-4f78-9776-c31a5ca46c9a",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 8,
+        "clinch_time": 0,
+        "control_time": 8,
+        "distance_time": 1,
+        "ground_ctl_time": 8,
+        "ground_time": 8,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 0,
+      "drupal_internal__id": 12697,
+      "fightmetric_id": 2391,
+      "outlier_fields": {
+        "back_ctl_time": 8,
+        "control_time": 8,
+        "ground_ctl_time": 8,
+        "ground_time": 8
+      },
+      "resource_id": "888f319f-184f-4d8c-898d-5b5a2e845c19",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 17,
+        "distance_time": 0,
+        "ground_ctl_time": 17,
+        "ground_time": 35,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 17,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 12771,
+      "fightmetric_id": 3638,
+      "outlier_fields": {
+        "control_time": 17,
+        "ground_ctl_time": 17,
+        "ground_time": 35,
+        "mount_ctl_time": 17
+      },
+      "resource_id": "9642542e-65bd-41cd-a5f5-c734a3b2868b",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 11,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 12823,
+      "fightmetric_id": 3685,
+      "outlier_fields": {
+        "ground_time": 11
+      },
+      "resource_id": "87bd8221-c0a4-4090-9704-47b94c4158c6",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 20,
+        "distance_time": 0,
+        "ground_ctl_time": 20,
+        "ground_time": 20,
+        "guard_ctl_time": 20,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 13015,
+      "fightmetric_id": 4225,
+      "outlier_fields": {
+        "control_time": 20,
+        "ground_ctl_time": 20,
+        "ground_time": 20,
+        "guard_ctl_time": 20
+      },
+      "resource_id": "dae079e1-4169-4aeb-b282-2f3ba88ce811",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 7,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 7,
+        "side_ctl_time": 0,
+        "standing_time": 7
+      },
+      "color": 0,
+      "drupal_internal__id": 14353,
+      "fightmetric_id": 4589,
+      "outlier_fields": {
+        "distance_time": 7,
+        "neutral_time": 7,
+        "standing_time": 7
+      },
+      "resource_id": "cf55edfc-6826-4dfe-a111-d4ca01b4cf08",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 59,
+        "distance_time": 59,
+        "ground_ctl_time": 59,
+        "ground_time": 58,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 59,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 59,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 0,
+      "drupal_internal__id": 14711,
+      "fightmetric_id": 4595,
+      "outlier_fields": {
+        "control_time": 59,
+        "distance_time": 59,
+        "ground_ctl_time": 59,
+        "ground_time": 58,
+        "mount_ctl_time": 59,
+        "neutral_time": 59,
+        "standing_time": 59
+      },
+      "resource_id": "5124b128-1c22-4c17-98e2-8a2961b22921",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 7,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 7,
+        "side_ctl_time": 0,
+        "standing_time": 7
+      },
+      "color": 0,
+      "drupal_internal__id": 14947,
+      "fightmetric_id": 4686,
+      "outlier_fields": {
+        "distance_time": 7,
+        "neutral_time": 7,
+        "standing_time": 7
+      },
+      "resource_id": "61479269-c0cb-42de-b6c8-661730939dcc",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 5,
+        "control_time": 2,
+        "distance_time": 2,
+        "ground_ctl_time": 57,
+        "ground_time": 57,
+        "guard_ctl_time": 55,
+        "half_guard_ctl_time": 1,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 7
+      },
+      "color": 0,
+      "drupal_internal__id": 15755,
+      "fightmetric_id": 4727,
+      "outlier_fields": {
+        "ground_ctl_time": 57,
+        "ground_time": 57,
+        "guard_ctl_time": 55,
+        "standing_time": 7
+      },
+      "resource_id": "1f779e7d-7f6e-46a9-836d-4412921e5609",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 3,
+        "control_time": 2,
+        "distance_time": 57,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 57,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 16767,
+      "fightmetric_id": 4994,
+      "outlier_fields": {
+        "distance_time": 57,
+        "neutral_time": 57
+      },
+      "resource_id": "b24f8e5f-15b1-4e97-b7a4-b0037374dcfb",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 1,
+        "distance_time": 55,
+        "ground_ctl_time": 1,
+        "ground_time": 3,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 56,
+        "side_ctl_time": 0,
+        "standing_time": 56
+      },
+      "color": 0,
+      "drupal_internal__id": 19327,
+      "fightmetric_id": 5825,
+      "outlier_fields": {
+        "distance_time": 55,
+        "neutral_time": 56,
+        "standing_time": 56
+      },
+      "resource_id": "defb4bd5-48d8-4a24-bbe9-58db13bd76ee",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 12,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 19937,
+      "fightmetric_id": 5824,
+      "outlier_fields": {
+        "ground_time": 12
+      },
+      "resource_id": "c7871fd9-cf48-47bf-a71d-908195dd5a17",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 59,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 59,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 0,
+      "drupal_internal__id": 20133,
+      "fightmetric_id": 5907,
+      "outlier_fields": {
+        "distance_time": 59,
+        "neutral_time": 59,
+        "standing_time": 59
+      },
+      "resource_id": "3de6fdcf-7b57-4e7a-a7ad-8e8cea10a0cc",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 59,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 20177,
+      "fightmetric_id": 5926,
+      "outlier_fields": {
+        "distance_time": 59
+      },
+      "resource_id": "b507d6df-4ca0-4260-86ba-8c0b54289a31",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 3,
+        "distance_time": 1,
+        "ground_ctl_time": 3,
+        "ground_time": 3,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 57,
+        "mount_ctl_time": 4,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 1,
+        "standing_time": 1
+      },
+      "color": 0,
+      "drupal_internal__id": 22235,
+      "fightmetric_id": 6301,
+      "outlier_fields": {
+        "half_guard_ctl_time": 57
+      },
+      "resource_id": "ca4e9fa1-009c-4093-a8f8-e07034238a84",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 57,
+        "control_time": 57,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 0,
+      "drupal_internal__id": 23193,
+      "fightmetric_id": 6593,
+      "outlier_fields": {
+        "clinch_time": 57,
+        "control_time": 57,
+        "standing_time": 59
+      },
+      "resource_id": "7d526e7f-3274-4b47-b30e-30e5476a7e7f",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 10,
+        "distance_time": 0,
+        "ground_ctl_time": 10,
+        "ground_time": 10,
+        "guard_ctl_time": 10,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 23335,
+      "fightmetric_id": 6469,
+      "outlier_fields": {
+        "control_time": 10,
+        "ground_ctl_time": 10,
+        "ground_time": 10,
+        "guard_ctl_time": 10
+      },
+      "resource_id": "c5af2508-a9d0-4aec-a544-2b3406080908",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 1,
+        "distance_time": 58,
+        "ground_ctl_time": 0,
+        "ground_time": 2,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 58,
+        "side_ctl_time": 0,
+        "standing_time": 58
+      },
+      "color": 0,
+      "drupal_internal__id": 25347,
+      "fightmetric_id": 6779,
+      "outlier_fields": {
+        "distance_time": 58,
+        "neutral_time": 58,
+        "standing_time": 58
+      },
+      "resource_id": "45983e4d-f092-4df5-8b52-5460c62e0fe8",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 55,
+        "distance_time": 4,
+        "ground_ctl_time": 55,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 55,
+        "neutral_time": 4,
+        "side_ctl_time": 0,
+        "standing_time": 4
+      },
+      "color": 0,
+      "drupal_internal__id": 25395,
+      "fightmetric_id": 6879,
+      "outlier_fields": {
+        "control_time": 55,
+        "ground_ctl_time": 55,
+        "ground_time": 55,
+        "msc_ground_ctl__time": 55
+      },
+      "resource_id": "969af511-7af5-47da-9ecf-7d6521b70616",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 13,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 13,
+        "side_ctl_time": 0,
+        "standing_time": 13
+      },
+      "color": 0,
+      "drupal_internal__id": 25763,
+      "fightmetric_id": 6906,
+      "outlier_fields": {
+        "distance_time": 13,
+        "neutral_time": 13,
+        "standing_time": 13
+      },
+      "resource_id": "fdc0ec42-1b5d-4ac9-aad0-d9e36c088771",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 2,
+        "control_time": 1,
+        "distance_time": 57,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 57,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 26163,
+      "fightmetric_id": 6810,
+      "outlier_fields": {
+        "distance_time": 57,
+        "neutral_time": 57
+      },
+      "resource_id": "7ba9de45-915a-4652-8c71-a9348ca1dfc7",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 8,
+        "distance_time": 0,
+        "ground_ctl_time": 8,
+        "ground_time": 8,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 8,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 26465,
+      "fightmetric_id": 6998,
+      "outlier_fields": {
+        "control_time": 8,
+        "ground_ctl_time": 8,
+        "ground_time": 8,
+        "msc_ground_ctl__time": 8
+      },
+      "resource_id": "a5e95908-58e6-4c34-b5d9-fd8a53cbd6f4",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 11,
+        "distance_time": 0,
+        "ground_ctl_time": 11,
+        "ground_time": 11,
+        "guard_ctl_time": 11,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 26519,
+      "fightmetric_id": 7000,
+      "outlier_fields": {
+        "control_time": 11,
+        "ground_ctl_time": 11,
+        "ground_time": 11,
+        "guard_ctl_time": 11
+      },
+      "resource_id": "10bce100-145a-43c7-a6bc-4b5cc61ab4cf",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 1,
+        "control_time": 55,
+        "distance_time": 2,
+        "ground_ctl_time": 55,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 55,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 4
+      },
+      "color": 0,
+      "drupal_internal__id": 26941,
+      "fightmetric_id": 7085,
+      "outlier_fields": {
+        "control_time": 55,
+        "ground_ctl_time": 55,
+        "ground_time": 55,
+        "msc_ground_ctl__time": 55
+      },
+      "resource_id": "070c6556-c283-4573-9877-9faf08b41a53",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 58,
+        "distance_time": 0,
+        "ground_ctl_time": 58,
+        "ground_time": 59,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 1,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 57,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 26949,
+      "fightmetric_id": 7102,
+      "outlier_fields": {
+        "control_time": 58,
+        "ground_ctl_time": 58,
+        "ground_time": 59,
+        "side_ctl_time": 57
+      },
+      "resource_id": "e6d39472-4b13-47fa-a6af-79cfef98f3be",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 59,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 59,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 0,
+      "drupal_internal__id": 27639,
+      "fightmetric_id": 7197,
+      "outlier_fields": {
+        "distance_time": 59,
+        "neutral_time": 59,
+        "standing_time": 59
+      },
+      "resource_id": "74213ba4-5256-4c2d-8455-a4a899d0504f",
+      "round": 5
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 3,
+        "control_time": 57,
+        "distance_time": 0,
+        "ground_ctl_time": 56,
+        "ground_time": 56,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 55,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 3
+      },
+      "color": 0,
+      "drupal_internal__id": 27643,
+      "fightmetric_id": 7198,
+      "outlier_fields": {
+        "control_time": 57,
+        "ground_ctl_time": 56,
+        "ground_time": 56,
+        "half_guard_ctl_time": 55
+      },
+      "resource_id": "8b1f7fb2-ce0f-4514-b30f-5a99f769c914",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 58,
+        "control_time": 1,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 3,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 27677,
+      "fightmetric_id": 7232,
+      "outlier_fields": {
+        "clinch_time": 58
+      },
+      "resource_id": "e98e22e0-0b7b-4564-a431-e7e2029d7275",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 58,
+        "control_time": 0,
+        "distance_time": 1,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 0,
+      "drupal_internal__id": 27681,
+      "fightmetric_id": 7232,
+      "outlier_fields": {
+        "clinch_time": 58
+      },
+      "resource_id": "fbb965e7-8dbe-4f2d-b7e9-982560b78a15",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 58,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 0,
+      "drupal_internal__id": 27715,
+      "fightmetric_id": 7258,
+      "outlier_fields": {
+        "ground_time": 58
+      },
+      "resource_id": "6d725349-93b3-4bda-a5f0-925625b1c9af",
+      "round": 5
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 1,
+        "control_time": 58,
+        "distance_time": 0,
+        "ground_ctl_time": 58,
+        "ground_time": 58,
+        "guard_ctl_time": 2,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 54,
+        "standing_time": 1
+      },
+      "color": 0,
+      "drupal_internal__id": 27773,
+      "fightmetric_id": 7346,
+      "outlier_fields": {
+        "control_time": 58,
+        "ground_ctl_time": 58,
+        "ground_time": 58,
+        "side_ctl_time": 54
+      },
+      "resource_id": "a388200d-d670-4b30-9dc5-d9ffefcdf6d5",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 1,
+        "control_time": 0,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 57,
+        "side_ctl_time": 0,
+        "standing_time": 4
+      },
+      "color": 0,
+      "drupal_internal__id": 27885,
+      "fightmetric_id": 7267,
+      "outlier_fields": {
+        "ground_time": 55,
+        "neutral_time": 57
+      },
+      "resource_id": "dc5c2630-5ec6-443c-9b3f-eadd075152f3",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 1,
+        "ground_ctl_time": 0,
+        "ground_time": 57,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 2
+      },
+      "color": 0,
+      "drupal_internal__id": 27887,
+      "fightmetric_id": 7267,
+      "outlier_fields": {
+        "ground_time": 57
+      },
+      "resource_id": "dfff0582-ba85-4fe1-bd9f-d39f11b045d3",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 14,
+        "ground_ctl_time": 0,
+        "ground_time": 58,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 14,
+        "side_ctl_time": 0,
+        "standing_time": 15
+      },
+      "color": 0,
+      "drupal_internal__id": 27889,
+      "fightmetric_id": 7267,
+      "outlier_fields": {
+        "distance_time": 14,
+        "ground_time": 58,
+        "neutral_time": 14,
+        "standing_time": 15
+      },
+      "resource_id": "d520acb6-4d81-4de0-bcfb-f49608294580",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 56,
+        "distance_time": 0,
+        "ground_ctl_time": 56,
+        "ground_time": 59,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 55,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 0,
+      "drupal_internal__id": 27903,
+      "fightmetric_id": 7313,
+      "outlier_fields": {
+        "control_time": 56,
+        "ground_ctl_time": 56,
+        "ground_time": 59,
+        "half_guard_ctl_time": 55
+      },
+      "resource_id": "0f3f1887-4ca1-4750-a11a-3da6e79f8fc5",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 50,
+        "control_time": 1,
+        "distance_time": 0,
+        "ground_ctl_time": 1,
+        "ground_time": 3,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 51
+      },
+      "color": 0,
+      "drupal_internal__id": 27937,
+      "fightmetric_id": 7360,
+      "outlier_fields": {
+        "clinch_time": 50,
+        "standing_time": 51
+      },
+      "resource_id": "3506f7ef-a80c-4a00-b237-b2b68712c791",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 4,
+        "ground_ctl_time": 0,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": null,
+        "neutral_time": 4,
+        "side_ctl_time": 0,
+        "standing_time": 4
+      },
+      "color": 0,
+      "drupal_internal__id": 44934,
+      "fightmetric_id": 7484,
+      "outlier_fields": {
+        "ground_time": 55
+      },
+      "resource_id": "d1ac22e9-5a90-4014-a559-484901cd53ac",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 57,
+        "control_time": 56,
+        "distance_time": 1,
+        "ground_ctl_time": 0,
+        "ground_time": 1,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 0,
+      "drupal_internal__id": 45305,
+      "fightmetric_id": 6025,
+      "outlier_fields": {
+        "clinch_time": 57,
+        "control_time": 56,
+        "standing_time": 59
+      },
+      "resource_id": "d487644c-15f6-4cd0-9fd1-2ce700e158c1",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 57,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 59,
+        "side_ctl_time": 0,
+        "standing_time": 2
+      },
+      "color": 0,
+      "drupal_internal__id": 46111,
+      "fightmetric_id": 7637,
+      "outlier_fields": {
+        "ground_time": 57,
+        "neutral_time": 59
+      },
+      "resource_id": "5cd586d6-5058-41a7-8a2f-08d9cb6c394c",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 51,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": null,
+        "neutral_time": 51,
+        "side_ctl_time": 0,
+        "standing_time": 51
+      },
+      "color": 0,
+      "drupal_internal__id": 46258,
+      "fightmetric_id": 7641,
+      "outlier_fields": {
+        "distance_time": 51,
+        "neutral_time": 51,
+        "standing_time": 51
+      },
+      "resource_id": "2ea0cd3a-541d-4369-b72f-b98756199b76",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 16,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": null,
+        "side_ctl_time": 0,
+        "standing_time": 16
+      },
+      "color": 0,
+      "drupal_internal__id": 46306,
+      "fightmetric_id": 7640,
+      "outlier_fields": {
+        "distance_time": 16,
+        "standing_time": 16
+      },
+      "resource_id": "14bd8ed6-df5b-4802-a379-16fa2a6a9218",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 56,
+        "control_time": 0,
+        "distance_time": 4,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": null,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 0,
+      "drupal_internal__id": 46310,
+      "fightmetric_id": 7644,
+      "outlier_fields": {
+        "clinch_time": 56
+      },
+      "resource_id": "5226c41d-37ed-4ed5-a2e7-2f72bc4df67b",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": null,
+        "neutral_time": 3,
+        "side_ctl_time": 0,
+        "standing_time": 3
+      },
+      "color": 0,
+      "drupal_internal__id": 46518,
+      "fightmetric_id": 7677,
+      "outlier_fields": {
+        "ground_time": 55
+      },
+      "resource_id": "f9fd116e-06be-475b-aa6b-3ae440d5c0bd",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 10,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 10,
+        "side_ctl_time": 0,
+        "standing_time": 10
+      },
+      "color": 1,
+      "drupal_internal__id": 12662,
+      "fightmetric_id": 2356,
+      "outlier_fields": {
+        "distance_time": 10,
+        "neutral_time": 10,
+        "standing_time": 10
+      },
+      "resource_id": "4aad888d-00a4-4c05-90e2-2f07484e50b0",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 1,
+        "ground_ctl_time": 0,
+        "ground_time": 8,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 1,
+      "drupal_internal__id": 12698,
+      "fightmetric_id": 2391,
+      "outlier_fields": {
+        "ground_time": 8
+      },
+      "resource_id": "eca234dd-8dd8-4ecb-acb5-59238e9261f5",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 17,
+        "distance_time": 0,
+        "ground_ctl_time": 17,
+        "ground_time": 35,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 17,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 12772,
+      "fightmetric_id": 3638,
+      "outlier_fields": {
+        "control_time": 17,
+        "ground_ctl_time": 17,
+        "ground_time": 35,
+        "mount_ctl_time": 17
+      },
+      "resource_id": "59a5cc71-1f01-4617-8ec3-b938bd8edde2",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 11,
+        "distance_time": 0,
+        "ground_ctl_time": 11,
+        "ground_time": 11,
+        "guard_ctl_time": 11,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 12824,
+      "fightmetric_id": 3685,
+      "outlier_fields": {
+        "control_time": 11,
+        "ground_ctl_time": 11,
+        "ground_time": 11,
+        "guard_ctl_time": 11
+      },
+      "resource_id": "0bb0e68b-f2fc-4096-a831-c83af3884909",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 20,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 13016,
+      "fightmetric_id": 4225,
+      "outlier_fields": {
+        "ground_time": 20
+      },
+      "resource_id": "18c61825-3516-4fc3-98b5-bdc405f42bac",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 7,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 7,
+        "side_ctl_time": 0,
+        "standing_time": 7
+      },
+      "color": 1,
+      "drupal_internal__id": 14354,
+      "fightmetric_id": 4589,
+      "outlier_fields": {
+        "distance_time": 7,
+        "neutral_time": 7,
+        "standing_time": 7
+      },
+      "resource_id": "2f01d703-c487-4790-adee-9eddc88192b9",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 58,
+        "distance_time": 59,
+        "ground_ctl_time": 58,
+        "ground_time": 58,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 58,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 59,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 1,
+      "drupal_internal__id": 14712,
+      "fightmetric_id": 4595,
+      "outlier_fields": {
+        "control_time": 58,
+        "distance_time": 59,
+        "ground_ctl_time": 58,
+        "ground_time": 58,
+        "mount_ctl_time": 58,
+        "neutral_time": 59,
+        "standing_time": 59
+      },
+      "resource_id": "f2b9fc1f-272c-4b45-8220-991ad408ce9e",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 7,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 7,
+        "side_ctl_time": 0,
+        "standing_time": 7
+      },
+      "color": 1,
+      "drupal_internal__id": 14948,
+      "fightmetric_id": 4686,
+      "outlier_fields": {
+        "distance_time": 7,
+        "neutral_time": 7,
+        "standing_time": 7
+      },
+      "resource_id": "e6e6c471-1cb1-452d-8301-95bf275e0924",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 5,
+        "control_time": 0,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 57,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 7
+      },
+      "color": 1,
+      "drupal_internal__id": 15756,
+      "fightmetric_id": 4727,
+      "outlier_fields": {
+        "ground_time": 57,
+        "standing_time": 7
+      },
+      "resource_id": "fed3d21a-93bf-458b-93af-4fa8e4c1a191",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 3,
+        "control_time": 0,
+        "distance_time": 57,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 57,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 16768,
+      "fightmetric_id": 4994,
+      "outlier_fields": {
+        "distance_time": 57,
+        "neutral_time": 57
+      },
+      "resource_id": "4141a411-e7ef-46ff-a9c2-53b0e19e3f98",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 3,
+        "distance_time": 55,
+        "ground_ctl_time": 2,
+        "ground_time": 3,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 56,
+        "side_ctl_time": 0,
+        "standing_time": 56
+      },
+      "color": 1,
+      "drupal_internal__id": 19328,
+      "fightmetric_id": 5825,
+      "outlier_fields": {
+        "distance_time": 55,
+        "neutral_time": 56,
+        "standing_time": 56
+      },
+      "resource_id": "8ff213ff-a552-4c4c-8b13-5e71d7453191",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 12,
+        "distance_time": 0,
+        "ground_ctl_time": 12,
+        "ground_time": 12,
+        "guard_ctl_time": 12,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 19938,
+      "fightmetric_id": 5824,
+      "outlier_fields": {
+        "control_time": 12,
+        "ground_ctl_time": 12,
+        "ground_time": 12,
+        "guard_ctl_time": 12
+      },
+      "resource_id": "28b04b4b-0699-4d2e-93f4-4d3f3ca437c5",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 59,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 59,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 1,
+      "drupal_internal__id": 20134,
+      "fightmetric_id": 5907,
+      "outlier_fields": {
+        "distance_time": 59,
+        "neutral_time": 59,
+        "standing_time": 59
+      },
+      "resource_id": "cc8aae67-6579-4d19-a324-ef9d2ff346e3",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 59,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 20178,
+      "fightmetric_id": 5926,
+      "outlier_fields": {
+        "distance_time": 59
+      },
+      "resource_id": "48958638-10fa-45ec-90e7-6cd8b0c108fd",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 57,
+        "control_time": 0,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 1,
+      "drupal_internal__id": 23194,
+      "fightmetric_id": 6593,
+      "outlier_fields": {
+        "clinch_time": 57,
+        "standing_time": 59
+      },
+      "resource_id": "7fd27ef9-ecde-49cc-94df-1d498fb846b6",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 10,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 23336,
+      "fightmetric_id": 6469,
+      "outlier_fields": {
+        "ground_time": 10
+      },
+      "resource_id": "2b3e18c0-8cf5-4ef2-a71a-835f7d4d913a",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 1,
+        "distance_time": 58,
+        "ground_ctl_time": 1,
+        "ground_time": 2,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 1,
+        "neutral_time": 58,
+        "side_ctl_time": 0,
+        "standing_time": 58
+      },
+      "color": 1,
+      "drupal_internal__id": 25348,
+      "fightmetric_id": 6779,
+      "outlier_fields": {
+        "distance_time": 58,
+        "neutral_time": 58,
+        "standing_time": 58
+      },
+      "resource_id": "5401ccaf-dba1-4cf3-9b7f-f8f39b15859e",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 4,
+        "ground_ctl_time": 0,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 4,
+        "side_ctl_time": 0,
+        "standing_time": 4
+      },
+      "color": 1,
+      "drupal_internal__id": 25396,
+      "fightmetric_id": 6879,
+      "outlier_fields": {
+        "ground_time": 55
+      },
+      "resource_id": "fd20ee87-2605-4d81-aff4-1e5833fe7032",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 13,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 13,
+        "side_ctl_time": 0,
+        "standing_time": 13
+      },
+      "color": 1,
+      "drupal_internal__id": 25764,
+      "fightmetric_id": 6906,
+      "outlier_fields": {
+        "distance_time": 13,
+        "neutral_time": 13,
+        "standing_time": 13
+      },
+      "resource_id": "93b9f9c3-a8d6-47bb-a633-5fa9643b8291",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 2,
+        "control_time": 1,
+        "distance_time": 57,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 57,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 26164,
+      "fightmetric_id": 6810,
+      "outlier_fields": {
+        "distance_time": 57,
+        "neutral_time": 57
+      },
+      "resource_id": "c0c81b30-cab2-499d-88a4-ef79d00c1825",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 8,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 26466,
+      "fightmetric_id": 6998,
+      "outlier_fields": {
+        "ground_time": 8
+      },
+      "resource_id": "01777ad8-01b6-4f6f-85da-5b78e73ad636",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 11,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 26520,
+      "fightmetric_id": 7000,
+      "outlier_fields": {
+        "ground_time": 11
+      },
+      "resource_id": "07ef9968-3bf3-4406-b372-e3a7764ace70",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 1,
+        "control_time": 1,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 4
+      },
+      "color": 1,
+      "drupal_internal__id": 26942,
+      "fightmetric_id": 7085,
+      "outlier_fields": {
+        "ground_time": 55
+      },
+      "resource_id": "68596d21-80ee-43f3-857c-e6c548c62a5a",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 59,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 26950,
+      "fightmetric_id": 7102,
+      "outlier_fields": {
+        "ground_time": 59
+      },
+      "resource_id": "f932e138-5049-4e83-84e5-17d9e69efb45",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 59,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 59,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 1,
+      "drupal_internal__id": 27640,
+      "fightmetric_id": 7197,
+      "outlier_fields": {
+        "distance_time": 59,
+        "neutral_time": 59,
+        "standing_time": 59
+      },
+      "resource_id": "a4b6e3bf-8e9a-4597-abac-d7fc2082282d",
+      "round": 5
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 3,
+        "control_time": 1,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 56,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 3
+      },
+      "color": 1,
+      "drupal_internal__id": 27644,
+      "fightmetric_id": 7198,
+      "outlier_fields": {
+        "ground_time": 56
+      },
+      "resource_id": "9413238c-13c3-441d-b2a5-21d13fb99972",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 58,
+        "control_time": 56,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 3,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 27678,
+      "fightmetric_id": 7232,
+      "outlier_fields": {
+        "clinch_time": 58,
+        "control_time": 56
+      },
+      "resource_id": "a33e0783-d0f5-4dcb-a491-f634e0371492",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 58,
+        "control_time": 57,
+        "distance_time": 1,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 0
+      },
+      "color": 1,
+      "drupal_internal__id": 27682,
+      "fightmetric_id": 7232,
+      "outlier_fields": {
+        "clinch_time": 58,
+        "control_time": 57
+      },
+      "resource_id": "d3fc27b8-b844-40a8-8959-e870bca96e61",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 58,
+        "distance_time": 0,
+        "ground_ctl_time": 58,
+        "ground_time": 58,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 58,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 1,
+      "drupal_internal__id": 27716,
+      "fightmetric_id": 7258,
+      "outlier_fields": {
+        "control_time": 58,
+        "ground_ctl_time": 58,
+        "ground_time": 58,
+        "msc_ground_ctl__time": 58
+      },
+      "resource_id": "76843703-4295-44d3-be44-805381302f9c",
+      "round": 5
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 1,
+        "control_time": 0,
+        "distance_time": 0,
+        "ground_ctl_time": 0,
+        "ground_time": 58,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 1,
+      "drupal_internal__id": 27774,
+      "fightmetric_id": 7346,
+      "outlier_fields": {
+        "ground_time": 58
+      },
+      "resource_id": "3d7238a9-8d24-4baa-9108-672731a45351",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 1,
+        "control_time": 1,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 57,
+        "side_ctl_time": 0,
+        "standing_time": 4
+      },
+      "color": 1,
+      "drupal_internal__id": 27886,
+      "fightmetric_id": 7267,
+      "outlier_fields": {
+        "ground_time": 55,
+        "neutral_time": 57
+      },
+      "resource_id": "0b43c93e-83f1-4d8e-9dc0-dde6555be93c",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 54,
+        "clinch_time": 0,
+        "control_time": 57,
+        "distance_time": 1,
+        "ground_ctl_time": 57,
+        "ground_time": 57,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 1,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 2
+      },
+      "color": 1,
+      "drupal_internal__id": 27888,
+      "fightmetric_id": 7267,
+      "outlier_fields": {
+        "back_ctl_time": 54,
+        "control_time": 57,
+        "ground_ctl_time": 57,
+        "ground_time": 57
+      },
+      "resource_id": "af19bf0c-439f-4cf0-a49d-8dce8870a56e",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 58,
+        "distance_time": 14,
+        "ground_ctl_time": 58,
+        "ground_time": 58,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 57,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 14,
+        "side_ctl_time": 0,
+        "standing_time": 15
+      },
+      "color": 1,
+      "drupal_internal__id": 27890,
+      "fightmetric_id": 7267,
+      "outlier_fields": {
+        "control_time": 58,
+        "distance_time": 14,
+        "ground_ctl_time": 58,
+        "ground_time": 58,
+        "half_guard_ctl_time": 57,
+        "neutral_time": 14,
+        "standing_time": 15
+      },
+      "resource_id": "03658491-330c-4c00-b57e-ec736fb1176a",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 2,
+        "distance_time": 0,
+        "ground_ctl_time": 2,
+        "ground_time": 59,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 1,
+        "neutral_time": 0,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 1,
+      "drupal_internal__id": 27904,
+      "fightmetric_id": 7313,
+      "outlier_fields": {
+        "ground_time": 59
+      },
+      "resource_id": "3a4e773c-da14-48a1-9a7c-61e6b9a77a00",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 1,
+        "clinch_time": 50,
+        "control_time": 52,
+        "distance_time": 0,
+        "ground_ctl_time": 2,
+        "ground_time": 3,
+        "guard_ctl_time": 1,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 1,
+        "side_ctl_time": 0,
+        "standing_time": 51
+      },
+      "color": 1,
+      "drupal_internal__id": 27938,
+      "fightmetric_id": 7360,
+      "outlier_fields": {
+        "clinch_time": 50,
+        "control_time": 52,
+        "standing_time": 51
+      },
+      "resource_id": "2728501b-6222-4dc4-a38a-02062f413037",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 55,
+        "distance_time": 4,
+        "ground_ctl_time": 55,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": null,
+        "neutral_time": 4,
+        "side_ctl_time": 0,
+        "standing_time": 4
+      },
+      "color": 1,
+      "drupal_internal__id": 44935,
+      "fightmetric_id": 7484,
+      "outlier_fields": {
+        "control_time": 55,
+        "ground_ctl_time": 55,
+        "ground_time": 55
+      },
+      "resource_id": "0e4f718c-8803-4641-ab4e-bdf278582845",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 57,
+        "control_time": 1,
+        "distance_time": 1,
+        "ground_ctl_time": 0,
+        "ground_time": 1,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 2,
+        "side_ctl_time": 0,
+        "standing_time": 59
+      },
+      "color": 1,
+      "drupal_internal__id": 45306,
+      "fightmetric_id": 6025,
+      "outlier_fields": {
+        "clinch_time": 57,
+        "standing_time": 59
+      },
+      "resource_id": "8228a382-8c37-43a9-b5cf-23aead827cae",
+      "round": 3
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 2,
+        "ground_ctl_time": 0,
+        "ground_time": 57,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": 59,
+        "side_ctl_time": 0,
+        "standing_time": 2
+      },
+      "color": 1,
+      "drupal_internal__id": 46112,
+      "fightmetric_id": 7637,
+      "outlier_fields": {
+        "ground_time": 57,
+        "neutral_time": 59
+      },
+      "resource_id": "442a7301-bafd-4c44-a773-ecb0fcdc1d3b",
+      "round": 2
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 51,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": null,
+        "neutral_time": 51,
+        "side_ctl_time": 0,
+        "standing_time": 51
+      },
+      "color": 1,
+      "drupal_internal__id": 46259,
+      "fightmetric_id": 7641,
+      "outlier_fields": {
+        "distance_time": 51,
+        "neutral_time": 51,
+        "standing_time": 51
+      },
+      "resource_id": "9c0bac8f-7d48-4421-85d1-a8dec86cd5b9",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 0,
+        "distance_time": 16,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": null,
+        "side_ctl_time": 0,
+        "standing_time": 16
+      },
+      "color": 1,
+      "drupal_internal__id": 46307,
+      "fightmetric_id": 7640,
+      "outlier_fields": {
+        "distance_time": 16,
+        "standing_time": 16
+      },
+      "resource_id": "4a908813-e163-47cf-9886-f5e2521e42af",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 56,
+        "control_time": 56,
+        "distance_time": 4,
+        "ground_ctl_time": 0,
+        "ground_time": 0,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": 0,
+        "neutral_time": null,
+        "side_ctl_time": 0,
+        "standing_time": 1
+      },
+      "color": 1,
+      "drupal_internal__id": 46311,
+      "fightmetric_id": 7644,
+      "outlier_fields": {
+        "clinch_time": 56,
+        "control_time": 56
+      },
+      "resource_id": "15ddd2c1-c083-4a7b-bcb4-4418ba9a394d",
+      "round": 1
+    },
+    {
+      "all_time_fields": {
+        "back_ctl_time": 0,
+        "clinch_time": 0,
+        "control_time": 55,
+        "distance_time": 2,
+        "ground_ctl_time": 55,
+        "ground_time": 55,
+        "guard_ctl_time": 0,
+        "half_guard_ctl_time": 0,
+        "mount_ctl_time": 0,
+        "msc_ground_ctl__time": null,
+        "neutral_time": 3,
+        "side_ctl_time": 0,
+        "standing_time": 3
+      },
+      "color": 1,
+      "drupal_internal__id": 46519,
+      "fightmetric_id": 7677,
+      "outlier_fields": {
+        "control_time": 55,
+        "ground_ctl_time": 55,
+        "ground_time": 55
+      },
+      "resource_id": "a0bd5665-8a45-42b0-8a8c-5e88e63ba118",
+      "round": 2
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,1 @@
+{"canonical_seconds_promoted": false, "dominant_0_5_bucket_encoding": true, "gt_5_values_canonical_eligible": false, "rule": "Treat >5 values in actual-round positional time fields as source anomalies pending independent proof. Preserve all raw rows; future adapters may expose clean 0-5 coarse buckets separately, but must never synthesize seconds."}
