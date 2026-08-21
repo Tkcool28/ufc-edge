@@ -1,0 +1,507 @@
+{
+  "adapter_gate": {
+    "display_name_only_is_not_global_canonical_identity": true,
+    "fail_closed_on_listed_ambiguities": true,
+    "fight_url_join_requires_unique_event_bout_key": true,
+    "fighter_url_join_requires_unique_name_within_pinned_source": true
+  },
+  "audited_at_utc": "2026-08-21T06:14:22.003497Z",
+  "fight_identity": {
+    "distinct_stat_fight_keys": 8858,
+    "fight_detail_ambiguous_key_count_all": 1,
+    "fight_detail_distinct_keys": 8858,
+    "fight_result_ambiguous_key_count_all": 1,
+    "fight_result_distinct_keys": 8858,
+    "stat_fight_keys_ambiguous_in_fight_details": {
+      "UFC - Ultimate Japan || Kazushi Sakuraba vs. Marcus Silveira": [
+        "http://ufcstats.com/fight-details/2750ac5854e8b28b",
+        "http://ufcstats.com/fight-details/ec1bda9a4c2aab42"
+      ]
+    },
+    "stat_fight_keys_missing_from_results": [],
+    "stat_fight_keys_unmatched_to_fight_details": []
+  },
+  "fighter_identity": {
+    "details_ambiguous_name_count_all": 8,
+    "details_distinct_names": 4592,
+    "distinct_stat_fighter_names": 2723,
+    "stat_names_ambiguous_in_details": {
+      "Bruno Silva": [
+        "http://ufcstats.com/fighter-details/12ebd7d157e91701",
+        "http://ufcstats.com/fighter-details/294aa73dbf37d281"
+      ],
+      "Jean Silva": [
+        "http://ufcstats.com/fighter-details/52ef95b5860fb28c",
+        "http://ufcstats.com/fighter-details/9211aae062b799d6"
+      ],
+      "Joey Gomez": [
+        "http://ufcstats.com/fighter-details/0778f94eb5d588a5",
+        "http://ufcstats.com/fighter-details/3a28e1e641366308"
+      ],
+      "Michael McDonald": [
+        "http://ufcstats.com/fighter-details/d0314416a7f26527",
+        "http://ufcstats.com/fighter-details/d52ef694108f8235"
+      ],
+      "Mike Davis": [
+        "http://ufcstats.com/fighter-details/c8661e204c66f325",
+        "http://ufcstats.com/fighter-details/fb3e61720be4690c"
+      ],
+      "Victor Valenzuela": [
+        "http://ufcstats.com/fighter-details/078695e385ec2f57",
+        "http://ufcstats.com/fighter-details/de277a4abcfeea46"
+      ]
+    },
+    "stat_names_ambiguous_in_tott": {
+      "Bruno Silva": [
+        "http://ufcstats.com/fighter-details/12ebd7d157e91701",
+        "http://ufcstats.com/fighter-details/294aa73dbf37d281"
+      ],
+      "Jean Silva": [
+        "http://ufcstats.com/fighter-details/52ef95b5860fb28c",
+        "http://ufcstats.com/fighter-details/9211aae062b799d6"
+      ],
+      "Joey Gomez": [
+        "http://ufcstats.com/fighter-details/0778f94eb5d588a5",
+        "http://ufcstats.com/fighter-details/3a28e1e641366308"
+      ],
+      "Michael McDonald": [
+        "http://ufcstats.com/fighter-details/d0314416a7f26527",
+        "http://ufcstats.com/fighter-details/d52ef694108f8235"
+      ],
+      "Mike Davis": [
+        "http://ufcstats.com/fighter-details/c8661e204c66f325",
+        "http://ufcstats.com/fighter-details/fb3e61720be4690c"
+      ],
+      "Victor Valenzuela": [
+        "http://ufcstats.com/fighter-details/078695e385ec2f57",
+        "http://ufcstats.com/fighter-details/de277a4abcfeea46"
+      ]
+    },
+    "stat_names_unmatched_to_details": [
+      "Bibulatov Magomed",
+      "Kai Kamaka",
+      "Patricio Freire",
+      "Rafael Cerquiera",
+      "Tre'ston Vines"
+    ],
+    "stat_names_unmatched_to_tott": [
+      "Adrian Luna Martinetti",
+      "Ben Johnston",
+      "Jose Souza",
+      "Kai Kamaka III",
+      "Levi Rodrigues Jr.",
+      "Michael Aswell Jr.",
+      "Muhammad Saidov",
+      "Patricio Pitbull",
+      "Rafael Cerquiera",
+      "Regina Tarin",
+      "Shem Rock",
+      "Tyrell Fortune",
+      "Waldo Cortes Acosta",
+      "YiSak Lee",
+      "Zach Reese"
+    ],
+    "tott_ambiguous_name_count_all": 8,
+    "tott_distinct_names": 4593,
+    "unique_source_url_disagreements_between_tott_and_details": [
+      {
+        "detail_urls": [
+          "http://ufcstats.com/fighter-details/1f8cd7634e8286ff"
+        ],
+        "fighter": "Jose Montanha",
+        "tott_urls": [
+          "http://ufcstats.com/fighter-details/4e30f2761b6bd3b5"
+        ]
+      }
+    ]
+  },
+  "round_integrity": {
+    "duplicate_fighter_round_row_count": 23,
+    "duplicate_fighter_round_rows": [
+      {
+        "fight_key": "UFC - Ultimate Brazil || Cesar Marscucci vs. Paulo Santos",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 17: Redemption || Andre Roberts vs. Harry Moskowitz",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 16: Battle in the Bayou || Chris Brennan vs. Courtney Turner",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 16: Battle in the Bayou || Laverne Clark vs. Josh Stuart",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC - Ultimate Japan || Kazushi Sakuraba vs. Marcus Silveira",
+        "fighter": "Kazushi Sakuraba",
+        "round": "Round 1",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC - Ultimate Japan || Kazushi Sakuraba vs. Marcus Silveira",
+        "fighter": "Marcus Silveira",
+        "round": "Round 1",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 12: Judgement Day || Justin Martin vs. Eric Martin",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 12: Judgement Day || Nick Sanzo vs. Jackie Lee",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '96 || Tai Bowden vs. Jack Nilson",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '96 || Steve Nelmark vs. Marcus Bossett",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '96 || Mark Hall vs. Felix Lee Mitchell",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 11: The Proving Ground || Roberto Traven vs. Dave Berry",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 11: The Proving Ground || Scott Ferrozzo vs. Sam Fulton",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 10: The Tournament || Sam Adkins vs. Felix Lee Mitchell",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 8: David vs Goliath || Sam Adkins vs. Keith Mielke",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '95 || Mark Hall vs. Trent Jenkins",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '95 || Joe Charles vs. Scott Bessac",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 7: The Brawl in Buffalo || Onassis Parungao vs. Francesco Maturi",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 7: The Brawl in Buffalo || Joel Sutton vs. Geza Kalman",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 6: Clash of the Titans || Anthony Macias vs. He-Man Gipson",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 6: Clash of the Titans || Joel Sutton vs. Jack McGlaughlin",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 4: Revenge of the Warriors || Marcus Bossett vs. Eldo Xavier Dias",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      },
+      {
+        "fight_key": "UFC 4: Revenge of the Warriors || Joe Charles vs. Kevin Rosier",
+        "fighter": "",
+        "round": "",
+        "rows": 2
+      }
+    ],
+    "fight_participant_anomalies": {
+      "UFC - Ultimate Brazil || Cesar Marscucci vs. Paulo Santos": [
+        ""
+      ],
+      "UFC - Ultimate Ultimate '95 || Joe Charles vs. Scott Bessac": [
+        ""
+      ],
+      "UFC - Ultimate Ultimate '95 || Mark Hall vs. Trent Jenkins": [
+        ""
+      ],
+      "UFC - Ultimate Ultimate '96 || Mark Hall vs. Felix Lee Mitchell": [
+        ""
+      ],
+      "UFC - Ultimate Ultimate '96 || Steve Nelmark vs. Marcus Bossett": [
+        ""
+      ],
+      "UFC - Ultimate Ultimate '96 || Tai Bowden vs. Jack Nilson": [
+        ""
+      ],
+      "UFC 10: The Tournament || Sam Adkins vs. Felix Lee Mitchell": [
+        ""
+      ],
+      "UFC 11: The Proving Ground || Roberto Traven vs. Dave Berry": [
+        ""
+      ],
+      "UFC 11: The Proving Ground || Scott Ferrozzo vs. Sam Fulton": [
+        ""
+      ],
+      "UFC 12: Judgement Day || Justin Martin vs. Eric Martin": [
+        ""
+      ],
+      "UFC 12: Judgement Day || Nick Sanzo vs. Jackie Lee": [
+        ""
+      ],
+      "UFC 16: Battle in the Bayou || Chris Brennan vs. Courtney Turner": [
+        ""
+      ],
+      "UFC 16: Battle in the Bayou || Laverne Clark vs. Josh Stuart": [
+        ""
+      ],
+      "UFC 17: Redemption || Andre Roberts vs. Harry Moskowitz": [
+        ""
+      ],
+      "UFC 4: Revenge of the Warriors || Joe Charles vs. Kevin Rosier": [
+        ""
+      ],
+      "UFC 4: Revenge of the Warriors || Marcus Bossett vs. Eldo Xavier Dias": [
+        ""
+      ],
+      "UFC 6: Clash of the Titans || Anthony Macias vs. He-Man Gipson": [
+        ""
+      ],
+      "UFC 6: Clash of the Titans || Joel Sutton vs. Jack McGlaughlin": [
+        ""
+      ],
+      "UFC 7: The Brawl in Buffalo || Joel Sutton vs. Geza Kalman": [
+        ""
+      ],
+      "UFC 7: The Brawl in Buffalo || Onassis Parungao vs. Francesco Maturi": [
+        ""
+      ],
+      "UFC 8: David vs Goliath || Sam Adkins vs. Keith Mielke": [
+        ""
+      ]
+    },
+    "fight_participant_anomaly_count": 21,
+    "round_participant_anomalies": [
+      {
+        "fight_key": "UFC - Ultimate Brazil || Cesar Marscucci vs. Paulo Santos",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 17: Redemption || Andre Roberts vs. Harry Moskowitz",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 16: Battle in the Bayou || Chris Brennan vs. Courtney Turner",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 16: Battle in the Bayou || Laverne Clark vs. Josh Stuart",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 12: Judgement Day || Justin Martin vs. Eric Martin",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 12: Judgement Day || Nick Sanzo vs. Jackie Lee",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '96 || Tai Bowden vs. Jack Nilson",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '96 || Steve Nelmark vs. Marcus Bossett",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '96 || Mark Hall vs. Felix Lee Mitchell",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 11: The Proving Ground || Roberto Traven vs. Dave Berry",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 11: The Proving Ground || Scott Ferrozzo vs. Sam Fulton",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 10: The Tournament || Sam Adkins vs. Felix Lee Mitchell",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 8: David vs Goliath || Sam Adkins vs. Keith Mielke",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '95 || Mark Hall vs. Trent Jenkins",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC - Ultimate Ultimate '95 || Joe Charles vs. Scott Bessac",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 7: The Brawl in Buffalo || Onassis Parungao vs. Francesco Maturi",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 7: The Brawl in Buffalo || Joel Sutton vs. Geza Kalman",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 6: Clash of the Titans || Anthony Macias vs. He-Man Gipson",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 6: Clash of the Titans || Joel Sutton vs. Jack McGlaughlin",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 4: Revenge of the Warriors || Marcus Bossett vs. Eldo Xavier Dias",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      },
+      {
+        "fight_key": "UFC 4: Revenge of the Warriors || Joe Charles vs. Kevin Rosier",
+        "fighter_count": 1,
+        "fighters": [
+          ""
+        ],
+        "round": ""
+      }
+    ],
+    "round_participant_anomaly_count": 21
+  },
+  "row_counts": {
+    "fight_details": 8859,
+    "fight_results": 8859,
+    "fight_stats": 41672,
+    "fighter_details": 4600,
+    "fighter_tott": 4601
+  },
+  "schema_version": 1,
+  "source_root": "data/raw/greco1899/8e40eb945e11"
+}
