@@ -32,6 +32,32 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Commit driver heartbeat
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p provenance/runs
+          python <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          payload = {
+              "schema_version": 1,
+              "driver": "ufc_official_articles_chunked",
+              "github_run_id": os.environ.get("GITHUB_RUN_ID"),
+              "trigger_sha": os.environ.get("GITHUB_SHA"),
+              "started_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+          }
+          with open("provenance/runs/ufc_official_articles_driver_latest.json", "w", encoding="utf-8") as fh:
+              json.dump(payload, fh, indent=2, sort_keys=True)
+              fh.write("\n")
+          PY
+          git add provenance/runs/ufc_official_articles_driver_latest.json
+          git commit -m "Start UFC official article chunk driver [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+
       - name: Acquire and commit bounded article chunks
         shell: bash
         run: |
