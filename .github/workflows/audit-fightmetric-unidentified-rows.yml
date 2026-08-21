@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "pipelines/audit_fightmetric_unidentified_rows.py"
+      - "pipelines/audit_fightmetric_unidentified_rows_v2.py"
+      - "src/ufc_edge/data/manifest_readers.py"
       - ".github/workflows/audit-fightmetric-unidentified-rows.yml"
   workflow_dispatch:
 
@@ -31,7 +32,7 @@ jobs:
           mkdir -p provenance/runs
           log="provenance/runs/fightmetric_unidentified_rows_${GITHUB_RUN_ID}.log"
           set +e
-          python pipelines/audit_fightmetric_unidentified_rows.py >"$log" 2>&1
+          python pipelines/audit_fightmetric_unidentified_rows_v2.py >"$log" 2>&1
           code=$?
           set -e
 
@@ -40,7 +41,7 @@ jobs:
           from datetime import datetime, timezone
           code, log = int(sys.argv[1]), sys.argv[2]
           payload = {
-              "schema_version": 1,
+              "schema_version": 2,
               "audit": "fightmetric_unidentified_rows",
               "status": "success" if code == 0 else "failed",
               "exit_code": code,
