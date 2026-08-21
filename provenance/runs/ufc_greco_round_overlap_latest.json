@@ -1,11 +1,16 @@
 {
   "audit": "ufc_greco_round_overlap",
-  "completed_at_utc": "2026-08-21T20:39:02.759489Z",
-  "exit_code": 1,
-  "github_run_id": "32524613265",
-  "log": "provenance/runs/ufc_greco_round_overlap_32524613265.log",
-  "outputs": [],
-  "schema_version": 1,
-  "status": "failed",
-  "trigger_sha": "b777fa3650b0e4df90339a0ad372554dfe114e6e"
+  "completed_at_utc": "2026-08-21T20:43:02.091508Z",
+  "exit_code": 0,
+  "github_run_id": "32524951123",
+  "log": "provenance/runs/ufc_greco_round_overlap_32524951123.log",
+  "outputs": [
+    "provenance/audits/ufc_greco_round_overlap_latest.json",
+    "provenance/audits/ufc_greco_round_overlap_latest.md",
+    "data/derived/identity/ufc_greco_fight_alignment_candidate.csv",
+    "data/derived/qa/fightmetric_duplicate_version_greco_scores.csv"
+  ],
+  "schema_version": 2,
+  "status": "success",
+  "trigger_sha": "8c6c4ebca418ed8365044e83cf8417de626f6b36"
 }

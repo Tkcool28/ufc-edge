@@ -1,0 +1,172 @@
+{
+  "decision": {
+    "automatic_source_winner_selected": false,
+    "comparison_completed": true,
+    "name_only_global_matching_used": false,
+    "rule": "Shared-field agreement is QA evidence for source ownership. Canonical source precedence must be documented separately and may be field/era-specific."
+  },
+  "duplicate_version_evidence": {
+    "newest_not_best_keys": 0,
+    "newest_strict_best_keys": 0,
+    "newest_tied_best_keys": 0,
+    "rule": "Duplicate source versions remain unresolved; this audit scores them against Greco but does not select a canonical version automatically.",
+    "version_score_csv": "data/derived/qa/fightmetric_duplicate_version_greco_scores.csv"
+  },
+  "fightmetric_comparison": {
+    "field_agreement_single_version_keys": {
+      "body_sig_str_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "body_sig_str_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "clinch_sig_str_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "clinch_sig_str_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "control_time": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "dist_str_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "dist_str_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "grap_rev_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "grap_sub_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "grap_take_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "grap_take_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "ground_sig_str_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "ground_sig_str_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "head_sig_str_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "head_sig_str_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "knock_down": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "legs_sig_str_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "legs_sig_str_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "sig_str_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "sig_str_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "tot_str_att": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      },
+      "tot_str_land": {
+        "comparisons": 0,
+        "exact": 0,
+        "exact_fraction": null,
+        "mean_absolute_error": null
+      }
+    },
+    "matched_fighter_round_keys": 0,
+    "multi_version_keys": 0,
+    "single_version_keys": 0
+  },
+  "generated_at_utc": "2026-08-21T20:43:01.858793Z",
+  "greco_alignment": {
+    "aligned_fighter_round_keys": 32638,
+    "aligned_fights": 6904,
+    "ambiguous_exact_greco_matches": 0,
+    "no_exact_date_pair_match": 733
+  },
+  "identity_inputs": {
+    "ambiguous_event_memberships_excluded": 0,
+    "official_fights_with_direct_identity_date_and_both_athletes": 7637,
+    "one_to_one_ufc_fightmetric_crosswalk_rows": 7913,
+    "unique_event_bridge_rows": 8909
+  },
+  "outputs": {
+    "duplicate_version_score_csv": "data/derived/qa/fightmetric_duplicate_version_greco_scores.csv",
+    "fight_alignment_csv": "data/derived/identity/ufc_greco_fight_alignment_candidate.csv"
+  },
+  "schema_version": 2
+}
