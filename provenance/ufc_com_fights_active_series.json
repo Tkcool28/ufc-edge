@@ -1,9 +1,9 @@
 {
   "chunk_max_pages": 40,
-  "last_completed_offset": 10000,
+  "last_completed_offset": 12000,
   "last_github_run_id": "32452428106",
-  "last_log": "provenance/runs/ufc_com_fights_chunked_32452428106_10000.log",
-  "next_offset": 12000,
+  "last_log": "provenance/runs/ufc_com_fights_chunked_32452428106_12000.log",
+  "next_offset": null,
   "notes": "Bounded chunks are committed immutably; this operational state resumes only the current query semantics. The prior created-sorted series was abandoned after duplicate page identities proved that ordering unsafe.",
   "pagination_sort": "drupal_internal__nid",
   "previous_failed_series": "20260820T202500Z",
@@ -11,6 +11,6 @@
   "schema_version": 2,
   "series_id": "20260821T055500Z",
   "source": "Official UFC.com Drupal JSON:API /node/fight",
-  "status": "active",
-  "updated_at_utc": "2026-08-21T06:37:48.114120Z"
+  "status": "finalizing",
+  "updated_at_utc": "2026-08-21T06:38:03.439801Z"
 }
