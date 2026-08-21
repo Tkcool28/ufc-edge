@@ -1,5 +1,6 @@
 {
   "chunk_max_pages": 40,
+  "final_manifest": "data/raw/ufc_com_resources/fights/20260821T055500Z/manifest.json",
   "last_completed_offset": 12000,
   "last_github_run_id": "32452428106",
   "last_log": "provenance/runs/ufc_com_fights_chunked_32452428106_12000.log",
@@ -11,6 +12,6 @@
   "schema_version": 2,
   "series_id": "20260821T055500Z",
   "source": "Official UFC.com Drupal JSON:API /node/fight",
-  "status": "finalizing",
-  "updated_at_utc": "2026-08-21T06:38:03.439801Z"
+  "status": "completed",
+  "updated_at_utc": "2026-08-21T06:38:06.383721Z"
 }
