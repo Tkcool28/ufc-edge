@@ -14,11 +14,11 @@
     "weigh_in": {
       "candidate_count": 716,
       "final_manifest": null,
-      "last_completed_index": 600,
+      "last_completed_index": 675,
       "last_github_run_id": "32528351526",
-      "last_log": "provenance/runs/ufc_official_articles_weigh_in_32528351526_600.log",
-      "next_index": 675,
-      "status": "active"
+      "last_log": "provenance/runs/ufc_official_articles_weigh_in_32528351526_675.log",
+      "next_index": null,
+      "status": "finalizing"
     }
   },
   "notes": "State is operational only. Family-level manifest.json is the completeness marker. The active driver is the sitemap-enumerated chunked collector; the blocked JSON:API article collector has been retired.",
@@ -31,5 +31,5 @@
   "schema_version": 1,
   "series_id": "20260821T210000Z",
   "source": "Official UFC.com public news pages enumerated from official sitemap",
-  "updated_at_utc": "2026-08-21T21:56:19.594884Z"
+  "updated_at_utc": "2026-08-21T21:57:53.702648Z"
 }
