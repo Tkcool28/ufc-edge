@@ -1,5 +1,5 @@
 {
-  "map_version": "0.1.0-draft",
+  "map_version": "0.2.0-draft",
   "status": "data_phase_draft",
   "mapping_status_values": [
     "verified",
@@ -25,7 +25,9 @@
     "name_similarity_is_not_semantic_verification": true,
     "missing_is_not_zero": true,
     "unresolved_mappings_do_not_emit_canonical_values": true,
-    "rejected_mappings_do_not_emit_canonical_values": true
+    "rejected_mappings_do_not_emit_canonical_values": true,
+    "duration_units_require_semantic_verification": true,
+    "quantized_time_must_not_emit_exact_seconds": true
   },
   "mappings": [
     {
@@ -626,11 +628,11 @@
       "source_field": "color",
       "target_table": "fighter_round_stats",
       "target_field": "fighter_id",
-      "transform": "resolve_corner_through_official_fight_bridge",
-      "mapping_status": "provisional",
+      "transform": "map_numeric_corner_0_red_1_blue_then_resolve_official_fighter",
+      "mapping_status": "verified",
       "temporal_class": "postfight_label",
       "source_role": "primary_candidate",
-      "notes": "Color is transport linkage only; it must never become a predictive field."
+      "notes": "Transport-only corner code. Full audit over 250,782 shared field comparisons promoted 0=red and 1=blue; never expose numeric color as a predictive field."
     },
     {
       "source": "ufc_fightmetric_official",
@@ -746,12 +748,13 @@
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "control_time",
-      "target_table": "fighter_round_stats",
-      "target_field": "control_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "verified",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
@@ -890,133 +893,145 @@
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "standing_time",
-      "target_table": "fighter_round_position",
-      "target_field": "standing_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "neutral_time",
-      "target_table": "fighter_round_position",
-      "target_field": "neutral_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "distance_time",
-      "target_table": "fighter_round_position",
-      "target_field": "distance_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "clinch_time",
-      "target_table": "fighter_round_position",
-      "target_field": "clinch_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "ground_time",
-      "target_table": "fighter_round_position",
-      "target_field": "ground_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "ground_ctl_time",
-      "target_table": "fighter_round_position",
-      "target_field": "ground_control_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "guard_ctl_time",
-      "target_table": "fighter_round_position",
-      "target_field": "guard_control_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "half_guard_ctl_time",
-      "target_table": "fighter_round_position",
-      "target_field": "half_guard_control_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "side_ctl_time",
-      "target_table": "fighter_round_position",
-      "target_field": "side_control_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "mount_ctl_time",
-      "target_table": "fighter_round_position",
-      "target_field": "mount_control_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "back_ctl_time",
-      "target_table": "fighter_round_position",
-      "target_field": "back_control_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
       "collection": "fight_stat",
       "source_field": "msc_ground_ctl__time",
-      "target_table": "fighter_round_position",
-      "target_field": "misc_ground_control_sec",
-      "transform": "parse_duration_to_seconds_or_null",
-      "mapping_status": "provisional",
+      "target_table": null,
+      "target_field": null,
+      "transform": "none",
+      "mapping_status": "unresolved",
       "temporal_class": "postfight_label",
-      "source_role": "primary_candidate"
+      "source_role": "primary_candidate",
+      "notes": "Archived FightMetric positional time fields are integer-quantized, not exact seconds. For control_time, raw == floor(Greco control seconds/60) in 97.45% of 23,876 aligned rows. Do not emit canonical *_sec values. Preserve raw until a coarse-time canonical representation is defined."
     },
     {
       "source": "ufc_fightmetric_official",
