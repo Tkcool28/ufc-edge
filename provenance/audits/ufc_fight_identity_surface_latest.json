@@ -1,0 +1,1613 @@
+{
+  "attribute_coverage": {
+    "blue_corner_fight_debut": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "blue_corner_fight_don_best_odds": {
+      "nonnull": 1993,
+      "nonnull_fraction": 0.16513381390338885,
+      "seen": 12069
+    },
+    "blue_corner_fight_meta_ranking": {
+      "nonnull": 0,
+      "nonnull_fraction": 0.0,
+      "seen": 12069
+    },
+    "blue_corner_fight_odds": {
+      "nonnull": 3227,
+      "nonnull_fraction": 0.26737923605932556,
+      "seen": 12069
+    },
+    "blue_corner_fight_odds_brazil": {
+      "nonnull": 485,
+      "nonnull_fraction": 0.0401855994697158,
+      "seen": 12069
+    },
+    "blue_corner_fight_odds_latam": {
+      "nonnull": 507,
+      "nonnull_fraction": 0.04200845140442456,
+      "seen": 12069
+    },
+    "blue_corner_fight_outcome": {
+      "nonnull": 8371,
+      "nonnull_fraction": 0.6935951611566824,
+      "seen": 12069
+    },
+    "blue_corner_fight_ranking": {
+      "nonnull": 1215,
+      "nonnull_fraction": 0.10067114093959731,
+      "seen": 12069
+    },
+    "blue_corner_fight_record": {
+      "nonnull": 8611,
+      "nonnull_fraction": 0.7134808186262325,
+      "seen": 12069
+    },
+    "blue_corner_fight_weight": {
+      "nonnull": 10992,
+      "nonnull_fraction": 0.910763112105394,
+      "seen": 12069
+    },
+    "blue_corner_odds_win_by_dec": {
+      "nonnull": 937,
+      "nonnull_fraction": 0.07763692103736847,
+      "seen": 12069
+    },
+    "blue_corner_odds_win_by_ko": {
+      "nonnull": 937,
+      "nonnull_fraction": 0.07763692103736847,
+      "seen": 12069
+    },
+    "blue_corner_odds_win_by_sub": {
+      "nonnull": 937,
+      "nonnull_fraction": 0.07763692103736847,
+      "seen": 12069
+    },
+    "blue_corner_potn": {
+      "nonnull": 5950,
+      "nonnull_fraction": 0.4929985914325959,
+      "seen": 12069
+    },
+    "changed": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "content_translation_outdated": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "content_translation_source": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "created": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "default_langcode": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "description": {
+      "nonnull": 170,
+      "nonnull_fraction": 0.014085674040931312,
+      "seen": 12069
+    },
+    "drupal_internal__nid": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "drupal_internal__vid": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "ds_switch": {
+      "nonnull": 0,
+      "nonnull_fraction": 0.0,
+      "seen": 12069
+    },
+    "fight_final_method": {
+      "nonnull": 8802,
+      "nonnull_fraction": 0.7293064876957495,
+      "seen": 12069
+    },
+    "fight_final_round": {
+      "nonnull": 8806,
+      "nonnull_fraction": 0.7296379153202419,
+      "seen": 12069
+    },
+    "fight_final_time": {
+      "nonnull": 8761,
+      "nonnull_fraction": 0.7259093545447013,
+      "seen": 12069
+    },
+    "fight_odds_total_rounds_line": {
+      "nonnull": 479,
+      "nonnull_fraction": 0.03968845803297705,
+      "seen": 12069
+    },
+    "fight_odds_total_rounds_over": {
+      "nonnull": 479,
+      "nonnull_fraction": 0.03968845803297705,
+      "seen": 12069
+    },
+    "fight_odds_total_rounds_under": {
+      "nonnull": 479,
+      "nonnull_fraction": 0.03968845803297705,
+      "seen": 12069
+    },
+    "fight_outcome": {
+      "nonnull": 8884,
+      "nonnull_fraction": 0.7361007539978457,
+      "seen": 12069
+    },
+    "fightmetric_id": {
+      "nonnull": 9744,
+      "nonnull_fraction": 0.8073576932637335,
+      "seen": 12069
+    },
+    "fotn_award": {
+      "nonnull": 5949,
+      "nonnull_fraction": 0.4929157345264728,
+      "seen": 12069
+    },
+    "hub_id": {
+      "nonnull": 9930,
+      "nonnull_fraction": 0.8227690778026349,
+      "seen": 12069
+    },
+    "langcode": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "metatag": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "old_id": {
+      "nonnull": 6474,
+      "nonnull_fraction": 0.5364156102411136,
+      "seen": 12069
+    },
+    "old_id_translation": {
+      "nonnull": 6474,
+      "nonnull_fraction": 0.5364156102411136,
+      "seen": 12069
+    },
+    "old_id_version": {
+      "nonnull": 6474,
+      "nonnull_fraction": 0.5364156102411136,
+      "seen": 12069
+    },
+    "old_language_code": {
+      "nonnull": 6474,
+      "nonnull_fraction": 0.5364156102411136,
+      "seen": 12069
+    },
+    "path": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "promote": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "publish_on": {
+      "nonnull": 0,
+      "nonnull_fraction": 0.0,
+      "seen": 12069
+    },
+    "red_corner_fight_debut": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "red_corner_fight_meta_ranking": {
+      "nonnull": 0,
+      "nonnull_fraction": 0.0,
+      "seen": 12069
+    },
+    "red_corner_fight_odds": {
+      "nonnull": 3225,
+      "nonnull_fraction": 0.2672135222470793,
+      "seen": 12069
+    },
+    "red_corner_fight_odds_brazil": {
+      "nonnull": 485,
+      "nonnull_fraction": 0.0401855994697158,
+      "seen": 12069
+    },
+    "red_corner_fight_odds_don_best": {
+      "nonnull": 2045,
+      "nonnull_fraction": 0.16944237302179135,
+      "seen": 12069
+    },
+    "red_corner_fight_odds_latam": {
+      "nonnull": 507,
+      "nonnull_fraction": 0.04200845140442456,
+      "seen": 12069
+    },
+    "red_corner_fight_outcome": {
+      "nonnull": 8371,
+      "nonnull_fraction": 0.6935951611566824,
+      "seen": 12069
+    },
+    "red_corner_fight_ranking": {
+      "nonnull": 1677,
+      "nonnull_fraction": 0.13895103156848124,
+      "seen": 12069
+    },
+    "red_corner_fight_record": {
+      "nonnull": 8679,
+      "nonnull_fraction": 0.7191150882426051,
+      "seen": 12069
+    },
+    "red_corner_fight_weight": {
+      "nonnull": 11124,
+      "nonnull_fraction": 0.9217002237136466,
+      "seen": 12069
+    },
+    "red_corner_odds_win_by_dec": {
+      "nonnull": 938,
+      "nonnull_fraction": 0.0777197779434916,
+      "seen": 12069
+    },
+    "red_corner_odds_win_by_ko": {
+      "nonnull": 938,
+      "nonnull_fraction": 0.0777197779434916,
+      "seen": 12069
+    },
+    "red_corner_odds_win_by_sub": {
+      "nonnull": 938,
+      "nonnull_fraction": 0.0777197779434916,
+      "seen": 12069
+    },
+    "red_corner_potn": {
+      "nonnull": 5948,
+      "nonnull_fraction": 0.49283287762034966,
+      "seen": 12069
+    },
+    "revision_timestamp": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "revision_translation_affected": {
+      "nonnull": 12048,
+      "nonnull_fraction": 0.9982600049714143,
+      "seen": 12069
+    },
+    "rounds": {
+      "nonnull": 6043,
+      "nonnull_fraction": 0.5007042837020466,
+      "seen": 12069
+    },
+    "status": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "sticky": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "text_admin_notes": {
+      "nonnull": 1,
+      "nonnull_fraction": 8.285690612312537e-05,
+      "seen": 12069
+    },
+    "title": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "ufc_override": {
+      "nonnull": 5855,
+      "nonnull_fraction": 0.485127185350899,
+      "seen": 12069
+    },
+    "unpublish_on": {
+      "nonnull": 0,
+      "nonnull_fraction": 0.0,
+      "seen": 12069
+    }
+  },
+  "candidate_attribute_examples": {
+    "blue_corner_fight_debut": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "blue_corner_fight_don_best_odds": [
+      "+160",
+      "+515",
+      "-175",
+      "+330",
+      "-130",
+      "+180",
+      "+110",
+      "-145"
+    ],
+    "blue_corner_fight_odds": [
+      "+160",
+      "+515",
+      "-175",
+      "+330",
+      "-130",
+      "+180",
+      "+110",
+      "-145"
+    ],
+    "blue_corner_fight_odds_brazil": [
+      "1.41",
+      "2.85",
+      "2.90",
+      "6.40",
+      "1.51",
+      "1.66",
+      "1.62",
+      "2.34"
+    ],
+    "blue_corner_fight_odds_latam": [
+      "1.41",
+      "2.85",
+      "2.90",
+      "6.40",
+      "1.51",
+      "1.66",
+      "1.62",
+      "2.34"
+    ],
+    "blue_corner_fight_outcome": [
+      "Loss",
+      "Loss",
+      "Loss",
+      "Loss",
+      "Loss",
+      "Loss",
+      "Loss",
+      "Loss"
+    ],
+    "blue_corner_fight_ranking": [
+      9,
+      13,
+      13,
+      7,
+      4,
+      12,
+      5,
+      4
+    ],
+    "blue_corner_fight_record": [
+      "13-2-2",
+      "32-4-0",
+      "28-9-0",
+      "27-11-0",
+      "3-1-1",
+      "19-8-0, 1NC",
+      "5-3-0",
+      "26-10-1"
+    ],
+    "blue_corner_fight_weight": [
+      "0.00",
+      "205.00",
+      "0.00",
+      "0.00",
+      "0.00",
+      "0.00",
+      "0.00",
+      "0.00"
+    ],
+    "blue_corner_odds_win_by_dec": [
+      "+110",
+      "+140",
+      "+330",
+      "+800",
+      "+1400",
+      "+300",
+      "+600",
+      "+275"
+    ],
+    "blue_corner_odds_win_by_ko": [
+      "+250",
+      "+330",
+      "+1100",
+      "+500",
+      "+600",
+      "+900",
+      "+800",
+      "+550"
+    ],
+    "blue_corner_odds_win_by_sub": [
+      "+2000",
+      "+900",
+      "+900",
+      "+2200",
+      "+3500",
+      "+2500",
+      "+1600",
+      "+1100"
+    ],
+    "blue_corner_potn": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "content_translation_outdated": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "drupal_internal__nid": [
+      28788,
+      28789,
+      28790,
+      28791,
+      28792,
+      28793,
+      28794,
+      28795
+    ],
+    "drupal_internal__vid": [
+      90628,
+      29208,
+      29209,
+      29210,
+      29211,
+      29212,
+      29213,
+      29214
+    ],
+    "fight_final_time": [
+      "1:44",
+      "0:57",
+      "0:59",
+      "2:18",
+      "0:26",
+      "1:49",
+      "4:20",
+      "0:52"
+    ],
+    "fightmetric_id": [
+      1798,
+      1796,
+      1795,
+      1793,
+      1791,
+      1794,
+      1792,
+      1797
+    ],
+    "hub_id": [
+      7772,
+      7775,
+      7776,
+      7777,
+      7694,
+      7693,
+      7692,
+      7691
+    ],
+    "old_id": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "old_id_translation": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "old_id_version": [
+      359,
+      357,
+      355,
+      355,
+      353,
+      353,
+      353,
+      353
+    ],
+    "red_corner_fight_debut": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "red_corner_fight_odds": [
+      "-200",
+      "-715",
+      "+145",
+      "-430",
+      "+100",
+      "-220",
+      "-140",
+      "+115"
+    ],
+    "red_corner_fight_odds_brazil": [
+      "2.85",
+      "1.48",
+      "1.47",
+      "1.15",
+      "2.70",
+      "2.34",
+      "2.43",
+      "1.66"
+    ],
+    "red_corner_fight_odds_don_best": [
+      "-200",
+      "-715",
+      "+145",
+      "-430",
+      "+100",
+      "-220",
+      "-140",
+      "+115"
+    ],
+    "red_corner_fight_odds_latam": [
+      "2.85",
+      "1.48",
+      "1.47",
+      "1.15",
+      "2.70",
+      "2.34",
+      "2.43",
+      "1.66"
+    ],
+    "red_corner_fight_outcome": [
+      "Win",
+      "Win",
+      "Win",
+      "Win",
+      "Win",
+      "Win",
+      "Win",
+      "Win"
+    ],
+    "red_corner_fight_ranking": [
+      14,
+      3,
+      9,
+      8,
+      12,
+      3,
+      2,
+      9
+    ],
+    "red_corner_fight_record": [
+      "45-8-0",
+      "11-5-0, 1NC",
+      "14-4-0",
+      "25-4-0",
+      "46-9-3, 1NC",
+      "11-6-0",
+      "11-6-0",
+      "88-19-5"
+    ],
+    "red_corner_fight_weight": [
+      "0.00",
+      "0.00",
+      "0.00",
+      "0.00",
+      "0.00",
+      "205.00",
+      "0.00",
+      "0.00"
+    ],
+    "red_corner_odds_win_by_dec": [
+      "+350",
+      "+250",
+      "-120",
+      "-120",
+      "+215",
+      "+140",
+      "+120",
+      "+150"
+    ],
+    "red_corner_odds_win_by_ko": [
+      "+600",
+      "+650",
+      "+400",
+      "+240",
+      "+100",
+      "+250",
+      "+175",
+      "+400"
+    ],
+    "red_corner_odds_win_by_sub": [
+      "+3500",
+      "+2800",
+      "+1800",
+      "+1200",
+      "+450",
+      "+800",
+      "+1000",
+      "+550"
+    ],
+    "red_corner_potn": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "revision_timestamp": [
+      "2018-10-09T04:32:08+00:00",
+      "2018-09-14T11:11:50+00:00",
+      "2018-09-14T11:11:50+00:00",
+      "2018-09-14T11:11:50+00:00",
+      "2018-09-14T11:11:50+00:00",
+      "2018-09-14T11:11:50+00:00",
+      "2018-09-14T11:11:50+00:00",
+      "2018-09-14T11:11:50+00:00"
+    ],
+    "ufc_override": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "candidate_identity_attribute_keys": [
+    "blue_corner_fight_debut",
+    "blue_corner_fight_don_best_odds",
+    "blue_corner_fight_meta_ranking",
+    "blue_corner_fight_odds",
+    "blue_corner_fight_odds_brazil",
+    "blue_corner_fight_odds_latam",
+    "blue_corner_fight_outcome",
+    "blue_corner_fight_ranking",
+    "blue_corner_fight_record",
+    "blue_corner_fight_weight",
+    "blue_corner_odds_win_by_dec",
+    "blue_corner_odds_win_by_ko",
+    "blue_corner_odds_win_by_sub",
+    "blue_corner_potn",
+    "content_translation_outdated",
+    "drupal_internal__nid",
+    "drupal_internal__vid",
+    "fight_final_time",
+    "fightmetric_id",
+    "hub_id",
+    "old_id",
+    "old_id_translation",
+    "old_id_version",
+    "red_corner_fight_debut",
+    "red_corner_fight_meta_ranking",
+    "red_corner_fight_odds",
+    "red_corner_fight_odds_brazil",
+    "red_corner_fight_odds_don_best",
+    "red_corner_fight_odds_latam",
+    "red_corner_fight_outcome",
+    "red_corner_fight_ranking",
+    "red_corner_fight_record",
+    "red_corner_fight_weight",
+    "red_corner_odds_win_by_dec",
+    "red_corner_odds_win_by_ko",
+    "red_corner_odds_win_by_sub",
+    "red_corner_potn",
+    "revision_timestamp",
+    "ufc_override"
+  ],
+  "decision": {
+    "name_only_matching_allowed": false,
+    "note": "A direct FightMetric-named field is strong bridge evidence but still requires uniqueness/cardinality/overlap validation before a canonical crosswalk is created.",
+    "stable_bridge_proven": true
+  },
+  "direct_fightmetric_attribute_keys": [
+    "fightmetric_id"
+  ],
+  "generated_at_utc": "2026-08-21T13:13:37.951239Z",
+  "included_attribute_keys": {},
+  "included_relationship_keys": {},
+  "included_type_counts": {},
+  "manifest": "data/raw/ufc_com_resources/fights/20260821T055500Z/manifest.json",
+  "primary_rows": 12069,
+  "primary_samples": [
+    {
+      "candidate_attributes": {
+        "blue_corner_fight_debut": false,
+        "blue_corner_fight_don_best_odds": null,
+        "blue_corner_fight_meta_ranking": null,
+        "blue_corner_fight_odds": null,
+        "blue_corner_fight_odds_brazil": null,
+        "blue_corner_fight_odds_latam": null,
+        "blue_corner_fight_outcome": "Loss",
+        "blue_corner_fight_ranking": null,
+        "blue_corner_fight_record": null,
+        "blue_corner_fight_weight": "0.00",
+        "blue_corner_odds_win_by_dec": null,
+        "blue_corner_odds_win_by_ko": null,
+        "blue_corner_odds_win_by_sub": null,
+        "blue_corner_potn": false,
+        "content_translation_outdated": false,
+        "drupal_internal__nid": 28788,
+        "drupal_internal__vid": 90628,
+        "fight_final_time": "1:44",
+        "fightmetric_id": 1798,
+        "hub_id": null,
+        "old_id": 1,
+        "old_id_translation": "1",
+        "old_id_version": 359,
+        "red_corner_fight_debut": false,
+        "red_corner_fight_meta_ranking": null,
+        "red_corner_fight_odds": null,
+        "red_corner_fight_odds_brazil": null,
+        "red_corner_fight_odds_don_best": null,
+        "red_corner_fight_odds_latam": null,
+        "red_corner_fight_outcome": "Win",
+        "red_corner_fight_ranking": null,
+        "red_corner_fight_record": null,
+        "red_corner_fight_weight": "0.00",
+        "red_corner_odds_win_by_dec": null,
+        "red_corner_odds_win_by_ko": null,
+        "red_corner_odds_win_by_sub": null,
+        "red_corner_potn": false,
+        "revision_timestamp": "2018-10-09T04:32:08+00:00",
+        "ufc_override": false
+      },
+      "id": "f623b2e4-27af-4913-9fb2-281c57021b0e",
+      "relationships": {
+        "blue_corner": {
+          "id": "c1f63d97-a57a-4b10-912d-0c05c70ecfa6",
+          "meta": {
+            "drupal_internal__target_id": 26650
+          },
+          "type": "node--athlete"
+        },
+        "fight_final_winner": {
+          "id": "514f93db-822b-4871-869f-0e779b1e8629",
+          "meta": {
+            "drupal_internal__target_id": 26372
+          },
+          "type": "node--athlete"
+        },
+        "highlight_video": null,
+        "red_corner": {
+          "id": "514f93db-822b-4871-869f-0e779b1e8629",
+          "meta": {
+            "drupal_internal__target_id": 26372
+          },
+          "type": "node--athlete"
+        },
+        "revision_uid": {
+          "id": "94e2911d-af76-4857-a01b-5c2f5f796caa",
+          "meta": {
+            "drupal_internal__target_id": 1
+          },
+          "type": "user--user"
+        },
+        "uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "weight_class": null
+      },
+      "type": "node--fight"
+    },
+    {
+      "candidate_attributes": {
+        "blue_corner_fight_debut": false,
+        "blue_corner_fight_don_best_odds": null,
+        "blue_corner_fight_meta_ranking": null,
+        "blue_corner_fight_odds": null,
+        "blue_corner_fight_odds_brazil": null,
+        "blue_corner_fight_odds_latam": null,
+        "blue_corner_fight_outcome": "Loss",
+        "blue_corner_fight_ranking": null,
+        "blue_corner_fight_record": null,
+        "blue_corner_fight_weight": "205.00",
+        "blue_corner_odds_win_by_dec": null,
+        "blue_corner_odds_win_by_ko": null,
+        "blue_corner_odds_win_by_sub": null,
+        "blue_corner_potn": null,
+        "content_translation_outdated": false,
+        "drupal_internal__nid": 28789,
+        "drupal_internal__vid": 29208,
+        "fight_final_time": "0:57",
+        "fightmetric_id": 1796,
+        "hub_id": null,
+        "old_id": 2,
+        "old_id_translation": "2",
+        "old_id_version": 357,
+        "red_corner_fight_debut": false,
+        "red_corner_fight_meta_ranking": null,
+        "red_corner_fight_odds": null,
+        "red_corner_fight_odds_brazil": null,
+        "red_corner_fight_odds_don_best": null,
+        "red_corner_fight_odds_latam": null,
+        "red_corner_fight_outcome": "Win",
+        "red_corner_fight_ranking": null,
+        "red_corner_fight_record": null,
+        "red_corner_fight_weight": "0.00",
+        "red_corner_odds_win_by_dec": null,
+        "red_corner_odds_win_by_ko": null,
+        "red_corner_odds_win_by_sub": null,
+        "red_corner_potn": null,
+        "revision_timestamp": "2018-09-14T11:11:50+00:00",
+        "ufc_override": null
+      },
+      "id": "b46205da-a669-49ac-aa5e-d3aa167b7d62",
+      "relationships": {
+        "blue_corner": {
+          "id": "e7ada8eb-997c-414c-b1a6-041606ca1be6",
+          "meta": {
+            "drupal_internal__target_id": 26621
+          },
+          "type": "node--athlete"
+        },
+        "fight_final_winner": {
+          "id": "514f93db-822b-4871-869f-0e779b1e8629",
+          "meta": {
+            "drupal_internal__target_id": 26372
+          },
+          "type": "node--athlete"
+        },
+        "highlight_video": null,
+        "red_corner": {
+          "id": "514f93db-822b-4871-869f-0e779b1e8629",
+          "meta": {
+            "drupal_internal__target_id": 26372
+          },
+          "type": "node--athlete"
+        },
+        "revision_uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "weight_class": null
+      },
+      "type": "node--fight"
+    },
+    {
+      "candidate_attributes": {
+        "blue_corner_fight_debut": false,
+        "blue_corner_fight_don_best_odds": null,
+        "blue_corner_fight_meta_ranking": null,
+        "blue_corner_fight_odds": null,
+        "blue_corner_fight_odds_brazil": null,
+        "blue_corner_fight_odds_latam": null,
+        "blue_corner_fight_outcome": "Loss",
+        "blue_corner_fight_ranking": null,
+        "blue_corner_fight_record": null,
+        "blue_corner_fight_weight": "0.00",
+        "blue_corner_odds_win_by_dec": null,
+        "blue_corner_odds_win_by_ko": null,
+        "blue_corner_odds_win_by_sub": null,
+        "blue_corner_potn": null,
+        "content_translation_outdated": false,
+        "drupal_internal__nid": 28790,
+        "drupal_internal__vid": 29209,
+        "fight_final_time": "0:59",
+        "fightmetric_id": 1795,
+        "hub_id": null,
+        "old_id": 3,
+        "old_id_translation": "3",
+        "old_id_version": 355,
+        "red_corner_fight_debut": false,
+        "red_corner_fight_meta_ranking": null,
+        "red_corner_fight_odds": null,
+        "red_corner_fight_odds_brazil": null,
+        "red_corner_fight_odds_don_best": null,
+        "red_corner_fight_odds_latam": null,
+        "red_corner_fight_outcome": "Win",
+        "red_corner_fight_ranking": null,
+        "red_corner_fight_record": null,
+        "red_corner_fight_weight": "0.00",
+        "red_corner_odds_win_by_dec": null,
+        "red_corner_odds_win_by_ko": null,
+        "red_corner_odds_win_by_sub": null,
+        "red_corner_potn": null,
+        "revision_timestamp": "2018-09-14T11:11:50+00:00",
+        "ufc_override": null
+      },
+      "id": "7d6ab1db-4315-48ab-8747-453de930c526",
+      "relationships": {
+        "blue_corner": {
+          "id": "98d8b1a2-3112-40f5-a887-96baa472507e",
+          "meta": {
+            "drupal_internal__target_id": 26449
+          },
+          "type": "node--athlete"
+        },
+        "fight_final_winner": {
+          "id": "c1f63d97-a57a-4b10-912d-0c05c70ecfa6",
+          "meta": {
+            "drupal_internal__target_id": 26650
+          },
+          "type": "node--athlete"
+        },
+        "highlight_video": null,
+        "red_corner": {
+          "id": "c1f63d97-a57a-4b10-912d-0c05c70ecfa6",
+          "meta": {
+            "drupal_internal__target_id": 26650
+          },
+          "type": "node--athlete"
+        },
+        "revision_uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "weight_class": null
+      },
+      "type": "node--fight"
+    },
+    {
+      "candidate_attributes": {
+        "blue_corner_fight_debut": true,
+        "blue_corner_fight_don_best_odds": null,
+        "blue_corner_fight_meta_ranking": null,
+        "blue_corner_fight_odds": null,
+        "blue_corner_fight_odds_brazil": null,
+        "blue_corner_fight_odds_latam": null,
+        "blue_corner_fight_outcome": "Loss",
+        "blue_corner_fight_ranking": null,
+        "blue_corner_fight_record": null,
+        "blue_corner_fight_weight": "0.00",
+        "blue_corner_odds_win_by_dec": null,
+        "blue_corner_odds_win_by_ko": null,
+        "blue_corner_odds_win_by_sub": null,
+        "blue_corner_potn": null,
+        "content_translation_outdated": false,
+        "drupal_internal__nid": 28791,
+        "drupal_internal__vid": 29210,
+        "fight_final_time": "2:18",
+        "fightmetric_id": 1793,
+        "hub_id": null,
+        "old_id": 4,
+        "old_id_translation": "4",
+        "old_id_version": 355,
+        "red_corner_fight_debut": true,
+        "red_corner_fight_meta_ranking": null,
+        "red_corner_fight_odds": null,
+        "red_corner_fight_odds_brazil": null,
+        "red_corner_fight_odds_don_best": null,
+        "red_corner_fight_odds_latam": null,
+        "red_corner_fight_outcome": "Win",
+        "red_corner_fight_ranking": null,
+        "red_corner_fight_record": null,
+        "red_corner_fight_weight": "0.00",
+        "red_corner_odds_win_by_dec": null,
+        "red_corner_odds_win_by_ko": null,
+        "red_corner_odds_win_by_sub": null,
+        "red_corner_potn": null,
+        "revision_timestamp": "2018-09-14T11:11:50+00:00",
+        "ufc_override": null
+      },
+      "id": "39ba4c02-b0fa-4992-bf0e-0425a20ac96a",
+      "relationships": {
+        "blue_corner": {
+          "id": "923ed7d7-44f5-4b16-be81-d2ddebfbda3d",
+          "meta": {
+            "drupal_internal__target_id": 26552
+          },
+          "type": "node--athlete"
+        },
+        "fight_final_winner": {
+          "id": "514f93db-822b-4871-869f-0e779b1e8629",
+          "meta": {
+            "drupal_internal__target_id": 26372
+          },
+          "type": "node--athlete"
+        },
+        "highlight_video": null,
+        "red_corner": {
+          "id": "514f93db-822b-4871-869f-0e779b1e8629",
+          "meta": {
+            "drupal_internal__target_id": 26372
+          },
+          "type": "node--athlete"
+        },
+        "revision_uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "weight_class": null
+      },
+      "type": "node--fight"
+    },
+    {
+      "candidate_attributes": {
+        "blue_corner_fight_debut": true,
+        "blue_corner_fight_don_best_odds": null,
+        "blue_corner_fight_meta_ranking": null,
+        "blue_corner_fight_odds": null,
+        "blue_corner_fight_odds_brazil": null,
+        "blue_corner_fight_odds_latam": null,
+        "blue_corner_fight_outcome": "Loss",
+        "blue_corner_fight_ranking": null,
+        "blue_corner_fight_record": null,
+        "blue_corner_fight_weight": "0.00",
+        "blue_corner_odds_win_by_dec": null,
+        "blue_corner_odds_win_by_ko": null,
+        "blue_corner_odds_win_by_sub": null,
+        "blue_corner_potn": null,
+        "content_translation_outdated": false,
+        "drupal_internal__nid": 28792,
+        "drupal_internal__vid": 29211,
+        "fight_final_time": "0:26",
+        "fightmetric_id": 1791,
+        "hub_id": null,
+        "old_id": 5,
+        "old_id_translation": "5",
+        "old_id_version": 353,
+        "red_corner_fight_debut": true,
+        "red_corner_fight_meta_ranking": null,
+        "red_corner_fight_odds": null,
+        "red_corner_fight_odds_brazil": null,
+        "red_corner_fight_odds_don_best": null,
+        "red_corner_fight_odds_latam": null,
+        "red_corner_fight_outcome": "Win",
+        "red_corner_fight_ranking": null,
+        "red_corner_fight_record": null,
+        "red_corner_fight_weight": "0.00",
+        "red_corner_odds_win_by_dec": null,
+        "red_corner_odds_win_by_ko": null,
+        "red_corner_odds_win_by_sub": null,
+        "red_corner_potn": null,
+        "revision_timestamp": "2018-09-14T11:11:50+00:00",
+        "ufc_override": null
+      },
+      "id": "0efa6dac-04cf-404d-89ef-ddf0cc41067e",
+      "relationships": {
+        "blue_corner": {
+          "id": "64498c34-51ec-4f1a-9ccb-fc995f442558",
+          "meta": {
+            "drupal_internal__target_id": 26473
+          },
+          "type": "node--athlete"
+        },
+        "fight_final_winner": {
+          "id": "c1f63d97-a57a-4b10-912d-0c05c70ecfa6",
+          "meta": {
+            "drupal_internal__target_id": 26650
+          },
+          "type": "node--athlete"
+        },
+        "highlight_video": null,
+        "red_corner": {
+          "id": "c1f63d97-a57a-4b10-912d-0c05c70ecfa6",
+          "meta": {
+            "drupal_internal__target_id": 26650
+          },
+          "type": "node--athlete"
+        },
+        "revision_uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "weight_class": null
+      },
+      "type": "node--fight"
+    },
+    {
+      "candidate_attributes": {
+        "blue_corner_fight_debut": true,
+        "blue_corner_fight_don_best_odds": null,
+        "blue_corner_fight_meta_ranking": null,
+        "blue_corner_fight_odds": null,
+        "blue_corner_fight_odds_brazil": null,
+        "blue_corner_fight_odds_latam": null,
+        "blue_corner_fight_outcome": "Loss",
+        "blue_corner_fight_ranking": null,
+        "blue_corner_fight_record": null,
+        "blue_corner_fight_weight": "0.00",
+        "blue_corner_odds_win_by_dec": null,
+        "blue_corner_odds_win_by_ko": null,
+        "blue_corner_odds_win_by_sub": null,
+        "blue_corner_potn": null,
+        "content_translation_outdated": false,
+        "drupal_internal__nid": 28793,
+        "drupal_internal__vid": 29212,
+        "fight_final_time": "1:49",
+        "fightmetric_id": 1794,
+        "hub_id": null,
+        "old_id": 6,
+        "old_id_translation": "6",
+        "old_id_version": 353,
+        "red_corner_fight_debut": true,
+        "red_corner_fight_meta_ranking": null,
+        "red_corner_fight_odds": null,
+        "red_corner_fight_odds_brazil": null,
+        "red_corner_fight_odds_don_best": null,
+        "red_corner_fight_odds_latam": null,
+        "red_corner_fight_outcome": "Win",
+        "red_corner_fight_ranking": null,
+        "red_corner_fight_record": null,
+        "red_corner_fight_weight": "205.00",
+        "red_corner_odds_win_by_dec": null,
+        "red_corner_odds_win_by_ko": null,
+        "red_corner_odds_win_by_sub": null,
+        "red_corner_potn": null,
+        "revision_timestamp": "2018-09-14T11:11:50+00:00",
+        "ufc_override": null
+      },
+      "id": "f51e3497-034b-44bb-a7f8-ee6399690dc1",
+      "relationships": {
+        "blue_corner": {
+          "id": "4142e9a4-a3ef-4141-83e4-171f817fcf3e",
+          "meta": {
+            "drupal_internal__target_id": 26464
+          },
+          "type": "node--athlete"
+        },
+        "fight_final_winner": {
+          "id": "e7ada8eb-997c-414c-b1a6-041606ca1be6",
+          "meta": {
+            "drupal_internal__target_id": 26621
+          },
+          "type": "node--athlete"
+        },
+        "highlight_video": null,
+        "red_corner": {
+          "id": "e7ada8eb-997c-414c-b1a6-041606ca1be6",
+          "meta": {
+            "drupal_internal__target_id": 26621
+          },
+          "type": "node--athlete"
+        },
+        "revision_uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "weight_class": null
+      },
+      "type": "node--fight"
+    },
+    {
+      "candidate_attributes": {
+        "blue_corner_fight_debut": true,
+        "blue_corner_fight_don_best_odds": null,
+        "blue_corner_fight_meta_ranking": null,
+        "blue_corner_fight_odds": null,
+        "blue_corner_fight_odds_brazil": null,
+        "blue_corner_fight_odds_latam": null,
+        "blue_corner_fight_outcome": "Loss",
+        "blue_corner_fight_ranking": null,
+        "blue_corner_fight_record": null,
+        "blue_corner_fight_weight": "0.00",
+        "blue_corner_odds_win_by_dec": null,
+        "blue_corner_odds_win_by_ko": null,
+        "blue_corner_odds_win_by_sub": null,
+        "blue_corner_potn": null,
+        "content_translation_outdated": false,
+        "drupal_internal__nid": 28794,
+        "drupal_internal__vid": 29213,
+        "fight_final_time": "4:20",
+        "fightmetric_id": 1792,
+        "hub_id": null,
+        "old_id": 7,
+        "old_id_translation": "7",
+        "old_id_version": 353,
+        "red_corner_fight_debut": true,
+        "red_corner_fight_meta_ranking": null,
+        "red_corner_fight_odds": null,
+        "red_corner_fight_odds_brazil": null,
+        "red_corner_fight_odds_don_best": null,
+        "red_corner_fight_odds_latam": null,
+        "red_corner_fight_outcome": "Win",
+        "red_corner_fight_ranking": null,
+        "red_corner_fight_record": null,
+        "red_corner_fight_weight": "0.00",
+        "red_corner_odds_win_by_dec": null,
+        "red_corner_odds_win_by_ko": null,
+        "red_corner_odds_win_by_sub": null,
+        "red_corner_potn": null,
+        "revision_timestamp": "2018-09-14T11:11:50+00:00",
+        "ufc_override": null
+      },
+      "id": "0e670d69-6a1f-4320-9653-52df0ca42fac",
+      "relationships": {
+        "blue_corner": {
+          "id": "fe498327-871a-42ca-80c7-50396d049fe8",
+          "meta": {
+            "drupal_internal__target_id": 26395
+          },
+          "type": "node--athlete"
+        },
+        "fight_final_winner": {
+          "id": "98d8b1a2-3112-40f5-a887-96baa472507e",
+          "meta": {
+            "drupal_internal__target_id": 26449
+          },
+          "type": "node--athlete"
+        },
+        "highlight_video": null,
+        "red_corner": {
+          "id": "98d8b1a2-3112-40f5-a887-96baa472507e",
+          "meta": {
+            "drupal_internal__target_id": 26449
+          },
+          "type": "node--athlete"
+        },
+        "revision_uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "weight_class": null
+      },
+      "type": "node--fight"
+    },
+    {
+      "candidate_attributes": {
+        "blue_corner_fight_debut": true,
+        "blue_corner_fight_don_best_odds": null,
+        "blue_corner_fight_meta_ranking": null,
+        "blue_corner_fight_odds": null,
+        "blue_corner_fight_odds_brazil": null,
+        "blue_corner_fight_odds_latam": null,
+        "blue_corner_fight_outcome": "Loss",
+        "blue_corner_fight_ranking": null,
+        "blue_corner_fight_record": null,
+        "blue_corner_fight_weight": "0.00",
+        "blue_corner_odds_win_by_dec": null,
+        "blue_corner_odds_win_by_ko": null,
+        "blue_corner_odds_win_by_sub": null,
+        "blue_corner_potn": null,
+        "content_translation_outdated": false,
+        "drupal_internal__nid": 28795,
+        "drupal_internal__vid": 29214,
+        "fight_final_time": "0:52",
+        "fightmetric_id": 1797,
+        "hub_id": null,
+        "old_id": 8,
+        "old_id_translation": "8",
+        "old_id_version": 353,
+        "red_corner_fight_debut": true,
+        "red_corner_fight_meta_ranking": null,
+        "red_corner_fight_odds": null,
+        "red_corner_fight_odds_brazil": null,
+        "red_corner_fight_odds_don_best": null,
+        "red_corner_fight_odds_latam": null,
+        "red_corner_fight_outcome": "Win",
+        "red_corner_fight_ranking": null,
+        "red_corner_fight_record": null,
+        "red_corner_fight_weight": "0.00",
+        "red_corner_odds_win_by_dec": null,
+        "red_corner_odds_win_by_ko": null,
+        "red_corner_odds_win_by_sub": null,
+        "red_corner_potn": null,
+        "revision_timestamp": "2018-09-14T11:11:50+00:00",
+        "ufc_override": null
+      },
+      "id": "94a2bf6a-be7f-47ed-b05a-4c62c97860f4",
+      "relationships": {
+        "blue_corner": {
+          "id": "22da6a74-c026-480b-acbd-3f08e24b4317",
+          "meta": {
+            "drupal_internal__target_id": 26550
+          },
+          "type": "node--athlete"
+        },
+        "fight_final_winner": {
+          "id": "d2628358-868b-43bd-ba43-29858d53f8ef",
+          "meta": {
+            "drupal_internal__target_id": 26540
+          },
+          "type": "node--athlete"
+        },
+        "highlight_video": null,
+        "red_corner": {
+          "id": "d2628358-868b-43bd-ba43-29858d53f8ef",
+          "meta": {
+            "drupal_internal__target_id": 26540
+          },
+          "type": "node--athlete"
+        },
+        "revision_uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "uid": {
+          "id": "5c78e729-d5e3-4641-9c2d-810802d98ac3",
+          "meta": {
+            "drupal_internal__target_id": 18
+          },
+          "type": "user--user"
+        },
+        "weight_class": null
+      },
+      "type": "node--fight"
+    }
+  ],
+  "primary_types": {
+    "node--fight": 12069
+  },
+  "raw_pages_read": 242,
+  "relationship_coverage": {
+    "blue_corner": {
+      "nonnull": 11377,
+      "nonnull_fraction": 0.9426630209627973,
+      "seen": 12069
+    },
+    "fight_card_australia": {
+      "nonnull": 19,
+      "nonnull_fraction": 0.0015742812163393818,
+      "seen": 12069
+    },
+    "fight_card_brazil": {
+      "nonnull": 809,
+      "nonnull_fraction": 0.06703123705360842,
+      "seen": 12069
+    },
+    "fight_card_canada": {
+      "nonnull": 26,
+      "nonnull_fraction": 0.0021542795592012593,
+      "seen": 12069
+    },
+    "fight_card_canada_french": {
+      "nonnull": 18,
+      "nonnull_fraction": 0.0014914243102162564,
+      "seen": 12069
+    },
+    "fight_card_cn": {
+      "nonnull": 4,
+      "nonnull_fraction": 0.00033142762449250146,
+      "seen": 12069
+    },
+    "fight_card_france": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_germany": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_ireland": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_italy": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_japan": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_korea": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_latin_america": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_mena": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_new_zealand": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_russia": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_ssa": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_sweden": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_uk": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_card_us": {
+      "nonnull": 9462,
+      "nonnull_fraction": 0.7839920457370122,
+      "seen": 12069
+    },
+    "fight_card_us_espanol": {
+      "nonnull": 15,
+      "nonnull_fraction": 0.0012428535918468805,
+      "seen": 12069
+    },
+    "fight_final_winner": {
+      "nonnull": 8640,
+      "nonnull_fraction": 0.7158836689038032,
+      "seen": 12069
+    },
+    "fight_roundboard": {
+      "nonnull": 112,
+      "nonnull_fraction": 0.00927997348579004,
+      "seen": 12069
+    },
+    "fight_stat": {
+      "nonnull": 5830,
+      "nonnull_fraction": 0.48305576269782086,
+      "seen": 12069
+    },
+    "fight_status": {
+      "nonnull": 8479,
+      "nonnull_fraction": 0.70254370701798,
+      "seen": 12069
+    },
+    "highlight_video": {
+      "nonnull": 305,
+      "nonnull_fraction": 0.025271356367553236,
+      "seen": 12069
+    },
+    "node_type": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "red_corner": {
+      "nonnull": 11441,
+      "nonnull_fraction": 0.9479658629546772,
+      "seen": 12069
+    },
+    "revision_uid": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "status_airing": {
+      "nonnull": 5552,
+      "nonnull_fraction": 0.460021542795592,
+      "seen": 12069
+    },
+    "status_ppv": {
+      "nonnull": 0,
+      "nonnull_fraction": 0.0,
+      "seen": 12069
+    },
+    "thumbnail": {
+      "nonnull": 6375,
+      "nonnull_fraction": 0.5282127765349242,
+      "seen": 12069
+    },
+    "type_fight": {
+      "nonnull": 10017,
+      "nonnull_fraction": 0.8299776286353467,
+      "seen": 12069
+    },
+    "uid": {
+      "nonnull": 12069,
+      "nonnull_fraction": 1.0,
+      "seen": 12069
+    },
+    "weight_class": {
+      "nonnull": 9914,
+      "nonnull_fraction": 0.8214433673046648,
+      "seen": 12069
+    }
+  },
+  "schema_version": 2,
+  "snapshot": "data/raw/ufc_com_resources/fights/20260821T055500Z"
+}
