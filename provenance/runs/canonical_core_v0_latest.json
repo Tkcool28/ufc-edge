@@ -1,10 +1,10 @@
 {
-  "completed_at_utc": "2026-08-21T21:53:30.021591Z",
+  "completed_at_utc": "2026-08-21T21:54:10.959971Z",
   "exit_code": 1,
-  "github_run_id": "32530557259",
-  "log": "provenance/runs/canonical_core_v0_32530557259.log",
+  "github_run_id": "32530604829",
+  "log": "provenance/runs/canonical_core_v0_32530604829.log",
   "pipeline": "canonical_core_v0",
   "schema_version": 1,
   "status": "failed",
-  "trigger_sha": "22cf010d6fa9f1610d47234bb2f11775fae9df53"
+  "trigger_sha": "96f5d44f178fa6b062c75c529c5d05d51bbea113"
 }
