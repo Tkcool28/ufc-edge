@@ -1,0 +1,10 @@
+{
+  "acquisition": "ufc_official_content_archive",
+  "completed_at_utc": "2026-08-21T21:16:36.401380Z",
+  "exit_code": 2,
+  "github_run_id": "32527706388",
+  "log": "provenance/runs/ufc_official_content_archive_32527706388.log",
+  "schema_version": 1,
+  "status": "failed",
+  "trigger_sha": "7252b57081548ba0f255acc06c560aa278d13d76"
+}
