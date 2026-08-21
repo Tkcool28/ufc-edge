@@ -1,0 +1,718 @@
+{
+  "actual_round_rows": 37958,
+  "cross_source_control_evidence": {
+    "raw_equals_floor_minutes": {
+      "comparisons": 23876,
+      "match_fraction": 0.9745350980063662,
+      "matches": 23268
+    },
+    "source_audit": "provenance/audits/ufc_greco_round_overlap_latest.json"
+  },
+  "decision": {
+    "canonical_seconds_promoted": false,
+    "family_behaves_like_coarse_whole_minute_buckets": false,
+    "rule": "Even if the family behaves like whole-minute truncated buckets, preserve the official raw integers. Do not reconstruct seconds. Greco remains the precise control-second source; other positional fields may be used later only with their coarse resolution explicitly represented."
+  },
+  "fields": {
+    "back_ctl_time": {
+      "integer_values": 26312,
+      "max": 54,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 25711,
+          "value": 0
+        },
+        {
+          "rows": 387,
+          "value": 1
+        },
+        {
+          "rows": 138,
+          "value": 2
+        },
+        {
+          "rows": 67,
+          "value": 3
+        },
+        {
+          "rows": 7,
+          "value": 4
+        },
+        {
+          "rows": 1,
+          "value": 8
+        },
+        {
+          "rows": 1,
+          "value": 54
+        }
+      ]
+    },
+    "clinch_time": {
+      "integer_values": 26312,
+      "max": 58,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 19414,
+          "value": 0
+        },
+        {
+          "rows": 4500,
+          "value": 1
+        },
+        {
+          "rows": 1740,
+          "value": 2
+        },
+        {
+          "rows": 546,
+          "value": 3
+        },
+        {
+          "rows": 98,
+          "value": 4
+        },
+        {
+          "rows": 4,
+          "value": 57
+        },
+        {
+          "rows": 4,
+          "value": 58
+        },
+        {
+          "rows": 2,
+          "value": 5
+        },
+        {
+          "rows": 2,
+          "value": 50
+        },
+        {
+          "rows": 2,
+          "value": 56
+        }
+      ]
+    },
+    "control_time": {
+      "integer_values": 26312,
+      "max": 59,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 18096,
+          "value": 0
+        },
+        {
+          "rows": 3668,
+          "value": 1
+        },
+        {
+          "rows": 2230,
+          "value": 2
+        },
+        {
+          "rows": 1451,
+          "value": 3
+        },
+        {
+          "rows": 837,
+          "value": 4
+        },
+        {
+          "rows": 5,
+          "value": 58
+        },
+        {
+          "rows": 4,
+          "value": 57
+        },
+        {
+          "rows": 4,
+          "value": 55
+        },
+        {
+          "rows": 4,
+          "value": 56
+        },
+        {
+          "rows": 2,
+          "value": 8
+        },
+        {
+          "rows": 2,
+          "value": 17
+        },
+        {
+          "rows": 2,
+          "value": 11
+        }
+      ]
+    },
+    "distance_time": {
+      "integer_values": 26312,
+      "max": 59,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 5772,
+          "value": 4
+        },
+        {
+          "rows": 5620,
+          "value": 0
+        },
+        {
+          "rows": 4990,
+          "value": 1
+        },
+        {
+          "rows": 4342,
+          "value": 2
+        },
+        {
+          "rows": 4024,
+          "value": 3
+        },
+        {
+          "rows": 1534,
+          "value": 5
+        },
+        {
+          "rows": 8,
+          "value": 59
+        },
+        {
+          "rows": 4,
+          "value": 7
+        },
+        {
+          "rows": 4,
+          "value": 57
+        },
+        {
+          "rows": 2,
+          "value": 10
+        },
+        {
+          "rows": 2,
+          "value": 55
+        },
+        {
+          "rows": 2,
+          "value": 58
+        }
+      ]
+    },
+    "ground_ctl_time": {
+      "integer_values": 26312,
+      "max": 59,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 20767,
+          "value": 0
+        },
+        {
+          "rows": 2509,
+          "value": 1
+        },
+        {
+          "rows": 1510,
+          "value": 2
+        },
+        {
+          "rows": 1006,
+          "value": 3
+        },
+        {
+          "rows": 497,
+          "value": 4
+        },
+        {
+          "rows": 5,
+          "value": 58
+        },
+        {
+          "rows": 4,
+          "value": 55
+        },
+        {
+          "rows": 2,
+          "value": 8
+        },
+        {
+          "rows": 2,
+          "value": 17
+        },
+        {
+          "rows": 2,
+          "value": 57
+        },
+        {
+          "rows": 2,
+          "value": 11
+        },
+        {
+          "rows": 2,
+          "value": 56
+        }
+      ]
+    },
+    "ground_time": {
+      "integer_values": 12126,
+      "max": 59,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 12126,
+      "top_values": [
+        {
+          "rows": 6944,
+          "value": 0
+        },
+        {
+          "rows": 1860,
+          "value": 1
+        },
+        {
+          "rows": 1500,
+          "value": 2
+        },
+        {
+          "rows": 1116,
+          "value": 3
+        },
+        {
+          "rows": 638,
+          "value": 4
+        },
+        {
+          "rows": 22,
+          "value": 5
+        },
+        {
+          "rows": 10,
+          "value": 55
+        },
+        {
+          "rows": 8,
+          "value": 58
+        },
+        {
+          "rows": 6,
+          "value": 57
+        },
+        {
+          "rows": 4,
+          "value": 8
+        },
+        {
+          "rows": 4,
+          "value": 11
+        },
+        {
+          "rows": 4,
+          "value": 59
+        }
+      ]
+    },
+    "guard_ctl_time": {
+      "integer_values": 26312,
+      "max": 55,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 25005,
+          "value": 0
+        },
+        {
+          "rows": 882,
+          "value": 1
+        },
+        {
+          "rows": 299,
+          "value": 2
+        },
+        {
+          "rows": 99,
+          "value": 3
+        },
+        {
+          "rows": 21,
+          "value": 4
+        },
+        {
+          "rows": 2,
+          "value": 11
+        },
+        {
+          "rows": 1,
+          "value": 20
+        },
+        {
+          "rows": 1,
+          "value": 55
+        },
+        {
+          "rows": 1,
+          "value": 10
+        },
+        {
+          "rows": 1,
+          "value": 12
+        }
+      ]
+    },
+    "half_guard_ctl_time": {
+      "integer_values": 26312,
+      "max": 57,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 25301,
+          "value": 0
+        },
+        {
+          "rows": 744,
+          "value": 1
+        },
+        {
+          "rows": 205,
+          "value": 2
+        },
+        {
+          "rows": 51,
+          "value": 3
+        },
+        {
+          "rows": 7,
+          "value": 4
+        },
+        {
+          "rows": 2,
+          "value": 57
+        },
+        {
+          "rows": 2,
+          "value": 55
+        }
+      ]
+    },
+    "mount_ctl_time": {
+      "integer_values": 26312,
+      "max": 59,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 25751,
+          "value": 0
+        },
+        {
+          "rows": 417,
+          "value": 1
+        },
+        {
+          "rows": 111,
+          "value": 2
+        },
+        {
+          "rows": 26,
+          "value": 3
+        },
+        {
+          "rows": 3,
+          "value": 4
+        },
+        {
+          "rows": 2,
+          "value": 17
+        },
+        {
+          "rows": 1,
+          "value": 59
+        },
+        {
+          "rows": 1,
+          "value": 58
+        }
+      ]
+    },
+    "msc_ground_ctl__time": {
+      "integer_values": 25930,
+      "max": 58,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 25930,
+      "top_values": [
+        {
+          "rows": 24757,
+          "value": 0
+        },
+        {
+          "rows": 922,
+          "value": 1
+        },
+        {
+          "rows": 199,
+          "value": 2
+        },
+        {
+          "rows": 44,
+          "value": 3
+        },
+        {
+          "rows": 4,
+          "value": 4
+        },
+        {
+          "rows": 2,
+          "value": 55
+        },
+        {
+          "rows": 1,
+          "value": 8
+        },
+        {
+          "rows": 1,
+          "value": 58
+        }
+      ]
+    },
+    "neutral_time": {
+      "integer_values": 26306,
+      "max": 59,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26306,
+      "top_values": [
+        {
+          "rows": 5576,
+          "value": 4
+        },
+        {
+          "rows": 4962,
+          "value": 0
+        },
+        {
+          "rows": 4852,
+          "value": 1
+        },
+        {
+          "rows": 4346,
+          "value": 2
+        },
+        {
+          "rows": 4162,
+          "value": 3
+        },
+        {
+          "rows": 2378,
+          "value": 5
+        },
+        {
+          "rows": 8,
+          "value": 59
+        },
+        {
+          "rows": 6,
+          "value": 57
+        },
+        {
+          "rows": 4,
+          "value": 7
+        },
+        {
+          "rows": 2,
+          "value": 10
+        },
+        {
+          "rows": 2,
+          "value": 56
+        },
+        {
+          "rows": 2,
+          "value": 58
+        }
+      ]
+    },
+    "side_ctl_time": {
+      "integer_values": 26312,
+      "max": 57,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 26040,
+          "value": 0
+        },
+        {
+          "rows": 219,
+          "value": 1
+        },
+        {
+          "rows": 41,
+          "value": 2
+        },
+        {
+          "rows": 8,
+          "value": 3
+        },
+        {
+          "rows": 2,
+          "value": 4
+        },
+        {
+          "rows": 1,
+          "value": 57
+        },
+        {
+          "rows": 1,
+          "value": 54
+        }
+      ]
+    },
+    "standing_time": {
+      "integer_values": 26312,
+      "max": 59,
+      "min": 0,
+      "negative": 0,
+      "noninteger": 0,
+      "nonnull": 26312,
+      "top_values": [
+        {
+          "rows": 6868,
+          "value": 4
+        },
+        {
+          "rows": 5260,
+          "value": 5
+        },
+        {
+          "rows": 3734,
+          "value": 3
+        },
+        {
+          "rows": 3724,
+          "value": 1
+        },
+        {
+          "rows": 3546,
+          "value": 2
+        },
+        {
+          "rows": 3148,
+          "value": 0
+        },
+        {
+          "rows": 10,
+          "value": 59
+        },
+        {
+          "rows": 6,
+          "value": 7
+        },
+        {
+          "rows": 4,
+          "value": 51
+        },
+        {
+          "rows": 2,
+          "value": 10
+        },
+        {
+          "rows": 2,
+          "value": 56
+        },
+        {
+          "rows": 2,
+          "value": 58
+        }
+      ]
+    }
+  },
+  "fightmetric_manifest": "data/raw/ufc_fightmetric_official/20260820T123046Z/manifest.json",
+  "generated_at_utc": "2026-08-21T21:13:18.766476Z",
+  "identified_actual_round_rows": 37958,
+  "internal_relationships": {
+    "ground_control_minus_subposition_sum": {
+      "comparisons": 25930,
+      "difference_counts": {
+        "-59": 1,
+        "0": 22567,
+        "1": 2884,
+        "2": 459,
+        "3": 19
+      },
+      "within_one_bucket_fraction": 0.9815271885846509
+    },
+    "standing_minus_distance_plus_clinch": {
+      "comparisons": 26312,
+      "difference_counts": {
+        "-60": 4,
+        "-59": 8,
+        "0": 16984,
+        "1": 9316
+      },
+      "within_one_bucket_fraction": 0.999543934326543
+    },
+    "standing_plus_ground_bucket_sum_distribution": {
+      "0": 526,
+      "1": 592,
+      "2": 572,
+      "3": 528,
+      "4": 7486,
+      "5": 2336,
+      "6": 12,
+      "7": 6,
+      "8": 2,
+      "9": 2,
+      "10": 4,
+      "11": 4,
+      "12": 2,
+      "13": 2,
+      "16": 2,
+      "20": 2,
+      "35": 2,
+      "51": 2,
+      "54": 2,
+      "58": 2,
+      "59": 28,
+      "60": 6,
+      "64": 2,
+      "73": 2,
+      "117": 2
+    }
+  },
+  "schema_version": 1
+}

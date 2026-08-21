@@ -1,0 +1,10 @@
+{
+  "audit": "fightmetric_position_time_semantics",
+  "completed_at_utc": "2026-08-21T21:13:18.793863Z",
+  "exit_code": 0,
+  "github_run_id": "32527433748",
+  "log": "provenance/runs/fightmetric_position_time_semantics_32527433748.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "b89d40dc01802e4ccda432fd0ebd3439007ac52b"
+}
