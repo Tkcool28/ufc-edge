@@ -1,39 +1,190 @@
-name: Snapshot official UFC weigh-ins and scorecards
+name: Snapshot official UFC weigh-ins and scorecards in durable chunks
 
 on:
   push:
     branches: [main]
     paths:
+      - "pipelines/ingest_ufc_official_articles_chunked.py"
       - ".github/workflows/ingest-ufc-official-articles.yml"
-      - "pipelines/ingest_ufc_official_articles.py"
+      - "provenance/ufc_official_articles_active_series.json"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: ingest-ufc-official-articles-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out writable branch
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
-      - uses: actions/setup-python@v5
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Snapshot official UFC article families
-        run: python pipelines/ingest_ufc_official_articles.py
-      - name: Commit immutable article snapshot
+
+      - name: Acquire and commit bounded article chunks
         shell: bash
         run: |
           set -euo pipefail
-          git add data/raw/ufc_official_articles
-          if git diff --cached --quiet; then
-            echo "No official UFC article changes to commit."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Snapshot official UFC weigh-ins and scorecards [skip ci]"
-          git push origin "HEAD:${{ github.ref_name }}"
+          mkdir -p provenance/runs
+
+          state="provenance/ufc_official_articles_active_series.json"
+          series="$(python -c 'import json; print(json.load(open("provenance/ufc_official_articles_active_series.json"))["series_id"])')"
+          chunk_size="$(python -c 'import json; print(json.load(open("provenance/ufc_official_articles_active_series.json"))["chunk_size"])')"
+
+          for family in weigh_in scorecard; do
+            for chunk_index in $(seq 1 12); do
+              status="$(python - "$state" "$family" <<'PY'
+          import json, sys
+          state, family = sys.argv[1:]
+          print(json.load(open(state, encoding="utf-8"))["families"][family]["status"])
+          PY
+          )"
+              if [ "$status" = "completed" ]; then
+                echo "$family already complete."
+                break
+              fi
+
+              start="$(python - "$state" "$family" <<'PY'
+          import json, sys
+          state, family = sys.argv[1:]
+          value = json.load(open(state, encoding="utf-8"))["families"][family]["next_index"]
+          if value is None:
+              raise SystemExit(f"{family} has no next_index while not completed")
+          print(value)
+          PY
+          )"
+              log="provenance/runs/ufc_official_articles_${family}_${GITHUB_RUN_ID}_${start}.log"
+              echo "Starting family=$family series=$series index=$start size=$chunk_size"
+
+              set +e
+              timeout --signal=TERM --kill-after=30s 900s \
+                python pipelines/ingest_ufc_official_articles_chunked.py \
+                  --series-id "$series" chunk \
+                  --family "$family" --start-index "$start" --max-items "$chunk_size" \
+                  >"$log" 2>&1
+              code=$?
+              set -e
+
+              if [ "$code" -ne 0 ]; then
+                python - "$state" "$family" "$start" "$code" "$log" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          path, family, start, code, log = sys.argv[1:]
+          data = json.load(open(path, encoding="utf-8"))
+          f = data["families"][family]
+          f.update({
+              "status": "chunk_failed",
+              "next_index": int(start),
+              "last_exit_code": int(code),
+              "last_log": log,
+              "last_github_run_id": os.environ.get("GITHUB_RUN_ID"),
+          })
+          data["updated_at_utc"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+          with open(path, "w", encoding="utf-8") as fh:
+              json.dump(data, fh, indent=2, sort_keys=True)
+              fh.write("\n")
+          PY
+                git add "$state" "$log"
+                git commit -m "Record UFC ${family} article chunk failure at ${start} [skip ci]"
+                git pull --rebase origin "${{ github.ref_name }}"
+                git push origin "HEAD:${{ github.ref_name }}"
+                exit "$code"
+              fi
+
+              manifest="data/raw/ufc_official_articles/${series}/${family}/chunks/index_$(printf '%06d' "$start")/chunk_manifest.json"
+              if [ ! -f "$manifest" ]; then
+                echo "Missing expected chunk manifest: $manifest" >&2
+                exit 2
+              fi
+
+              terminal="$(python - "$manifest" <<'PY'
+          import json, sys
+          print("true" if json.load(open(sys.argv[1], encoding="utf-8"))["terminal"] else "false")
+          PY
+          )"
+              next_index="$(python - "$manifest" <<'PY'
+          import json, sys
+          data = json.load(open(sys.argv[1], encoding="utf-8"))
+          print("" if data["next_index"] is None else data["next_index"])
+          PY
+          )"
+
+              python - "$state" "$family" "$start" "$next_index" "$terminal" "$log" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          path, family, start, next_index, terminal, log = sys.argv[1:]
+          data = json.load(open(path, encoding="utf-8"))
+          f = data["families"][family]
+          f.update({
+              "status": "finalizing" if terminal == "true" else "active",
+              "last_completed_index": int(start),
+              "next_index": None if terminal == "true" else int(next_index),
+              "last_log": log,
+              "last_github_run_id": os.environ.get("GITHUB_RUN_ID"),
+          })
+          data["updated_at_utc"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+          with open(path, "w", encoding="utf-8") as fh:
+              json.dump(data, fh, indent=2, sort_keys=True)
+              fh.write("\n")
+          PY
+
+              chunk_dir="data/raw/ufc_official_articles/${series}/${family}/chunks/index_$(printf '%06d' "$start")"
+              git add "$state" "$log" "$chunk_dir"
+              git commit -m "Import UFC ${family} article chunk index ${start} [skip ci]"
+              git pull --rebase origin "${{ github.ref_name }}"
+              git push origin "HEAD:${{ github.ref_name }}"
+
+              if [ "$terminal" = "true" ]; then
+                python pipelines/ingest_ufc_official_articles_chunked.py \
+                  --series-id "$series" finalize --family "$family"
+                python - "$state" "$series" "$family" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          path, series, family = sys.argv[1:]
+          data = json.load(open(path, encoding="utf-8"))
+          f = data["families"][family]
+          f.update({
+              "status": "completed",
+              "next_index": None,
+              "final_manifest": f"data/raw/ufc_official_articles/{series}/{family}/manifest.json",
+              "last_github_run_id": os.environ.get("GITHUB_RUN_ID"),
+          })
+          data["updated_at_utc"] = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+          with open(path, "w", encoding="utf-8") as fh:
+              json.dump(data, fh, indent=2, sort_keys=True)
+              fh.write("\n")
+          PY
+                git add "$state" "data/raw/ufc_official_articles/${series}/${family}/manifest.json"
+                git commit -m "Finalize complete UFC ${family} article snapshot [skip ci]"
+                git pull --rebase origin "${{ github.ref_name }}"
+                git push origin "HEAD:${{ github.ref_name }}"
+                break
+              fi
+            done
+          done
+
+          remaining="$(python - "$state" <<'PY'
+          import json, sys
+          data = json.load(open(sys.argv[1], encoding="utf-8"))
+          print(sum(1 for f in data["families"].values() if f["status"] != "completed"))
+          PY
+          )"
+          if [ "$remaining" -ne 0 ]; then
+            echo "Article loop ended before all families finalized; durable state preserved." >&2
+            exit 3
+          fi
+
+          echo "All official UFC article families are complete."
