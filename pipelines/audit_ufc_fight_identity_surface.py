@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """Inventory the official UFC fight-node identity surface after a complete raw snapshot.
 
-The output is an evidence artifact, not a crosswalk.  It searches the full collection
+The output is an evidence artifact, not a crosswalk. It searches the full collection
 for stable identifiers/relationships that can bridge official FightMetric records to
 UFC fight/athlete/event identities without relying on display-name-only matching.
+
+The complete snapshot manifest is authoritative. Raw pages may be stored flat or in
+immutable acquisition chunks; this audit follows the manifest's declared file list
+instead of assuming a directory layout.
 """
 from __future__ import annotations
 
@@ -26,12 +30,48 @@ def latest_complete() -> Path:
     return candidates[-1]
 
 
+def manifest_pages(snapshot: Path) -> list[Path]:
+    manifest_path = snapshot / "manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("complete_collection_snapshot") is not True:
+        raise RuntimeError(f"Snapshot is not marked complete: {manifest_path}")
+
+    pages: list[Path] = []
+    chunk_manifests = manifest.get("chunk_manifests") or []
+    if chunk_manifests:
+        for chunk_manifest_raw in chunk_manifests:
+            chunk_manifest_path = Path(str(chunk_manifest_raw))
+            if not chunk_manifest_path.exists():
+                raise RuntimeError(f"Missing declared chunk manifest: {chunk_manifest_path}")
+            chunk = json.loads(chunk_manifest_path.read_text(encoding="utf-8"))
+            for file_info in chunk.get("files") or []:
+                raw_path = file_info.get("path") if isinstance(file_info, dict) else None
+                if not raw_path:
+                    raise RuntimeError(f"Chunk manifest has file without path: {chunk_manifest_path}")
+                page = Path(str(raw_path))
+                if not page.exists():
+                    raise RuntimeError(f"Missing declared raw page: {page}")
+                pages.append(page)
+    else:
+        # Compatibility with older flat snapshots, if retained.
+        pages = sorted(snapshot.glob("page_*.json"))
+
+    if not pages:
+        raise RuntimeError(f"Complete snapshot declares no readable raw pages: {manifest_path}")
+    if len(pages) != int(manifest.get("pages") or 0):
+        raise RuntimeError(
+            f"Manifest page-count mismatch: declared={manifest.get('pages')} resolved={len(pages)}"
+        )
+    return pages
+
+
 def nonempty(value: Any) -> bool:
     return value is not None and value != "" and value != [] and value != {}
 
 
 def main() -> int:
     snapshot = latest_complete()
+    pages = manifest_pages(snapshot)
     primary_rows = 0
     attr_seen = Counter()
     attr_nonnull = Counter()
@@ -44,7 +84,7 @@ def main() -> int:
     samples: list[dict[str, Any]] = []
     candidate_attr_examples: dict[str, list[Any]] = defaultdict(list)
 
-    for page in sorted(snapshot.glob("page_*.json")):
+    for page in pages:
         payload = json.loads(page.read_text(encoding="utf-8"))
         for item in payload.get("data", []):
             if not isinstance(item, dict):
@@ -85,15 +125,19 @@ def main() -> int:
             included_attr_keys[typ].update(str(k) for k in attrs)
             included_rel_keys[typ].update(str(k) for k in rels)
 
-    candidate_keys = sorted(
-        k for k in attr_seen
-        if any(token in k.lower() for token in TOKENS)
-    )
+    manifest = json.loads((snapshot / "manifest.json").read_text(encoding="utf-8"))
+    declared_rows = int(manifest.get("rows") or 0)
+    if primary_rows != declared_rows:
+        raise RuntimeError(f"Fight row-count mismatch: manifest={declared_rows} audited={primary_rows}")
+
+    candidate_keys = sorted(k for k in attr_seen if any(token in k.lower() for token in TOKENS))
     fightmetric_keys = sorted(k for k in attr_seen if "fightmetric" in k.lower() or "fight_metric" in k.lower())
     report = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "snapshot": snapshot.as_posix(),
+        "manifest": (snapshot / "manifest.json").as_posix(),
+        "raw_pages_read": len(pages),
         "primary_rows": primary_rows,
         "primary_types": dict(primary_types),
         "attribute_coverage": {
@@ -121,7 +165,7 @@ def main() -> int:
         "primary_samples": samples,
         "decision": {
             "stable_bridge_proven": bool(fightmetric_keys),
-            "note": "A direct FightMetric-named field is strong bridge evidence but still requires uniqueness/coverage validation before a canonical crosswalk is created.",
+            "note": "A direct FightMetric-named field is strong bridge evidence but still requires uniqueness/cardinality/overlap validation before a canonical crosswalk is created.",
             "name_only_matching_allowed": False,
         },
     }
@@ -132,6 +176,7 @@ def main() -> int:
         "# Official UFC fight identity surface audit",
         "",
         f"Snapshot: `{snapshot}`",
+        f"Raw pages read: **{len(pages)}**",
         f"Fight rows: **{primary_rows}**",
         "",
         f"Direct FightMetric-named fields: **{', '.join(fightmetric_keys) if fightmetric_keys else 'none'}**",
@@ -152,7 +197,7 @@ def main() -> int:
         "No canonical crosswalk is created by this inventory. Uniqueness, cardinality, and overlap with the FightMetric raw IDs must be measured next. Display-name-only matching remains prohibited.",
     ]
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"wrote identity surface audit; rows={primary_rows}; direct_fightmetric_keys={fightmetric_keys}")
+    print(f"wrote identity surface audit; rows={primary_rows}; pages={len(pages)}; direct_fightmetric_keys={fightmetric_keys}")
     return 0
 
 
