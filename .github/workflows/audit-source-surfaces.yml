@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - "pipelines/audit_source_surfaces.py"
+      - "pipelines/validate_canonical_contract.py"
       - "pipelines/validate_source_field_map.py"
+      - "pipelines/audit_canonical_mapping_gates.py"
       - ".github/workflows/audit-source-surfaces.yml"
       - "schemas/canonical_data_contract_v0.json"
       - "schemas/source_field_map_v0.json"
@@ -27,23 +29,40 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate canonical contract
-        run: python pipelines/validate_canonical_contract.py
       - name: Generate source surface inventory
+        id: inventory
         run: python pipelines/audit_source_surfaces.py
-      - name: Validate source field map against raw and canonical surfaces
-        run: python pipelines/validate_source_field_map.py
+      - name: Run canonical and mapping gates
+        id: gates
+        continue-on-error: true
+        run: python pipelines/audit_canonical_mapping_gates.py
       - name: Commit audit outputs
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add provenance/audits/source_surface_inventory.json provenance/audits/source_surface_inventory.md
-          if git diff --cached --quiet; then
-            echo "No source-surface changes."
-            exit 0
+          git add provenance/audits/source_surface_inventory.json \
+                  provenance/audits/source_surface_inventory.md \
+                  provenance/audits/canonical_mapping_gate_latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Audit acquired raw and canonical data surfaces [skip ci]"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
           fi
-          git commit -m "Audit acquired raw source surfaces [skip ci]"
-          git pull --rebase origin "${{ github.ref_name }}"
-          git push origin "HEAD:${{ github.ref_name }}"
+      - name: Enforce gate result
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('provenance/audits/canonical_mapping_gate_latest.json')
+          if not p.exists():
+              raise SystemExit('canonical mapping gate report missing')
+          result = json.loads(p.read_text())
+          if result.get('passed') is not True:
+              raise SystemExit('canonical/mapping gates failed; see durable audit report')
+          print('CANONICAL_MAPPING_GATES_ENFORCED_OK')
+          PY
