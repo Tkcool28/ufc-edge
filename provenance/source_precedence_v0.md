@@ -53,7 +53,16 @@ Official archived `control_time` is **not second-resolution control time**. Agai
 - preserve the raw integer and source field name;
 - use Greco for canonical precise control seconds where available.
 
-Other official positional `_time` fields are likewise preserved raw until their own semantic/unit audit passes. The control-time result is evidence of coarse/bucketed archival time representation, not permission to assume identical semantics for every positional field.
+A follow-up quality audit shows that the broader positional `_time` family is overwhelmingly encoded on a **0–5 round-scale bucket** among non-null identified actual-round rows. The weakest field still had 99.621% of non-null values in 0–5; most were above 99.88%. On clean 0–5 rows, `standing_time - (distance_time + clinch_time)` was always within one bucket, and the ground-control positional decomposition was within one bucket in 98.163% of comparisons.
+
+Rare `>5` values are present and are treated as source anomalies rather than legitimate exact-duration observations. Therefore:
+
+- `>5` actual-round positional time values are not canonical eligible without independent proof;
+- future adapters may expose validated 0–5 values only as an explicitly **coarse bucket/exposure representation**;
+- no positional bucket may be converted back into synthetic seconds;
+- all raw source rows remain preserved for auditability.
+
+See `provenance/audits/fightmetric_position_time_quality_latest.json`.
 
 ## 3. FightMetric rows without stable fight identity
 
