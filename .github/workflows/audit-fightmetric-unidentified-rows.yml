@@ -1,0 +1,37 @@
+name: Audit FightMetric rows missing fight identity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/audit_fightmetric_unidentified_rows.py"
+      - ".github/workflows/audit-fightmetric-unidentified-rows.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python pipelines/audit_fightmetric_unidentified_rows.py
+      - name: Commit audit result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add provenance/audits/fightmetric_unidentified_rows_latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Audit FightMetric rows missing fight identity [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
