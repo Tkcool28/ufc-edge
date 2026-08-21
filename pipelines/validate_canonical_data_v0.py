@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "schemas/canonical_data_contract_v0.json"
 DATA = ROOT / "data/canonical/v0"
+RAW_GRECO = ROOT / "data/raw/greco1899"
 
 TABLE_FILES = {
     "fighters": "fighters.csv",
@@ -33,8 +34,12 @@ def read_table(name: str, fields: dict) -> list[dict[str, str]]:
         fail(f"missing {path}")
     with path.open("r", encoding="utf-8", newline="") as fh:
         r = csv.DictReader(fh)
-        if r.fieldnames != list(fields):
-            fail(f"{name}: header mismatch expected={list(fields)} got={r.fieldnames}")
+        got = r.fieldnames or []
+        expected = list(fields)
+        if len(got) != len(set(got)):
+            fail(f"{name}: duplicate CSV header fields: {got}")
+        if set(got) != set(expected):
+            fail(f"{name}: header names mismatch missing={sorted(set(expected)-set(got))} extra={sorted(set(got)-set(expected))}")
         return list(r)
 
 
@@ -101,10 +106,18 @@ def validate_uuid(value: str, context: str) -> None:
         fail(f"{context}: UUID not canonical lowercase format: {value!r}")
 
 
+def raw_count(filename: str) -> int:
+    dirs = sorted(p for p in RAW_GRECO.iterdir() if p.is_dir())
+    if not dirs:
+        fail("no Greco raw snapshot for coverage gate")
+    with (dirs[-1] / filename).open("r", encoding="utf-8-sig", newline="") as fh:
+        return sum(1 for _ in csv.DictReader(fh))
+
+
 def main() -> int:
     contract = json.loads(CONTRACT.read_text(encoding="utf-8"))
     tables: dict[str, list[dict[str, str]]] = {}
-    for name, filename in TABLE_FILES.items():
+    for name in TABLE_FILES:
         spec = contract["tables"][name]
         rows = read_table(name, spec["fields"])
         validate_table(name, rows, spec)
@@ -160,10 +173,23 @@ def main() -> int:
     if manifest.get("counts", {}).get("fighter_round_stats") != len(tables["fighter_round_stats"]):
         fail("manifest round count mismatch")
 
+    # Coverage gates catch the dangerous case where a syntactically valid identity bug emits
+    # a tiny canonical subset. Ambiguous source rows may be quarantined, but the historical core
+    # must retain the overwhelming majority of the trusted backbone.
+    raw_fights = raw_count("ufc_fight_details.csv")
+    raw_rounds = raw_count("ufc_fight_stats.csv")
+    fight_fraction = len(tables["fights"]) / raw_fights if raw_fights else 0
+    round_fraction = len(tables["fighter_round_stats"]) / raw_rounds if raw_rounds else 0
+    if fight_fraction < 0.95:
+        fail(f"fight coverage gate failed: {len(tables['fights'])}/{raw_fights}={fight_fraction:.3%}")
+    if round_fraction < 0.95:
+        fail(f"round coverage gate failed: {len(tables['fighter_round_stats'])}/{raw_rounds}={round_fraction:.3%}")
+
     print(
         "CANONICAL_DATA_OK "
         f"contract={contract.get('contract_version')} fighters={len(fighter_ids)} events={len(event_ids)} "
-        f"fights={len(fight_ids)} rounds={len(tables['fighter_round_stats'])}"
+        f"fights={len(fight_ids)} rounds={len(tables['fighter_round_stats'])} "
+        f"fight_coverage={fight_fraction:.3%} round_coverage={round_fraction:.3%}"
     )
     return 0
 
