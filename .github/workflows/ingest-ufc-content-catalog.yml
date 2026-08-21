@@ -1,0 +1,37 @@
+name: Snapshot official UFC sitemap content catalog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/ingest_ufc_content_catalog.py"
+      - ".github/workflows/ingest-ufc-content-catalog.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Acquire sitemap catalog
+        run: python pipelines/ingest_ufc_content_catalog.py
+      - name: Commit raw catalog and candidates
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw/ufc_content_catalog data/derived/discovery/ufc_content_candidates.csv
+          git commit -m "Snapshot official UFC content catalog [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
