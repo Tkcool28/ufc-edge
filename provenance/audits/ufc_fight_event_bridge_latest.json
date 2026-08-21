@@ -1,0 +1,26 @@
+{
+  "candidate_csv": "data/derived/identity/ufc_fight_event_bridge_candidate.csv",
+  "date_source_field_counts": {
+    "fight_card_time_main": 798
+  },
+  "dated_events": 798,
+  "decision": {
+    "canonical_promoted": false,
+    "name_only_matching_used": false,
+    "rule": "Only direct UFC event.relationships.fights membership is emitted. Missing fights remain missing rather than inferred by titles.",
+    "safe_for_calendar_coverage_audit": false
+  },
+  "distinct_fights_referenced_by_events": 8917,
+  "event_fight_relationship_refs": 8924,
+  "event_rows": 799,
+  "event_snapshot": "data/raw/ufc_com_resources/events/20260820T194553Z",
+  "fight_snapshot": "data/raw/ufc_com_resources/fights/20260821T055500Z",
+  "fight_uuid_with_multiple_event_memberships": 7,
+  "fight_uuid_without_event_membership": 3153,
+  "generated_at_utc": "2026-08-21T13:20:25.802242Z",
+  "official_fight_rows": 12069,
+  "relationship_refs_not_in_complete_fight_snapshot": 1,
+  "schema_version": 1,
+  "unique_bridge_rows_with_date": 8909,
+  "unique_fight_event_bridge_rows": 8909
+}
