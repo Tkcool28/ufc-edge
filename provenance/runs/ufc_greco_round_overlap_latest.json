@@ -1,0 +1,11 @@
+{
+  "audit": "ufc_greco_round_overlap",
+  "completed_at_utc": "2026-08-21T20:39:02.759489Z",
+  "exit_code": 1,
+  "github_run_id": "32524613265",
+  "log": "provenance/runs/ufc_greco_round_overlap_32524613265.log",
+  "outputs": [],
+  "schema_version": 1,
+  "status": "failed",
+  "trigger_sha": "b777fa3650b0e4df90339a0ad372554dfe114e6e"
+}
