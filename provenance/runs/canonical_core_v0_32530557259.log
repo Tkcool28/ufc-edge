@@ -1,0 +1,10 @@
+CONTRACT_OK version=0.3.0-draft tables=13 fields=151 missing_is_not_zero=true round_zero_actual=false sig_splits=true
+SOURCE_MAP_OK version=0.3.0-draft mappings=140 statuses={"provisional": 38, "rejected": 5, "unresolved": 27, "verified": 70} source_count=8
+{"events": 784, "exclusions": 41722, "field_provenance": 0, "fighter_round_stats": 66, "fighters": 4600, "fights": 8769, "source_identity_links": 30347}
+TABLE_OK fighters rows=4600
+TABLE_OK events rows=784
+TABLE_OK fights rows=8769
+TABLE_OK fighter_round_stats rows=66
+TABLE_OK source_identity_links rows=30347
+TABLE_OK field_provenance rows=0
+CANONICAL_DATA_INVALID: round coverage gate failed: 66/41672=0.158%
