@@ -1,0 +1,148 @@
+name: Migrate position contract to quantized buckets v0.3
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/migrate-position-contract-v03.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply audited position-time semantics
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+
+          contract_path = Path('schemas/canonical_data_contract_v0.json')
+          source_map_path = Path('schemas/source_field_map_v0.json')
+          md_path = Path('schemas/canonical_data_contract_v0.md')
+          validator_path = Path('pipelines/validate_canonical_contract.py')
+
+          contract = json.loads(contract_path.read_text(encoding='utf-8'))
+          contract['contract_version'] = '0.3.0-draft'
+          contract.setdefault('global_rules', {})['quantized_time_must_not_be_fabricated_as_exact_seconds'] = True
+          contract.setdefault('canonical_units', {})['quantized_position_time'] = 'whole-minute floor bucket plus explicit interval bounds'
+
+          table = contract['tables']['fighter_round_position']
+          old_fields = table['fields']
+          prefix_map = {
+              'standing': 'standing_sec',
+              'neutral': 'neutral_sec',
+              'distance': 'distance_sec',
+              'clinch': 'clinch_sec',
+              'ground': 'ground_sec',
+              'ground_control': 'ground_control_sec',
+              'guard_control': 'guard_control_sec',
+              'half_guard_control': 'half_guard_control_sec',
+              'side_control': 'side_control_sec',
+              'mount_control': 'mount_control_sec',
+              'back_control': 'back_control_sec',
+              'misc_ground_control': 'misc_ground_control_sec',
+          }
+          new_fields = {
+              'fight_id': old_fields['fight_id'],
+              'fighter_id': old_fields['fighter_id'],
+              'round': old_fields['round'],
+          }
+          for prefix, old in prefix_map.items():
+              if old not in old_fields:
+                  raise SystemExit(f'missing expected old field: {old}')
+              new_fields[f'{prefix}_bucket_min'] = {
+                  'type': 'integer', 'nullable': True, 'unit': 'min', 'min': 0,
+                  'quantization': 'floor_whole_minutes',
+                  'semantics': 'source interval bucket; not an exact duration',
+              }
+              new_fields[f'{prefix}_lower_sec'] = {
+                  'type': 'integer', 'nullable': True, 'unit': 'sec', 'min': 0,
+                  'derived_from': f'{prefix}_bucket_min',
+                  'semantics': 'inclusive lower bound = bucket_min * 60',
+              }
+              new_fields[f'{prefix}_upper_sec'] = {
+                  'type': 'integer', 'nullable': True, 'unit': 'sec', 'min': 0,
+                  'derived_from': f'{prefix}_bucket_min',
+                  'semantics': 'inclusive quantization upper bound = bucket_min * 60 + 59; intersect with known round duration before use',
+              }
+          new_fields['standups'] = old_fields['standups']
+          table['fields'] = new_fields
+          table['row_rules'] = list(dict.fromkeys((table.get('row_rules') or []) + [
+              'round >= 1',
+              'quantized position time must retain bucket semantics',
+              'lower_sec and upper_sec are interval bounds, not observed exact durations',
+          ]))
+          table['notes'] = 'Official UFC archived position/TIP values are floor whole-minute buckets. Exact control seconds remain in fighter_round_stats.control_sec from a precise source.'
+          contract_path.write_text(json.dumps(contract, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+
+          sm = json.loads(source_map_path.read_text(encoding='utf-8'))
+          sm['map_version'] = '0.3.0-draft'
+          sm.setdefault('rules', {})['quantized_time_must_not_emit_exact_seconds'] = True
+          target_reverse = {old: prefix for prefix, old in prefix_map.items()}
+          migrated = []
+          for m in sm['mappings']:
+              if m.get('target_table') == 'fighter_round_position' and m.get('target_field') in target_reverse:
+                  prefix = target_reverse[m['target_field']]
+                  base = dict(m)
+                  base['target_field'] = f'{prefix}_bucket_min'
+                  base['transform'] = 'preserve_floor_whole_minute_bucket'
+                  base['mapping_status'] = 'verified'
+                  base['notes'] = 'Audited UFC archive semantic: integer floor-minute bucket; do not multiply by 60 as exact time.'
+                  migrated.append(base)
+                  lo = dict(base)
+                  lo['target_field'] = f'{prefix}_lower_sec'
+                  lo['transform'] = 'bucket_min_times_60_interval_lower_bound'
+                  lo['notes'] = 'Derived interval lower bound only; not observed exact duration.'
+                  migrated.append(lo)
+                  hi = dict(base)
+                  hi['target_field'] = f'{prefix}_upper_sec'
+                  hi['transform'] = 'bucket_min_times_60_plus_59_interval_upper_bound'
+                  hi['notes'] = 'Derived quantization upper bound; intersect with known round duration before use.'
+                  migrated.append(hi)
+              else:
+                  migrated.append(m)
+          sm['mappings'] = migrated
+          source_map_path.write_text(json.dumps(sm, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+
+          md = md_path.read_text(encoding='utf-8')
+          md = md.replace('(`0.2.0-draft`)', '(`0.3.0-draft`)')
+          md = md.replace('- durations: integer seconds\n', '- exact durations: integer seconds\n- archived UFC position/TIP time: floor whole-minute buckets plus explicit interval bounds; never fabricated as exact seconds\n')
+          replacement = '''## `fighter_round_position`\n\nGrain: one fighter in one actual round. This is the simulator-oriented Time In Position extension.\n\nOfficial UFC archived position/TIP values are **floor whole-minute buckets**, not exact seconds. The audit in `provenance/fightmetric_position_time_semantics.md` showed this directly. Canonical storage therefore preserves the bucket and explicit quantization interval instead of inventing second-level precision.\n\nFor each position family (`standing`, `neutral`, `distance`, `clinch`, `ground`, `ground_control`, `guard_control`, `half_guard_control`, `side_control`, `mount_control`, `back_control`, `misc_ground_control`) store:\n\n- `<position>_bucket_min` — observed integer floor-minute bucket\n- `<position>_lower_sec` — inclusive interval lower bound (`bucket_min * 60`)\n- `<position>_upper_sec` — inclusive quantization upper bound (`bucket_min * 60 + 59`), to be intersected with known round duration before use\n\nAlso store:\n\n- `fight_id`\n- `fighter_id`\n- `round` (`>=1`)\n- `standups`\n\nThe lower/upper fields are **bounds, not observed exact durations**. General exact `control_sec` has one canonical home (`fighter_round_stats`) and is intentionally not duplicated here.\n\n'''
+          md, n = re.subn(r"## `fighter_round_position`\n.*?(?=## 4\. Additive canonical tables)", replacement, md, flags=re.S)
+          if n != 1:
+              raise SystemExit(f'failed to replace markdown position section: matches={n}')
+          md_path.write_text(md, encoding='utf-8')
+
+          validator = validator_path.read_text(encoding='utf-8')
+          validator = validator.replace('ALLOWED_UNITS = {"cm", "lb", "sec", "percent"}', 'ALLOWED_UNITS = {"cm", "lb", "sec", "min", "percent"}')
+          needle = 'if rules.get("strike_split_fields_are_significant_strikes") is not True:\n        fail("strike split family must stay explicitly significant-strike scoped")\n'
+          insert = needle + '    if rules.get("quantized_time_must_not_be_fabricated_as_exact_seconds") is not True:\n        fail("quantized position time must not be fabricated as exact seconds")\n'
+          if needle not in validator:
+              raise SystemExit('validator insertion point missing')
+          validator = validator.replace(needle, insert)
+          validator_path.write_text(validator, encoding='utf-8')
+          PY
+          python pipelines/validate_canonical_contract.py
+          python pipelines/audit_source_surfaces.py
+          python pipelines/validate_source_field_map.py
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add schemas/canonical_data_contract_v0.json schemas/canonical_data_contract_v0.md schemas/source_field_map_v0.json pipelines/validate_canonical_contract.py provenance/audits/source_surface_inventory.json provenance/audits/source_surface_inventory.md
+          git commit -m "Preserve audited UFC position-time bucket semantics [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
