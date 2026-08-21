@@ -1,0 +1,78 @@
+{
+  "cases": [
+    {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "blue_corner_fight_weight": "156.00",
+          "blue_name": "Mitch Ramirez",
+          "blue_uuid": "81b6d406-b5cd-437f-bbb7-3895bd4cf7a6",
+          "fightmetric_id": 12874,
+          "red_corner_fight_weight": "155.00",
+          "red_name": "Chase Hooper",
+          "red_uuid": "dbfce0bd-cdbb-456f-850d-03f2eef69627",
+          "title": "Chase Hooper vs Mitch Ramirez",
+          "ufc_fight_uuid": "be28f626-2dba-4381-af3d-5975d906ab0a"
+        }
+      ],
+      "event_date": "2026-07-18",
+      "fight_node_weight_raw": "155.00",
+      "fighter": "Chase Hooper",
+      "fighter_corner": "red",
+      "matches_normal_division_limit": false,
+      "matches_official_scale_weight": false,
+      "miss_note": "1.5 pounds over lightweight limit",
+      "normal_division_limit_lbs": "156",
+      "opponent": "Mitch Ramirez",
+      "scale_weight_lbs": "157.5",
+      "source_url": "https://www.ufc.com/news/official-weigh-results-ufc-fight-night-oklahoma-city-du-plessis-usman"
+    },
+    {
+      "candidate_count": 0,
+      "candidates": [],
+      "event_date": "2026-07-18",
+      "fighter": "Ezra Elliott",
+      "miss_note": "1.5 pounds over featherweight limit",
+      "normal_division_limit_lbs": "146",
+      "opponent": "Damien Anderson",
+      "scale_weight_lbs": "147.5",
+      "source_url": "https://www.ufc.com/news/official-weigh-results-ufc-fight-night-oklahoma-city-du-plessis-usman"
+    },
+    {
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "blue_corner_fight_weight": "126.00",
+          "blue_name": "Kevin Borjas",
+          "blue_uuid": "858c4858-6483-4e86-b7a8-7b7efeefab6f",
+          "fightmetric_id": 12835,
+          "red_corner_fight_weight": "126.00",
+          "red_name": "Andre Lima",
+          "red_uuid": "5d15ecf5-67c0-4369-b253-90d5715b14d0",
+          "title": "Andre Lima vs Kevin Borjas",
+          "ufc_fight_uuid": "273305d5-752a-4e5d-a7b2-e5ae825a2f26"
+        }
+      ],
+      "event_date": "2026-06-20",
+      "fight_node_weight_raw": "126.00",
+      "fighter": "Kevin Borjas",
+      "fighter_corner": "blue",
+      "matches_normal_division_limit": true,
+      "matches_official_scale_weight": false,
+      "miss_note": "3 pounds over flyweight limit",
+      "normal_division_limit_lbs": "126",
+      "opponent": "Andre Lima",
+      "scale_weight_lbs": "129",
+      "source_url": "https://www.ufc.com/news/official-weigh-results-kape-horiguchi-vegas-119"
+    }
+  ],
+  "decision": {
+    "canonical_weigh_in_mapping_promoted": false,
+    "rule": "Even if missed-weight cases match exactly, full-field zero/null and historical coverage behavior must be audited before canonical promotion.",
+    "strong_scale_weight_evidence": false
+  },
+  "exact_official_scale_weight_matches": 0,
+  "generated_at_utc": "2026-08-21T13:32:32.977219Z",
+  "matched_unique_cases": 2,
+  "schema_version": 1
+}
