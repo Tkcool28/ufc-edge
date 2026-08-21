@@ -1,0 +1,44 @@
+name: Patch canonical integer-count decimal transport
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/patch-canonical-integral-decimals.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply strict integral-decimal transport parser
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('pipelines/build_canonical_core_v0.py')
+          text = p.read_text(encoding='utf-8')
+          old = '''def parse_nonnegative(value: str) -> int | None:\n    text = clean(value)\n    if not text or text == "--":\n        return None\n    if not re.fullmatch(r"\\d+", text):\n        raise ValueError(f"expected nonnegative integer: {value!r}")\n    return int(text)\n'''
+          new = '''def parse_nonnegative(value: str) -> int | None:\n    text = clean(value)\n    if not text or text == "--":\n        return None\n    # Greco historical CSV transport sometimes serializes integer event counts as\n    # floating-looking strings (e.g. 0.0, 1.0). Accept only mathematically integral\n    # decimal syntax; a true fractional count such as 0.5 remains invalid.\n    m = re.fullmatch(r"(\\d+)(?:\\.(0+))?", text)\n    if not m:\n        raise ValueError(f"expected nonnegative integral count: {value!r}")\n    return int(m.group(1))\n'''
+          if old not in text:
+              raise SystemExit('expected parser block not found')
+          p.write_text(text.replace(old, new), encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pipelines/build_canonical_core_v0.py
+          git commit -m "Accept audited integral-decimal Greco count transport"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
