@@ -5,6 +5,8 @@
   "catalog_path": "data/derived/discovery/ufc_content_candidates.csv",
   "catalog_blob_sha": "ea32cabcae7dbc7476e9dacf7ff958d2f54895f4",
   "chunk_size": 75,
+  "driver": "pipelines/ingest_ufc_official_articles_chunked.py",
+  "driver_mode": "durable_bounded_chunks",
   "families": {
     "weigh_in": {
       "status": "active",
@@ -25,5 +27,5 @@
     "structured_extraction_is_separate": true,
     "only_cataloged_official_ufc_news_urls_are_fetched": true
   },
-  "notes": "State is operational only. Family-level manifest.json is the completeness marker."
+  "notes": "State is operational only. Family-level manifest.json is the completeness marker. The active driver is the sitemap-enumerated chunked collector; the blocked JSON:API article collector has been retired."
 }
