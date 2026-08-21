@@ -8,10 +8,10 @@
     "scorecard": {
       "candidate_count": 583,
       "final_manifest": null,
-      "last_completed_index": 150,
+      "last_completed_index": 225,
       "last_github_run_id": "32528351526",
-      "last_log": "provenance/runs/ufc_official_articles_scorecard_32528351526_150.log",
-      "next_index": 225,
+      "last_log": "provenance/runs/ufc_official_articles_scorecard_32528351526_225.log",
+      "next_index": 300,
       "status": "active"
     },
     "weigh_in": {
@@ -34,5 +34,5 @@
   "schema_version": 1,
   "series_id": "20260821T210000Z",
   "source": "Official UFC.com public news pages enumerated from official sitemap",
-  "updated_at_utc": "2026-08-21T22:05:36.506909Z"
+  "updated_at_utc": "2026-08-21T22:08:08.822868Z"
 }
