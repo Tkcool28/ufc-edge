@@ -1,0 +1,1 @@
+"""UFC Edge project package."""
