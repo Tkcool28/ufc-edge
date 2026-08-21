@@ -23,7 +23,9 @@ PAGE_LIMIT = 50
 OFFSETS = [0, 50, 100, 150]
 CANDIDATES = [
     "created",
+    "nid",
     "drupal_internal__nid",
+    "created,nid",
     "created,drupal_internal__nid",
     "created,id",
 ]
