@@ -5,6 +5,11 @@ The full /node/fight collection is large enough that repeated all-or-nothing run
 hit the process timeout. This collector makes progress durable without pretending a
 partial series is a complete raw snapshot.
 
+Pagination MUST use a stable unique key. A bounded probe established that official UFC
+fight resources expose a non-null unique Drupal internal node ID and accept
+`sort=drupal_internal__nid`. Chunks therefore fail closed on any null, duplicate, or
+non-increasing node ID instead of deduplicating an unstable page stream.
+
 Layout:
   data/raw/ufc_com_resources/fights/<series_id>/
     chunks/offset_000000/
@@ -21,7 +26,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import os
 import sys
 import time
 import urllib.error
@@ -33,9 +37,10 @@ from typing import Any
 
 BASE = "https://www.ufc.com/jsonapi"
 PATH = "/node/fight"
+SORT_FIELD = "drupal_internal__nid"
 PAGE_LIMIT = 50
 MIN_INTERVAL_SECONDS = 2.0
-USER_AGENT = "ufc-edge-data/0.3 (private modeling research; respectful bounded snapshotter)"
+USER_AGENT = "ufc-edge-data/0.4 (private modeling research; respectful bounded snapshotter)"
 ACCEPT = "application/vnd.api+json"
 OUT_ROOT = Path("data/raw/ufc_com_resources/fights")
 
@@ -114,6 +119,36 @@ def relationship_id(item: dict[str, Any], name: str) -> str | None:
     return None
 
 
+def internal_nid(item: dict[str, Any]) -> int:
+    attrs = item.get("attributes")
+    if not isinstance(attrs, dict):
+        raise RuntimeError("Fight resource missing attributes object")
+    value = attrs.get("drupal_internal__nid")
+    if isinstance(value, bool) or not isinstance(value, int):
+        raise RuntimeError(f"Fight resource has invalid drupal_internal__nid={value!r}")
+    if value <= 0:
+        raise RuntimeError(f"Fight resource has non-positive drupal_internal__nid={value}")
+    return value
+
+
+def validate_nid_sequence(nids: list[int], *, context: str) -> None:
+    if not nids:
+        return
+    if len(nids) != len(set(nids)):
+        seen: set[int] = set()
+        dupes: list[int] = []
+        for value in nids:
+            if value in seen and value not in dupes:
+                dupes.append(value)
+            seen.add(value)
+        raise RuntimeError(f"Duplicate Drupal fight node IDs in {context}: {dupes[:10]}")
+    for previous, current in zip(nids, nids[1:]):
+        if current <= previous:
+            raise RuntimeError(
+                f"Non-increasing Drupal fight node order in {context}: {previous} then {current}"
+            )
+
+
 def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
     if start_offset < 0:
         raise RuntimeError("start_offset must be >= 0")
@@ -129,7 +164,7 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
     chunk_dir.mkdir(parents=True, exist_ok=False)
 
     params = {
-        "sort": "created",
+        "sort": SORT_FIELD,
         "page[limit]": str(PAGE_LIMIT),
         "page[offset]": str(start_offset),
     }
@@ -142,6 +177,7 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
     relationships: set[str] = set()
     resource_ids: set[str] = set()
     duplicate_resource_ids: set[str] = set()
+    node_ids: list[int] = []
     red_linked = 0
     blue_linked = 0
     winner_linked = 0
@@ -154,6 +190,21 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
         if not isinstance(data, list):
             raise RuntimeError(f"offset={start_offset} page={pages + 1} missing list-valued data")
 
+        page_nids: list[int] = []
+        for item in data:
+            if not isinstance(item, dict):
+                raise RuntimeError(
+                    f"offset={start_offset} page={pages + 1} contains non-object resource"
+                )
+            page_nids.append(internal_nid(item))
+        validate_nid_sequence(page_nids, context=f"offset={start_offset} page={pages + 1}")
+        if node_ids and page_nids and page_nids[0] <= node_ids[-1]:
+            raise RuntimeError(
+                f"Drupal node order crosses page boundary backwards/overlap: "
+                f"previous={node_ids[-1]} current={page_nids[0]}"
+            )
+        node_ids.extend(page_nids)
+
         page_path = chunk_dir / f"page_{pages + 1:04d}.json"
         page_path.write_bytes(body)
         files.append({
@@ -165,17 +216,18 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
             "content_type": headers["content_type"],
             "etag": headers["etag"] or None,
             "last_modified": headers["last_modified"] or None,
+            "first_drupal_internal_nid": page_nids[0] if page_nids else None,
+            "last_drupal_internal_nid": page_nids[-1] if page_nids else None,
         })
 
         for item in data:
-            if not isinstance(item, dict):
-                continue
             rid = item.get("id")
-            if rid is not None:
-                rid = str(rid)
-                if rid in resource_ids:
-                    duplicate_resource_ids.add(rid)
-                resource_ids.add(rid)
+            if rid is None:
+                raise RuntimeError("Fight resource missing JSON:API id")
+            rid = str(rid)
+            if rid in resource_ids:
+                duplicate_resource_ids.add(rid)
+            resource_ids.add(rid)
             item_attrs = item.get("attributes")
             if isinstance(item_attrs, dict):
                 attrs.update(str(k) for k in item_attrs)
@@ -208,10 +260,15 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
         raise RuntimeError(
             f"Duplicate fight resource IDs inside chunk: {sorted(duplicate_resource_ids)[:10]}"
         )
+    validate_nid_sequence(node_ids, context=f"chunk offset={start_offset}")
+    if len(resource_ids) != rows or len(node_ids) != rows:
+        raise RuntimeError(
+            f"Chunk identity count mismatch rows={rows} resource_ids={len(resource_ids)} node_ids={len(node_ids)}"
+        )
 
     next_offset = None if terminal else start_offset + rows
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source": "Official UFC.com Drupal JSON:API",
         "collection": "fights",
         "series_id": series_id,
@@ -220,6 +277,7 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
         "started_at_utc": started,
         "completed_at_utc": utc_now(),
         "endpoint": PATH,
+        "sort": SORT_FIELD,
         "request_params": params,
         "request_policy": {
             "page_limit": PAGE_LIMIT,
@@ -230,6 +288,9 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
         "pages": pages,
         "terminal": terminal,
         "next_offset": next_offset,
+        "first_drupal_internal_nid": node_ids[0] if node_ids else None,
+        "last_drupal_internal_nid": node_ids[-1] if node_ids else None,
+        "distinct_drupal_internal_nids": len(set(node_ids)),
         "attribute_names": sorted(attrs),
         "relationship_names": sorted(relationships),
         "relationship_linkage_counts": {
@@ -244,6 +305,8 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
             "complete_collection_snapshot": False,
             "chunk_immutable": True,
             "missing_relationship_is_coverage_evidence": True,
+            "pagination_order": "Strictly increasing official Drupal internal node ID.",
+            "no_deduplication": True,
             "promotion_marker": "Top-level manifest.json is written only after gap-free terminal finalization.",
         },
     }
@@ -256,6 +319,8 @@ def collect_chunk(series_id: str, start_offset: int, max_pages: int) -> Path:
         "pages": pages,
         "terminal": terminal,
         "next_offset": next_offset,
+        "first_nid": manifest["first_drupal_internal_nid"],
+        "last_nid": manifest["last_drupal_internal_nid"],
         "manifest": manifest_path.as_posix(),
     }, sort_keys=True))
     return manifest_path
@@ -276,6 +341,7 @@ def finalize_series(series_id: str) -> Path:
     chunks.sort(key=lambda x: int(x["chunk_start_offset"]))
     expected = 0
     all_ids: set[str] = set()
+    all_nids: list[int] = []
     attrs: set[str] = set()
     relationships: set[str] = set()
     total_rows = 0
@@ -286,10 +352,21 @@ def finalize_series(series_id: str) -> Path:
     for i, chunk in enumerate(chunks):
         start = int(chunk["chunk_start_offset"])
         rows = int(chunk["rows"])
+        if chunk.get("sort") != SORT_FIELD:
+            raise RuntimeError(
+                f"Chunk offset {start} has incompatible sort={chunk.get('sort')!r}; expected {SORT_FIELD!r}"
+            )
         if start != expected:
             raise RuntimeError(f"Gap/overlap in series: expected offset {expected}, found {start}")
         if rows <= 0 and not chunk.get("terminal"):
             raise RuntimeError(f"Non-terminal zero-row chunk at {start}")
+        if i > 0:
+            prior_last = chunks[i - 1].get("last_drupal_internal_nid")
+            current_first = chunk.get("first_drupal_internal_nid")
+            if prior_last is None or current_first is None or int(current_first) <= int(prior_last):
+                raise RuntimeError(
+                    f"Non-increasing node-ID boundary between chunks: prior={prior_last} current={current_first}"
+                )
         expected = start + rows
         total_rows += rows
         total_pages += int(chunk["pages"])
@@ -309,7 +386,8 @@ def finalize_series(series_id: str) -> Path:
             f"next_offset={chunks[-1].get('next_offset')}"
         )
 
-    # Cross-chunk resource-ID uniqueness is checked from the raw page payloads.
+    # Re-read raw page payloads. A complete snapshot must be globally unique and
+    # strictly increasing by the same node-ID sort used during acquisition.
     for f in files:
         path = Path(f["path"])
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -318,29 +396,34 @@ def finalize_series(series_id: str) -> Path:
             raise RuntimeError(f"Malformed page during finalization: {path}")
         for item in data:
             if not isinstance(item, dict) or item.get("id") is None:
-                continue
+                raise RuntimeError(f"Malformed fight resource during finalization: {path}")
             rid = str(item["id"])
             if rid in all_ids:
                 raise RuntimeError(f"Duplicate fight resource ID across chunks: {rid}")
             all_ids.add(rid)
+            all_nids.append(internal_nid(item))
 
-    if len(all_ids) != total_rows:
+    validate_nid_sequence(all_nids, context=f"final series {series_id}")
+    if len(all_ids) != total_rows or len(all_nids) != total_rows:
         raise RuntimeError(
-            f"Fight resource ID count mismatch: rows={total_rows} distinct_ids={len(all_ids)}"
+            f"Fight identity count mismatch: rows={total_rows} distinct_ids={len(all_ids)} node_ids={len(all_nids)}"
         )
 
     final = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source": "Official UFC.com Drupal JSON:API",
         "collection": "fights",
         "series_id": series_id,
         "endpoint": PATH,
-        "sort": "created",
+        "sort": SORT_FIELD,
         "complete_collection_snapshot": True,
         "rows": total_rows,
         "pages": total_pages,
         "chunks": len(chunks),
         "distinct_resource_ids": len(all_ids),
+        "distinct_drupal_internal_nids": len(set(all_nids)),
+        "first_drupal_internal_nid": all_nids[0] if all_nids else None,
+        "last_drupal_internal_nid": all_nids[-1] if all_nids else None,
         "attribute_names": sorted(attrs),
         "relationship_names": sorted(relationships),
         "relationship_linkage_counts": {
@@ -356,6 +439,8 @@ def finalize_series(series_id: str) -> Path:
             "missing_is_not_zero": True,
             "historical_backfill_allowed": False,
             "identity_bridge_candidate": True,
+            "pagination_order": "Strictly increasing official Drupal internal node ID.",
+            "no_deduplication": True,
             "notes": "Gap-free terminal snapshot assembled from immutable bounded chunks. Relationship IDs are source identity evidence pending canonical reconciliation.",
         },
     }
