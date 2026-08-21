@@ -1,0 +1,32 @@
+name: Probe UFC article workflow trigger
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/probe-ufc-article-driver-trigger.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p provenance/runs
+          printf '{"github_run_id":"%s","trigger_sha":"%s","status":"started"}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" > provenance/runs/ufc_official_articles_workflow_probe.json
+          git add provenance/runs/ufc_official_articles_workflow_probe.json
+          git commit -m "Probe UFC article workflow trigger [skip ci]"
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
