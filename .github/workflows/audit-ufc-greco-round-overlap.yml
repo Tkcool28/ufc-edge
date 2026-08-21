@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - "pipelines/audit_ufc_greco_round_overlap.py"
+      - "pipelines/audit_ufc_greco_round_overlap_v2.py"
+      - "src/ufc_edge/data/manifest_readers.py"
+      - "src/ufc_edge/data/parsing.py"
       - ".github/workflows/audit-ufc-greco-round-overlap.yml"
       - "data/derived/identity/ufc_fightmetric_fight_crosswalk_candidate.csv"
       - "data/derived/identity/ufc_fight_event_bridge_candidate.csv"
@@ -33,7 +35,7 @@ jobs:
           mkdir -p provenance/runs data/derived/identity data/derived/qa
           log="provenance/runs/ufc_greco_round_overlap_${GITHUB_RUN_ID}.log"
           set +e
-          python pipelines/audit_ufc_greco_round_overlap.py >"$log" 2>&1
+          python pipelines/audit_ufc_greco_round_overlap_v2.py >"$log" 2>&1
           code=$?
           set -e
 
@@ -42,7 +44,7 @@ jobs:
           from datetime import datetime, timezone
           code, log = int(sys.argv[1]), sys.argv[2]
           payload = {
-              "schema_version": 1,
+              "schema_version": 2,
               "audit": "ufc_greco_round_overlap",
               "status": "success" if code == 0 else "failed",
               "exit_code": code,
