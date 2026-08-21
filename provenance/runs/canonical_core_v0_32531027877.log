@@ -1,0 +1,13 @@
+CONTRACT_OK version=0.3.0-draft tables=13 fields=151 missing_is_not_zero=true round_zero_actual=false sig_splits=true
+SOURCE_MAP_OK version=0.3.0-draft mappings=140 statuses={"provisional": 38, "rejected": 5, "unresolved": 27, "verified": 70} source_count=8
+{"events": 784, "exclusions": 570, "field_provenance": 0, "fighter_round_stats": 41218, "fighters": 4600, "fights": 8769, "source_identity_links": 30347}
+CANONICAL_BUILD_COUNTS {"events": 784, "exclusions": 570, "field_provenance": 0, "fighter_round_stats": 41218, "fighters": 4600, "fights": 8769, "source_identity_links": 30347}
+CANONICAL_EXCLUSION_REASONS {"duplicate_canonical_fighter_round_key": 2, "duplicate_exact_event_bout_key": 1, "duplicate_result_url": 25, "fight_not_canonicalized": 410, "unresolved_event_identity": 27, "unresolved_or_ambiguous_participant_identity": 62, "unresolved_or_nonparticipant_fighter_identity": 42, "unresolved_tott_fighter_identity": 1}
+CANONICAL_INVALID_ROUND_EXAMPLES []
+TABLE_OK fighters rows=4600
+TABLE_OK events rows=784
+TABLE_OK fights rows=8769
+TABLE_OK fighter_round_stats rows=41218
+TABLE_OK source_identity_links rows=30347
+TABLE_OK field_provenance rows=0
+CANONICAL_DATA_OK contract=0.3.0-draft fighters=4600 events=784 fights=8769 rounds=41218 fight_coverage=98.984% round_coverage=98.911%
