@@ -1,0 +1,250 @@
+{
+  "generated_at_utc": "2026-08-21T20:50:13.589900Z",
+  "routes": [
+    {
+      "body_prefix": null,
+      "bytes_read": 6637,
+      "candidate_counts": {
+        "scorecard": 1,
+        "weigh_in": 1
+      },
+      "candidate_links": {
+        "scorecard": [
+          "https://www.ufc.com/news/ufc-sacramento-hernandez-vs-rodrigues-official-scorecards"
+        ],
+        "weigh_in": [
+          "https://www.ufc.com/news/official-weigh-results-ufc-sacramento-fight-night-hernandez-rodrigues"
+        ]
+      },
+      "content_type": "application/rss+xml; charset=utf-8",
+      "ok": true,
+      "pager_links": [],
+      "sha256": "3fd1bd9a206561b041a54337208c2a0294e76a848a32cdafbff281c6752dd280",
+      "status": 200,
+      "title_sample": null,
+      "ufc_link_count": 9,
+      "url": "https://www.ufc.com/news-sitemap.xml"
+    },
+    {
+      "body_prefix": null,
+      "bytes_read": 7419,
+      "candidate_counts": {
+        "scorecard": 0,
+        "weigh_in": 0
+      },
+      "candidate_links": {
+        "scorecard": [],
+        "weigh_in": []
+      },
+      "content_type": "text/xml; charset=utf-8",
+      "ok": true,
+      "pager_links": [
+        "https://www.ufc.com/sitemap.xml?page=1",
+        "https://www.ufc.com/sitemap.xml?page=10",
+        "https://www.ufc.com/sitemap.xml?page=11",
+        "https://www.ufc.com/sitemap.xml?page=12",
+        "https://www.ufc.com/sitemap.xml?page=13",
+        "https://www.ufc.com/sitemap.xml?page=14",
+        "https://www.ufc.com/sitemap.xml?page=15",
+        "https://www.ufc.com/sitemap.xml?page=16",
+        "https://www.ufc.com/sitemap.xml?page=17",
+        "https://www.ufc.com/sitemap.xml?page=18",
+        "https://www.ufc.com/sitemap.xml?page=19",
+        "https://www.ufc.com/sitemap.xml?page=2",
+        "https://www.ufc.com/sitemap.xml?page=20",
+        "https://www.ufc.com/sitemap.xml?page=21",
+        "https://www.ufc.com/sitemap.xml?page=22",
+        "https://www.ufc.com/sitemap.xml?page=23",
+        "https://www.ufc.com/sitemap.xml?page=24",
+        "https://www.ufc.com/sitemap.xml?page=25",
+        "https://www.ufc.com/sitemap.xml?page=26",
+        "https://www.ufc.com/sitemap.xml?page=27",
+        "https://www.ufc.com/sitemap.xml?page=28",
+        "https://www.ufc.com/sitemap.xml?page=29",
+        "https://www.ufc.com/sitemap.xml?page=3",
+        "https://www.ufc.com/sitemap.xml?page=30",
+        "https://www.ufc.com/sitemap.xml?page=31",
+        "https://www.ufc.com/sitemap.xml?page=32",
+        "https://www.ufc.com/sitemap.xml?page=33",
+        "https://www.ufc.com/sitemap.xml?page=34",
+        "https://www.ufc.com/sitemap.xml?page=35",
+        "https://www.ufc.com/sitemap.xml?page=36",
+        "https://www.ufc.com/sitemap.xml?page=37",
+        "https://www.ufc.com/sitemap.xml?page=38",
+        "https://www.ufc.com/sitemap.xml?page=39",
+        "https://www.ufc.com/sitemap.xml?page=4",
+        "https://www.ufc.com/sitemap.xml?page=40",
+        "https://www.ufc.com/sitemap.xml?page=41",
+        "https://www.ufc.com/sitemap.xml?page=42",
+        "https://www.ufc.com/sitemap.xml?page=43",
+        "https://www.ufc.com/sitemap.xml?page=44",
+        "https://www.ufc.com/sitemap.xml?page=45",
+        "https://www.ufc.com/sitemap.xml?page=46",
+        "https://www.ufc.com/sitemap.xml?page=47",
+        "https://www.ufc.com/sitemap.xml?page=48",
+        "https://www.ufc.com/sitemap.xml?page=49",
+        "https://www.ufc.com/sitemap.xml?page=5",
+        "https://www.ufc.com/sitemap.xml?page=50",
+        "https://www.ufc.com/sitemap.xml?page=51",
+        "https://www.ufc.com/sitemap.xml?page=52",
+        "https://www.ufc.com/sitemap.xml?page=53",
+        "https://www.ufc.com/sitemap.xml?page=54",
+        "https://www.ufc.com/sitemap.xml?page=55",
+        "https://www.ufc.com/sitemap.xml?page=56",
+        "https://www.ufc.com/sitemap.xml?page=57",
+        "https://www.ufc.com/sitemap.xml?page=58",
+        "https://www.ufc.com/sitemap.xml?page=59",
+        "https://www.ufc.com/sitemap.xml?page=6",
+        "https://www.ufc.com/sitemap.xml?page=60",
+        "https://www.ufc.com/sitemap.xml?page=61",
+        "https://www.ufc.com/sitemap.xml?page=62",
+        "https://www.ufc.com/sitemap.xml?page=63",
+        "https://www.ufc.com/sitemap.xml?page=64",
+        "https://www.ufc.com/sitemap.xml?page=65",
+        "https://www.ufc.com/sitemap.xml?page=66",
+        "https://www.ufc.com/sitemap.xml?page=67",
+        "https://www.ufc.com/sitemap.xml?page=68",
+        "https://www.ufc.com/sitemap.xml?page=7",
+        "https://www.ufc.com/sitemap.xml?page=8",
+        "https://www.ufc.com/sitemap.xml?page=9"
+      ],
+      "sha256": "64e16725caa8b0f4d8fcc530a8a469b273cbfd7a4fc0adb48043758766896fa1",
+      "status": 200,
+      "title_sample": null,
+      "ufc_link_count": 68,
+      "url": "https://www.ufc.com/sitemap.xml"
+    },
+    {
+      "body_prefix": null,
+      "bytes_read": 68739,
+      "candidate_counts": {
+        "scorecard": 7,
+        "weigh_in": 0
+      },
+      "candidate_links": {
+        "scorecard": [
+          "https://www.ufc.com/news/ufc-330-official-scorecards",
+          "https://www.ufc.com/news/ufc-abu-dhabi-official-scorecards",
+          "https://www.ufc.com/news/ufc-belgrade-official-scorecards",
+          "https://www.ufc.com/news/ufc-fight-night-gamrot-vs-salkilld-official-scorecards-judges",
+          "https://www.ufc.com/news/ufc-oklahoma-city-official-scorecards",
+          "https://www.ufc.com/news/ufc-sacramento-hernandez-vs-rodrigues-official-scorecards",
+          "https://www.ufc.com/scorecards?page=1"
+        ],
+        "weigh_in": []
+      },
+      "content_type": "text/html; charset=UTF-8",
+      "ok": true,
+      "pager_links": [
+        "https://www.ufc.com/scorecards?page=1"
+      ],
+      "sha256": "763612dcfdefe5d3a259f5522cc2754de0078d805ea73223d6fc5e2ff17e4702",
+      "status": 200,
+      "title_sample": "UFC Scorecards | UFC",
+      "ufc_link_count": 34,
+      "url": "https://www.ufc.com/scorecards"
+    },
+    {
+      "body_prefix": null,
+      "bytes_read": 68792,
+      "candidate_counts": {
+        "scorecard": 7,
+        "weigh_in": 0
+      },
+      "candidate_links": {
+        "scorecard": [
+          "https://www.ufc.com/news/ufc-329-mcgregor-vs-holloway-2-scorecards",
+          "https://www.ufc.com/news/ufc-fight-night-fiziev-vs-torres-official-scorecards-judges",
+          "https://www.ufc.com/news/ufc-fight-night-kape-vs-horiguchi-official-judges-scorecards",
+          "https://www.ufc.com/news/ufc-fight-night-muhammad-vs-bonfim-official-scorecards-judges",
+          "https://www.ufc.com/news/ufc-fight-night-song-vs-figueiredo-official-judges-scorecards-macau",
+          "https://www.ufc.com/news/ufc-freedom-250-official-scorecards-judges",
+          "https://www.ufc.com/scorecards?page=2"
+        ],
+        "weigh_in": []
+      },
+      "content_type": "text/html; charset=UTF-8",
+      "ok": true,
+      "pager_links": [
+        "https://www.ufc.com/scorecards?page=2"
+      ],
+      "sha256": "2b4d269854e132d512e238ac4eea0c2eee18dfdc5d0e959d2bb4476313f5109f",
+      "status": 200,
+      "title_sample": "UFC Scorecards | UFC",
+      "ufc_link_count": 34,
+      "url": "https://www.ufc.com/scorecards?page=1"
+    },
+    {
+      "body_prefix": null,
+      "bytes_read": 93744,
+      "candidate_counts": {
+        "scorecard": 0,
+        "weigh_in": 2
+      },
+      "candidate_links": {
+        "scorecard": [],
+        "weigh_in": [
+          "https://www.ufc.com/news/official-weigh-results-ufc-sacramento-fight-night-hernandez-rodrigues",
+          "https://www.ufc.com/video/159476"
+        ]
+      },
+      "content_type": "text/html; charset=UTF-8",
+      "ok": true,
+      "pager_links": [
+        "https://www.ufc.com/trending/all?page=1"
+      ],
+      "sha256": "ef06ea0c241b4696d6b7f73b0c3c04148165c95a5f1951d54450573fed0c864b",
+      "status": 200,
+      "title_sample": "UFC News, Fighter Interviews, Photos &amp; Videos | UFC.com",
+      "ufc_link_count": 41,
+      "url": "https://www.ufc.com/trending/all"
+    },
+    {
+      "body_prefix": null,
+      "bytes_read": 99702,
+      "candidate_counts": {
+        "scorecard": 0,
+        "weigh_in": 0
+      },
+      "candidate_links": {
+        "scorecard": [],
+        "weigh_in": []
+      },
+      "content_type": "text/html; charset=UTF-8",
+      "ok": true,
+      "pager_links": [
+        "https://www.ufc.com/trending/all?page=2"
+      ],
+      "sha256": "30f4b60438033bf255115c490fd007ed2b985163b210fdaa238eb83a9831c412",
+      "status": 200,
+      "title_sample": "UFC News, Fighter Interviews, Photos &amp; Videos | UFC.com",
+      "ufc_link_count": 42,
+      "url": "https://www.ufc.com/trending/all?page=1"
+    }
+  ],
+  "rules": {
+    "blocked_routes_are_not_bypassed": true,
+    "candidate_links_require_coverage_and_identity_validation": true,
+    "probe_is_not_bulk_acquisition": true
+  },
+  "schema_version": 1,
+  "summary": {
+    "routes_exposing_scorecard_candidates": [
+      "https://www.ufc.com/news-sitemap.xml",
+      "https://www.ufc.com/scorecards",
+      "https://www.ufc.com/scorecards?page=1"
+    ],
+    "routes_exposing_weigh_in_candidates": [
+      "https://www.ufc.com/news-sitemap.xml",
+      "https://www.ufc.com/trending/all"
+    ],
+    "successful_routes": [
+      "https://www.ufc.com/news-sitemap.xml",
+      "https://www.ufc.com/sitemap.xml",
+      "https://www.ufc.com/scorecards",
+      "https://www.ufc.com/scorecards?page=1",
+      "https://www.ufc.com/trending/all",
+      "https://www.ufc.com/trending/all?page=1"
+    ]
+  }
+}
