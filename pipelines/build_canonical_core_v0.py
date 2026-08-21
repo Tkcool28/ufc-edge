@@ -127,9 +127,13 @@ def parse_nonnegative(value: str) -> int | None:
     text = clean(value)
     if not text or text == "--":
         return None
-    if not re.fullmatch(r"\d+", text):
-        raise ValueError(f"expected nonnegative integer: {value!r}")
-    return int(text)
+    # Greco historical CSV transport sometimes serializes integer event counts as
+    # floating-looking strings (e.g. 0.0, 1.0). Accept only mathematically integral
+    # decimal syntax; a true fractional count such as 0.5 remains invalid.
+    m = re.fullmatch(r"(\d+)(?:\.(0+))?", text)
+    if not m:
+        raise ValueError(f"expected nonnegative integral count: {value!r}")
+    return int(m.group(1))
 
 
 def parse_mmss(value: str) -> int | None:
