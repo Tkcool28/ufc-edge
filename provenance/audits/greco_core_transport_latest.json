@@ -1,0 +1,1511 @@
+{
+  "event_details_sample": [
+    {
+      "DATE": "August 15, 2026",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "LOCATION": "Philadelphia, Pennsylvania, USA",
+      "URL": "http://ufcstats.com/event-details/b96619b3acd7d9da"
+    },
+    {
+      "DATE": "August 08, 2026",
+      "EVENT": "UFC Fight Night: Gamrot vs. Salkilld",
+      "LOCATION": "Las Vegas, Nevada, USA",
+      "URL": "http://ufcstats.com/event-details/495add4fbede0a44"
+    },
+    {
+      "DATE": "August 01, 2026",
+      "EVENT": "UFC Fight Night: Medic vs. Rodriguez",
+      "LOCATION": "Belgrade, Vojvodina, Serbia",
+      "URL": "http://ufcstats.com/event-details/1a50e734bb54861a"
+    },
+    {
+      "DATE": "July 25, 2026",
+      "EVENT": "UFC Fight Night: Ankalaev vs. Guskov",
+      "LOCATION": "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+      "URL": "http://ufcstats.com/event-details/681d07e328798ec0"
+    },
+    {
+      "DATE": "July 18, 2026",
+      "EVENT": "UFC Fight Night: Du Plessis vs. Usman",
+      "LOCATION": "Oklahoma City, Oklahoma, USA",
+      "URL": "http://ufcstats.com/event-details/f354c50b8d63d9b3"
+    },
+    {
+      "DATE": "July 11, 2026",
+      "EVENT": "UFC 329: McGregor vs. Holloway 2",
+      "LOCATION": "Las Vegas, Nevada, USA",
+      "URL": "http://ufcstats.com/event-details/fccb0fee256b7b4d"
+    },
+    {
+      "DATE": "June 27, 2026",
+      "EVENT": "UFC Fight Night: Fiziev vs. Torres",
+      "LOCATION": "Baku, Azerbaijan",
+      "URL": "http://ufcstats.com/event-details/31e1ea6fe6b682f8"
+    },
+    {
+      "DATE": "June 20, 2026",
+      "EVENT": "UFC Fight Night: Kape vs. Horiguchi",
+      "LOCATION": "Las Vegas, Nevada, USA",
+      "URL": "http://ufcstats.com/event-details/c8661e204c66f325"
+    },
+    {
+      "DATE": "June 14, 2026",
+      "EVENT": "UFC Freedom 250",
+      "LOCATION": "Washington, DC, USA",
+      "URL": "http://ufcstats.com/event-details/48544433372ecfa6"
+    },
+    {
+      "DATE": "June 06, 2026",
+      "EVENT": "UFC Fight Night: Muhammad vs. Bonfim",
+      "LOCATION": "Las Vegas, Nevada, USA",
+      "URL": "http://ufcstats.com/event-details/ba17afef01ed78b6"
+    },
+    {
+      "DATE": "May 30, 2026",
+      "EVENT": "UFC Fight Night: Song vs. Figueiredo",
+      "LOCATION": "Macau, China",
+      "URL": "http://ufcstats.com/event-details/1e75e6c9de99fa76"
+    },
+    {
+      "DATE": "May 16, 2026",
+      "EVENT": "UFC Fight Night: Allen vs. Costa",
+      "LOCATION": "Las Vegas, Nevada, USA",
+      "URL": "http://ufcstats.com/event-details/73abb7a5c57fb443"
+    }
+  ],
+  "fight_details_sample": [
+    {
+      "BOUT": "Islam Makhachev vs. Ian Machado Garry",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/365fd759c03e93cf"
+    },
+    {
+      "BOUT": "Mackenzie Dern vs. Gillian Robertson",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/4700d42c9869674a"
+    },
+    {
+      "BOUT": "Jalin Turner vs. Kaue Fernandes",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/d4bd456d70965734"
+    },
+    {
+      "BOUT": "Mansur Abdul-Malik vs. Dustin Stoltzfus",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/53902dcb3e213b18"
+    },
+    {
+      "BOUT": "Edson Barboza vs. Esteban Ribovics",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/8e482cead0c7eb15"
+    },
+    {
+      "BOUT": "Chidi Njokuani vs. Joel Alvarez",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/6e495deac1f57169"
+    },
+    {
+      "BOUT": "Charles Johnson vs. Eduardo Chapolin",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/e7c11d1b22d50ba0"
+    },
+    {
+      "BOUT": "Donte Johnson vs. Eric McConico",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/9c5da658c76da7c0"
+    },
+    {
+      "BOUT": "Vicente Luque vs. Tresean Gore",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/e79e4d13546d2360"
+    },
+    {
+      "BOUT": "Rafael Tobias vs. Lucas Fernando",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/360b13f97e7ca703"
+    },
+    {
+      "BOUT": "Neil Magny vs. Ramiz Brahimaj",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/e7077d030d5fc15f"
+    },
+    {
+      "BOUT": "Jeremiah Wells vs. Myktybek Orolbai",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry",
+      "URL": "http://ufcstats.com/fight-details/d5ebdf462c9b59b3"
+    }
+  ],
+  "fight_results_sample": [
+    {
+      "BOUT": "Islam Makhachev vs. Ian Machado Garry",
+      "DETAILS": "Sal D'amato 46 - 49.Mike Bell 46 - 49.Eric Colon 47 - 48.",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "Decision - Unanimous ",
+      "OUTCOME": "W/L",
+      "REFEREE": "Herb Dean",
+      "ROUND": "5",
+      "TIME": "5:00",
+      "TIME FORMAT": "5 Rnd (5-5-5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/365fd759c03e93cf",
+      "WEIGHTCLASS": "UFC Welterweight Title Bout"
+    },
+    {
+      "BOUT": "Mackenzie Dern vs. Gillian Robertson",
+      "DETAILS": "Sal D'amato 46 - 49.Chris Bolinski 46 - 49.Rick Winter 47 - 48.",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "Decision - Unanimous ",
+      "OUTCOME": "W/L",
+      "REFEREE": "Keith Peterson",
+      "ROUND": "5",
+      "TIME": "5:00",
+      "TIME FORMAT": "5 Rnd (5-5-5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/4700d42c9869674a",
+      "WEIGHTCLASS": "UFC Women's Strawweight Title Bout"
+    },
+    {
+      "BOUT": "Jalin Turner vs. Kaue Fernandes",
+      "DETAILS": "Punches to Head On Ground ",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "KO/TKO ",
+      "OUTCOME": "W/L",
+      "REFEREE": "Jason Herzog",
+      "ROUND": "1",
+      "TIME": "0:39",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/d4bd456d70965734",
+      "WEIGHTCLASS": "Lightweight Bout"
+    },
+    {
+      "BOUT": "Mansur Abdul-Malik vs. Dustin Stoltzfus",
+      "DETAILS": "Rear Naked Choke ",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "Submission ",
+      "OUTCOME": "L/W",
+      "REFEREE": "Keith Peterson",
+      "ROUND": "2",
+      "TIME": "4:25",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/53902dcb3e213b18",
+      "WEIGHTCLASS": "Middleweight Bout"
+    },
+    {
+      "BOUT": "Edson Barboza vs. Esteban Ribovics",
+      "DETAILS": "Punches to Head At Distance ",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "KO/TKO ",
+      "OUTCOME": "L/W",
+      "REFEREE": "Herb Dean",
+      "ROUND": "2",
+      "TIME": "1:32",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/8e482cead0c7eb15",
+      "WEIGHTCLASS": "Lightweight Bout"
+    },
+    {
+      "BOUT": "Chidi Njokuani vs. Joel Alvarez",
+      "DETAILS": "Brent Colflesh 27 - 30.Eric Colon 27 - 30.David Braslow 28 - 29.",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "Decision - Unanimous ",
+      "OUTCOME": "W/L",
+      "REFEREE": "Keith Peterson",
+      "ROUND": "3",
+      "TIME": "5:00",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/6e495deac1f57169",
+      "WEIGHTCLASS": "Welterweight Bout"
+    },
+    {
+      "BOUT": "Charles Johnson vs. Eduardo Chapolin",
+      "DETAILS": "Twister From Back ControlScottish twister",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "Submission ",
+      "OUTCOME": "W/L",
+      "REFEREE": "Jason Herzog",
+      "ROUND": "3",
+      "TIME": "1:36",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/e7c11d1b22d50ba0",
+      "WEIGHTCLASS": "Catch Weight Bout"
+    },
+    {
+      "BOUT": "Donte Johnson vs. Eric McConico",
+      "DETAILS": "Punch to Head At Distance ",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "KO/TKO ",
+      "OUTCOME": "W/L",
+      "REFEREE": "Blake Grice",
+      "ROUND": "1",
+      "TIME": "1:38",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/9c5da658c76da7c0",
+      "WEIGHTCLASS": "Middleweight Bout"
+    },
+    {
+      "BOUT": "Vicente Luque vs. Tresean Gore",
+      "DETAILS": "Brent Colflesh 27 - 30.Chris Bolinski 27 - 30.Sal D'amato 28 - 29.",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "Decision - Unanimous ",
+      "OUTCOME": "L/W",
+      "REFEREE": "Herb Dean",
+      "ROUND": "3",
+      "TIME": "5:00",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/e79e4d13546d2360",
+      "WEIGHTCLASS": "Middleweight Bout"
+    },
+    {
+      "BOUT": "Rafael Tobias vs. Lucas Fernando",
+      "DETAILS": "Knee to Body At Distance ",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "KO/TKO ",
+      "OUTCOME": "L/W",
+      "REFEREE": "Keith Peterson",
+      "ROUND": "3",
+      "TIME": "1:10",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/360b13f97e7ca703",
+      "WEIGHTCLASS": "Light Heavyweight Bout"
+    },
+    {
+      "BOUT": "Neil Magny vs. Ramiz Brahimaj",
+      "DETAILS": "Punches to Head On Ground ",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "KO/TKO ",
+      "OUTCOME": "W/L",
+      "REFEREE": "Jason Herzog",
+      "ROUND": "2",
+      "TIME": "3:20",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/e7077d030d5fc15f",
+      "WEIGHTCLASS": "Welterweight Bout"
+    },
+    {
+      "BOUT": "Jeremiah Wells vs. Myktybek Orolbai",
+      "DETAILS": "Guillotine Choke In ClinchNinja choke",
+      "EVENT": "UFC 330: Makhachev vs. Machado Garry ",
+      "METHOD": "Submission ",
+      "OUTCOME": "W/L",
+      "REFEREE": "Blake Grice",
+      "ROUND": "3",
+      "TIME": "1:24",
+      "TIME FORMAT": "3 Rnd (5-5-5)",
+      "URL": "http://ufcstats.com/fight-details/d5ebdf462c9b59b3",
+      "WEIGHTCLASS": "Welterweight Bout"
+    }
+  ],
+  "fighter_details_sample": [
+    {
+      "FIRST": "Tom",
+      "LAST": "Aaron",
+      "NICKNAME": "",
+      "URL": "http://ufcstats.com/fighter-details/93fe7332d16c6ad9"
+    },
+    {
+      "FIRST": "Danny",
+      "LAST": "Abbadi",
+      "NICKNAME": "The Assassin",
+      "URL": "http://ufcstats.com/fighter-details/15df64c02b6b0fde"
+    },
+    {
+      "FIRST": "Nariman",
+      "LAST": "Abbasov",
+      "NICKNAME": "Bayraktar",
+      "URL": "http://ufcstats.com/fighter-details/59a9d6dac61c2540"
+    },
+    {
+      "FIRST": "Darion",
+      "LAST": "Abbey",
+      "NICKNAME": "",
+      "URL": "http://ufcstats.com/fighter-details/4961467134abd8be"
+    },
+    {
+      "FIRST": "David",
+      "LAST": "Abbott",
+      "NICKNAME": "Tank",
+      "URL": "http://ufcstats.com/fighter-details/b361180739bed4b0"
+    },
+    {
+      "FIRST": "Hamdy",
+      "LAST": "Abdelwahab",
+      "NICKNAME": "The Hammer",
+      "URL": "http://ufcstats.com/fighter-details/3329d692aea4dc28"
+    },
+    {
+      "FIRST": "Farida",
+      "LAST": "Abdueva",
+      "NICKNAME": "",
+      "URL": "http://ufcstats.com/fighter-details/8f3837b4c06f3d1e"
+    },
+    {
+      "FIRST": "Mansur",
+      "LAST": "Abdul-Malik",
+      "NICKNAME": "",
+      "URL": "http://ufcstats.com/fighter-details/841695e02c99a521"
+    },
+    {
+      "FIRST": "Akbar",
+      "LAST": "Abdullaev",
+      "NICKNAME": "Bakal",
+      "URL": "http://ufcstats.com/fighter-details/24cb8f04de1310cb"
+    },
+    {
+      "FIRST": "Tahir",
+      "LAST": "Abdullayev",
+      "NICKNAME": "Tank",
+      "URL": "http://ufcstats.com/fighter-details/e047d3b541afd4a7"
+    },
+    {
+      "FIRST": "Shamil",
+      "LAST": "Abdurakhimov",
+      "NICKNAME": "Abrek",
+      "URL": "http://ufcstats.com/fighter-details/2f5cbecbbe18bac4"
+    },
+    {
+      "FIRST": "Hiroyuki",
+      "LAST": "Abe",
+      "NICKNAME": "Abe Ani",
+      "URL": "http://ufcstats.com/fighter-details/c0ed7b208197e8de"
+    }
+  ],
+  "fighter_tott_sample": [
+    {
+      "DOB": "Jul 13, 1978",
+      "FIGHTER": "Tom Aaron",
+      "HEIGHT": "--",
+      "REACH": "--",
+      "STANCE": "",
+      "URL": "http://ufcstats.com/fighter-details/93fe7332d16c6ad9",
+      "WEIGHT": "155 lbs."
+    },
+    {
+      "DOB": "Jul 03, 1983",
+      "FIGHTER": "Danny Abbadi",
+      "HEIGHT": "5' 11\"",
+      "REACH": "--",
+      "STANCE": "Orthodox",
+      "URL": "http://ufcstats.com/fighter-details/15df64c02b6b0fde",
+      "WEIGHT": "155 lbs."
+    },
+    {
+      "DOB": "Feb 01, 1994",
+      "FIGHTER": "Nariman Abbasov",
+      "HEIGHT": "5' 8\"",
+      "REACH": "66\"",
+      "STANCE": "Orthodox",
+      "URL": "http://ufcstats.com/fighter-details/59a9d6dac61c2540",
+      "WEIGHT": "155 lbs."
+    },
+    {
+      "DOB": "Feb 25, 1993",
+      "FIGHTER": "Darion Abbey",
+      "HEIGHT": "6' 2\"",
+      "REACH": "80\"",
+      "STANCE": "Orthodox",
+      "URL": "http://ufcstats.com/fighter-details/4961467134abd8be",
+      "WEIGHT": "265 lbs."
+    },
+    {
+      "DOB": "Apr 26, 1965",
+      "FIGHTER": "David Abbott",
+      "HEIGHT": "6' 0\"",
+      "REACH": "--",
+      "STANCE": "Switch",
+      "URL": "http://ufcstats.com/fighter-details/b361180739bed4b0",
+      "WEIGHT": "265 lbs."
+    },
+    {
+      "DOB": "Jan 22, 1993",
+      "FIGHTER": "Hamdy Abdelwahab",
+      "HEIGHT": "6' 2\"",
+      "REACH": "72\"",
+      "STANCE": "Southpaw",
+      "URL": "http://ufcstats.com/fighter-details/3329d692aea4dc28",
+      "WEIGHT": "264 lbs."
+    },
+    {
+      "DOB": "Oct 07, 1997",
+      "FIGHTER": "Mansur Abdul-Malik",
+      "HEIGHT": "6' 2\"",
+      "REACH": "80\"",
+      "STANCE": "Orthodox",
+      "URL": "http://ufcstats.com/fighter-details/841695e02c99a521",
+      "WEIGHT": "185 lbs."
+    },
+    {
+      "DOB": "Sep 02, 1981",
+      "FIGHTER": "Shamil Abdurakhimov",
+      "HEIGHT": "6' 3\"",
+      "REACH": "76\"",
+      "STANCE": "Orthodox",
+      "URL": "http://ufcstats.com/fighter-details/2f5cbecbbe18bac4",
+      "WEIGHT": "235 lbs."
+    },
+    {
+      "DOB": "--",
+      "FIGHTER": "Hiroyuki Abe",
+      "HEIGHT": "5' 6\"",
+      "REACH": "--",
+      "STANCE": "Orthodox",
+      "URL": "http://ufcstats.com/fighter-details/c0ed7b208197e8de",
+      "WEIGHT": "145 lbs."
+    },
+    {
+      "DOB": "Nov 27, 1991",
+      "FIGHTER": "Daichi Abe",
+      "HEIGHT": "5' 11\"",
+      "REACH": "71\"",
+      "STANCE": "Orthodox",
+      "URL": "http://ufcstats.com/fighter-details/5140122c3eecd307",
+      "WEIGHT": "170 lbs."
+    },
+    {
+      "DOB": "Jun 30, 1978",
+      "FIGHTER": "Papy Abedi",
+      "HEIGHT": "5' 11\"",
+      "REACH": "--",
+      "STANCE": "Southpaw",
+      "URL": "http://ufcstats.com/fighter-details/c9f6385af6df66d7",
+      "WEIGHT": "185 lbs."
+    },
+    {
+      "DOB": "Apr 27, 1984",
+      "FIGHTER": "Ricardo Abreu",
+      "HEIGHT": "5' 11\"",
+      "REACH": "--",
+      "STANCE": "Orthodox",
+      "URL": "http://ufcstats.com/fighter-details/aa6e591c2a2cdecd",
+      "WEIGHT": "185 lbs."
+    }
+  ],
+  "generated_at_utc": "2026-08-21T21:46:17.896347Z",
+  "result_value_domains": {
+    "METHOD": [
+      {
+        "count": 3181,
+        "value": "Decision - Unanimous"
+      },
+      {
+        "count": 2806,
+        "value": "KO/TKO"
+      },
+      {
+        "count": 1720,
+        "value": "Submission"
+      },
+      {
+        "count": 832,
+        "value": "Decision - Split"
+      },
+      {
+        "count": 104,
+        "value": "Decision - Majority"
+      },
+      {
+        "count": 98,
+        "value": "TKO - Doctor's Stoppage"
+      },
+      {
+        "count": 59,
+        "value": "Overturned"
+      },
+      {
+        "count": 34,
+        "value": "Could Not Continue"
+      },
+      {
+        "count": 23,
+        "value": "DQ"
+      },
+      {
+        "count": 2,
+        "value": "Other"
+      }
+    ],
+    "OUTCOME": [
+      {
+        "count": 5575,
+        "value": "W/L"
+      },
+      {
+        "count": 3126,
+        "value": "L/W"
+      },
+      {
+        "count": 92,
+        "value": "NC/NC"
+      },
+      {
+        "count": 66,
+        "value": "D/D"
+      }
+    ],
+    "REFEREE": [
+      {
+        "count": 1257,
+        "value": "Herb Dean"
+      },
+      {
+        "count": 660,
+        "value": "John McCarthy"
+      },
+      {
+        "count": 607,
+        "value": "Marc Goddard"
+      },
+      {
+        "count": 510,
+        "value": "Dan Miragliotta"
+      },
+      {
+        "count": 472,
+        "value": "Jason Herzog"
+      },
+      {
+        "count": 470,
+        "value": "Chris Tognoni"
+      },
+      {
+        "count": 466,
+        "value": "Mark Smith"
+      },
+      {
+        "count": 411,
+        "value": "Keith Peterson"
+      },
+      {
+        "count": 392,
+        "value": "Mario Yamasaki"
+      },
+      {
+        "count": 264,
+        "value": "Yves Lavigne"
+      },
+      {
+        "count": 211,
+        "value": "Mike Beltran"
+      },
+      {
+        "count": 201,
+        "value": "Steve Mazzagatti"
+      },
+      {
+        "count": 192,
+        "value": "Leon Roberts"
+      },
+      {
+        "count": 171,
+        "value": "Kerry Hatley"
+      },
+      {
+        "count": 122,
+        "value": "Josh Rosenthal"
+      },
+      {
+        "count": 110,
+        "value": "Kevin MacDonald"
+      },
+      {
+        "count": 93,
+        "value": "Jerin Valel"
+      },
+      {
+        "count": 88,
+        "value": "Steve Perceval"
+      },
+      {
+        "count": 84,
+        "value": "Jacob Montalvo"
+      },
+      {
+        "count": 77,
+        "value": "John Sharp"
+      },
+      {
+        "count": 76,
+        "value": "Rich Mitchell"
+      },
+      {
+        "count": 74,
+        "value": "Lukasz Bosacki"
+      },
+      {
+        "count": 62,
+        "value": "Kevin Mulhall"
+      },
+      {
+        "count": 60,
+        "value": "Daniel Movahedi"
+      },
+      {
+        "count": 57,
+        "value": "Osiris Maia"
+      },
+      {
+        "count": 52,
+        "value": "Blake Grice"
+      },
+      {
+        "count": 51,
+        "value": "Gary Copeland"
+      },
+      {
+        "count": 47,
+        "value": "Kevin Sataki"
+      },
+      {
+        "count": 45,
+        "value": "Todd Ronald Anderson"
+      },
+      {
+        "count": 43,
+        "value": "Neil Hall"
+      }
+    ],
+    "ROUND": [
+      {
+        "count": 4496,
+        "value": "3"
+      },
+      {
+        "count": 2504,
+        "value": "1"
+      },
+      {
+        "count": 1466,
+        "value": "2"
+      },
+      {
+        "count": 342,
+        "value": "5"
+      },
+      {
+        "count": 51,
+        "value": "4"
+      }
+    ],
+    "TIME": [
+      {
+        "count": 4180,
+        "value": "5:00"
+      },
+      {
+        "count": 60,
+        "value": "4:59"
+      },
+      {
+        "count": 39,
+        "value": "3:00"
+      },
+      {
+        "count": 29,
+        "value": "4:21"
+      },
+      {
+        "count": 28,
+        "value": "4:15"
+      },
+      {
+        "count": 28,
+        "value": "1:54"
+      },
+      {
+        "count": 28,
+        "value": "2:38"
+      },
+      {
+        "count": 27,
+        "value": "0:39"
+      },
+      {
+        "count": 26,
+        "value": "3:38"
+      },
+      {
+        "count": 26,
+        "value": "1:28"
+      },
+      {
+        "count": 25,
+        "value": "1:01"
+      },
+      {
+        "count": 25,
+        "value": "4:42"
+      },
+      {
+        "count": 25,
+        "value": "4:10"
+      },
+      {
+        "count": 25,
+        "value": "2:01"
+      },
+      {
+        "count": 24,
+        "value": "4:13"
+      },
+      {
+        "count": 24,
+        "value": "4:55"
+      },
+      {
+        "count": 23,
+        "value": "1:50"
+      },
+      {
+        "count": 23,
+        "value": "2:11"
+      },
+      {
+        "count": 23,
+        "value": "0:44"
+      },
+      {
+        "count": 23,
+        "value": "4:06"
+      },
+      {
+        "count": 23,
+        "value": "1:03"
+      },
+      {
+        "count": 23,
+        "value": "1:07"
+      },
+      {
+        "count": 22,
+        "value": "4:25"
+      },
+      {
+        "count": 22,
+        "value": "2:27"
+      },
+      {
+        "count": 22,
+        "value": "2:47"
+      },
+      {
+        "count": 22,
+        "value": "2:42"
+      },
+      {
+        "count": 22,
+        "value": "3:18"
+      },
+      {
+        "count": 22,
+        "value": "2:58"
+      },
+      {
+        "count": 22,
+        "value": "4:40"
+      },
+      {
+        "count": 21,
+        "value": "1:32"
+      }
+    ],
+    "TIME FORMAT": [
+      {
+        "count": 7811,
+        "value": "3 Rnd (5-5-5)"
+      },
+      {
+        "count": 789,
+        "value": "5 Rnd (5-5-5-5-5)"
+      },
+      {
+        "count": 88,
+        "value": "1 Rnd + OT (12-3)"
+      },
+      {
+        "count": 44,
+        "value": "3 Rnd + OT (5-5-5-5)"
+      },
+      {
+        "count": 31,
+        "value": "No Time Limit"
+      },
+      {
+        "count": 25,
+        "value": "1 Rnd (20)"
+      },
+      {
+        "count": 20,
+        "value": "1 Rnd + 2OT (15-3-3)"
+      },
+      {
+        "count": 14,
+        "value": "2 Rnd (5-5)"
+      },
+      {
+        "count": 12,
+        "value": "1 Rnd (15)"
+      },
+      {
+        "count": 7,
+        "value": "1 Rnd (10)"
+      },
+      {
+        "count": 6,
+        "value": "1 Rnd (12)"
+      },
+      {
+        "count": 3,
+        "value": "1 Rnd + OT (30-5)"
+      },
+      {
+        "count": 2,
+        "value": "1 Rnd + OT (15-3)"
+      },
+      {
+        "count": 2,
+        "value": "1 Rnd (18)"
+      },
+      {
+        "count": 1,
+        "value": "1 Rnd + 2OT (24-3-3)"
+      },
+      {
+        "count": 1,
+        "value": "1 Rnd + OT (27-3)"
+      },
+      {
+        "count": 1,
+        "value": "1 Rnd + OT (30-3)"
+      },
+      {
+        "count": 1,
+        "value": "1 Rnd (30)"
+      },
+      {
+        "count": 1,
+        "value": "1 Rnd + OT (31-5)"
+      }
+    ],
+    "WEIGHTCLASS": [
+      {
+        "count": 1425,
+        "value": "Lightweight Bout"
+      },
+      {
+        "count": 1348,
+        "value": "Welterweight Bout"
+      },
+      {
+        "count": 1112,
+        "value": "Middleweight Bout"
+      },
+      {
+        "count": 846,
+        "value": "Featherweight Bout"
+      },
+      {
+        "count": 762,
+        "value": "Bantamweight Bout"
+      },
+      {
+        "count": 721,
+        "value": "Heavyweight Bout"
+      },
+      {
+        "count": 706,
+        "value": "Light Heavyweight Bout"
+      },
+      {
+        "count": 397,
+        "value": "Flyweight Bout"
+      },
+      {
+        "count": 356,
+        "value": "Women's Strawweight Bout"
+      },
+      {
+        "count": 264,
+        "value": "Women's Flyweight Bout"
+      },
+      {
+        "count": 230,
+        "value": "Women's Bantamweight Bout"
+      },
+      {
+        "count": 101,
+        "value": "Open Weight Bout"
+      },
+      {
+        "count": 83,
+        "value": "Catch Weight Bout"
+      },
+      {
+        "count": 57,
+        "value": "UFC Light Heavyweight Title Bout"
+      },
+      {
+        "count": 50,
+        "value": "UFC Welterweight Title Bout"
+      },
+      {
+        "count": 44,
+        "value": "UFC Heavyweight Title Bout"
+      },
+      {
+        "count": 40,
+        "value": "UFC Middleweight Title Bout"
+      },
+      {
+        "count": 37,
+        "value": "UFC Lightweight Title Bout"
+      },
+      {
+        "count": 27,
+        "value": "UFC Flyweight Title Bout"
+      },
+      {
+        "count": 25,
+        "value": "UFC Bantamweight Title Bout"
+      },
+      {
+        "count": 22,
+        "value": "UFC Featherweight Title Bout"
+      },
+      {
+        "count": 22,
+        "value": "Women's Featherweight Bout"
+      },
+      {
+        "count": 21,
+        "value": "UFC Women's Strawweight Title Bout"
+      },
+      {
+        "count": 20,
+        "value": "UFC Women's Bantamweight Title Bout"
+      },
+      {
+        "count": 15,
+        "value": "UFC Women's Flyweight Title Bout"
+      },
+      {
+        "count": 10,
+        "value": "UFC Interim Heavyweight Title Bout"
+      },
+      {
+        "count": 7,
+        "value": "UFC Women's Featherweight Title Bout"
+      },
+      {
+        "count": 5,
+        "value": "UFC Superfight Championship Bout"
+      },
+      {
+        "count": 4,
+        "value": "UFC Interim Lightweight Title Bout"
+      },
+      {
+        "count": 4,
+        "value": "UFC Interim Featherweight Title Bout"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "snapshot": "8e40eb945e11",
+  "tott_value_domains": {
+    "DOB": [
+      {
+        "count": 778,
+        "value": "--"
+      },
+      {
+        "count": 4,
+        "value": "Aug 08, 1988"
+      },
+      {
+        "count": 4,
+        "value": "Dec 27, 1996"
+      },
+      {
+        "count": 4,
+        "value": "Aug 02, 1997"
+      },
+      {
+        "count": 4,
+        "value": "Nov 17, 1992"
+      },
+      {
+        "count": 4,
+        "value": "Jan 21, 1987"
+      },
+      {
+        "count": 4,
+        "value": "Sep 30, 1991"
+      },
+      {
+        "count": 4,
+        "value": "Mar 16, 1993"
+      },
+      {
+        "count": 3,
+        "value": "Apr 26, 1965"
+      },
+      {
+        "count": 3,
+        "value": "Jan 16, 1992"
+      },
+      {
+        "count": 3,
+        "value": "Jan 13, 1979"
+      },
+      {
+        "count": 3,
+        "value": "May 09, 1983"
+      },
+      {
+        "count": 3,
+        "value": "Jan 25, 1994"
+      },
+      {
+        "count": 3,
+        "value": "Jul 23, 1991"
+      },
+      {
+        "count": 3,
+        "value": "Feb 09, 1987"
+      },
+      {
+        "count": 3,
+        "value": "Nov 21, 1986"
+      },
+      {
+        "count": 3,
+        "value": "Aug 13, 1993"
+      },
+      {
+        "count": 3,
+        "value": "Aug 19, 1994"
+      },
+      {
+        "count": 3,
+        "value": "May 17, 1982"
+      },
+      {
+        "count": 3,
+        "value": "Aug 20, 1988"
+      },
+      {
+        "count": 3,
+        "value": "Apr 24, 1984"
+      },
+      {
+        "count": 3,
+        "value": "Dec 08, 1981"
+      },
+      {
+        "count": 3,
+        "value": "Jul 31, 1984"
+      },
+      {
+        "count": 3,
+        "value": "May 27, 1987"
+      },
+      {
+        "count": 3,
+        "value": "May 02, 1993"
+      },
+      {
+        "count": 3,
+        "value": "Mar 03, 1983"
+      },
+      {
+        "count": 3,
+        "value": "May 16, 1994"
+      },
+      {
+        "count": 3,
+        "value": "Apr 24, 1989"
+      },
+      {
+        "count": 3,
+        "value": "Jun 11, 1993"
+      },
+      {
+        "count": 3,
+        "value": "Jul 22, 1986"
+      }
+    ],
+    "HEIGHT": [
+      {
+        "count": 490,
+        "value": "--"
+      },
+      {
+        "count": 463,
+        "value": "6' 0\""
+      },
+      {
+        "count": 434,
+        "value": "5' 9\""
+      },
+      {
+        "count": 419,
+        "value": "5' 10\""
+      },
+      {
+        "count": 380,
+        "value": "5' 11\""
+      },
+      {
+        "count": 353,
+        "value": "5' 8\""
+      },
+      {
+        "count": 352,
+        "value": "5' 7\""
+      },
+      {
+        "count": 331,
+        "value": "6' 1\""
+      },
+      {
+        "count": 288,
+        "value": "6' 2\""
+      },
+      {
+        "count": 265,
+        "value": "5' 6\""
+      },
+      {
+        "count": 236,
+        "value": "6' 3\""
+      },
+      {
+        "count": 149,
+        "value": "5' 5\""
+      },
+      {
+        "count": 115,
+        "value": "6' 4\""
+      },
+      {
+        "count": 107,
+        "value": "5' 4\""
+      },
+      {
+        "count": 66,
+        "value": "5' 3\""
+      },
+      {
+        "count": 45,
+        "value": "6' 5\""
+      },
+      {
+        "count": 30,
+        "value": "5' 2\""
+      },
+      {
+        "count": 22,
+        "value": "6' 6\""
+      },
+      {
+        "count": 18,
+        "value": "5' 1\""
+      },
+      {
+        "count": 14,
+        "value": "6' 7\""
+      },
+      {
+        "count": 9,
+        "value": "6' 8\""
+      },
+      {
+        "count": 5,
+        "value": "5' 0\""
+      },
+      {
+        "count": 3,
+        "value": "6' 11\""
+      },
+      {
+        "count": 3,
+        "value": "6' 10\""
+      },
+      {
+        "count": 1,
+        "value": "7' 2\""
+      },
+      {
+        "count": 1,
+        "value": "4' 7\""
+      },
+      {
+        "count": 1,
+        "value": "6' 9\""
+      },
+      {
+        "count": 1,
+        "value": "7' 5\""
+      }
+    ],
+    "REACH": [
+      {
+        "count": 2112,
+        "value": "--"
+      },
+      {
+        "count": 226,
+        "value": "72\""
+      },
+      {
+        "count": 226,
+        "value": "70\""
+      },
+      {
+        "count": 225,
+        "value": "71\""
+      },
+      {
+        "count": 217,
+        "value": "73\""
+      },
+      {
+        "count": 202,
+        "value": "74\""
+      },
+      {
+        "count": 191,
+        "value": "75\""
+      },
+      {
+        "count": 175,
+        "value": "69\""
+      },
+      {
+        "count": 157,
+        "value": "68\""
+      },
+      {
+        "count": 127,
+        "value": "67\""
+      },
+      {
+        "count": 126,
+        "value": "76\""
+      },
+      {
+        "count": 109,
+        "value": "77\""
+      },
+      {
+        "count": 97,
+        "value": "66\""
+      },
+      {
+        "count": 77,
+        "value": "65\""
+      },
+      {
+        "count": 75,
+        "value": "78\""
+      },
+      {
+        "count": 58,
+        "value": "79\""
+      },
+      {
+        "count": 55,
+        "value": "64\""
+      },
+      {
+        "count": 39,
+        "value": "63\""
+      },
+      {
+        "count": 36,
+        "value": "80\""
+      },
+      {
+        "count": 21,
+        "value": "62\""
+      },
+      {
+        "count": 14,
+        "value": "81\""
+      },
+      {
+        "count": 9,
+        "value": "61\""
+      },
+      {
+        "count": 7,
+        "value": "82\""
+      },
+      {
+        "count": 6,
+        "value": "60\""
+      },
+      {
+        "count": 5,
+        "value": "83\""
+      },
+      {
+        "count": 4,
+        "value": "84\""
+      },
+      {
+        "count": 3,
+        "value": "59\""
+      },
+      {
+        "count": 2,
+        "value": "58\""
+      }
+    ],
+    "STANCE": [
+      {
+        "count": 2765,
+        "value": "Orthodox"
+      },
+      {
+        "count": 999,
+        "value": "<EMPTY>"
+      },
+      {
+        "count": 608,
+        "value": "Southpaw"
+      },
+      {
+        "count": 219,
+        "value": "Switch"
+      },
+      {
+        "count": 7,
+        "value": "Open Stance"
+      },
+      {
+        "count": 3,
+        "value": "Sideways"
+      }
+    ],
+    "WEIGHT": [
+      {
+        "count": 678,
+        "value": "155 lbs."
+      },
+      {
+        "count": 660,
+        "value": "170 lbs."
+      },
+      {
+        "count": 564,
+        "value": "185 lbs."
+      },
+      {
+        "count": 524,
+        "value": "135 lbs."
+      },
+      {
+        "count": 513,
+        "value": "145 lbs."
+      },
+      {
+        "count": 392,
+        "value": "205 lbs."
+      },
+      {
+        "count": 348,
+        "value": "125 lbs."
+      },
+      {
+        "count": 149,
+        "value": "115 lbs."
+      },
+      {
+        "count": 90,
+        "value": "265 lbs."
+      },
+      {
+        "count": 88,
+        "value": "--"
+      },
+      {
+        "count": 31,
+        "value": "230 lbs."
+      },
+      {
+        "count": 29,
+        "value": "235 lbs."
+      },
+      {
+        "count": 29,
+        "value": "240 lbs."
+      },
+      {
+        "count": 27,
+        "value": "250 lbs."
+      },
+      {
+        "count": 26,
+        "value": "225 lbs."
+      },
+      {
+        "count": 25,
+        "value": "245 lbs."
+      },
+      {
+        "count": 24,
+        "value": "200 lbs."
+      },
+      {
+        "count": 24,
+        "value": "260 lbs."
+      },
+      {
+        "count": 23,
+        "value": "220 lbs."
+      },
+      {
+        "count": 20,
+        "value": "154 lbs."
+      },
+      {
+        "count": 19,
+        "value": "139 lbs."
+      },
+      {
+        "count": 16,
+        "value": "255 lbs."
+      },
+      {
+        "count": 14,
+        "value": "215 lbs."
+      },
+      {
+        "count": 13,
+        "value": "210 lbs."
+      },
+      {
+        "count": 13,
+        "value": "183 lbs."
+      },
+      {
+        "count": 12,
+        "value": "190 lbs."
+      },
+      {
+        "count": 12,
+        "value": "168 lbs."
+      },
+      {
+        "count": 11,
+        "value": "264 lbs."
+      },
+      {
+        "count": 11,
+        "value": "199 lbs."
+      },
+      {
+        "count": 10,
+        "value": "242 lbs."
+      }
+    ]
+  }
+}
