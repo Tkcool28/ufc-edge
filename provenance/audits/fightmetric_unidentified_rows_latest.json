@@ -1,0 +1,230 @@
+{
+  "decision": {
+    "canonical_eligible": false,
+    "rule": "fight_stat rows without fightmetric_id remain raw/QA-only until an independent stable fight identity is proven."
+  },
+  "examples": [
+    {
+      "color": null,
+      "drupal_internal__id": 44464,
+      "non_null_sample": {
+        "drupal_internal__id": 44464
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "7e86b97a-2150-48e3-9308-d2860d6d1391",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44465,
+      "non_null_sample": {
+        "drupal_internal__id": 44465
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "6efdc0b8-bce9-4f10-8128-d2d8d8900a65",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44466,
+      "non_null_sample": {
+        "drupal_internal__id": 44466
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "a784c375-47de-437f-b377-8c641b366099",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44467,
+      "non_null_sample": {
+        "drupal_internal__id": 44467
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "e84f893e-238f-4805-9dd9-7b61069aed80",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44468,
+      "non_null_sample": {
+        "drupal_internal__id": 44468
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "4b3dc936-1874-43c1-a4d6-eedc55228381",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44469,
+      "non_null_sample": {
+        "drupal_internal__id": 44469
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "e9c2d085-31d0-4fdd-9459-ecfa061df835",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44470,
+      "non_null_sample": {
+        "drupal_internal__id": 44470
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "887b657f-defc-4fef-a595-13b081a03d98",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44471,
+      "non_null_sample": {
+        "drupal_internal__id": 44471
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "139fc654-96d7-496a-9db5-64b56da04a65",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44472,
+      "non_null_sample": {
+        "drupal_internal__id": 44472
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "e1b840ac-d019-4d9e-8942-25d853619734",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44473,
+      "non_null_sample": {
+        "drupal_internal__id": 44473
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "14b56f06-4c32-4d04-98d8-ac0defb06295",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44474,
+      "non_null_sample": {
+        "drupal_internal__id": 44474
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "d26a6ad6-6167-4468-82ce-441cf47e25dd",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44475,
+      "non_null_sample": {
+        "drupal_internal__id": 44475
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "6c13fa0b-6b20-4bb9-a337-4b6381feac19",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44476,
+      "non_null_sample": {
+        "drupal_internal__id": 44476
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "9b2bfd3b-bedc-4797-afbe-af170349bab1",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44477,
+      "non_null_sample": {
+        "drupal_internal__id": 44477
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "1598d0f3-9430-4b8f-aaa4-60089b8e5770",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44478,
+      "non_null_sample": {
+        "drupal_internal__id": 44478
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "d2760150-07be-48cb-baa9-f4af3c428831",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44479,
+      "non_null_sample": {
+        "drupal_internal__id": 44479
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "133848c0-6989-4200-952d-d9b239d97a3c",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44480,
+      "non_null_sample": {
+        "drupal_internal__id": 44480
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "13b4267c-99b3-4afc-a157-4182a520f86b",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44481,
+      "non_null_sample": {
+        "drupal_internal__id": 44481
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "60d2398e-5471-4fc2-979e-53836afcd8ec",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44482,
+      "non_null_sample": {
+        "drupal_internal__id": 44482
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "a0824b27-e36f-4e13-9ef0-5c40d3944024",
+      "round": null
+    },
+    {
+      "color": null,
+      "drupal_internal__id": 44483,
+      "non_null_sample": {
+        "drupal_internal__id": 44483
+      },
+      "populated_attribute_count": 1,
+      "resource_id": "82500682-958c-4fe9-bb71-ea4183aaed63",
+      "round": null
+    }
+  ],
+  "generated_at_utc": "2026-08-21T20:41:30.346761Z",
+  "identified_fraction": 0.9443205186295354,
+  "identified_rows": 54187,
+  "manifest": "data/raw/ufc_fightmetric_official/20260820T123046Z/manifest.json",
+  "page_count": 1148,
+  "schema_version": 2,
+  "total_rows": 57382,
+  "unidentified_color_counts": {
+    "None": 3195
+  },
+  "unidentified_internal_id_max": 69920,
+  "unidentified_internal_id_min": 44464,
+  "unidentified_nonnull_field_counts": {
+    "drupal_internal__id": 3195
+  },
+  "unidentified_populated_attribute_count_distribution": {
+    "1": 3195
+  },
+  "unidentified_round_counts": {
+    "None": 3195
+  },
+  "unidentified_rows": 3195
+}
