@@ -1,0 +1,29 @@
+{
+  "audited_at_utc": "2026-08-21T05:52:11.670036Z",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "pipelines/validate_canonical_contract.py"
+      ],
+      "exit_code": 0,
+      "name": "canonical_contract",
+      "passed": true,
+      "stderr": "",
+      "stdout": "CONTRACT_OK version=0.2.0-draft tables=13 fields=127 missing_is_not_zero=true round_zero_actual=false sig_splits=true"
+    },
+    {
+      "command": [
+        "python",
+        "pipelines/validate_source_field_map.py"
+      ],
+      "exit_code": 0,
+      "name": "source_field_map",
+      "passed": true,
+      "stderr": "",
+      "stdout": "SOURCE_MAP_OK version=0.1.0-draft mappings=140 statuses={\"provisional\": 51, \"rejected\": 5, \"unresolved\": 14, \"verified\": 70} source_count=8"
+    }
+  ],
+  "passed": true,
+  "schema_version": 1
+}

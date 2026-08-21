@@ -388,7 +388,7 @@
       ],
       "collection": "athletes",
       "complete_collection_snapshot": true,
-      "manifest": "data/raw/ufc_com_resources/athletes/20260820T173134Z/manifest.json",
+      "manifest": "data/raw/ufc_com_resources/athletes/20260820T194553Z/manifest.json",
       "pages": 84,
       "relationship_linkage_counts": null,
       "relationship_names": [
@@ -424,8 +424,8 @@
         "video_bg_xs",
         "video_hero"
       ],
-      "rows": 4160,
-      "snapshot": "20260820T173134Z",
+      "rows": 4161,
+      "snapshot": "20260820T194553Z",
       "source": "ufc_com_official"
     },
     {
