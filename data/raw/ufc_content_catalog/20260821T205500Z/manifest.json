@@ -1,0 +1,711 @@
+{
+  "acquired_at_utc": "2026-08-21T20:57:55.281972Z",
+  "candidate_catalog": "data/derived/discovery/ufc_content_candidates.csv",
+  "candidate_counts": {
+    "scorecard": 583,
+    "weigh_in": 716
+  },
+  "distinct_catalog_urls": 67702,
+  "files": [
+    {
+      "bytes": 7419,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"1ce11e64b4123905fd0a68ffc6766beb\"",
+      "last_modified": "Tue, 18 Aug 2026 05:36:35 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_root.xml",
+      "sha256": "64e16725caa8b0f4d8fcc530a8a469b273cbfd7a4fc0adb48043758766896fa1",
+      "url": "https://www.ufc.com/sitemap.xml"
+    },
+    {
+      "bytes": 164384,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"7deadabc2bfcbf9bb389e35e9c64e1eb\"",
+      "last_modified": "Tue, 18 Aug 2026 05:08:14 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_001.xml",
+      "sha256": "693bfb0633ffcecc4332963fac2227e725abe486d5dc69524fbd2d06c1e935ec",
+      "url": "https://www.ufc.com/sitemap.xml?page=1",
+      "url_records": 1000
+    },
+    {
+      "bytes": 171487,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"6f5be38ab6b8b1ce4b3383ea22d8daf8\"",
+      "last_modified": "Tue, 18 Aug 2026 05:08:31 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_002.xml",
+      "sha256": "f866c9ac48f7c06f8c5b724efcf8f33ae49641a645bcac2c99e9c5c326470cfd",
+      "url": "https://www.ufc.com/sitemap.xml?page=2",
+      "url_records": 1000
+    },
+    {
+      "bytes": 165964,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"947b6c47ddb29c0042baf32e6db912fc\"",
+      "last_modified": "Tue, 18 Aug 2026 05:08:48 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_003.xml",
+      "sha256": "c4fe9995e65f425a0148ebfd46948dce4f565ab70347213cc03813ade01ce441",
+      "url": "https://www.ufc.com/sitemap.xml?page=3",
+      "url_records": 1000
+    },
+    {
+      "bytes": 172321,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"752aa35454fe9fbf8aa19c45af7f1ccf\"",
+      "last_modified": "Tue, 18 Aug 2026 05:09:05 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_004.xml",
+      "sha256": "6a333ef9781d21b9d918f59c2b5624668b4dfaecda1179974f991fccd80f1090",
+      "url": "https://www.ufc.com/sitemap.xml?page=4",
+      "url_records": 1000
+    },
+    {
+      "bytes": 173721,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"875356f238b5a0a3c37f1538c755077c\"",
+      "last_modified": "Tue, 18 Aug 2026 05:09:23 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_005.xml",
+      "sha256": "aa257da7534a5a020752fea4619bb036366c8e66e896a759de5c9c67ebeaf306",
+      "url": "https://www.ufc.com/sitemap.xml?page=5",
+      "url_records": 1000
+    },
+    {
+      "bytes": 164492,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"590455ad13b80044a828b49a588c388b\"",
+      "last_modified": "Tue, 18 Aug 2026 05:09:41 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_006.xml",
+      "sha256": "d724843eee4f8a8ba26cf2c5c38ac9ddac83b6659886914544cc932a816481c2",
+      "url": "https://www.ufc.com/sitemap.xml?page=6",
+      "url_records": 1000
+    },
+    {
+      "bytes": 165833,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"9eae25d6957005b2ae8be5bcdf799127\"",
+      "last_modified": "Tue, 18 Aug 2026 05:09:58 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_007.xml",
+      "sha256": "38d1deb94d7d17324b2c2043d1673b88e25bc87ba4cfb1086c87c64249ba5cec",
+      "url": "https://www.ufc.com/sitemap.xml?page=7",
+      "url_records": 1000
+    },
+    {
+      "bytes": 177686,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"1e1be4d41d517c142eb9990741a5d19d\"",
+      "last_modified": "Tue, 18 Aug 2026 05:10:14 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_008.xml",
+      "sha256": "125f47e6c0c046f2274c8cd4c37ec81f17eaf21467f2705bde2a8f9428281ccc",
+      "url": "https://www.ufc.com/sitemap.xml?page=8",
+      "url_records": 1000
+    },
+    {
+      "bytes": 178144,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"96d9e3d313a92dc28342850a6a5feec7\"",
+      "last_modified": "Tue, 18 Aug 2026 05:10:31 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_009.xml",
+      "sha256": "8c48e46e5ff22154a6d49ad3a51aa898f3c4aeca3f31ebb602531cc87521ad46",
+      "url": "https://www.ufc.com/sitemap.xml?page=9",
+      "url_records": 1000
+    },
+    {
+      "bytes": 172275,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"3e2dea2f14e286d7793e08d97b86b68b\"",
+      "last_modified": "Tue, 18 Aug 2026 05:10:47 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_010.xml",
+      "sha256": "7dbdb6ff05205f1cfb9f86e02855f7942024dde2f0df2cc2d8506743fdf88521",
+      "url": "https://www.ufc.com/sitemap.xml?page=10",
+      "url_records": 1000
+    },
+    {
+      "bytes": 171888,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"e3c08736355fbf815f1af8081cb1233d\"",
+      "last_modified": "Tue, 18 Aug 2026 05:11:04 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_011.xml",
+      "sha256": "62dddadca32870f0903a37af51eecde07e202b4fb917431a96ce8902b612d632",
+      "url": "https://www.ufc.com/sitemap.xml?page=11",
+      "url_records": 1000
+    },
+    {
+      "bytes": 150921,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"ac5bd3c7f55dd58ee11c667424a09e8c\"",
+      "last_modified": "Tue, 18 Aug 2026 05:11:43 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_012.xml",
+      "sha256": "2cbd923f0e6bbb60125fb0a570cd43ad943d9947cdca4bbc91e0b27b8777487d",
+      "url": "https://www.ufc.com/sitemap.xml?page=12",
+      "url_records": 1000
+    },
+    {
+      "bytes": 162564,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"81cc922b025a11f8cf96aa310dc05888\"",
+      "last_modified": "Tue, 18 Aug 2026 05:12:02 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_013.xml",
+      "sha256": "070c2fb220ba0c0e2c2f071118036def4572f2a84e18ecd3725b79b7d894b5bc",
+      "url": "https://www.ufc.com/sitemap.xml?page=13",
+      "url_records": 1000
+    },
+    {
+      "bytes": 158966,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"89e67681784e9af1a6bcaf69300986cd\"",
+      "last_modified": "Tue, 18 Aug 2026 05:12:21 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_014.xml",
+      "sha256": "abbb4b2b53784797155449d9d6d25e6e1de5cd8ea6d6685f16f3a8625be51fd1",
+      "url": "https://www.ufc.com/sitemap.xml?page=14",
+      "url_records": 1000
+    },
+    {
+      "bytes": 147013,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"45bf59349c9d1d0750089ce824d6ca35\"",
+      "last_modified": "Tue, 18 Aug 2026 05:12:40 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_015.xml",
+      "sha256": "61dba3c2c863e8c86ea33f0656619fc03c75e40ab7afe4238bd5d06bd131e28e",
+      "url": "https://www.ufc.com/sitemap.xml?page=15",
+      "url_records": 1000
+    },
+    {
+      "bytes": 145371,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"140ed924f899a6789c9fde32ff0cb4e4\"",
+      "last_modified": "Tue, 18 Aug 2026 05:13:00 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_016.xml",
+      "sha256": "5a0970881373e573250ecd8b7531b90e347b3a0fd50b761d763e2542c3d748b6",
+      "url": "https://www.ufc.com/sitemap.xml?page=16",
+      "url_records": 1000
+    },
+    {
+      "bytes": 142255,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"c3eb099605c2d3eb3a96474a23525d7c\"",
+      "last_modified": "Tue, 18 Aug 2026 05:13:19 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_017.xml",
+      "sha256": "fc1faaa93a1faf4c9940ec547ca5b74410f40f2d8d2f5c1f3adfd44e19bda999",
+      "url": "https://www.ufc.com/sitemap.xml?page=17",
+      "url_records": 1000
+    },
+    {
+      "bytes": 142671,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"adc14ecaf0ab8b7318cc856b1e89f305\"",
+      "last_modified": "Tue, 18 Aug 2026 05:13:37 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_018.xml",
+      "sha256": "eaf1ae96d9c24c58618b3a6a12307e57a558da34c758074e2a0002b34882ea1d",
+      "url": "https://www.ufc.com/sitemap.xml?page=18",
+      "url_records": 1000
+    },
+    {
+      "bytes": 143748,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"b04aab141f1b321bb0565b06a2de4a26\"",
+      "last_modified": "Tue, 18 Aug 2026 05:13:54 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_019.xml",
+      "sha256": "39fca1bd66f5a1d138a949c89ce82f70974450edb8d07bcc32fc6761b9f221d5",
+      "url": "https://www.ufc.com/sitemap.xml?page=19",
+      "url_records": 1000
+    },
+    {
+      "bytes": 144050,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"88bc28055d61a2f284ce499c5cb6d65b\"",
+      "last_modified": "Tue, 18 Aug 2026 05:14:10 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_020.xml",
+      "sha256": "f6646271c401055cc976178edbae4f830dd652531057daa823dc47caa9a81b9d",
+      "url": "https://www.ufc.com/sitemap.xml?page=20",
+      "url_records": 1000
+    },
+    {
+      "bytes": 143937,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"fdd1d4465729bf780b7feb57ac24d7f3\"",
+      "last_modified": "Tue, 18 Aug 2026 05:14:28 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_021.xml",
+      "sha256": "1e09129acf4f46bac04fbea33799e8849c45070287222fef4e4ed892184d4fcc",
+      "url": "https://www.ufc.com/sitemap.xml?page=21",
+      "url_records": 1000
+    },
+    {
+      "bytes": 143145,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"f0be8edb97d8f4db612c38c4575dc26b\"",
+      "last_modified": "Tue, 18 Aug 2026 05:14:44 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_022.xml",
+      "sha256": "e33fc317c19f443e70e2dcbac80b4b898effe5669dc57bc2688664aa1b411a1d",
+      "url": "https://www.ufc.com/sitemap.xml?page=22",
+      "url_records": 1000
+    },
+    {
+      "bytes": 146290,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"8b13245e6f113394588e5f3ad4b75641\"",
+      "last_modified": "Tue, 18 Aug 2026 05:14:57 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_023.xml",
+      "sha256": "dbfb0d3a86f178b6dcc739ae5295775a26c31e81655b6b24112782389727514a",
+      "url": "https://www.ufc.com/sitemap.xml?page=23",
+      "url_records": 1000
+    },
+    {
+      "bytes": 142859,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"ac4d30a51831ccb6009b173fcc625fd0\"",
+      "last_modified": "Tue, 18 Aug 2026 05:15:09 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_024.xml",
+      "sha256": "bd699b9342d5f479dd125c440e603b36b898713712a669d6a945eb8c674048d7",
+      "url": "https://www.ufc.com/sitemap.xml?page=24",
+      "url_records": 1000
+    },
+    {
+      "bytes": 141669,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"b17d0aef34dc3d3a8ad125d6fd696ea3\"",
+      "last_modified": "Tue, 18 Aug 2026 05:15:19 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_025.xml",
+      "sha256": "43b2455d97b8484aa91a1f4907b7f38ade23ccdd0c608567b00c09051d17eeaf",
+      "url": "https://www.ufc.com/sitemap.xml?page=25",
+      "url_records": 1000
+    },
+    {
+      "bytes": 142072,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"e313f8c18d02bdf3d915682763f8f6ef\"",
+      "last_modified": "Tue, 18 Aug 2026 05:15:28 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_026.xml",
+      "sha256": "98c27cc8a99c96bf8963dc134bc6fbbf5868c4b29fddd6b1089ec126a260404a",
+      "url": "https://www.ufc.com/sitemap.xml?page=26",
+      "url_records": 1000
+    },
+    {
+      "bytes": 167607,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"70325b4136fba50fd7894994c41acf23\"",
+      "last_modified": "Tue, 18 Aug 2026 05:15:47 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_027.xml",
+      "sha256": "d834e7b3989510acf914d738b247b0c1af92153ea8f787bab71bc1760bc30ebb",
+      "url": "https://www.ufc.com/sitemap.xml?page=27",
+      "url_records": 1000
+    },
+    {
+      "bytes": 207442,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"66a4be4c370471787c816fe343bc5ec0\"",
+      "last_modified": "Tue, 18 Aug 2026 05:16:00 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_028.xml",
+      "sha256": "721c85725d0e5ec4cf77ec8ab9bea266c23c463fb6386764ace35b93ab745392",
+      "url": "https://www.ufc.com/sitemap.xml?page=28",
+      "url_records": 1000
+    },
+    {
+      "bytes": 423238,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"4abb49c7d2ba2dbdc2d6c56ba6161bf0\"",
+      "last_modified": "Tue, 18 Aug 2026 05:16:11 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_029.xml",
+      "sha256": "9d9e09b2eda09719994437b1f2803f7e502635eeebb35ff9eaeb8c5ee698b2c9",
+      "url": "https://www.ufc.com/sitemap.xml?page=29",
+      "url_records": 1000
+    },
+    {
+      "bytes": 147848,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"f16267392228e38758b6b365e9516674\"",
+      "last_modified": "Tue, 18 Aug 2026 05:16:39 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_030.xml",
+      "sha256": "a36f94662edf8f52c7c4300624163a3a77b8b7fafb0b4064544dd73a1fa460e4",
+      "url": "https://www.ufc.com/sitemap.xml?page=30",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120208,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"6a86379d4631cb691982e1d856cb3be0\"",
+      "last_modified": "Tue, 18 Aug 2026 05:17:05 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_031.xml",
+      "sha256": "6c35a48a9691b7c1e2e11e1c7b8eb384b2383b07366516cc563c6863e0864529",
+      "url": "https://www.ufc.com/sitemap.xml?page=31",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120208,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"1d3fb7f5c9f302b381c75e053ff196df\"",
+      "last_modified": "Tue, 18 Aug 2026 05:17:29 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_032.xml",
+      "sha256": "0b6d5c808be12ca13db2c23d701c59135163ecac5f1e9a410c18466fb1f9ee47",
+      "url": "https://www.ufc.com/sitemap.xml?page=32",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120208,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"63b60807908941d46cdd36ba98a6c430\"",
+      "last_modified": "Tue, 18 Aug 2026 05:18:01 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_033.xml",
+      "sha256": "f8c8bfd55d5833d8c2034938e5e3cbe1a850a942bf5a4e50f3a67d8251d4202d",
+      "url": "https://www.ufc.com/sitemap.xml?page=33",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120208,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"563197d73467a98d1394e374e8f3fe04\"",
+      "last_modified": "Tue, 18 Aug 2026 05:18:33 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_034.xml",
+      "sha256": "56c9839678c95fca301bd0e92362ed5a5140d611e7705d5a5d031883df5dc41b",
+      "url": "https://www.ufc.com/sitemap.xml?page=34",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120208,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"6627bc3086a1b771822cf370edd521b7\"",
+      "last_modified": "Tue, 18 Aug 2026 05:19:00 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_035.xml",
+      "sha256": "4908f370e74154bbf6958901fbcd7696aed375c2d35e2ce78f552e07bb96f0ad",
+      "url": "https://www.ufc.com/sitemap.xml?page=35",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120208,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"65f513f3aad9fb0d9dd4455c5d7e5ba8\"",
+      "last_modified": "Tue, 18 Aug 2026 05:19:26 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_036.xml",
+      "sha256": "2549c6d0dd3ccc2e16310d8b4c1be77e25a53f5ddb7e689e2a3aa85df3c85d11",
+      "url": "https://www.ufc.com/sitemap.xml?page=36",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120208,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"c4fec0bf4ac2836d71f1628253a47c05\"",
+      "last_modified": "Tue, 18 Aug 2026 05:19:48 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_037.xml",
+      "sha256": "097b68ab96e65cc4f7f4126609f5772fcec9ce602592756a643c2bf6d5fdcbdf",
+      "url": "https://www.ufc.com/sitemap.xml?page=37",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120209,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"2b5fd7a1540e56044f056f46b62bef5b\"",
+      "last_modified": "Tue, 18 Aug 2026 05:20:10 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_038.xml",
+      "sha256": "9c9ee818a97e5023c56e1bc2e150938caab0f06f13dc57e9b4bcd4459a1595f9",
+      "url": "https://www.ufc.com/sitemap.xml?page=38",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120208,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"5959612f6460316feb5229876272904a\"",
+      "last_modified": "Tue, 18 Aug 2026 05:20:33 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_039.xml",
+      "sha256": "51c0efa1134f1aae85254222fa5d7306b9da01dbb285e6449459c9bab0e995f4",
+      "url": "https://www.ufc.com/sitemap.xml?page=39",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120209,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"b0c71a268fd8838d2d454baa0e2fab85\"",
+      "last_modified": "Tue, 18 Aug 2026 05:20:56 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_040.xml",
+      "sha256": "10414346947bedef2f4aa9290a1a8d3040a492ee327c0ea509f3c8f07643cf43",
+      "url": "https://www.ufc.com/sitemap.xml?page=40",
+      "url_records": 1000
+    },
+    {
+      "bytes": 120306,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"fccb5d4404a3d9d83f7654e8c33e997c\"",
+      "last_modified": "Tue, 18 Aug 2026 05:21:11 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_041.xml",
+      "sha256": "15e8dd7d42ca4f40e584f91f6971658dea9968557a10031a90cb11cc498a30f7",
+      "url": "https://www.ufc.com/sitemap.xml?page=41",
+      "url_records": 1000
+    },
+    {
+      "bytes": 119298,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"70ec3bfabece0256c71d3b53cd1caf96\"",
+      "last_modified": "Tue, 18 Aug 2026 05:21:43 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_042.xml",
+      "sha256": "79eb296860468ed6476e8a51c447976b9c87458c62b327b8240533c7064452b1",
+      "url": "https://www.ufc.com/sitemap.xml?page=42",
+      "url_records": 1000
+    },
+    {
+      "bytes": 142946,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"5f27a9a136013e169a3cecaf8c350676\"",
+      "last_modified": "Tue, 18 Aug 2026 05:22:15 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_043.xml",
+      "sha256": "393f6d8f7ee8d618ddb0a794c34655ea7ea1849917502726bb5376c3d0db4794",
+      "url": "https://www.ufc.com/sitemap.xml?page=43",
+      "url_records": 1000
+    },
+    {
+      "bytes": 153992,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"d11aebe0abfabe3f3cbe8d87d8d2fd74\"",
+      "last_modified": "Tue, 18 Aug 2026 05:22:44 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_044.xml",
+      "sha256": "ec6f43bd0363e256f3fe99d7def58eb341d8e7699882dd3e329ab57aaf10bfb1",
+      "url": "https://www.ufc.com/sitemap.xml?page=44",
+      "url_records": 1000
+    },
+    {
+      "bytes": 184578,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"42051a48488c2aa3012fdaf968ae2d52\"",
+      "last_modified": "Tue, 18 Aug 2026 05:23:22 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_045.xml",
+      "sha256": "7e0120222874b6ecc3ffe45145af098443f37f64c2105fbc628a9a60c01fb311",
+      "url": "https://www.ufc.com/sitemap.xml?page=45",
+      "url_records": 1000
+    },
+    {
+      "bytes": 213938,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"e5417a1ffdfa8a500a0dfca8bdb49c68\"",
+      "last_modified": "Tue, 18 Aug 2026 05:24:08 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_046.xml",
+      "sha256": "cc36294d0014a8f0726851a6926d9bb99284e728c622bebf79f260aee41952ab",
+      "url": "https://www.ufc.com/sitemap.xml?page=46",
+      "url_records": 1000
+    },
+    {
+      "bytes": 229124,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"a7cd6335b42f2cff83a35038780f9a46\"",
+      "last_modified": "Tue, 18 Aug 2026 05:24:57 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_047.xml",
+      "sha256": "73c2b0ba4af0dae6072679281979f7ed329eb0da776a8e5e8c6cd202065ad5ab",
+      "url": "https://www.ufc.com/sitemap.xml?page=47",
+      "url_records": 1000
+    },
+    {
+      "bytes": 236607,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"7ef8a86a28d4da8bef7d3919f48bac9b\"",
+      "last_modified": "Tue, 18 Aug 2026 05:25:41 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_048.xml",
+      "sha256": "d32777f2446bc344873bd3ee00889384d7ae5e04b658599cd8d500e842bf4308",
+      "url": "https://www.ufc.com/sitemap.xml?page=48",
+      "url_records": 1000
+    },
+    {
+      "bytes": 230783,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"4af1d82fbb004aaefe93688d21c2949a\"",
+      "last_modified": "Tue, 18 Aug 2026 05:26:23 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_049.xml",
+      "sha256": "1088902c7ca78eb829c2ec824ca08be635722bf812bf7709f76948ca4a38fb48",
+      "url": "https://www.ufc.com/sitemap.xml?page=49",
+      "url_records": 1000
+    },
+    {
+      "bytes": 250137,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"dcdd76232443b11b5757fb7e8c3fdb39\"",
+      "last_modified": "Tue, 18 Aug 2026 05:27:01 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_050.xml",
+      "sha256": "7c8171356f9b01a2a6d397ee10a3f315c5bfa518e55f119edb582e9636e72d10",
+      "url": "https://www.ufc.com/sitemap.xml?page=50",
+      "url_records": 1000
+    },
+    {
+      "bytes": 237511,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"bfa33330499b0d5ddd22ec2a6d1ba7c7\"",
+      "last_modified": "Tue, 18 Aug 2026 05:27:39 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_051.xml",
+      "sha256": "a1a7927a8e724a41415242f45b259db7a6cbf7dd353a5c97bb27b779114aeb71",
+      "url": "https://www.ufc.com/sitemap.xml?page=51",
+      "url_records": 1000
+    },
+    {
+      "bytes": 263350,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"b2780f74b341203ecf041067b3ca0033\"",
+      "last_modified": "Tue, 18 Aug 2026 05:28:17 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_052.xml",
+      "sha256": "e6383ed8fbf842a5490a592a1306106fb882ad9d07d4849f5143f067a793b361",
+      "url": "https://www.ufc.com/sitemap.xml?page=52",
+      "url_records": 1000
+    },
+    {
+      "bytes": 258344,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"c811c5a74c56d3ff77c554a94a466c11\"",
+      "last_modified": "Tue, 18 Aug 2026 05:28:57 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_053.xml",
+      "sha256": "dda254ef7dc02eeedabb2d3f8482cc96e03194029c63d941505ad79d93250d75",
+      "url": "https://www.ufc.com/sitemap.xml?page=53",
+      "url_records": 1000
+    },
+    {
+      "bytes": 247192,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"26785241aa329e879e11f3deec1b79be\"",
+      "last_modified": "Tue, 18 Aug 2026 05:29:35 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_054.xml",
+      "sha256": "bcf5be18e325dc48775bea09d0b86d598ab8ecf0e21e7c15fcf3be6767020de4",
+      "url": "https://www.ufc.com/sitemap.xml?page=54",
+      "url_records": 1000
+    },
+    {
+      "bytes": 213507,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"6df62f8f129878bd1e2a0d50a5b19070\"",
+      "last_modified": "Tue, 18 Aug 2026 05:30:14 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_055.xml",
+      "sha256": "a6a85fa12dee2d566f9961d975e24659923f7a0169b0efd56006e65ba870aeab",
+      "url": "https://www.ufc.com/sitemap.xml?page=55",
+      "url_records": 1000
+    },
+    {
+      "bytes": 215286,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"dbc431fcc1a3703e048dcaa2ed2667c1\"",
+      "last_modified": "Tue, 18 Aug 2026 05:30:56 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_056.xml",
+      "sha256": "d4f406612fbacc4934808a96a071b582988ad987209c36ed45fce67513306f7c",
+      "url": "https://www.ufc.com/sitemap.xml?page=56",
+      "url_records": 1000
+    },
+    {
+      "bytes": 243089,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"ecc8e0931e530fa2278e0b996ed928d1\"",
+      "last_modified": "Tue, 18 Aug 2026 05:31:35 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_057.xml",
+      "sha256": "3222cba68fdbd8d599d7260dd7e737fa02936c44d225322be816973ba64a95cb",
+      "url": "https://www.ufc.com/sitemap.xml?page=57",
+      "url_records": 1000
+    },
+    {
+      "bytes": 276266,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"6d0e3dd2d13f31961b3047595ca7cc0f\"",
+      "last_modified": "Tue, 18 Aug 2026 05:32:15 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_058.xml",
+      "sha256": "ec44c1f4ab1169e0e7c187bb76b25679a98cf404067e5f7d27a7f7617f3ed3f4",
+      "url": "https://www.ufc.com/sitemap.xml?page=58",
+      "url_records": 1000
+    },
+    {
+      "bytes": 287262,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"4f89ce5e7688873e0cb18a61a6200de9\"",
+      "last_modified": "Tue, 18 Aug 2026 05:32:55 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_059.xml",
+      "sha256": "69a9cf1bf1a743791bb5b002deffc521a7ea9f34840e4c4612132676c76e230e",
+      "url": "https://www.ufc.com/sitemap.xml?page=59",
+      "url_records": 1000
+    },
+    {
+      "bytes": 284653,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"e51406d78adda5756be3ce4dd9d5fdae\"",
+      "last_modified": "Tue, 18 Aug 2026 05:33:29 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_060.xml",
+      "sha256": "ec911e439bdeb4ce1e2d67bdc517d15f0023e482d1e1f6d95f3148e8525d6ed3",
+      "url": "https://www.ufc.com/sitemap.xml?page=60",
+      "url_records": 1000
+    },
+    {
+      "bytes": 295376,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"f69210456d62d859314b4eaf61f33378\"",
+      "last_modified": "Tue, 18 Aug 2026 05:34:03 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_061.xml",
+      "sha256": "078665981044430947b1d372e86e799a69596c235302c62c882aec716424ea67",
+      "url": "https://www.ufc.com/sitemap.xml?page=61",
+      "url_records": 1000
+    },
+    {
+      "bytes": 249953,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"dba1d64ac4ba3f29d8f0b7ad50555ad6\"",
+      "last_modified": "Tue, 18 Aug 2026 05:34:19 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_062.xml",
+      "sha256": "4a91b0f3ccf27ebd47ba8143f138d2b2184439e4c6960111f289054ce85d2a74",
+      "url": "https://www.ufc.com/sitemap.xml?page=62",
+      "url_records": 1000
+    },
+    {
+      "bytes": 224021,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"460c6d082c80c83e6c4daf8f33184338\"",
+      "last_modified": "Tue, 18 Aug 2026 05:34:42 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_063.xml",
+      "sha256": "2e3008ec2ee72e2dcbb759eaa6bd3baeadc6d897d1f52e8726d290116a65309a",
+      "url": "https://www.ufc.com/sitemap.xml?page=63",
+      "url_records": 1000
+    },
+    {
+      "bytes": 183043,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"070a723ecb43047a2571b320d401fbc7\"",
+      "last_modified": "Tue, 18 Aug 2026 05:35:08 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_064.xml",
+      "sha256": "381e2f20f686b0597331cf6a8ac3a976a0e4e59f6b9ad48eef2ed9677d0a8cf8",
+      "url": "https://www.ufc.com/sitemap.xml?page=64",
+      "url_records": 1000
+    },
+    {
+      "bytes": 150975,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"f502da01c5b61096f80d45dff93f841f\"",
+      "last_modified": "Tue, 18 Aug 2026 05:35:30 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_065.xml",
+      "sha256": "7df225bd57975d250e425e1dac9279a5e4671fef808df72d0b0d3b7547669fd1",
+      "url": "https://www.ufc.com/sitemap.xml?page=65",
+      "url_records": 1000
+    },
+    {
+      "bytes": 192609,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"c3e59192c2b3a23725e2b9dbacaa5900\"",
+      "last_modified": "Tue, 18 Aug 2026 05:35:53 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_066.xml",
+      "sha256": "f82ad0803ec5ae1a4781a427438eb33ce214fe7a305e4159e9fb1342b530144e",
+      "url": "https://www.ufc.com/sitemap.xml?page=66",
+      "url_records": 1000
+    },
+    {
+      "bytes": 189730,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"be81c41e1bf202dbd7b16870fc82c009\"",
+      "last_modified": "Tue, 18 Aug 2026 05:36:17 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_067.xml",
+      "sha256": "64303945d3571c7a6a6d9af8d65f71dafb634799eeb5fb964ae6801f310776ea",
+      "url": "https://www.ufc.com/sitemap.xml?page=67",
+      "url_records": 1000
+    },
+    {
+      "bytes": 145045,
+      "content_type": "text/xml; charset=utf-8",
+      "etag": "W/\"7f4e2a960fb654f4a6e3b7bdaf54e823\"",
+      "last_modified": "Tue, 18 Aug 2026 05:36:34 GMT",
+      "path": "data/raw/ufc_content_catalog/20260821T205500Z/sitemap_page_068.xml",
+      "sha256": "ec01226671073621591a60c010118aa6930bf12e300c3034fcfa63987b327721",
+      "url": "https://www.ufc.com/sitemap.xml?page=68",
+      "url_records": 702
+    }
+  ],
+  "root_url": "https://www.ufc.com/sitemap.xml",
+  "rules": {
+    "candidate_does_not_mean_canonical": true,
+    "raw_xml_immutable": true,
+    "slug_classification_conservative": true,
+    "unclassified_urls_retained_in_raw_xml": true
+  },
+  "schema_version": 1,
+  "sitemap_pages": 68,
+  "snapshot_id": "20260821T205500Z",
+  "source": "Official UFC.com public sitemap"
+}
