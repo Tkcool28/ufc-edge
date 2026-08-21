@@ -5,8 +5,9 @@ Only high-confidence joins are used:
 1) direct one-to-one UFC fight node <-> FightMetric ID candidates; and
 2) direct unique UFC event.relationships.fights membership with a parsed event date.
 
-Ambiguous duplicate FightMetric IDs, multi-event fight UUIDs, and undated/orphan nodes are
-excluded rather than inferred.
+Coverage for actual rounds (round>=1) is reported separately from source fight-summary
+rows (round=0). This matters because simulator availability must never be inferred from
+summary-row population.
 """
 from __future__ import annotations
 
@@ -57,12 +58,6 @@ def fight_stat_pages(manifest_path: Path) -> list[Path]:
             if raw:
                 pages.append(Path(str(raw)))
     if not pages:
-        for info in m.get("files") or []:
-            if isinstance(info, dict) and info.get("collection") == "fight_stat":
-                raw = info.get("path") or info.get("destination")
-                if raw:
-                    pages.append(Path(str(raw)))
-    if not pages:
         raise RuntimeError("Could not resolve fight_stat pages")
     return pages
 
@@ -81,6 +76,22 @@ def era(year: int) -> str:
     if year <= 2022:
         return "2019-2022"
     return "2023-present"
+
+
+def empty_bucket() -> dict[str, Any]:
+    return {
+        "fight_ids": set(),
+        "actual_round_rows": 0,
+        "summary_rows": 0,
+        "actual_seen": Counter(),
+        "actual_nonnull": Counter(),
+        "summary_seen": Counter(),
+        "summary_nonnull": Counter(),
+    }
+
+
+def fractions(nonnull: Counter[str], seen: Counter[str]) -> dict[str, float | None]:
+    return {field: (nonnull[field] / seen[field]) if seen[field] else None for field in FIELDS}
 
 
 def main() -> int:
@@ -107,12 +118,10 @@ def main() -> int:
     for fmid in duplicate_dated_fmid:
         dated_fmid.pop(fmid, None)
 
-    years: dict[int, dict[str, Any]] = defaultdict(lambda: {
-        "fight_ids": set(), "actual_round_rows": 0, "summary_rows": 0,
-        "field_seen": Counter(), "field_nonnull": Counter(),
-    })
+    years: dict[int, dict[str, Any]] = defaultdict(empty_bucket)
     unmatched_stat_ids: set[int] = set()
-    matched_rows = 0
+    matched_actual = matched_summary = 0
+
     for page in fight_stat_pages(latest_manifest()):
         payload = json.loads(page.read_text(encoding="utf-8"))
         for item in payload.get("data") or []:
@@ -126,93 +135,101 @@ def main() -> int:
             if fmid not in dated_fmid:
                 unmatched_stat_ids.add(fmid)
                 continue
-            year = int(dated_fmid[fmid]["event_date"][:4])
-            bucket = years[year]
-            bucket["fight_ids"].add(fmid)
             try:
                 rnd = int(attrs.get("round"))
             except (TypeError, ValueError):
-                rnd = None
+                continue
+            year = int(dated_fmid[fmid]["event_date"][:4])
+            bucket = years[year]
+            bucket["fight_ids"].add(fmid)
             if rnd == 0:
                 bucket["summary_rows"] += 1
-            elif rnd is not None and rnd >= 1:
+                matched_summary += 1
+                seen_key, nonnull_key = "summary_seen", "summary_nonnull"
+            elif rnd >= 1:
                 bucket["actual_round_rows"] += 1
+                matched_actual += 1
+                seen_key, nonnull_key = "actual_seen", "actual_nonnull"
             else:
                 continue
-            matched_rows += 1
             for field in FIELDS:
-                bucket["field_seen"][field] += 1
+                bucket[seen_key][field] += 1
                 if present(attrs.get(field)):
-                    bucket["field_nonnull"][field] += 1
+                    bucket[nonnull_key][field] += 1
 
-    rows = []
-    era_acc: dict[str, dict[str, Any]] = defaultdict(lambda: {
-        "fight_ids": set(), "actual_round_rows": 0, "summary_rows": 0,
-        "field_seen": Counter(), "field_nonnull": Counter(),
-    })
+    if not years:
+        raise RuntimeError("No dated FightMetric rows available")
+
+    era_acc: dict[str, dict[str, Any]] = defaultdict(empty_bucket)
+    rows: list[dict[str, Any]] = []
     for year in sorted(years):
         b = years[year]
-        r: dict[str, Any] = {
+        actual_frac = fractions(b["actual_nonnull"], b["actual_seen"])
+        summary_frac = fractions(b["summary_nonnull"], b["summary_seen"])
+        row: dict[str, Any] = {
             "year": year,
             "fights": len(b["fight_ids"]),
             "actual_round_rows": b["actual_round_rows"],
             "summary_rows": b["summary_rows"],
         }
         for field in FIELDS:
-            seen = b["field_seen"][field]
-            nonnull = b["field_nonnull"][field]
-            r[f"{field}_nonnull_fraction"] = nonnull / seen if seen else None
-        rows.append(r)
-        e = era(year)
-        ea = era_acc[e]
+            row[f"actual_{field}_nonnull_fraction"] = actual_frac[field]
+            row[f"summary_{field}_nonnull_fraction"] = summary_frac[field]
+        rows.append(row)
+
+        ea = era_acc[era(year)]
         ea["fight_ids"].update(b["fight_ids"])
         ea["actual_round_rows"] += b["actual_round_rows"]
         ea["summary_rows"] += b["summary_rows"]
-        ea["field_seen"].update(b["field_seen"])
-        ea["field_nonnull"].update(b["field_nonnull"])
+        ea["actual_seen"].update(b["actual_seen"])
+        ea["actual_nonnull"].update(b["actual_nonnull"])
+        ea["summary_seen"].update(b["summary_seen"])
+        ea["summary_nonnull"].update(b["summary_nonnull"])
 
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
-    if not rows:
-        raise RuntimeError("No dated FightMetric rows available")
     with OUT_CSV.open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
 
-    era_report = {}
+    era_report: dict[str, Any] = {}
     for e, b in era_acc.items():
         era_report[e] = {
             "fights": len(b["fight_ids"]),
             "actual_round_rows": b["actual_round_rows"],
             "summary_rows": b["summary_rows"],
-            "field_nonnull_fraction": {
-                field: (b["field_nonnull"][field] / b["field_seen"][field]) if b["field_seen"][field] else None
-                for field in FIELDS
-            },
+            "actual_round_field_nonnull_fraction": fractions(b["actual_nonnull"], b["actual_seen"]),
+            "summary_field_nonnull_fraction": fractions(b["summary_nonnull"], b["summary_seen"]),
         }
 
-    first_year_nonnull = {}
+    first_actual_year = {}
+    first_actual_year_90pct = {}
     for field in FIELDS:
-        ys = [r["year"] for r in rows if (r.get(f"{field}_nonnull_fraction") or 0) > 0]
-        first_year_nonnull[field] = min(ys) if ys else None
+        ys = [r["year"] for r in rows if (r.get(f"actual_{field}_nonnull_fraction") or 0) > 0]
+        ys90 = [r["year"] for r in rows if (r.get(f"actual_{field}_nonnull_fraction") or 0) >= 0.90]
+        first_actual_year[field] = min(ys) if ys else None
+        first_actual_year_90pct[field] = min(ys90) if ys90 else None
 
     report = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "high_confidence_dated_fightmetric_ids": len(dated_fmid),
         "duplicate_dated_ids_excluded": len(duplicate_dated_fmid),
-        "matched_fight_stat_rows_including_round0": matched_rows,
+        "matched_actual_round_rows": matched_actual,
+        "matched_round_zero_summary_rows": matched_summary,
         "stat_ids_without_high_confidence_date": len(unmatched_stat_ids),
         "year_min": min(years),
         "year_max": max(years),
         "years": rows,
         "eras": era_report,
-        "first_year_with_nonnull_field": first_year_nonnull,
+        "first_year_with_nonnull_actual_round_field": first_actual_year,
+        "first_year_with_90pct_actual_round_field": first_actual_year_90pct,
         "tip_fields": TIP_FIELDS,
         "count_fields": COUNT_FIELDS,
         "year_csv": OUT_CSV.as_posix(),
         "semantics": {
-            "round_zero_included_in_field_coverage": True,
+            "actual_round_coverage_is_primary_for_simulator_availability": True,
+            "round_zero_summary_coverage_reported_separately": True,
             "round_zero_not_counted_as_actual_round": True,
             "join_gate": "direct one-to-one UFC fightmetric_id + unique direct UFC event membership + parsed official event date",
             "ambiguous_rows_inferred": False,
@@ -226,21 +243,25 @@ def main() -> int:
         "",
         f"High-confidence dated FightMetric IDs: **{len(dated_fmid)}**",
         f"Calendar span: **{min(years)}–{max(years)}**",
+        f"Actual round rows: **{matched_actual}**",
+        f"Round-0 summary rows: **{matched_summary}**",
         "",
-        "| Era | Fights | Actual round rows | distance_time | clinch_time | ground_time | guard_ctl | mount_ctl | back_ctl |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "The table below uses **actual rounds only**.",
+        "",
+        "| Era | Fights | Round rows | distance | clinch | ground_time | ground_ctl | guard_ctl | mount_ctl | back_ctl |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for e in ["1993-2006", "2007-2012", "2013-2018", "2019-2022", "2023-present"]:
         if e not in era_report:
             continue
         x = era_report[e]
-        f = x["field_nonnull_fraction"]
+        f = x["actual_round_field_nonnull_fraction"]
         lines.append(
-            f"| {e} | {x['fights']} | {x['actual_round_rows']} | {f['distance_time']:.3f} | {f['clinch_time']:.3f} | {f['ground_time']:.3f} | {f['guard_ctl_time']:.3f} | {f['mount_ctl_time']:.3f} | {f['back_ctl_time']:.3f} |"
+            f"| {e} | {x['fights']} | {x['actual_round_rows']} | {f['distance_time']:.3f} | {f['clinch_time']:.3f} | {f['ground_time']:.3f} | {f['ground_ctl_time']:.3f} | {f['guard_ctl_time']:.3f} | {f['mount_ctl_time']:.3f} | {f['back_ctl_time']:.3f} |"
         )
-    lines += ["", "Ambiguous identity/event joins are excluded rather than inferred."]
+    lines += ["", "Round-0 summary coverage is retained separately in the JSON. Ambiguous joins are excluded rather than inferred."]
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(json.dumps({"dated_ids": len(dated_fmid), "year_min": min(years), "year_max": max(years), "rows": matched_rows}, sort_keys=True))
+    print(json.dumps({"dated_ids": len(dated_fmid), "actual_rows": matched_actual, "summary_rows": matched_summary}, sort_keys=True))
     return 0
 
 
