@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_weigh_in_article_event_consensus",
+  "completed_at_utc": "2026-08-22T23:41:27.607735Z",
+  "exit_code": 0,
+  "github_run_id": "32605884668",
+  "log": "provenance/runs/ufc_weigh_in_article_event_consensus_32605884668.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "1603c9b48521703757a8192da8fdbd87a9c16c49"
+}

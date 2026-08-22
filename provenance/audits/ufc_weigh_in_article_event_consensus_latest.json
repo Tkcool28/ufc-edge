@@ -1,0 +1,998 @@
+{
+  "articles_with_candidate_rows": 707,
+  "candidate_rows": 8283,
+  "counts": {
+    "articles": 707,
+    "competing_unique_event_votes": 44,
+    "no_article_event_consensus": 2,
+    "no_resolvable_pair_event": 43,
+    "singleton_event_intersection_unpromoted": 614,
+    "unanimous_unique_event_votes_unpromoted": 4
+  },
+  "decision": {
+    "canonical_event_identity_promoted": false,
+    "display_name_only_identity_trusted": false,
+    "publication_date_required": false,
+    "required_next": "Inspect singleton-intersection and unanimous-vote coverage/error modes. Promote only an article-event gate that has an independently auditable participant-pair consensus rule; preserve multi-event/weak-consensus pages as unresolved."
+  },
+  "distinct_candidate_event_count_distribution": {
+    "0": 43,
+    "1": 392,
+    "2": 189,
+    "3": 60,
+    "4": 14,
+    "5": 7,
+    "6": 2
+  },
+  "examples": {
+    "competing_unique_event_votes": [
+      {
+        "article_title": "Fight Night Belem: Weigh-in Results",
+        "article_url": "https://www.ufc.com/news/fight-night-belem-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 11,
+        "top_votes": [
+          [
+            "2778356d-17c2-54e6-8375-14bfe97898c0",
+            10
+          ],
+          [
+            "14f39243-fa99-529c-8044-a323c97cb799",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Fight Night Evans vs Teixeira weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-evans-vs-teixeira-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 11,
+        "top_votes": [
+          [
+            "2a75c167-d74b-5398-b3c1-0b83100ec6c8",
+            10
+          ],
+          [
+            "a3bc326f-a1b1-5a10-bf97-49b5f9a0433f",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Fight Night Gdansk: Weigh-in Results",
+        "article_url": "https://www.ufc.com/news/fight-night-gdansk-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "top_votes": [
+          [
+            "c00c8045-8ece-5652-b92c-0b2159cd9fc2",
+            11
+          ],
+          [
+            "a24702d3-4ed9-574e-9dba-031ab5ed57f5",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Fight Night Phoenix Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-phoenix-weigh-results",
+        "distinct_candidate_events": 4,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "top_votes": [
+          [
+            "9f0f2ce9-8c8b-5769-8c6b-778a4df9bd48",
+            9
+          ],
+          [
+            "b7836502-30eb-5a18-b2aa-a02a9174590f",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Fight Night Utica: Official Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-utica-official-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 13,
+        "rows_with_canonical_pair": 13,
+        "top_votes": [
+          [
+            "70dbfde2-e56a-5e53-8947-835e8e2e7187",
+            12
+          ],
+          [
+            "bdaf5167-d399-59db-a235-ab3eb3e5a6f4",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Official TUF 16 Finale Weigh In Results",
+        "article_url": "https://www.ufc.com/news/official-tuf-16-finale-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "top_votes": [
+          [
+            "a0228057-1b5c-510f-8f8e-eb3a119a32b8",
+            11
+          ],
+          [
+            "fd5e7c30-3591-588c-acaa-15281f68ee98",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Official UFC 234 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/official-ufc-234-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 11,
+        "top_votes": [
+          [
+            "336f9e50-975a-532d-b99c-082f4cc2ca7b",
+            10
+          ],
+          [
+            "6c819065-f7bf-5d3e-8e31-615c6592377f",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Official UFC on FX 5 Weigh In Results",
+        "article_url": "https://www.ufc.com/news/official-ufc-fx-5-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 10,
+        "rows_with_canonical_pair": 10,
+        "top_votes": [
+          [
+            "ee9d653e-3497-5e86-ac0f-cdb8df6cb689",
+            9
+          ],
+          [
+            "da84390b-86be-55fb-9281-66d8d0f6c314",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC 309: Jones vs Miocic",
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-jones-miocic-ufc-309",
+        "distinct_candidate_events": 3,
+        "intersection_size": 0,
+        "rows": 13,
+        "rows_with_canonical_pair": 13,
+        "top_votes": [
+          [
+            "61b75bab-e854-5dc3-bd6d-5893c9b89508",
+            11
+          ],
+          [
+            "d22ad558-58ae-5508-9278-291baed84314",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC Fight Night: Lewis vs Spivac",
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-lewis-vs-spivac-vegas-65",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "top_votes": [
+          [
+            "4e91cfad-06f1-5292-a200-e9764b399519",
+            11
+          ],
+          [
+            "3d166007-4749-5b5b-bc90-d256de730d5e",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC Mexico",
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-moreno-erceg",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 13,
+        "rows_with_canonical_pair": 13,
+        "top_votes": [
+          [
+            "10cb9015-0116-52a6-99aa-88e6ee70b544",
+            12
+          ],
+          [
+            "513de628-2844-5440-9c7f-6afb1460544f",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC 313: Pereira vs Ankalaev",
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-313-pereira-vs-ankalaev",
+        "distinct_candidate_events": 5,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "top_votes": [
+          [
+            "198a0b4a-0abd-5b98-9eb3-edf4fe870c0c",
+            8
+          ],
+          [
+            "c8562273-e492-582d-bec5-0ba65cd82f92",
+            1
+          ],
+          [
+            "cf678446-bc00-599d-8f52-4029bf1c1b5d",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Official Weigh-In Results | UFC Fight Night: Royval vs Kape",
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-fight-night-royval-vs-kape-vegas-112",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 13,
+        "rows_with_canonical_pair": 12,
+        "top_votes": [
+          [
+            "48d2ab68-1f2c-51f3-bf12-9e71cb4b5a0f",
+            11
+          ],
+          [
+            "4f948b2d-0be0-5b4f-bdb1-81dc9905fc33",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC 183 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/ufc-183-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 10,
+        "rows_with_canonical_pair": 10,
+        "top_votes": [
+          [
+            "b7836502-30eb-5a18-b2aa-a02a9174590f",
+            9
+          ],
+          [
+            "4bff1676-fcf0-5b4f-9dcb-de6a10a1b4a2",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC 216 official weigh-in results",
+        "article_url": "https://www.ufc.com/news/ufc-216-official-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 8,
+        "top_votes": [
+          [
+            "9efae73a-ce4c-5e48-beec-dd378391f003",
+            7
+          ],
+          [
+            "93ce0f32-1afb-5657-84d2-34da933656c3",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC 230 Official Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/ufc-230-official-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 13,
+        "rows_with_canonical_pair": 13,
+        "top_votes": [
+          [
+            "0126e120-cdc2-5b1d-904d-a5762176eb2c",
+            12
+          ],
+          [
+            "4484c5f7-e7ef-5516-8270-85800f6d3ddf",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC 258: Usman vs Burns Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/ufc-258-kamaru-usman-vs-gilbert-burns-official-weigh-in-results",
+        "distinct_candidate_events": 3,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 11,
+        "top_votes": [
+          [
+            "51bfa819-c36c-5242-a491-c2a17a34ffb1",
+            9
+          ],
+          [
+            "85dd8d31-ba5a-515a-a83f-2b148f07d847",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC Fight Island 7 Weigh-In Results And Faceoffs",
+        "article_url": "https://www.ufc.com/news/ufc-fight-island-7-weigh-results-holloway-kattar-brown-condit",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 11,
+        "rows_with_canonical_pair": 11,
+        "top_votes": [
+          [
+            "de8ca7c2-5a65-51e2-bace-88305a704b77",
+            10
+          ],
+          [
+            "7660e8a6-4a42-5257-b127-f5bb459ed389",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC Jacksonville Official Weigh-in Results",
+        "article_url": "https://www.ufc.com/news/ufc-jacksonville-official-weigh-in-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 11,
+        "rows_with_canonical_pair": 9,
+        "top_votes": [
+          [
+            "fdf9e547-220d-5d4b-8472-31eccaa5cec0",
+            8
+          ],
+          [
+            "9f327be9-aa05-5f6c-9dfd-b93a6140abaa",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC Vegas 14 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/ufc-vegas-14-weigh-results-rda-felder",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 10,
+        "rows_with_canonical_pair": 10,
+        "top_votes": [
+          [
+            "0c88d0d9-d6e6-529e-b030-f2f1de845736",
+            9
+          ],
+          [
+            "0ba761df-75f9-5842-8dc9-9e61cf94ab0d",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC Vegas 16 Weigh-In Results & Faceoffs",
+        "article_url": "https://www.ufc.com/news/ufc-vegas-16-weigh-in-results-hermansson-vettori",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 11,
+        "rows_with_canonical_pair": 9,
+        "top_votes": [
+          [
+            "0ba761df-75f9-5842-8dc9-9e61cf94ab0d",
+            8
+          ],
+          [
+            "2bd1e431-b14d-5809-8d9b-cf7349fc6220",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "UFC Vegas 7: Official Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/ufc-vegas-7-official-weigh-results-munhoz-edgar",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 10,
+        "rows_with_canonical_pair": 10,
+        "top_votes": [
+          [
+            "98bcbf56-b0b3-5cb0-8397-205560a0e300",
+            9
+          ],
+          [
+            "2506d7db-5b61-59e3-9ecc-d9fc61827ca3",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "The Ultimate Fighter Finale - Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/ultimate-fighter-finale-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 11,
+        "rows_with_canonical_pair": 9,
+        "top_votes": [
+          [
+            "15795826-22cf-548b-a111-fde6304fe97c",
+            8
+          ],
+          [
+            "5ad00058-6dda-5982-a2a8-7a5dfdd05e5e",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "The Ultimate Fighter Finale weigh-in results",
+        "article_url": "https://www.ufc.com/news/ultimate-fighter-finale-weigh-results-2",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 10,
+        "rows_with_canonical_pair": 10,
+        "top_votes": [
+          [
+            "d4df10d0-e648-558d-9482-6da87094eab1",
+            9
+          ],
+          [
+            "e2a1b649-9826-5b67-b3ea-6794709fc3e7",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC Fight Night: Font vs Vera",
+        "article_url": "https://www.ufc.com/news/vegas-53-official-weigh-in-results-ufc-fight-night-font-vs-vera",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 11,
+        "top_votes": [
+          [
+            "fc603738-bf30-5875-a8a1-fd02d39e24e9",
+            10
+          ],
+          [
+            "db14e2d5-fa6f-5d64-accd-5e7f2f04c5ce",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results & Faceoffs | UFC Fight Night: Blaydes vs Daukaus",
+        "article_url": "https://www.ufc.com/news/weigh-in-results-ufc-fight-night-blaydes-vs-daukaus-columbus",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 13,
+        "rows_with_canonical_pair": 13,
+        "top_votes": [
+          [
+            "cff44dd5-9e39-51ca-9d29-8d9c3504ba7a",
+            12
+          ],
+          [
+            "e5bf746b-2346-5e00-a0d6-cbfbe1c481b0",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC Fight Night: Rodriguez vs Waterson",
+        "article_url": "https://www.ufc.com/news/weigh-in-results-ufc-fight-night-rodriguez-vs-waterson-vegas-26",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 11,
+        "rows_with_canonical_pair": 9,
+        "top_votes": [
+          [
+            "fdbf3505-1b0f-58f4-986f-8e3615d63c39",
+            8
+          ],
+          [
+            "dc272dd4-5ee6-5e87-8a33-d50413ddf3f9",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC Fight Night: Font vs Garbrandt",
+        "article_url": "https://www.ufc.com/news/weigh-in-results-ufc-vegas-27-fight-night-font-vs-garbrandt",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 13,
+        "rows_with_canonical_pair": 12,
+        "top_votes": [
+          [
+            "dbe744b9-b0c6-53ff-80aa-ded4bd3c0cd5",
+            11
+          ],
+          [
+            "1d6d352c-7b52-503b-9bfc-adac6157d643",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC 287: Pereira vs Adesanya 2",
+        "article_url": "https://www.ufc.com/news/weigh-results-ufc-287-pereira-vs-adesanya-2",
+        "distinct_candidate_events": 3,
+        "intersection_size": 0,
+        "rows": 13,
+        "rows_with_canonical_pair": 13,
+        "top_votes": [
+          [
+            "08a2f43a-bdf3-5df8-a55e-c09fa08c1585",
+            11
+          ],
+          [
+            "c91f3e2e-cbb9-55d2-a856-818468ef9fc0",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | UFC 303: Pereira vs Proch\u00e1zka 2",
+        "article_url": "https://www.ufc.com/news/weigh-results-ufc-303-pereira-vs-prochazka-2",
+        "distinct_candidate_events": 3,
+        "intersection_size": 0,
+        "rows": 12,
+        "rows_with_canonical_pair": 10,
+        "top_votes": [
+          [
+            "e63d5e59-d639-53ec-a8c3-3bf9db891c12",
+            8
+          ],
+          [
+            "390b775b-c3b8-5508-8c32-768c456e6f80",
+            1
+          ]
+        ]
+      }
+    ],
+    "no_article_event_consensus": [
+      {
+        "article_title": "Official Strikeforce: Tate vs. Rousey Weigh In Results",
+        "article_url": "https://www.ufc.com/news/official-strikeforce-tate-vs-rousey-weigh-results",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 9,
+        "rows_with_canonical_pair": 2,
+        "top_votes": [
+          [
+            "390e419b-6f55-5186-b6b9-371ef8d59ac4",
+            1
+          ],
+          [
+            "e1b56551-424c-508d-ad0b-1fd6c83e2ff3",
+            1
+          ]
+        ]
+      },
+      {
+        "article_title": "Weigh-In Results | Dana White's Contender Series, Season 7",
+        "article_url": "https://www.ufc.com/news/season-7-weigh-results-dana-whites-contender-series",
+        "distinct_candidate_events": 2,
+        "intersection_size": 0,
+        "rows": 50,
+        "rows_with_canonical_pair": 2,
+        "top_votes": [
+          [
+            "81c99e69-8c5e-5357-864c-2c474c8ca40b",
+            1
+          ],
+          [
+            "01fd0234-ade1-59b2-b69e-b968a84c8b63",
+            1
+          ]
+        ]
+      }
+    ],
+    "singleton_event_intersection_unpromoted": [
+      {
+        "article_title": "Fight Island 2 Official Weigh-in Results",
+        "article_url": "https://www.ufc.com/news/fight-island-2-official-weigh-results",
+        "candidate_event_date": "2020-07-18",
+        "candidate_event_name": "UFC Fight Night: Figueiredo vs. Benavidez 2",
+        "rows": 12,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 8
+      },
+      {
+        "article_title": "Fight Night Adelaide 2015 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-adelaide-2015-weigh-results",
+        "candidate_event_date": "2015-05-09",
+        "candidate_event_name": "UFC Fight Night: Miocic vs Hunt",
+        "rows": 12,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Fight Night Argentina: Official Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-argentina-official-weigh-results",
+        "candidate_event_date": "2018-11-17",
+        "candidate_event_name": "UFC Fight Night: Magny vs. Ponzinibbio",
+        "rows": 12,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Fight Night Arlovski vs Barnett weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-arlovski-vs-barnett-weigh-results",
+        "candidate_event_date": "2016-09-03",
+        "candidate_event_name": "UFC Fight Night: Arlovski vs. Barnett",
+        "rows": 10,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 9
+      },
+      {
+        "article_title": "Fight Night Atlantic City: Official Weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-atlantic-city-official-weigh-results",
+        "candidate_event_date": "2018-04-21",
+        "candidate_event_name": "UFC Fight Night: Barboza vs. Lee",
+        "rows": 11,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 9
+      },
+      {
+        "article_title": "Fight Night Auckland official weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-auckland-official-weigh-results",
+        "candidate_event_date": "2017-06-10",
+        "candidate_event_name": "UFC Fight Night: Lewis vs. Hunt",
+        "rows": 12,
+        "rows_with_canonical_pair": 11,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 11
+      },
+      {
+        "article_title": "Fight Night Austin 2014 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-austin-2014-weigh-results",
+        "candidate_event_date": "2014-11-22",
+        "candidate_event_name": "UFC Fight Night: Edgar vs Swanson",
+        "rows": 12,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 7
+      },
+      {
+        "article_title": "Fight Night Austin: Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-austin-weigh-results",
+        "candidate_event_date": "2018-02-18",
+        "candidate_event_name": "UFC Fight Night: Cerrone vs. Medeiros",
+        "rows": 12,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 9
+      },
+      {
+        "article_title": "Fight Night Bangor Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-bangor-weigh-results",
+        "candidate_event_date": "2014-08-16",
+        "candidate_event_name": "UFC Fight Night: Bader vs Saint Preux",
+        "rows": 10,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 9
+      },
+      {
+        "article_title": "Fight Night Barueri 2014 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-barueri-2014-weigh-results",
+        "candidate_event_date": "2014-12-20",
+        "candidate_event_name": "UFC Fight Night: Machida vs Dollaway",
+        "rows": 11,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 9
+      },
+      {
+        "article_title": "Fight Night Berlin 2015 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-berlin-2015-weigh-results",
+        "candidate_event_date": "2015-06-20",
+        "candidate_event_name": "UFC Fight Night: Jedrzejczyk vs Penne",
+        "rows": 11,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Fight Night Boise Official Weigh-in Results",
+        "article_url": "https://www.ufc.com/news/fight-night-boise-official-weigh-results",
+        "candidate_event_date": "2018-07-14",
+        "candidate_event_name": "UFC Fight Night: Dos Santos vs. Ivanov",
+        "rows": 13,
+        "rows_with_canonical_pair": 12,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 12
+      },
+      {
+        "article_title": "Fight Night Boston 2015 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-boston-2015-weigh-results",
+        "candidate_event_date": "2015-01-18",
+        "candidate_event_name": "UFC Fight Night: McGregor vs Siver",
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 12
+      },
+      {
+        "article_title": "Fight Night Brasilia Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-brasilia-weigh-results",
+        "candidate_event_date": "2014-09-13",
+        "candidate_event_name": "UFC Fight Night: Bigfoot vs Arlovski",
+        "rows": 11,
+        "rows_with_canonical_pair": 8,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 7
+      },
+      {
+        "article_title": "Fight Night Broomfield 2015 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-broomfield-2015-weigh-results",
+        "candidate_event_date": "2015-02-14",
+        "candidate_event_name": "UFC Fight Night: Henderson vs Thatch",
+        "rows": 7,
+        "rows_with_canonical_pair": 6,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 6
+      },
+      {
+        "article_title": "Fight Night Calgary Official Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-calgary-official-weigh-results",
+        "candidate_event_date": "2018-07-28",
+        "candidate_event_name": "UFC Fight Night: Alvarez vs. Poirier 2",
+        "rows": 13,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 8
+      },
+      {
+        "article_title": "Fight Night Charlotte: Weigh-in Results",
+        "article_url": "https://www.ufc.com/news/fight-night-charlotte-weigh-results",
+        "candidate_event_date": "2018-01-27",
+        "candidate_event_name": "UFC Fight Night: Jacare vs. Brunson 2",
+        "rows": 12,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Fight Night Chicago Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-chicago-weigh-results",
+        "candidate_event_date": "2015-07-25",
+        "candidate_event_name": "UFC on FOX: Dillashaw vs. Barao II",
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Fight Night Chicago weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-chicago-weigh-results-0",
+        "candidate_event_date": "2016-07-23",
+        "candidate_event_name": "UFC on FOX: Holm vs. Shevchenko",
+        "rows": 11,
+        "rows_with_canonical_pair": 11,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 11
+      },
+      {
+        "article_title": "Fight Night Chile: Official Weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-chile-official-weigh-results",
+        "candidate_event_date": "2018-05-19",
+        "candidate_event_name": "UFC Fight Night: Maia vs. Usman",
+        "rows": 13,
+        "rows_with_canonical_pair": 12,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 11
+      },
+      {
+        "article_title": "Fight Night Cincinnati Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-cincinnati-weigh-results",
+        "candidate_event_date": "2014-05-10",
+        "candidate_event_name": "UFC Fight Night: Brown vs Silva",
+        "rows": 13,
+        "rows_with_canonical_pair": 11,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 11
+      },
+      {
+        "article_title": "Fight Night Cowboy vs Cowboy Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-cowboy-vs-cowboy-weigh-results",
+        "candidate_event_date": "2016-02-21",
+        "candidate_event_name": "UFC Fight Night: Cowboy vs Cowboy",
+        "rows": 13,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Fight Night Denver: Weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-denver-weigh-results",
+        "candidate_event_date": "2017-01-28",
+        "candidate_event_name": "UFC on FOX: Shevchenko vs. Pena",
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 12
+      },
+      {
+        "article_title": "Fight Night Dillashaw vs Cruz weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-dillashaw-vs-cruz-weigh-results",
+        "candidate_event_date": "2016-01-17",
+        "candidate_event_name": "UFC Fight Night: Dillashaw vs Cruz",
+        "rows": 13,
+        "rows_with_canonical_pair": 12,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 12
+      },
+      {
+        "article_title": "Fight Night Dos Anjos vs Alvarez weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-dos-anjos-vs-alvarez-weigh-results",
+        "candidate_event_date": "2016-07-07",
+        "candidate_event_name": "UFC Fight Night: Dos Anjos vs. Alvarez",
+        "rows": 11,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Fight Night: Dos Anjos vs Ferguson weigh-in results",
+        "article_url": "https://www.ufc.com/news/fight-night-dos-anjos-vs-ferguson-weigh-results",
+        "candidate_event_date": "2016-11-05",
+        "candidate_event_name": "UFC Fight Night: Dos Anjos vs. Ferguson",
+        "rows": 12,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Fight Night Dublin 2015 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-dublin-2015-weigh-results",
+        "candidate_event_date": "2015-10-24",
+        "candidate_event_name": "UFC Fight Night: Holohan vs Smolka",
+        "rows": 9,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 9
+      },
+      {
+        "article_title": "Fight Night Fairfax 2015 Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-fairfax-2015-weigh-results",
+        "candidate_event_date": "2015-04-04",
+        "candidate_event_name": "UFC Fight Night: Mendes vs Lamas",
+        "rows": 9,
+        "rows_with_canonical_pair": 7,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 7
+      },
+      {
+        "article_title": "Fight Night Fortaleza: Weigh in results",
+        "article_url": "https://www.ufc.com/news/fight-night-fortaleza-weigh-results",
+        "candidate_event_date": "2017-03-11",
+        "candidate_event_name": "UFC Fight Night: Belfort vs. Gastelum",
+        "rows": 11,
+        "rows_with_canonical_pair": 10,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 9
+      },
+      {
+        "article_title": "Fight Night Foxwoods Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/fight-night-foxwoods-weigh-results",
+        "candidate_event_date": "2014-09-05",
+        "candidate_event_name": "UFC Fight Night: Jacare vs Mousasi",
+        "rows": 9,
+        "rows_with_canonical_pair": 8,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 8
+      }
+    ],
+    "unanimous_unique_event_votes_unpromoted": [
+      {
+        "article_title": "UFC 213 official weigh-in results",
+        "article_url": "https://www.ufc.com/news/ufc-213-official-weigh-results",
+        "candidate_event_date": "2017-07-08",
+        "candidate_event_name": "UFC 213: Romero vs. Whittaker",
+        "rows": 12,
+        "rows_with_canonical_pair": 12,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "UFC Vegas 8: Official Weigh-In Results",
+        "article_url": "https://www.ufc.com/news/ufc-vegas-8-official-weigh-results-smith-rakic",
+        "candidate_event_date": "2020-08-29",
+        "candidate_event_name": "UFC Fight Night: Smith vs. Rakic",
+        "rows": 11,
+        "rows_with_canonical_pair": 11,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      },
+      {
+        "article_title": "Weigh-In Results | UFC Fight Night: Rozenstruik vs Gane",
+        "article_url": "https://www.ufc.com/news/weigh-results-ufc-fight-night-rozenstruik-vs-gane-vegas-20",
+        "candidate_event_date": "2021-02-27",
+        "candidate_event_name": "UFC Fight Night: Rozenstruik vs. Gane",
+        "rows": 10,
+        "rows_with_canonical_pair": 9,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 7
+      },
+      {
+        "article_title": "Weigh-In Results | UFC Fight Night: Yusuff vs Barboza",
+        "article_url": "https://www.ufc.com/news/weigh-results-ufc-fight-night-yusuff-vs-barboza-vegas-81",
+        "candidate_event_date": "2023-10-14",
+        "candidate_event_name": "UFC Fight Night: Yusuff vs. Barboza",
+        "rows": 12,
+        "rows_with_canonical_pair": 11,
+        "unique_vote_second_support": 0,
+        "unique_vote_top_support": 10
+      }
+    ]
+  },
+  "generated_at_utc": "2026-08-22T23:41:27.545390Z",
+  "intersection_event_count_distribution": {
+    "0": 93,
+    "1": 614
+  },
+  "output": "data/derived/identity/ufc_weigh_in_article_event_consensus_candidate.csv",
+  "rows_with_canonical_pair_distribution": {
+    "0": 43,
+    "1": 1,
+    "10": 146,
+    "11": 148,
+    "12": 120,
+    "13": 62,
+    "14": 14,
+    "15": 3,
+    "2": 2,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 8,
+    "7": 18,
+    "8": 41,
+    "9": 98
+  },
+  "schema_version": 1,
+  "unique_vote_top_support_distribution": {
+    "0": 43,
+    "1": 3,
+    "10": 156,
+    "11": 128,
+    "12": 94,
+    "13": 35,
+    "14": 8,
+    "15": 1,
+    "2": 2,
+    "5": 5,
+    "6": 9,
+    "7": 36,
+    "8": 71,
+    "9": 116
+  }
+}
