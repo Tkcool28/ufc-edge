@@ -1,0 +1,36 @@
+{
+  "canonical_contract_version": "0.3.0-draft",
+  "canonical_profile_rows": 2466,
+  "exclusions": 5,
+  "observed_at_utc": "2026-08-20T20:40:30.394128Z",
+  "outputs": {
+    "exclusions": "data/derived/qa/canonical_ufc_profile_snapshot_exclusions_v0.csv",
+    "table": "data/canonical/v0/fighter_profile_snapshots.csv"
+  },
+  "populated_field_counts": {
+    "fighting_style_text": 1080,
+    "gym_text": 1143,
+    "listed_weight_class": 2417,
+    "listed_weight_lbs": 2356,
+    "origin_text": 2441,
+    "residence_text": 2080,
+    "status_text": 2451
+  },
+  "qa_counts": {
+    "empty_profile_after_normalization": 2,
+    "unlinked_official_athlete": 1693
+  },
+  "raw_official_athletes": 4161,
+  "rules": {
+    "display_name_matching_used": false,
+    "historical_backfill_performed": false,
+    "multi_relationship_style_labels_sorted_joined": true,
+    "node_status_boolean_used_as_athlete_status": false,
+    "point_in_time_only": true,
+    "stats_weight_zero_is_missing": true
+  },
+  "schema_version": 1,
+  "source": "ufc_com_official",
+  "source_snapshot_id": "20260820T194553Z",
+  "trusted_official_athlete_links": 2468
+}

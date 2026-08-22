@@ -5,6 +5,8 @@
     "events": 784,
     "exclusions": 570,
     "field_provenance": 0,
+    "fighter_profile_snapshot_exclusions": 5,
+    "fighter_profile_snapshots": 2466,
     "fighter_round_position": 32156,
     "fighter_round_position_exclusions": 5955,
     "fighter_round_stats": 41218,
@@ -34,6 +36,11 @@
       "bytes": 142,
       "path": "data/canonical/v0/field_provenance.csv",
       "sha256": "f261930c424740e849cf62f29be59b9c20c5124aeb76704058a3ae83af67a299"
+    },
+    {
+      "bytes": 347699,
+      "path": "data/canonical/v0/fighter_profile_snapshots.csv",
+      "sha256": "28be6c64fdef16dff2a3b1625dcc740ba2889b6283c2e54a393d1e8e47bb7130"
     },
     {
       "bytes": 4981837,
@@ -79,9 +86,14 @@
       "bytes": 153153,
       "path": "data/derived/qa/canonical_rankings_exclusions_v0.csv",
       "sha256": "81330c1367603593eedaf64033a99c7449daa3505bd4ec3a828cfad1de2b5207"
+    },
+    {
+      "bytes": 785,
+      "path": "data/derived/qa/canonical_ufc_profile_snapshot_exclusions_v0.csv",
+      "sha256": "951f126d521c03ea313a21ecae659446f463bbb9211e05a8f8afd9b2ad80f1e4"
     }
   ],
-  "generated_at_utc": "2026-08-22T23:13:16.949840Z",
+  "generated_at_utc": "2026-08-20T20:40:30.394128Z",
   "rules": {
     "ambiguous_identity_rows_are_quarantined": true,
     "canonical_ids_are_opaque_uuid5_from_first_trusted_source_identity": true,
@@ -93,12 +105,14 @@
     "missing_is_not_zero": true,
     "rankings_are_dated_observations_not_features": true,
     "round_zero_allowed": false,
+    "ufc_profiles_are_point_in_time_snapshots": true,
     "unique_normalized_name_used_only_as_fail_closed_transport_resolution": true
   },
   "schema_version": 1,
   "source_snapshots": {
     "greco1899_ufcstats": "8e40eb945e11",
     "tidytuesday_ufc_rankings": "107ff6c70de0",
+    "ufc_com_official_athletes": "20260820T194553Z",
     "ufc_fightmetric_official": "20260820T123046Z"
   }
 }

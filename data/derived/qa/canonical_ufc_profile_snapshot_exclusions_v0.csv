@@ -1,0 +1,6 @@
+athlete_uuid,canonical_fighter_id,reason,field,raw_value,details
+5a09eb5b-33dc-484b-9a46-3fa239af6f91,0955edcf-74c7-5597-85d1-68afefada2d5,empty_profile_after_normalization,,,
+c1749d05-7bb6-4c6a-ad69-00da360702e3,4f86e823-459f-576a-bb73-9efa9ffc1838,invalid_listed_weight,stats_weight,18500.00,profile weight outside contract range: '18500.00'
+5123bb7e-98ea-435e-a87f-775f2f3e591b,8ef1bb35-2e4a-5997-8980-d7d3715d7aa2,invalid_listed_weight,stats_weight,73.00,profile weight outside contract range: '73.00'
+874867f5-e1eb-4c35-b50e-5bb3c8aecd9c,ea8698c1-01f8-58b8-a05f-9b6477955db9,invalid_listed_weight,stats_weight,72.00,profile weight outside contract range: '72.00'
+8717a415-26cf-49f1-bd27-e84d193fc45b,efbc569b-88d7-51ea-85c1-ef8bf0ea77e7,empty_profile_after_normalization,,,

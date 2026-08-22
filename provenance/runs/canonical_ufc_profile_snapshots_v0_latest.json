@@ -1,0 +1,10 @@
+{
+  "build": "canonical_ufc_profile_snapshots_v0",
+  "completed_at_utc": "2026-08-22T23:23:02.095204Z",
+  "exit_code": 0,
+  "github_run_id": "32605057179",
+  "log": "provenance/runs/canonical_ufc_profile_snapshots_v0_32605057179.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "4ebbfc540addeafdbc35492380c04a971cd5e4ee"
+}
