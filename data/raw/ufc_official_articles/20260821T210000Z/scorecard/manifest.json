@@ -1,0 +1,33 @@
+{
+  "catalog_family_rows_before_url_gate": 583,
+  "chunk_manifests": [
+    "data/raw/ufc_official_articles/20260821T210000Z/scorecard/chunks/index_000000/chunk_manifest.json",
+    "data/raw/ufc_official_articles/20260821T210000Z/scorecard/chunks/index_000075/chunk_manifest.json",
+    "data/raw/ufc_official_articles/20260821T210000Z/scorecard/chunks/index_000150/chunk_manifest.json",
+    "data/raw/ufc_official_articles/20260821T210000Z/scorecard/chunks/index_000225/chunk_manifest.json",
+    "data/raw/ufc_official_articles/20260821T210000Z/scorecard/chunks/index_000300/chunk_manifest.json",
+    "data/raw/ufc_official_articles/20260821T210000Z/scorecard/chunks/index_000375/chunk_manifest.json",
+    "data/raw/ufc_official_articles/20260821T210000Z/scorecard/chunks/index_000450/chunk_manifest.json",
+    "data/raw/ufc_official_articles/20260821T210000Z/scorecard/chunks/index_000525/chunk_manifest.json"
+  ],
+  "complete_family_snapshot": true,
+  "completed_at_utc": "2026-08-22T22:01:44.917520Z",
+  "eligible_candidate_count": 582,
+  "enumeration_source": "data/derived/discovery/ufc_content_candidates.csv",
+  "excluded_navigation_or_non_news_rows": 1,
+  "family": "scorecard",
+  "items": 582,
+  "rules": {
+    "gap_free_filtered_catalog_index_required": true,
+    "http_errors_preserved_as_coverage_evidence": true,
+    "only_https_ufc_news_urls_eligible": true,
+    "raw_responses_immutable": true,
+    "structured_parsing_requires_separate_audit": true
+  },
+  "schema_version": 2,
+  "series_id": "20260821T210000Z",
+  "source": "Official UFC.com public news pages",
+  "status_counts": {
+    "200": 582
+  }
+}
