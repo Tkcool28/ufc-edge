@@ -1,0 +1,76 @@
+{
+  "candidate_bouts_per_page_distribution": {
+    "0": 9,
+    "1": 1,
+    "10": 96,
+    "11": 169,
+    "12": 186,
+    "13": 119,
+    "14": 49,
+    "15": 9,
+    "17": 1,
+    "20": 3,
+    "3": 2,
+    "49": 1,
+    "50": 2,
+    "51": 1,
+    "6": 1,
+    "7": 6,
+    "8": 17,
+    "9": 44
+  },
+  "counts": {
+    "candidate_bouts": 8283,
+    "duplicate_same_page_suppressed": 3,
+    "pages": 716,
+    "pages_with_candidates": 707,
+    "pages_without_candidates": 9,
+    "rejected_implausible": 4
+  },
+  "decision": {
+    "canonical": false,
+    "fight_identity_resolved": false,
+    "fighter_identity_resolved": false,
+    "miss_catchweight_penalty_semantics_resolved": false,
+    "next_gate": "Exact fighter/fight identity and article annotation audit.",
+    "weights_are_source_explicit": true
+  },
+  "generated_at_utc": "2026-08-22T22:08:49.840018Z",
+  "output": "data/derived/discovery/ufc_weigh_in_rows_candidate.csv",
+  "rejected_examples": [
+    {
+      "a": "Kashaun Davis",
+      "b": "Mihai Nistor",
+      "line": "Heavyweight - 8 Rounds: Kashaun Davis (306.2) vs Mihai Nistor (233)",
+      "url": "https://www.ufc.com/news/official-weigh-in-results-berlanga-butler-zuffa-boxing-09",
+      "wa": "306.2",
+      "wb": "233"
+    },
+    {
+      "a": "Da Crazy Hawaiian",
+      "b": "Kamil Marusarz",
+      "line": "Super Heavyweight Match: Da Crazy Hawaiian (399) vs. Kamil Marusarz (307)",
+      "url": "https://www.ufc.com/news/power-slap-4-official-weigh-results",
+      "wa": "399",
+      "wb": "307"
+    },
+    {
+      "a": "Cody Vallo",
+      "b": "Kalani Vakameilalo",
+      "line": "Super Heavyweight Match: Cody Vallo (372) vs Kalani Vakameilalo (370)",
+      "url": "https://www.ufc.com/news/power-slap-4-official-weigh-results",
+      "wa": "372",
+      "wb": "370"
+    },
+    {
+      "a": "Da Crazy Hawaiian",
+      "b": "Kalani Vakameilalo",
+      "line": "Super Heavyweight Title Match: Da Crazy Hawaiian (384) vs Kalani Vakameilalo (382)",
+      "url": "https://www.ufc.com/news/power-slap-5-official-weigh-results",
+      "wa": "384",
+      "wb": "382"
+    }
+  ],
+  "schema_version": 1,
+  "source_manifest": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/manifest.json"
+}
