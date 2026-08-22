@@ -1,0 +1,731 @@
+{
+  "comparison_counts": {
+    "both_match": 63,
+    "dmy_matches": 1999,
+    "dmy_only_matches": 1936,
+    "exact_name_with_both_dobs": 2179,
+    "mdy_matches": 104,
+    "mdy_only_matches": 41,
+    "neither_match": 139
+  },
+  "decision": {
+    "gate": "At least 100 decisive comparisons and winning exclusive-match count >=10x losing exclusive-match count.",
+    "identity_audit_must_be_rebuilt_if_promoted": true,
+    "promoted_source_slash_date_order": "DMY"
+  },
+  "examples": {
+    "both": [
+      {
+        "canonical_dob": "1988-04-04",
+        "dmy_interpretation": "1988-04-04",
+        "fighter": "Dustin Jacoby",
+        "mdy_interpretation": "1988-04-04",
+        "raw_birth_date": "04/04/1988"
+      },
+      {
+        "canonical_dob": "1994-06-06",
+        "dmy_interpretation": "1994-06-06",
+        "fighter": "Xavier Siller",
+        "mdy_interpretation": "1994-06-06",
+        "raw_birth_date": "06/06/1994"
+      },
+      {
+        "canonical_dob": "1991-11-11",
+        "dmy_interpretation": "1991-11-11",
+        "fighter": "Diego Rivas",
+        "mdy_interpretation": "1991-11-11",
+        "raw_birth_date": "11/11/1991"
+      },
+      {
+        "canonical_dob": "1988-11-11",
+        "dmy_interpretation": "1988-11-11",
+        "fighter": "Lucas Martins",
+        "mdy_interpretation": "1988-11-11",
+        "raw_birth_date": "11/11/1988"
+      },
+      {
+        "canonical_dob": "1984-10-10",
+        "dmy_interpretation": "1984-10-10",
+        "fighter": "Mitch Gagnon",
+        "mdy_interpretation": "1984-10-10",
+        "raw_birth_date": "10/10/1984"
+      },
+      {
+        "canonical_dob": "1986-11-11",
+        "dmy_interpretation": "1986-11-11",
+        "fighter": "Gaston Reyno",
+        "mdy_interpretation": "1986-11-11",
+        "raw_birth_date": "11/11/1986"
+      },
+      {
+        "canonical_dob": "1975-07-07",
+        "dmy_interpretation": "1975-07-07",
+        "fighter": "Jason Brilz",
+        "mdy_interpretation": "1975-07-07",
+        "raw_birth_date": "07/07/1975"
+      },
+      {
+        "canonical_dob": "1987-10-10",
+        "dmy_interpretation": "1987-10-10",
+        "fighter": "Carla Esparza",
+        "mdy_interpretation": "1987-10-10",
+        "raw_birth_date": "10/10/1987"
+      },
+      {
+        "canonical_dob": "1980-05-05",
+        "dmy_interpretation": "1980-05-05",
+        "fighter": "Rob Yundt",
+        "mdy_interpretation": "1980-05-05",
+        "raw_birth_date": "05/05/1980"
+      },
+      {
+        "canonical_dob": "1978-11-11",
+        "dmy_interpretation": "1978-11-11",
+        "fighter": "Wesley Correira",
+        "mdy_interpretation": "1978-11-11",
+        "raw_birth_date": "11/11/1978"
+      },
+      {
+        "canonical_dob": "1996-06-06",
+        "dmy_interpretation": "1996-06-06",
+        "fighter": "Eli Aronov",
+        "mdy_interpretation": "1996-06-06",
+        "raw_birth_date": "06/06/1996"
+      },
+      {
+        "canonical_dob": "1986-08-08",
+        "dmy_interpretation": "1986-08-08",
+        "fighter": "Damir Hadzovic",
+        "mdy_interpretation": "1986-08-08",
+        "raw_birth_date": "08/08/1986"
+      },
+      {
+        "canonical_dob": "1991-07-07",
+        "dmy_interpretation": "1991-07-07",
+        "fighter": "Cody Garbrandt",
+        "mdy_interpretation": "1991-07-07",
+        "raw_birth_date": "07/07/1991"
+      },
+      {
+        "canonical_dob": "1989-10-10",
+        "dmy_interpretation": "1989-10-10",
+        "fighter": "Jordan Mein",
+        "mdy_interpretation": "1989-10-10",
+        "raw_birth_date": "10/10/1989"
+      },
+      {
+        "canonical_dob": "1976-05-05",
+        "dmy_interpretation": "1976-05-05",
+        "fighter": "Alex Schoenauer",
+        "mdy_interpretation": "1976-05-05",
+        "raw_birth_date": "05/05/1976"
+      },
+      {
+        "canonical_dob": "1981-05-05",
+        "dmy_interpretation": "1981-05-05",
+        "fighter": "Mizuto Hirota",
+        "mdy_interpretation": "1981-05-05",
+        "raw_birth_date": "05/05/1981"
+      },
+      {
+        "canonical_dob": "1988-09-09",
+        "dmy_interpretation": "1988-09-09",
+        "fighter": "Dong Hyun Ma",
+        "mdy_interpretation": "1988-09-09",
+        "raw_birth_date": "09/09/1988"
+      },
+      {
+        "canonical_dob": "1984-12-12",
+        "dmy_interpretation": "1984-12-12",
+        "fighter": "Court McGee",
+        "mdy_interpretation": "1984-12-12",
+        "raw_birth_date": "12/12/1984"
+      },
+      {
+        "canonical_dob": "1976-01-01",
+        "dmy_interpretation": "1976-01-01",
+        "fighter": "Eiji Mitsuoka",
+        "mdy_interpretation": "1976-01-01",
+        "raw_birth_date": "01/01/1976"
+      },
+      {
+        "canonical_dob": "1979-07-07",
+        "dmy_interpretation": "1979-07-07",
+        "fighter": "Pat Barry",
+        "mdy_interpretation": "1979-07-07",
+        "raw_birth_date": "07/07/1979"
+      },
+      {
+        "canonical_dob": "1986-09-09",
+        "dmy_interpretation": "1986-09-09",
+        "fighter": "Jose Aldo",
+        "mdy_interpretation": "1986-09-09",
+        "raw_birth_date": "09/09/1986"
+      },
+      {
+        "canonical_dob": "1974-10-10",
+        "dmy_interpretation": "1974-10-10",
+        "fighter": "Brad Mitchell",
+        "mdy_interpretation": "1974-10-10",
+        "raw_birth_date": "10/10/1974"
+      },
+      {
+        "canonical_dob": "1966-12-12",
+        "dmy_interpretation": "1966-12-12",
+        "fighter": "Royce Gracie",
+        "mdy_interpretation": "1966-12-12",
+        "raw_birth_date": "12/12/1966"
+      },
+      {
+        "canonical_dob": "1983-03-03",
+        "dmy_interpretation": "1983-03-03",
+        "fighter": "Rob Broughton",
+        "mdy_interpretation": "1983-03-03",
+        "raw_birth_date": "03/03/1983"
+      },
+      {
+        "canonical_dob": "1986-07-07",
+        "dmy_interpretation": "1986-07-07",
+        "fighter": "Jon Manley",
+        "mdy_interpretation": "1986-07-07",
+        "raw_birth_date": "07/07/1986"
+      }
+    ],
+    "dmy_only": [
+      {
+        "canonical_dob": "1985-06-15",
+        "dmy_interpretation": "1985-06-15",
+        "fighter": "Ryan Keenan",
+        "mdy_interpretation": "",
+        "raw_birth_date": "15/06/1985"
+      },
+      {
+        "canonical_dob": "1984-03-31",
+        "dmy_interpretation": "1984-03-31",
+        "fighter": "Richardson Moreira",
+        "mdy_interpretation": "",
+        "raw_birth_date": "31/03/1984"
+      },
+      {
+        "canonical_dob": "1969-06-02",
+        "dmy_interpretation": "1969-06-02",
+        "fighter": "Chris Haseman",
+        "mdy_interpretation": "1969-02-06",
+        "raw_birth_date": "02/06/1969"
+      },
+      {
+        "canonical_dob": "1997-03-21",
+        "dmy_interpretation": "1997-03-21",
+        "fighter": "Fares Ziam",
+        "mdy_interpretation": "",
+        "raw_birth_date": "21/03/1997"
+      },
+      {
+        "canonical_dob": "1989-02-13",
+        "dmy_interpretation": "1989-02-13",
+        "fighter": "James Bochnovic",
+        "mdy_interpretation": "",
+        "raw_birth_date": "13/02/1989"
+      },
+      {
+        "canonical_dob": "1989-03-07",
+        "dmy_interpretation": "1989-03-07",
+        "fighter": "Journey Newson",
+        "mdy_interpretation": "1989-07-03",
+        "raw_birth_date": "07/03/1989"
+      },
+      {
+        "canonical_dob": "1987-12-07",
+        "dmy_interpretation": "1987-12-07",
+        "fighter": "Michael Chiesa",
+        "mdy_interpretation": "1987-07-12",
+        "raw_birth_date": "07/12/1987"
+      },
+      {
+        "canonical_dob": "1992-12-24",
+        "dmy_interpretation": "1992-12-24",
+        "fighter": "Klidson Abreu",
+        "mdy_interpretation": "",
+        "raw_birth_date": "24/12/1992"
+      },
+      {
+        "canonical_dob": "1974-11-26",
+        "dmy_interpretation": "1974-11-26",
+        "fighter": "John Kolosci",
+        "mdy_interpretation": "",
+        "raw_birth_date": "26/11/1974"
+      },
+      {
+        "canonical_dob": "1984-11-16",
+        "dmy_interpretation": "1984-11-16",
+        "fighter": "Nicolas Dalby",
+        "mdy_interpretation": "",
+        "raw_birth_date": "16/11/1984"
+      },
+      {
+        "canonical_dob": "1981-09-02",
+        "dmy_interpretation": "1981-09-02",
+        "fighter": "Alessio Sakara",
+        "mdy_interpretation": "1981-02-09",
+        "raw_birth_date": "02/09/1981"
+      },
+      {
+        "canonical_dob": "1990-07-31",
+        "dmy_interpretation": "1990-07-31",
+        "fighter": "Daniel Spitz",
+        "mdy_interpretation": "",
+        "raw_birth_date": "31/07/1990"
+      },
+      {
+        "canonical_dob": "1981-12-15",
+        "dmy_interpretation": "1981-12-15",
+        "fighter": "Guangyou Ning",
+        "mdy_interpretation": "",
+        "raw_birth_date": "15/12/1981"
+      },
+      {
+        "canonical_dob": "1985-08-17",
+        "dmy_interpretation": "1985-08-17",
+        "fighter": "Philipe Lins",
+        "mdy_interpretation": "",
+        "raw_birth_date": "17/08/1985"
+      },
+      {
+        "canonical_dob": "1983-11-16",
+        "dmy_interpretation": "1983-11-16",
+        "fighter": "Benson Henderson",
+        "mdy_interpretation": "",
+        "raw_birth_date": "16/11/1983"
+      },
+      {
+        "canonical_dob": "1982-05-28",
+        "dmy_interpretation": "1982-05-28",
+        "fighter": "Brian Melancon",
+        "mdy_interpretation": "",
+        "raw_birth_date": "28/05/1982"
+      },
+      {
+        "canonical_dob": "1993-08-27",
+        "dmy_interpretation": "1993-08-27",
+        "fighter": "Joe Solecki",
+        "mdy_interpretation": "",
+        "raw_birth_date": "27/08/1993"
+      },
+      {
+        "canonical_dob": "1981-05-01",
+        "dmy_interpretation": "1981-05-01",
+        "fighter": "Nissen Osterneck",
+        "mdy_interpretation": "1981-01-05",
+        "raw_birth_date": "01/05/1981"
+      },
+      {
+        "canonical_dob": "1990-06-10",
+        "dmy_interpretation": "1990-06-10",
+        "fighter": "Raimond Magomedaliev",
+        "mdy_interpretation": "1990-10-06",
+        "raw_birth_date": "10/06/1990"
+      },
+      {
+        "canonical_dob": "1985-08-10",
+        "dmy_interpretation": "1985-08-10",
+        "fighter": "Randa Markos",
+        "mdy_interpretation": "1985-10-08",
+        "raw_birth_date": "10/08/1985"
+      },
+      {
+        "canonical_dob": "1986-11-30",
+        "dmy_interpretation": "1986-11-30",
+        "fighter": "Klayton Mai",
+        "mdy_interpretation": "",
+        "raw_birth_date": "30/11/1986"
+      },
+      {
+        "canonical_dob": "1982-09-01",
+        "dmy_interpretation": "1982-09-01",
+        "fighter": "Matt Arroyo",
+        "mdy_interpretation": "1982-01-09",
+        "raw_birth_date": "01/09/1982"
+      },
+      {
+        "canonical_dob": "1977-08-02",
+        "dmy_interpretation": "1977-08-02",
+        "fighter": "Krzysztof Soszynski",
+        "mdy_interpretation": "1977-02-08",
+        "raw_birth_date": "02/08/1977"
+      },
+      {
+        "canonical_dob": "1987-06-23",
+        "dmy_interpretation": "1987-06-23",
+        "fighter": "Paul Ruiz",
+        "mdy_interpretation": "",
+        "raw_birth_date": "23/06/1987"
+      },
+      {
+        "canonical_dob": "1987-03-17",
+        "dmy_interpretation": "1987-03-17",
+        "fighter": "Chan Sung Jung",
+        "mdy_interpretation": "",
+        "raw_birth_date": "17/03/1987"
+      }
+    ],
+    "mdy_only": [
+      {
+        "canonical_dob": "1977-10-09",
+        "dmy_interpretation": "1977-09-10",
+        "fighter": "Joe Doerksen",
+        "mdy_interpretation": "1977-10-09",
+        "raw_birth_date": "10/09/1977"
+      },
+      {
+        "canonical_dob": "1977-09-11",
+        "dmy_interpretation": "1977-11-09",
+        "fighter": "Sean Salmon",
+        "mdy_interpretation": "1977-09-11",
+        "raw_birth_date": "09/11/1977"
+      },
+      {
+        "canonical_dob": "1982-11-04",
+        "dmy_interpretation": "1982-04-11",
+        "fighter": "Eddie Sanchez",
+        "mdy_interpretation": "1982-11-04",
+        "raw_birth_date": "11/04/1982"
+      },
+      {
+        "canonical_dob": "1983-10-07",
+        "dmy_interpretation": "1983-07-10",
+        "fighter": "Gleison Tibau",
+        "mdy_interpretation": "1983-10-07",
+        "raw_birth_date": "10/07/1983"
+      },
+      {
+        "canonical_dob": "1984-10-12",
+        "dmy_interpretation": "1984-12-10",
+        "fighter": "Jamie Varner",
+        "mdy_interpretation": "1984-10-12",
+        "raw_birth_date": "10/12/1984"
+      },
+      {
+        "canonical_dob": "1974-12-08",
+        "dmy_interpretation": "1974-08-12",
+        "fighter": "Dante Rivera",
+        "mdy_interpretation": "1974-12-08",
+        "raw_birth_date": "12/08/1974"
+      },
+      {
+        "canonical_dob": "1979-05-09",
+        "dmy_interpretation": "1979-09-05",
+        "fighter": "Gray Maynard",
+        "mdy_interpretation": "1979-05-09",
+        "raw_birth_date": "05/09/1979"
+      },
+      {
+        "canonical_dob": "1978-01-06",
+        "dmy_interpretation": "1978-06-01",
+        "fighter": "James Giboo",
+        "mdy_interpretation": "1978-01-06",
+        "raw_birth_date": "01/06/1978"
+      },
+      {
+        "canonical_dob": "1980-07-01",
+        "dmy_interpretation": "1980-01-07",
+        "fighter": "Christian Colombo",
+        "mdy_interpretation": "1980-07-01",
+        "raw_birth_date": "07/01/1980"
+      },
+      {
+        "canonical_dob": "1987-01-03",
+        "dmy_interpretation": "1987-03-01",
+        "fighter": "Mike Grundy",
+        "mdy_interpretation": "1987-01-03",
+        "raw_birth_date": "01/03/1987"
+      },
+      {
+        "canonical_dob": "1973-10-06",
+        "dmy_interpretation": "1973-06-10",
+        "fighter": "Cyrille Diabate",
+        "mdy_interpretation": "1973-10-06",
+        "raw_birth_date": "10/06/1973"
+      },
+      {
+        "canonical_dob": "1978-10-02",
+        "dmy_interpretation": "1978-02-10",
+        "fighter": "Matt Horwich",
+        "mdy_interpretation": "1978-10-02",
+        "raw_birth_date": "10/02/1978"
+      },
+      {
+        "canonical_dob": "1982-09-01",
+        "dmy_interpretation": "1982-01-09",
+        "fighter": "Garreth McLellan",
+        "mdy_interpretation": "1982-09-01",
+        "raw_birth_date": "09/01/1982"
+      },
+      {
+        "canonical_dob": "1976-09-11",
+        "dmy_interpretation": "1976-11-09",
+        "fighter": "Mike Russow",
+        "mdy_interpretation": "1976-09-11",
+        "raw_birth_date": "09/11/1976"
+      },
+      {
+        "canonical_dob": "1993-05-08",
+        "dmy_interpretation": "1993-08-05",
+        "fighter": "Nathaniel Wood",
+        "mdy_interpretation": "1993-05-08",
+        "raw_birth_date": "05/08/1993"
+      },
+      {
+        "canonical_dob": "1982-02-09",
+        "dmy_interpretation": "1982-09-02",
+        "fighter": "Jake Rosholt",
+        "mdy_interpretation": "1982-02-09",
+        "raw_birth_date": "02/09/1982"
+      },
+      {
+        "canonical_dob": "1984-05-07",
+        "dmy_interpretation": "1984-07-05",
+        "fighter": "Ian McCall",
+        "mdy_interpretation": "1984-05-07",
+        "raw_birth_date": "05/07/1984"
+      },
+      {
+        "canonical_dob": "1979-03-01",
+        "dmy_interpretation": "1979-01-03",
+        "fighter": "Alexandre Dantas",
+        "mdy_interpretation": "1979-03-01",
+        "raw_birth_date": "03/01/1979"
+      },
+      {
+        "canonical_dob": "1982-07-03",
+        "dmy_interpretation": "1982-03-07",
+        "fighter": "Xavier Foupa-Pokam",
+        "mdy_interpretation": "1982-07-03",
+        "raw_birth_date": "07/03/1982"
+      },
+      {
+        "canonical_dob": "1978-05-04",
+        "dmy_interpretation": "1978-04-05",
+        "fighter": "James Wilks",
+        "mdy_interpretation": "1978-05-04",
+        "raw_birth_date": "05/04/1978"
+      },
+      {
+        "canonical_dob": "1989-08-04",
+        "dmy_interpretation": "1989-04-08",
+        "fighter": "Milana Dudieva",
+        "mdy_interpretation": "1989-08-04",
+        "raw_birth_date": "08/04/1989"
+      },
+      {
+        "canonical_dob": "1981-10-11",
+        "dmy_interpretation": "1981-11-10",
+        "fighter": "Francis Carmont",
+        "mdy_interpretation": "1981-10-11",
+        "raw_birth_date": "10/11/1981"
+      },
+      {
+        "canonical_dob": "1969-08-02",
+        "dmy_interpretation": "1969-02-08",
+        "fighter": "Jaime Jara",
+        "mdy_interpretation": "1969-08-02",
+        "raw_birth_date": "08/02/1969"
+      },
+      {
+        "canonical_dob": "1986-12-11",
+        "dmy_interpretation": "1986-11-12",
+        "fighter": "Elizeu Zaleski dos Santos",
+        "mdy_interpretation": "1986-12-11",
+        "raw_birth_date": "12/11/1986"
+      },
+      {
+        "canonical_dob": "1995-01-05",
+        "dmy_interpretation": "1995-05-01",
+        "fighter": "Ilias Bulaid",
+        "mdy_interpretation": "1995-01-05",
+        "raw_birth_date": "01/05/1995"
+      }
+    ],
+    "neither": [
+      {
+        "canonical_dob": "1985-07-03",
+        "dmy_interpretation": "1985-07-01",
+        "fighter": "Karlos Vemola",
+        "mdy_interpretation": "1985-01-07",
+        "raw_birth_date": "01/07/1985"
+      },
+      {
+        "canonical_dob": "1974-02-12",
+        "dmy_interpretation": "1974-11-02",
+        "fighter": "Jerry Bohlander",
+        "mdy_interpretation": "1974-02-11",
+        "raw_birth_date": "02/11/1974"
+      },
+      {
+        "canonical_dob": "1984-11-29",
+        "dmy_interpretation": "1983-11-30",
+        "fighter": "Shane Nelson",
+        "mdy_interpretation": "",
+        "raw_birth_date": "30/11/1983"
+      },
+      {
+        "canonical_dob": "1976-03-05",
+        "dmy_interpretation": "1974-03-05",
+        "fighter": "Tim Sylvia",
+        "mdy_interpretation": "1974-05-03",
+        "raw_birth_date": "05/03/1974"
+      },
+      {
+        "canonical_dob": "1980-03-12",
+        "dmy_interpretation": "1982-12-03",
+        "fighter": "Icho Larenas",
+        "mdy_interpretation": "1982-03-12",
+        "raw_birth_date": "03/12/1982"
+      },
+      {
+        "canonical_dob": "1994-07-16",
+        "dmy_interpretation": "1994-07-19",
+        "fighter": "Manny Bermudez",
+        "mdy_interpretation": "",
+        "raw_birth_date": "19/07/1994"
+      },
+      {
+        "canonical_dob": "1984-06-10",
+        "dmy_interpretation": "1987-12-11",
+        "fighter": "Amir Aliakbari",
+        "mdy_interpretation": "1987-11-12",
+        "raw_birth_date": "11/12/1987"
+      },
+      {
+        "canonical_dob": "1966-11-10",
+        "dmy_interpretation": "1970-12-31",
+        "fighter": "Ian Freeman",
+        "mdy_interpretation": "",
+        "raw_birth_date": "31/12/1970"
+      },
+      {
+        "canonical_dob": "1987-04-27",
+        "dmy_interpretation": "1991-04-27",
+        "fighter": "Cameron Else",
+        "mdy_interpretation": "",
+        "raw_birth_date": "27/04/1991"
+      },
+      {
+        "canonical_dob": "1985-09-15",
+        "dmy_interpretation": "1985-09-18",
+        "fighter": "Ashkan Mokhtarian",
+        "mdy_interpretation": "",
+        "raw_birth_date": "18/09/1985"
+      },
+      {
+        "canonical_dob": "1984-06-16",
+        "dmy_interpretation": "1984-05-16",
+        "fighter": "Hacran Dias",
+        "mdy_interpretation": "",
+        "raw_birth_date": "16/05/1984"
+      },
+      {
+        "canonical_dob": "1989-04-28",
+        "dmy_interpretation": "1989-04-25",
+        "fighter": "Enrique Barzola",
+        "mdy_interpretation": "",
+        "raw_birth_date": "25/04/1989"
+      },
+      {
+        "canonical_dob": "1978-10-25",
+        "dmy_interpretation": "1978-10-28",
+        "fighter": "Alex Chambers",
+        "mdy_interpretation": "",
+        "raw_birth_date": "28/10/1978"
+      },
+      {
+        "canonical_dob": "1980-02-28",
+        "dmy_interpretation": "1980-02-29",
+        "fighter": "Francimar Barroso",
+        "mdy_interpretation": "",
+        "raw_birth_date": "29/02/1980"
+      },
+      {
+        "canonical_dob": "1960-09-05",
+        "dmy_interpretation": "1964-09-05",
+        "fighter": "Emmanuel Yarborough",
+        "mdy_interpretation": "1964-05-09",
+        "raw_birth_date": "05/09/1964"
+      },
+      {
+        "canonical_dob": "1990-02-28",
+        "dmy_interpretation": "1990-02-23",
+        "fighter": "Jordan Griffin",
+        "mdy_interpretation": "",
+        "raw_birth_date": "23/02/1990"
+      },
+      {
+        "canonical_dob": "1983-01-25",
+        "dmy_interpretation": "1983-02-25",
+        "fighter": "Ron Stallings",
+        "mdy_interpretation": "",
+        "raw_birth_date": "25/02/1983"
+      },
+      {
+        "canonical_dob": "1994-01-22",
+        "dmy_interpretation": "1994-01-17",
+        "fighter": "Arnold Allen",
+        "mdy_interpretation": "",
+        "raw_birth_date": "17/01/1994"
+      },
+      {
+        "canonical_dob": "1974-09-22",
+        "dmy_interpretation": "1973-09-22",
+        "fighter": "Bob Sapp",
+        "mdy_interpretation": "",
+        "raw_birth_date": "22/09/1973"
+      },
+      {
+        "canonical_dob": "1972-07-15",
+        "dmy_interpretation": "1972-08-15",
+        "fighter": "Jason Black",
+        "mdy_interpretation": "",
+        "raw_birth_date": "15/08/1972"
+      },
+      {
+        "canonical_dob": "1977-11-04",
+        "dmy_interpretation": "1977-07-04",
+        "fighter": "Kelly Dullanty",
+        "mdy_interpretation": "1977-04-07",
+        "raw_birth_date": "04/07/1977"
+      },
+      {
+        "canonical_dob": "1987-09-06",
+        "dmy_interpretation": "1980-02-14",
+        "fighter": "Justin Jones",
+        "mdy_interpretation": "",
+        "raw_birth_date": "14/02/1980"
+      },
+      {
+        "canonical_dob": "1981-10-31",
+        "dmy_interpretation": "1981-10-30",
+        "fighter": "Katsunori Kikuno",
+        "mdy_interpretation": "",
+        "raw_birth_date": "30/10/1981"
+      },
+      {
+        "canonical_dob": "1990-08-11",
+        "dmy_interpretation": "1991-08-11",
+        "fighter": "Rolando Dy",
+        "mdy_interpretation": "1991-11-08",
+        "raw_birth_date": "11/08/1991"
+      },
+      {
+        "canonical_dob": "1982-04-07",
+        "dmy_interpretation": "1982-04-17",
+        "fighter": "Tyron Woodley",
+        "mdy_interpretation": "",
+        "raw_birth_date": "17/04/1982"
+      }
+    ]
+  },
+  "generated_at_utc": "2026-08-22T22:11:42.013137Z",
+  "raw_date_shape_counts": {
+    "slash_D_M_Y_unknown": 4036
+  },
+  "schema_version": 1
+}
