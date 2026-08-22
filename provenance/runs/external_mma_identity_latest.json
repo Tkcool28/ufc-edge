@@ -1,10 +1,10 @@
 {
   "audit": "external_mma_identity",
-  "completed_at_utc": "2026-08-22T23:09:19.837119Z",
-  "exit_code": 1,
-  "github_run_id": "32604430577",
-  "log": "provenance/runs/external_mma_identity_32604430577.log",
+  "completed_at_utc": "2026-08-22T23:11:46.274698Z",
+  "exit_code": 0,
+  "github_run_id": "32604544636",
+  "log": "provenance/runs/external_mma_identity_32604544636.log",
   "schema_version": 1,
-  "status": "failed",
-  "trigger_sha": "7f184fca8218dc1a28fca7b3232df126f5976f67"
+  "status": "success",
+  "trigger_sha": "b6e36d7c8037c06dafcfafafe033baa255a22040"
 }
