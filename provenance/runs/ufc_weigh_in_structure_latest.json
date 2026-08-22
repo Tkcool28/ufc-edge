@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_weigh_in_structure",
+  "completed_at_utc": "2026-08-22T22:03:12.278280Z",
+  "exit_code": 0,
+  "github_run_id": "32601334623",
+  "log": "provenance/runs/ufc_weigh_in_structure_32601334623.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "6e05db932a0b6e0689b9a377de9af6f688dd6ef7"
+}

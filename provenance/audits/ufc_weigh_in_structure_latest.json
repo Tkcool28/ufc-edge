@@ -1,0 +1,2306 @@
+{
+  "counts": {
+    "pages": 716,
+    "pages_with_catchweight_language": 54,
+    "pages_with_forfeit_language": 172,
+    "pages_with_miss_language": 93,
+    "pages_with_multiple_pairs": 705,
+    "pages_with_pair_pattern": 707,
+    "pages_with_plausible_weight_token": 716,
+    "pages_with_second_attempt_language": 46,
+    "pages_without_pair_pattern": 9,
+    "total_pair_matches": 8062
+  },
+  "decision": {
+    "canonical_rows_produced": false,
+    "identity_matching_not_attempted": true,
+    "next_gate": "Design extractor only after recurring page structures and unmatched classes are reviewed."
+  },
+  "examples": {
+    "catchweight_language": [
+      {
+        "candidate_index": 22,
+        "catchweight_language": true,
+        "context": "elterweight five-round fight Alex Oliveira (171) vs Donald Cerrone (170) FS1 Main Card Roan Carneiro (184.5) vs Derek Brunson (186) Augusto Mendes (142) vs Cody Garbrandt (140.5) *Catchweight* Tatsuya Kawajiri (146) vs Dennis Bermudez (146) Joe Riggs (186) vs Chris Camozzi (185.5) Shane Campbell (156) vs James Krause (155.5) FS1 Prelims Sean Strickland (170.5) vs Alex",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 13,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 13
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000022_fight-night-cowboy-vs-cowboy-weigh-results-6cb138f0eb7b.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Cowboy vs Cowboy Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-cowboy-vs-cowboy-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 119,
+        "catchweight_language": true,
+        "context": "econd attempt, after an initial weigh-in at 156 pounds. **Garcia made weight on his second attempt, after an initial weigh-in at 173 pounds. ***Gouveia and Belcher will fight at a catchweight of 195 pounds Up Next Official UFC 145 Weigh In Results Univision: Kenny Flori\u00e1n en el cartel de la UFC 107 Univision: Diego Sanchez confiado en la UFC 107 UFC.COM - United States",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000119_official-ufc-107-weigh-results-56681fe8955f.html",
+        "plausible_weight_token_count": 34,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Official UFC 107 Weigh-In Results",
+        "url": "https://www.ufc.com/news/official-ufc-107-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 120,
+        "catchweight_language": true,
+        "context": "Gunderson (155) *Daley was unable to make weight and for safety reasons, the Nevada State Athletic Commission will not allow him to try to cut to 171 pounds. Hazelett agreed to a catchweight bout at 172 pounds and Daley will be fined 10% of his purse. Watch Weigh-in Up Next Official UFC 145 Weigh In Results Gastelum Injured, Out of UFC 195 Evans enfrenta seu maior ini",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000120_official-ufc-108-weigh-results-f4b4f33562eb.html",
+        "plausible_weight_token_count": 32,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Official UFC 108 Weigh-In Results",
+        "url": "https://www.ufc.com/news/official-ufc-108-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 141,
+        "catchweight_language": true,
+        "context": "ousNext Official UFC 147 Weigh In Results By Laura Gilbert \u2022 Jun. 22, 2012 Below are the official weigh in results for Saturday\u2019s UFC 147 event. UFC 147, which is headlined by the catchweight rematch between Wanderlei Silva and Rich Franklin, the heavyweight bout between Fabricio Werdum and Mike Russow, and the crowning of two winners from The Ultimate Fighter </a>Braz",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 5,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 5
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000141_official-ufc-147-weigh-results-3bc9d866c0b8.html",
+        "plausible_weight_token_count": 28,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Official UFC 147 Weigh In Results",
+        "url": "https://www.ufc.com/news/official-ufc-147-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 177,
+        "catchweight_language": true,
+        "context": "The middleweight bout between Ryan Jensen and Steve Steinbeiss will not take place due to a medical approval issue regarding Jensen. *Stephens and Tibau have agreed to fight at a catchweight of 158 pounds. UFC Fight Night is immediately followed by the season premiere of The Ultimate Fighter: United States vs United Kingdom on Spike TV at 10pm ET / PT. Up Next The Ult",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000150/item_000177_official-ufc-fight-night-weigh-results-1-5d37bafcb430.html",
+        "plausible_weight_token_count": 23,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Official UFC Fight Night Weigh-in Results",
+        "url": "https://www.ufc.com/news/official-ufc-fight-night-weigh-results-1",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 193,
+        "catchweight_language": true,
+        "context": "ry (204) Akira Corassani (144) VS Andy Ogle (144) Brad Tavares (185) VS Tom Watson (186) Gunnar Nelson (175) VS DaMarques Johnson (183)* Robbie Peralta (144) VS Jason Young (145) *Catchweight bout Up Next Gastelum Injured, Out of UFC 195 Great Britons - The Top Ten UK Moments Rampage - The PRIDE Years UFC.COM - United States Brazil China Eurasia France Japan Korea Lati",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000150/item_000193_official-ufc-fuel-tv-5-weigh-results-b4502c15b8ce.html",
+        "plausible_weight_token_count": 23,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Official UFC on FUEL TV 5 Weigh In Results",
+        "url": "https://www.ufc.com/news/official-ufc-fuel-tv-5-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 220,
+        "catchweight_language": true,
+        "context": "Rafael Fiziev (155.5) vs Ignacio Bahamondes (155.5) Journey To Baku: Hill vs Rountree Jr | Full Fight Card Preview Heavyweight Bout: Curtis Blaydes (258) vs Rizvan Kuniev (264.5) Catchweight Bout: Tofiq Musayev (163) vs Myktybek Orolbai (165) Lightweight Bout: Nazim Sadykhov (155) vs Nikolas Motta (155.5) Featherweight Bout: Muhammad Naimov (146) vs Bogdan Grad (146)",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000150/item_000220_official-weigh-in-results-hill-rountree-ufc-baku-90c26e3882ab.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2025-06-20T00:01:30-0400",
+        "second_attempt_language": false,
+        "title": "Weigh-In Results | UFC Baku",
+        "url": "https://www.ufc.com/news/official-weigh-in-results-hill-rountree-ufc-baku",
+        "year": "2025"
+      },
+      {
+        "candidate_index": 222,
+        "catchweight_language": true,
+        "context": "Chandler (155.6) Saturday's Full Fight Card Preview Middleweight Bout: Bo Nickal (185.4) vs Paul Craig (186) Women\u2019s Flyweight Bout: Viviane Araujo (125.6) vs Karine Silva (125.8) Catchweight Bout (165-lbs): Mauricio Ruffy (164.4) vs James Llontop (166.2)* Live Weigh-In Show | UFC 309: Jones vs Miocic Unlock MORE of your inner combat sports fan with UFC Fight Pass! Fig",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 13,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 13
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000150/item_000222_official-weigh-in-results-jones-miocic-ufc-309-ae1b27ad1297.html",
+        "plausible_weight_token_count": 27,
+        "published_time": "2024-11-15T12:00:00-0500",
+        "second_attempt_language": false,
+        "title": "Weigh-In Results | UFC 309: Jones vs Miocic",
+        "url": "https://www.ufc.com/news/official-weigh-in-results-jones-miocic-ufc-309",
+        "year": "2024"
+      },
+      {
+        "candidate_index": 241,
+        "catchweight_language": true,
+        "context": "mbo (171) Preview The Entire UFC 310 Fight Card Featherweight Bout: Movsar Evloev (145.5) vs Aljamain Sterling (145.5) Welterweight Bout: Randy Brown (171) vs Bryan Battle (175)** Catchweight Bout (195-lbs): Chris Weidman (194.5) vs Eryk Anders (193) Flyweight Bout: Cody Durden (126) vs Joshua Van (126) Welterweight Bout: Michael Chiesa (170.5) vs Max Griffin (170) Wat",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 14,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 14
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000225/item_000241_official-weigh-in-results-ufc-310-pantoja-vs-asakura-a2a0aad84ff0.html",
+        "plausible_weight_token_count": 30,
+        "published_time": "2024-12-06T18:20:00-0500",
+        "second_attempt_language": false,
+        "title": "Weigh-In Results | UFC 310: Pantoja vs Asakura",
+        "url": "https://www.ufc.com/news/official-weigh-in-results-ufc-310-pantoja-vs-asakura",
+        "year": "2024"
+      },
+      {
+        "candidate_index": 251,
+        "catchweight_language": true,
+        "context": "Have Stepped On The Scales Before Their Saturday Showdowns By UFC Staff Report \u2022 Feb. 25, 2022 UFC continues its run of shows at UFC APEX with an intriguing matchup in a 160-pound catchweight bout, as No. 4 ranked lightweight contender Islam Makhachev aims to halt the momentum of fan favorite Bobby Green, who fills in on short-notice to replace the injured Beneil Dariu",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000225/item_000251_official-weigh-in-results-ufc-fight-night-makhachev-vs-green-vegas-49-f18e00037e77.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2022-02-25T09:00:00-0500",
+        "second_attempt_language": false,
+        "title": "Weigh-In Results | UFC Fight Night: Makhachev vs Green",
+        "url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-makhachev-vs-green-vegas-49",
+        "year": "2022"
+      },
+      {
+        "candidate_index": 258,
+        "catchweight_language": true,
+        "context": ". All other bouts scheduled for three rounds. Official Weigh-In Results: MAIN CARD Main Event - Light Heavyweight Bout: Johnny Walker (206) vs Zhang Mingyang (205) Co-Main Event - Catchweight Bout*: Brian Ortega (153) vs Aljamain Sterling (153) Saturday's Fight By Fight Preview Heavyweight Bout: Sergei Pavlovich (255.5) vs Waldo Cortes-Acosta (262) Flyweight Bout: Sumu",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000225/item_000258_official-weigh-in-results-ufc-fight-night-walker-vs-zhang-shanghai-476209130725.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2025-08-21T23:08:00-0400",
+        "second_attempt_language": false,
+        "title": "Official Weigh-In Results | UFC Fight Night: Walker vs Zhang",
+        "url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-walker-vs-zhang-shanghai",
+        "year": "2025"
+      },
+      {
+        "candidate_index": 263,
+        "catchweight_language": true,
+        "context": "Seattle / Live MAIN CARD Main Event - Bantamweight Bout: Henry Cejudo (135) vs Song Yadong (136) Co-Main Event - Middleweight Bout: Brendan Allen (186) vs Anthony Hernandez (186) Catchweight (140-lbs) Bout: Rob Font (138) vs Jean Matsumoto (139) Full Seattle Fight Card Preview Featherweight Bout: Jean Silva (145.5) vs Melsik Baghdasaryan (145) Light Heavyweight Bout:",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000225/item_000263_official-weigh-results-cejudo-song-ufc-seattle-bc96e112f39d.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2025-02-21T10:30:35-0500",
+        "second_attempt_language": false,
+        "title": "Weigh-In Results | UFC Seattle",
+        "url": "https://www.ufc.com/news/official-weigh-results-cejudo-song-ufc-seattle",
+        "year": "2025"
+      },
+      {
+        "candidate_index": 276,
+        "catchweight_language": true,
+        "context": "Edmen Shahbazyan (185.5) vs Andre Muniz (185.5) FIGHT WEEK FOCUS: Ankalaev vs Pereira 2 | Dvalishvili vs Sandhagen Bantamweight Bout: Chris Gutierrez (136) vs Farid Basharat (136) Catchweight Bout (153-lbs): Daniel Santos (151) vs JooSang Yoo (152.5) EARLY PRELIMS Women\u2019s Bantamweight Bout: Macy Chiasson (137.5)* vs Yana Santos (135) Bantamweight Bout: Patchy Mix (136)",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 13,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 13
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000225/item_000276_official-weigh-results-ufc-320-ankalaev-vs-pereira-2-7cb6d269669a.html",
+        "plausible_weight_token_count": 30,
+        "published_time": "2025-10-03T12:30:21-0400",
+        "second_attempt_language": false,
+        "title": "Official Weigh-In Results | UFC 320: Ankalaev vs Pereira 2",
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-320-ankalaev-vs-pereira-2",
+        "year": "2025"
+      },
+      {
+        "candidate_index": 285,
+        "catchweight_language": true,
+        "context": "r Abdul-Malik (186) vs Dustin Stoltzfus (185) Lightweight Bout: Edson Barboza (156) vs Esteban Ribovics (156) PRELIMS Welterweight Bout: Chidi Njokuani (171) vs Joel Alvarez (171) Catchweight (130-lbs) Bout: Charles Johnson (129.5) vs Eduardo Chapolin (129.5) WATCH: UFC 330 Embedded | Countdown | Main Event Preview Middleweight Bout: Donte Johnson (184.5) vs Eric McCon",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000225/item_000285_official-weigh-results-ufc-330-makhachev-vs-machado-garry-8cd61c39f5de.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2026-08-14T11:00:00-0400",
+        "second_attempt_language": false,
+        "title": "Official Weigh-In Results | UFC 330: Makhachev vs Machado Garry",
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-330-makhachev-vs-machado-garry",
+        "year": "2026"
+      },
+      {
+        "candidate_index": 293,
+        "catchweight_language": true,
+        "context": "alott Interview | Boser Back | Leblanc Arrives | Raposo Interview | Jourdain Interview | Jasudavicius Interview Women\u2019s Flyweight Bout: JJ Aldrich (125.5) vs Jamey Lyn-Horth (126) Catchweight Bout (139lbs): John Castaneda (139) vs Mark Vologdin (138.5) Bantamweight Bout: Jamie Siraj (136) vs John Yannis (136) UFC Fight Night: Burns vs Malott took place live from Canada",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000225/item_000293_official-weigh-results-ufc-burns-malott-winnipeg-1e486a0d554d.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2026-04-17T12:00:00-0400",
+        "second_attempt_language": false,
+        "title": "Official Weigh-In Results | UFC Winnipeg",
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-burns-malott-winnipeg",
+        "year": "2026"
+      }
+    ],
+    "forfeit_language": [
+      {
+        "candidate_index": 5,
+        "catchweight_language": false,
+        "context": "ms \u2013 7 pm ET/4 pm PT JJ Aldrich (116) vs Chan-Mi Jeon (118)* Dong Hyun Kim (155) vs Thibault Gouti (154) *Chan-Mi Jeon missed weight, coming in at 118 pounds. She will be fined 20 percent of her purse and the fight will proceed as scheduled Up Next UFC 25: Beast Mode Top 10: The Phenom Nguyen focused on Elliott after opponent change UFC.COM - United States Brazil China Eurasia",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "Five round bout Derrick Lewis",
+            "fighter_b_text": "Mark Hunt",
+            "pattern": "paren_vs_paren",
+            "weight_a": "265",
+            "weight_b": "265"
+          },
+          {
+            "fighter_a_text": "pm PT Derek Brunson",
+            "fighter_b_text": "Daniel Kelly",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "Dan Hooker",
+            "fighter_b_text": "Ross Pearson",
+            "pattern": "paren_vs_paren",
+            "weight_a": "156",
+            "weight_b": "155"
+          },
+          {
+            "fighter_a_text": "Ion Cutelaba",
+            "fighter_b_text": "Henrique da Silva",
+            "pattern": "paren_vs_paren",
+            "weight_a": "204",
+            "weight_b": "206"
+          },
+          {
+            "fighter_a_text": "Tim Elliott",
+            "fighter_b_text": "Ben Nguyen",
+            "pattern": "paren_vs_paren",
+            "weight_a": "126",
+            "weight_b": "126"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000005_fight-night-auckland-official-weigh-results-a6eed28df6d6.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Auckland official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-auckland-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 10,
+        "catchweight_language": false,
+        "context": "missed weight by four pounds for his bout against John Dodson, UFC officials have pulled the fight from Saturday night's event **Prazeres missed lightweight limit by five pounds, forfeits 20 percent of purse to opponent Up Next UFC 25: Beast Mode Top 10: The Phenom Amanda Nunes's Super Six UFC.COM - United States Brazil China Eurasia France Japan Korea Latin Americ",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm ETPT. Main Event - Five Round Bout Lyoto Machida",
+            "fighter_b_text": "Eryk Anders",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "Valentina Shevchenko",
+            "fighter_b_text": "Priscila Cachoeira",
+            "pattern": "paren_vs_paren",
+            "weight_a": "125",
+            "weight_b": "126"
+          },
+          {
+            "fighter_a_text": "Timothy Johnson",
+            "fighter_b_text": "Marcelo Golm",
+            "pattern": "paren_vs_paren",
+            "weight_a": "263",
+            "weight_b": "247"
+          },
+          {
+            "fighter_a_text": "Thiago Santos",
+            "fighter_b_text": "Anthony Smith",
+            "pattern": "paren_vs_paren",
+            "weight_a": "185",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "pm ETPT Sergio Moraes",
+            "fighter_b_text": "Tim Means",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "171"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000010_fight-night-belem-weigh-results-d453ffc08715.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Belem: Weigh-in Results",
+        "url": "https://www.ufc.com/news/fight-night-belem-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 26,
+        "catchweight_language": false,
+        "context": "/3:30 pm PT Sam Alvey (186) vs Alex Nicholson (186) Polo Reyes (156) vs Jason Novelli (156) Enrique Barzola (146) vs Chris Avila (146) *Oliveira missed weight and will be fined 30 percent of his purse. He is required to weigh no more than 165 pounds on Saturday for the fight to proceed as scheduled. **Arantes missed weight and will be fined 20 percent of his purse. His fight wi",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000026_fight-night-dos-anjos-vs-ferguson-weigh-results-d1ea9abab795.html",
+        "plausible_weight_token_count": 27,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night: Dos Anjos vs Ferguson weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-dos-anjos-vs-ferguson-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 31,
+        "catchweight_language": false,
+        "context": ") VS Al Iaquinta (155) Chris Camozzi (186) VS Rafael Natal (185) Chris Beal (135) VS Tateki Matsuda (135) Chas Skelly (145) VS Sean Soriano (145) *Oliveira missed weight - he will forfeit 20% of his purse and the fight will go on as scheduled Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Headline in San Diego Green Out, Gil In for Iaquinta Bout in July",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 8,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 8
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000031_fight-night-foxwoods-weigh-results-1f5ebc76d013.html",
+        "plausible_weight_token_count": 21,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Foxwoods Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-foxwoods-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 39,
+        "catchweight_language": false,
+        "context": "ieira (136) Jack Marshman (184) vs Thiago Santos (186) UFC FIGHT PASS Prelims \u2013 6:30 pm ET/3:30 pm PT Gerald Meerschaert (185) vs Ryan Janes (185.5) *Mazany missed weight and will forfeit 20 percent of her purse to her opponent Sara McMann Up Next UFC 25: Beast Mode Top 10: The Phenom Anderson's UFC jump opens door for Evinger UFC.COM - United States Brazil China E",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000039_fight-night-halifax-weigh-results-e8ea63a3145f.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Halifax: Weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-halifax-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 42,
+        "catchweight_language": false,
+        "context": "wlings (117.5)* UFC FIGHT PASS Prelims \u2013 7 pm ET/4 pm PT Alex Morono (170) vs Niko Price (170.5) Daniel Jolly (204.5) vs Khalil Rountree Jr. (205) *Rawlings missed weight and will forfeit 20 percent of her purse to her opponent Tecia Torres Up Next UFC 25: Beast Mode Grasso embraces main card pressures with aplomb Manuwa vs. Anderson headlines London event UFC.COM",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000042_fight-night-houston-weigh-results-3ed4f7d04317.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Houston: Weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-houston-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 57,
+        "catchweight_language": false,
+        "context": "Prelims - 7pm/4pm ETPT Joseph Morales (125) vs Roberto Sanchez (126) Alvaro Herrera (156) vs Jordan Rinaldi (156) * Alexa Grasso (119) failed to make weight. She will be fined 20 percent of her purse and her bout against Randa Markos will proceed as scheduled. Up Next UFC 25: Beast Mode Bisping finally reaping rewards after years of sacrifice The Downes Side - Fight Night Port",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000057_fight-night-mexico-city-official-weigh-results-577a569b986a.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:47:00-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Mexico City official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-mexico-city-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 58,
+        "catchweight_language": false,
+        "context": ") vs. Don Madge (154) Arjan Singh Bhullar (242) vs. Marcelo Golm (255.5) Stevie Ray (155.5) vs. Jessin Ayari (155) *Michael Johnson missed weight by one pound and will be fined 20 percent of his purse. The fight will proceed as scheduled. Tags UFC Moncton Light Heavyweight Volkan Oezdemir anthony smith Up Next Smith Enjoying The Process; Letting His Performances Do The Talking",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000058_fight-night-moncton-official-weigh-results-f367699c89c7.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-11-05T10:04:52-0500",
+        "second_attempt_language": false,
+        "title": "Fight Night Moncton: Official Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-moncton-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 60,
+        "catchweight_language": false,
+        "context": "s Rogerio De Lima wissed weight for fight with Ovince Saint Preux. Came in at 210 pounds for the light heavyweight fight. Fight will proceed as scheduled. De Lima will be fined 30 percent of his purse due to this being his second consecutive miss. Money goes to OSP. Up Next UFC 25: Beast Mode UFC\u00ae Announces Three Bouts for Highly Anticipated Return to Scotland Holtzman feels he",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000060_fight-night-nashville-official-weigh-results-7dc0c296ebcd.html",
+        "plausible_weight_token_count": 27,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Nashville: Official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-nashville-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 65,
+        "catchweight_language": false,
+        "context": "(156) vs Johnny Case (156) Joshua Stansbury (206) vs Jeremy Kimball (204) *Johnny Hendricks (188) and Jared Gordon (149) both failed to make weight. Each fighter will be fined 20 percent of his purse, and their bouts against Tim Boetsch and Michel Quinones, respectively, will proceed as scheduled. Up Next UFC 25: Beast Mode Top 10: The Phenom Guida defeats Koch, Gordon wins de",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000065_fight-night-oklahoma-city-official-weigh-results-7a122ab23cfd.html",
+        "plausible_weight_token_count": 28,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Oklahoma City official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-oklahoma-city-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 74,
+        "catchweight_language": false,
+        "context": "dsharipov (146) Bojan Mihajlovic (205) vs Abdul-Kerim Edilov (204) Thibault Gouti (155) vs Andrew Holbrook (156) * Michel Prazeres (159) failed to make weight. He will be fined 20 percent of his purse and his bout against Mads Burnell will proceed as scheduled. Up Next UFC 25: Beast Mode Top 10: The Phenom From engineer to prizefighter, Volkov taking step forward vs Struve UFC.",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000074_fight-night-rotterdam-official-weigh-results-717f182c5b40.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Rotterdam official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-rotterdam-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 77,
+        "catchweight_language": false,
+        "context": "e (126) vs. Kalindra Faria (124.5) J.J. Aldrich (115.5) vs. Danielle Taylor (113.5) Mads Burnell (150)* vs. Mike Santiago (146) *Burnell missed featherweight limit by four pounds, forfeits 20 percent of purse to opponent Scheduled fight between Uriah Hall and Vitor Belfort has been called off after Hall was unable to make weight. Up Next UFC 25: Beast Mode Top 10: T",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000077_fight-night-saint-louis-weigh-results-e687d997bfad.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Saint Louis: Weigh-in Results",
+        "url": "https://www.ufc.com/news/fight-night-saint-louis-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 78,
+        "catchweight_language": false,
+        "context": "7:30pm/4:30pm ETPT Daichi Abe (171) vs Hyun Gyu Lim (170.5) * = Mizuto Hirota missed weight by four pounds. His bout with Charles Rosa is still scheduled but he will sacrifice 30 percent of his purse to Rosa. Up Next Rankings: Rockhold, Hall, Usman & Perry Rise UFC 25: Beast Mode Top 10: The Phenom UFC.COM - United States Brazil China Eurasia France Japan Korea Latin America U",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000078_fight-night-saint-preux-vs-okami-official-weigh-results-e0119ef684ef.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night: Saint Preux vs. Okami - Official Weigh-in Results",
+        "url": "https://www.ufc.com/news/fight-night-saint-preux-vs-okami-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 89,
+        "catchweight_language": false,
+        "context": "ne (135) Naoki Inoue (124) vs Carls John De Tomas (131*) Ji Yeon Kim (136) vs Lucie Pudilova (134) *Carls John De Tomas missed weight, coming in at 131 pounds. He will be fined 30 percent of his purse and the fight will proceed as scheduled Up Next UFC 25: Beast Mode Top 10: The Phenom Camacho finally got the call he's been waiting a decade for UFC.COM - United States Brazil Ch",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000089_fight-night-singapore-official-weigh-results-94a8325e8bc9.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Singapore official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-singapore-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 101,
+        "catchweight_language": false,
+        "context": "de Freitas Jr. (145.5) vs. Felipe Colares (145) Ricardo Ramos (135.5) vs. Said Nurmagomedov (135) Magomed Bibulatov (127)*** vs Rogerio Bontorin (124.5) ** Magomed Bibulatov will forfeit 20% to his opponent. * Sarah Frota will forfeit 40% to her opponent. Tags Official Weigh-In Up Next The 10: February's Fantastic Fights Aussie & Fancy Breakdown: Fortaleza Fight N",
+        "forfeit_language": true,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000101_fortaleza-weigh-results-8332729255df.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2019-02-01T08:18:30-0500",
+        "second_attempt_language": false,
+        "title": "Fortaleza Weigh-in Results",
+        "url": "https://www.ufc.com/news/fortaleza-weigh-results",
+        "year": "2019"
+      }
+    ],
+    "miss_language": [
+      {
+        "candidate_index": 2,
+        "catchweight_language": false,
+        "context": "(169) vs Hector Aldana (169.5) UFC Fight Pass Early Prelims at 7pm/4pm ETPT Devin Powell (155) vs Jesus Pinedo (156) Nad Narimani (145.5) vs Anderson dos Santos (144.5) *Calvillo missed weight and will be fined 20% of her purse. The fight will proceed as scheduled. Up Next TUF Blog: Josh Parisian Part 10 Josh Parisian continues his first-person account of participating",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm ETPT Neil Magny",
+            "fighter_b_text": "Santiago Ponzinibbio",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Ricardo Lamas",
+            "fighter_b_text": "Darren Elkins",
+            "pattern": "paren_vs_paren",
+            "weight_a": "145.5",
+            "weight_b": "145"
+          },
+          {
+            "fighter_a_text": "Khalil Rountree",
+            "fighter_b_text": "Johnny Walker",
+            "pattern": "paren_vs_paren",
+            "weight_a": "204.5",
+            "weight_b": "205.5"
+          },
+          {
+            "fighter_a_text": "Cezar Ferreira",
+            "fighter_b_text": "Ian Heinisch",
+            "pattern": "paren_vs_paren",
+            "weight_a": "185.5",
+            "weight_b": "185"
+          },
+          {
+            "fighter_a_text": "Guido Cannetti",
+            "fighter_b_text": "Marlon Vera",
+            "pattern": "paren_vs_paren",
+            "weight_a": "135.5",
+            "weight_b": "135.5"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000002_fight-night-argentina-official-weigh-results-c92f1c5be23e.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-11-16T07:13:35-0500",
+        "second_attempt_language": false,
+        "title": "Fight Night Argentina: Official Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-argentina-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 5,
+        "catchweight_language": false,
+        "context": "Kiichi Kunimoto(170) vs Zak Ottow (171) UFC FIGHT PASS Prelims \u2013 7 pm ET/4 pm PT JJ Aldrich (116) vs Chan-Mi Jeon (118)* Dong Hyun Kim (155) vs Thibault Gouti (154) *Chan-Mi Jeon missed weight, coming in at 118 pounds. She will be fined 20 percent of her purse and the fight will proceed as scheduled Up Next UFC 25: Beast Mode Top 10: The Phenom Nguyen focused on Elliott",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "Five round bout Derrick Lewis",
+            "fighter_b_text": "Mark Hunt",
+            "pattern": "paren_vs_paren",
+            "weight_a": "265",
+            "weight_b": "265"
+          },
+          {
+            "fighter_a_text": "pm PT Derek Brunson",
+            "fighter_b_text": "Daniel Kelly",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "Dan Hooker",
+            "fighter_b_text": "Ross Pearson",
+            "pattern": "paren_vs_paren",
+            "weight_a": "156",
+            "weight_b": "155"
+          },
+          {
+            "fighter_a_text": "Ion Cutelaba",
+            "fighter_b_text": "Henrique da Silva",
+            "pattern": "paren_vs_paren",
+            "weight_a": "204",
+            "weight_b": "206"
+          },
+          {
+            "fighter_a_text": "Tim Elliott",
+            "fighter_b_text": "Ben Nguyen",
+            "pattern": "paren_vs_paren",
+            "weight_a": "126",
+            "weight_b": "126"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000005_fight-night-auckland-official-weigh-results-a6eed28df6d6.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Auckland official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-auckland-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 10,
+        "catchweight_language": false,
+        "context": "antara (136) vs. Joe Soto (135) UFC Fight Pass Prelims - 7pm/4pm ETPT Deiveson Figueiredo (126) vs. Joseph Morales (126) Maia Stevenson (116) vs. Polyana Viana (116) *Pedro Munhoz missed weight by four pounds for his bout against John Dodson, UFC officials have pulled the fight from Saturday night's event **Prazeres missed lightweight limit by five pounds, forfeits 20 pe",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm ETPT. Main Event - Five Round Bout Lyoto Machida",
+            "fighter_b_text": "Eryk Anders",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "Valentina Shevchenko",
+            "fighter_b_text": "Priscila Cachoeira",
+            "pattern": "paren_vs_paren",
+            "weight_a": "125",
+            "weight_b": "126"
+          },
+          {
+            "fighter_a_text": "Timothy Johnson",
+            "fighter_b_text": "Marcelo Golm",
+            "pattern": "paren_vs_paren",
+            "weight_a": "263",
+            "weight_b": "247"
+          },
+          {
+            "fighter_a_text": "Thiago Santos",
+            "fighter_b_text": "Anthony Smith",
+            "pattern": "paren_vs_paren",
+            "weight_a": "185",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "pm ETPT Sergio Moraes",
+            "fighter_b_text": "Tim Means",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "171"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000010_fight-night-belem-weigh-results-d453ffc08715.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Belem: Weigh-in Results",
+        "url": "https://www.ufc.com/news/fight-night-belem-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 15,
+        "catchweight_language": false,
+        "context": "54.5) VS Efrain Escudero (156) Jim Alers (145) VS Chas Skelly (145.75) Tim Elliott (125) VS Zach Makovsky (125.5) Cody Pfister (156) VS James Moontasri (158*) *Moontasri and Walsh missed weight. They will be fined 20% of their purse and the fights will proceed as scheduled. **Kelades made weight on his second attempt after initially weighing in at 127 pounds. Up Next Gas",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 6,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 6
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000015_fight-night-broomfield-2015-weigh-results-87f61d4059df.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Broomfield 2015 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-broomfield-2015-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 26,
+        "catchweight_language": false,
+        "context": "UFC FIGHT PASS Prelims \u2013 6:30 pm ET/3:30 pm PT Sam Alvey (186) vs Alex Nicholson (186) Polo Reyes (156) vs Jason Novelli (156) Enrique Barzola (146) vs Chris Avila (146) *Oliveira missed weight and will be fined 30 percent of his purse. He is required to weigh no more than 165 pounds on Saturday for the fight to proceed as scheduled. **Arantes missed weight and will be f",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000026_fight-night-dos-anjos-vs-ferguson-weigh-results-d1ea9abab795.html",
+        "plausible_weight_token_count": 27,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night: Dos Anjos vs Ferguson weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-dos-anjos-vs-ferguson-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 31,
+        "catchweight_language": false,
+        "context": "(126) Rodrigo Damm (156) VS Al Iaquinta (155) Chris Camozzi (186) VS Rafael Natal (185) Chris Beal (135) VS Tateki Matsuda (135) Chas Skelly (145) VS Sean Soriano (145) *Oliveira missed weight - he will forfeit 20% of his purse and the fight will go on as scheduled Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Headline in San Diego Green Out, Gil In for Iaq",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 8,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 8
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000031_fight-night-foxwoods-weigh-results-1f5ebc76d013.html",
+        "plausible_weight_token_count": 21,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Foxwoods Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-foxwoods-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 33,
+        "catchweight_language": false,
+        "context": "Artem Lobov (145) vs. Andre Fili (145) Salim Touahri (171) vs. Warlley Alves (171) Lina Lansberg (134) vs. Aspen Ladd (136) Josh Emmett (145) vs Felipe Arantes (145) * = Sam Alvey missed weight by four pounds. His bout with Ramazan Emeev will proceed as scheduled. Up Next UFC 25: Beast Mode Top 10: The Phenom Amanda Nunes's Super Six UFC.COM - United States Brazil China",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000033_fight-night-gdansk-weigh-results-72f0668dc17b.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Gdansk: Weigh-in Results",
+        "url": "https://www.ufc.com/news/fight-night-gdansk-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 34,
+        "catchweight_language": false,
+        "context": "Charlie Ward (169) vs Galore Bofando (170) UFC FIGHT PASS Prelims \u2013 12PM / 9AM ETPT Brett Johns (135) vs Albert Morales (134) Leslie Smith (135) vs Amanda Lemos (134) *Calderwood missed weight, she will be fined with 20% of her purse and the fight will go on as planned. Related: Read - On The Rise: Glasgow Edition Up Next UFC 25: Beast Mode Top 10: The Phenom Fight Nigh",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000034_fight-night-glasgow-official-weigh-results-2b2d133d5f8b.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Glasgow official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-glasgow-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 39,
+        "catchweight_language": false,
+        "context": "bi (135) vs Reginaldo Vieira (136) Jack Marshman (184) vs Thiago Santos (186) UFC FIGHT PASS Prelims \u2013 6:30 pm ET/3:30 pm PT Gerald Meerschaert (185) vs Ryan Janes (185.5) *Mazany missed weight and will forfeit 20 percent of her purse to her opponent Sara McMann Up Next UFC 25: Beast Mode Top 10: The Phenom Anderson's UFC jump opens door for Evinger UFC.COM - United Stat",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000039_fight-night-halifax-weigh-results-e8ea63a3145f.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Halifax: Weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-halifax-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 42,
+        "catchweight_language": false,
+        "context": "orres (115.5) vs Bec Rawlings (117.5)* UFC FIGHT PASS Prelims \u2013 7 pm ET/4 pm PT Alex Morono (170) vs Niko Price (170.5) Daniel Jolly (204.5) vs Khalil Rountree Jr. (205) *Rawlings missed weight and will forfeit 20 percent of her purse to her opponent Tecia Torres Up Next UFC 25: Beast Mode Grasso embraces main card pressures with aplomb Manuwa vs. Anderson headlines Lond",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000042_fight-night-houston-weigh-results-3ed4f7d04317.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Houston: Weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-houston-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 47,
+        "catchweight_language": false,
+        "context": "milton (259) VS Daniel Omielanczuk (243) Alexandra Albu (114) VS Izabela Badurek (115.65*) Stevie Ray (155) VS Marcin Bandel (154) Rocky Lee (145) VS Taylor Lapilus (144) *Badurek missed weight (117) on her first attempt Up Next Gastelum Injured, Out of UFC 195 Green Out, Gil In for Iaquinta Bout in July Duffy to Face Poirier in Dublin Main Event UFC.COM - United States",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000047_fight-night-krakow-2015-weigh-results-8724003936f2.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Krakow 2015 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-krakow-2015-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 50,
+        "catchweight_language": false,
+        "context": "Mazany (135) Brad Scott (171) vs Carlo Pedersoli (170) Gillian Robertson (125) vs Molly McCann (127)** FIGHT PASS Early Prelim Elias Theodorou (186) vs Trevor Smith (186) **McCann missed weight and will be fined 20% of her purse. She is required to weigh no more than 136 pounds on Sunday. *Till missed weight and will be fined 30% of his purse. He is required to weigh no",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000050_fight-night-liverpool-official-weigh-results-cf098e2a6647.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Liverpool: Official Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-liverpool-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 58,
+        "catchweight_language": false,
+        "context": "rly Prelims (6:30pm/3:30pm ETPT) Te Edwards (156) vs. Don Madge (154) Arjan Singh Bhullar (242) vs. Marcelo Golm (255.5) Stevie Ray (155.5) vs. Jessin Ayari (155) *Michael Johnson missed weight by one pound and will be fined 20 percent of his purse. The fight will proceed as scheduled. Tags UFC Moncton Light Heavyweight Volkan Oezdemir anthony smith Up Next Smith Enjoyin",
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000058_fight-night-moncton-official-weigh-results-f367699c89c7.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-11-05T10:04:52-0500",
+        "second_attempt_language": false,
+        "title": "Fight Night Moncton: Official Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-moncton-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 63,
+        "catchweight_language": false,
+        "context": "(155.5) Justin Edwards (156) VS Joe Proctor (156) UFC FIGHT PASS EARLY PRELIMS Jake Collier (185.5) VS Ricardo Abreu (183) Leonardo Morales (137*) VS Jose Quinonez (135) *Morales missed weight on his second attempt after initially coming in at 140 pounds - he will be fined 20% of his purse and the fight will proceed as scheduled. **Medeiros came in overweight - he will",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000063_fight-night-new-orleans-weigh-results-f053717f1f13.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night New Orleans Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-new-orleans-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 66,
+        "catchweight_language": false,
+        "context": "Vicente Luque (171) VS Hayder Hassan (170) Luis Henrique (248) VS Francis Ngannou (254) *Castillo made weight on his second attempt after initially weighing in at 158 ** Oliveira missed weight - he will be fined 20% of his purse and the bout will proceed as scheduled Up Next Gastelum Injured, Out of UFC 195 UFC 25: Beast Mode Bisping finally reaping rewards after years",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000066_fight-night-orlando-weigh-results-d5771cac2bbf.html",
+        "plausible_weight_token_count": 28,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Orlando Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-orlando-weigh-results",
+        "year": "2018"
+      }
+    ],
+    "multiple_pair_patterns": [
+      {
+        "candidate_index": 0,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "PM ETPT Deiveson Figueiredo",
+            "fighter_b_text": "Joseph Benavidez",
+            "pattern": "paren_vs_paren",
+            "weight_a": "125",
+            "weight_b": "125"
+          },
+          {
+            "fighter_a_text": "Jack Hermansson",
+            "fighter_b_text": "Kelvin Gastelum",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "Marc Diakiese",
+            "fighter_b_text": "Rafael Fiziev",
+            "pattern": "paren_vs_paren",
+            "weight_a": "156",
+            "weight_b": "156"
+          },
+          {
+            "fighter_a_text": "Ariane Lipski",
+            "fighter_b_text": "Luana Carolina",
+            "pattern": "paren_vs_paren",
+            "weight_a": "126",
+            "weight_b": "126"
+          },
+          {
+            "fighter_a_text": "Alexandre Pantoja",
+            "fighter_b_text": "Askar Askarov",
+            "pattern": "paren_vs_paren",
+            "weight_a": "125",
+            "weight_b": "126"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000000_fight-island-2-official-weigh-results-e63e97aa2dfe.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2020-07-16T15:24:58-0400",
+        "second_attempt_language": false,
+        "title": "Fight Island 2 Official Weigh-in Results",
+        "url": "https://www.ufc.com/news/fight-island-2-official-weigh-results",
+        "year": "2020"
+      },
+      {
+        "candidate_index": 1,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm PT. MAIN EVENT Mark Hunt",
+            "fighter_b_text": "Stipe Miocic",
+            "pattern": "paren_vs_paren",
+            "weight_a": "266",
+            "weight_b": "243"
+          },
+          {
+            "fighter_a_text": "UFC FIGHT PASS MAIN CARD Robert Whittaker",
+            "fighter_b_text": "Brad Tavares",
+            "pattern": "paren_vs_paren",
+            "weight_a": "185",
+            "weight_b": "184"
+          },
+          {
+            "fighter_a_text": "Sean O\u2019Connell",
+            "fighter_b_text": "Anthony Perosh",
+            "pattern": "paren_vs_paren",
+            "weight_a": "205",
+            "weight_b": "205"
+          },
+          {
+            "fighter_a_text": "James Vick",
+            "fighter_b_text": "Jake Matthews",
+            "pattern": "paren_vs_paren",
+            "weight_a": "156",
+            "weight_b": "155"
+          },
+          {
+            "fighter_a_text": "UFC FIGHT PASS PRELIMS Daniel Hooker",
+            "fighter_b_text": "Hatsu Hioki",
+            "pattern": "paren_vs_paren",
+            "weight_a": "145",
+            "weight_b": "146"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000001_fight-night-adelaide-2015-weigh-results-606e90bbd9e9.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Adelaide 2015 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-adelaide-2015-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 2,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm ETPT Neil Magny",
+            "fighter_b_text": "Santiago Ponzinibbio",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Ricardo Lamas",
+            "fighter_b_text": "Darren Elkins",
+            "pattern": "paren_vs_paren",
+            "weight_a": "145.5",
+            "weight_b": "145"
+          },
+          {
+            "fighter_a_text": "Khalil Rountree",
+            "fighter_b_text": "Johnny Walker",
+            "pattern": "paren_vs_paren",
+            "weight_a": "204.5",
+            "weight_b": "205.5"
+          },
+          {
+            "fighter_a_text": "Cezar Ferreira",
+            "fighter_b_text": "Ian Heinisch",
+            "pattern": "paren_vs_paren",
+            "weight_a": "185.5",
+            "weight_b": "185"
+          },
+          {
+            "fighter_a_text": "Guido Cannetti",
+            "fighter_b_text": "Marlon Vera",
+            "pattern": "paren_vs_paren",
+            "weight_a": "135.5",
+            "weight_b": "135.5"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000002_fight-night-argentina-official-weigh-results-c92f1c5be23e.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-11-16T07:13:35-0500",
+        "second_attempt_language": false,
+        "title": "Fight Night Argentina: Official Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-argentina-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 3,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "am ETPT. Main Event Andrei Arlovski",
+            "fighter_b_text": "Josh Barnett",
+            "pattern": "paren_vs_paren",
+            "weight_a": "238",
+            "weight_b": "256"
+          },
+          {
+            "fighter_a_text": "UFC FIGHT PASS Main Card Alexander Gustafsson",
+            "fighter_b_text": "Jan Blachowicz",
+            "pattern": "paren_vs_paren",
+            "weight_a": "205",
+            "weight_b": "205"
+          },
+          {
+            "fighter_a_text": "Ryan Bader",
+            "fighter_b_text": "Ilir Latifi",
+            "pattern": "paren_vs_paren",
+            "weight_a": "205",
+            "weight_b": "205"
+          },
+          {
+            "fighter_a_text": "Nick Hein",
+            "fighter_b_text": "Tae Hyun Bang",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155",
+            "weight_b": "156"
+          },
+          {
+            "fighter_a_text": "UFC FIGHT PASS Prelims Jessin Ayari",
+            "fighter_b_text": "Jim Wallhead",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "170"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000003_fight-night-arlovski-vs-barnett-weigh-results-2f54abc9d3fc.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Arlovski vs Barnett weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-arlovski-vs-barnett-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 4,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm ETPT. Five-round lightweight main event Edson Barboza",
+            "fighter_b_text": "Kevin Lee",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155.6",
+            "weight_b": "157"
+          },
+          {
+            "fighter_a_text": "Main Card Frankie Edgar",
+            "fighter_b_text": "Cub Swanson",
+            "pattern": "paren_vs_paren",
+            "weight_a": "145.6",
+            "weight_b": "145"
+          },
+          {
+            "fighter_a_text": "Justin Willis",
+            "fighter_b_text": "Chase Sherman",
+            "pattern": "paren_vs_paren",
+            "weight_a": "265.4",
+            "weight_b": "247"
+          },
+          {
+            "fighter_a_text": "David Branch",
+            "fighter_b_text": "Thiago Santos",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "185.8"
+          },
+          {
+            "fighter_a_text": "Aljamain Sterling",
+            "fighter_b_text": "Brett Johns",
+            "pattern": "paren_vs_paren",
+            "weight_a": "135.2",
+            "weight_b": "135.8"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000004_fight-night-atlantic-city-official-weigh-results-35f2aa4ae8f0.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Atlantic City: Official Weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-atlantic-city-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 5,
+        "catchweight_language": false,
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "Five round bout Derrick Lewis",
+            "fighter_b_text": "Mark Hunt",
+            "pattern": "paren_vs_paren",
+            "weight_a": "265",
+            "weight_b": "265"
+          },
+          {
+            "fighter_a_text": "pm PT Derek Brunson",
+            "fighter_b_text": "Daniel Kelly",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "Dan Hooker",
+            "fighter_b_text": "Ross Pearson",
+            "pattern": "paren_vs_paren",
+            "weight_a": "156",
+            "weight_b": "155"
+          },
+          {
+            "fighter_a_text": "Ion Cutelaba",
+            "fighter_b_text": "Henrique da Silva",
+            "pattern": "paren_vs_paren",
+            "weight_a": "204",
+            "weight_b": "206"
+          },
+          {
+            "fighter_a_text": "Tim Elliott",
+            "fighter_b_text": "Ben Nguyen",
+            "pattern": "paren_vs_paren",
+            "weight_a": "126",
+            "weight_b": "126"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000005_fight-night-auckland-official-weigh-results-a6eed28df6d6.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Auckland official weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-auckland-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 6,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm PT. MAIN EVENT Cub Swanson",
+            "fighter_b_text": "Frankie Edgar",
+            "pattern": "paren_vs_paren",
+            "weight_a": "145.8",
+            "weight_b": "145"
+          },
+          {
+            "fighter_a_text": "MAIN CARD Edson Barboza",
+            "fighter_b_text": "Bobby Green",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155",
+            "weight_b": "155.4"
+          },
+          {
+            "fighter_a_text": "Chico Camus",
+            "fighter_b_text": "Brad Pickett",
+            "pattern": "paren_vs_paren",
+            "weight_a": "125.6",
+            "weight_b": "126"
+          },
+          {
+            "fighter_a_text": "Alexey Oliynyk",
+            "fighter_b_text": "Jared Rosholt",
+            "pattern": "paren_vs_paren",
+            "weight_a": "235",
+            "weight_b": "240"
+          },
+          {
+            "fighter_a_text": "Dustin Ortiz",
+            "fighter_b_text": "Joseph Benavidez",
+            "pattern": "paren_vs_paren",
+            "weight_a": "125.6",
+            "weight_b": "125.6"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000006_fight-night-austin-2014-weigh-results-d9437bf16bb8.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Austin 2014 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-austin-2014-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 7,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "Rounds Donald Cerrone",
+            "fighter_b_text": "Yancy Medeiros",
+            "pattern": "paren_vs_paren",
+            "weight_a": "169.5",
+            "weight_b": "170.5"
+          },
+          {
+            "fighter_a_text": "pm ETPT James Vick",
+            "fighter_b_text": "Francisco Trinaldo",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155.5",
+            "weight_b": "156"
+          },
+          {
+            "fighter_a_text": "Thiago Alves",
+            "fighter_b_text": "Curtis Millender",
+            "pattern": "paren_vs_paren",
+            "weight_a": "170.5",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Steven Peterson",
+            "fighter_b_text": "Brandon Davis",
+            "pattern": "paren_vs_paren",
+            "weight_a": "145.5",
+            "weight_b": "146"
+          },
+          {
+            "fighter_a_text": "Sage Northcutt",
+            "fighter_b_text": "Thibault Gouti",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155.5",
+            "weight_b": "155.5"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000007_fight-night-austin-weigh-results-1dafaf40ba8a.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Austin: Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-austin-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 8,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm PT. MAIN EVENT Ovince Saint Preux",
+            "fighter_b_text": "Ryan Bader",
+            "pattern": "paren_vs_paren",
+            "weight_a": "205",
+            "weight_b": "205"
+          },
+          {
+            "fighter_a_text": "MAIN CARD Ross Pearson",
+            "fighter_b_text": "Gray Maynard",
+            "pattern": "paren_vs_paren",
+            "weight_a": "156",
+            "weight_b": "156"
+          },
+          {
+            "fighter_a_text": "Brad Tavares",
+            "fighter_b_text": "Tim Boetsch",
+            "pattern": "paren_vs_paren",
+            "weight_a": "185",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "Alan Jouban",
+            "fighter_b_text": "Seth Baczynski",
+            "pattern": "paren_vs_paren",
+            "weight_a": "170",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Jack May",
+            "fighter_b_text": "Shawn Jordan",
+            "pattern": "paren_vs_paren",
+            "weight_a": "247",
+            "weight_b": "260"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000008_fight-night-bangor-weigh-results-f0c8e404ff87.html",
+        "plausible_weight_token_count": 21,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Bangor Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-bangor-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 9,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm PT. MAIN EVENT CB Dollaway",
+            "fighter_b_text": "Lyoto Machida",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "185"
+          },
+          {
+            "fighter_a_text": "MAIN CARD Mitch Gagnon",
+            "fighter_b_text": "Renan Barao",
+            "pattern": "paren_vs_paren",
+            "weight_a": "136",
+            "weight_b": "136"
+          },
+          {
+            "fighter_a_text": "Rashid Magomedov",
+            "fighter_b_text": "Elias Silverio",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155",
+            "weight_b": "155"
+          },
+          {
+            "fighter_a_text": "Mike Rhodes",
+            "fighter_b_text": "Erick Silva",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Antonio dos Santos",
+            "fighter_b_text": "Daniel Sarafian",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000009_fight-night-barueri-2014-weigh-results-1b044d05cd1f.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Barueri 2014 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-barueri-2014-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 10,
+        "catchweight_language": false,
+        "forfeit_language": true,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm ETPT. Main Event - Five Round Bout Lyoto Machida",
+            "fighter_b_text": "Eryk Anders",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "Valentina Shevchenko",
+            "fighter_b_text": "Priscila Cachoeira",
+            "pattern": "paren_vs_paren",
+            "weight_a": "125",
+            "weight_b": "126"
+          },
+          {
+            "fighter_a_text": "Timothy Johnson",
+            "fighter_b_text": "Marcelo Golm",
+            "pattern": "paren_vs_paren",
+            "weight_a": "263",
+            "weight_b": "247"
+          },
+          {
+            "fighter_a_text": "Thiago Santos",
+            "fighter_b_text": "Anthony Smith",
+            "pattern": "paren_vs_paren",
+            "weight_a": "185",
+            "weight_b": "186"
+          },
+          {
+            "fighter_a_text": "pm ETPT Sergio Moraes",
+            "fighter_b_text": "Tim Means",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "171"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000010_fight-night-belem-weigh-results-d453ffc08715.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Belem: Weigh-in Results",
+        "url": "https://www.ufc.com/news/fight-night-belem-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 11,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "am PT. MAIN EVENT - UFC WOMEN'S STRAWWEIGHT TITLE Jessica Penne",
+            "fighter_b_text": "Joanna Jedrzejczyk",
+            "pattern": "paren_vs_paren",
+            "weight_a": "114",
+            "weight_b": "114"
+          },
+          {
+            "fighter_a_text": "UFC FIGHT PASS MAIN CARD Tatsuya Kawajiri",
+            "fighter_b_text": "Dennis Siver",
+            "pattern": "paren_vs_paren",
+            "weight_a": "146",
+            "weight_b": "145"
+          },
+          {
+            "fighter_a_text": "Steve Kennedy",
+            "fighter_b_text": "Peter Sobotta",
+            "pattern": "paren_vs_paren",
+            "weight_a": "170",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Lukasz Sajewski",
+            "fighter_b_text": "Nick Hein",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155",
+            "weight_b": "155"
+          },
+          {
+            "fighter_a_text": "UFC FIGHT PASS PRELIMS Masio Fullen",
+            "fighter_b_text": "Makwan Amirkhani",
+            "pattern": "paren_vs_paren",
+            "weight_a": "145",
+            "weight_b": "145"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000011_fight-night-berlin-2015-weigh-results-fc57f6316114.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Berlin 2015 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-berlin-2015-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 12,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 13,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 13
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm ETPT Five round heavyweight main event Junior Dos Santos",
+            "fighter_b_text": "Blagoy Ivanov",
+            "pattern": "paren_vs_paren",
+            "weight_a": "247.5",
+            "weight_b": "257.5"
+          },
+          {
+            "fighter_a_text": "Main Card Sage Northcutt",
+            "fighter_b_text": "Zak Ottow",
+            "pattern": "paren_vs_paren",
+            "weight_a": "170",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Dennis Bermudez",
+            "fighter_b_text": "Rick Glenn",
+            "pattern": "paren_vs_paren",
+            "weight_a": "146",
+            "weight_b": "146"
+          },
+          {
+            "fighter_a_text": "Randy Brown",
+            "fighter_b_text": "Niko Price",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "170"
+          },
+          {
+            "fighter_a_text": "Myles Jury",
+            "fighter_b_text": "Chad Mendes",
+            "pattern": "paren_vs_paren",
+            "weight_a": "146",
+            "weight_b": "146"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000012_fight-night-boise-official-weigh-results-3f1b8a7a6d40.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-24T21:02:26-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Boise Official Weigh-in Results",
+        "url": "https://www.ufc.com/news/fight-night-boise-official-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 13,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 12,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 12
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm PT. MAIN EVENT Dennis Siver",
+            "fighter_b_text": "Conor McGregor",
+            "pattern": "paren_vs_paren",
+            "weight_a": "146",
+            "weight_b": "145"
+          },
+          {
+            "fighter_a_text": "MAIN CARD Donald Cerrone",
+            "fighter_b_text": "Benson Henderson",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155",
+            "weight_b": "156"
+          },
+          {
+            "fighter_a_text": "Uriah Hall",
+            "fighter_b_text": "Ron Stallings",
+            "pattern": "paren_vs_paren",
+            "weight_a": "185",
+            "weight_b": "185"
+          },
+          {
+            "fighter_a_text": "Norman Parke",
+            "fighter_b_text": "Gleison Tibau",
+            "pattern": "paren_vs_paren",
+            "weight_a": "156",
+            "weight_b": "156"
+          },
+          {
+            "fighter_a_text": "PRELIMS Sean Spencer",
+            "fighter_b_text": "Cathal Pendred",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "171"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000013_fight-night-boston-2015-weigh-results-ef6487d02dea.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Boston 2015 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-boston-2015-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 14,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "UFC FIGHT PASS MAIN CARD Piotr Hallmann",
+            "fighter_b_text": "Gleison Tibau",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155",
+            "weight_b": "156"
+          },
+          {
+            "fighter_a_text": "Efrain Escudero",
+            "fighter_b_text": "Leonardo Santos",
+            "pattern": "paren_vs_paren",
+            "weight_a": "156",
+            "weight_b": "155"
+          },
+          {
+            "fighter_a_text": "Wendell Oliveira",
+            "fighter_b_text": "Santiago Ponzinibbio",
+            "pattern": "paren_vs_paren",
+            "weight_a": "170",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Russell Doane",
+            "fighter_b_text": "Iuri Alcantara",
+            "pattern": "paren_vs_paren",
+            "weight_a": "136",
+            "weight_b": "136"
+          },
+          {
+            "fighter_a_text": "Larissa Pacheco",
+            "fighter_b_text": "Jessica Andrade",
+            "pattern": "paren_vs_paren",
+            "weight_a": "136",
+            "weight_b": "134"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000014_fight-night-brasilia-weigh-results-4bcd7149f2f7.html",
+        "plausible_weight_token_count": 23,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Fight Night Brasilia Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-brasilia-weigh-results",
+        "year": "2018"
+      }
+    ],
+    "no_pair_pattern": [
+      {
+        "candidate_index": 103,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000103_melendez-vs-masvidal-weigh-results-pix-250294020f06.html",
+        "plausible_weight_token_count": 2,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Melendez vs. Masvidal Weigh-In Results & Pix",
+        "url": "https://www.ufc.com/news/melendez-vs-masvidal-weigh-results-pix",
+        "weight_context": "g UFC COLLECTIBLES UFC STRIKE WHAT'S NEW Thorne Performance Solutions /themes/custom/ufc/assets/img/default-hero.jpg PreviousNext Melendez vs. Masvidal Weigh-In Results & Pix Dec. 16, 2011 Up Next Official UFC 145 Weigh In Results Gastelum Injured, Out of UFC 195 Great Britons - The Top Ten UK Moments UFC.COM - United States Brazil China Eurasia France Japan K",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 142,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000142_official-ufc-148-weigh-results-01dcc931ce35.html",
+        "plausible_weight_token_count": 27,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Official UFC 148 Weigh In Results",
+        "url": "https://www.ufc.com/news/official-ufc-148-weigh-results",
+        "weight_context": "Official UFC 148 Weigh In Results | UFC Skip to main content News Main navigation Events Upcoming Past Tickets VIP Experiences Group Sales UFC Travel Deals Road to UFC Dana White's Contender Serie",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 178,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000150/item_000178_official-ufc-fight-night-weigh-results-2-b269c54d9d68.html",
+        "plausible_weight_token_count": 21,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Official UFC Fight Night Weigh-In Results",
+        "url": "https://www.ufc.com/news/official-ufc-fight-night-weigh-results-2",
+        "weight_context": "S UFC STRIKE WHAT'S NEW Thorne Performance Solutions /themes/custom/ufc/assets/img/default-hero.jpg PreviousNext Official UFC Fight Night Weigh-In Results By Thomas Gerbasi \u2022 Sep. 16, 2008 Click below for the official UFC Fight Night weigh-in results. UFC Fight Night, which is headlined by the lightweight showdown between Nate Diaz and Josh Neer, will air on S",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 351,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000300/item_000351_ufc-110-weigh-results-5bb3a8bdffef.html",
+        "plausible_weight_token_count": 39,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "UFC 110 Weigh-In Results",
+        "url": "https://www.ufc.com/news/ufc-110-weigh-results",
+        "weight_context": "UFC 110 Weigh-In Results | UFC Skip to main content News Main navigation Events Upcoming Past Tickets VIP Experiences Group Sales UFC Travel Deals Road to UFC Dana White's Contender Serie",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 375,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000375/item_000375_ufc-177-weigh-results-edca6b7f2873.html",
+        "plausible_weight_token_count": 23,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "UFC 177 Weigh-In Results",
+        "url": "https://www.ufc.com/news/ufc-177-weigh-results",
+        "weight_context": "UFC 177 Weigh-In Results | UFC Skip to main content News Main navigation Events Upcoming Past Tickets VIP Experiences Group Sales UFC Travel Deals Road to UFC Dana White's Contender Serie",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 467,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000450/item_000467_ufc-copenhagen-official-weigh-results-69a4d34e81c1.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2019-09-26T12:58:42-0400",
+        "second_attempt_language": false,
+        "title": "UFC Copenhagen Official Weigh-In Results",
+        "url": "https://www.ufc.com/news/ufc-copenhagen-official-weigh-results",
+        "weight_context": "rmance Solutions PreviousNext Results UFC Copenhagen Official Weigh-In Results They've Stepped On The Scales In Denmark To Make It Official For Saturday By UFC Staff Report \u2022 Sep. 26, 2019 UFC Copenhagen: Weigh-in Highlights Unlock MORE of your inner combat sports fan with UFC Fight Pass! Fighting is what we live for. And no one brings you MORE live fights, ne",
+        "year": "2019"
+      },
+      {
+        "candidate_index": 521,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000450/item_000521_ufc-singapore-weigh-in-results-68a9eeebaf1e.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2019-10-23T13:09:36-0400",
+        "second_attempt_language": false,
+        "title": "UFC Singapore: Weigh-in Results",
+        "url": "https://www.ufc.com/news/ufc-singapore-weigh-in-results",
+        "weight_context": "uffa Boxing UFC COLLECTIBLES UFC STRIKE WHAT'S NEW Thorne Performance Solutions PreviousNext UFC Singapore: Weigh-in Results Recap the results from the UFC Singapore weigh-in Oct. 23, 2019 ESPN+ Main Card, 8AM/5AM ETPT Main Event: Demian Maia (170.5-lbs) vs Ben Askren (171-lbs) Co-Main Event: Michael Johnson (156-lbs) vs Stevie Ray (156-lbs) Frank Camacho (155",
+        "year": "2019"
+      },
+      {
+        "candidate_index": 567,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000525/item_000567_wec-46-weigh-results-175a18eecb2f.html",
+        "plausible_weight_token_count": 2,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "WEC 46 Weigh-in Results",
+        "url": "https://www.ufc.com/news/wec-46-weigh-results",
+        "weight_context": "WEC 46 Weigh-in Results | UFC Skip to main content News Main navigation Events Upcoming Past Tickets VIP Experiences Group Sales UFC Travel Deals Road to UFC Dana White's Contender Serie",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 580,
+        "catchweight_language": false,
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 0,
+        "pair_pattern_counts": {},
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000525/item_000580_weigh-results-and-photos-569d67c1f657.html",
+        "plausible_weight_token_count": 2,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": false,
+        "title": "Weigh-In Results and Photos",
+        "url": "https://www.ufc.com/news/weigh-results-and-photos",
+        "weight_context": "VENUM Zuffa Boxing UFC COLLECTIBLES UFC STRIKE WHAT'S NEW Thorne Performance Solutions /themes/custom/ufc/assets/img/default-hero.jpg PreviousNext Weigh-In Results and Photos Jun. 17, 2011 Up Next Official UFC 145 Weigh In Results Gastelum Injured, Out of UFC 195 Great Britons - The Top Ten UK Moments UFC.COM - United States Brazil China Eurasia France Japan K",
+        "year": "2018"
+      }
+    ],
+    "second_attempt_language": [
+      {
+        "candidate_index": 9,
+        "catchweight_language": false,
+        "context": "ka Sasaki (135) VS Leandro Issa (136) UFC FIGHT PASS EARLY PRELIMS Tim Means (171) VS Marcio Alexandre (171) Jake Collier (185) VS Vitor Miranda (185) * Cummins made weight on his second attempt after initially weighing in at 206.8 Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Headline in San Diego Green Out, Gil In for Iaquinta Bout in July UFC.COM - United",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "pair_samples": [
+          {
+            "fighter_a_text": "pm PT. MAIN EVENT CB Dollaway",
+            "fighter_b_text": "Lyoto Machida",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "185"
+          },
+          {
+            "fighter_a_text": "MAIN CARD Mitch Gagnon",
+            "fighter_b_text": "Renan Barao",
+            "pattern": "paren_vs_paren",
+            "weight_a": "136",
+            "weight_b": "136"
+          },
+          {
+            "fighter_a_text": "Rashid Magomedov",
+            "fighter_b_text": "Elias Silverio",
+            "pattern": "paren_vs_paren",
+            "weight_a": "155",
+            "weight_b": "155"
+          },
+          {
+            "fighter_a_text": "Mike Rhodes",
+            "fighter_b_text": "Erick Silva",
+            "pattern": "paren_vs_paren",
+            "weight_a": "171",
+            "weight_b": "171"
+          },
+          {
+            "fighter_a_text": "Antonio dos Santos",
+            "fighter_b_text": "Daniel Sarafian",
+            "pattern": "paren_vs_paren",
+            "weight_a": "186",
+            "weight_b": "186"
+          }
+        ],
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000009_fight-night-barueri-2014-weigh-results-1b044d05cd1f.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Barueri 2014 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-barueri-2014-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 15,
+        "catchweight_language": false,
+        "context": "er (156) VS James Moontasri (158*) *Moontasri and Walsh missed weight. They will be fined 20% of their purse and the fights will proceed as scheduled. **Kelades made weight on his second attempt after initially weighing in at 127 pounds. Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Headline in San Diego Green Out, Gil In for Iaquinta Bout in July UFC.COM - U",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 6,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 6
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000015_fight-night-broomfield-2015-weigh-results-87f61d4059df.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Broomfield 2015 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-broomfield-2015-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 28,
+        "catchweight_language": false,
+        "context": "X Main Card Tecia Torres (116) vs Rose Namajunas (115.5) Darrell Horcher (161)* vs Khabib Nurmagomedov (160.5) Hacran Dias (145.5) vs Cub Swanson (145) *Horcher made weight on his second attempt after initially weighing in at 162 FOX Prelims Michael Chiesa (156) vs Beneil Dariush (156) Raquel Pennington (135.5) vs Bethe Correia (136) Santiago Ponzinibbio (171) vs Court Mc",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000028_fight-night-evans-vs-teixeira-weigh-results-c483bc952438.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Evans vs Teixeira weigh-in results",
+        "url": "https://www.ufc.com/news/fight-night-evans-vs-teixeira-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 29,
+        "catchweight_language": false,
+        "context": ".5) Alexander Yakovlev (155.75) VS Gray Maynard (155) Timothy Johnson (263.5) VS Shamil Abdurahimov (255) Justin Jones (185.5) VS Ron Stallings (185) * Masvidal made weight on his second attempt after initially weighing in at 156.5 Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Headline in San Diego Green Out, Gil In for Iaquinta Bout in July UFC.COM - United",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000029_fight-night-fairfax-2015-weigh-results-b4b71416d9a2.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Fairfax 2015 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-fairfax-2015-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 45,
+        "catchweight_language": false,
+        "context": "171) VS Keita Nakamura (170) Yusuke Kasuya (156) VS Nick Hein (155) Kajan Johnson (156) VS Naoyuki Kotani (156) Roger Zapata (171) VS Shinsho Anzai (170) *Camus made weight on his second attempt after initially weighing in at 126.5 pounds. Up Next Gastelum Injured, Out of UFC 195 UFC 25: Beast Mode UFC Statement on Antitrust Hearing in Las Vegas UFC.COM - United States Br",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000045_fight-night-japan-weigh-results-0-6e0445af9689.html",
+        "plausible_weight_token_count": 22,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Japan Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-japan-weigh-results-0",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 61,
+        "catchweight_language": false,
+        "context": "PRELIMS Jonathan Wilson (205) VS Chris Dempsey (204.5) Roman Salazar (135) VS Marlon Vera (135.5) Scott Holtzman (155.5) VS Anthony Christodoulou (156) *McMann made weight on her second attempt after initially weighing in at 136.5 pounds **Borg did not make weight - he will be fined 20% of his purse and the fight will proceed as scheduled Up Next Gastelum Injured, Out of",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000061_fight-night-nashville-weigh-results-720c841969ee.html",
+        "plausible_weight_token_count": 28,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Nashville Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-nashville-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 63,
+        "catchweight_language": false,
+        "context": "ds (156) VS Joe Proctor (156) UFC FIGHT PASS EARLY PRELIMS Jake Collier (185.5) VS Ricardo Abreu (183) Leonardo Morales (137*) VS Jose Quinonez (135) *Morales missed weight on his second attempt after initially coming in at 140 pounds - he will be fined 20% of his purse and the fight will proceed as scheduled. **Medeiros came in overweight - he will be fined 20% of his pu",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 10,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 10
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000063_fight-night-new-orleans-weigh-results-f053717f1f13.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night New Orleans Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-new-orleans-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 66,
+        "catchweight_language": false,
+        "context": "HT PASS EARLY PRELIMS Leon Edwards (171) VS Kamaru Usman (171) Vicente Luque (171) VS Hayder Hassan (170) Luis Henrique (248) VS Francis Ngannou (254) *Castillo made weight on his second attempt after initially weighing in at 158 ** Oliveira missed weight - he will be fined 20% of his purse and the bout will proceed as scheduled Up Next Gastelum Injured, Out of UFC 195 UF",
+        "forfeit_language": false,
+        "miss_language": true,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000066_fight-night-orlando-weigh-results-d5771cac2bbf.html",
+        "plausible_weight_token_count": 28,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Orlando Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-orlando-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 85,
+        "catchweight_language": false,
+        "context": "\u2014 UFC (@ufc) August 22, 2015 UFC FIGHT PASS EARLY PRELIMS Elias Silverio (154.5) VS Shane Campbell (155) Misha Cirkunov (205) VS Daniel Jolly (204) *Letourneau made weight on her second attempt after initially weighing in at 117 pounds Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Headline in San Diego Green Out, Gil In for Iaquinta Bout in July UFC.COM - Un",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000085_fight-night-saskatoon-weigh-results-84cc414b9ebb.html",
+        "plausible_weight_token_count": 26,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Saskatoon Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-saskatoon-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 95,
+        "catchweight_language": false,
+        "context": "ulik (125.6) Chris Clements (170.1) VS Vik Grujic (171*) Daniel Kelly (185.6) VS Luke Zachrich (185.2) Marcus Brimage (135.9) VS Jumabieke Tuerxun (136) *Grujic made weight on his second attempt after initially weighing in at 171.6 **Smolka made weight on his second attempt after initially weighing in at 126.8 Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Hea",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000095_fight-night-sydney-2014-weigh-results-58bb321ea5ca.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Sydney 2014 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-sydney-2014-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 98,
+        "catchweight_language": false,
+        "context": "renneman (156) VS Leandro Silva (156) Tim Gorman (135) VS Thomas Almeida (136) UFC FIGHT PASS EARLY PRELIMS Colby Covington (170) VS Wagner Silva (170) *Lineker made weight on his second attempt after initially weighing in at 126.7 Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Headline in San Diego Green Out, Gil In for Iaquinta Bout in July UFC.COM - United",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000098_fight-night-uberlandia-2014-weigh-results-43b8dce53d80.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Fight Night Uberlandia 2014 Weigh-In Results",
+        "url": "https://www.ufc.com/news/fight-night-uberlandia-2014-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 109,
+        "catchweight_language": false,
+        "context": "idal (156) Tyler Stinson (170.5) vs. Jordan Mein (170) Joe Duarte (155.5) vs. Ryan Couture (155.5) PRELIM FIGHT Nate Moore (171) vs. Jason High (171) * Rockhold made weight on his second attempt after initially weighing in at 185.5 ** Larkin made weight on his second attempt after initially weighing in at 186.5 Up Next Gastelum Injured, Out of UFC 195 Great Britons - The",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 7,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 7
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000109_official-strikeforce-rockhold-vs-kennedy-weigh-results-2bddea8c34cf.html",
+        "plausible_weight_token_count": 21,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Official Strikeforce: Rockhold vs. Kennedy Weigh In Results",
+        "url": "https://www.ufc.com/news/official-strikeforce-rockhold-vs-kennedy-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 112,
+        "catchweight_language": false,
+        "context": "lorme (136) Josh Clopton (144) vs Steven Siler (146) Dustin Neace (145.5) vs Bryan Caraway (145) *Bisping initially weighed in at 186.25, but successfully weighed in at 186 on his second attempt. Up Next Official UFC 145 Weigh In Results Gastelum Injured, Out of UFC 195 Great Britons - The Top Ten UK Moments UFC.COM - United States Brazil China Eurasia France Japan Korea",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000112_official-tuf-14-finale-weigh-results-d92329edf446.html",
+        "plausible_weight_token_count": 24,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Official TUF 14 Finale Weigh In Results",
+        "url": "https://www.ufc.com/news/official-tuf-14-finale-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 114,
+        "catchweight_language": false,
+        "context": "(185.5) ONLINE FIGHTS Bart Palaszewski (145) VS Cole Miller (146) Maximo Blanco (146*) VS Sam Sicilia (146) Daniel Pineda (145) VS Justin Lawrence (145) *Blanco made weight on his second attempt Up Next Gastelum Injured, Out of UFC 195 Mir vs. Duffee to Headline in San Diego Green Out, Gil In for Iaquinta Bout in July UFC.COM - United States Brazil China Eurasia France Ja",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 11,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 11
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000114_official-tuf-17-finale-weigh-results-3b76029bc6ed.html",
+        "plausible_weight_token_count": 25,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Official TUF 17 Finale Weigh In Results",
+        "url": "https://www.ufc.com/news/official-tuf-17-finale-weigh-results",
+        "year": "2018"
+      },
+      {
+        "candidate_index": 119,
+        "catchweight_language": true,
+        "context": "hny Hendricks (171) Lucio Linhares (185) VS Rousimar Palhares (186) Edgar Garcia (171**) VS Damarques Johnson (171) TJ Grant (171) VS Kevin Burns (171) *Sanchez made weight on his second attempt, after an initial weigh-in at 156 pounds. **Garcia made weight on his second attempt, after an initial weigh-in at 173 pounds. ***Gouveia and Belcher will fight at a catchweight o",
+        "forfeit_language": false,
+        "miss_language": false,
+        "pair_match_count": 9,
+        "pair_pattern_counts": {
+          "paren_vs_paren": 9
+        },
+        "path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000119_official-ufc-107-weigh-results-56681fe8955f.html",
+        "plausible_weight_token_count": 34,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "second_attempt_language": true,
+        "title": "Official UFC 107 Weigh-In Results",
+        "url": "https://www.ufc.com/news/official-ufc-107-weigh-results",
+        "year": "2018"
+      }
+    ]
+  },
+  "generated_at_utc": "2026-08-22T22:03:12.247765Z",
+  "pair_pattern_counts": {
+    "paren_vs_paren": 8062
+  },
+  "published_year_counts": {
+    "2018": 363,
+    "2019": 41,
+    "2020": 40,
+    "2021": 43,
+    "2022": 45,
+    "2023": 48,
+    "2024": 48,
+    "2025": 48,
+    "2026": 40
+  },
+  "schema_version": 1,
+  "source_manifest": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/manifest.json"
+}
