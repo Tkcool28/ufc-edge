@@ -37,12 +37,17 @@ def main() -> int:
         )
         for r in data
     )
-    event_url_match_pairs: dict[str, set[str]] = defaultdict(set)
+    event_url_signatures: dict[str, set[tuple[str, str, str, str]]] = defaultdict(set)
     for r in data:
         url = (r.get("url") or "").strip()
-        match = (r.get("match_nr") or "").strip()
-        if url:
-            event_url_match_pairs[url].add(match)
+        if not url:
+            continue
+        event_url_signatures[url].add((
+            (r.get("organisation") or "").strip(),
+            (r.get("event_title") or "").strip(),
+            (r.get("date") or "").strip(),
+            (r.get("location") or "").strip(),
+        ))
 
     raw_dates = [(r.get("date") or "").strip() for r in data]
     date_candidates = {
@@ -51,8 +56,9 @@ def main() -> int:
         "MDY_SLASH": "%m/%d/%Y",
         "DMY_DASH": "%d-%m-%Y",
         "MDY_DASH": "%m-%d-%Y",
-        "MONTH_NAME_DMY": "%d %B %Y",
-        "MONTH_NAME_MDY": "%B %d, %Y",
+        "FULL_MONTH_DMY": "%d %B %Y",
+        "FULL_MONTH_MDY": "%B %d, %Y",
+        "ABBREV_MONTH_MDY": "%b %d, %Y",
     }
     date_parse_counts = {
         name: sum(parse(value, fmt) is not None for value in raw_dates)
@@ -66,11 +72,11 @@ def main() -> int:
     times = Counter((r.get("time") or "").strip() for r in data)
     organisations = Counter((r.get("organisation") or "").strip() for r in data)
 
-    duplicate_url_match_pairs = 0
     pair_seen: Counter[tuple[str, str]] = Counter()
     for r in data:
         pair_seen[((r.get("url") or "").strip(), (r.get("match_nr") or "").strip())] += 1
     duplicate_url_match_pairs = sum(1 for count in pair_seen.values() if count > 1)
+    duplicate_url_match_rows = sum(count for count in pair_seen.values() if count > 1)
 
     missing_counts = {
         field: sum(not (r.get(field) or "").strip() for r in data)
@@ -91,14 +97,16 @@ def main() -> int:
     ]
 
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "rows": len(data),
         "distinct_nonempty_url": sum(bool(k) for k in url_counts),
         "urls_used_by_multiple_rows": sum(count > 1 for url, count in url_counts.items() if url),
         "max_rows_per_url": max((count for url, count in url_counts.items() if url), default=0),
         "distinct_event_signatures": len(event_signature_counts),
+        "event_urls_with_multiple_event_signatures": sum(len(v) > 1 for v in event_url_signatures.values()),
         "duplicate_url_match_pairs": duplicate_url_match_pairs,
+        "duplicate_url_match_rows": duplicate_url_match_rows,
         "url_match_pair_unique_fraction": (len(pair_seen) - duplicate_url_match_pairs) / len(pair_seen) if pair_seen else 0,
         "date_parse_counts": date_parse_counts,
         "missing_counts": missing_counts,
@@ -111,8 +119,11 @@ def main() -> int:
         "examples": examples,
         "decision": {
             "canonicalization_promoted": False,
-            "required_next": "Select only a stable event key, fight key, and date parser supported by this audit; then deduplicate UFC overlap before canonical insertion.",
-        },
+            "event_identity_candidate": "source event url if every nonempty url maps to exactly one event signature",
+            "fight_identity_candidate": "(source event url, match_nr) except duplicate pair(s), which must be quarantined",
+            "date_parser_candidate": "ABBREV_MONTH_MDY only if it explains essentially all nonmissing source dates",
+            "required_next": "Promote only keys/date semantics that pass these exact gates, then deduplicate UFC overlap before canonical insertion."
+        }
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -121,6 +132,7 @@ def main() -> int:
         "distinct_urls": payload["distinct_nonempty_url"],
         "urls_multiple_rows": payload["urls_used_by_multiple_rows"],
         "distinct_event_signatures": payload["distinct_event_signatures"],
+        "event_urls_with_multiple_signatures": payload["event_urls_with_multiple_event_signatures"],
         "duplicate_url_match_pairs": duplicate_url_match_pairs,
         "date_parse_counts": date_parse_counts,
     }, sort_keys=True))
