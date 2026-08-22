@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_scorecard_identity_transport",
+  "completed_at_utc": "2026-08-22T23:46:03.846404Z",
+  "exit_code": 0,
+  "github_run_id": "32606084143",
+  "log": "provenance/runs/ufc_scorecard_identity_transport_32606084143.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "0bbb8bc6107fe755d87f03b15fbe04f02447318e"
+}
