@@ -1,0 +1,12 @@
+{
+  "completed_at_utc": "2026-08-22T22:01:27.971302Z",
+  "exit_code": 2,
+  "failed_manifest_copy": "provenance/runs/ufc_official_content_failed_manifest_32601261022.json",
+  "github_run_id": "32601261022",
+  "log": "provenance/runs/ufc_official_content_32601261022.log",
+  "pipeline": "ufc_official_content_archive",
+  "raw_manifest": null,
+  "schema_version": 1,
+  "status": "failed",
+  "trigger_sha": "6d1271c4d717716892fc59df29e1b57c5f7577aa"
+}
