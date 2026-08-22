@@ -1,0 +1,9 @@
+{
+  "audited_at_utc": "2026-08-22T21:54:37.870770Z",
+  "exit_code": 1,
+  "github_run_id": "32600930562",
+  "output": "Traceback (most recent call last):\n  File \"/home/runner/work/ufc-edge/ufc-edge/pipelines/validate_source_precedence.py\", line 75, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/home/runner/work/ufc-edge/ufc-edge/pipelines/validate_source_precedence.py\", line 59, in main\n    raise RuntimeError(f\"Unknown active priority sources in {family}: {unknown_sources}; known={sorted(known_sources)}\")\nRuntimeError: Unknown active priority sources in historical_rankings: ['tidytuesday_fightr_rankings']; known=['espn_mma', 'greco1899_ufcstats', 'kaggle_pro_mma_fighters', 'kaggle_pro_mma_fights', 'tidytuesday_ufc_rankings', 'ufc_com_official', 'ufc_datalab_scorecards', 'ufc_fightmetric_official']\n",
+  "passed": false,
+  "schema_version": 1,
+  "trigger_sha": "9e8198b24a9ee54f904674ad9e495584d4d71cd6"
+}
