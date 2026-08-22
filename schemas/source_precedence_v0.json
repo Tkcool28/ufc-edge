@@ -18,7 +18,8 @@
     "fightmetric_era_coverage": "provenance/audits/fightmetric_era_coverage_latest.json",
     "fightmetric_duplicate_versions": "provenance/audits/fightmetric_duplicate_versions_latest.json",
     "fightmetric_position_quality": "provenance/audits/fightmetric_position_time_quality_latest.json",
-    "fightmetric_unidentified_rows": "provenance/audits/fightmetric_unidentified_rows_latest.json"
+    "fightmetric_unidentified_rows": "provenance/audits/fightmetric_unidentified_rows_latest.json",
+    "external_mma_fight_transport": "provenance/audits/external_mma_fight_transport_latest.json"
   },
   "rules": [
     {
@@ -101,8 +102,9 @@
       "status": "active",
       "canonical_table": "fights",
       "priority": ["kaggle_pro_mma_fights"],
-      "selection_gate": "Resolve fighter identity and deduplicate UFC overlap before canonical insertion. Source slash dates must use the audited DMY interpretation.",
-      "notes": "Companion fighter-profile career totals are 2021 snapshot data and cannot be historical backfill."
+      "selection_gate": "Resolve fighter identity and deduplicate UFC overlap before canonical insertion. Source dates use audited abbreviated-month MDY semantics (for example Aug 7, 2021; parser %b %d, %Y). Source event URL is the event-key candidate, and (source event URL, match_nr) is the fight-key candidate except the single duplicated pair, which must be quarantined.",
+      "notes": "The transport audit covers all 10,448 rows: all dates parse as abbreviated-month MDY; 1,006 source event URLs map to 1,006 event signatures with no URL mapping to multiple signatures; exactly one duplicated (event URL, match_nr) pair spans two rows. Companion fighter-profile career totals are 2021 snapshot data and cannot be historical backfill.",
+      "evidence": "provenance/audits/external_mma_fight_transport_latest.json"
     },
     {
       "family": "fight_specific_weigh_ins",
