@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FIGHTERS = ROOT / "data/raw/kaggle_pro_mma_fighters/v1/pro_mma_fighters.csv"
 FIGHTS = ROOT / "data/raw/kaggle_pro_mma_fights/v1/pro_mma_fights.csv"
 CANONICAL = ROOT / "data/canonical/v0/fighters.csv"
-DATE_AUDIT = ROOT / "provenance/audits/external_mma_date_semantics_latest.json"
+DATE_AUDIT = ROOT / "provenance/audits/external_mma_birth_date_semantics_latest.json"
 OUT = ROOT / "data/derived/identity/external_mma_canonical_crosswalk_candidate.csv"
 AUDIT = ROOT / "provenance/audits/external_mma_identity_latest.json"
 
@@ -192,7 +192,7 @@ def main() -> int:
         "source_date_semantics": {
             "slash_order": "DMY",
             "evidence": str(DATE_AUDIT.relative_to(ROOT)),
-            "independent_gate_passed": True,
+            "independent_gate_passed": True
         },
         "examples": dict(examples),
         "decision": {
@@ -201,8 +201,8 @@ def main() -> int:
             "trusted_rule": "Exact normalized name plus exact DOB under audited DMY source parsing, including DOB resolution of name collisions.",
             "candidate_rule": "Unique exact normalized name when DOB is not jointly observed; not canonical-promoted without further corroboration.",
             "canonical_fight_history_promoted": False,
-            "next_gate": "Deduplicate UFC overlap and admit only both-trusted external fights into canonical external-history data; candidate-only identities remain quarantined.",
-        },
+            "next_gate": "Deduplicate UFC overlap and admit only both-trusted external fights into canonical external-history data; candidate-only identities remain quarantined."
+        }
     }
     AUDIT.parent.mkdir(parents=True, exist_ok=True)
     AUDIT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -211,7 +211,7 @@ def main() -> int:
         "trusted": status_counts["trusted"],
         "candidate": status_counts["candidate"],
         "dob_conflict": status_counts["dob_conflict"],
-        "fights_both_trusted": fight_status["both_trusted"],
+        "fights_both_trusted": fight_status["both_trusted"]
     }, sort_keys=True))
     return 0
 
