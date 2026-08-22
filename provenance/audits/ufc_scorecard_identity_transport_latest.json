@@ -1,27 +1,28 @@
 {
   "article_event_intersection_count_distribution": {
-    "0": 188,
-    "1": 155
+    "0": 209,
+    "1": 134
   },
   "candidate_images": 3049,
   "counts": {
-    "articles_no_resolvable_image_pair": 188,
-    "articles_singleton_event_intersection": 155,
-    "images_high_confidence_fight_candidate": 688,
-    "images_with_two_fighter_pair_and_canonical_fight": 688,
-    "images_with_two_fighters_no_canonical_pair": 65,
-    "images_without_exact_two_fighter_transport": 2296
+    "articles_no_resolvable_image_pair": 209,
+    "articles_singleton_event_intersection": 134,
+    "images_high_confidence_fight_candidate": 578,
+    "images_with_unique_side_pair_and_canonical_fight": 578,
+    "images_with_unique_side_pair_no_canonical_fight": 47,
+    "images_without_unique_side_pair": 2424
   },
   "decision": {
     "canonical_judge_round_scores_written": false,
     "display_name_only_identity_trusted": false,
-    "event_headliner_prefix_excluded_from_alt_title_and_url": true,
+    "free_floating_surname_match_forbidden": true,
     "generic_hero_alt_identity_forbidden": true,
     "high_confidence_image_fight_identity_is_candidate_only": true,
-    "name_suffix_aware_surname_uniqueness": true,
     "ocr_performed": false,
-    "required_next": "Identity-filter official scorecard images before binary archival. Archive source image bytes plus hashes for the promoted subset before any OCR-derived layer; OCR output remains non-canonical until judge/round/fighter score semantics are independently verified.",
-    "scorecard_token_required_for_identity_text": true
+    "rematch_disambiguation_requires_article_event_consensus": true,
+    "required_next": "Review v5 residual ambiguity/error examples. Only after the identity transport is clean should the selected official image bytes be archived with hashes before OCR.",
+    "scorecard_token_required_for_identity_text": true,
+    "whole_side_trailing_name_phrase_required": true
   },
   "examples": {
     "no_canonical_fight_for_pair": [
@@ -29,26 +30,15 @@
         "article_status": "no_resolvable_image_pair",
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
-        "identity_text": "maheshate vs estremadura",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Maheshate%20vs.%20Estremadura.jpg?itok=-oNQja_7",
-        "matched_names": [
-          "Achilles Estremadura",
-          "Maheshate"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
-        "canonical_pair_fights": 0,
         "identity_text": "lainesse vs burlinson",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Lainesse%20vs.%20Burlinson.jpg?itok=gVq1niks",
-        "matched_names": [
-          "Justin Burlinson",
+        "left": "lainesse",
+        "left_candidates": [
           "Yohan Lainesse"
+        ],
+        "right": "burlinson",
+        "right_candidates": [
+          "Justin Burlinson"
         ]
       },
       {
@@ -56,12 +46,14 @@
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
         "identity_text": "bilharinho vs kawaihae",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Bilharinho%20vs.%20Kawaihae.jpg?itok=mnVp3KyJ",
-        "matched_names": [
-          "Canaan Kawaihae",
+        "left": "bilharinho",
+        "left_candidates": [
           "Jonas Bilharinho"
+        ],
+        "right": "kawaihae",
+        "right_candidates": [
+          "Canaan Kawaihae"
         ]
       },
       {
@@ -69,12 +61,14 @@
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
         "identity_text": "zhifa vs puerta 2",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Zhifa%20vs.%20Puerta%5B2%5D.jpg?itok=yNK0jxyC",
-        "matched_names": [
-          "Juan Puerta",
+        "left": "zhifa",
+        "left_candidates": [
           "Shang Zhifa"
+        ],
+        "right": "puerta",
+        "right_candidates": [
+          "Juan Puerta"
         ]
       },
       {
@@ -82,11 +76,13 @@
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
         "identity_text": "kolev vs petrosyan",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.8%20-%20Scorecards%20-%20Kolev%20vs.%20Petrosyan.jpg?itok=aB_5agaf",
-        "matched_names": [
-          "Kaloyan Kolev",
+        "left": "kolev",
+        "left_candidates": [
+          "Kaloyan Kolev"
+        ],
+        "right": "petrosyan",
+        "right_candidates": [
           "Armen Petrosyan"
         ]
       },
@@ -95,12 +91,14 @@
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
         "identity_text": "hadley vs raposo",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.7%20-%20Scorecards%20-%20Hadley%20vs.%20Raposo.jpg?itok=xnzp2ncQ",
-        "matched_names": [
-          "Mitch Raposo",
+        "left": "hadley",
+        "left_candidates": [
           "Jake Hadley"
+        ],
+        "right": "raposo",
+        "right_candidates": [
+          "Mitch Raposo"
         ]
       },
       {
@@ -108,38 +106,14 @@
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
         "identity_text": "smotritsky vs malott",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.6%20-%20Scorecards%20-%20Smotritsky%20vs.%20Malott.jpg?itok=uvMZeypf",
-        "matched_names": [
-          "Mike Malott",
+        "left": "smotritsky",
+        "left_candidates": [
           "Shimon Smotritsky"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
-        "canonical_pair_fights": 0,
-        "identity_text": "sudolski vs potieria 90 copy",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.5%20-%20Scorecards%20-%20Sudolski%20vs.%20Potieria%5B90%5D%20copy.jpg?itok=rLB382o-",
-        "matched_names": [
-          "Ihor Potieria",
-          "Lucasz Sudolski"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
-        "canonical_pair_fights": 0,
-        "identity_text": "borralho vs jeffery 60 copy",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.5%20-%20Scorecards%20-%20Borralho%20vs.%20Jeffery%5B60%5D%20copy.jpg?itok=df0smIdq",
-        "matched_names": [
-          "Caio Borralho",
-          "Aaron Jeffery"
+        ],
+        "right": "malott",
+        "right_candidates": [
+          "Mike Malott"
         ]
       },
       {
@@ -147,11 +121,13 @@
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
         "identity_text": "loosa vs della maddalena",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.3%20-%20Scorecards%20-%20Loosa%20vs.%20Della%20Maddalena.jpg?itok=_efRQoUV",
-        "matched_names": [
-          "Ange Loosa",
+        "left": "loosa",
+        "left_candidates": [
+          "Ange Loosa"
+        ],
+        "right": "della maddalena",
+        "right_candidates": [
           "Jack Della Maddalena"
         ]
       },
@@ -160,11 +136,13 @@
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
         "identity_text": "jasudavicius vs polastri",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Jasudavicius vs Polastri Scorecards | Dana White's Contender Series Season 5 Episode 3",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.3%20-%20Scorecards%20-%20Jasudavicius%20vs.%20Polastri.jpg?itok=se4rStzu",
-        "matched_names": [
-          "Jasmine Jasudavicius",
+        "left": "jasudavicius",
+        "left_candidates": [
+          "Jasmine Jasudavicius"
+        ],
+        "right": "polastri",
+        "right_candidates": [
           "Julia Polastri"
         ]
       },
@@ -173,64 +151,14 @@
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
         "identity_text": "gafurov vs anheliger 1",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Dana White's Contender Series Official Scorecard Season 5 Episode 2",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.2%20-%20Scorecards%20-%20Gafurov%20vs.%20Anheliger%5B1%5D.jpg?itok=3BwmaRl9",
-        "matched_names": [
-          "Muin Gafurov",
+        "left": "gafurov",
+        "left_candidates": [
+          "Muin Gafurov"
+        ],
+        "right": "anheliger",
+        "right_candidates": [
           "Chad Anheliger"
-        ]
-      },
-      {
-        "article_status": "singleton_event_intersection_unpromoted",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-adesanya-vs-imavov-saudi-arabia",
-        "canonical_pair_fights": 0,
-        "identity_text": "jasudavicius vs bueno silva",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "UFC Fight Night: Adesanya vs. Imavov - Scorecards - Jasudavicius vs. Bueno Silva",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2025-02/UFC%20Fight%20Night-%20Adesanya%20vs.%20Imavov%20-%20Scorecards%20-%20Jasudavicius%20vs.%20Bueno%20Silva.png?itok=FdYKJDSk",
-        "matched_names": [
-          "Jasmine Jasudavicius",
-          "Francisco Bueno"
-        ]
-      },
-      {
-        "article_status": "singleton_event_intersection_unpromoted",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-holm-vs-bueno-silva-ufc-vegas-77",
-        "canonical_pair_fights": 0,
-        "identity_text": "holm vs bueno silva",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Mayra Bueno Silva defeats Holly\u00a0Holm via submission (guillotine choke) at :38 of the second round",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2023-07/07152023-Scorecards-Holm-vs-Bueno-Silva.jpeg?itok=nPfuo0pB",
-        "matched_names": [
-          "Holly Holm",
-          "Francisco Bueno"
-        ]
-      },
-      {
-        "article_status": "singleton_event_intersection_unpromoted",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-ladd-vs-dumont-ufc-vegas-40",
-        "canonical_pair_fights": 0,
-        "identity_text": "fiorot vs bueno silva 17 copy",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/UFC%20Fight%20Night%20Ladd%20vs.%20Dumont%20-%20Scorecards%20-%20Fiorot%20vs.%20Bueno%20Silva%5B17%5D%20copy.jpg?itok=WOkYdVMl",
-        "matched_names": [
-          "Manon Fiorot",
-          "Francisco Bueno"
-        ]
-      },
-      {
-        "article_status": "singleton_event_intersection_unpromoted",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-luque-vs-muhammad-2-ufc-vegas-51",
-        "canonical_pair_fights": 0,
-        "identity_text": "bueno silva vs yanan",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Mayra BuenoSilva defeats Wu Yanan via unanimous decision (29-28, 29-28, 30-27)\u00a0",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-04/04162022-Scorecards-Bueno-Silva-vs-Yanan.jpeg?itok=dzbeKQ4z",
-        "matched_names": [
-          "Wu Yanan",
-          "Francisco Bueno"
         ]
       },
       {
@@ -238,11 +166,13 @@
         "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-yusuff-vs-barboza",
         "canonical_pair_fights": 0,
         "identity_text": "alekseeva vs dixon",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Melissa Dixon defeats Irina Alekseeva by unanimous decision (30-27, 29-28, 29-28)",
         "image_url": "https://ufc.com/images/styles/inline/s3/2023-10/10142023-Scorecards-Alekseeva-vs-Dixon.jpeg?itok=h1jh9eQU",
-        "matched_names": [
-          "Irina Alekseeva",
+        "left": "alekseeva",
+        "left_candidates": [
+          "Irina Alekseeva"
+        ],
+        "right": "dixon",
+        "right_candidates": [
           "Matt Dixon"
         ]
       },
@@ -251,12 +181,14 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
         "canonical_pair_fights": 0,
         "identity_text": "ming vs brasil",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Official scorecard for a Road To UFC fight between Shi Ming and Bruna Brasil",
         "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-ming-vs-brasil.jpg?itok=xQbD5dIg",
-        "matched_names": [
-          "Bruna Brasil",
+        "left": "ming",
+        "left_candidates": [
           "Shi Ming"
+        ],
+        "right": "brasil",
+        "right_candidates": [
+          "Bruna Brasil"
         ]
       },
       {
@@ -264,51 +196,14 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
         "canonical_pair_fights": 0,
         "identity_text": "tumendemberel vs saeteurn",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Official scorecard for a Road To UFC fight between Nyamjargal Tumendemberel and Terrance Saeteurn",
         "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-tumendemberel-vs-saeteurn.jpg?itok=rHVN6oLw",
-        "matched_names": [
-          "Terrance Saeteurn",
+        "left": "tumendemberel",
+        "left_candidates": [
           "Nyamjargal Tumendemberel"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
-        "canonical_pair_fights": 0,
-        "identity_text": "for a road to ufc fight between keiichiro nakamura and kaiwen",
-        "identity_text_source": "image_alt_scorecard_suffix",
-        "image_alt": "Official scorecard for a Road To UFC fight between Keiichiro Nakamura and Kaiwen",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/this.jpg?itok=NPBMEYZP",
-        "matched_names": [
-          "Kaiwen",
-          "Keiichiro Nakamura"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
-        "canonical_pair_fights": 0,
-        "identity_text": "sulangrangbo vs xiong",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Official scorecard for a Road To UFC fight between Sulangrangbo & Sim Kai Xiong",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-sulangrangbo-vs-xiong.jpg?itok=TytWDHDb",
-        "matched_names": [
-          "Sulangrangbo",
-          "Sim Kai Xiong"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
-        "canonical_pair_fights": 0,
-        "identity_text": "agulali vs batbayar",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Official scorecard for a Road To UFC fight between Namsrai Batbayar and Agulali",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-agulali-vs-batbayar.jpg?itok=tI2FsqLo",
-        "matched_names": [
-          "Agulali",
-          "Namsrai Batbayar"
+        ],
+        "right": "saeteurn",
+        "right_candidates": [
+          "Terrance Saeteurn"
         ]
       },
       {
@@ -316,25 +211,14 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
         "canonical_pair_fights": 0,
         "identity_text": "kitt campbell vs yunseong jang",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "scorecard reading: Kitt Campbell defeats YunSeong Jang by split decision (28-29, 29-28, 29-28)",
         "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-kitt-campbell-vs-yunseong-jang.jpg?itok=6ip1su06",
-        "matched_names": [
-          "YunSeong Jang",
+        "left": "kitt campbell",
+        "left_candidates": [
           "Kitt Campbell"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-episode-1-episode-2-episode-3-episode-4-singapore",
-        "canonical_pair_fights": 0,
-        "identity_text": "nose vs wulijiburen",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-06/Road-To-UFC_1.4-Scorecards_Nose-vs-Wulijiburen.jpg?itok=m3xtIaIe",
-        "matched_names": [
-          "Shohei Nose",
-          "Wulijiburen"
+        ],
+        "right": "yunseong jang",
+        "right_candidates": [
+          "YunSeong Jang"
         ]
       },
       {
@@ -342,11 +226,13 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-episode-1-episode-2-episode-3-episode-4-singapore",
         "canonical_pair_fights": 0,
         "identity_text": "horiuchi vs kiwram",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "",
         "image_url": "https://ufc.com/images/styles/inline/s3/2022-06/Road-To-UFC_1.3-Scorecards_Horiuchi-vs-Kiwram.jpg?itok=fVlW2RxZ",
-        "matched_names": [
-          "Yuma Horiuchi",
+        "left": "horiuchi",
+        "left_candidates": [
+          "Yuma Horiuchi"
+        ],
+        "right": "kiwram",
+        "right_candidates": [
           "Top Noi Kiwram"
         ]
       },
@@ -355,11 +241,13 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-episode-1-episode-2-episode-3-episode-4-singapore",
         "canonical_pair_fights": 0,
         "identity_text": "saragih vs maan",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Road To UFC episode 2 scorecard Saragih vs Maan",
         "image_url": "https://ufc.com/images/styles/inline/s3/2022-06/Road%20To%20UFC%201.2%20-%20Scorecards%20-%20Saragih%20vs.%20Maan.jpg?itok=wTwMX27K",
-        "matched_names": [
-          "Jeka Saragih",
+        "left": "saragih",
+        "left_candidates": [
+          "Jeka Saragih"
+        ],
+        "right": "maan",
+        "right_candidates": [
           "Pawan Maan"
         ]
       },
@@ -368,12 +256,14 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-episode-1-episode-2-episode-3-episode-4-singapore",
         "canonical_pair_fights": 0,
         "identity_text": "etchell vs uchida",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Road To UFC episode 2 scorecard Etchell vs Uchida",
         "image_url": "https://ufc.com/images/styles/inline/s3/2022-06/Road%20To%20UFC%201.2%20-%20Scorecards%20-%20Etchell%20vs.%20Uchida.jpg?itok=7grikbVf",
-        "matched_names": [
-          "Takeru Uchida",
+        "left": "etchell",
+        "left_candidates": [
           "Shaun Etchell"
+        ],
+        "right": "uchida",
+        "right_candidates": [
+          "Takeru Uchida"
         ]
       },
       {
@@ -381,11 +271,13 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-episode-1-episode-2-episode-3-episode-4-singapore",
         "canonical_pair_fights": 0,
         "identity_text": "keremuaili vs kazama",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Road To UFC episode 1 scorecard Keremuaili vs Kazama",
         "image_url": "https://ufc.com/images/styles/inline/s3/2022-06/Road%20To%20UFC%201.1%20-%20Scorecards%20-%20Keremuaili%20vs.%20Kazama.jpg?itok=PW5Z8DrB",
-        "matched_names": [
-          "Maimaitituoheti Keremuaili",
+        "left": "keremuaili",
+        "left_candidates": [
+          "Maimaitituoheti Keremuaili"
+        ],
+        "right": "kazama",
+        "right_candidates": [
           "Toshiomi Kazama"
         ]
       },
@@ -394,11 +286,13 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-episode-1-episode-2-episode-3-episode-4-singapore",
         "canonical_pair_fights": 0,
         "identity_text": "mingyang vs tokkos",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "The scorecard for Zhang Mingyang vs Tuco Tukkos on episode one of Road To UFC.",
         "image_url": "https://ufc.com/images/styles/inline/s3/2022-06/Road%20To%20UFC%201.1%20-%20Scorecards%20-%20Mingyang%20vs.%20Tokkos.jpg?itok=yx-Um33f",
-        "matched_names": [
-          "Zhang Mingyang",
+        "left": "mingyang",
+        "left_candidates": [
+          "Zhang Mingyang"
+        ],
+        "right": "tokkos",
+        "right_candidates": [
           "Tuco Tokkos"
         ]
       },
@@ -407,31 +301,1005 @@
         "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-season-2-episodes-1-2-shanghai",
         "canonical_pair_fights": 0,
         "identity_text": "kiwram vs tumendemberel",
-        "identity_text_source": "image_url_scorecard_suffix",
-        "image_alt": "Nyamjargal Tumendemberel (29-28, 29-28) defeats Topnoi Kiwram (29-28) by Split Decision",
         "image_url": "https://ufc.com/images/styles/inline/s3/2023-05/UPDATED%20-%20Road%20to%20UFC%202.1%20%2B%202.2%20-%20Scorecards%20-%20Kiwram%20vs.%20Tumendemberel.jpg?itok=_MDthvPY",
-        "matched_names": [
-          "Top Noi Kiwram",
+        "left": "kiwram",
+        "left_candidates": [
+          "Top Noi Kiwram"
+        ],
+        "right": "tumendemberel",
+        "right_candidates": [
           "Nyamjargal Tumendemberel"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-season-2-episodes-1-2-shanghai",
+        "canonical_pair_fights": 0,
+        "identity_text": "tsuruya vs siahaan",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2023-05/Road%20to%20UFC%202.1%20%2B%202.2%20-%20Scorecards%20-%20Tsuruya%20vs.%20Siahaan.jpg?itok=DLyRGq79",
+        "left": "tsuruya",
+        "left_candidates": [
+          "Rei Tsuruya"
+        ],
+        "right": "siahaan",
+        "right_candidates": [
+          "Ronal Siahaan"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-season-4-episodes-1-2",
+        "canonical_pair_fights": 0,
+        "identity_text": "khaydarov vs khera",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-05/052225-official-scorecard-khaydarov-vs-khera.png?itok=rozlYIdF",
+        "left": "khaydarov",
+        "left_candidates": [
+          "Aziz Khaydarov"
+        ],
+        "right": "khera",
+        "right_candidates": [
+          "Mansher Khera"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-season-4-episodes-1-2",
+        "canonical_pair_fights": 0,
+        "identity_text": "szalay vs jieleyisi",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-05/052225-official-scorecard-szalay-vs-jieleyisi.png?itok=vX1ngXsP",
+        "left": "szalay",
+        "left_candidates": [
+          "Sebastian Szalay"
+        ],
+        "right": "jieleyisi",
+        "right_candidates": [
+          "Baergeng Jieleyisi"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-season-4-episodes-3-4",
+        "canonical_pair_fights": 0,
+        "identity_text": "ephoevi ga vs mar fan",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-05/052325-official-scorecard-ephoevi-ga-vs-mar-fan.jpeg?itok=BC4M9PBX",
+        "left": "ephoevi ga",
+        "left_candidates": [
+          "Yuji Ephoevi-Ga"
+        ],
+        "right": "mar fan",
+        "right_candidates": [
+          "Dom Mar Fan"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-scorecards-season-4-episodes-3-4",
+        "canonical_pair_fights": 0,
+        "identity_text": "imura vs van y",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-05/052325-official-scorecard-imura-vs-van-y.png?itok=DoFoncuo",
+        "left": "imura",
+        "left_candidates": [
+          "Rui Imura"
+        ],
+        "right": "van y",
+        "right_candidates": [
+          "Nghiem Van Y"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-season-5-results-scorecards-opening-rounds-day-1",
+        "canonical_pair_fights": 0,
+        "identity_text": "mangos vs yanagawa",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2026-05/052826-official-scorecard-mangos-vs-yanagawa.jpg?itok=-WHg4r-h",
+        "left": "mangos",
+        "left_candidates": [
+          "George Mangos"
+        ],
+        "right": "yanagawa",
+        "right_candidates": [
+          "Yuito Yanagawa"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-season-5-results-scorecards-opening-rounds-day-1",
+        "canonical_pair_fights": 0,
+        "identity_text": "minami vs murdoch",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2026-05/052826-official-scorecard-minami-vs-murdoch.jpg?itok=ELETvldJ",
+        "left": "minami",
+        "left_candidates": [
+          "Yunosuke Minami"
+        ],
+        "right": "murdoch",
+        "right_candidates": [
+          "Kasib Murdoch"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-season-5-results-scorecards-opening-rounds-day-1",
+        "canonical_pair_fights": 0,
+        "identity_text": "dhant vs alintozon",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2026-05/052826-official-scorecard-dhant-vs-alintozon.jpg?itok=GH1S4EML",
+        "left": "dhant",
+        "left_candidates": [
+          "Rabindra Dhant"
+        ],
+        "right": "alintozon",
+        "right_candidates": [
+          "Kimbert Alintozon"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-season-5-results-scorecards-opening-rounds-day-1",
+        "canonical_pair_fights": 0,
+        "identity_text": "miyaguchi vs koren",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2026-05/052826-official-scorecard-miyaguchi-vs-koren.jpg?itok=SqLyJIkV",
+        "left": "miyaguchi",
+        "left_candidates": [
+          "Ryuho Miyaguchi"
+        ],
+        "right": "koren",
+        "right_candidates": [
+          "Chungreng Koren"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-season-5-results-scorecards-opening-rounds-day-2",
+        "canonical_pair_fights": 0,
+        "identity_text": "ming vs tomar",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2026-05/052926-official-scorecard-ming-vs-tomar.jpg?itok=L69cVsz8",
+        "left": "ming",
+        "left_candidates": [
+          "Shi Ming"
+        ],
+        "right": "tomar",
+        "right_candidates": [
+          "Puja Tomar"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-season-5-results-scorecards-opening-rounds-day-2",
+        "canonical_pair_fights": 0,
+        "identity_text": "shuai vs batbayar",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2026-05/052926-official-scorecard-shuai-vs-batbayar.jpg?itok=jCRU__pT",
+        "left": "shuai",
+        "left_candidates": [
+          "Yin Shuai"
+        ],
+        "right": "batbayar",
+        "right_candidates": [
+          "Namsrai Batbayar"
+        ]
+      }
+    ],
+    "side_phrase_not_uniquely_resolved": [
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "maheshate vs estremadura",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Maheshate%20vs.%20Estremadura.jpg?itok=-oNQja_7",
+        "left": "maheshate",
+        "left_candidates": [],
+        "right": "estremadura",
+        "right_candidates": [
+          "Achilles Estremadura"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "lun vs ferreira da silva",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Lun%20vs.%20Ferreira%20da%20Silva.jpg?itok=SvouaW-q",
+        "left": "lun",
+        "left_candidates": [],
+        "right": "ferreira da silva",
+        "right_candidates": []
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "omargadzhiev vs silva",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.9%20-%20Scorecards%20-%20Omargadzhiev%20vs.%20Silva.jpg?itok=GsHldacG",
+        "left": "omargadzhiev",
+        "left_candidates": [
+          "Gadzhi Omargadzhiev"
+        ],
+        "right": "silva",
+        "right_candidates": [
+          "Samuel Silva",
+          "Janaina Silva",
+          "Anderson Silva",
+          "Alex Da Silva",
+          "Bruno Silva",
+          "Jay Silva",
+          "Rafael Silva",
+          "Thiago Silva",
+          "Diego Henrique da Silva",
+          "Claudio Silva",
+          "Gabriel Silva",
+          "Antonio Silva",
+          "Tiago dos Santos e Silva",
+          "Dayana Silva",
+          "Sidney Silva",
+          "Wagner Silva",
+          "Erick Silva",
+          "Ariane da Silva",
+          "Maria Silva",
+          "Radley Da Silva",
+          "Fabio Silva",
+          "Felipe Silva",
+          "Jean Silva",
+          "Edson Silva",
+          "Danny Silva",
+          "Henrique da Silva",
+          "Paulo Cesar Silva",
+          "Jacob Silva",
+          "Frank Silva",
+          "Karine Silva",
+          "Erik Silva",
+          "Assuerio Silva",
+          "Wanderlei Silva",
+          "Natalia Silva",
+          "Bruno Silva",
+          "Joaquim Silva",
+          "Jansey Silva",
+          "Mayra Bueno Silva",
+          "Jean Silva",
+          "Jhonata Silva",
+          "Leandro Silva"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "long vs quinonez",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.9%20-%20Scorecards%20-%20Long%20vs.%20Quinonez.jpg?itok=uOCVRynD",
+        "left": "long",
+        "left_candidates": [
+          "Rocky Long",
+          "Xiao Long"
+        ],
+        "right": "quinonez",
+        "right_candidates": [
+          "Cristian Quinonez",
+          "Jose Quinonez"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "kahlon vs basharat",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.9%20-%20Scorecards%20-%20Kahlon%20vs.%20Basharat.jpg?itok=sOmZojzw",
+        "left": "kahlon",
+        "left_candidates": [
+          "Oron Kahlon"
+        ],
+        "right": "basharat",
+        "right_candidates": [
+          "Farid Basharat",
+          "Javid Basharat"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "qihui vs silva",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.9%20-%20Scorecards%20-%20Qihui%20vs.%20Silva.jpg?itok=ysx2gxTy",
+        "left": "qihui",
+        "left_candidates": [
+          "Yan Qihui"
+        ],
+        "right": "silva",
+        "right_candidates": [
+          "Samuel Silva",
+          "Janaina Silva",
+          "Anderson Silva",
+          "Alex Da Silva",
+          "Bruno Silva",
+          "Jay Silva",
+          "Rafael Silva",
+          "Thiago Silva",
+          "Diego Henrique da Silva",
+          "Claudio Silva",
+          "Gabriel Silva",
+          "Antonio Silva",
+          "Tiago dos Santos e Silva",
+          "Dayana Silva",
+          "Sidney Silva",
+          "Wagner Silva",
+          "Erick Silva",
+          "Ariane da Silva",
+          "Maria Silva",
+          "Radley Da Silva",
+          "Fabio Silva",
+          "Felipe Silva",
+          "Jean Silva",
+          "Edson Silva",
+          "Danny Silva",
+          "Henrique da Silva",
+          "Paulo Cesar Silva",
+          "Jacob Silva",
+          "Frank Silva",
+          "Karine Silva",
+          "Erik Silva",
+          "Assuerio Silva",
+          "Wanderlei Silva",
+          "Natalia Silva",
+          "Bruno Silva",
+          "Joaquim Silva",
+          "Jansey Silva",
+          "Mayra Bueno Silva",
+          "Jean Silva",
+          "Jhonata Silva",
+          "Leandro Silva"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "englund vs torres",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.9%20-%20Scorecards%20-%20Englund%20vs.%20Torres.jpg?itok=JXqoMul_",
+        "left": "englund",
+        "left_candidates": [
+          "Kolton Englund"
+        ],
+        "right": "torres",
+        "right_candidates": [
+          "Manuel Torres",
+          "Justice Torres",
+          "Haven Torres",
+          "Abram Torres",
+          "Jose Torres",
+          "Ronys Torres",
+          "Anthony Torres",
+          "Alex Torres",
+          "Desmond Torres",
+          "Miguel Torres"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "bin vs murad 4 0",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.9%20-%20Scorecards%20-%20Bin%20vs.%20Murad%5B4%5D_0.jpg?itok=VZacoJ89",
+        "left": "bin",
+        "left_candidates": [],
+        "right": "murad",
+        "right_candidates": [
+          "Olivier Murad",
+          "Andy Murad"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "parsons vs renfro",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.8%20-%20Scorecards%20-%20Parsons%20vs.%20Renfro.jpg?itok=9bBC9-0L",
+        "left": "parsons",
+        "left_candidates": [
+          "Preston Parsons",
+          "Jonny Parsons",
+          "Jordan Parsons"
+        ],
+        "right": "renfro",
+        "right_candidates": [
+          "Solomon Renfro"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "rodriguez vs machado",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.8%20-%20Scorecards%20-%20Rodriguez%20vs.%20Machado.jpg?itok=-U3-9eik",
+        "left": "rodriguez",
+        "left_candidates": [
+          "Ray Rodriguez",
+          "Victor Rodriguez",
+          "Ronaldo Rodriguez",
+          "Mike Rodriguez",
+          "Marina Rodriguez",
+          "Drako Rodriguez",
+          "Yair Rodriguez",
+          "Pete Rodriguez",
+          "Manuel Rodriguez",
+          "Piera Rodriguez",
+          "Christian Rodriguez",
+          "Daniel Rodriguez",
+          "Ricco Rodriguez",
+          "Imanol Rodriguez",
+          "Paul Rodriguez"
+        ],
+        "right": "machado",
+        "right_candidates": [
+          "Valesca Machado",
+          "Caio Machado"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "borralho vs murray",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.8%20-%20Scorecards%20-%20Borralho%20vs.%20Murray.jpg?itok=vIasOGJK",
+        "left": "borralho",
+        "left_candidates": [
+          "Caio Borralho"
+        ],
+        "right": "murray",
+        "right_candidates": [
+          "Lee Murray",
+          "Jesse Murray"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "falcao vs barnes",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.8%20-%20Scorecards%20-%20Falcao%20vs.%20Barnes.jpg?itok=Z9ldInAs",
+        "left": "falcao",
+        "left_candidates": [
+          "Pedro Falcao",
+          "Maiquel Falcao"
+        ],
+        "right": "barnes",
+        "right_candidates": [
+          "Nick Barnes",
+          "James Barnes",
+          "Shonte Barnes"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "cortez vs rodriguez",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.7%20-%20Scorecards%20-%20Cortez%20vs.%20Rodriguez.jpg?itok=jPF3Ao33",
+        "left": "cortez",
+        "left_candidates": [
+          "Reyes Cortez Jr.",
+          "Tracy Cortez"
+        ],
+        "right": "rodriguez",
+        "right_candidates": [
+          "Ray Rodriguez",
+          "Victor Rodriguez",
+          "Ronaldo Rodriguez",
+          "Mike Rodriguez",
+          "Marina Rodriguez",
+          "Drako Rodriguez",
+          "Yair Rodriguez",
+          "Pete Rodriguez",
+          "Manuel Rodriguez",
+          "Piera Rodriguez",
+          "Christian Rodriguez",
+          "Daniel Rodriguez",
+          "Ricco Rodriguez",
+          "Imanol Rodriguez",
+          "Paul Rodriguez"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "hood vs buday",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.7%20-%20Scorecards%20-%20Hood%20vs.%20Buday.jpg?itok=ubukps_p",
+        "left": "hood",
+        "left_candidates": [
+          "David Hood",
+          "Lorenzo Hood"
+        ],
+        "right": "buday",
+        "right_candidates": [
+          "Martin Buday"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "duncan vs borshchev",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.7%20-%20Scorecards%20-%20Duncan%20vs.%20Borshchev.jpg?itok=mE5gg9aM",
+        "left": "duncan",
+        "left_candidates": [
+          "Chris Duncan",
+          "Christian Leroy Duncan"
+        ],
+        "right": "borshchev",
+        "right_candidates": [
+          "Viacheslav Borshchev"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "silva vs paprocki",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.7%20-%20Scorecards%20-%20Silva%20vs.%20Paprocki.jpg?itok=rqfIhd6T",
+        "left": "silva",
+        "left_candidates": [
+          "Samuel Silva",
+          "Janaina Silva",
+          "Anderson Silva",
+          "Alex Da Silva",
+          "Bruno Silva",
+          "Jay Silva",
+          "Rafael Silva",
+          "Thiago Silva",
+          "Diego Henrique da Silva",
+          "Claudio Silva",
+          "Gabriel Silva",
+          "Antonio Silva",
+          "Tiago dos Santos e Silva",
+          "Dayana Silva",
+          "Sidney Silva",
+          "Wagner Silva",
+          "Erick Silva",
+          "Ariane da Silva",
+          "Maria Silva",
+          "Radley Da Silva",
+          "Fabio Silva",
+          "Felipe Silva",
+          "Jean Silva",
+          "Edson Silva",
+          "Danny Silva",
+          "Henrique da Silva",
+          "Paulo Cesar Silva",
+          "Jacob Silva",
+          "Frank Silva",
+          "Karine Silva",
+          "Erik Silva",
+          "Assuerio Silva",
+          "Wanderlei Silva",
+          "Natalia Silva",
+          "Bruno Silva",
+          "Joaquim Silva",
+          "Jansey Silva",
+          "Mayra Bueno Silva",
+          "Jean Silva",
+          "Jhonata Silva",
+          "Leandro Silva"
+        ],
+        "right": "paprocki",
+        "right_candidates": [
+          "Kathryn Paprocki"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "barez vs hernandez",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.6%20-%20Scorecards%20-%20Barez%20vs.%20Hernandez.jpg?itok=s26TRVX8",
+        "left": "barez",
+        "left_candidates": [
+          "Daniel Barez"
+        ],
+        "right": "hernandez",
+        "right_candidates": [
+          "Joe Hernandez",
+          "Anthony Hernandez",
+          "Ramiro Hernandez",
+          "Luis Hernandez",
+          "Alexander Hernandez",
+          "Nohelin Hernandez",
+          "Carlos Hernandez",
+          "Noe Hernandez",
+          "Leslie Hernandez"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "weems vs garcia",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.6%20-%20Scorecards%20-%20Weems%20vs.%20Garcia.jpg?itok=pSv1XlJg",
+        "left": "weems",
+        "left_candidates": [
+          "Joshua Weems"
+        ],
+        "right": "garcia",
+        "right_candidates": [
+          "Fernie Garcia",
+          "Edgar Garcia",
+          "Alex Garcia",
+          "Alejandro Garcia",
+          "Leonard Garcia",
+          "Elias Garcia",
+          "Rafa Garcia",
+          "Nick Garcia",
+          "Steve Garcia"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "barnes vs holmes",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.6%20-%20Scorecards%20-%20Barnes%20vs.%20Holmes.jpg?itok=ovnaWmqg",
+        "left": "barnes",
+        "left_candidates": [
+          "Nick Barnes",
+          "James Barnes",
+          "Shonte Barnes"
+        ],
+        "right": "holmes",
+        "right_candidates": [
+          "Brandon Holmes",
+          "Joseph Holmes"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "white vs valdez",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.6%20-%20Scorecards%20-%20White%20vs.%20Valdez.jpg?itok=0NgmVTmg",
+        "left": "white",
+        "left_candidates": [
+          "Vernon White",
+          "Steve White",
+          "Patrik White",
+          "Craig White",
+          "Alex White"
+        ],
+        "right": "valdez",
+        "right_candidates": [
+          "Genaro Valdez"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "sudolski vs potieria 90 copy",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.5%20-%20Scorecards%20-%20Sudolski%20vs.%20Potieria%5B90%5D%20copy.jpg?itok=rLB382o-",
+        "left": "sudolski",
+        "left_candidates": [
+          "Lucasz Sudolski"
+        ],
+        "right": "potieria 90 copy",
+        "right_candidates": []
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "borralho vs jeffery 60 copy",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.5%20-%20Scorecards%20-%20Borralho%20vs.%20Jeffery%5B60%5D%20copy.jpg?itok=df0smIdq",
+        "left": "borralho",
+        "left_candidates": [
+          "Caio Borralho"
+        ],
+        "right": "jeffery 60 copy",
+        "right_candidates": []
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "almeida vs zellhuber 20 copy",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.5%20-%20Scorecards%20-%20Almeida%20vs.%20Zellhuber%5B20%5D%20copy.jpg?itok=sMc9TV6z",
+        "left": "almeida",
+        "left_candidates": [
+          "Jailton Almeida",
+          "Thomas Almeida",
+          "Ericka Almeida",
+          "Lucas Almeida",
+          "Cesar Almeida",
+          "Ricardo Almeida",
+          "Magno Almeida",
+          "Estefani Almeida"
+        ],
+        "right": "zellhuber 20 copy",
+        "right_candidates": []
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "kuniev vs santos 40 copy",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.5%20-%20Scorecards%20-%20Kuniev%20vs.%20Santos%5B40%5D%20copy.jpg?itok=mBtZNPyf",
+        "left": "kuniev",
+        "left_candidates": [
+          "Rizvan Kuniev"
+        ],
+        "right": "santos 40 copy",
+        "right_candidates": []
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "arkhagha vs dobson 20",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.4%20-%20Scorecards%20-%20Arkhagha%20vs.%20Dobson%5B20%5D.jpg?itok=7eIeW9zs",
+        "left": "arkhagha",
+        "left_candidates": [
+          "Hashem Arkhagha"
+        ],
+        "right": "dobson",
+        "right_candidates": [
+          "Shana Dobson",
+          "AJ Dobson"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "morales vs veretennikov 49",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.4%20-%20Scorecards%20-%20Morales%20vs.%20Veretennikov%5B49%5D.jpg?itok=EDk8ZpXg",
+        "left": "morales",
+        "left_candidates": [
+          "Vince Morales",
+          "Leonardo Morales",
+          "Omar Morales",
+          "Albert Morales",
+          "Joseph Morales",
+          "Michael Morales"
+        ],
+        "right": "veretennikov",
+        "right_candidates": [
+          "Nikolay Veretennikov"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "nguyen vs rlayang 53",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.4%20-%20Scorecards%20-%20Nguyen%20vs.%20Rlayang%5B53%5D.jpg?itok=O0PtRsaP",
+        "left": "nguyen",
+        "left_candidates": [
+          "Ben Nguyen",
+          "Steven Nguyen"
+        ],
+        "right": "rlayang",
+        "right_candidates": [
+          "Theo Rlayang"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "rosales vs martinez 97 copy",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.4%20-%20Scorecards%20-%20Rosales%20vs.%20Martinez%5B97%5D%20copy.jpg?itok=k0ddb7OD",
+        "left": "rosales",
+        "left_candidates": [
+          "Jacob Rosales"
+        ],
+        "right": "martinez 97 copy",
+        "right_candidates": []
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "lewis vs miller",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.3%20-%20Scorecards%20-%20Lewis%20vs.%20Miller.jpg?itok=zn9S2lwI",
+        "left": "lewis",
+        "left_candidates": [
+          "Brandon Lewis",
+          "Bevon Lewis",
+          "Derrick Lewis",
+          "Malik Lewis",
+          "John Lewis"
+        ],
+        "right": "miller",
+        "right_candidates": [
+          "Trent Miller",
+          "Jim Miller",
+          "Jason Miller",
+          "Mo Miller",
+          "Juliana Miller",
+          "Henry Miller",
+          "Micah Miller",
+          "Cole Miller",
+          "Phillip Miller",
+          "Ty Miller",
+          "Dan Miller",
+          "Aaron Miller"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
+        "canonical_pair_fights": 0,
+        "identity_text": "brzeski vs potter",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.3%20-%20Scorecards%20-%20Brzeski%20vs.%20Potter.jpg?itok=c9F2YPHg",
+        "left": "brzeski",
+        "left_candidates": [
+          "Lukasz Brzeski"
+        ],
+        "right": "potter",
+        "right_candidates": [
+          "Dylan Potter",
+          "Callan Potter"
         ]
       }
     ]
   },
-  "generated_at_utc": "2026-08-22T23:51:07.378017Z",
+  "generated_at_utc": "2026-08-22T23:55:53.405234Z",
   "identity_text_source_counts": {
-    "image_alt_scorecard_suffix": 101,
-    "image_url_scorecard_suffix": 1789,
-    "none": 1159
+    "image_alt_scorecard_suffix": 88,
+    "image_url_scorecard_suffix": 1788,
+    "none": 1173
   },
-  "image_matched_fighter_count_distribution": {
-    "0": 1463,
-    "1": 813,
-    "2": 753,
-    "3": 17,
-    "4": 3
-  },
-  "mapped_articles": 155,
-  "mapped_fights": 683,
+  "mapped_articles": 134,
+  "mapped_fights": 575,
   "output": "data/derived/identity/ufc_scorecard_identity_transport_candidate.csv",
-  "schema_version": 4
+  "schema_version": 5,
+  "side_candidate_count_distribution": {
+    "0x0": 1263,
+    "0x1": 53,
+    "0x10": 1,
+    "0x11": 1,
+    "0x13": 1,
+    "0x2": 10,
+    "0x20": 1,
+    "0x21": 1,
+    "0x3": 4,
+    "0x4": 5,
+    "0x41": 2,
+    "0x5": 1,
+    "0x6": 5,
+    "0x7": 1,
+    "0x8": 1,
+    "0x9": 2,
+    "10x0": 5,
+    "10x1": 4,
+    "10x11": 1,
+    "10x4": 1,
+    "10x6": 1,
+    "11x0": 4,
+    "11x1": 4,
+    "11x13": 1,
+    "11x20": 1,
+    "12x0": 2,
+    "12x1": 5,
+    "12x16": 1,
+    "12x2": 2,
+    "12x20": 1,
+    "12x4": 1,
+    "13x0": 2,
+    "13x1": 1,
+    "13x16": 1,
+    "13x3": 2,
+    "13x6": 1,
+    "15x0": 6,
+    "15x1": 7,
+    "15x2": 3,
+    "15x3": 1,
+    "15x4": 1,
+    "15x7": 1,
+    "16x0": 2,
+    "16x1": 7,
+    "16x10": 1,
+    "16x2": 1,
+    "16x3": 1,
+    "1x0": 182,
+    "1x1": 625,
+    "1x10": 8,
+    "1x11": 6,
+    "1x12": 2,
+    "1x13": 5,
+    "1x15": 9,
+    "1x16": 6,
+    "1x2": 88,
+    "1x20": 5,
+    "1x21": 1,
+    "1x28": 4,
+    "1x3": 40,
+    "1x4": 30,
+    "1x41": 8,
+    "1x5": 24,
+    "1x6": 21,
+    "1x7": 17,
+    "1x8": 14,
+    "1x9": 15,
+    "20x0": 3,
+    "20x1": 8,
+    "20x2": 3,
+    "21x0": 1,
+    "21x1": 5,
+    "21x2": 1,
+    "21x8": 1,
+    "28x0": 2,
+    "28x1": 3,
+    "28x4": 1,
+    "28x7": 1,
+    "2x0": 31,
+    "2x1": 95,
+    "2x10": 2,
+    "2x11": 2,
+    "2x15": 4,
+    "2x16": 3,
+    "2x2": 15,
+    "2x28": 2,
+    "2x3": 8,
+    "2x4": 13,
+    "2x41": 2,
+    "2x5": 2,
+    "2x6": 2,
+    "2x7": 2,
+    "2x9": 4,
+    "3x0": 19,
+    "3x1": 52,
+    "3x10": 1,
+    "3x16": 2,
+    "3x2": 9,
+    "3x20": 1,
+    "3x3": 5,
+    "3x4": 1,
+    "3x41": 2,
+    "3x6": 2,
+    "3x7": 1,
+    "3x8": 1,
+    "3x9": 1,
+    "41x1": 10,
+    "41x15": 1,
+    "41x2": 1,
+    "41x7": 1,
+    "4x0": 12,
+    "4x1": 33,
+    "4x13": 1,
+    "4x16": 1,
+    "4x2": 3,
+    "4x3": 4,
+    "4x4": 1,
+    "4x6": 1,
+    "4x7": 2,
+    "5x0": 4,
+    "5x1": 22,
+    "5x12": 1,
+    "5x2": 5,
+    "5x28": 1,
+    "5x3": 2,
+    "5x4": 3,
+    "5x5": 1,
+    "5x7": 1,
+    "6x0": 5,
+    "6x1": 20,
+    "6x11": 1,
+    "6x12": 1,
+    "6x15": 1,
+    "6x2": 4,
+    "6x21": 1,
+    "6x3": 2,
+    "6x41": 3,
+    "6x6": 1,
+    "6x7": 2,
+    "6x9": 1,
+    "7x0": 3,
+    "7x1": 9,
+    "7x6": 2,
+    "7x7": 1,
+    "8x0": 2,
+    "8x1": 10,
+    "8x13": 1,
+    "8x16": 1,
+    "8x2": 4,
+    "8x5": 1,
+    "8x6": 1,
+    "9x0": 2,
+    "9x1": 11,
+    "9x15": 1
+  }
 }
