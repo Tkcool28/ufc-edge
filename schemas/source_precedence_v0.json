@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "precedence_version": "0.1.0-draft",
+  "precedence_version": "0.1.1-draft",
   "status": "data_phase_draft",
   "global_rules": {
     "precedence_applies_only_after_identity_resolution": true,
@@ -90,7 +90,7 @@
       "family": "historical_rankings",
       "status": "active",
       "canonical_table": "rankings",
-      "priority": ["tidytuesday_fightr_rankings"],
+      "priority": ["tidytuesday_ufc_rankings"],
       "selection_gate": "Resolve fighter identity; only use ranking observations strictly before the target information cutoff.",
       "future_join_rule": "Nearest future ranking is forbidden."
     },
@@ -98,7 +98,7 @@
       "family": "cross_promotion_fight_history",
       "status": "active",
       "canonical_table": "fights",
-      "priority": ["kaggle_pro_mma_fights_cc0"],
+      "priority": ["kaggle_pro_mma_fights"],
       "selection_gate": "Resolve fighter identity and deduplicate UFC overlap before canonical insertion.",
       "notes": "Companion fighter-profile career totals are 2021 snapshot data and cannot be historical backfill."
     },
