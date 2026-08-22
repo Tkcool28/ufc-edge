@@ -1,10 +1,10 @@
 {
   "audit": "external_mma_fight_transport",
-  "completed_at_utc": "2026-08-22T23:17:15.553662Z",
+  "completed_at_utc": "2026-08-22T23:21:46.943069Z",
   "exit_code": 0,
-  "github_run_id": "32604796889",
-  "log": "provenance/runs/external_mma_fight_transport_32604796889.log",
+  "github_run_id": "32605002882",
+  "log": "provenance/runs/external_mma_fight_transport_32605002882.log",
   "schema_version": 1,
   "status": "success",
-  "trigger_sha": "1601034dde567a7cf5677fdec9cc3fda9d65a4f3"
+  "trigger_sha": "a73e054213171c677f5d3f1386b706cf20ab19a6"
 }

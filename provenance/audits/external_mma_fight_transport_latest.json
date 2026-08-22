@@ -1,20 +1,26 @@
 {
   "date_parse_counts": {
+    "ABBREV_MONTH_MDY": 10448,
     "DMY_DASH": 0,
     "DMY_SLASH": 0,
+    "FULL_MONTH_DMY": 0,
+    "FULL_MONTH_MDY": 920,
     "ISO_YMD": 0,
     "MDY_DASH": 0,
-    "MDY_SLASH": 0,
-    "MONTH_NAME_DMY": 0,
-    "MONTH_NAME_MDY": 920
+    "MDY_SLASH": 0
   },
   "decision": {
     "canonicalization_promoted": false,
-    "required_next": "Select only a stable event key, fight key, and date parser supported by this audit; then deduplicate UFC overlap before canonical insertion."
+    "date_parser_candidate": "ABBREV_MONTH_MDY only if it explains essentially all nonmissing source dates",
+    "event_identity_candidate": "source event url if every nonempty url maps to exactly one event signature",
+    "fight_identity_candidate": "(source event url, match_nr) except duplicate pair(s), which must be quarantined",
+    "required_next": "Promote only keys/date semantics that pass these exact gates, then deduplicate UFC overlap before canonical insertion."
   },
   "distinct_event_signatures": 1006,
   "distinct_nonempty_url": 1006,
   "duplicate_url_match_pairs": 1,
+  "duplicate_url_match_rows": 2,
+  "event_urls_with_multiple_event_signatures": 0,
   "examples": [
     {
       "date": "Aug 7, 2021",
@@ -477,7 +483,7 @@
     "draw": 66,
     "loss": 10290
   },
-  "generated_at_utc": "2026-08-22T23:17:15.252525Z",
+  "generated_at_utc": "2026-08-22T23:21:46.914915Z",
   "max_rows_per_url": 20,
   "missing_counts": {
     "date": 0,
@@ -510,7 +516,7 @@
     "5": 308
   },
   "rows": 10448,
-  "schema_version": 1,
+  "schema_version": 2,
   "top_time_values": [
     [
       "05:00",
