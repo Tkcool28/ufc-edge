@@ -10,6 +10,8 @@
     "fighter_round_stats": 41218,
     "fighters": 4600,
     "fights": 8769,
+    "rankings": 99077,
+    "rankings_exclusions": 1400,
     "source_identity_links": 30347
   },
   "exclusion_reason_counts": {
@@ -54,6 +56,11 @@
       "sha256": "19823beb0cbfd9a816fdb1b44a4ee13812094cf9c1e3cdee65582030db5d9f47"
     },
     {
+      "bytes": 7607858,
+      "path": "data/canonical/v0/rankings.csv",
+      "sha256": "770cf0e559a26a1ebcf524c3e25a4cec05e059404747e74ae88174be48724c11"
+    },
+    {
       "bytes": 5224290,
       "path": "data/canonical/v0/source_identity_links.csv",
       "sha256": "2de9a6708295be60a604137130d62bfe4f1bdfe47e6ae5077ede1aad9bfddc38"
@@ -67,9 +74,14 @@
       "bytes": 550743,
       "path": "data/derived/qa/canonical_fightmetric_position_exclusions_v0.csv",
       "sha256": "eaa1deb168a4e9be5c7752e80608c702644be0399d101a579294431c5ee0a7e5"
+    },
+    {
+      "bytes": 153153,
+      "path": "data/derived/qa/canonical_rankings_exclusions_v0.csv",
+      "sha256": "81330c1367603593eedaf64033a99c7449daa3505bd4ec3a828cfad1de2b5207"
     }
   ],
-  "generated_at_utc": "2026-08-22T23:08:12.319239Z",
+  "generated_at_utc": "2026-08-22T23:13:16.949840Z",
   "rules": {
     "ambiguous_identity_rows_are_quarantined": true,
     "canonical_ids_are_opaque_uuid5_from_first_trusted_source_identity": true,
@@ -79,12 +91,14 @@
     "fightmetric_position_uses_quantized_buckets_only": true,
     "greco_is_default_historical_transport_for_shared_round_counts": true,
     "missing_is_not_zero": true,
+    "rankings_are_dated_observations_not_features": true,
     "round_zero_allowed": false,
     "unique_normalized_name_used_only_as_fail_closed_transport_resolution": true
   },
   "schema_version": 1,
   "source_snapshots": {
     "greco1899_ufcstats": "8e40eb945e11",
+    "tidytuesday_ufc_rankings": "107ff6c70de0",
     "ufc_fightmetric_official": "20260820T123046Z"
   }
 }

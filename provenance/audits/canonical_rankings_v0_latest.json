@@ -1,0 +1,46 @@
+{
+  "canonical_contract_version": "0.3.0-draft",
+  "canonical_fighters_represented": 612,
+  "canonical_rows": 99077,
+  "earliest_ranking_date": "2013-02-04",
+  "excluded_rows": 1400,
+  "generated_at_utc": "2026-08-22T23:13:16.949840Z",
+  "latest_ranking_date": "2026-06-16",
+  "outputs": {
+    "exclusions": "data/derived/qa/canonical_rankings_exclusions_v0.csv",
+    "table": "data/canonical/v0/rankings.csv"
+  },
+  "qa_counts": {
+    "ambiguous_exact_canonical_name": 207,
+    "conflicting_duplicate_primary_key": 24,
+    "unmatched_exact_canonical_name": 1169
+  },
+  "raw_rows": 100477,
+  "rules": {
+    "creates_fighter_identity_from_name": false,
+    "future_ranking_lookup_performed": false,
+    "interpolation_performed": false,
+    "observation_assignment_rule": "exact normalized fighter name must map to exactly one existing canonical fighter",
+    "rank_zero_semantics": "source documentation says rank 0 typically designates reigning champion; canonical is_champion is rank==0 for this source"
+  },
+  "schema_version": 1,
+  "source": "tidytuesday_ufc_rankings",
+  "source_snapshot_id": "107ff6c70de0",
+  "weight_classes": [
+    "Bantamweight",
+    "Featherweight",
+    "Flyweight",
+    "Heavyweight",
+    "Light Heavyweight",
+    "Lightweight",
+    "Men's Pound-for-Pound",
+    "Middleweight",
+    "Pound-for-Pound",
+    "Welterweight",
+    "Women's Bantamweight",
+    "Women's Featherweight",
+    "Women's Flyweight",
+    "Women's Pound-for-Pound",
+    "Women's Strawweight"
+  ]
+}

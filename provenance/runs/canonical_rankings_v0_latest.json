@@ -1,0 +1,10 @@
+{
+  "build": "canonical_rankings_v0",
+  "completed_at_utc": "2026-08-22T23:13:17.050175Z",
+  "exit_code": 0,
+  "github_run_id": "32604612095",
+  "log": "provenance/runs/canonical_rankings_v0_32604612095.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "51395dcbbccad7810c51bfabb0c04bbc0c446c02"
+}
