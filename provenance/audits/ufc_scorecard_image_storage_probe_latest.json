@@ -1,0 +1,2433 @@
+{
+  "candidate_catalog": "data/derived/discovery/ufc_scorecard_image_candidates.csv",
+  "content_type_counts": {
+    "image/jpeg": 195,
+    "image/png": 45
+  },
+  "decision": {
+    "binary_media_committed": false,
+    "next_gate": "Choose Git storage vs hashed transient-fetch OCR based on measured footprint and repository-size budget.",
+    "probe_only": true
+  },
+  "generated_at_utc": "2026-08-22T22:13:58.230322Z",
+  "method_counts": {
+    "HEAD": 240
+  },
+  "sample_requested": 240,
+  "sample_results": [
+    {
+      "content_length": "33060",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"cBLsNqfX0F2aDKeppyx41VROXQ04CsyFZBFfN2VDkvY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2019-04/alistair_overeem_scorecard_2019.jpg?itok=2eiHWGtx"
+    },
+    {
+      "content_length": "61937",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"uD6bKzjjEsfBnU8zB89ossLJjzB8IB5pQW+zyU7z/f8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2020-07/UFC251ScorecardHero.jpg?h=d1cb525d&itok=qbddSgo7"
+    },
+    {
+      "content_length": "48612",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"r1QvMKT7s2FkEkIKqaDGURp2yvhgug5qdYZkQ/bWYVA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2020-12/UFCVegas17ScorecardHero.jpg?h=d1cb525d&itok=4REyMS5c"
+    },
+    {
+      "content_length": "40562",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ddYPmbaStzWOKtD2UuSgisiObIcLVZ601aUtWDN7xHQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2021-05/ufc%20vegas%2026%20the%20scorecard%20hero.jpg?h=d1cb525d&itok=Jxt5gDPB"
+    },
+    {
+      "content_length": "44600",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"r18G5Ek1q+J7P84MfQ5vhk+Qc8JSHrwRvmtnBsGqMYY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2021-08/082821-ufc-fight-night-barboza-vs-chikadze-the-return-of-the-ultimate-fighter-finale-scorecards-page-hero.jpg?h=d1cb525d&itok=ikajRqbO"
+    },
+    {
+      "content_length": "58157",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"yxsUWQj+17H0OktIYY4geKWDzdulB38N3QlWcIYLpG4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2021-11/110621-ufc-268-usman-vs-covington-2-official-judges-scorecards-hero_GettyImages-870346752.jpg?h=d1cb525d&itok=El4hBXFN"
+    },
+    {
+      "content_length": "39979",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"dtL4SdzpkLtd907wmA2VnMdGT03XxoYOUnz751gnoXA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-03/030522-kevin-holland-ufc-272-scorecard-hero_GettyImages-1380960645.jpg?h=d1cb525d&itok=eh6Eryoy"
+    },
+    {
+      "content_length": "70165",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Xlijnd6MJ2lAqshysZuBrxWnwLP9HIxuVII/JmHIdwA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-06/061122-ufc-275-teixeira-vs-prochazka-scorecards-page-hero_GettyImages-1402377730.jpg?h=d1cb525d&itok=iA4_07VG"
+    },
+    {
+      "content_length": "66829",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ua0iBgeO8/jW1s63u9E89zLPur/pca5e16/orkzmul4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-09/093022-HERO-official-scorecards-octagon.jpg?h=d1cb525d&itok=orjSOX6U"
+    },
+    {
+      "content_length": "77881",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"8Oax08RW1lv057MTijVWkJfOF54ESYDXN3rRC7jZTqA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/background_image_sm/s3/2023-09/090123-hero-official-scorecards-gane-vs-spivac-GettyImages-1420517611.jpg?h=d1cb525d&itok=D9U9lsQF"
+    },
+    {
+      "content_length": "60372",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ABo5AsPwM2Uzb6afxIw+OJe3f65/uyfbpPMSf2rt3Uk\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-08/UFC%20Fight%20Night%20Munhoz%20vs.%20Edgar%20-%20Scorecards%20-%20Munhoz%20vs.%20Edgar.jpg?VersionId=4YkyAetRzzBJDFnVjm40erht1AmgmURp&itok=ceydw6z_"
+    },
+    {
+      "content_length": "55867",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"1lYoeNzrV0C2dS2in5Akj513CiGhS72I1oojJ5LBdlA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-08/UFC%20Fight%20Night%20Smith%20vs.%20Rakic%20-%20Scorecards%20-%20Smith%20vs.%20Rakic.jpg?VersionId=Dvf0C41t25OrCdiUtjrBfHSuYckydJcY&itok=AZlXriks"
+    },
+    {
+      "content_length": "52605",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"i2VNxvvERQVuE/H31o3nsp7SM89PlmMiVCzWNHoU5+I\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-09/UFC%20Fight%20Night%20Covington%20vs.%20Woodley%20-%20Scorecards%20-%20Walker%20vs.%20Spann.jpg?VersionId=wWd9cFLRoZc7zLo0YLjrv1y4lUwwPIYS&itok=Azg57UF7"
+    },
+    {
+      "content_length": "55299",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"+bEIYf0xPH/N+x0Vx+SIjjCB6XdpGaRTSkU7OiUfrGQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-09/UFC%20Fight%20Night%20Waterson%20vs.%20Hill%20-%20Scorecards%20-%20Mazo%20vs.%20Kish.jpg?VersionId=axVv1D2jDUaE081amDAxbYOVpQ9Tt6hd&itok=LJj93fOL"
+    },
+    {
+      "content_length": "55858",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"krFEfkF5zFX7TtlXDE6+TBke4VYMyMjpGXtYIJykszI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20254%20Khabib%20vs.%20Gaethje%20-%20Scorecards%20-%20Murphy%20vs.%20Shakirova.jpg?itok=KDQMoIbF"
+    },
+    {
+      "content_length": "52165",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"5Fy7Rl3VH9FNBtZD+Jzfq9Q2KAkRLi1vpPD54OzGoG0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Hall%20vs.%20Silva%20-%20Scorecards%20-%20Jacoby%20vs.%20Ledet.jpg?itok=qbLU8Xkc"
+    },
+    {
+      "content_length": "52527",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"JW/ZFMxbeza38l3+Lr60cYfdzR01XmodiHhUlGfu/20\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Holm%20vs.%20Aldana%20-%20Scorecards%20-%20Vendramini%20vs.%20Ayari%5B2%5D.jpg?VersionId=wFLyc9mAfJCbsyDYshrPNEMuosK7V_te&itok=ndPOUUGj"
+    },
+    {
+      "content_length": "56370",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"+lXsAPTZqjuVZgjgC8i34f5pGKnD/W0XHMMKN8Bgqs0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Moraes%20vs.%20Sandhagen%20-%20Scorecards%20-%20Rothwell%20vs.%20Tybura.jpg?itok=4EBrgDoK"
+    },
+    {
+      "content_length": "56824",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Wcc8wSLgAdPvEgw/ssKTdO+IzAuhTG78r+Xj0ndq4I8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Ortega%20vs.%20The%20Korean%20Zombie%20-%20Scorecards%20-%20Silva%20vs.%20Krause.jpg?itok=ice3Y61l"
+    },
+    {
+      "content_length": "62018",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Fy3O1uPUmAJ0n1m1SGvmdnwNM7OqsbsuGfOCSU5pfmI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-11/UFC%20255%20Figueiredo%20vs.%20Perez%20-%20Scorecards%20-%20Shevchenko%20vs.%20Maia.jpg?itok=4knVQEmd"
+    },
+    {
+      "content_length": "56052",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"wdtBKNomeiIRATtzKLEKoZLhA2qwNPdjww0/bNhOIHY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-11/UFC%20Fight%20Night%20Santos%20vs.%20Teixeira%20-%20Scorecards%20-%20Elkins%20vs.%20Garagorri.jpg?itok=I473iTlj"
+    },
+    {
+      "content_length": "55856",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"65jSuLGwujDQDcNKeXe/J21YIzOL+v0n+7pqJWQhbS0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-11/UFC%20Fight%20Night%20Smith%20vs.%20Clark%20-%20Scorecards%20-%20Parisian%20vs.%20Porter.jpg?itok=r8t8aapt"
+    },
+    {
+      "content_length": "53482",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"7eH5fTwgxdQ87InJHu2iQi7Jiq6cxCzm8YJlasJnrbw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-12/UFC%20256%20Figueiredo%20vs.%20Moreno%20-%20Scorecards%20-%20Swanson%20vs.%20Pineda.jpg?itok=yUKtbWLi"
+    },
+    {
+      "content_length": "55034",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"L+PrIYcVNhephDHi3LoeIwkqXfKayb3+yhq6IeIBd+c\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2020-12/UFC%20Fight%20Night%20Thompson%20vs.%20Neal%20-%20Scorecards%20-%20Nchukwi%20vs.%20Pickett%5B1%5D.jpg?itok=VcXONorz"
+    },
+    {
+      "content_length": "55914",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ZmehtISQiSe5fRhAHgGTfpqt7E66fBsAbX5DgU5E2EY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-01/UFC%20257%20Poirier%20vs.%20McGregor%20-%20Scorecards%20-%20Pena%20vs.%20McMann.jpg?itok=huRfb0Go"
+    },
+    {
+      "content_length": "55385",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"dQYyNUVA3zNDoT5LpwGA4oMJM/sUkJkImEk67zd86UY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-01/UFC%20Fight%20Night%20Chiesa%20vs.%20Magny%20-%20Scorecards%20-%20Leonardo%20vs.%20Fiorot.jpg?itok=Zw7f9Qu0"
+    },
+    {
+      "content_length": "57026",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"SgygmMhSjxYDFV3MF3ETh+6BLKm9efdHjxTIH1LND/k\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-01/UFC%20Fight%20Night%20Holloway%20vs.%20Kattar%20-%20Scorecards%20-%20Moras%20vs.%20Melo.jpg?itok=0zvHy_gE"
+    },
+    {
+      "content_length": "56159",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"KH02/QOBVIQnmD8GXuk91ohDti8Bu/I9gMTuhjn5Rqc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-02/UFC%20258%20Usman%20vs.%20Burns%20-%20Scorecards%20-%20Vieira%20vs.%20Hernandez%20copy.jpg?itok=nyyDYkPK"
+    },
+    {
+      "content_length": "53307",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"d6uOxMGttaVplQlC/v3ucj9rNV3yMPAMLmu71MJU5lE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-02/UFC%20Fight%20Night%20Blaydes%20vs.%20Lewis%20-%20Scorecards%20-%20Wineland%20vs.%20Castaneda%5B1%5D.jpg?itok=NSBgTC_J"
+    },
+    {
+      "content_length": "54940",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"wlOgCO0L/flrh59oxsxiEstucWPzOjOtkypN5mtXNLM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-02/UFC%20Fight%20Night%20Rozenstruik%20vs.%20Gane%20-%20Scorecards%20-%20Caceres%20vs.%20Croom%5B1%5D.jpg?itok=In0tZoWI"
+    },
+    {
+      "content_length": "55278",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ElyG076iZQvlCNgJ7NzzTOcH8HMk90W4V2bhrmKuJQo\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-03/UFC%20259%20Blachowicz%20vs.%20Adesanya%20-%20Scorecards%20-%20Brady%20vs.%20Matthews%5B1%5D.jpg?itok=bfwvI1FY"
+    },
+    {
+      "content_length": "58013",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"CCJTwVgo+Fj/RtNFMAD/Z0tadjFbszG/ZSXmN9wDDic\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-03/UFC%20260%20Miocic%20vs.%20Ngannou%20-%20Scorecards%20-%20Gooden%20vs.%20Nurmagomedov.jpg?itok=XxYJFivW"
+    },
+    {
+      "content_length": "55052",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"3wgntrv65dWjZTHiTFCh98Y8BlcwTIl47M4Th64c8/c\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-03/UFC%20Fight%20Night%20Brunson%20vs.%20Holland%20-%20Scorecards%20-%20Reneau%20vs.%20Chiasson.jpg?itok=-EZcN6yK"
+    },
+    {
+      "content_length": "55619",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"q9X+pHNbgSzaliQmXEaOZG1z10O5A0PHyNJgp94qou0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-03/UFC%20Fight%20Night%20Edwards%20vs.%20Muhammad%20-%20Scorecards%20-%20Kape%20vs.%20Nicolau_0.jpg?itok=D7g1W4gR"
+    },
+    {
+      "content_length": "56396",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"s+zi+UAFmes6mpoMavi8Hlny6jJrqeVORdTAFWHlU9I\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-04/UFC%20261%20Usman%20vs.%20Masvidal%202%20-%20Scorecards%20-%20Sabatini%20vs.%20Connelly.jpg?itok=2NBGg6eC"
+    },
+    {
+      "content_length": "55502",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"I1EyH8XCpMjS6xLvsBROaNVPexYyOfPDO7ZPb/YNpV4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-04/UFC%20Fight%20Night%20Vettori%20vs.%20Holland%20-%20Scorecards%20-%20Kasanganay%20vs.%20Palatnikov.jpg?itok=nrVmSCUd"
+    },
+    {
+      "content_length": "55724",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"8xMFxB20Hg2ym4EAtZzfmucGTOLWXIBucsCLj1Hlv1w\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-04/UFC%20Fight%20Night%20Whittaker%20vs.%20Gastelum%20-%20Scorecards%20-%20Penne%20vs.%20Godinez%5B1%5D.jpg?itok=oZlSh6SK"
+    },
+    {
+      "content_length": "52357",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ECj31A8hJIRnX6hME6t9wPH6vnEmP1LarTKmWkBBM70\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-05/UFC%20262%20Oliveira%20vs.%20Chandler%20-%20Scorecards%20-%20Souza%20vs.%20Muniz.jpg?itok=VaNEPyGb"
+    },
+    {
+      "content_length": "56699",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"LL/xiwShySzJ+1tIXyzgnVczsGCOWYX/H5/HZ4rLtU8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-05/UFC%20Fight%20Night%20Font%20vs.%20Garbrandt%20-%20Scorecards%20-%20Spencer%20vs.%20Dumont.jpg?itok=Ve29vdwE"
+    },
+    {
+      "content_length": "56390",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"5rrPZRKliH1QtoBBW6CLu/b3REMNodhfDBivvvtKzIw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-05/UFC%20Fight%20Night%20Reyes%20vs.%20Prochazka%20-%20Scorecards%20-%20Strickland%20vs.%20Jotko.jpg?itok=0yUiy8lO"
+    },
+    {
+      "content_length": "55298",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"L73Qhgsc/Bogytbak+fcsfef7ywPW23z4DJ82hUvz5A\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-06/UFC%20263%20Adesanya%20vs.%20Vettori%202%20-%20Scorecards%20-%20Dober%20vs.%20Riddell.jpg?itok=cEDdImu7"
+    },
+    {
+      "content_length": "56976",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"inLxOw8SLoT+6PtLplx+mhzhfRW6WdC/fblzDfSDqdI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-06/UFC%20Fight%20Night%20Gane%20vs%20Volkov%20-%20Scorecards%20-%20Nzechukwu%20vs.%20Marques.jpg?itok=5-dXxmxR"
+    },
+    {
+      "content_length": "57111",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"QHFHZH4e3VchhGYjAfKY0CyC/e2RP2gmUS5Qe16xCNQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-06/UFC%20Fight%20Night%20Jung%20vs.%20Ige%20-%20Scorecards%20-%20Camur%20vs.%20Negumereanu%5B4%5D%20copy.jpg?itok=2DjmoZ6U"
+    },
+    {
+      "content_length": "55299",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"XMNADsqNmBLmdSK2B5dOfxtsv1iFssXV+ff2iAxQomM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-06/UFC%20Fight%20Night%20Rozenstruik%20vs.%20Sakai%20-%20Scorecards%20-%20De%20La%20Rosa%20vs.%20Lipski.jpg?itok=2ecjsrMj"
+    },
+    {
+      "content_length": "52171",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"kpYkitWhVp/w9hW1HKKt0vIb4vEhCVVWHSRqTkfHsJg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-07/UFC%20264%20Poirier%20vs.%20McGregor%203%20-%20Scorecards%20-%20Burns%20vs.%20Thompson%5B8%5D%20copy.jpg?itok=bvkRYZoh"
+    },
+    {
+      "content_length": "55830",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"SwBtOKFw8kkyasICiVk6Sd6IxYyOtYFXadSpAWJmkqY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-07/UFC%20Fight%20Night%20Hall%20vs.%20Strickland%20-%20Scorecards%20-%20Benoit%20vs.%20Adashev.jpg?itok=yHXEzDSd"
+    },
+    {
+      "content_length": "47261",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"frw9N8VNVMh67N00Hydg9WkezkBEK1RSKJLdlBIuE+A\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-07/UFC%20Fight%20Night%20Makhachev%20vs.%20Moises%20-%20Scorecards%20-%20Reneau%20vs.%20Tate%5B54%5D%20copy.jpg?itok=-c13gSn0"
+    },
+    {
+      "content_length": "61454",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"bdRV5Tp7JuftLZtMTbR0sCVK7X4VGwLdc/pYLpBMcPg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-07/UFC%20Fight%20Night%20Sandhagen%20vs.%20Dillashaw%20-%20Scorecards%20-%20Sandhagen%20vs.%20Dillashaw.jpg?itok=DxXZHBvZ"
+    },
+    {
+      "content_length": "55575",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ItzQ85xQhwZl41uHSEV4f5w5c8/hdvQ6NWzVY2HXSvM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-08/UFC%20265%20Lewis%20vs.%20Gane%20-%20Scorecards%20-%20Lewis%20vs.%20Gane.jpg?itok=-2oQ7MHO"
+    },
+    {
+      "content_length": "52535",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"LVUmgwowB4WvQK2hUVVYGQH/1zIM0q76PyEpS/RcP9M\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-08/UFC%20Fight%20Night%20Barboza%20vs.%20Chikadze%20-%20Scorecards%20-%20Martinez%20vs.%20Cannetti%5B29%5D%20copy.jpg?itok=ErGNqBa6"
+    },
+    {
+      "content_length": "48816",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"EV+wK0BUkbnDuqmkAL50EzoXGSwsb4NKcNpomuph8lE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-08/UFC%20Fight%20Night%20Cannonier%20vs.%20Gastelum%20-%20Scorecards%20-%20Pichel%20vs.%20Hubbard%5B21%5D%20copy.jpg?itok=xERB6J4m"
+    },
+    {
+      "content_length": "52771",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"+MlF3OQu/YEo8TBD23QMNm45TzQQX+FJuDONQn8tSN4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-09/091821-UFC-FIGHT-NIGHT-LOPEZ-VS-ALATENGHEILI-SCORECARD.jpg?itok=LlkJ78Pd"
+    },
+    {
+      "content_length": "51056",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"snOJUKFJ0fQmW4iXMtlvaXUc2gapIPunDmp01oCkYg8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.5%20-%20Scorecards%20-%20Almeida%20vs.%20Zellhuber%5B20%5D%20copy.jpg?itok=sMc9TV6z"
+    },
+    {
+      "content_length": "57950",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"PfNrVx3/BWUrzHyARq32dFwuisTIJS0r6sJ6ddIRxy0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-09/UFC%20266%20Volkanovski%20vs.%20Ortega%20-%20Scorecards%20-%20Volkanovski%20vs.%20Ortega%5B3%5D.jpg?itok=z2GiqJVf"
+    },
+    {
+      "content_length": "52996",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"zru77RVS65slBPUdEl996Oqhzn+8QusnRvKfJRe1nX0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-10/102321-Clark-VS-Edwards-SCORECARD.jpg?itok=XQqp_1kD"
+    },
+    {
+      "content_length": "54805",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"VDpUtgJ9xLFGVI48JrxAn0S5cq0xV/gyBfUPFCjJisw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.6%20-%20Scorecards%20-%20Barez%20vs.%20Hernandez.jpg?itok=s26TRVX8"
+    },
+    {
+      "content_length": "55153",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"gyeLMWS9OmqXKqn1EEbUyVS1jqy6QISCmEnpUkfpGYE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.8%20-%20Scorecards%20-%20Parsons%20vs.%20Renfro.jpg?itok=9bBC9-0L"
+    },
+    {
+      "content_length": "49699",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"BL1kurVSW9wYxwauarFjuZWhNsU2qUmuEHzYOBx4PJM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-10/UFC%20267%20Blachowicz%20vs.%20Teixeira%20-%20Scorecards%20-%20Jingliang%20vs.%20Chimaev%5B51%5D.jpg?itok=mkR-KiNu"
+    },
+    {
+      "content_length": "51798",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"2axplp5dhF+X0apthOWrR36VytN23D7sZY/c5L9nUiY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-10/UFC%20Fight%20Night%20Ladd%20vs.%20Dumont%20-%20Scorecards%20-%20Godinez%20vs.%20Carolina%5B41%5D%20copy.jpg?itok=GPHpLX_i"
+    },
+    {
+      "content_length": "55377",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"SETiUVIEV88wogh9HXjfyapoRl6FoD2NLMzF12A3t7k\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-10/UFC%20Fight%20Night%20Santos%20vs.%20Walker%20-%20Scorecards%20-%20Perez%20vs.%20Eduardo%5B1%5D.jpg?itok=ueHbI4yq"
+    },
+    {
+      "content_length": "50391",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"NUUJefig1zwvDA7S767CeV2CLRH1jJFfpu+4fSWSqfs\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-11/111321-Spencer-Letson_UFC-Fight-Night-Holloway-vs-Rodriguez-Scorecards.jpg?itok=QvG7FR55"
+    },
+    {
+      "content_length": "57132",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"eMa3saY61t0XpXH5CHDnDjU1IbSrm+1TwftxZgbtY1s\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-11/UFC%20268%20Usman%20vs.%20Covington%202%20-%20Scorecards%20-%20Gaethje%20vs.%20Chandler.jpg?itok=wEhYgoKw"
+    },
+    {
+      "content_length": "49276",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"4tk2hF8l2T1xoZk1736IjgO8xCRI/I86f6QljFsnvhs\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-12/12-18-2021-12-18-2021-scorecard-swanson-vs-elkins.jpeg?itok=MhCqYkPG"
+    },
+    {
+      "content_length": "48435",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"HIGjhxJvI3uPjG5+an8ONcx0Tp8ZJer4BQNbaVK6Elg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-12/121121-ufc-269-oliveira-vs-poirier-scorecards_emmett-vs-ige.jpg?itok=x7ko0N-D"
+    },
+    {
+      "content_length": "49440",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"MG7U9iZlcnTxiTKrW6NovhU38S4yRx3r+fzjpErABsw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2021-12/UFC-Fight-Night-Font-vs-Aldo-Scorecards-Allen-vs-Curtis.jpg?itok=HSBPmFMN"
+    },
+    {
+      "content_length": "51352",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"mcj/BUST+YjlQYmBdbglRu8MsuJpYQfMUXRkfkLMSTg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-01/01152022-Pickett-vs-Holmes-Scorecard.jpeg?itok=K2Cp0cez"
+    },
+    {
+      "content_length": "56505",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"0zi6d3IB1727JPAm8kFqqGnivdhHjNzGQWV2lbt36+Y\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-01/UFC%20270%20Ngannou%20vs.%20Gane%20-%20Scorecards%20-%20Stamann%20vs.%20Nurmagomedov.jpg?itok=TIK4CAAd"
+    },
+    {
+      "content_length": "52285",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"YNxIKa7bGAMNgEsTHmY3L2IYP+yCLEZPO/tvpEB0ogQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-02/02262022-Scorecard-Makhachev-vs-Green.jpeg?itok=U9jiT7-8"
+    },
+    {
+      "content_length": "51919",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"z3fFZ3QjRCidqqMxeM8LiZCanARBXZu/lNfxlGczRfg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20271%20Adesanya%20vs.%20Whittaker%202%20-%20Scorecards%20-%20Cannonier%20vs.%20Brunson.jpg?itok=KgXa0RVL"
+    },
+    {
+      "content_length": "56165",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"057E3bRPunjTxgbuMYtkMydxlyFNwgU2zDdZR6NvTAk\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20Fight%20Night%20Walker%20vs.%20Hill%20-%20Scorecards%20-%20Bautista%20vs.%20Perrin_0.jpg?itok=SaNcjhws"
+    },
+    {
+      "content_length": "57808",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"jJTBkQyBCfzyS8LUPgp2D/S6AtfFCyu/Q2sgE9GwrJ8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-03/1-UFC%20Fight%20Night%20Blaydes%20vs.%20Daukaus%20-%20Scorecards%20-%20Brown%20vs.%20Barberena.jpg?itok=HGIWojU_"
+    },
+    {
+      "content_length": "50734",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Ywkhv12/3oheme0HWr8JokcIJYgWTkS4pyB3ZD9X6yI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20272%20Covington%20vs.%20Masvidal%20-%20Scorecards%20-%20Smith%20vs.%20Klein%5B68%5D.jpg?itok=qsiXq9yR"
+    },
+    {
+      "content_length": "54941",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"7/kdQ3Fqza/lyW67dTDFNH4uuDWdnwZ1t7Bc4gUnF60\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20Fight%20Night%20Santos%20vs.%20Ankalaev%20-%20Scorecards%20-%20Jackson%20vs.%20Kirk.jpg?itok=Elphlt2r"
+    },
+    {
+      "content_length": "49338",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Iivp+0GPg68G6AxI1DBAR6RDBdi0kkB12Q5OxfhGELI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20Fight%20Night%20Volkov%20vs.%20Aspinall%20-%20Scorecards%20-%20Allen%20vs.%20Hooker%5B92%5D.jpg?itok=1T6R6Xv1"
+    },
+    {
+      "content_length": "51894",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"OK4HNJz/uRRx4EacbaB3BxcmE0jtT8913azxF5tKovM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-04/04092022-UFC-273-Scorecards%20-Garry-vs-Weeks.jpeg?itok=BzM0u8md"
+    },
+    {
+      "content_length": "50525",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"0yYhULuE2aQKfWdD6fffglMDgAojJYrEn6X6Vc6neho\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-04/04162022-Scorecards-Clark-vs-Knight.jpeg?itok=r__rY_bh"
+    },
+    {
+      "content_length": "51855",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"rcSp0SPLIkc60Cjj7/mzFzXsWQc+r3JfEMD0DaZX9J8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-04/04302022-Scorecards-Gordon-vs-Dawson.jpeg?itok=_vl91Lk8"
+    },
+    {
+      "content_length": "53604",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"l1USH/ucA/hUn1kJ22igrJ5Wt1UiHwGLyY41txSEu3o\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-04/UFC%20Fight%20Night%20Lemos%20vs.%20Andrade%20-%20Scorecards%20-%20Aoriqileng%20vs.%20Else.jpg?itok=o2MHKFJO"
+    },
+    {
+      "content_length": "48496",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"/63aZh08RU2e/H7sQbmtakyLHUmNYzEcmmFYT1Nv1Bo\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-05/10-UFC-Fight-Night-Blachowicz-Rakic-Scorecards_Spann-Cutelaba.jpg?itok=mVwPoJOm"
+    },
+    {
+      "content_length": "52792",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"6si4kGHuAjk1BjkJ2tmFu/SaTOuOghFoaPfXCAl3KTI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20274%20Oliveira%20vs.%20Gaethje%20-%20Scorecards%20-%20Royval%20vs.%20Schnell.jpg?itok=PFhT4zpy"
+    },
+    {
+      "content_length": "56262",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"XTRrfpy9rhNhWu9/D61ZmfGuz0WOwsejh+8rztp5W9U\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20Fight%20Night%20Holm%20vs.%20Vieira%20-%20Scorecards%20-%20Viana%20vs.%20Ricci.jpg?itok=Ju7-cbfT"
+    },
+    {
+      "content_length": "52853",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"NzDwgoDN6wrr6+ZDa0h2fDTqlGzz/md6poAFFik+CQY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-06/06042022-Scorecards-Stolze-vs-Saint%20Denis.jpeg?itok=_-QmXzYF"
+    },
+    {
+      "content_length": "51968",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"rnFKAPyvEy8hKkY4aSoHsjTmESTahTchUyOAOsOB+f0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-06/06182022-Scorecards-Oliveira-vs-de-Paula.jpeg?itok=04Uu6tDC"
+    },
+    {
+      "content_length": "64938",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"bvmUY5kH9On8JXT4yVj73rOccmlK9cHXyQDsV5MsqUE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-06/062522-ufc-fight-tsarkuyan-gamrot-scorecard.jpg?itok=2h_el7nj"
+    },
+    {
+      "content_length": "49387",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"17pVkovePY3cTlUHEsZi/c7IW28FMRdbi7V5NVz8CTI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-06/Road-To-UFC_1.3-Scorecards_Lee-vs-Bin.jpg?itok=iDeAvw6A"
+    },
+    {
+      "content_length": "51110",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"mx5Rh1zB1I/r2Y6neUv9XwMEp4YqsEpOHyN8qkSK9jY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-06/UFC-275-Teixeira-vs-Prochazka-Scorecards_Della-Maddalena-vs-Emeev.jpg?itok=1jwySVXh"
+    },
+    {
+      "content_length": "58224",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"weOIa5hFrjUxMmYWghgMstepMSxkraesBYhBjzyKCpE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-07/073022-UFC-277-Official-Scorecard-Mayes-vs-Abdelwahab.jpg?itok=4PuMBEIc"
+    },
+    {
+      "content_length": "50505",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ScouQ8xS1zSi/gsLkfQuJND1Pl7QE6n6mVvlHxnPiZM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-07/UFC%20276%20Adesanya%20vs.%20Cannonier%20-%20Scorecards%20-%20Miller%20vs.%20Cerrone%5B23%5D.jpg?itok=T_xsoERg"
+    },
+    {
+      "content_length": "51963",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"kKaDL9KiEfL/aCc57B3V/md+dmITPcQeTBjiKvU1jNs\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-07/UFC%20Fight%20Night%20Blaydes%20vs.%20Aspinall%20-%20Scorecards%20-%20Jones%20vs.%20Klein%5B77%5D.jpg?itok=BDNHM5Nv"
+    },
+    {
+      "content_length": "51882",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"auQ8Kz/js51I+b2I/N8epFIP7zwSDqNFwqkwDVQ4USY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-07/UFC%20Fight%20Night%20Dos%20Anjos%20vs.%20Fiziev%20-%20Scorecards%20-%20Onama%20vs.%20Armfield%5B52%5D.jpg?itok=fzwulAlA"
+    },
+    {
+      "content_length": "50254",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"iSrM7u33xKFjww4QPnqhJJcnyYaqretoci1OiO9KNyk\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-07/UFC%20Fight%20Night%20Ortega%20vs.%20Rodriguez%20-%20Scorecards%20-%20Schnell%20vs.%20Sumudaerji%5B44%5D.jpg?itok=nvbV4pGc"
+    },
+    {
+      "content_length": "56248",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"oeUJ/0eAEzbliGUZKaptyBHN8sRZQ+aai3ALhtbR6o4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-08/080622-ufc-fight-night-santos-vs-hill-terrance-mckinney-erick-gonzalez-scorecard.jpg?itok=9ZQvXpif"
+    },
+    {
+      "content_length": "58849",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"kjywUwnWXf5JrJGbp+FkZ+NJ27fTD/UHqgznCRBEWgc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-08/Official%20Scorecard%20-%20Cynthia%20Calvillo%20vs%20Nina%20Nunes.jpg?itok=q-60ib2C"
+    },
+    {
+      "content_length": "50627",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"J10P0zo6nQPaqbFMv6KP5/5N0VyKjqXgJvDaBoeIOUc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-08/UFC278ScorecardsCostaRockhold.jpg?itok=qTzX8w-z"
+    },
+    {
+      "content_length": "52089",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"wF1OXrb3ZM/sBhzjicLIUyxtR6kDvtBN3cvQ9FbaCLY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-09/09032022-Scorecards-Saint-Denis-vs-Miranda.jpeg?itok=a0FA35M-"
+    },
+    {
+      "content_length": "59272",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"0IieRdMLAWhSdWGYbvEa1KDS20qxDUrMJCM18C06MH8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-09/092022-raul-rosas-jr-mando-gutierrez-scorecard.jpg?itok=UOodWgut"
+    },
+    {
+      "content_length": "55146",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"KrZi/qp+YNVWBWAecOphjH1UHP+J9R78Uo80+BPU4Ac\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-10/101522-Scorecard-Menifield-Cirkunov.jpg?itok=V8cZYQrB"
+    },
+    {
+      "content_length": "57999",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Zkf54wp85+Gsi5cja7bI9cT39TC6bicfNG3kJI+RoFI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-10/102222-oliveira-makhachev-scorecard.jpg?itok=XTanqrOT"
+    },
+    {
+      "content_length": "62962",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"1aoIcbtkvDYNMAEkj4f4dUL3FJqTjyFwbL1f2xsXslo\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-10/102922-Official-Scorecard-Cortes-Acosta-vs-Vanderaa.jpg?itok=GHPsSZnc"
+    },
+    {
+      "content_length": "60243",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"qT4Os/DmYn3sY+zaHjTsL//fmKY5dqcM7eLUR753b/8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-11/110522-maverick-young-scorecard.jpg?itok=zVYRlGiV"
+    },
+    {
+      "content_length": "63149",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"aNgiAhRDd62XB33YgLlujFTVrjjdoe8I5J90tedLd7I\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-11/111222-esparza-zhang-scorecard.jpg?itok=m6SfBeoM"
+    },
+    {
+      "content_length": "59322",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"jaDCET3TDBJHpNU4gipPEInjwSN4Cem6nigCkrmKA38\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-11/111922-Johnson-Zhumagulov-scorecard.jpg?itok=b_jKiEP1"
+    },
+    {
+      "content_length": "59958",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"DBQxzQeNEg1OY2E14a9eb/pceUoLBFLY6buYgliZP/Q\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-12/120322-Marcelo-Rojo-Francis-Marshall-Scorecard.jpg?itok=C2Euthvl"
+    },
+    {
+      "content_length": "56978",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"srrQP9BfebA8AI4QwJE8qk28YX/pvWov1fB4PP4N6Qg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-12/121022-joaquin-buckley-chris-curtis-scorecard.jpg?itok=BMUkcGHz"
+    },
+    {
+      "content_length": "49822",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"/uhV8KZ2d0XnXd4KQ+ArsmZahFQqanasIhVjoOI86es\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2022-12/121722-drew-dober-bobby-green-scorecard.jpg?itok=kx3Va2IF"
+    },
+    {
+      "content_length": "57825",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"l24GLC1jLFjjrakjr3QYMDeK9kDnBBVyq+0lTrdiN7Q\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-01/011423-mateus-rebecki-nick-fiore-scorecard.jpg?itok=f--74qxy"
+    },
+    {
+      "content_length": "52220",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Vq7ZWBGN+dEQ7ILQj8SzKN1ZpP8odTD3EI5jEMmE4qg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-02/021823-lina-landsberg-marya-bueno-silva-scorecard.jpg?itok=V9YKYypa"
+    },
+    {
+      "content_length": "52438",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"kPO4/vnjOsaIVPit9ReBgk2U36HU66u0djkmw03uUkE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-02/022523-tatiana-suarez-vs-montana-de-la-rosa-scorecard.jpg?itok=zkk0U0if"
+    },
+    {
+      "content_length": "51586",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"GboiBWC8xx8jpEb55IYPtFJFEQs1iNTO4O4kMYn10Hc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-03/03112023_Scorecards-Lipski-vs-Aldrich.jpeg?itok=yjnz6hf5"
+    },
+    {
+      "content_length": "55869",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"X6k8afxnFPHKt3XYwTAI3MwGbit+Z6cmc7cDLryFz6E\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-03/285-scorecard-brunson-dricus.jpg?itok=cuggzU0s"
+    },
+    {
+      "content_length": "59321",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"3bZiX5/S91IBmwCgVY2Gi/ZSw/Vhx+HHWHkP8nek4Cs\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-04/040823-Bahamondes-Ogden-scorecard.jpg?itok=U53kEQPz"
+    },
+    {
+      "content_length": "52504",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"TJ5eR/fc4wQ9aO4ama5zNm5MVIjZOlBalo+1eDyEvW0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-04/042223-bobby-green-vs-jared-gordon-scorecard.jpg?itok=sQhQPmya"
+    },
+    {
+      "content_length": "54891",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"rkPWExPseDywroTA3r6x5h2SwHxKu5gHwfMrx+CliiU\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-04/042923-cowan-horth-scorecard.jpg?itok=NFNVcB20"
+    },
+    {
+      "content_length": "55613",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"lqELZ4VBvE4TvaLZtBL7Mlwbh1q4tgSWgGnUHmdr8YQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-05/050623-claudio-ribeiro-joseph-holmes-scorecard.jpg?itok=XX8JiEPm"
+    },
+    {
+      "content_length": "122876",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"Yq9lyxCGRkmPTqyBcsCuITuxJCb9IBSRWcnwQDQrQlY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-05/052023-loopy-godinez-def-emily-ducote-scorecard.png?itok=RnAFH7Qe"
+    },
+    {
+      "content_length": "55911",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"0TTlqb2R2JjwE0WoxmAEnkYuovKWXfKA2pql6GeSwb8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-05/RTU-scorecard-Choi-Kumar.jpg?itok=6b0_p8sD"
+    },
+    {
+      "content_length": "55916",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"wmLt3d6wU0rrnNNjpYy8b3anpdjTTp+jHotcdWUaA+8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-05/smith-walker-scorecard-charlotte.jpg?itok=rgV-hxx6"
+    },
+    {
+      "content_length": "117685",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"IhqjV89zLyrs1KsQhiQSlW+ywkm4iTtBzSNaLx7MIHw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-06/060323-karine-silva-def-ketlen-souza-scorecard.png?itok=PrVXMw-L"
+    },
+    {
+      "content_length": "50683",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"f9avyg38E3M4nTXMBvimyPMaMuSWkwSpsnUmv2PVIHw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-06/289-scorecard-oliveira-dariush.jpg?itok=FtaQuTRs"
+    },
+    {
+      "content_length": "49615",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Lz6uKz6WBHtBy+XAAfz4PFyL6YCiVQ9ThPl8i8eQCN4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-06/UFC_Fight_Night_Vettori_vs__Cannonier_-_Scorecards_-_Argueta_vs__Lawrence_pdf.jpg?itok=eV1jluL7"
+    },
+    {
+      "content_length": "106746",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"8yeM+rcAEPPKI6FUSshnCVb/erzlxoVCLae01eaxrGA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-07/070123-alexandr-romanov-def-blagoy-ivanov-scorecard.png?itok=0QyGHNxP"
+    },
+    {
+      "content_length": "50832",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"mKO2D7SNLFd+iWc1751T8xHJGMS4DYjORN7BbZohppE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-07/07152023-Scorecards-Duraev-vs-Park.jpeg?itok=6lEVQy5W"
+    },
+    {
+      "content_length": "115931",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"6So5Cau1X+OeJurRwwelxTaZH2AqlRUwQPvFc4/K7z0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-07/072223-barberana-muradov-scorecard.png?itok=dSuoQ4qs"
+    },
+    {
+      "content_length": "49493",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"MeHtnKslALqudA+g/9tbfvlfS39yQz1nBR4TALa9guY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-07/07292023-Scorecards-Chiesa-vs-Holland.jpeg?itok=zmO983cq"
+    },
+    {
+      "content_length": "60640",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"xpzJD4wbv7fY0W8wZmuvwsTNMJkgfFGYCOGniFQcf8U\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-08/080523-ludovit-klein-ignacio-bahamondes-scorecard.jpg?itok=sIli1V_4"
+    },
+    {
+      "content_length": "57132",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"9LPHGJZEdfN/cIBSjCwDdNYaIu88H6wr94mUROjv+UI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-08/081223-terrance-mckinney-mike-breeden-scorecard.jpg?itok=mzmCmWRV"
+    },
+    {
+      "content_length": "50018",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"DFLVXcAyya0Lxk6f/gsayy71EKGH2qK1eCFA8aEFBm0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-08/08192023-Scorecards-Rodrigues-vs-Tiuliulin_0.jpeg?itok=LGlokrJy"
+    },
+    {
+      "content_length": "112125",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"h/a0ALJxJVvPCUQ/zdQPwaJ7SPLuBFyn9s2/y6vOFPM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-08/082623-junior-tafa-def-parker-porter-scorecard.png?itok=OzcfWfpn"
+    },
+    {
+      "content_length": "55462",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"zhyboma1YhGQwbjZY9nG/brsbwZXkQ03yGILTw50Xkk\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-08/33333Cursor_and_Road_to_UFC_2_5___2_6_-_Scorecards_-_Long_vs__Kamikubo_17__pdf.jpg?itok=_dCBy9dW"
+    },
+    {
+      "content_length": "53188",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"PJchvNDTpc2ZyGQREkHODYdVMrAL89ewuid9We7I24M\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-09/09022023-Scorecards-Gane-vs-Spivac.jpeg?itok=co320v4s"
+    },
+    {
+      "content_length": "55640",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"IXvLDSdJH/hSkypybVKsnBHHJonZT9yvDzWgwlCeiGU\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-09/091223-jean-matsumoto-kasey-tanner-scorecard.jpg?itok=6HFqab6w"
+    },
+    {
+      "content_length": "138654",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"MtrL2KTx3P/IvgIm+CcxwGjMPEjWK6DubY74dklTczA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-09/092323-montserrat-rendon-def-tamires-vidal-scorecard.png?itok=O8b5ZjEL"
+    },
+    {
+      "content_length": "55406",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"s0f66ZFHnix66GPWN9x5trj101doWtVRd9KXoTMm1RA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-10/100723-aoriquileng-def-johnny-munoz-scorecard.jpg?itok=Ln6goIpM"
+    },
+    {
+      "content_length": "56549",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Qfjzx4jgr/YpFm/Jqqt9TEVgJt1AOHloaDVLsCsB7KE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-10/101023-taveras-romious-dwcs-scorecard.jpg?itok=9XnoUeZJ"
+    },
+    {
+      "content_length": "58602",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"CJscg/hf/yQ6iWKySNM6EHcTU0N0+4YbFLwohoeGXEg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-10/10142023-Scorecards-Yusuff-vs-Barboza.jpeg?itok=3usLC9Iz"
+    },
+    {
+      "content_length": "58055",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"SQu7YG02igyu322M8BAqBBG9BGn+1+m4HaAoxzSnapo\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-10/102123-viktoriia-dudakova-jinh-yu-frey-scorecard%20.jpg?itok=scmCWKN4"
+    },
+    {
+      "content_length": "102354",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"Yq8Tyvc14jQqYSK6oNPIK6dQuwEYYNZPR5KLlvhigC8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-11/111823-anheliger-vs-johnson-scorecard_ufc-vegas-82.png?itok=1OavocHn"
+    },
+    {
+      "content_length": "53342",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"LOgNOm4+eNdmg7FVmxH79w8V5Jo8e3lmrkVSsa5ZHcA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-12/12022023-Scorecards-Bellato-vs-Potieria.jpeg?itok=oqLUPHv7"
+    },
+    {
+      "content_length": "95754",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"LoeCUBS0MKR1beUalkr7yjge+hBmbvZnVEZXVA78M7w\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-12/120923-ufc-vegas-83-elliott-def-sumudaerji-scorecard.png?itok=HoTKCiki"
+    },
+    {
+      "content_length": "54341",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"/RIECNnFMrvyWNYLEurS2PAuT50sbTlFt20EqJqO1b4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2023-12/121623-cody-garbrandt-brian-kelleher-scorecards.jpg?itok=k9-f-OD9"
+    },
+    {
+      "content_length": "101877",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"MUNRkrEAY0c4vCTuxBMyXVSA0cdDLPLR8onDpv/S6vU\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-01/011324-ufc-vegas-84-scorecard_bautista-def-simon.png?itok=8KkgnmVf"
+    },
+    {
+      "content_length": "51980",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"nyPcOCwBQwxnpdJTGTwzfql8AqNu3jqlbcFa3v434Iw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-01/Neil-UFC_297_Strickland_vs__Du_Plessis_-_Scorecards_-_Magny_vs__Malott_pdf.jpg?itok=35sK3XKR"
+    },
+    {
+      "content_length": "56593",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"cU6/UAc9I14titpgF5pf40A0O5elgA8iUnhoXDJjtYw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-02/020324-mccann-belbita-ufcvegas85-scorecard.jpg?itok=xQVIycOH"
+    },
+    {
+      "content_length": "56765",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"UfD1QjieIGrTDSOhEYrEV6ktsjgFsDeNJS/WgNQy97g\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-02/022424-ufc-mexico-city_jauregui-def-hughes_scorecard.jpg?itok=QJfnZaGD"
+    },
+    {
+      "content_length": "57731",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"3zTfzxLo0vq+YQAj8CzNby25fZR11oxwaL/dpgLDT5U\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-02/7777Cursor_and_UFC_298_Volkanovski_vs__Topuria_-_Scorecards_-_Volkanovski_vs__Topuria_pdf.jpg?itok=iGIN_tk7"
+    },
+    {
+      "content_length": "102483",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"6y2NQCd11f5VF8ConUhsBexo49Z5hbvU6c7D3jTCaxc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-03/030224-ufc-vegas-87-oliveira-def-sopaj-scorecard.png?itok=Oghe0lbj"
+    },
+    {
+      "content_length": "57619",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"5rNsI4vEnN/UOHPaOSSYVNLrt60cQUkeUeAZmEARJkM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-03/030924-mateusz-gamrot-rafael-dos-anjos-official-scorecards.jpg?itok=0JwL3Ldc"
+    },
+    {
+      "content_length": "58042",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"STGKA9AhSTA5c7Cli/EpRSZuHigjGPn2SceDHZm8640\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-03/031624-ufc-vegas-88-moises-ramirez-scorecard.jpg?itok=liAYS0jt"
+    },
+    {
+      "content_length": "126764",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"sy5tnWShkpqJDbzdpzOK6UZ48/qPSwXptFs4B8Rp0Vw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-04/040624-ufc-vegas-90_charlie-campbell-def-trevor-peek-scorecard.png?itok=8ipdCPiP"
+    },
+    {
+      "content_length": "53676",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"qOKF85Wkjxf7Mk+uq6/a8SWUC7l4l4LW/9LOnvlhToY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-04/UFC_300_Pereira_vs__Hill_-_Scorecards_-_Figueiredo_vs__Garbrandt_pdf.jpg?itok=B9Jrvf2j"
+    },
+    {
+      "content_length": "50117",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"HJv4qlfVSIcGaM1gROjrhXTkAek+wSdJE8dU9e6rPjk\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-05/05042024-Scorecards-Shore-vs-Brito.jpeg?itok=suVmBnxn"
+    },
+    {
+      "content_length": "55387",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ZXNXyQLrwp/PKFOYlb2HKj24JmMSLcw5cAwjYHPEDUQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-05/05112024-Scorecards-Lewis-vs-Nascimento.jpeg?itok=u0XbJz4I"
+    },
+    {
+      "content_length": "52683",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Cjj1myuS1vmZ2qngVUxUcUeyQbygxweDtLxiUHOu/J8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-05/051824-oumar-sy-tuco-tokkos-official-scorecards.jpg?itok=BZpuJTlA"
+    },
+    {
+      "content_length": "59912",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"xqyXezi41wmVqtcB9bW4rYtI/QU6ITR7jdvcUdiKjZ0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-06/060824-baeza-soriano-louisville-scorecard.jpg?itok=0hnflsjq"
+    },
+    {
+      "content_length": "59989",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"QCI73Jwa8DUHEfRQkVtugVUca3iVXWWpjmatq864OXM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-06/060824-tomar-dos-santos-louisville-scorecard.jpg?itok=H6gWkOYj"
+    },
+    {
+      "content_length": "54832",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"XkzEIdZ131pJSTHe6MBurxVeW+19qli3HDUfickKp30\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-06/062924-cub-swanson-andre-fili-official-scorecard.jpg?itok=LhHof38E"
+    },
+    {
+      "content_length": "51651",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"hzlO5aTmywqwjjZcCRUuUsh5JrDvkZwihFt11dhoGhs\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-06/UFC_Fight_Night_Perez_vs__Taira_-_Scorecards_-_Judice_vs__Fernandes_pdf.jpg?itok=bBVKn44I"
+    },
+    {
+      "content_length": "102132",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"7anEivTuudSB0SJ8I6+IS+xb51cWFhcwl1M9bSMi0U4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-07/071324-Santos-vs-Agapova-scorecard.png?itok=m4N5rWq4"
+    },
+    {
+      "content_length": "53025",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"eMcgZPqcFEsLuIJh9IN/L+pqmRQ7ycmTOQgAY4HzMoM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-07/072024-Steve-Garcia-Seungwoo-Choi-Official-Scorecard.jpg?itok=ZB6cDarg"
+    },
+    {
+      "content_length": "99141",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"zI4TKyt6gTTskUm8L0bKi398zEkpOLIKbOnLSQe+ZXc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-07/072724-Parkin-vs-Brzeski-scorecard.png?itok=7JylCTVk"
+    },
+    {
+      "content_length": "51023",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"LpbJrrYr/fxcPXXI5me7V7SrUWw1NbJaANl+0Mg0teM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-08/08032024-Scorecards-Yahya-vs-Fernandes.jpeg?itok=yIFV_SFa"
+    },
+    {
+      "content_length": "94139",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"023dEAlRcbQqRitfoky5mBC8YuxPgLXc5mItcEiPeOM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-08/081324-Kavanagh-vs-Ho-DWCS-Official-Scorecard-Updated.png?itok=Ze5_Dvzy"
+    },
+    {
+      "content_length": "98604",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"HrjuDxtwA48WZUBgIkm+l5dOGCoDNyXM+hVh+BEgjWY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-08/082024-Gustafsson-vs-Pytlik-DWCS-Official-Scorecard.png?itok=iZ-voTl6"
+    },
+    {
+      "content_length": "56689",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"WzHkB/p+axIhOCT4RqyiaeSyoyK8lmJdB3ENWsL1zEs\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-08/082324-zhu-kangjie-shin-haraguchi-official-scorecards.jpg?itok=GCCar5IS"
+    },
+    {
+      "content_length": "53712",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"EXJPuUGbdi2HPZLa9NLxHTPiGTFDVVMCWHFCrWjAKB8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-08/082724-tulio-duclos-contender-series-scorecard.jpg?itok=hqSBqhVh"
+    },
+    {
+      "content_length": "59901",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"U9+3bpKq+WogRwFxGV2ozVHFgxMDEgEGJ3vJvgj1Y80\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-09/090724-Sean-Brady-Gilbert-Burns-official-scorecard.jpg?itok=V3KG6iT7"
+    },
+    {
+      "content_length": "57077",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ftOVJ8gIC7+6vsvw9TGz8teMH4UfhzFgtoZfBfRrTus\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-09/091024-taiga-iwasaki-yousri-belgaroui-official-scorecard.jpg?itok=ZBoGVMWw"
+    },
+    {
+      "content_length": "52144",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"6PpX1qMA3MMdiTdPsJKo7HB3R/Tcpz8qsrOO47lgT20\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-09/091724-talisson-teixeira-arthur-lopes-official-scorecard.jpg?itok=3WW_7_BC"
+    },
+    {
+      "content_length": "105360",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"+wdG7yoKukC3s23hw9t68xmmH5Mu5zghoes5+kYUA5k\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-09/092824-Lapilus-Morales-Scorecard-Screenshot%202024-09-28%20at%2011.02.56%20AM.png?itok=VXlad2gl"
+    },
+    {
+      "content_length": "54819",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"XqnUSY8jpJRjoY5Py/SRjbAyVt2w4r9jg7SjLPiIaF4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-10/100524-aldo-bautista-ufc-307-scorecard.jpg?itok=85plhPsX"
+    },
+    {
+      "content_length": "84416",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"je+05iegijqolNMUQDtCBqgyUIWtMoK9vp891MCmYfc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-10/100824-Steele-Blair-Scorecard-at%206.33.39%20PM.png?itok=fqVZFtR5"
+    },
+    {
+      "content_length": "59255",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"/VyAmdot0cOA497lAXW/LhzEBzYHPn0vAdedhoMqXr8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-10/101924-lane-despaigne-scorecard-ufc-vegas-99.jpg?itok=2LxhPl_S"
+    },
+    {
+      "content_length": "107782",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"bWaI16wGn1QdM/dw8rRy5tT1gPtCD84GWPxsvVGVy4s\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-10/Screenshot%202024-10-12%20at%203.14.54%E2%80%AFPM.png?itok=U_dCe6hA"
+    },
+    {
+      "content_length": "51023",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"gTQkCLXLret//WR0tBNqqdvyoYPrCkyxyB5V2qaX+7Q\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-11/110224-brendson-ribeiro-def-caio-machado-official-scorecards.jpeg?itok=y6YT7Uil"
+    },
+    {
+      "content_length": "211418",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"fIUcBy845bjL6hg8M3RodHZzpOTcs4r7GC5CNRgCG+E\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-11/110924-Magny-vs-Prates-Official-Scorecard.png?itok=B4S4qi18"
+    },
+    {
+      "content_length": "60347",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"OtawPI9KyXuz+o8Wf8uQEZqtVPsrqBKGGn/UDfQvx40\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-11/112324-Volkan-oezdemir-vs-carlos-ulber-official-scorecard.jpg?itok=L6vSxlRa"
+    },
+    {
+      "content_length": "66291",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"rCF43vD5MoSxQmzxRVNxF0GUyfhs4ZSWqL6SHe72kuU\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-11/6UFC_309_Jones_vs__Miocic_-_Scorecards_-_Martinez_vs__McGhee_pdf%20copy.jpg?itok=m1VlLxJb"
+    },
+    {
+      "content_length": "251158",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"3+EyWvaWOmztZK/xdXos4B+bpa7pTePt+sU0pZJy7co\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-12/120724-UFC-310-Scorecard-Rahkmonov-vs-Garry.png?itok=fBQMIosE"
+    },
+    {
+      "content_length": "177160",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"pkpBALfNChFNYly/M5nl6UwFA6Xd07fAPkKSHXPnBHk\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2024-12/121424-ufc-fight-night-tampa-scorecards_stirling-def-tokkos.png?itok=tMgurLYv"
+    },
+    {
+      "content_length": "168474",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"oq2SfYrNX1OVgQJagfyrxZfNG/nHBj2Hfbt2CnloFzM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-02/02125-Vinicius-Oliveira-Said-Nurmogomedov-Scorecards.png?itok=UfCbtaKI"
+    },
+    {
+      "content_length": "196762",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"TBaKo4sC+3eNvTETEf+jWgkA3WclE3IDYxjaVr6gqa4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-02/022225-ALLEN-VS-HERNANDEZ-SCORECARD-UFC-SEATTLE.png?itok=d50YaEH3"
+    },
+    {
+      "content_length": "150372",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"CFfJEjfJhQlrtVbI7bgtIZuFAd8y3d+pLeJ6faDCiHw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-02/UFC%20Fight%20Night-%20Adesanya%20vs.%20Imavov%20-%20Scorecards%20-%20Gaziev%20vs.%20Petersen.png?itok=Yf7qLZ0d"
+    },
+    {
+      "content_length": "59914",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"7XHkv0KnmjGw9/dYY+2O7YyXp8PMtjnGkbtAwiSuqmA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-03/032225-Caolan-Loughran-Scorecard.jpg?itok=Aj6cgRCv"
+    },
+    {
+      "content_length": "105174",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"vAak4XCKi+x0SdXalmK/q1x/my7KBYOAro1iQORbT+s\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-03/032925-UFC-Mexico-Official_Scorecard-Emmers-vs-Miranda.png?itok=gRsyMyqo"
+    },
+    {
+      "content_length": "115876",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"A6JsDemtd+I2CYAPJ1lwGFLBNJ07xsAi4ykeT/ZqfbI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-04/040525-official-scorecard-finney-vs-valentin.png?itok=7Lr6W-WZ"
+    },
+    {
+      "content_length": "55565",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Hi86JwLwsNdFh+viBkX0uO6Q9toD0YT6P987xp+sTkQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-04/041225-Dominick-Reyes-Official%20Scorecard%20Template.jpg?itok=XGQUbGzt"
+    },
+    {
+      "content_length": "58564",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"YlO6QUn5I+rpjG3E4+9Xo3owDd2IHSBQ6Qrw7ifD4GQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-05/050325-daniel-rodriguez-santiago-ponzinibbio-official-scorecards.jpg?itok=wPrB0WIO"
+    },
+    {
+      "content_length": "57050",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"nqeY0hcx0M+eLI1HtQzYvtIkkSoEEPC8WFsTfa7HpJQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-05/051725-Luana-Santos-Scorecards.jpg?itok=0YTx2ywP"
+    },
+    {
+      "content_length": "123586",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"3urUpwhOq5CGnDhlrNG7ZOTOGpS+LCEgGtCjIQd13sg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-05/052225-official-scorecard-szalay-vs-jieleyisi.png?itok=vX1ngXsP"
+    },
+    {
+      "content_length": "54851",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"MrnejFbb+QvqgoHtocjk6vmyfVfgf5BMOvFH3n48FGg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-05/4UFC-315-Muhammad-vs.-Della-Maddalena---Scorecards---Saint-Denis-vs.-Prepolec.jpg?itok=O9P-dTBo"
+    },
+    {
+      "content_length": "56800",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"9J9M819CEQ4P4PsLUkvHmiZZpC4N3ZWwXUJshSqMFUQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-06/060725-Kevin-HollNS-Scorecards-UFC-316.jpg?itok=Ug0N2Qrj"
+    },
+    {
+      "content_length": "109306",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"V3fGmvERuseSUVXLalbeAEKqbb0rvkc0HCEJLg9N5To\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-06/061425-ufc-atlanta-official-scorecard-rowe-vs-loosa.png?itok=2vIE066W"
+    },
+    {
+      "content_length": "119171",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"9Kr1ohMd2Ft7hGV0xSVnKiealmB0Wd6O9pR8l4irTpM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-06/062825-ufc-317-official-scorecard-royval-vs-van.png?itok=8axIE_6J"
+    },
+    {
+      "content_length": "112946",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"oL1zY2Gh3Rir3iXR1sPNjk5K9iDr27NxbLQ8fgfuams\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-07/071225-UFC-Nashville-Official-Scorecard-Ramirez-vs-Davis.png?itok=P_AY9VZk"
+    },
+    {
+      "content_length": "119884",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"b43HZx8idj2/ygwWjH1C8nRBrAugEQg6OrnVJL56twY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-07/072625-ufc-abu-dhabi-scorecard-shara-magomedov-def-marc-andre-barriault.png?itok=hi0HLJkz"
+    },
+    {
+      "content_length": "57672",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"gjO7qF0lniVMF2DkGiotqMEN2NzZG5M8duWZNC8V9Sk\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-08/080225-rosa-cornolle-ufc-vegas-108-scorecard.jpg?itok=EnPuRolo"
+    },
+    {
+      "content_length": "58653",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"k/T+lGVQAu+saKCYlTBZ2FjX0LJSzd1JHhqjxBjct3k\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-agulali-vs-batbayar.jpg?itok=tI2FsqLo"
+    },
+    {
+      "content_length": "53353",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"BxoeDcu+0OFmupT49+JLrDBanLdXsmCcel0viD3UbCU\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-08/082625-damon-wilson-marcio-barbosa-official-scorecards.jpg?itok=V8GGZAgj"
+    },
+    {
+      "content_length": "109675",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"E3G5lvIniy6oQFIZT+lCk1fp5zBqSDTjbb5axq+8VII\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-09/090625-ufc-paris-official-scorecard-hughes-vs-bannon.png?itok=uFF_8c5L"
+    },
+    {
+      "content_length": "60309",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"Bn/K4troIPIVEJBSZaLMBuISWW8gC2tgoBZVlOBeEX4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-09/091625-dwcs-official-scorecard-hwang-vs-mccorry.jpg?itok=H3pZ1rh7"
+    },
+    {
+      "content_length": "115660",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"GkrBd5E+mdzejMBbsqHjgeOCc337FmI1Gw4X7HY8Ebo\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-09/Magny-Scorecard.png?itok=_7skYPnP"
+    },
+    {
+      "content_length": "122237",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"s/jQxyxJ7xwS+U65+wtUVpR6PtNnZEYVYxyC/RIc9iI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-09/Screenshot%202025-09-13%20at%204.18.47%E2%80%AFPM.png?itok=EVl7C5pi"
+    },
+    {
+      "content_length": "111868",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"5jpKeozArn8JICx6iwPgrHbLPKiEEXVMeEfPWyb1HZk\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-10/100425-ufc-320-official-scorecard-gautier-vs-vines.png?itok=OyXtypTH"
+    },
+    {
+      "content_length": "134860",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"6+mszn75jAvIKY0DD3pRPI4DuAejYrjaZ3IdVjQgVb8\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-10/101125-ufc-rio-official-scorecard-almeida-vs-aswell-jr.png?itok=gzftTLVO"
+    },
+    {
+      "content_length": "56410",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"eWXD09BDRTM1WJAiVTbv1rBPzaWeD8Ji+FSX3+Y3qY0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-10/101425-oliveira-valenzuela-dwcs-week-10-scorecard.jpg?itok=MBgM7j95"
+    },
+    {
+      "content_length": "114829",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"sVPZFDjuDkwpj3jG0bpOTaOr6Zb3Qh9RDSiGQN7ZMmE\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-10/101825-ufc-vancouver-official-scorecard-luciano-vs-oliveira.png?itok=hZtItlao"
+    },
+    {
+      "content_length": "123689",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"kNPm+6ji6AXURTLAHAE7+Rps0QPNiWt9rc08GBV0d9g\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-10/102525-ufc-321-official-scorecard-nurmagomedov-vs-bautista.png?itok=uuTdkOws"
+    },
+    {
+      "content_length": "57218",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"0Fy8m1noc6iYbqwPZFp+jJ/QTwPgy6RtJlgNJqewY0Y\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-11/110125-official-scorecard-nascimento-vs-durden.jpg?itok=lxk0DGc0"
+    },
+    {
+      "content_length": "54406",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"6KuNAsF2czZX7Q5UrNOvIhj4LmO+IaAKCqv5bffyFKU\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-11/cld-UFC-Fight-Night-Bonfim-vs.-Brown---Scorecards---Duncan-vs.-Tulio%5B32%5D.jpg?itok=VPcqivMI"
+    },
+    {
+      "content_length": "60850",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"1k53xQ0WAyioW3JXSD0sQS+SVg9mhkMPQCk02kJTy/M\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-12/121325-official-scorecard-royval-vs-kape.jpg?itok=acwJItNr"
+    },
+    {
+      "content_length": "52713",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"yV0W3ADcM1sjTN5Oo1yZd76Qx673mKO2DyVYPo3KSxc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2025-12/UFC%20323%20Dvalishvili%20vs.%20Yan%202%20-%20Scorecards%20-%20Moreno%20vs.%20Taira%5B1%5D.jpg?itok=EFwfdRqD"
+    },
+    {
+      "content_length": "52347",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"ZQ2GJubx6l+fsA10UoQovPLhad3diBkoSR5+K3x97l4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-01/Zuffa_Boxing_1_-_Walsh_vs_Ocampo_-_Scorecards_-_Meriwether_III_vs__Correa_pdf.jpg?itok=snwc8Bnh"
+    },
+    {
+      "content_length": "112773",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"D/ZMBYhvXn2z/QMxgbDkB5xH8dj9n7votyBe1XV5FrQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-02/020126-Zuffa-Boxing-02-Valenzuela-vs-Torres-Scorecards_valenzuela-def-torres.png?itok=G0fRt3EW"
+    },
+    {
+      "content_length": "59863",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"pc04VTRt5U3dTH/AdKXp2khT2Ko/i1AoezO3R7onJVI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-02/022826-ufc-mexico-gandra-daniel-medina-scorecard.jpg?itok=YMaXdGXh"
+    },
+    {
+      "content_length": "190436",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"Za5CUEuOkJIqvYYkuuhpgKTXwdprciD2aWU7+seJTds\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-03/022826-ufc-seattle-scorecard-navajo-stirling-tko-bruno-lopes.png?itok=Q3VhbnPR"
+    },
+    {
+      "content_length": "222370",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"ucbaSqVVEkEE22D9y0nNz2UJaycsVk0iEme9hLjlpm0\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-03/030726-ufc-326-official-scorecard-rodrigues-vs-ferreira.png?itok=8YFmPmb1"
+    },
+    {
+      "content_length": "59147",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"HjjD4mUtHDn81As3haZHa0pn7AbEQKnzXRjWAhI4xsU\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-03/032126-ufc-london-official-scorecard-campbell-vs-silva.jpg?itok=jxhngs6b"
+    },
+    {
+      "content_length": "182829",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"07iUFs0FRBNF7c2IoyqRrXUWecVF3fztW4wgdstrBWA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-03/032826-ufc-seattle-scorecard-lerryan-douglas-def-julian-erosa.png?itok=R7fec1nS"
+    },
+    {
+      "content_length": "180908",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"9MlDEhuiD9TEguamIrh5MCMDqEQNqensC1GC7Pk6zIg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-03/Screenshot%202026-03-14%20at%204.04.23%E2%80%AFPM.png?itok=woN-z5aD"
+    },
+    {
+      "content_length": "60605",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"1yxNjVf2C+DAuUuNvW3tXBTf4j6YlRO6MXBGo2ic3KM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-04/040526-zb5-nash-rodriguez-scorecard.jpg?itok=JXRwROjo"
+    },
+    {
+      "content_length": "59943",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"tExyszwtvQy8017UDIi9aghejoiReYjvYhl9QqeEokQ\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-04/041826-ufc-winnipeg-official-scorecard-aldrich-vs-horth.jpg?itok=7hPZpwNI"
+    },
+    {
+      "content_length": "52538",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"y92uKEt3TMz+WYwiJBdKus9x+e7twTql8im5MeOiu3g\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-05/-UFC%20328%20Chimaev%20vs.%20Strickland%20-%20Scorecards%20-%20Green%20vs.%20Stephens%5B20%5D.jpg?itok=OTTA4hfi"
+    },
+    {
+      "content_length": "64581",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"K2JSsOuZ3Z9t+R39vkRq+rM0RZFy2yxw09xILmCeUB4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-05/050226-official-scorecard-tuivasa-vs-sutherland.jpg?itok=pKtqeBei"
+    },
+    {
+      "content_length": "59323",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"sk+3bxDsNnT9EdE8XBmxD4LDupNCjmZ1dk3jTPMTVsY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-05/052826-official-scorecard-ailinuer-vs-lim.jpg?itok=QJJMH0i9"
+    },
+    {
+      "content_length": "57453",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"4+YKQKfFa/qHSrJbT8RAeG6Fkz4ZeZrq2q9zEM2gd+E\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-05/052926-official-scorecard-fukuda-vs-toktogonova.jpg?itok=SXe0AQA1"
+    },
+    {
+      "content_length": "206192",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"fd60sSGOhMq2mQQXiXGIERe2J3SDK+lIMHb6tsrHmcU\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-05/05302026-UFC-MACAU-Scorecards-Matthews-vs-Harris.png?itok=m8xX6ha3"
+    },
+    {
+      "content_length": "61625",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"EV7etOlnag7u/6o7xyfDKXE50ELzJaBOC6igV4QqMfg\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-05/4Zuffa-Boxing-6-Mosley-Jr.-vs.-Bohachuk---Scorecards---Rodriguez-vs.-Katzourakis.jpg?itok=udMHgYcD"
+    },
+    {
+      "content_length": "59906",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"rq5y5abFzAr9rZsETIVOzvsy6c8AM6QQ8is2Y7HslVw\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-06/001-Zuffa-Boxing-8-De-Los-Santos-vs.-Valenzuela---Scorecards---De-Los-Santos-vs.-Valenzuela_0.jpg?itok=rvgbGIMT"
+    },
+    {
+      "content_length": "60604",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"POoA8EYgD65C5JN1xHiqbR+7DI+6t0d8+dIJUoyUXVY\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-06/062026-official-scorecard-baghdasaryan-vs-magomedov.jpg?itok=B9_zydMv"
+    },
+    {
+      "content_length": "59231",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"6sDD6scRDYixv8I2/42Ih3l4l24O+oOI27eilK7bBhA\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-06/062726-ufc-baku-official-scorecard-almabayev-vs-johnson.jpg?itok=52Uo5v6p"
+    },
+    {
+      "content_length": "61414",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"nit2HqBGVZH4Q8iaxgx21ThqY5FgMtFzU/sLj6icI88\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-06/5Zuffa-Boxing-8-De-Los-Santos-vs.-Valenzuela---Scorecards---Diaz-vs.-Teran.jpg?itok=q3Egfx9I"
+    },
+    {
+      "content_length": "60373",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"TqPhfAxCSxFn+gVNf53REU24fuqrCTcWW6KBDXvyQnM\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-07/071126-ufc-329-official-scorecard-mcgregor-vs-holloway.jpg?itok=pSZa4DIE"
+    },
+    {
+      "content_length": "59403",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"cXYa5/z27IvV9EbsoObgqhM3EnZEqcBIqRvFuhzAEKc\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-07/072626-dominique-francis-andres-sosa-official-scorecards.jpg?itok=S5PLG3Yq"
+    },
+    {
+      "content_length": "59659",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"lByTDqIXFRLm9MLcxZ6wfjtM4S8w/C5GGJ4vsDb9eyI\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-08/080126-ufc-belgrade-official-scorecard-klein-vs-musayev.jpg?itok=tdNsxR-D"
+    },
+    {
+      "content_length": "58550",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"WUPn4P8ZzOmwVzVxaNijZDB2A6UaEOWG68mSTJBv7ug\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-08/080826-official-scorecard-goff-vs-miller.jpg?itok=YH6aKMkI"
+    },
+    {
+      "content_length": "70769",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"zlUVWdPSFlS1M+6Tw5XQxT/yj8YRY08u1I3tDRLcCEo\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/2026-08/081526-official-scorecard-makhachev-vs-machado-garry.jpg?itok=yh5kenTR"
+    },
+    {
+      "content_length": "51291",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"U0Uue/a9bXnpjFb6MPQ98u81JN1+LOctZyV6jJECm6o\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/image/2022-04/04302022-04302022-Scorecards-Romanov-vs-Sherman.jpeg?itok=rLTu-jNM"
+    },
+    {
+      "content_length": "55394",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"D1Wizt50m68jURDXFufJyaL4x2+6OR1cGK5baURxK2Y\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/image/2024-04/040624-ufc-vegas-90_jean-matsumoto-def-dan-argueta-scorecard.jpg?itok=-HD10Qeh"
+    },
+    {
+      "content_length": "94495",
+      "content_type": "image/png",
+      "error": null,
+      "etag": "\"EFScglhqlBSZsZlGD7yMWouLWDzgCxciNVW0AEQAWj4\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/inline/s3/image/2024-10/101524-Julieta-Martinez-vs-Leslie-hernandez-official-scorecard.png?itok=vkCgkMWD"
+    },
+    {
+      "content_length": "11324",
+      "content_type": "image/jpeg",
+      "error": null,
+      "etag": "\"wR3buwcHKzDYt3OBjT4LoDx+MwsHcAhN/99eoz5xh2Y\"",
+      "last_modified": null,
+      "method": "HEAD",
+      "status": 200,
+      "url": "https://ufc.com/images/styles/teaser/s3/2022-05/051422-the-scorecard-hero_GettyImages-1397297236.jpg?h=d1cb525d&itok=ugLt_ElO"
+    }
+  ],
+  "sampled_urls": 240,
+  "schema_version": 1,
+  "size_estimate": {
+    "estimated_unique_catalog_bytes_from_mean": 210966353,
+    "estimated_unique_catalog_mib_from_mean": 201.19,
+    "mean_bytes": 69511.15416666666,
+    "median_bytes": 56505,
+    "p90_bytes": 114829,
+    "sample_with_size": 240
+  },
+  "status_counts": {
+    "200": 240
+  },
+  "unique_eligible_urls": 3035
+}
