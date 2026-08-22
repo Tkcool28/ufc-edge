@@ -1,0 +1,58 @@
+{
+  "canonical_contract_version": "0.3.0-draft",
+  "canonical_fighters_with_position_rows": 2459,
+  "canonical_fights_with_position_rows": 6803,
+  "canonical_rows": 32156,
+  "exclusion_reason_counts": {
+    "missing_canonical_fight_identity": 4806,
+    "position_bucket_outside_audited_0_5_range": 153,
+    "unresolved_duplicate_source_version": 996
+  },
+  "exclusions": 5955,
+  "generated_at_utc": "2026-08-22T23:08:12.319239Z",
+  "outputs": {
+    "exclusions": "data/derived/qa/canonical_fightmetric_position_exclusions_v0.csv",
+    "table": "data/canonical/v0/fighter_round_position.csv"
+  },
+  "populated_field_counts": {
+    "back_control": 23714,
+    "clinch": 23706,
+    "distance": 23698,
+    "ground": 10240,
+    "ground_control": 23695,
+    "guard_control": 23710,
+    "half_guard_control": 23712,
+    "misc_ground_control": 23420,
+    "mount_control": 23714,
+    "neutral": 23692,
+    "side_control": 23714,
+    "standing": 23696,
+    "standups": 19608
+  },
+  "raw_fight_stat_rows": 57382,
+  "rules": {
+    "display_name_matching_used": false,
+    "duplicate_source_versions_fail_closed": true,
+    "exact_seconds_fabricated": false,
+    "numeric_color_map": {
+      "0": "red",
+      "1": "blue"
+    },
+    "position_bucket_allowed_range": [
+      0,
+      5
+    ],
+    "position_bucket_semantics": "floor_whole_minutes_with_explicit_interval_bounds",
+    "raw_anomalies_preserved_only_in_raw_and_exclusion_ledger": true,
+    "round_zero_excluded": true
+  },
+  "schema_version": 1,
+  "source": "ufc_fightmetric_official",
+  "source_key_counts": {
+    "actual_round_source_keys": 37460,
+    "bucket_anomalies_gt5": 153,
+    "duplicate_version_keys": 498,
+    "missing_canonical_fight": 4806
+  },
+  "source_snapshot_id": "20260820T123046Z"
+}

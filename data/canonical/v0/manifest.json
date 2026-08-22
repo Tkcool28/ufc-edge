@@ -5,6 +5,8 @@
     "events": 784,
     "exclusions": 570,
     "field_provenance": 0,
+    "fighter_round_position": 32156,
+    "fighter_round_position_exclusions": 5955,
     "fighter_round_stats": 41218,
     "fighters": 4600,
     "fights": 8769,
@@ -22,29 +24,9 @@
   },
   "files": [
     {
-      "bytes": 367819,
-      "path": "data/canonical/v0/fighters.csv",
-      "sha256": "7b1dc1c531c1c086e01f358750991e5eae092c9271a8b99257f1eb2ed4ce73e6"
-    },
-    {
       "bytes": 89764,
       "path": "data/canonical/v0/events.csv",
       "sha256": "48c7860c6f8548559803afd70fa379ba0f48c882f751f06f780f00c9884beec3"
-    },
-    {
-      "bytes": 2061065,
-      "path": "data/canonical/v0/fights.csv",
-      "sha256": "19823beb0cbfd9a816fdb1b44a4ee13812094cf9c1e3cdee65582030db5d9f47"
-    },
-    {
-      "bytes": 6806353,
-      "path": "data/canonical/v0/fighter_round_stats.csv",
-      "sha256": "9d35fa234083249a5e3a9bfa0aa7006f7df0ea32317c51fe45f521e3cd1e4f8d"
-    },
-    {
-      "bytes": 5224290,
-      "path": "data/canonical/v0/source_identity_links.csv",
-      "sha256": "2de9a6708295be60a604137130d62bfe4f1bdfe47e6ae5077ede1aad9bfddc38"
     },
     {
       "bytes": 142,
@@ -52,18 +34,49 @@
       "sha256": "f261930c424740e849cf62f29be59b9c20c5124aeb76704058a3ae83af67a299"
     },
     {
+      "bytes": 4981837,
+      "path": "data/canonical/v0/fighter_round_position.csv",
+      "sha256": "b3995ee7a1342e6a372efffbba8cc383a0d394cd7425d73e1b4945cb8968626a"
+    },
+    {
+      "bytes": 6806353,
+      "path": "data/canonical/v0/fighter_round_stats.csv",
+      "sha256": "9d35fa234083249a5e3a9bfa0aa7006f7df0ea32317c51fe45f521e3cd1e4f8d"
+    },
+    {
+      "bytes": 367819,
+      "path": "data/canonical/v0/fighters.csv",
+      "sha256": "7b1dc1c531c1c086e01f358750991e5eae092c9271a8b99257f1eb2ed4ce73e6"
+    },
+    {
+      "bytes": 2061065,
+      "path": "data/canonical/v0/fights.csv",
+      "sha256": "19823beb0cbfd9a816fdb1b44a4ee13812094cf9c1e3cdee65582030db5d9f47"
+    },
+    {
+      "bytes": 5224290,
+      "path": "data/canonical/v0/source_identity_links.csv",
+      "sha256": "2de9a6708295be60a604137130d62bfe4f1bdfe47e6ae5077ede1aad9bfddc38"
+    },
+    {
       "bytes": 120581,
       "path": "data/derived/qa/canonical_core_exclusions_v0.csv",
       "sha256": "8dbbc02a0b0867e658404d3b9fa28a0ba3a332c53147dfda083c0b6e98a056a9"
+    },
+    {
+      "bytes": 550743,
+      "path": "data/derived/qa/canonical_fightmetric_position_exclusions_v0.csv",
+      "sha256": "eaa1deb168a4e9be5c7752e80608c702644be0399d101a579294431c5ee0a7e5"
     }
   ],
-  "generated_at_utc": "2026-08-21T21:59:52.634643Z",
+  "generated_at_utc": "2026-08-22T23:08:12.319239Z",
   "rules": {
     "ambiguous_identity_rows_are_quarantined": true,
     "canonical_ids_are_opaque_uuid5_from_first_trusted_source_identity": true,
     "display_name_only_identity_is_trusted": false,
     "exact_control_seconds_source": "greco1899_ufcstats",
     "field_provenance_is_sparse_override_conflict_ledger": true,
+    "fightmetric_position_uses_quantized_buckets_only": true,
     "greco_is_default_historical_transport_for_shared_round_counts": true,
     "missing_is_not_zero": true,
     "round_zero_allowed": false,
@@ -71,6 +84,7 @@
   },
   "schema_version": 1,
   "source_snapshots": {
-    "greco1899_ufcstats": "8e40eb945e11"
+    "greco1899_ufcstats": "8e40eb945e11",
+    "ufc_fightmetric_official": "20260820T123046Z"
   }
 }
