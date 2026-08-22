@@ -1,0 +1,63 @@
+name: Audit external MMA identity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/audit_external_mma_identity.py"
+      - ".github/workflows/audit-external-mma-identity.yml"
+      - "data/canonical/v0/fighters.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run audit and record result
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p provenance/runs
+          log="provenance/runs/external_mma_identity_${GITHUB_RUN_ID}.log"
+          set +e
+          python pipelines/audit_external_mma_identity.py >"$log" 2>&1
+          code=$?
+          set -e
+          python - "$code" "$log" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          code, log = int(sys.argv[1]), sys.argv[2]
+          payload = {
+              "schema_version": 1,
+              "audit": "external_mma_identity",
+              "status": "success" if code == 0 else "failed",
+              "exit_code": code,
+              "github_run_id": os.environ.get("GITHUB_RUN_ID"),
+              "trigger_sha": os.environ.get("GITHUB_SHA"),
+              "completed_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+              "log": log,
+          }
+          with open("provenance/runs/external_mma_identity_latest.json", "w", encoding="utf-8") as fh:
+              json.dump(payload, fh, indent=2, sort_keys=True); fh.write("\n")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$log" provenance/runs/external_mma_identity_latest.json
+          if [ "$code" -eq 0 ]; then
+            git add data/derived/identity/external_mma_canonical_crosswalk_candidate.csv provenance/audits/external_mma_identity_latest.json
+          fi
+          git commit -m "Audit external MMA identity (${code}) [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+          exit "$code"
