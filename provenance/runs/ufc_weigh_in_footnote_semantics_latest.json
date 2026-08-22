@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_weigh_in_footnote_semantics",
+  "completed_at_utc": "2026-08-22T23:44:45.168158Z",
+  "exit_code": 0,
+  "github_run_id": "32606023048",
+  "log": "provenance/runs/ufc_weigh_in_footnote_semantics_32606023048.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "8c4aca5808af32e5e906a3b5108897bc9a00df29"
+}
