@@ -19,6 +19,7 @@ TABLE_FILES = {
     "events": "events.csv",
     "fights": "fights.csv",
     "fighter_round_stats": "fighter_round_stats.csv",
+    "fighter_round_position": "fighter_round_position.csv",
     "source_identity_links": "source_identity_links.csv",
     "field_provenance": "field_provenance.csv",
 }
@@ -61,9 +62,11 @@ def validate_scalar(table: str, field: str, raw: str, spec: dict) -> None:
                 fail(f"{table}.{field}: bad boolean {raw!r}")
             return
         elif typ == "date":
-            date.fromisoformat(raw); return
+            date.fromisoformat(raw)
+            return
         elif typ == "timestamp":
-            datetime.fromisoformat(raw.replace("Z", "+00:00")); return
+            datetime.fromisoformat(raw.replace("Z", "+00:00"))
+            return
         elif typ == "enum":
             if raw not in spec["values"]:
                 fail(f"{table}.{field}: enum value {raw!r} outside {spec['values']}")
@@ -126,9 +129,12 @@ def main() -> int:
     fighter_ids = {r["fighter_id"] for r in tables["fighters"]}
     event_ids = {r["event_id"] for r in tables["events"]}
     fight_ids = {r["fight_id"] for r in tables["fights"]}
-    for fid in fighter_ids: validate_uuid(fid, "fighters")
-    for eid in event_ids: validate_uuid(eid, "events")
-    for fight_id in fight_ids: validate_uuid(fight_id, "fights")
+    for fid in fighter_ids:
+        validate_uuid(fid, "fighters")
+    for eid in event_ids:
+        validate_uuid(eid, "events")
+    for fight_id in fight_ids:
+        validate_uuid(fight_id, "fights")
 
     fight_by_id = {r["fight_id"]: r for r in tables["fights"]}
     for row in tables["fights"]:
@@ -157,6 +163,31 @@ def main() -> int:
         if int(row["round"]) < 1:
             fail("round zero/negative leaked into canonical data")
 
+    position_spec = contract["tables"]["fighter_round_position"]
+    bucket_fields = sorted(name for name in position_spec["fields"] if name.endswith("_bucket_min"))
+    for row in tables["fighter_round_position"]:
+        fight = fight_by_id.get(row["fight_id"])
+        if not fight:
+            fail(f"position row references missing fight {row['fight_id']}")
+        if row["fighter_id"] not in {fight["fighter_a_id"], fight["fighter_b_id"]}:
+            fail(f"position {row['fight_id']} R{row['round']} references nonparticipant")
+        if int(row["round"]) < 1:
+            fail("round zero/negative leaked into canonical position data")
+        for bucket_field in bucket_fields:
+            prefix = bucket_field.removesuffix("_bucket_min")
+            bucket_raw = row[bucket_field]
+            lo_raw = row[f"{prefix}_lower_sec"]
+            hi_raw = row[f"{prefix}_upper_sec"]
+            if bucket_raw == "":
+                if lo_raw != "" or hi_raw != "":
+                    fail(f"position interval bounds exist without bucket: {prefix}")
+                continue
+            bucket = int(bucket_raw)
+            if not 0 <= bucket <= 5:
+                fail(f"position bucket outside audited 0..5 range: {prefix}={bucket}")
+            if int(lo_raw) != bucket * 60 or int(hi_raw) != bucket * 60 + 59:
+                fail(f"position quantization bounds invalid: {prefix}={bucket_raw}/{lo_raw}/{hi_raw}")
+
     entity_sets = {"fighter": fighter_ids, "event": event_ids, "fight": fight_ids}
     for row in tables["source_identity_links"]:
         expected = entity_sets.get(row["entity_type"])
@@ -166,12 +197,9 @@ def main() -> int:
     manifest = json.loads((DATA / "manifest.json").read_text(encoding="utf-8"))
     if manifest.get("canonical_contract_version") != contract.get("contract_version"):
         fail("manifest contract version does not match current contract")
-    if manifest.get("counts", {}).get("fighters") != len(tables["fighters"]):
-        fail("manifest fighter count mismatch")
-    if manifest.get("counts", {}).get("fights") != len(tables["fights"]):
-        fail("manifest fight count mismatch")
-    if manifest.get("counts", {}).get("fighter_round_stats") != len(tables["fighter_round_stats"]):
-        fail("manifest round count mismatch")
+    for name in ("fighters", "fights", "fighter_round_stats", "fighter_round_position"):
+        if manifest.get("counts", {}).get(name) != len(tables[name]):
+            fail(f"manifest {name} count mismatch")
 
     # Coverage gates catch the dangerous case where a syntactically valid identity bug emits
     # a tiny canonical subset. Ambiguous source rows may be quarantined, but the historical core
@@ -184,11 +212,14 @@ def main() -> int:
         fail(f"fight coverage gate failed: {len(tables['fights'])}/{raw_fights}={fight_fraction:.3%}")
     if round_fraction < 0.95:
         fail(f"round coverage gate failed: {len(tables['fighter_round_stats'])}/{raw_rounds}={round_fraction:.3%}")
+    if len(tables["fighter_round_position"]) < 30000:
+        fail(f"position table suspiciously small: {len(tables['fighter_round_position'])}")
 
     print(
         "CANONICAL_DATA_OK "
         f"contract={contract.get('contract_version')} fighters={len(fighter_ids)} events={len(event_ids)} "
         f"fights={len(fight_ids)} rounds={len(tables['fighter_round_stats'])} "
+        f"position_rows={len(tables['fighter_round_position'])} "
         f"fight_coverage={fight_fraction:.3%} round_coverage={round_fraction:.3%}"
     )
     return 0
