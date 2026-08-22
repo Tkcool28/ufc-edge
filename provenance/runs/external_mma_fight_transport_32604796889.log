@@ -1,0 +1,1 @@
+{"date_parse_counts": {"DMY_DASH": 0, "DMY_SLASH": 0, "ISO_YMD": 0, "MDY_DASH": 0, "MDY_SLASH": 0, "MONTH_NAME_DMY": 0, "MONTH_NAME_MDY": 920}, "distinct_event_signatures": 1006, "distinct_urls": 1006, "duplicate_url_match_pairs": 1, "rows": 10448, "urls_multiple_rows": 1001}

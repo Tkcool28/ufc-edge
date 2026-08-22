@@ -1,0 +1,776 @@
+{
+  "date_parse_counts": {
+    "DMY_DASH": 0,
+    "DMY_SLASH": 0,
+    "ISO_YMD": 0,
+    "MDY_DASH": 0,
+    "MDY_SLASH": 0,
+    "MONTH_NAME_DMY": 0,
+    "MONTH_NAME_MDY": 920
+  },
+  "decision": {
+    "canonicalization_promoted": false,
+    "required_next": "Select only a stable event key, fight key, and date parser supported by this audit; then deduplicate UFC overlap before canonical insertion."
+  },
+  "distinct_event_signatures": 1006,
+  "distinct_nonempty_url": 1006,
+  "duplicate_url_match_pairs": 1,
+  "examples": [
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Ciryl Gane",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Ciryl-Gane-293973",
+      "fighter2_name": "Derrick Lewis",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Derrick-Lewis-59284",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "13",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": " 4:11",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Punches",
+      "win_method": " TKO"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Jose Aldo",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Jose-Aldo-11506",
+      "fighter2_name": "Pedro Munhoz",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Pedro-Munhoz-52407",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "12",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Vicente Luque",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Vicente-Luque-66474",
+      "fighter2_name": "Michael Chiesa",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Michael-Chiesa-46224",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "11",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "1",
+      "time": "03:25",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Brabo Choke",
+      "win_method": "Submission"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Tecia Torres",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Tecia-Torres-85096",
+      "fighter2_name": "Angela Hill",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Angela-Hill-148517",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "10",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Yadong Song",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Yadong-Song-103807",
+      "fighter2_name": "Casey Kenney",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Casey-Kenney-211031",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "9",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Split",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Rafael Fiziev",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Rafael-Fiziev-202657",
+      "fighter2_name": "Bobby Green",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Bobby-Green-27953",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "8",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Vince Morales",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Vince-Morales-177019",
+      "fighter2_name": "Drako Rodriguez",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Drako-Rodriguez-203421",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "7",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Alonzo Menifield",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Alonzo-Menifield-210501",
+      "fighter2_name": "Ed Herman",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Ed-Herman-6561",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "6",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Jessica Penne",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Jessica-Penne-21247",
+      "fighter2_name": "Karolina Kowalkiewicz",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Karolina-Kowalkiewicz-101401",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "5",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "1",
+      "time": "04:32",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Armbar",
+      "win_method": "Submission"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Manel Kape",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Manel-Kape-101189",
+      "fighter2_name": "Ode Osbourne",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Ode-Osbourne-137969",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "4",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "1",
+      "time": "04:44",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Flying Knee and Punches",
+      "win_method": "KO"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Miles Johns",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Miles-Johns-172691",
+      "fighter2_name": "Anderson dos Santos",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Anderson-dos-Santos-95053",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "3",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "01:16",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Punch",
+      "win_method": "KO"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Melissa Gatto",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Melissa-Gatto-193547",
+      "fighter2_name": "Victoria Leonardo",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Victoria-Leonardo-212725",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "2",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "2",
+      "time": "05:00",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Arm Injury",
+      "win_method": "TKO"
+    },
+    {
+      "date": "Aug 7, 2021",
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Johnny Munoz Jr.",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Johnny-Munoz-Jr-195507",
+      "fighter2_name": "Jamey Simmons",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Jamey-Simmons-237195",
+      "location": "Toyota Center, Houston, Texas, United States",
+      "match_nr": "1",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "2",
+      "time": "02:35",
+      "url": "/events/UFC-265-Lewis-vs-Gane-89140",
+      "win_details": "Rear-Naked Choke",
+      "win_method": "Submission"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Sean Strickland",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Sean-Strickland-30452",
+      "fighter2_name": "Uriah Hall",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Uriah-Hall-14210",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "10",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "5",
+      "time": " 5:00",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Unanimous",
+      "win_method": " Decision"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Cheyanne Buys",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Cheyanne-Buys-152049",
+      "fighter2_name": "Gloria de Paula",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Gloria-de-Paula-230933",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "9",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "1",
+      "time": "01:00",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Head Kick and Punches",
+      "win_method": "TKO"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Jared Gooden",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Jared-Gooden-187959",
+      "fighter2_name": "Niklas Stolze",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Niklas-Stolze-163897",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "8",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "1",
+      "time": "01:08",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Punch",
+      "win_method": "KO"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Melsik Baghdasaryan",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Melsik-Baghdasaryan-164681",
+      "fighter2_name": "Collin Anglin",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Collin-Anglin-280415",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "7",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "2",
+      "time": "01:50",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Head Kick and Punches",
+      "win_method": "KO"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Jason Witt",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Jason-Witt-127671",
+      "fighter2_name": "Bryan Barberena",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Bryan-Barberena-51471",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "6",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Majority",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Chris Gruetzemacher",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Chris-Gruetzemacher-36924",
+      "fighter2_name": "Rafa Garcia",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Rafa-Garcia-186049",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "5",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Danny Chavez",
+      "fighter1_result": "draw",
+      "fighter1_url": "/fighter/Danny-Chavez-59478",
+      "fighter2_name": "Kai Kamaka III",
+      "fighter2_result": "draw",
+      "fighter2_url": "/fighter/Kai-Kamaka-III-117585",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "4",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Majority",
+      "win_method": "Draw"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Jinh Yu Frey",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Jinh-Yu-Frey-85549",
+      "fighter2_name": "Ashley Yoder",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Ashley-Yoder-39298",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "3",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Zarrukh Adashev",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Zarrukh-Adashev-126877",
+      "fighter2_name": "Ryan Benoit",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Ryan-Benoit-48566",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "2",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Philip Rowe",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Philip-Rowe-121067",
+      "fighter2_name": "Orion Cosce",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Orion-Cosce-156917",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "1",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "2",
+      "time": "04:21",
+      "url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "win_details": "Punches",
+      "win_method": "TKO"
+    },
+    {
+      "date": "Jul 24, 2021",
+      "event_title": "UFC on ESPN 27 - Sandhagen vs. Dillashaw",
+      "fighter1_name": "T.J. Dillashaw",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/TJ-Dillashaw-62507",
+      "fighter2_name": "Cory Sandhagen",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Cory-Sandhagen-112869",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "11",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "5",
+      "time": " 5:00",
+      "url": "/events/UFC-on-ESPN-27-Sandhagen-vs-Dillashaw-89119",
+      "win_details": "Split",
+      "win_method": " Decision"
+    },
+    {
+      "date": "Jul 24, 2021",
+      "event_title": "UFC on ESPN 27 - Sandhagen vs. Dillashaw",
+      "fighter1_name": "Raulian Paiva",
+      "fighter1_result": "win",
+      "fighter1_url": "/fighter/Raulian-Paiva-167575",
+      "fighter2_name": "Kyler Phillips",
+      "fighter2_result": "loss",
+      "fighter2_url": "/fighter/Kyler-Phillips-190919",
+      "location": "UFC Apex, Las Vegas, Nevada, United States",
+      "match_nr": "10",
+      "organisation": "Ultimate Fighting Championship (UFC)",
+      "round": "3",
+      "time": "05:00",
+      "url": "/events/UFC-on-ESPN-27-Sandhagen-vs-Dillashaw-89119",
+      "win_details": "Majority",
+      "win_method": "Decision"
+    }
+  ],
+  "fighter1_result_counts": {
+    "NC": 92,
+    "draw": 66,
+    "win": 10290
+  },
+  "fighter2_result_counts": {
+    "NC": 92,
+    "draw": 66,
+    "loss": 10290
+  },
+  "generated_at_utc": "2026-08-22T23:17:15.252525Z",
+  "max_rows_per_url": 20,
+  "missing_counts": {
+    "date": 0,
+    "event_title": 0,
+    "fighter1_name": 0,
+    "fighter1_result": 0,
+    "fighter1_url": 0,
+    "fighter2_name": 0,
+    "fighter2_result": 0,
+    "fighter2_url": 0,
+    "location": 0,
+    "match_nr": 0,
+    "organisation": 0,
+    "round": 0,
+    "time": 0,
+    "url": 0,
+    "win_method": 0
+  },
+  "organisation_counts": {
+    "Bellator MMA": 2898,
+    "One Championship": 1338,
+    "Ultimate Fighting Championship (UFC)": 6212
+  },
+  "round_counts": {
+    "0": 1,
+    "1": 3446,
+    "2": 1771,
+    "3": 4871,
+    "4": 51,
+    "5": 308
+  },
+  "rows": 10448,
+  "schema_version": 1,
+  "top_time_values": [
+    [
+      "05:00",
+      4096
+    ],
+    [
+      "5:00",
+      393
+    ],
+    [
+      "04:59",
+      50
+    ],
+    [
+      "04:21",
+      31
+    ],
+    [
+      "01:54",
+      30
+    ],
+    [
+      "03:19",
+      29
+    ],
+    [
+      "00:39",
+      29
+    ],
+    [
+      "02:27",
+      29
+    ],
+    [
+      "01:59",
+      28
+    ],
+    [
+      "02:38",
+      28
+    ],
+    [
+      "02:01",
+      28
+    ],
+    [
+      "04:15",
+      28
+    ],
+    [
+      "02:44",
+      28
+    ],
+    [
+      "01:07",
+      27
+    ],
+    [
+      "01:45",
+      27
+    ],
+    [
+      "02:43",
+      27
+    ],
+    [
+      "04:20",
+      27
+    ],
+    [
+      "02:51",
+      26
+    ],
+    [
+      "01:30",
+      26
+    ],
+    [
+      "04:45",
+      25
+    ],
+    [
+      "02:14",
+      25
+    ],
+    [
+      "02:58",
+      25
+    ],
+    [
+      "01:17",
+      25
+    ],
+    [
+      "02:40",
+      25
+    ],
+    [
+      "02:08",
+      25
+    ],
+    [
+      "00:56",
+      24
+    ],
+    [
+      "03:00",
+      24
+    ],
+    [
+      "02:18",
+      24
+    ],
+    [
+      "01:40",
+      24
+    ],
+    [
+      "01:55",
+      24
+    ],
+    [
+      "03:18",
+      24
+    ],
+    [
+      "04:05",
+      24
+    ],
+    [
+      "03:37",
+      24
+    ],
+    [
+      "00:44",
+      24
+    ],
+    [
+      "01:12",
+      24
+    ],
+    [
+      "02:24",
+      24
+    ],
+    [
+      "02:25",
+      24
+    ],
+    [
+      "02:53",
+      24
+    ],
+    [
+      "01:56",
+      24
+    ],
+    [
+      "01:00",
+      23
+    ],
+    [
+      "02:11",
+      23
+    ],
+    [
+      "01:31",
+      23
+    ],
+    [
+      "03:52",
+      23
+    ],
+    [
+      "02:30",
+      23
+    ],
+    [
+      "00:54",
+      23
+    ],
+    [
+      "04:28",
+      23
+    ],
+    [
+      "01:32",
+      23
+    ],
+    [
+      "02:22",
+      23
+    ],
+    [
+      "01:21",
+      23
+    ],
+    [
+      "01:44",
+      23
+    ]
+  ],
+  "top_win_methods": [
+    [
+      "Decision",
+      4308
+    ],
+    [
+      "TKO",
+      2309
+    ],
+    [
+      "Submission",
+      2219
+    ],
+    [
+      "KO",
+      1203
+    ],
+    [
+      "Technical Submission",
+      204
+    ],
+    [
+      "No Contest",
+      68
+    ],
+    [
+      "Draw",
+      66
+    ],
+    [
+      "NC",
+      24
+    ],
+    [
+      "Disqualification",
+      19
+    ],
+    [
+      "Technical Decision",
+      13
+    ],
+    [
+      "DQ",
+      12
+    ],
+    [
+      "Verbal Submission",
+      1
+    ],
+    [
+      "Submision",
+      1
+    ],
+    [
+      "Submisson",
+      1
+    ]
+  ],
+  "url_match_pair_unique_fraction": 0.9999042787403082,
+  "urls_used_by_multiple_rows": 1001
+}
