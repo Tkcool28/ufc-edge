@@ -1,0 +1,1038 @@
+{
+  "counts": {
+    "candidate_images": 3049,
+    "pages": 582,
+    "pages_with_candidate_image": 343,
+    "pages_with_judge_text": 332,
+    "pages_with_round_text": 258,
+    "pages_with_text_score_pair": 5,
+    "pages_without_candidate_image": 239,
+    "text_score_pairs": 7
+  },
+  "decision": {
+    "canonical_judge_rows_produced": false,
+    "image_candidate_is_not_scorecard_truth": true,
+    "next_gate": "If official judge-round values are not reliably present as HTML text, archive candidate official images before any OCR-derived layer.",
+    "ocr_performed": false
+  },
+  "examples": {
+    "many_candidate_images": [
+      {
+        "candidate_image_count": 43,
+        "candidate_index": 1,
+        "image_samples": [
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Maheshate%20vs.%20Estremadura.jpg?itok=-oNQja_7"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Lainesse%20vs.%20Burlinson.jpg?itok=gVq1niks"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Lun%20vs.%20Ferreira%20da%20Silva.jpg?itok=SvouaW-q"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Bilharinho%20vs.%20Kawaihae.jpg?itok=mnVp3KyJ"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-11/DWCS%205.10%20-%20Scorecards%20-%20Zhifa%20vs.%20Puerta%5B2%5D.jpg?itok=yNK0jxyC"
+          },
+          {
+            "alt": "DWCS Scorecards - Omargadzhiev vs Silva",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-10/DWCS%205.9%20-%20Scorecards%20-%20Omargadzhiev%20vs.%20Silva.jpg?itok=GsHldacG"
+          }
+        ],
+        "judge_mention_count": 16,
+        "published_time": "2021-08-31T14:07:13-0400",
+        "round_mention_count": 27,
+        "text_score_pair_count": 0,
+        "title": "Dana White's Contender Series Season 5 Results & Scorecards",
+        "url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs"
+      },
+      {
+        "candidate_image_count": 11,
+        "candidate_index": 13,
+        "image_samples": [
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Holm%20vs.%20Aldana%20-%20Scorecards%20-%20Vendramini%20vs.%20Ayari%5B2%5D.jpg?VersionId=wFLyc9mAfJCbsyDYshrPNEMuosK7V_te&itok=ndPOUUGj"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Holm%20vs.%20Aldana%20-%20Scorecards%20-%20Kenney%20vs.%20Alateng%20copy.jpg?VersionId=YJFmxEGgYXRRw3NShMHtty2P7g7TBTj4&itok=ZWfXY3Za"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Holm%20vs.%20Aldana%20-%20Scorecards%20-%20Lookboonmee%20vs.%20Frey%20copy%202.jpg?VersionId=vJKdscKbMhd6PLX0rb3szUTSTzjk.aaH&itok=sAYM6N7a"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Holm%20vs.%20Aldana%20-%20Scorecards%20-%20Williams%20vs.%20Imavov%20copy.jpg?VersionId=ScmJXTcjZJx2dKKZikgDDCXftxPkeaI.&itok=8Hpt-kO5"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Holm%20vs.%20Aldana%20-%20Scorecards%20-%20Jourdain%20vs.%20Culibao%20copy.jpg?VersionId=uAq4NJ6uXOLqp3RBLtbT3gCydZ0iovkR&itok=Hh1zfNBA"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Holm%20vs.%20Aldana%20-%20Scorecards%20-%20Condit%20vs.%20McGee%20copy.jpg?VersionId=z5RkqbHFNrzexgzzHM1ZHxC1lKqMAcLO&itok=vWsTSk0x"
+          }
+        ],
+        "judge_mention_count": 3,
+        "published_time": "2020-09-30T18:33:43-0400",
+        "round_mention_count": 3,
+        "text_score_pair_count": 0,
+        "title": "Fight Night: Holm vs Aldana Official Scorecards",
+        "url": "https://www.ufc.com/news/fight-night-holm-vs-aldana-official-scorecards-fight-island-4"
+      },
+      {
+        "candidate_image_count": 15,
+        "candidate_index": 31,
+        "image_samples": [
+          {
+            "alt": "Octagon announcer Joe Martinez introduces the fighters prior to the main event during the UFC Fight Night event at UFC APEX on June 13, 2020 in Las Vegas, Nevada. (Photo by Chris Unger/Zuffa LLC)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/background_image_sm/s3/2021-10/102121-ufc-fight-night-costa-vs-vettori-scorecards-hero_GettyImages-1249486775.jpg?h=d1cb525d&itok=c59NaDVz"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-10/102321-Martinez-VS-Lazishvili-SCORECARD.jpg?itok=YlKXYLvS"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-10/102321-Souza-VS-Markos-SCORECARD.jpg?itok=98FfcdA9"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-10/102321-Molina-VS-Da-Silva-SCORECARD.jpg?itok=Z89H5zZ8"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-10/102321-Worth-VS-Herbert-SCORECARD.jpg?itok=ErH62aam"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-10/102321-Pickett-VS-Staropoli-SCORECARD.jpg?itok=mOjUQ6yJ"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2021-10-22T22:14:23-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC Fight Night: Costa vs Vettori",
+        "url": "https://www.ufc.com/news/official%20-scorecards-ufc-fight-night-costa-vs-vettori-ufc-vegas-41"
+      },
+      {
+        "candidate_image_count": 10,
+        "candidate_index": 33,
+        "image_samples": [
+          {
+            "alt": "Josefine Knutsson (30-24, 30-25, 30-27) defeats Marnic Mann by unanimous decision",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-09/UFC_Fight_Night_Grasso_vs__Shevchenko_2_-_Scorecards_-_Knutsson_vs__Mann_99__pdf.jpg?itok=YJTYg-QW"
+          },
+          {
+            "alt": "Tracy Cortez (30-27, 30-27, 29-28) defeats Jasmine Jasudavicius by unanimous decision",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-09/UFC_Fight_Night_Grasso_vs__Shevchenko_2_-_Scorecards_-_Cortez_vs__Jasudavicius_49__pdf.jpg?itok=nZ-7MXIA"
+          },
+          {
+            "alt": "Edgar Chairez versus Daniel Lacerda declared a no decision at 3:47 of Round 1\u00a0",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-09/chairez-scorecard-noche.jpg?itok=uf3gKLA3"
+          },
+          {
+            "alt": "Roman Kopylov defeats Josh Fremd by TKO (body shot) at 4:44 of Round 2",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-09/UFC_Fight_Night_Grasso_vs__Shevchenko_2_-_Scorecards_-_Kopylov_vs__Fremd_44__pdf.jpg?itok=p5QSX7ef"
+          },
+          {
+            "alt": "Loopy Godinez defeats Elise Reed by submission, rear naked choke, Round 2, 3:38",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-09/1--UFC_Fight_Night_Grasso_vs__Shevchenko_2_-_Scorecards_-_Godinez_vs__Reed_35__pdf.jpg?itok=7WbdADlq"
+          },
+          {
+            "alt": "Kyle Nelson (29-28, 29-28, 30-27) defeats Fernando Padilla by unanimous decision",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-09/2-UFC_Fight_Night_Grasso_vs__Shevchenko_2_-_Scorecards_-_Padilla_vs__Nelson_100__pdf.jpg?itok=PbA58J0_"
+          }
+        ],
+        "judge_mention_count": 4,
+        "published_time": "2023-09-14T18:48:13-0400",
+        "round_mention_count": 6,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | Noche UFC",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-noche-ufc-grasso-vs-shevchenko-2"
+      },
+      {
+        "candidate_image_count": 12,
+        "candidate_index": 34,
+        "image_samples": [
+          {
+            "alt": "Scorecard of Official Result: Montse Rendon defeats Alice Pereira by split decision (28-29, 29-28, 30-27)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2025-09/Screenshot%202025-09-13%20at%2012.58.41%E2%80%AFPM.png?itok=N9tujK3Q"
+          },
+          {
+            "alt": "Scorecard reading: Alden Coria def. Alessandro Costa by TKO (strikes) at 0:47 of Round 3",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2025-09/Screenshot%202025-09-13%20at%201.12.20%E2%80%AFPM.png?itok=ItFgjJLR"
+          },
+          {
+            "alt": "Scorecard reading: Zachary Reese and Sedriques Dumas ruled a no contest (accidental foul) at 0:51 of Round 1",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2025-09/Screenshot%202025-09-13%20at%201.30.34%E2%80%AFPM.png?itok=BMky9uTA"
+          },
+          {
+            "alt": "Scorecard reading: Jesus Aguilar def. Luis Gurule by unanimous decision (30-27, 29-28, 29-28)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2025-09/Screenshot%202025-09-13%20at%201.57.12%E2%80%AFPM.png?itok=xh5qec70"
+          },
+          {
+            "alt": "Scorecard reading: Tatiana Suarez defeats Amanda Lemos by unanimous decision (29-28, 29-28, 29-28)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2025-09/Screenshot%202025-09-13%20at%202.23.09%E2%80%AFPM.png?itok=A28_fDQ2"
+          },
+          {
+            "alt": "Scorecard reading: Joaquim Silva def. Claudio Puelles by split decision (29-28, 28-29, 29-28)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2025-09/Screenshot%202025-09-13%20at%202.48.54%E2%80%AFPM.png?itok=8Wueqt0n"
+          }
+        ],
+        "judge_mention_count": 3,
+        "published_time": "2025-09-13T17:30:00-0400",
+        "round_mention_count": 8,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | Noche UFC",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-noche-ufc-lopes-vs-silva"
+      },
+      {
+        "candidate_image_count": 14,
+        "candidate_index": 35,
+        "image_samples": [
+          {
+            "alt": "Gillian Robertson def. Priscila Cachoeira via submission (rear naked choke) at 4:59 of the first round",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-12/121121-ufc-269-oliveira-%20vs-poirier-scorecards_robertson-vs-cachoeira.jpg?itok=87nWfIRU"
+          },
+          {
+            "alt": "Tony Kelley def. Randy Costa via TKO (strikes) at 4:15 of round two",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-12/121121-ufc-269-oliveira-%20vs-poirier-scorecards_costa-vs-kelley.jpg?itok=xhfZAwJK"
+          },
+          {
+            "alt": "Ryan Hall def. Darrick Minner via unanimous decision (30-27, 30-27, 29-27)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-12/121121-ufc-269-oliveira-%20vs-poirier-scorecards_hall-vs-minner.jpg?itok=RczKqDqv"
+          },
+          {
+            "alt": "Erin Blanchfield def. Miranda Maverick via unanimous decision (30-27, 30-27, 30-27)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-12/121121-ufc-269-oliveira-%20vs-poirier-scorecards_maverick-vs-blanchfield.jpg?itok=ZsboMOFD"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-12/121121-ufc-269-oliveira-vs-poirier-scorecards_muniz-vs-anders.jpg?itok=n9QpDwew"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2021-12/121121-ufc-269-oliveira-vs-poirier-scorecards_wright-vs-silva.jpg?itok=kY5qVeuY"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2021-12-11T18:26:18-0500",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 269: Oliveira vs Poirier",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-269-oliveira-vs-poirier-nunes-pena"
+      },
+      {
+        "candidate_image_count": 12,
+        "candidate_index": 36,
+        "image_samples": [
+          {
+            "alt": "UFC Octagon Announcer Bruce Buffer introduces the interim heavyweight title bout during the UFC 265 event at Toyota Center on August 07, 2021 in Houston, Texas. (Photo by Cooper Neill/Zuffa LLC)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-01/012222-ufc-270-ngannou-vs-gane-scorecards-hero_GettyImages-1332969398.jpg?h=d1cb525d&itok=d1kXdYrk"
+          },
+          {
+            "alt": "UFC 270 Ngannou vs. Gane - Scorecards - Hansen vs. Jasudavicius",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-01/UFC%20270%20Ngannou%20vs.%20Gane%20-%20Scorecards%20-%20Hansen%20vs.%20Jasudavicius.jpg?itok=1lXMEf7M"
+          },
+          {
+            "alt": "UFC 270 Ngannou vs. Gane - Scorecards - Gomez Juarez vs. Demopoulos",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-01/UFC%20270%20Ngannou%20vs.%20Gane%20-%20Scorecards%20-%20Gomez%20Juarez%20vs.%20Demopoulos.jpg?itok=iQ-Qi6K2"
+          },
+          {
+            "alt": "UFC 270 Ngannou vs. Gane - Scorecards - Frevola vs. Valdez",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-01/UFC%20270%20Ngannou%20vs.%20Gane%20-%20Scorecards%20-%20Frevola%20vs.%20Valdez.jpg?itok=mm_Hsfmq"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-01/UFC%20270%20Ngannou%20vs.%20Gane%20-%20Scorecards%20-%20Gravely%20vs.%20Oliveira.jpg?itok=7jTZbUjn"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-01/UFC%20270%20Ngannou%20vs.%20Gane%20-%20Scorecards%20-%20Della%20Maddalena%20vs.%20Rodriguez_0.jpg?itok=AlZIip-p"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2022-01-21T16:44:22-0500",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 270: Ngannou vs Gane",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-270-ngannou-vs-gane-moreno-vs-figueiredo-3"
+      },
+      {
+        "candidate_image_count": 15,
+        "candidate_index": 37,
+        "image_samples": [
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-02/021222-ufc-271-adesanya-vs-whittaker-2-scorecards_DB-0998.jpg?h=d1cb525d&itok=Mw46J-Pu"
+          },
+          {
+            "alt": "William Knight vs Maxim Grishin Official Scorecards",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20271%20Adesanya%20vs.%20Whittaker%202%20-%20Scorecards%20-%20Knight%20vs.%20Grishin%5B1%5D.jpg?itok=eAfnkhNm"
+          },
+          {
+            "alt": "UFC 271 Adesanya vs. Whittaker 2 - Scorecards - Wells vs. Diamond.",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20271%20Adesanya%20vs.%20Whittaker%202%20-%20Scorecards%20-%20Wells%20vs.%20Diamond%5B3%5D.jpg?itok=RLVWUWSs"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20271%20Adesanya%20vs.%20Whittaker%202%20-%20Scorecards%20-%20Silva%20de%20Andrade%20vs.%20Morozov.jpg?itok=aM8d10-P"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20271%20Adesanya%20vs.%20Whittaker%202%20-%20Scorecards%20-%20Silva%20de%20Andrade%20vs.%20Morozov_0.jpg?itok=EEnIRV10"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20271%20Adesanya%20vs.%20Whittaker%202%20-%20Scorecards%20-%20Martinez%20vs.%20Lawrence.jpg?itok=VWWZ54gY"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2022-02-11T20:14:32-0500",
+        "round_mention_count": 1,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 271: Adesanya vs Whittaker 2",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-271-adesanya-vs-whittaker-2-derrick-lewis-tai-tuivasa-houston"
+      },
+      {
+        "candidate_image_count": 14,
+        "candidate_index": 38,
+        "image_samples": [
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-03/030522-ufc-272-covington-vs-masvidal-scorecards-hero_GettyImages-1366342157.jpg?h=d1cb525d&itok=RNkaVGrD"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20272%20Covington%20vs.%20Masvidal%20-%20Scorecards%20-%20Jacoby%20vs.%20Oleksiejczuk%5B20%5D%20copy.jpg?itok=y6Pitt6V"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20272%20Covington%20vs.%20Masvidal%20-%20Scorecards%20-%20Smith%20vs.%20Klein%5B68%5D.jpg?itok=qsiXq9yR"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20272%20Covington%20vs.%20Masvidal%20-%20Scorecards%20-%20Elliott%20vs.%20Ulanbekov%5B9%5D.jpg?itok=OzEOrMkR"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20272%20Covington%20vs.%20Masvidal%20-%20Scorecards%20-%20Kelleher%20vs.%20Nurmagomedov%5B66%5D.jpg?itok=sXVmsRmV"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20272%20Covington%20vs.%20Masvidal%20-%20Scorecards%20-%20Moroz%20vs.%20Agapova%5B5%5D.jpg?itok=VjTVtsnG"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2022-03-04T18:38:20-0500",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 272: Covington vs Masvidal",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-272-covington-vs-masvidal-rda-moicano"
+      },
+      {
+        "candidate_image_count": 11,
+        "candidate_index": 39,
+        "image_samples": [
+          {
+            "alt": "A general view of the Octagon prior to the UFC 261 event at VyStar Veterans Memorial Arena on April 24, 2021 in Jacksonville, Florida. (Photo by Chris Unger/Zuffa LLC)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-04/040922-ufc-273-volkanovski-vs-tkz-official-scorecards-hero_GettyImages-1314242558.jpg?h=d1cb525d&itok=2r5-bQmS"
+          },
+          {
+            "alt": "Official Result \u2013 Aleksei Oleinik defeats Jared Vanderaa via submission (neck crank) at 3:39 of the first round",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-04/04092022-Scorecards-Oleinik-vs-Vanderaa.jpeg?itok=r8bcvnf2"
+          },
+          {
+            "alt": "Official Result \u2013 Mike Malott defeats Mickey Gall via TKO (strikes) at 3:41 of the first round",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/image/2022-04/04092022-Scorecards-Gall-vs-Malott.jpeg?itok=I6HnViP_"
+          },
+          {
+            "alt": "Official Result \u2013 Raquel Pennington defeats Aspen Ladd via unanimous decision (29-28, 29-28, 29-28)\u00a0|\u00a0Results, Highlights & More",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-04/04092022-UFC-273-Scorecards-Ladd-vs-Pennington.jpeg?itok=9y4ikMH8"
+          },
+          {
+            "alt": "Official Result \u2013 Anthony Hernandez defeats Josh Fremd via unanimous decision (30-27, 30-27, 29-28)\u00a0|\u00a0Results, Highlights & More",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-04/04092022-UFC-273-Scorecards-Hernandez-vs-Fremd.jpeg?itok=eNd-Ggby"
+          },
+          {
+            "alt": "Official Result \u2013 Ian Garry defeats Darian Weeks via unanimous decision (29-28, 30-27, 30-27)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-04/04092022-UFC-273-Scorecards%20-Garry-vs-Weeks.jpeg?itok=BzM0u8md"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2022-04-08T09:44:32-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 273: Volkanovski vs The Korean Zombie",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-273-volkanovski-vs-the-korean-zombie-jacksonville"
+      },
+      {
+        "candidate_image_count": 15,
+        "candidate_index": 40,
+        "image_samples": [
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-05/050722-ufc-274-oliveira-vs-gaethje-official-scorecards-hero_GettyImages-1395820060.jpg?h=d1cb525d&itok=LOPjO2A5"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20274%20Oliveira%20vs.%20Gaethje%20-%20Scorecards%20-%20Newson%20vs.%20Garcia.jpg?itok=t1LhL5VV"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20274%20Oliveira%20vs.%20Gaethje%20-%20Scorecards%20-%20Carnelossi%20vs.%20Godinez.jpg?itok=-yWGZe_N"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20274%20Oliveira%20vs.%20Gaethje%20-%20Scorecards%20-%20Rodrigues%20vs.%20Vergara.jpg?itok=w05XmJAp"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20274%20Oliveira%20vs.%20Gaethje%20-%20Scorecards%20-%20Cortez%20vs.%20Gatto.jpg?itok=7dxZCtDa"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20274%20Oliveira%20vs.%20Gaethje%20-%20Scorecards%20-%20Fialho%20vs.%20VanCamp.jpg?itok=dZzFK3Ea"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2022-05-06T21:22:55-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 274: Oliveira vs Gaethje",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-274-oliveira-vs-gaethje-namajunas-vs-esparza-2-phoenix"
+      },
+      {
+        "candidate_image_count": 12,
+        "candidate_index": 41,
+        "image_samples": [
+          {
+            "alt": "Bruce Buffer poses with the UFC Octagon Girls during the UFC 275 event at Singapore Indoor Stadium on June 12, 2022 in Singapore. (Photo by Jeff Bottari/Zuffa LLC)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/background_image_sm/s3/2022-06/061122-ufc-275-teixeira-vs-prochazka-scorecards-page-hero_GettyImages-1402377730.jpg?h=d1cb525d&itok=iA4_07VG"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-06/UFC-275-Teixeira-vs-Prochazka-Scorecards_Pascual-vs-Edwards.jpg?itok=_6-C4Fjx"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-06/UFC-275-Teixeira-vs-Prochazka-Scorecards_Na-vs-Gomez-Juarez.jpg?itok=hRqp-Tiw"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-06/UFC-275-Teixeira-vs-Prochazka-Scorecards_Kang-vs-Danaa.jpg?itok=1xIefG3y"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-06/UFC-275-Teixeira-vs-Prochazka-Scorecards_Allen-vs-Malkoun.jpg?itok=irAhFiki"
+          },
+          {
+            "alt": "",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-06/UFC-275-Teixeira-vs-Prochazka-Scorecards_Maheshate-vs-Garcia.jpg?itok=Vb2Q7Riz"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2022-06-11T10:53:09-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 275: Teixeira vs Prochazka",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-275-teixeira-vs-prochazka-shevchenko-santos-singapore"
+      },
+      {
+        "candidate_image_count": 12,
+        "candidate_index": 42,
+        "image_samples": [
+          {
+            "alt": "Cameron Saaiman defeats Steven Koslow by TKO (strikes) at 4:13 of Round 3",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-12/121022-cameron-saaiman-steven-koslow-scorecard.jpg?itok=YncApjVi"
+          },
+          {
+            "alt": "TJ Brown defeats Erik Silva by submission (arm triangle choke) at 3:41 of Round 3",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-12/121022-tj-brown-erik-silva-scorecard.jpg?itok=1Ylnww-_"
+          },
+          {
+            "alt": "Billy Quarantillo defeats Alexander Hernandez by TKO (strikes) at 4:30 of Round 2",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-12/121022-billy-quarantillo-alexander-hernandez-scorecard.jpg?itok=q2RZ7th3"
+          },
+          {
+            "alt": "Chris Curtis defeats Joaquin Buckley by KO (strikes) at 2:49 of Round 2",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-12/121022-joaquin-buckley-chris-curtis-scorecard.jpg?itok=BMUkcGHz"
+          },
+          {
+            "alt": "Edmen Shahbazyan defeats Dalcha Lungiambula by TKO (strikes) at 4:41 of Round 2",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-12/121022-edmen-shahbazyan-dalcha-lungiambula-scorecard.jpg?itok=9PYlf9wZ"
+          },
+          {
+            "alt": "Jairzinho Rozenstruik defeats Chris Daukaus by KO (strikes) at 0:23 of Round 1",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2022-12/121022-rozenstruik-daukaus-scorecard.jpg?itok=ILAO_aC2"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2022-12-11T01:34:24-0500",
+        "round_mention_count": 10,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 282: B\u0142achowicz vs Ankalaev",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-282-blachowicz-vs-ankalaev"
+      },
+      {
+        "candidate_image_count": 15,
+        "candidate_index": 45,
+        "image_samples": [
+          {
+            "alt": "Octagon announcer Bruce Buffer introduces the main event during the UFC 283 event at Jeunesse Arena on January 21, 2023 in Rio de Janeiro, Brazil. (Photo by Buda Mendes/Zuffa LLC)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/background_image_sm/s3/2023-03/030323-bruce-buffer-scorecards.jpg?h=d1cb525d&itok=nmWBN549"
+          },
+          {
+            "alt": "UFC 285: Jones vs. Gane - Scorecards - Ribovics vs. Radzhabov",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-03/UFC%20285%20Jones%20vs.%20Gane%20-%20Scorecards%20-%20Ribovics%20vs.%20Radzhabov.jpg?itok=XgZgnJAx"
+          },
+          {
+            "alt": "UFC 285: Jones vs. Gane - Scorecards - Blackshear vs. Basharat",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-03/UFC%20285%20Jones%20vs.%20Gane%20-%20Scorecards%20-%20Blackshear%20vs.%20Basharat.jpg?itok=9t8jDy7b"
+          },
+          {
+            "alt": "Jessica Penne vs Tabatha Ricci\u00a0scorecard",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-03/ufc-285-scorecards-penne-ricci.jpg?itok=Ek_2ImEW"
+          },
+          {
+            "alt": "Cameron Saaiman def. Mana Martinez by majority decision (29-26, 28-27, 28-28)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-03/UFC-285-Scorecards-Martinez-Saaiman.jpg?itok=6y82edCx"
+          },
+          {
+            "alt": "Ian Machado Garry\u00a0defeats\u00a0Song Kenan\u00a0by TKO (strikes) at 4:22 of Round 3",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-03/ufc-285-scorecards-garry-kenan.jpg?itok=LlYlf_0w"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2023-03-04T11:00:00-0500",
+        "round_mention_count": 8,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 285: Jones vs Gane",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-285-jones-vs-gane"
+      },
+      {
+        "candidate_image_count": 12,
+        "candidate_index": 47,
+        "image_samples": [
+          {
+            "alt": "Sam Hughes defeats Jaqueline Amorim by unanimous decision (29-28, 29-28, 29-28)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-04/040823-hughes-amorim-scorecard.jpg?itok=Ss4_JZUm"
+          },
+          {
+            "alt": "Steve Garcia defeats Shayilan Nuerdanbieke by KO (strikes) at 0:36 of Round 2",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-04/040823-Nuerdanbieke-Garcia-scorecard.jpg?itok=7eURp1KC"
+          },
+          {
+            "alt": "Ignacio Bahamondes defeats Trey Ogden by unanimous decision (30-27, 30-27, 29-28)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-04/040823-Bahamondes-Ogden-scorecard.jpg?itok=U53kEQPz"
+          },
+          {
+            "alt": "Loopy Godinez defeats Cynthia Calvillo by split decision (29-28, 28-29, 30-27)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-04/040823-Calvillo-Godinez-scorecard%20.jpg?itok=1WsTZ179"
+          },
+          {
+            "alt": "Joe Pyfer defeats Gerald Meerschaert by TKO (strikes) at 3:15 of Round 1",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-04/040823-Meerschaert-Pyfer-scorecard%20.jpg?itok=sf-zEOYq"
+          },
+          {
+            "alt": "Luana Pinheiro defeats Michelle Waterson-Gomez by split decision (29-28, 28-29, 29-28)",
+            "title": "",
+            "url": "https://ufc.com/images/styles/inline/s3/2023-04/040823-Waterson-Gomez-Pinheiro-scorecard%20.jpg?itok=7quYXdIB"
+          }
+        ],
+        "judge_mention_count": 2,
+        "published_time": "2023-04-09T01:05:00-0400",
+        "round_mention_count": 5,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 287: Pereira vs Adesanya 2",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-287-pereira-vs-adesanya-2"
+      }
+    ],
+    "no_candidate_image": [
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 0,
+        "judge_mention_count": 0,
+        "published_time": "2021-02-22T09:35:20-0500",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Blaydes vs Lewis: The Scorecard",
+        "url": "https://www.ufc.com/news/blaydes-vs-lewis-scorecard-kunitskaya-erosa-daukaus"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 2,
+        "judge_mention_count": 0,
+        "published_time": "2022-11-14T13:23:00-0500",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Everything You Might've Missed From UFC 281: Adesanya vs Pereira",
+        "url": "https://www.ufc.com/news/everything-you-might-have-missed-ufc-281-adesanya-vs-pereira-results-scorecard-exclusive-interviews"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 3,
+        "judge_mention_count": 0,
+        "published_time": "2020-07-27T10:28:45-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Island 3: Scorecard",
+        "url": "https://www.ufc.com/news/fight-island-3-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 4,
+        "judge_mention_count": 0,
+        "published_time": "2020-07-16T15:55:52-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Island Scorecard",
+        "url": "https://www.ufc.com/news/fight-island-scorecard-calvin-kattar"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 5,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-24T21:02:26-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Boise Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-boise-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 6,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-24T21:02:26-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Calgary: Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-calgary-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 7,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Charlotte Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-charlotte-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 8,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Chile The Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-chile-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 9,
+        "judge_mention_count": 0,
+        "published_time": "2018-11-12T11:33:36-0500",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Denver: The Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-denver-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 10,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Fresno Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-fresno-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 11,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Gdansk Scorecard: Who Were The Big Winners?",
+        "url": "https://www.ufc.com/news/fight-night-gdansk-scorecard-who-were-big-winners"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 12,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-24T21:02:26-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Hamburg Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-hamburg-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 14,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Japan Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-japan-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 15,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-24T21:02:26-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Lincoln Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-lincoln-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 16,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Liverpool: The Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-liverpool-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 17,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night London Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-london-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 18,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-18T14:06:16-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "FIGHT NIGHT MOSCOW: THE SCORECARD",
+        "url": "https://www.ufc.com/news/fight-night-moscow-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 19,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-24T21:02:26-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Moscow: The Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-moscow-scorecard-0"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 20,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Orlando: The Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-orlando-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 21,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Pittsburgh Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-pittsburgh-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 22,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Rotterdam Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-rotterdam-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 23,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-24T21:02:26-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Sao Paulo: The Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-sao-paulo-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 24,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Shanghai Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-shanghai-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 25,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night St. Louis Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-st-louis-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 26,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Stockholm Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-stockholm-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 27,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Utica: The Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-utica-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 28,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Fight Night Winnipeg Scorecard",
+        "url": "https://www.ufc.com/news/fight-night-winnipeg-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 29,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "International Fight Week Scorecard",
+        "url": "https://www.ufc.com/news/international-fight-week-scorecard"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 30,
+        "judge_mention_count": 1,
+        "published_time": "2025-09-14T02:00:00-0400",
+        "round_mention_count": 0,
+        "text_score_pair_count": 0,
+        "title": "Results + Scorecards | Canelo vs Crawford",
+        "url": "https://www.ufc.com/news/live-results-official-scorecards-match-recaps-interviews-canelo-vs-crawford-las-vegas"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 43,
+        "judge_mention_count": 2,
+        "published_time": "2023-01-21T11:00:00-0500",
+        "round_mention_count": 10,
+        "text_score_pair_count": 0,
+        "title": "Official Scorecards | UFC 283: Teixeira vs Hill",
+        "url": "https://www.ufc.com/news/official-judges-scorecards-ufc-283-teixeira-vs-hill-light-heavyweight-flyweight-title-rio-de-janeiro"
+      }
+    ],
+    "text_score_pairs": [
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 234,
+        "judge_mention_count": 0,
+        "published_time": "2021-07-12T15:17:44-0400",
+        "round_mention_count": 0,
+        "score_pair_samples": [
+          "10-8"
+        ],
+        "text_score_pair_count": 1,
+        "title": "The Scorecard | UFC 264: Poirier vs McGregor 3",
+        "url": "https://www.ufc.com/news/scorecard-ufc-264-poirier-vs-mcgregor-3"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 476,
+        "judge_mention_count": 0,
+        "published_time": "2018-09-14T08:36:04-0400",
+        "round_mention_count": 0,
+        "score_pair_samples": [
+          "10-7"
+        ],
+        "text_score_pair_count": 1,
+        "title": "UFC Glasgow Scorecard",
+        "url": "https://www.ufc.com/news/ufc-glasgow-scorecard"
+      },
+      {
+        "candidate_image_count": 1,
+        "candidate_index": 529,
+        "judge_mention_count": 0,
+        "published_time": "2020-12-07T12:57:33-0500",
+        "round_mention_count": 0,
+        "score_pair_samples": [
+          "8-7"
+        ],
+        "text_score_pair_count": 1,
+        "title": "UFC Vegas 16 Scorecard",
+        "url": "https://www.ufc.com/news/ufc-vegas-16-scorecard-vettori-hill-smolka-topuria-leavitt-read"
+      },
+      {
+        "candidate_image_count": 5,
+        "candidate_index": 557,
+        "judge_mention_count": 1,
+        "published_time": "2025-09-02T23:00:00-0400",
+        "round_mention_count": 3,
+        "score_pair_samples": [
+          "10-8",
+          "10-9"
+        ],
+        "text_score_pair_count": 2,
+        "title": "Week 4 Results + Scorecards | Dana White's Contender Series Season 9",
+        "url": "https://www.ufc.com/news/week-4-results-scorecards-fight-recaps-interviews-contract-winners-dana-whites-contender-series-season-9"
+      },
+      {
+        "candidate_image_count": 0,
+        "candidate_index": 564,
+        "judge_mention_count": 1,
+        "published_time": "2023-09-19T23:04:02-0400",
+        "round_mention_count": 3,
+        "score_pair_samples": [
+          "10-8",
+          "10-8"
+        ],
+        "text_score_pair_count": 2,
+        "title": "Week 7 Results & Scorecards | Dana White's Contender Series, Season 7",
+        "url": "https://www.ufc.com/news/week-7-results-scorecards-dana-whites-contender-series-season-7"
+      }
+    ]
+  },
+  "generated_at_utc": "2026-08-22T22:04:39.717433Z",
+  "image_candidate_csv": "data/derived/discovery/ufc_scorecard_image_candidates.csv",
+  "published_year_counts": {
+    "2018": 66,
+    "2019": 42,
+    "2020": 60,
+    "2021": 87,
+    "2022": 79,
+    "2023": 70,
+    "2024": 57,
+    "2025": 65,
+    "2026": 56
+  },
+  "schema_version": 1,
+  "source_manifest": "data/raw/ufc_official_articles/20260821T210000Z/scorecard/manifest.json"
+}
