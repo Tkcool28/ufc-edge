@@ -1,0 +1,1528 @@
+{
+  "athletes": 4161,
+  "attribute_samples": {
+    "origin": {
+      "object": [
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "CN",
+          "langcode": null,
+          "locality": "Sichuan"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "AZ",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Phoenix"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "NY",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Brooklyn"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "FL",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Parrish"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "US",
+          "langcode": null,
+          "locality": null
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "ON",
+          "country_code": "CA",
+          "langcode": null,
+          "locality": "Tillsonburg"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "TX",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Austin"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "TX",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Houston"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": "CA",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Whittier"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "US",
+          "langcode": null,
+          "locality": null
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "US",
+          "langcode": null,
+          "locality": null
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "US",
+          "langcode": null,
+          "locality": null
+        },
+        {
+          "address_line3": "",
+          "administrative_area": null,
+          "country_code": "NZ",
+          "langcode": null,
+          "locality": "Auckland"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "US",
+          "langcode": null,
+          "locality": null
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "GB",
+          "langcode": null,
+          "locality": null
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "QC",
+          "country_code": "CA",
+          "langcode": null,
+          "locality": "Montreal"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "AF",
+          "langcode": null,
+          "locality": "Badakhshan"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": null,
+          "country_code": "LB",
+          "langcode": null,
+          "locality": "Beirut"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": "",
+          "country_code": "RU",
+          "langcode": null,
+          "locality": ""
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "GH",
+          "langcode": null,
+          "locality": null
+        }
+      ]
+    },
+    "residence": {
+      "object": [
+        {
+          "address_line3": "",
+          "administrative_area": "",
+          "country_code": "CN",
+          "langcode": null,
+          "locality": "Sichuan"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": "AR",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Batesville "
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "OH",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Columbus"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "FL",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Tampa"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "ON",
+          "country_code": "CA",
+          "langcode": null,
+          "locality": "Tillsonburg"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "LA",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Lafayette"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": "CA",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Whittier"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "NM",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Albuquerque"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "TX",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "San Antonio"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "AZ",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Phoenix"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": null,
+          "country_code": "NZ",
+          "langcode": null,
+          "locality": "Auckland"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "GB",
+          "langcode": null,
+          "locality": "Liverpool"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": null,
+          "country_code": "FI",
+          "langcode": null,
+          "locality": "Espoo"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": "",
+          "country_code": "TR",
+          "langcode": null,
+          "locality": ""
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "TX",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Fort Worth"
+        },
+        {
+          "address_line3": "",
+          "administrative_area": "TX",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Dallas"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": null,
+          "country_code": "RU",
+          "langcode": null,
+          "locality": "Grozny"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "FL",
+          "country_code": "US",
+          "langcode": null,
+          "locality": "Boca Raton"
+        },
+        {
+          "address_line3": null,
+          "administrative_area": "B",
+          "country_code": "ES",
+          "langcode": null,
+          "locality": null
+        },
+        {
+          "address_line3": "",
+          "administrative_area": null,
+          "country_code": "MA",
+          "langcode": null,
+          "locality": "Rabat"
+        }
+      ]
+    },
+    "stats_weight": {
+      "string": [
+        "155.50",
+        "0.00",
+        "0.00",
+        "0.00",
+        "0.00",
+        "136.00",
+        "185.00",
+        "155.00",
+        "231.00",
+        "185.50",
+        "136.00",
+        "145.00",
+        "156.00",
+        "205.50",
+        "171.00",
+        "0.00",
+        "125.00",
+        "155.00",
+        "205.00",
+        "135.00"
+      ]
+    },
+    "status": {
+      "bool": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "attribute_type_counts": {
+    "origin": {
+      "null": 577,
+      "object": 3584
+    },
+    "residence": {
+      "null": 1700,
+      "object": 2461
+    },
+    "stats_weight": {
+      "null": 652,
+      "string": 3509
+    },
+    "status": {
+      "bool": 4161
+    }
+  },
+  "decision": {
+    "canonicalization_promoted": false,
+    "point_in_time_only": true
+  },
+  "generated_at_utc": "2026-08-22T23:18:03.118835Z",
+  "relationship_counts": {
+    "athlete_status": {
+      "athletes_with_relationship_ids": 4124,
+      "athletes_without_relationship_ids": 37,
+      "included_objects_found": 4124,
+      "labels_found": 4124,
+      "relationship_ids": 4124
+    },
+    "fighting_style": {
+      "athletes_with_relationship_ids": 1143,
+      "athletes_without_relationship_ids": 3018,
+      "included_objects_found": 1252,
+      "labels_found": 1252,
+      "relationship_ids": 1260
+    },
+    "gym": {
+      "athletes_with_relationship_ids": 1203,
+      "athletes_without_relationship_ids": 2958,
+      "included_objects_found": 1203,
+      "labels_found": 1203,
+      "relationship_ids": 1203
+    },
+    "stats_weight_class": {
+      "athletes_with_relationship_ids": 3271,
+      "athletes_without_relationship_ids": 890,
+      "included_objects_found": 3271,
+      "labels_found": 3271,
+      "relationship_ids": 3271
+    }
+  },
+  "relationship_examples": {
+    "athlete_status": [
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "9456fb4f-36b3-499f-84c3-904a259bda50",
+        "included": true,
+        "label": "Released",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "c531dd40-45ec-4491-ada5-cd4312450459",
+        "included": true,
+        "label": "Active",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "9456fb4f-36b3-499f-84c3-904a259bda50",
+        "included": true,
+        "label": "Released",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      },
+      {
+        "id": "ddda3b5c-08d1-4d38-a73f-9f15a95da3d2",
+        "included": true,
+        "label": "Not Fighting",
+        "type": "taxonomy_term--status"
+      }
+    ],
+    "fighting_style": [
+      {
+        "id": "96440284-4b7d-49af-a49d-28926454401f",
+        "included": true,
+        "label": "Striker",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "47eaa5c0-9050-46de-8be3-5651d37a26fd",
+        "included": true,
+        "label": "Freestyle",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "8c3c5107-a1ab-4939-bd15-e76091d4a5dc",
+        "included": true,
+        "label": "MMA",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "8c3c5107-a1ab-4939-bd15-e76091d4a5dc",
+        "included": true,
+        "label": "MMA",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "b2c59d85-7d47-4c06-abcc-0153836dd8e0",
+        "included": true,
+        "label": "Muay Thai",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "0d9c2731-d362-46c0-9abc-523670a52129",
+        "included": true,
+        "label": "Boxing",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "af486781-c9f4-47e7-bba2-bdc2bc55e906",
+        "included": true,
+        "label": "Brazilian Jiu-Jitsu",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "8c3c5107-a1ab-4939-bd15-e76091d4a5dc",
+        "included": true,
+        "label": "MMA",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "4bf40ba3-5e03-4065-a444-f958bee20cad",
+        "included": true,
+        "label": "Judo",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "b2c59d85-7d47-4c06-abcc-0153836dd8e0",
+        "included": true,
+        "label": "Muay Thai",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "8c3c5107-a1ab-4939-bd15-e76091d4a5dc",
+        "included": true,
+        "label": "MMA",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "96440284-4b7d-49af-a49d-28926454401f",
+        "included": true,
+        "label": "Striker",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "8c3c5107-a1ab-4939-bd15-e76091d4a5dc",
+        "included": true,
+        "label": "MMA",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "47eaa5c0-9050-46de-8be3-5651d37a26fd",
+        "included": true,
+        "label": "Freestyle",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "133cd05a-c32b-47c1-b103-3ec3fabfbe91",
+        "included": true,
+        "label": "Boxer",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "8c3c5107-a1ab-4939-bd15-e76091d4a5dc",
+        "included": true,
+        "label": "MMA",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "c3ac31df-9c01-45f8-a9f7-b8036764f8a7",
+        "included": true,
+        "label": "Kung Fu",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "96440284-4b7d-49af-a49d-28926454401f",
+        "included": true,
+        "label": "Striker",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "4bf40ba3-5e03-4065-a444-f958bee20cad",
+        "included": true,
+        "label": "Judo",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "b2c59d85-7d47-4c06-abcc-0153836dd8e0",
+        "included": true,
+        "label": "Muay Thai",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "faf09264-99d6-4c46-a722-9a62dd1d7a27",
+        "included": true,
+        "label": "Grappler",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "c7884b69-bb56-4059-9dcb-451cacf66ceb",
+        "included": true,
+        "label": "Wrestling",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "8c3c5107-a1ab-4939-bd15-e76091d4a5dc",
+        "included": true,
+        "label": "MMA",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "96440284-4b7d-49af-a49d-28926454401f",
+        "included": true,
+        "label": "Striker",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "47eaa5c0-9050-46de-8be3-5651d37a26fd",
+        "included": true,
+        "label": "Freestyle",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "133cd05a-c32b-47c1-b103-3ec3fabfbe91",
+        "included": true,
+        "label": "Boxer",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "8c3c5107-a1ab-4939-bd15-e76091d4a5dc",
+        "included": true,
+        "label": "MMA",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "47eaa5c0-9050-46de-8be3-5651d37a26fd",
+        "included": true,
+        "label": "Freestyle",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "0d9c2731-d362-46c0-9abc-523670a52129",
+        "included": true,
+        "label": "Boxing",
+        "type": "taxonomy_term--fighting_style"
+      },
+      {
+        "id": "af486781-c9f4-47e7-bba2-bdc2bc55e906",
+        "included": true,
+        "label": "Brazilian Jiu-Jitsu",
+        "type": "taxonomy_term--fighting_style"
+      }
+    ],
+    "gym": [
+      {
+        "id": "fa5d99e2-d6bf-42fb-a449-cd031082c4e8",
+        "included": true,
+        "label": "Factory X",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "a0dc8790-89d7-43be-84ee-834c0a77c9ca",
+        "included": true,
+        "label": "Headkicks MMA",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "4f27bda5-35cd-46af-81dd-8afa1f7ace71",
+        "included": true,
+        "label": "Jackson Wink MMA Academy - NM",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "e2669bd5-b5ef-4d65-bd6c-cb2da41660e7",
+        "included": true,
+        "label": "Espoon keh\u00e4hait",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "79994786-d77b-42c0-bbe4-d7369a376e4c",
+        "included": true,
+        "label": "MMA Nuemberg",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "81853ca9-6317-4b66-8e87-0868660b7b38",
+        "included": true,
+        "label": "Team Elevation",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "526846a4-1c1e-482f-bcdd-45753fe2a77c",
+        "included": true,
+        "label": "Blackzilians - Boca Raton, FL",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "fafba919-503d-466c-bbb5-8cbee703df20",
+        "included": true,
+        "label": "SKULLMAN / Gracie Barcelona - Spain",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "54165fd9-f3f8-4a66-b3ef-336bae166073",
+        "included": true,
+        "label": "Akhmat Fight Club",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "4d4bef78-2787-4dae-818a-603d5b69b107",
+        "included": true,
+        "label": "Fight Ready",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "d0636880-7f9b-41da-ad1e-be99464c9689",
+        "included": true,
+        "label": "Ottawa Academy of Martial Arts. Ottawa, ON",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "baefdd69-09ac-4e8d-9cb5-da941f3ff67b",
+        "included": true,
+        "label": "Mark Chericos Martial Arts, Pittsburgh PA",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "7a7c7030-c671-4e71-810a-4b2773fa6c36",
+        "included": true,
+        "label": "UFC Performance Institue Mexico City",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "8b68402d-1acc-4c91-af09-3d83515d8e61",
+        "included": true,
+        "label": "Metro Fight Club",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "a7c3f6e0-7322-4352-b80d-1d8f4998703f",
+        "included": true,
+        "label": "American Top Team ATT Coconut Creek, FL",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "766529b0-e3e9-43ab-8b23-4d1ce08a08e7",
+        "included": true,
+        "label": "Tristar Gym - Montreal",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "1b7d8002-5d3f-486e-8a91-c98085e69605",
+        "included": true,
+        "label": "Goat Shed Academy",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "a31f1e5f-2486-43b4-b9b4-5fa65f6cacfc",
+        "included": true,
+        "label": "SBG Ireland",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "373a7d68-a7f8-4900-ac6c-ed96c05c7b9d",
+        "included": true,
+        "label": "Entram Gym - Tijuana, Baja CA",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "867d837e-71f3-4c36-8f38-ab89ec9e9706",
+        "included": true,
+        "label": "Serra-Longo - Long Island, NY",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "36812f8b-f029-4e25-844d-68b8675713d1",
+        "included": true,
+        "label": "MMA Factory - Paris, France",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "02fa1d9d-868f-4b54-bc66-ca79fef0c4db",
+        "included": true,
+        "label": "Black House MMA",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "ae19613a-f065-4d9f-9a7e-54001eb69032",
+        "included": true,
+        "label": "XGYM - Rio de Janeiro",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "4a49118e-0167-46d6-a24d-c98f6eddfcb9",
+        "included": true,
+        "label": "Fight Ready - Scottsdale, AZ",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "b0d38912-8295-4931-8e42-964d735033ab",
+        "included": true,
+        "label": "K Dojo Warrior Tribe",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "101f38fb-ff47-4bdd-ba94-0b6c7accf4ec",
+        "included": true,
+        "label": "Epic MMA Club - Hong Kong",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "1a6023c2-3bcc-460d-bbd1-ac81220b10b6",
+        "included": true,
+        "label": "Goat Shed",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "515fc6b5-a597-4441-b1cd-6e0632c1077e",
+        "included": true,
+        "label": "4oz Fight Club, Aztlan Boxing",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "f8d01577-00fd-467f-b448-3c0a196cbc38",
+        "included": true,
+        "label": "AKA (American Kickboxing Academy) San Jose",
+        "type": "taxonomy_term--gym"
+      },
+      {
+        "id": "e0ca336f-acd7-46e3-a2ac-804b51e6fe4b",
+        "included": true,
+        "label": "Strong Style Cleveland",
+        "type": "taxonomy_term--gym"
+      }
+    ],
+    "stats_weight_class": [
+      {
+        "id": "63613f22-bb98-416e-b222-37fd2dc6ef6e",
+        "included": true,
+        "label": "Lightweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "352a9ed7-efb4-48ab-8664-cd772e320736",
+        "included": true,
+        "label": "Welterweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "36601129-ad7c-4246-88f4-5c380b886d44",
+        "included": true,
+        "label": "Bantamweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "f1d6b3f2-fa7c-473b-ae8a-9afb5d052c2d",
+        "included": true,
+        "label": "Middleweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "63613f22-bb98-416e-b222-37fd2dc6ef6e",
+        "included": true,
+        "label": "Lightweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "18a105ab-cc48-4ca9-be21-a59a4475e0ed",
+        "included": true,
+        "label": "Heavyweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "f1d6b3f2-fa7c-473b-ae8a-9afb5d052c2d",
+        "included": true,
+        "label": "Middleweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "36601129-ad7c-4246-88f4-5c380b886d44",
+        "included": true,
+        "label": "Bantamweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "d1bd77c3-e0d1-4aee-81fc-3810a126c629",
+        "included": true,
+        "label": "Featherweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "63613f22-bb98-416e-b222-37fd2dc6ef6e",
+        "included": true,
+        "label": "Lightweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "b80adf33-8b24-41cd-b3ee-1f472ece2237",
+        "included": true,
+        "label": "Light Heavyweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "352a9ed7-efb4-48ab-8664-cd772e320736",
+        "included": true,
+        "label": "Welterweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "63613f22-bb98-416e-b222-37fd2dc6ef6e",
+        "included": true,
+        "label": "Lightweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "b80adf33-8b24-41cd-b3ee-1f472ece2237",
+        "included": true,
+        "label": "Light Heavyweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "d1bd77c3-e0d1-4aee-81fc-3810a126c629",
+        "included": true,
+        "label": "Featherweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "36601129-ad7c-4246-88f4-5c380b886d44",
+        "included": true,
+        "label": "Bantamweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "b80adf33-8b24-41cd-b3ee-1f472ece2237",
+        "included": true,
+        "label": "Light Heavyweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "f1d6b3f2-fa7c-473b-ae8a-9afb5d052c2d",
+        "included": true,
+        "label": "Middleweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "63613f22-bb98-416e-b222-37fd2dc6ef6e",
+        "included": true,
+        "label": "Lightweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "b80adf33-8b24-41cd-b3ee-1f472ece2237",
+        "included": true,
+        "label": "Light Heavyweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "18a105ab-cc48-4ca9-be21-a59a4475e0ed",
+        "included": true,
+        "label": "Heavyweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "63613f22-bb98-416e-b222-37fd2dc6ef6e",
+        "included": true,
+        "label": "Lightweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "63613f22-bb98-416e-b222-37fd2dc6ef6e",
+        "included": true,
+        "label": "Lightweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "f1d6b3f2-fa7c-473b-ae8a-9afb5d052c2d",
+        "included": true,
+        "label": "Middleweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "352a9ed7-efb4-48ab-8664-cd772e320736",
+        "included": true,
+        "label": "Welterweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "352a9ed7-efb4-48ab-8664-cd772e320736",
+        "included": true,
+        "label": "Welterweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "f1d6b3f2-fa7c-473b-ae8a-9afb5d052c2d",
+        "included": true,
+        "label": "Middleweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "b80adf33-8b24-41cd-b3ee-1f472ece2237",
+        "included": true,
+        "label": "Light Heavyweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "63613f22-bb98-416e-b222-37fd2dc6ef6e",
+        "included": true,
+        "label": "Lightweight",
+        "type": "taxonomy_term--stats_weight_class"
+      },
+      {
+        "id": "d150e1de-3bcf-41bd-9fb8-9ead156da334",
+        "included": true,
+        "label": "Flyweight",
+        "type": "taxonomy_term--stats_weight_class"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "snapshot_completed_at_utc": "2026-08-20T20:40:30.394128Z",
+  "snapshot_id": "20260820T194553Z",
+  "top_relationship_labels": [
+    [
+      "athlete_status:Not Fighting",
+      2736
+    ],
+    [
+      "athlete_status:Active",
+      1077
+    ],
+    [
+      "stats_weight_class:Lightweight",
+      544
+    ],
+    [
+      "stats_weight_class:Welterweight",
+      523
+    ],
+    [
+      "stats_weight_class:Middleweight",
+      435
+    ],
+    [
+      "fighting_style:MMA",
+      363
+    ],
+    [
+      "stats_weight_class:Heavyweight",
+      336
+    ],
+    [
+      "stats_weight_class:Featherweight",
+      329
+    ],
+    [
+      "stats_weight_class:Bantamweight",
+      325
+    ],
+    [
+      "stats_weight_class:Light Heavyweight",
+      271
+    ],
+    [
+      "athlete_status:Released",
+      203
+    ],
+    [
+      "stats_weight_class:Flyweight",
+      190
+    ],
+    [
+      "fighting_style:Striker",
+      179
+    ],
+    [
+      "fighting_style:Freestyle",
+      158
+    ],
+    [
+      "stats_weight_class:Women's Strawweight",
+      129
+    ],
+    [
+      "athlete_status:Retired",
+      108
+    ],
+    [
+      "stats_weight_class:Women's Flyweight",
+      94
+    ],
+    [
+      "fighting_style:Muay Thai",
+      90
+    ],
+    [
+      "stats_weight_class:Women's Bantamweight",
+      87
+    ],
+    [
+      "fighting_style:Jiu-Jitsu",
+      79
+    ],
+    [
+      "fighting_style:Kickboxer",
+      63
+    ],
+    [
+      "fighting_style:Brazilian Jiu-Jitsu",
+      44
+    ],
+    [
+      "fighting_style:Boxing",
+      43
+    ],
+    [
+      "fighting_style:Wrestling",
+      43
+    ],
+    [
+      "fighting_style:Grappler",
+      42
+    ],
+    [
+      "gym:American Top Team",
+      40
+    ],
+    [
+      "fighting_style:Wrestler",
+      38
+    ],
+    [
+      "gym:Xtreme Couture - Las Vegas, NV",
+      32
+    ],
+    [
+      "gym:American Top Team ATT Coconut Creek, FL",
+      31
+    ],
+    [
+      "fighting_style:Boxer",
+      30
+    ],
+    [
+      "fighting_style:Karate",
+      23
+    ],
+    [
+      "fighting_style:Judo",
+      22
+    ],
+    [
+      "gym:Syndicate MMA",
+      21
+    ],
+    [
+      "gym:Joel Diaz Boxing",
+      18
+    ],
+    [
+      "gym:Team Alpha Male",
+      14
+    ],
+    [
+      "gym:Sanford MMA",
+      14
+    ],
+    [
+      "fighting_style:Sambo",
+      13
+    ],
+    [
+      "gym:Nova Uniao - Rio de Janeiro",
+      13
+    ],
+    [
+      "gym:Factory X",
+      12
+    ],
+    [
+      "gym:Tristar Gym - Montreal",
+      12
+    ],
+    [
+      "gym:Kill Cliff FC",
+      12
+    ],
+    [
+      "gym:City Kickboxing",
+      12
+    ],
+    [
+      "gym:Jackson Wink MMA Academy - NM",
+      11
+    ],
+    [
+      "gym:The Fighting Nerds",
+      11
+    ],
+    [
+      "gym:Chute Boxe",
+      10
+    ],
+    [
+      "gym:Team Alpha Male  (Urijah Faber's Ultimate Fitness)",
+      10
+    ],
+    [
+      "gym:Fortis MMA",
+      10
+    ],
+    [
+      "gym:Blackzilians - Boca Raton, FL",
+      9
+    ],
+    [
+      "gym:Fight Ready - Scottsdale, AZ",
+      9
+    ],
+    [
+      "gym:MMA LAB - Glendale, AZ",
+      9
+    ],
+    [
+      "fighting_style:Brawler",
+      9
+    ],
+    [
+      "gym:Glory MMA & Fitness",
+      9
+    ],
+    [
+      "gym:The MMA Lab",
+      9
+    ],
+    [
+      "gym:Alliance MMA - Chula Vista",
+      8
+    ],
+    [
+      "stats_weight_class:Women's Featherweight",
+      8
+    ],
+    [
+      "gym:Nova Uni\u00e3o",
+      8
+    ],
+    [
+      "gym:SBG Ireland",
+      7
+    ],
+    [
+      "gym:Black House MMA",
+      7
+    ],
+    [
+      "gym:Team Oyama",
+      7
+    ],
+    [
+      "fighting_style:Taekwondo",
+      7
+    ],
+    [
+      "gym:Tiger Muay Thai - Phuket, Thailand",
+      7
+    ],
+    [
+      "gym:AKA (American Kickboxing Academy) San Jose",
+      6
+    ],
+    [
+      "gym:Allstars Training Center",
+      6
+    ],
+    [
+      "gym:Syndicate MMA - Las Vegas, NV",
+      6
+    ],
+    [
+      "gym:Elevation Fight Team - Denver, CO",
+      6
+    ],
+    [
+      "gym:MMA Masters - Miami, FL",
+      6
+    ],
+    [
+      "gym:Korean Top Team - Seoul, South Korea",
+      6
+    ],
+    [
+      "gym:4oz Fight Club",
+      6
+    ],
+    [
+      "gym:UFC Performance Institute",
+      6
+    ],
+    [
+      "fighting_style:Kung Fu",
+      5
+    ],
+    [
+      "gym:Teixeira MMA & Fitness-Bethel, CT",
+      5
+    ],
+    [
+      "gym:Kings MMA - Huntington Beach, CA",
+      5
+    ],
+    [
+      "gym:Evolucao Thai - Curitiba",
+      5
+    ],
+    [
+      "gym:NEXT Generation MMA",
+      5
+    ],
+    [
+      "gym:Serra-Longo - Long Island, NY",
+      4
+    ],
+    [
+      "gym:XGYM - Rio de Janeiro",
+      4
+    ],
+    [
+      "gym:Marquez MMA",
+      4
+    ],
+    [
+      "gym:Roufusport",
+      4
+    ],
+    [
+      "gym:Pura Vida BJJ & MMA",
+      4
+    ],
+    [
+      "gym:Sik-Jitsu Spokane, WA",
+      4
+    ],
+    [
+      "gym:Fusion Xcel",
+      4
+    ],
+    [
+      "gym:Tiger Schulmann's MMA - Elmwood Park, NJ",
+      4
+    ],
+    [
+      "gym:Fight Ready",
+      3
+    ],
+    [
+      "gym:UFC Performance Institue Mexico City",
+      3
+    ],
+    [
+      "gym:Metro Fight Club",
+      3
+    ],
+    [
+      "gym:Entram Gym - Tijuana, Baja CA",
+      3
+    ],
+    [
+      "gym:MMA Factory - Paris, France",
+      3
+    ],
+    [
+      "gym:K Dojo Warrior Tribe",
+      3
+    ],
+    [
+      "gym:Allstarts Gym",
+      3
+    ],
+    [
+      "gym:Venum Training Camp Paris",
+      3
+    ],
+    [
+      "gym:Gor MMA",
+      3
+    ],
+    [
+      "gym:CDS Novi Sad",
+      3
+    ],
+    [
+      "gym:Tiger Beetle Martial Arts",
+      3
+    ],
+    [
+      "gym:New England Cartel",
+      3
+    ],
+    [
+      "gym:Long Island MMA",
+      3
+    ],
+    [
+      "gym:Team Oyama - Irvine, CA",
+      3
+    ],
+    [
+      "gym:Power MMA and Fintess - Gilbert, AZ",
+      3
+    ],
+    [
+      "gym:LAW MMA",
+      3
+    ],
+    [
+      "gym:Entram Gym",
+      3
+    ],
+    [
+      "gym:Classic Fight Team, Costa Mesa CA",
+      3
+    ]
+  ]
+}

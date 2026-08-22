@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_athlete_profile_semantics",
+  "completed_at_utc": "2026-08-22T23:18:03.240392Z",
+  "exit_code": 0,
+  "github_run_id": "32604826608",
+  "log": "provenance/runs/ufc_athlete_profile_semantics_32604826608.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "90932f2671f383ecb1b479577126323598c241c1"
+}
