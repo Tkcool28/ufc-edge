@@ -1,0 +1,243 @@
+{
+  "counts": {
+    "mapped_articles": 614,
+    "mapped_bout_rows": 6446,
+    "mapped_fighter_observations": 12892,
+    "mapped_fighters": 2249,
+    "mapped_fights": 6445,
+    "mapped_nonempty_markers": 172,
+    "row_article_not_singleton_consensus": 1150,
+    "row_event_pair_no_fight": 76,
+    "row_name_transport_not_unique": 611
+  },
+  "decision": {
+    "attempt_number_semantics_resolved": false,
+    "canonical_weigh_ins_written": false,
+    "catchweight_semantics_resolved": false,
+    "contract_limit_semantics_resolved": false,
+    "identity_rule_promotable_candidate": true,
+    "missed_weight_semantics_resolved": false,
+    "penalty_semantics_resolved": false,
+    "required_next": "Audit page-level marker/footnote semantics for these mapped observations. Do not fabricate required attempt_number; either prove attempt semantics or revise the canonical contract to represent final official weigh-in observations separately.",
+    "scale_weight_semantics_resolved": true
+  },
+  "examples": {
+    "row_event_pair_no_fight": [
+      {
+        "article_url": "https://www.ufc.com/news/fight-night-auckland-official-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "2ab92b5d-147f-5341-9711-37fa1a620f7e",
+        "fighter_a": "Dong Hyun Kim",
+        "fighter_b": "Thibault Gouti"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/fight-night-london-manuwa-vs-anderson-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "bcee91d1-f6b9-55e6-bb34-a9394efcdd2f",
+        "fighter_a": "Tom Breese",
+        "fighter_b": "Oluwale Bamgbose"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/fight-night-london-manuwa-vs-anderson-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "bcee91d1-f6b9-55e6-bb34-a9394efcdd2f",
+        "fighter_a": "Ian Entwistle",
+        "fighter_b": "Brett Johns"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/fight-night-london-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "b1a6fd46-b199-5b6b-878b-9641b70407e1",
+        "fighter_a": "Nasrat Haqparast",
+        "fighter_b": "Nad Narimani"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/fight-night-saint-preux-vs-okami-official-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "bf456a88-00c6-5283-89f7-02f681fe8061",
+        "fighter_a": "Takanori Gomi",
+        "fighter_b": "Dong Hyun Kim"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/fortaleza-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "80f640a1-9473-502d-a145-8d8be3023664",
+        "fighter_a": "Magomed Bibulatov",
+        "fighter_b": "Rogerio Bontorin"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+        "fighter_a": "Sarah Kaufman",
+        "fighter_b": "Ronda Rousey"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+        "fighter_a": "Roger Bowling",
+        "fighter_b": "Tarec Saffiedine"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+        "fighter_a": "Anthony Smith",
+        "fighter_b": "Lumumba Sayers"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+        "fighter_a": "Julie Kedzie",
+        "fighter_b": "Miesha Tate"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+        "fighter_a": "Keith Berry",
+        "fighter_b": "Adlan Amagov"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+        "fighter_a": "Germaine de Randamie",
+        "fighter_b": "Hiroko Yamanaka"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-ufc-112-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "e2c0d54d-7c44-57d2-8d0f-5035405abdb5",
+        "fighter_a": "John Gunderson",
+        "fighter_b": "Paul Taylor"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-ufc-97-weigh-results",
+        "eligible_fights": 0,
+        "event_id": "eaaa1225-664d-5e0d-9d26-8c1685c37e18",
+        "fighter_a": "Vinicius Magalhaes",
+        "fighter_b": "Eliot Marshall"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-imavov-borralho-ufc-paris",
+        "eligible_fights": 0,
+        "event_id": "61752cc4-fc25-5f13-8401-b73ac648a7b9",
+        "fighter_a": "Patricio Pitbull",
+        "fighter_b": "Losene Keita"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-ufc-267-blachowicz-vs-teixeira",
+        "eligible_fights": 0,
+        "event_id": "b59e76e6-67bd-51e0-ab51-090ed0abbaf3",
+        "fighter_a": "Magomed Mustafaev",
+        "fighter_b": "Damir Ismagulov"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-ufc-273-volkanovski-vs-korean-zombie",
+        "eligible_fights": 0,
+        "event_id": "62b04efc-821b-5f35-b751-647064cd806f",
+        "fighter_a": "Jairzinho Rozenstruik",
+        "fighter_b": "Marcin Tybura"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-london-evloev-murphy",
+        "eligible_fights": 0,
+        "event_id": "89d069d4-4564-59aa-acc7-f82c93dd1293",
+        "fighter_a": "Melissa Mullins",
+        "fighter_b": "Luana Carolina"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-moreno-albazi-edmonton",
+        "eligible_fights": 0,
+        "event_id": "af3f3b2c-6684-539c-a90d-166c421d247b",
+        "fighter_a": "Derrick Lewis",
+        "fighter_b": "Jhonata Diniz"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-rodriguez-lemos-vegas-64",
+        "eligible_fights": 0,
+        "event_id": "fe187a2b-0709-5ed8-bab6-8e49e163c88e",
+        "fighter_a": "Chase Sherman",
+        "fighter_b": "Josh Parisian"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-vettori-vs-holland-vegas-23-espn-abc",
+        "eligible_fights": 0,
+        "event_id": "42bf7659-b296-5d54-a089-0c5d006e0f57",
+        "fighter_a": "Norma Dumont",
+        "fighter_b": "Erin Blanchfield"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-cejudo-song-ufc-seattle",
+        "eligible_fights": 0,
+        "event_id": "224d309b-834a-56df-be93-ba6e1b8e3388",
+        "fighter_a": "Modestas Bukauskas",
+        "fighter_b": "Rafael Cerqueira"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-314-volkanovski-vs-lopes",
+        "eligible_fights": 0,
+        "event_id": "4f191a25-253f-5563-af4d-90c4cf040819",
+        "fighter_a": "Yair Rodriguez",
+        "fighter_b": "Patricio Pitbull"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-318-holloway-vs-poirier-3",
+        "eligible_fights": 0,
+        "event_id": "69aab0b2-6d13-51e2-85ff-01e37604c122",
+        "fighter_a": "Dan Ige",
+        "fighter_b": "Patricio Pitbull"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-319-du-plessis-vs-chimaev",
+        "eligible_fights": 0,
+        "event_id": "8cff1de5-bbee-5a5e-8671-606ff3112d57",
+        "fighter_a": "Bryan Battle",
+        "fighter_b": "Nursulton Ruziboev"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-324-gaethje-vs-pimblett",
+        "eligible_fights": 0,
+        "event_id": "c51d1d9f-bdb6-5901-8cb1-c8633b20f8c4",
+        "fighter_a": "Michael Johnson",
+        "fighter_b": "Alexander Hernandez"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-325-volkanovski-vs-lopes-2",
+        "eligible_fights": 0,
+        "event_id": "603a8463-1406-512a-9e46-0c71623ed5d3",
+        "fighter_a": "Aaron Tau",
+        "fighter_b": "Namsrai Batbayar"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-abu-dhabi-ankalaev-guskov",
+        "eligible_fights": 0,
+        "event_id": "20fc29ae-ec26-59b1-88ef-fba4f08baa6c",
+        "fighter_a": "Islam Dulatov",
+        "fighter_b": "Wellington Turman"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-fight-night-blanchfield-vs-barber-vegas-107",
+        "eligible_fights": 0,
+        "event_id": "0f03b527-bb3c-5ca4-8af6-c23c5a01ea35",
+        "fighter_a": "Erin Blanchfield",
+        "fighter_b": "Maycee Barber"
+      },
+      {
+        "article_url": "https://www.ufc.com/news/official-weigh-results-ufc-fight-night-reyes-vs-prochazka",
+        "eligible_fights": 0,
+        "event_id": "d7a79d74-a12e-56a9-9f0e-30bad4b75832",
+        "fighter_a": "Gabriel Benitez",
+        "fighter_b": "Jonathan Pearce"
+      }
+    ]
+  },
+  "generated_at_utc": "2026-08-22T23:43:55.006054Z",
+  "output": "data/derived/identity/ufc_weigh_in_identity_candidate.csv",
+  "schema_version": 1,
+  "singleton_consensus_articles": 614,
+  "source_candidate_rows": 8283
+}

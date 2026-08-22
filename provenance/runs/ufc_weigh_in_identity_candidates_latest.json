@@ -1,0 +1,10 @@
+{
+  "completed_at_utc": "2026-08-22T23:43:55.039557Z",
+  "exit_code": 0,
+  "github_run_id": "32605991567",
+  "log": "provenance/runs/ufc_weigh_in_identity_candidates_32605991567.log",
+  "pipeline": "ufc_weigh_in_identity_candidates",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "8639ca5c8e9df3704986cd0a172ca1accade7429"
+}
