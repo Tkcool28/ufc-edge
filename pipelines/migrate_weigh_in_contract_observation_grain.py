@@ -13,7 +13,6 @@ shape. It does not weaken identity, missingness, unit, or validation rules.
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 
 JSON_PATH = Path("schemas/canonical_data_contract_v0.json")
@@ -90,7 +89,6 @@ def main() -> int:
     if "weigh_in_observation_id" in fields:
         fail("weigh_in_observation_id already exists")
 
-    # Preserve deterministic key ordering by rebuilding the field dictionary with the new ID first.
     new_fields = {
         "weigh_in_observation_id": {
             "nullable": False,
@@ -113,7 +111,7 @@ def main() -> int:
 
     md = MD_PATH.read_text(encoding="utf-8")
     expected_version_line = f"Machine contract: `schemas/canonical_data_contract_v0.json` (`{OLD_VERSION}`)"
-    if expected_version_line not in md:
+    if md.count(expected_version_line) != 1:
         fail("markdown contract version line not found exactly once")
     md = md.replace(expected_version_line, f"Machine contract: `schemas/canonical_data_contract_v0.json` (`{NEW_VERSION}`)", 1)
     if md.count(OLD_MD) != 1:
