@@ -1,9 +1,9 @@
 {
-  "audited_at_utc": "2026-08-22T23:06:07.622272Z",
+  "audited_at_utc": "2026-08-22T23:37:34.720023Z",
   "exit_code": 0,
-  "github_run_id": "32604280256",
+  "github_run_id": "32605710532",
   "output": "SOURCE_PRECEDENCE_OK version=0.2.0-draft families=9 active=7 pending_acquisition=0 acquired_qa_pending=2 sources=8\n",
   "passed": true,
   "schema_version": 1,
-  "trigger_sha": "b8d45ea2c4bb266a2862a24c6dc0a7b1ed87a8e1"
+  "trigger_sha": "ea5a563cee9c07a34b54a3752102f742d8bfe0b1"
 }
