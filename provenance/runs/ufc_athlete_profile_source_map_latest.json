@@ -1,0 +1,10 @@
+{
+  "completed_at_utc": "2026-08-22T23:21:06.108328Z",
+  "exit_code": 0,
+  "github_run_id": "32604969268",
+  "log": "provenance/runs/ufc_athlete_profile_source_map_32604969268.log",
+  "migration": "ufc_athlete_profile_source_map",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "c2c4212bf49755b8820b16712bbbcdf80dedf241"
+}

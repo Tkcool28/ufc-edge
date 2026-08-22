@@ -1,5 +1,5 @@
 {
-  "map_version": "0.3.0-draft",
+  "map_version": "0.4.0-draft",
   "mapping_status_values": [
     "verified",
     "provisional",
@@ -1101,48 +1101,51 @@
     },
     {
       "collection": "athletes",
-      "mapping_status": "provisional",
-      "notes": "Never maps to fight-specific weigh-in.",
+      "mapping_status": "verified",
+      "notes": "Official current profile weight string. 0.00 is source missingness, never a fight-specific scale weight.",
       "source": "ufc_com_official",
       "source_field": "stats_weight",
       "source_role": "primary_candidate",
       "target_field": "listed_weight_lbs",
       "target_table": "fighter_profile_snapshots",
       "temporal_class": "point_in_time_snapshot",
-      "transform": "parse_official_weight_to_lbs"
+      "transform": "parse_decimal_pounds_zero_as_missing"
     },
     {
       "collection": "athletes",
-      "mapping_status": "provisional",
+      "mapping_status": "rejected",
+      "notes": "Audit proves node attribute status is boolean publication/status transport, not the human athlete-status label.",
       "source": "ufc_com_official",
       "source_field": "status",
       "source_role": "primary_candidate",
-      "target_field": "status_text",
-      "target_table": "fighter_profile_snapshots",
+      "target_field": null,
+      "target_table": null,
       "temporal_class": "point_in_time_snapshot",
-      "transform": "normalize_text_or_null"
+      "transform": "do_not_map_publish_boolean_to_athlete_status"
     },
     {
       "collection": "athletes",
-      "mapping_status": "provisional",
+      "mapping_status": "verified",
+      "notes": "Audit proves residence is a structured address object; preserve locality/admin/country components deterministically.",
       "source": "ufc_com_official",
       "source_field": "residence",
       "source_role": "primary_candidate",
       "target_field": "residence_text",
       "target_table": "fighter_profile_snapshots",
       "temporal_class": "point_in_time_snapshot",
-      "transform": "normalize_text_or_null"
+      "transform": "format_structured_address_locality_admin_country"
     },
     {
       "collection": "athletes",
-      "mapping_status": "provisional",
+      "mapping_status": "verified",
+      "notes": "Audit proves origin is a structured address object; preserve locality/admin/country components deterministically.",
       "source": "ufc_com_official",
       "source_field": "origin",
       "source_role": "primary_candidate",
       "target_field": "origin_text",
       "target_table": "fighter_profile_snapshots",
       "temporal_class": "point_in_time_snapshot",
-      "transform": "normalize_text_or_null"
+      "transform": "format_structured_address_locality_admin_country"
     },
     {
       "collection": "athletes",
@@ -1604,6 +1607,54 @@
       "target_table": null,
       "temporal_class": "postfight_label",
       "transform": "none"
+    },
+    {
+      "collection": "athletes",
+      "mapping_status": "verified",
+      "notes": "Included taxonomy object label audited present for all 3,271 relationship-bearing athletes.",
+      "source": "ufc_com_official",
+      "source_field": "relationships.stats_weight_class",
+      "source_role": "primary_candidate",
+      "target_field": "listed_weight_class",
+      "target_table": "fighter_profile_snapshots",
+      "temporal_class": "point_in_time_snapshot",
+      "transform": "resolve_included_relationship_label"
+    },
+    {
+      "collection": "athletes",
+      "mapping_status": "verified",
+      "notes": "Included gym label audited present for all 1,203 relationship IDs.",
+      "source": "ufc_com_official",
+      "source_field": "relationships.gym",
+      "source_role": "primary_candidate",
+      "target_field": "gym_text",
+      "target_table": "fighter_profile_snapshots",
+      "temporal_class": "point_in_time_snapshot",
+      "transform": "resolve_included_relationship_label"
+    },
+    {
+      "collection": "athletes",
+      "mapping_status": "verified",
+      "notes": "Relationship may contain multiple IDs; included labels are sorted and joined without inventing a hierarchy.",
+      "source": "ufc_com_official",
+      "source_field": "relationships.fighting_style",
+      "source_role": "primary_candidate",
+      "target_field": "fighting_style_text",
+      "target_table": "fighter_profile_snapshots",
+      "temporal_class": "point_in_time_snapshot",
+      "transform": "resolve_included_relationship_labels_sorted_semicolon"
+    },
+    {
+      "collection": "athletes",
+      "mapping_status": "verified",
+      "notes": "This taxonomy relationship, not the boolean node status attribute, carries labels such as Active / Not Fighting.",
+      "source": "ufc_com_official",
+      "source_field": "relationships.athlete_status",
+      "source_role": "primary_candidate",
+      "target_field": "status_text",
+      "target_table": "fighter_profile_snapshots",
+      "temporal_class": "point_in_time_snapshot",
+      "transform": "resolve_included_relationship_label"
     }
   ],
   "rules": {
@@ -1612,6 +1663,8 @@
     "name_similarity_is_not_semantic_verification": true,
     "quantized_time_must_not_emit_exact_seconds": true,
     "rejected_mappings_do_not_emit_canonical_values": true,
+    "ufc_athlete_profiles_are_point_in_time_only": true,
+    "ufc_node_status_boolean_is_not_athlete_status": true,
     "unresolved_mappings_do_not_emit_canonical_values": true
   },
   "source_role_values": [
