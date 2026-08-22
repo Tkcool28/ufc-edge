@@ -2,9 +2,11 @@
 """Acquire official UFC weigh-in/scorecard articles in bounded immutable chunks.
 
 Enumeration comes only from the already-snapshotted official UFC sitemap candidate
-catalog. The collector never searches or follows arbitrary links. Each chunk is durable;
+catalog. The collector never searches or follows arbitrary links. Navigation/index URLs
+that were classified by keyword are excluded before candidate indexing. Existing chunks
+may be resumed only when their stored URL prefix exactly matches the filtered catalog.
 404/410/403 responses are preserved as coverage evidence rather than converted to missing
-values. A family-level manifest is written only after every candidate index is covered.
+values. A family-level manifest is written only after every eligible candidate index is covered.
 """
 from __future__ import annotations
 
@@ -24,7 +26,7 @@ from typing import Any
 CATALOG = Path("data/derived/discovery/ufc_content_candidates.csv")
 OUT_ROOT = Path("data/raw/ufc_official_articles")
 PAGE_DELAY = 2.0
-USER_AGENT = "ufc-edge-data/0.6 (private modeling research; official UFC catalog article snapshot)"
+USER_AGENT = "ufc-edge-data/0.7 (private modeling research; official UFC catalog article snapshot)"
 ALLOWED_FAMILIES = {"weigh_in", "scorecard"}
 ALLOWED_HOSTS = {"ufc.com", "www.ufc.com"}
 _last_request = 0.0
@@ -34,25 +36,34 @@ def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
+def is_eligible_news_url(url: str) -> bool:
+    parsed = urllib.parse.urlparse(url)
+    return (
+        parsed.scheme == "https"
+        and parsed.netloc.lower() in ALLOWED_HOSTS
+        and parsed.path.startswith("/news/")
+    )
+
+
 def load_candidates(family: str) -> list[dict[str, str]]:
     if family not in ALLOWED_FAMILIES:
         raise RuntimeError(f"Unsupported family: {family}")
     with CATALOG.open("r", encoding="utf-8", newline="") as fh:
-        rows = [row for row in csv.DictReader(fh) if row.get("family") == family]
+        family_rows = [row for row in csv.DictReader(fh) if row.get("family") == family]
+    # The discovery catalog intentionally preserves keyword hits including navigation pages
+    # such as /scorecards. Acquisition is narrower: only explicit UFC /news/ article URLs.
+    rows = [row for row in family_rows if is_eligible_news_url(row.get("url") or "")]
     rows.sort(key=lambda row: row["url"])
     if not rows:
-        raise RuntimeError(f"No catalog candidates for {family}")
+        raise RuntimeError(f"No eligible UFC /news/ catalog candidates for {family}")
     urls = [row["url"] for row in rows]
     if len(urls) != len(set(urls)):
-        raise RuntimeError(f"Duplicate URLs in candidate catalog for {family}")
+        raise RuntimeError(f"Duplicate URLs in filtered candidate catalog for {family}")
     return rows
 
 
 def validate_ufc_url(url: str) -> None:
-    parsed = urllib.parse.urlparse(url)
-    if parsed.scheme != "https" or parsed.netloc.lower() not in ALLOWED_HOSTS:
-        raise RuntimeError(f"Refusing non-UFC URL: {url}")
-    if not parsed.path.startswith("/news/"):
+    if not is_eligible_news_url(url):
         raise RuntimeError(f"Refusing non-news candidate URL: {url}")
 
 
@@ -89,6 +100,7 @@ def fetch(url: str, attempts: int = 4) -> dict[str, Any]:
             body = exc.read(2_000_000)
             if exc.code in {404, 410, 403}:
                 final_url = exc.geturl() or url
+                # A redirect to a non-news landing page is not a valid article response.
                 validate_ufc_url(final_url)
                 return {
                     "status": int(exc.code),
@@ -118,6 +130,45 @@ def safe_stub(url: str) -> str:
     return f"{slug or 'article'}-{digest}"
 
 
+def existing_records(family_dir: Path) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    expected = 0
+    for path in sorted(family_dir.glob("chunks/index_*/chunk_manifest.json")):
+        chunk = json.loads(path.read_text(encoding="utf-8"))
+        start = int(chunk["chunk_start_index"])
+        stop = int(chunk["chunk_end_index_exclusive"])
+        if start != expected:
+            raise RuntimeError(f"Existing chunk gap/overlap: expected {expected}, found {start}")
+        chunk_records = list(chunk.get("records") or [])
+        if len(chunk_records) != stop - start:
+            raise RuntimeError(f"Existing chunk record count mismatch: {path}")
+        records.extend(chunk_records)
+        expected = stop
+    return records
+
+
+def verify_resume_prefix(series_id: str, family: str, candidates: list[dict[str, str]], start_index: int) -> None:
+    family_dir = OUT_ROOT / series_id / family
+    records = existing_records(family_dir)
+    if start_index == 0:
+        if records:
+            raise RuntimeError("Cannot start at zero when immutable chunks already exist")
+        return
+    if len(records) != start_index:
+        raise RuntimeError(
+            f"Resume index does not equal existing gap-free record count: start={start_index}, existing={len(records)}"
+        )
+    stored_urls = [str(row["catalog_url"]) for row in records]
+    candidate_prefix = [row["url"] for row in candidates[:start_index]]
+    if stored_urls != candidate_prefix:
+        for idx, (stored, expected) in enumerate(zip(stored_urls, candidate_prefix)):
+            if stored != expected:
+                raise RuntimeError(
+                    f"Filtered-catalog resume prefix mismatch at {idx}: stored={stored!r}, expected={expected!r}"
+                )
+        raise RuntimeError("Filtered-catalog resume prefix mismatch")
+
+
 def collect(series_id: str, family: str, start_index: int, max_items: int) -> Path:
     candidates = load_candidates(family)
     if start_index < 0 or start_index >= len(candidates):
@@ -128,6 +179,8 @@ def collect(series_id: str, family: str, start_index: int, max_items: int) -> Pa
     family_dir = OUT_ROOT / series_id / family
     if (family_dir / "manifest.json").exists():
         raise RuntimeError(f"Family already finalized: {family_dir}")
+    verify_resume_prefix(series_id, family, candidates, start_index)
+
     chunk_dir = family_dir / "chunks" / f"index_{start_index:06d}"
     if chunk_dir.exists():
         raise RuntimeError(f"Immutable chunk already exists: {chunk_dir}")
@@ -146,8 +199,7 @@ def collect(series_id: str, family: str, start_index: int, max_items: int) -> Pa
         status = int(response["status"])
         status_counts[str(status)] = status_counts.get(str(status), 0) + 1
         body: bytes = response["body"]
-        extension = ".html"
-        filename = f"item_{absolute_index:06d}_{safe_stub(url)}{extension}"
+        filename = f"item_{absolute_index:06d}_{safe_stub(url)}.html"
         path = chunk_dir / filename
         path.write_bytes(body)
         records.append(
@@ -168,12 +220,15 @@ def collect(series_id: str, family: str, start_index: int, max_items: int) -> Pa
 
     terminal = stop == len(candidates)
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source": "Official UFC.com public news pages",
         "enumeration_source": CATALOG.as_posix(),
         "series_id": series_id,
         "family": family,
-        "candidate_count": len(candidates),
+        "catalog_family_rows_before_url_gate": sum(
+            1 for row in csv.DictReader(CATALOG.open("r", encoding="utf-8", newline="")) if row.get("family") == family
+        ),
+        "eligible_candidate_count": len(candidates),
         "chunk_start_index": start_index,
         "chunk_end_index_exclusive": stop,
         "items": len(records),
@@ -186,6 +241,7 @@ def collect(series_id: str, family: str, start_index: int, max_items: int) -> Pa
             "max_items_per_chunk": max_items,
             "allowed_hosts": sorted(ALLOWED_HOSTS),
             "allowed_path_prefix": "/news/",
+            "navigation_keyword_hits_excluded_before_indexing": True,
         },
         "status_counts": status_counts,
         "records": records,
@@ -195,6 +251,7 @@ def collect(series_id: str, family: str, start_index: int, max_items: int) -> Pa
             "chunk_immutable": True,
             "no_article_parsing_yet": True,
             "candidate_url_does_not_imply_valid_structured_observation": True,
+            "resume_prefix_must_match_filtered_catalog_exactly": True,
         },
     }
     path = chunk_dir / "chunk_manifest.json"
@@ -239,32 +296,37 @@ def finalize(series_id: str, family: str) -> Path:
             statuses[key] = statuses.get(key, 0) + int(value)
 
     if expected != len(candidates):
-        raise RuntimeError(f"Incomplete {family}: covered {expected}/{len(candidates)} candidates")
+        raise RuntimeError(f"Incomplete {family}: covered {expected}/{len(candidates)} eligible candidates")
     indexes = [int(record["candidate_index"]) for record in records]
     if indexes != list(range(len(candidates))):
         raise RuntimeError(f"Candidate index series is not exactly gap-free for {family}")
     urls = [str(record["catalog_url"]) for record in records]
     expected_urls = [row["url"] for row in candidates]
     if urls != expected_urls:
-        raise RuntimeError(f"Finalized URL order differs from catalog for {family}")
+        raise RuntimeError(f"Finalized URL order differs from filtered catalog for {family}")
 
+    with CATALOG.open("r", encoding="utf-8", newline="") as fh:
+        family_catalog_count = sum(1 for row in csv.DictReader(fh) if row.get("family") == family)
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source": "Official UFC.com public news pages",
         "enumeration_source": CATALOG.as_posix(),
         "series_id": series_id,
         "family": family,
         "complete_family_snapshot": True,
-        "candidate_count": len(candidates),
+        "catalog_family_rows_before_url_gate": family_catalog_count,
+        "eligible_candidate_count": len(candidates),
+        "excluded_navigation_or_non_news_rows": family_catalog_count - len(candidates),
         "items": total_items,
         "status_counts": statuses,
         "chunk_manifests": chunk_paths,
         "completed_at_utc": utc_now(),
         "rules": {
-            "gap_free_catalog_index_required": True,
+            "gap_free_filtered_catalog_index_required": True,
             "raw_responses_immutable": True,
             "http_errors_preserved_as_coverage_evidence": True,
             "structured_parsing_requires_separate_audit": True,
+            "only_https_ufc_news_urls_eligible": True,
         },
     }
     final.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
