@@ -3,12 +3,15 @@
 
 DATA PHASE ONLY. No OCR and no canonical judge-round scores are produced.
 
-Image metadata/URLs are matched only through conservative fighter surface forms:
-- exact normalized full display name; or
-- a globally unique normalized surname token (length >= 4).
-Those names are transport aids only. A scorecard image becomes a high-confidence fight
-candidate only when its fighter pair plus article-level multi-image event consensus resolve
-to exactly one existing canonical fight.
+Important parsing rule: scorecard image URLs frequently include EVENT HEADLINER names before
+"Scorecard(s)" and the ACTUAL IMAGE BOUT after it. Identity matching therefore never scans
+the whole URL. It prefers image alt/title text; URL fallback is restricted to the decoded
+bout-specific filename suffix after the last scorecard token. If that suffix is not useful,
+the URL contributes no fighter identity.
+
+Names remain transport aids only. An image becomes a high-confidence fight candidate only
+when its isolated bout metadata resolves exactly two fighters and article-level multi-image
+event consensus plus that pair resolves exactly one existing canonical fight.
 """
 from __future__ import annotations
 
@@ -32,10 +35,11 @@ AUDIT = ROOT / "provenance/audits/ufc_scorecard_identity_transport_latest.json"
 
 OUT_FIELDS = [
     "article_candidate_index", "article_url", "article_title", "article_published_time",
-    "image_url", "image_alt", "image_title", "matched_fighter_ids", "matched_fighter_names",
-    "pair_candidate", "canonical_pair_fight_count", "article_candidate_event_id",
-    "article_consensus_status", "candidate_fight_id", "candidate_event_id",
-    "candidate_event_name", "candidate_event_date", "identity_status", "review_status",
+    "image_url", "image_alt", "image_title", "identity_text_source", "identity_text",
+    "matched_fighter_ids", "matched_fighter_names", "pair_candidate",
+    "canonical_pair_fight_count", "article_candidate_event_id", "article_consensus_status",
+    "candidate_fight_id", "candidate_event_id", "candidate_event_name", "candidate_event_date",
+    "identity_status", "review_status",
 ]
 
 
@@ -56,6 +60,55 @@ def name_words(value: str) -> list[str]:
 
 def contains_phrase(hay: str, phrase: str) -> bool:
     return f" {phrase} " in f" {hay} "
+
+
+def url_bout_suffix(url: str) -> str:
+    """Return only bout-local filename material, never the event/headliner prefix."""
+    decoded = urllib.parse.unquote(url or "")
+    basename = urllib.parse.urlparse(decoded).path.rsplit("/", 1)[-1]
+    basename = re.sub(r"\.(?:png|jpe?g|webp)$", "", basename, flags=re.I)
+    # Split on the LAST scorecard/scorecards occurrence; event/headliner text before it is
+    # intentionally discarded. Many UFC filenames use separators such as '-', '_', spaces.
+    matches = list(re.finditer(r"score\s*cards?", basename, re.I))
+    if not matches:
+        return ""
+    suffix = basename[matches[-1].end():]
+    normalized = ascii_words(suffix)
+    # A useful fallback must look like a bout/result fragment, not an opaque image id.
+    if not re.search(r"\b(?:vs|versus|def|defeats|defeated)\b", normalized):
+        return ""
+    return normalized
+
+
+def choose_identity_text(row: dict[str, str]) -> tuple[str, str]:
+    alt_title = ascii_words(" ".join((row.get("image_alt") or "", row.get("image_title") or "")))
+    # Alt/title is image-local by construction and is preferred whenever it contains a bout
+    # relation token. This avoids event-level names in surrounding URL structure.
+    if re.search(r"\b(?:vs|versus|def|defeats|defeated|draw|contest)\b", alt_title):
+        return "image_alt_title", alt_title
+    suffix = url_bout_suffix(row.get("image_url") or "")
+    if suffix:
+        return "image_url_scorecard_suffix", suffix
+    return "none", ""
+
+
+def match_fighters(
+    hay: str,
+    full_alias: dict[str, set[str]],
+    unique_surname: dict[str, str],
+) -> set[str]:
+    if not hay:
+        return set()
+    matched: set[str] = set()
+    for alias, ids in full_alias.items():
+        if contains_phrase(hay, alias):
+            matched.update(ids)
+    # Use globally unique surnames only as a fallback for abbreviated filenames. Full-name
+    # hits remain in the set; a surname can only add one globally unique fighter.
+    for surname, fid in unique_surname.items():
+        if contains_phrase(hay, surname):
+            matched.add(fid)
+    return matched
 
 
 def main() -> int:
@@ -99,21 +152,13 @@ def main() -> int:
     grouped_pair_events: dict[tuple[str, str], list[set[str]]] = defaultdict(list)
     counts = Counter()
     match_count_dist = Counter()
+    identity_source_counts = Counter()
     examples: dict[str, list[dict[str, Any]]] = defaultdict(list)
 
-    # First pass: conservative pair discovery from image-local metadata only.
     for row in images:
-        hay = ascii_words(" ".join((row.get("image_url") or "", row.get("image_alt") or "", row.get("image_title") or "")))
-        matched: set[str] = set()
-        for alias, ids in full_alias.items():
-            if contains_phrase(hay, alias):
-                matched.update(ids)
-        # Unique surname is only a fallback surface form; exact full-name hits dominate but
-        # adding a unique surname cannot introduce same-name ambiguity by construction.
-        for surname, fid in unique_surname.items():
-            if contains_phrase(hay, surname):
-                matched.add(fid)
-
+        identity_source, identity_text = choose_identity_text(row)
+        identity_source_counts[identity_source] += 1
+        matched = match_fighters(identity_text, full_alias, unique_surname)
         match_count_dist[len(matched)] += 1
         pair: tuple[str, str] | None = tuple(sorted(matched)) if len(matched) == 2 else None
         pair_matches = pair_fights.get(pair, []) if pair else []
@@ -126,9 +171,12 @@ def main() -> int:
             counts["images_with_two_fighters_no_canonical_pair"] += 1
         else:
             counts["images_without_exact_two_fighter_transport"] += 1
-        enriched.append({"row": row, "matched": matched, "pair": pair, "pair_matches": pair_matches, "event_ids": event_ids, "article_key": article_key})
+        enriched.append({
+            "row": row, "matched": matched, "pair": pair, "pair_matches": pair_matches,
+            "event_ids": event_ids, "article_key": article_key,
+            "identity_source": identity_source, "identity_text": identity_text,
+        })
 
-    # Second pass: article-level event intersection over image pairs with canonical fights.
     article_event: dict[tuple[str, str], str] = {}
     article_status: dict[tuple[str, str], str] = {}
     article_intersection_dist = Counter()
@@ -160,7 +208,6 @@ def main() -> int:
         pair_matches = item["pair_matches"]
         article_key = item["article_key"]
         event_id = article_event.get(article_key, "")
-        status = ""
         fight_id = ""
         candidate_event_id = ""
         if len(matched) != 2:
@@ -176,7 +223,8 @@ def main() -> int:
                 candidate_event_id = event_id
                 status = "high_confidence_fight_candidate"
                 counts["images_high_confidence_fight_candidate"] += 1
-                mapped_fights.add(fight_id); mapped_articles.add(article_key)
+                mapped_fights.add(fight_id)
+                mapped_articles.add(article_key)
             elif not eligible:
                 status = "pair_not_in_article_event"
                 counts["images_pair_not_in_article_event"] += 1
@@ -192,6 +240,8 @@ def main() -> int:
             "image_url": row.get("image_url") or "",
             "image_alt": row.get("image_alt") or "",
             "image_title": row.get("image_title") or "",
+            "identity_text_source": item["identity_source"],
+            "identity_text": item["identity_text"],
             "matched_fighter_ids": "|".join(sorted(matched)),
             "matched_fighter_names": "|".join(fighter_name.get(fid, "") for fid in sorted(matched)),
             "pair_candidate": "true" if pair else "false",
@@ -207,9 +257,14 @@ def main() -> int:
         })
         if status in {"article_event_unresolved", "pair_not_in_article_event", "no_canonical_fight_for_pair"} and len(examples[status]) < 30:
             examples[status].append({
-                "article_url": row.get("article_url") or "", "image_url": row.get("image_url") or "",
-                "image_alt": row.get("image_alt") or "", "matched_names": [fighter_name.get(fid, "") for fid in sorted(matched)],
-                "canonical_pair_fights": len(pair_matches), "article_status": article_status.get(article_key, ""),
+                "article_url": row.get("article_url") or "",
+                "image_url": row.get("image_url") or "",
+                "image_alt": row.get("image_alt") or "",
+                "identity_text_source": item["identity_source"],
+                "identity_text": item["identity_text"],
+                "matched_names": [fighter_name.get(fid, "") for fid in sorted(matched)],
+                "canonical_pair_fights": len(pair_matches),
+                "article_status": article_status.get(article_key, ""),
             })
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -218,10 +273,11 @@ def main() -> int:
         writer.writeheader(); writer.writerows(output_rows)
 
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "candidate_images": len(images),
         "counts": dict(counts),
+        "identity_text_source_counts": dict(identity_source_counts),
         "image_matched_fighter_count_distribution": {str(k): v for k, v in sorted(match_count_dist.items())},
         "article_event_intersection_count_distribution": {str(k): v for k, v in sorted(article_intersection_dist.items())},
         "mapped_articles": len(mapped_articles),
@@ -232,6 +288,8 @@ def main() -> int:
             "canonical_judge_round_scores_written": False,
             "ocr_performed": False,
             "display_name_only_identity_trusted": False,
+            "whole_image_url_identity_forbidden": True,
+            "event_headliner_prefix_excluded": True,
             "high_confidence_image_fight_identity_is_candidate_only": True,
             "required_next": "Identity-filter official scorecard images before binary archival. Archive source image bytes plus hashes for the promoted subset before any OCR-derived layer; OCR output remains non-canonical until judge/round/fighter score semantics are independently verified."
         },
@@ -244,6 +302,7 @@ def main() -> int:
         "mapped_articles": len(mapped_articles),
         "mapped_fights": len(mapped_fights),
         "articles_singleton_event_intersection": counts["articles_singleton_event_intersection"],
+        "identity_text_source_counts": dict(identity_source_counts),
     }, sort_keys=True))
     return 0
 
