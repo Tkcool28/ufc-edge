@@ -1,7 +1,7 @@
 {
   "driver": "ufc_official_articles_chunked",
-  "github_run_id": "32528466386",
+  "github_run_id": "32601153665",
   "schema_version": 1,
-  "started_at_utc": "2026-08-21T22:17:55.215220Z",
-  "trigger_sha": "f3ae392d21bd1a8a554128736928d69d9d596e97"
+  "started_at_utc": "2026-08-22T21:59:24.184311Z",
+  "trigger_sha": "bac2b6042397f4cec06306f0307d2169c2f32a71"
 }
