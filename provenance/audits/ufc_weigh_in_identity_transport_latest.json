@@ -1,0 +1,1654 @@
+{
+  "candidate_rows": 8283,
+  "canonical_events": 784,
+  "canonical_fighters": 4600,
+  "canonical_fights": 8769,
+  "canonical_pair_fight_count_distribution": {
+    "0": 448,
+    "1": 6676,
+    "2": 267,
+    "3": 29,
+    "4": 4
+  },
+  "counts": {
+    "ambiguous_normalized_name": 52,
+    "both_names_unique_transport": 7424,
+    "multiple_canonical_fights_for_pair": 300,
+    "no_canonical_fight_for_pair": 448,
+    "unique_canonical_pair_unpromoted": 6676,
+    "unresolved_normalized_name": 807
+  },
+  "decision": {
+    "canonical_identity_promoted": false,
+    "date_window_promoted": false,
+    "display_name_only_identity_trusted": false,
+    "required_next": "Use this audit to define a conservative article-date/event-date gate, then resolve only exact canonical participant pairs with a unique eligible fight; quarantine all other rows.",
+    "unique_normalized_names_are_transport_only": true
+  },
+  "examples": {
+    "ambiguous_normalized_name": [
+      {
+        "a": "Rob Font",
+        "a_ids": 1,
+        "b": "Joey Gomez",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/fight-night-dillashaw-vs-cruz-weigh-results"
+      },
+      {
+        "a": "Chris Cariaso",
+        "a_ids": 1,
+        "b": "Michael McDonald",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-ufc-130-weigh-results"
+      },
+      {
+        "a": "Alex Soto",
+        "a_ids": 1,
+        "b": "Michael McDonald",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-ufc-139-weigh-results"
+      },
+      {
+        "a": "Michael McDonald",
+        "a_ids": 2,
+        "b": "Miguel Torres",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/official-ufc-145-weigh-results"
+      },
+      {
+        "a": "Michael McDonald",
+        "a_ids": 2,
+        "b": "Brad Pickett",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/official-ufc-fight-night-weigh-results-3"
+      },
+      {
+        "a": "Michael McDonald",
+        "a_ids": 2,
+        "b": "Urijah Faber",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/official-ufc-fox-9-weigh-results"
+      },
+      {
+        "a": "Michael McDonald",
+        "a_ids": 2,
+        "b": "Renan Barao",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/official-ufc-fuel-tv-7-weigh-results"
+      },
+      {
+        "a": "Clint Godfrey",
+        "a_ids": 1,
+        "b": "Michael McDonald",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-wec-52-weigh-results"
+      },
+      {
+        "a": "Manel Kape",
+        "a_ids": 1,
+        "b": "Bruno Silva",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-in-results-covington-buckley-ufc-fight-night-tampa"
+      },
+      {
+        "a": "Mitch Ramirez",
+        "a_ids": 1,
+        "b": "Mike Davis",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-in-results-lewis-teixeira-ufc-nashville"
+      },
+      {
+        "a": "Diego Lopes",
+        "a_ids": 1,
+        "b": "Jean Silva",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-in-results-noche-lopes-vs-silva"
+      },
+      {
+        "a": "Jordan Wright",
+        "a_ids": 1,
+        "b": "Bruno Silva",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-in-results-ufc-269-oliveira-vs-poirier"
+      },
+      {
+        "a": "Bruno Silva",
+        "a_ids": 2,
+        "b": "Joshua Van",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/official-weigh-in-results-ufc-316-dvalishvili-vs-omalley-2"
+      },
+      {
+        "a": "Fares Ziam",
+        "a_ids": 1,
+        "b": "Mike Davis",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-adesanya-imavov-saudi-arabia"
+      },
+      {
+        "a": "Drew Dober",
+        "a_ids": 1,
+        "b": "Jean Silva",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-in-results-ufc-fight-night-namajunas-cortez-denver"
+      },
+      {
+        "a": "Jean Silva",
+        "a_ids": 2,
+        "b": "Melsik Baghdasaryan",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/official-weigh-results-cejudo-song-ufc-seattle"
+      },
+      {
+        "a": "Bruno Silva",
+        "a_ids": 2,
+        "b": "HyunSung Park",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/official-weigh-results-de-ridder-allen-ufc-vancouver"
+      },
+      {
+        "a": "Bryce Mitchell",
+        "a_ids": 1,
+        "b": "Jean Silva",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-314-volkanovski-vs-lopes"
+      },
+      {
+        "a": "Marc-Andre Barriault",
+        "a_ids": 1,
+        "b": "Bruno Silva",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-315-muhammad-vs-della-maddalena"
+      },
+      {
+        "a": "Arnold Allen",
+        "a_ids": 1,
+        "b": "Jean Silva",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-324-gaethje-vs-pimblett"
+      },
+      {
+        "a": "Nurullo Aliev",
+        "a_ids": 1,
+        "b": "Mike Davis",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-abu-dhabi-ankalaev-guskov"
+      },
+      {
+        "a": "Bruno Silva",
+        "a_ids": 2,
+        "b": "Edgar Chairez",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-fight-night-muhammad-vs-bonfim"
+      },
+      {
+        "a": "Max Griffin",
+        "a_ids": 1,
+        "b": "Victor Valenzuela",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-fight-night-sterling-vs-zalal"
+      },
+      {
+        "a": "Gilbert Burns",
+        "a_ids": 1,
+        "b": "Mike Davis",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/official-weigh-results-ufc-ft-lauderdale"
+      },
+      {
+        "a": "Jean Silva",
+        "a_ids": 2,
+        "b": "William Gomis",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/rio-ufc-301-pantoja-vs-erceg-official-weigh-in-results"
+      },
+      {
+        "a": "Jean Silva",
+        "a_ids": 2,
+        "b": "Kevin Vallejos",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/season-7-weigh-results-dana-whites-contender-series"
+      },
+      {
+        "a": "Masanori Kanehara",
+        "a_ids": 1,
+        "b": "Michael McDonald",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/ufc-195-weigh-results"
+      },
+      {
+        "a": "Khalid Taha",
+        "a_ids": 1,
+        "b": "Bruno Silva",
+        "b_ids": 2,
+        "url": "https://www.ufc.com/news/ufc-243-official-weigh-in-results"
+      },
+      {
+        "a": "Bruno Silva",
+        "a_ids": 2,
+        "b": "Tagir Ulanbekov",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/ufc-fight-island-5-weigh-results-sandhagen-moraes"
+      },
+      {
+        "a": "Mike Davis",
+        "a_ids": 2,
+        "b": "Mason Jones",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/ufc-fight-island-8-weigh-results-magny-chiesa-alves-lazzez"
+      }
+    ],
+    "multiple_canonical_fights_for_pair": [
+      {
+        "a": "Deiveson Figueiredo",
+        "article_date": "2020-07-16",
+        "b": "Joseph Benavidez",
+        "candidate_event_dates": [
+          "2020-07-18",
+          "2020-02-29"
+        ],
+        "event_minus_article_days": [
+          2,
+          -138
+        ],
+        "url": "https://www.ufc.com/news/fight-island-2-official-weigh-results"
+      },
+      {
+        "a": "Frankie Edgar",
+        "article_date": "2018-09-14",
+        "b": "Cub Swanson",
+        "candidate_event_dates": [
+          "2018-04-21",
+          "2014-11-22"
+        ],
+        "event_minus_article_days": [
+          -146,
+          -1392
+        ],
+        "url": "https://www.ufc.com/news/fight-night-atlantic-city-official-weigh-results"
+      },
+      {
+        "a": "Cub Swanson",
+        "article_date": "2018-09-14",
+        "b": "Frankie Edgar",
+        "candidate_event_dates": [
+          "2018-04-21",
+          "2014-11-22"
+        ],
+        "event_minus_article_days": [
+          -146,
+          -1392
+        ],
+        "url": "https://www.ufc.com/news/fight-night-austin-2014-weigh-results"
+      },
+      {
+        "a": "Dustin Ortiz",
+        "article_date": "2018-09-14",
+        "b": "Joseph Benavidez",
+        "candidate_event_dates": [
+          "2019-01-19",
+          "2014-11-22"
+        ],
+        "event_minus_article_days": [
+          127,
+          -1392
+        ],
+        "url": "https://www.ufc.com/news/fight-night-austin-2014-weigh-results"
+      },
+      {
+        "a": "Johnny Bedford",
+        "article_date": "2018-09-14",
+        "b": "Rani Yahya",
+        "candidate_event_dates": [
+          "2014-09-13",
+          "2014-04-11"
+        ],
+        "event_minus_article_days": [
+          -1462,
+          -1617
+        ],
+        "url": "https://www.ufc.com/news/fight-night-brasilia-weigh-results"
+      },
+      {
+        "a": "Eddie Alvarez",
+        "article_date": "2018-09-24",
+        "b": "Dustin Poirier",
+        "candidate_event_dates": [
+          "2018-07-28",
+          "2017-05-13"
+        ],
+        "event_minus_article_days": [
+          -58,
+          -499
+        ],
+        "url": "https://www.ufc.com/news/fight-night-calgary-official-weigh-results"
+      },
+      {
+        "a": "Renan Barao",
+        "article_date": "2018-09-14",
+        "b": "TJ Dillashaw",
+        "candidate_event_dates": [
+          "2015-07-25",
+          "2014-05-24"
+        ],
+        "event_minus_article_days": [
+          -1147,
+          -1574
+        ],
+        "url": "https://www.ufc.com/news/fight-night-chicago-weigh-results"
+      },
+      {
+        "a": "Paul Felder",
+        "article_date": "2018-09-14",
+        "b": "Edson Barboza",
+        "candidate_event_dates": [
+          "2019-09-07",
+          "2015-07-25"
+        ],
+        "event_minus_article_days": [
+          358,
+          -1147
+        ],
+        "url": "https://www.ufc.com/news/fight-night-chicago-weigh-results"
+      },
+      {
+        "a": "Brandon Moreno",
+        "article_date": "2018-09-14",
+        "b": "Alexandre Pantoja",
+        "candidate_event_dates": [
+          "2023-07-08",
+          "2018-05-19"
+        ],
+        "event_minus_article_days": [
+          1758,
+          -118
+        ],
+        "url": "https://www.ufc.com/news/fight-night-chile-official-weigh-results"
+      },
+      {
+        "a": "Alex Oliveira",
+        "article_date": "2018-09-14",
+        "b": "Tim Means",
+        "candidate_event_dates": [
+          "2016-12-30",
+          "2017-03-11"
+        ],
+        "event_minus_article_days": [
+          -623,
+          -552
+        ],
+        "url": "https://www.ufc.com/news/fight-night-fortaleza-weigh-results"
+      },
+      {
+        "a": "Alexis Davis",
+        "article_date": "2018-09-14",
+        "b": "Liz Carmouche",
+        "candidate_event_dates": [
+          "2013-11-06",
+          "2017-12-09"
+        ],
+        "event_minus_article_days": [
+          -1773,
+          -279
+        ],
+        "url": "https://www.ufc.com/news/fight-night-fresno-weigh-results"
+      },
+      {
+        "a": "Dustin Poirier",
+        "article_date": "2018-09-14",
+        "b": "Justin Gaethje",
+        "candidate_event_dates": [
+          "2023-07-29",
+          "2018-04-14"
+        ],
+        "event_minus_article_days": [
+          1779,
+          -153
+        ],
+        "url": "https://www.ufc.com/news/fight-night-glendale-official-weigh-results"
+      },
+      {
+        "a": "Israel Adesanya",
+        "article_date": "2018-09-14",
+        "b": "Marvin Vettori",
+        "candidate_event_dates": [
+          "2018-04-14",
+          "2021-06-12"
+        ],
+        "event_minus_article_days": [
+          -153,
+          1002
+        ],
+        "url": "https://www.ufc.com/news/fight-night-glendale-official-weigh-results"
+      },
+      {
+        "a": "Charles Oliveira",
+        "article_date": "2018-09-14",
+        "b": "Nik Lentz",
+        "candidate_event_dates": [
+          "2011-06-26",
+          "2019-05-18",
+          "2015-05-30"
+        ],
+        "event_minus_article_days": [
+          -2637,
+          246,
+          -1203
+        ],
+        "url": "https://www.ufc.com/news/fight-night-goiania-2015-weigh-results"
+      },
+      {
+        "a": "Alex Morono",
+        "article_date": "2018-09-14",
+        "b": "Niko Price",
+        "candidate_event_dates": [
+          "2017-02-04",
+          "2024-06-01"
+        ],
+        "event_minus_article_days": [
+          -587,
+          2087
+        ],
+        "url": "https://www.ufc.com/news/fight-night-houston-weigh-results"
+      },
+      {
+        "a": "Uriah Hall",
+        "article_date": "2018-09-14",
+        "b": "Gegard Mousasi",
+        "candidate_event_dates": [
+          "2016-11-19",
+          "2015-09-26"
+        ],
+        "event_minus_article_days": [
+          -664,
+          -1084
+        ],
+        "url": "https://www.ufc.com/news/fight-night-japan-weigh-results-0"
+      },
+      {
+        "a": "Jan Blachowicz",
+        "article_date": "2018-09-14",
+        "b": "Jimi Manuwa",
+        "candidate_event_dates": [
+          "2015-04-11",
+          "2018-03-17"
+        ],
+        "event_minus_article_days": [
+          -1252,
+          -181
+        ],
+        "url": "https://www.ufc.com/news/fight-night-krakow-2015-weigh-results"
+      },
+      {
+        "a": "Darren Stewart",
+        "article_date": "2018-09-14",
+        "b": "Francimar Barroso",
+        "candidate_event_dates": [
+          "2017-03-18",
+          "2016-11-19"
+        ],
+        "event_minus_article_days": [
+          -545,
+          -664
+        ],
+        "url": "https://www.ufc.com/news/fight-night-london-manuwa-vs-anderson-weigh-results"
+      },
+      {
+        "a": "Jimi Manuwa",
+        "article_date": "2018-09-14",
+        "b": "Jan Blachowicz",
+        "candidate_event_dates": [
+          "2015-04-11",
+          "2018-03-17"
+        ],
+        "event_minus_article_days": [
+          -1252,
+          -181
+        ],
+        "url": "https://www.ufc.com/news/fight-night-london-weigh-results"
+      },
+      {
+        "a": "Joe Lauzon",
+        "article_date": "2018-09-14",
+        "b": "Jim Miller",
+        "candidate_event_dates": [
+          "2012-12-29",
+          "2016-08-27"
+        ],
+        "event_minus_article_days": [
+          -2085,
+          -748
+        ],
+        "url": "https://www.ufc.com/news/fight-night-maia-vs-condit-weigh-results"
+      },
+      {
+        "a": "Chris Camozzi",
+        "article_date": "2018-09-14",
+        "b": "Jacare Souza",
+        "candidate_event_dates": [
+          "2015-04-18",
+          "2013-05-18"
+        ],
+        "event_minus_article_days": [
+          -1245,
+          -1945
+        ],
+        "url": "https://www.ufc.com/news/fight-night-new-jersey-weigh-results"
+      },
+      {
+        "a": "Donald Cerrone",
+        "article_date": "2018-09-14",
+        "b": "Rafael dos Anjos",
+        "candidate_event_dates": [
+          "2013-08-28",
+          "2015-12-19"
+        ],
+        "event_minus_article_days": [
+          -1843,
+          -1000
+        ],
+        "url": "https://www.ufc.com/news/fight-night-orlando-weigh-results"
+      },
+      {
+        "a": "Leon Edwards",
+        "article_date": "2018-09-14",
+        "b": "Kamaru Usman",
+        "candidate_event_dates": [
+          "2023-03-18",
+          "2015-12-19",
+          "2022-08-20"
+        ],
+        "event_minus_article_days": [
+          1646,
+          -1000,
+          1436
+        ],
+        "url": "https://www.ufc.com/news/fight-night-orlando-weigh-results"
+      },
+      {
+        "a": "Stipe Miocic",
+        "article_date": "2018-09-14",
+        "b": "Junior Dos Santos",
+        "candidate_event_dates": [
+          "2014-12-13",
+          "2017-05-13"
+        ],
+        "event_minus_article_days": [
+          -1371,
+          -489
+        ],
+        "url": "https://www.ufc.com/news/fight-night-phoenix-weigh-results"
+      },
+      {
+        "a": "Joanna Jedrzejczyk",
+        "article_date": "2018-09-14",
+        "b": "Claudia Gadelha",
+        "candidate_event_dates": [
+          "2014-12-13",
+          "2016-07-08"
+        ],
+        "event_minus_article_days": [
+          -1371,
+          -798
+        ],
+        "url": "https://www.ufc.com/news/fight-night-phoenix-weigh-results"
+      },
+      {
+        "a": "Francis Ngannou",
+        "article_date": "2018-09-14",
+        "b": "Curtis Blaydes",
+        "candidate_event_dates": [
+          "2018-11-24",
+          "2016-04-10"
+        ],
+        "event_minus_article_days": [
+          71,
+          -887
+        ],
+        "url": "https://www.ufc.com/news/fight-night-rothwell-vs-dos-santos-weigh-results"
+      },
+      {
+        "a": "Dan Henderson",
+        "article_date": "2018-09-14",
+        "b": "Vitor Belfort",
+        "candidate_event_dates": [
+          "2015-11-07",
+          "2013-11-09"
+        ],
+        "event_minus_article_days": [
+          -1042,
+          -1770
+        ],
+        "url": "https://www.ufc.com/news/fight-night-sao-paulo-2015-weigh-results"
+      },
+      {
+        "a": "Jimmie Rivera",
+        "article_date": "2018-09-14",
+        "b": "Pedro Munhoz",
+        "candidate_event_dates": [
+          "2015-11-07",
+          "2021-02-27"
+        ],
+        "event_minus_article_days": [
+          -1042,
+          897
+        ],
+        "url": "https://www.ufc.com/news/fight-night-sao-paulo-2015-weigh-results"
+      },
+      {
+        "a": "Vicente Luque",
+        "article_date": "2018-09-14",
+        "b": "Niko Price",
+        "candidate_event_dates": [
+          "2017-10-28",
+          "2020-05-09"
+        ],
+        "event_minus_article_days": [
+          -321,
+          603
+        ],
+        "url": "https://www.ufc.com/news/fight-night-sao-paulo-weigh-results"
+      },
+      {
+        "a": "Charles Oliveira",
+        "article_date": "2018-09-14",
+        "b": "Max Holloway",
+        "candidate_event_dates": [
+          "2026-03-07",
+          "2015-08-23"
+        ],
+        "event_minus_article_days": [
+          2731,
+          -1118
+        ],
+        "url": "https://www.ufc.com/news/fight-night-saskatoon-weigh-results"
+      },
+      {
+        "a": "Marlon Vera",
+        "article_date": "2018-09-14",
+        "b": "Davey Grant",
+        "candidate_event_dates": [
+          "2016-02-27",
+          "2021-06-19"
+        ],
+        "event_minus_article_days": [
+          -930,
+          1009
+        ],
+        "url": "https://www.ufc.com/news/fight-night-silva-vs-bisping-weigh-results"
+      },
+      {
+        "a": "Michael Bisping",
+        "article_date": "2018-09-14",
+        "b": "Luke Rockhold",
+        "candidate_event_dates": [
+          "2016-06-04",
+          "2014-11-07"
+        ],
+        "event_minus_article_days": [
+          -832,
+          -1407
+        ],
+        "url": "https://www.ufc.com/news/fight-night-sydney-2014-weigh-results"
+      },
+      {
+        "a": "Raphael Assuncao",
+        "article_date": "2019-02-01",
+        "b": "Marlon Moraes",
+        "candidate_event_dates": [
+          "2019-02-02",
+          "2017-06-03"
+        ],
+        "event_minus_article_days": [
+          1,
+          -608
+        ],
+        "url": "https://www.ufc.com/news/fortaleza-weigh-results"
+      },
+      {
+        "a": "Kevin Lee",
+        "article_date": "2018-12-13",
+        "b": "Al Iaquinta",
+        "candidate_event_dates": [
+          "2014-02-01",
+          "2018-12-15"
+        ],
+        "event_minus_article_days": [
+          -1776,
+          2
+        ],
+        "url": "https://www.ufc.com/news/milwaukee-weigh-results"
+      },
+      {
+        "a": "Jim Miller",
+        "article_date": "2018-12-13",
+        "b": "Charles Oliveira",
+        "candidate_event_dates": [
+          "2018-12-15",
+          "2010-12-11"
+        ],
+        "event_minus_article_days": [
+          2,
+          -2924
+        ],
+        "url": "https://www.ufc.com/news/milwaukee-weigh-results"
+      },
+      {
+        "a": "Dan Henderson",
+        "article_date": "2018-09-14",
+        "b": "Vitor Belfort",
+        "candidate_event_dates": [
+          "2015-11-07",
+          "2013-11-09"
+        ],
+        "event_minus_article_days": [
+          -1042,
+          -1770
+        ],
+        "url": "https://www.ufc.com/news/offical-ufc-fight-night-weigh-results"
+      },
+      {
+        "a": "Forrest Griffin",
+        "article_date": "2018-09-14",
+        "b": "Tito Ortiz",
+        "candidate_event_dates": [
+          "2009-11-21",
+          "2012-07-07",
+          "2006-04-15"
+        ],
+        "event_minus_article_days": [
+          -3219,
+          -2260,
+          -4535
+        ],
+        "url": "https://www.ufc.com/news/official-ufc-106-weigh-results"
+      },
+      {
+        "a": "Dominick Cruz",
+        "article_date": "2018-09-14",
+        "b": "Urijah Faber",
+        "candidate_event_dates": [
+          "2011-07-02",
+          "2016-06-04"
+        ],
+        "event_minus_article_days": [
+          -2631,
+          -832
+        ],
+        "url": "https://www.ufc.com/news/official-ufc-132-weigh-results"
+      },
+      {
+        "a": "Rashad Evans",
+        "article_date": "2018-09-14",
+        "b": "Tito Ortiz",
+        "candidate_event_dates": [
+          "2007-07-07",
+          "2011-08-06"
+        ],
+        "event_minus_article_days": [
+          -4087,
+          -2596
+        ],
+        "url": "https://www.ufc.com/news/official-ufc-133-weigh-results"
+      },
+      {
+        "a": "Gray Maynard",
+        "article_date": "2018-09-14",
+        "b": "Frankie Edgar",
+        "candidate_event_dates": [
+          "2011-01-01",
+          "2008-04-02",
+          "2011-10-08"
+        ],
+        "event_minus_article_days": [
+          -2813,
+          -3817,
+          -2533
+        ],
+        "url": "https://www.ufc.com/news/official-ufc-136-weigh-results"
+      }
+    ],
+    "no_canonical_fight_for_pair": [
+      {
+        "a": "Dong Hyun Kim",
+        "b": "Thibault Gouti",
+        "url": "https://www.ufc.com/news/fight-night-auckland-official-weigh-results"
+      },
+      {
+        "a": "Tom Breese",
+        "b": "Oluwale Bamgbose",
+        "url": "https://www.ufc.com/news/fight-night-london-manuwa-vs-anderson-weigh-results"
+      },
+      {
+        "a": "Ian Entwistle",
+        "b": "Brett Johns",
+        "url": "https://www.ufc.com/news/fight-night-london-manuwa-vs-anderson-weigh-results"
+      },
+      {
+        "a": "Nasrat Haqparast",
+        "b": "Nad Narimani",
+        "url": "https://www.ufc.com/news/fight-night-london-weigh-results"
+      },
+      {
+        "a": "Takanori Gomi",
+        "b": "Dong Hyun Kim",
+        "url": "https://www.ufc.com/news/fight-night-saint-preux-vs-okami-official-weigh-results"
+      },
+      {
+        "a": "Magomed Bibulatov",
+        "b": "Rogerio Bontorin",
+        "url": "https://www.ufc.com/news/fortaleza-weigh-results"
+      },
+      {
+        "a": "Daniel Cormier",
+        "b": "Josh Barnett",
+        "url": "https://www.ufc.com/news/official-strikeforce-hwgp-weigh-results"
+      },
+      {
+        "a": "Josh Thomson",
+        "b": "Gilbert Melendez",
+        "url": "https://www.ufc.com/news/official-strikeforce-hwgp-weigh-results"
+      },
+      {
+        "a": "Mike Kyle",
+        "b": "Rafael Cavalcante",
+        "url": "https://www.ufc.com/news/official-strikeforce-hwgp-weigh-results"
+      },
+      {
+        "a": "Nah-Shon Burrell",
+        "b": "Chris Spang",
+        "url": "https://www.ufc.com/news/official-strikeforce-hwgp-weigh-results"
+      },
+      {
+        "a": "Derrick Mehmen",
+        "b": "Gian Villante",
+        "url": "https://www.ufc.com/news/official-strikeforce-hwgp-weigh-results"
+      },
+      {
+        "a": "Yuri Villefort",
+        "b": "Quinn Mulhern",
+        "url": "https://www.ufc.com/news/official-strikeforce-hwgp-weigh-results"
+      },
+      {
+        "a": "Tarec Saffiedine",
+        "b": "Nate Marquardt",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Dion Staring",
+        "b": "Daniel Cormier",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Nandor Guelmino",
+        "b": "Josh Barnett",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Mike Kyle",
+        "b": "Gegard Mousasi",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Ed Herman",
+        "b": "'Jacare' Souza",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Kurt Holobaugh",
+        "b": "Pat Healy",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Anthony Smith",
+        "b": "Roger Gracie",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Trevor Smith",
+        "b": "Tim Kennedy",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Ryan Couture",
+        "b": "KJ Noons",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Adriano Martins",
+        "b": "Jorge Gurgel",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Michael Bravo",
+        "b": "Estevan Payan",
+        "url": "https://www.ufc.com/news/official-strikeforce-marquardt-vs-saffiedine-weigh-results"
+      },
+      {
+        "a": "Nate Marquardt",
+        "b": "Tyron Woodley",
+        "url": "https://www.ufc.com/news/official-strikeforce-rockhold-vs-kennedy-weigh-results"
+      },
+      {
+        "a": "Roger Gracie",
+        "b": "Keith Jardine",
+        "url": "https://www.ufc.com/news/official-strikeforce-rockhold-vs-kennedy-weigh-results"
+      },
+      {
+        "a": "Pat Healy",
+        "b": "Mizuto Hirota",
+        "url": "https://www.ufc.com/news/official-strikeforce-rockhold-vs-kennedy-weigh-results"
+      },
+      {
+        "a": "Justin Wilcox",
+        "b": "Jorge Masvidal",
+        "url": "https://www.ufc.com/news/official-strikeforce-rockhold-vs-kennedy-weigh-results"
+      },
+      {
+        "a": "Tyler Stinson",
+        "b": "Jordan Mein",
+        "url": "https://www.ufc.com/news/official-strikeforce-rockhold-vs-kennedy-weigh-results"
+      },
+      {
+        "a": "Joe Duarte",
+        "b": "Ryan Couture",
+        "url": "https://www.ufc.com/news/official-strikeforce-rockhold-vs-kennedy-weigh-results"
+      },
+      {
+        "a": "Nate Moore",
+        "b": "Jason High",
+        "url": "https://www.ufc.com/news/official-strikeforce-rockhold-vs-kennedy-weigh-results"
+      }
+    ],
+    "unresolved_normalized_name": [
+      {
+        "a": "Ariane Lipski",
+        "a_ids": 0,
+        "b": "Luana Carolina",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-island-2-official-weigh-results"
+      },
+      {
+        "a": "Grant Dawson",
+        "a_ids": 1,
+        "b": "Nad Darimani",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-island-2-official-weigh-results"
+      },
+      {
+        "a": "Carlos Feilpe",
+        "a_ids": 0,
+        "b": "Serghei Spivac",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-island-2-official-weigh-results"
+      },
+      {
+        "a": "Daniel Hooker",
+        "a_ids": 0,
+        "b": "Hatsu Hioki",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-adelaide-2015-weigh-results"
+      },
+      {
+        "a": "Bradley Scott",
+        "a_ids": 0,
+        "b": "Dylan Andrews",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-adelaide-2015-weigh-results"
+      },
+      {
+        "a": "Khalil Rountree",
+        "a_ids": 0,
+        "b": "Johnny Walker",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-argentina-official-weigh-results"
+      },
+      {
+        "a": "Alexandre Pantoja",
+        "a_ids": 1,
+        "b": "Ulka Sasaki",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-argentina-official-weigh-results"
+      },
+      {
+        "a": "Ashlee Evans-Smith",
+        "a_ids": 1,
+        "b": "Veronica Macedo",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-arlovski-vs-barnett-weigh-results"
+      },
+      {
+        "a": "Tony Martin",
+        "a_ids": 0,
+        "b": "Keita Nakamura",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-atlantic-city-official-weigh-results"
+      },
+      {
+        "a": "Edson Barboza",
+        "a_ids": 1,
+        "b": "Bobby Green",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-austin-2014-weigh-results"
+      },
+      {
+        "a": "Alexey Oliynyk",
+        "a_ids": 0,
+        "b": "Jared Rosholt",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-austin-2014-weigh-results"
+      },
+      {
+        "a": "DooHo Choi",
+        "a_ids": 1,
+        "b": "Juan Puig",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-austin-2014-weigh-results"
+      },
+      {
+        "a": "Derrick Lewis",
+        "a_ids": 1,
+        "b": "Marcin Tybura (9)",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-austin-weigh-results"
+      },
+      {
+        "a": "Roberto Sanchez",
+        "a_ids": 0,
+        "b": "Joby Sanchez",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-austin-weigh-results"
+      },
+      {
+        "a": "Sarah Moras (13)",
+        "a_ids": 0,
+        "b": "Lucie Pudilova",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-austin-weigh-results"
+      },
+      {
+        "a": "Robbie Peralta",
+        "a_ids": 0,
+        "b": "Thiago Tavares",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-bangor-weigh-results"
+      },
+      {
+        "a": "Ulka Sasaki",
+        "a_ids": 0,
+        "b": "Leandro Issa",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-barueri-2014-weigh-results"
+      },
+      {
+        "a": "Tim Means",
+        "a_ids": 1,
+        "b": "Marcio Alexandre",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-barueri-2014-weigh-results"
+      },
+      {
+        "a": "Douglas de Andrade",
+        "a_ids": 0,
+        "b": "Marlon Vera",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-belem-weigh-results"
+      },
+      {
+        "a": "Ulka Sasaki",
+        "a_ids": 0,
+        "b": "Taylor Lapilus",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-berlin-2015-weigh-results"
+      },
+      {
+        "a": "Dennis Bermudez",
+        "a_ids": 1,
+        "b": "Rick Glenn",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-boise-official-weigh-results"
+      },
+      {
+        "a": "Andrei Arlovski",
+        "a_ids": 1,
+        "b": "Antonio \"Bigfoot\" Silva",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-brasilia-weigh-results"
+      },
+      {
+        "a": "Wendell Oliveira",
+        "a_ids": 0,
+        "b": "Santiago Ponzinibbio",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-brasilia-weigh-results"
+      },
+      {
+        "a": "Leandro \"Buscape\" Silva",
+        "a_ids": 0,
+        "b": "Francisco Trinaldo",
+        "b_ids": 1,
+        "url": "https://www.ufc.com/news/fight-night-brasilia-weigh-results"
+      },
+      {
+        "a": "Kevin Lee",
+        "a_ids": 1,
+        "b": "Michel \u201cTractor\u201d Prazeres",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-broomfield-2015-weigh-results"
+      },
+      {
+        "a": "Joanna Jedrzejczyk",
+        "a_ids": 1,
+        "b": "Tecia Torres",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-calgary-official-weigh-results"
+      },
+      {
+        "a": "Alexis Davis",
+        "a_ids": 1,
+        "b": "Katlyn Chookagian",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-calgary-official-weigh-results"
+      },
+      {
+        "a": "Randa Markos",
+        "a_ids": 1,
+        "b": "Nina Ansaroff",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-calgary-official-weigh-results"
+      },
+      {
+        "a": "Devin Powell",
+        "a_ids": 1,
+        "b": "Alvaro Herrera",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-calgary-official-weigh-results"
+      },
+      {
+        "a": "Erik Koch",
+        "a_ids": 1,
+        "b": "Bobby Green",
+        "b_ids": 0,
+        "url": "https://www.ufc.com/news/fight-night-charlotte-weigh-results"
+      }
+    ]
+  },
+  "generated_at_utc": "2026-08-22T23:39:17.687967Z",
+  "multi_pair_nearest_abs_event_date_delta_distribution": {
+    "1": 78,
+    "1000": 3,
+    "1035": 1,
+    "1042": 2,
+    "106": 1,
+    "11": 1,
+    "1105": 4,
+    "1118": 1,
+    "1147": 2,
+    "1161": 2,
+    "118": 1,
+    "1245": 1,
+    "127": 1,
+    "1331": 1,
+    "1378": 1,
+    "1387": 1,
+    "141": 1,
+    "1420": 2,
+    "146": 2,
+    "1462": 2,
+    "153": 2,
+    "1531": 1,
+    "16": 1,
+    "160": 3,
+    "1686": 2,
+    "17": 1,
+    "1721": 2,
+    "1735": 4,
+    "1749": 2,
+    "1791": 3,
+    "181": 2,
+    "1843": 2,
+    "1854": 1,
+    "1938": 2,
+    "2": 41,
+    "2085": 1,
+    "211": 2,
+    "2162": 2,
+    "2225": 2,
+    "2260": 2,
+    "2274": 2,
+    "2275": 1,
+    "2289": 1,
+    "237": 3,
+    "246": 2,
+    "2470": 1,
+    "2533": 4,
+    "2540": 2,
+    "2575": 1,
+    "2596": 1,
+    "27": 1,
+    "279": 2,
+    "2834": 1,
+    "2855": 1,
+    "286": 1,
+    "288": 1,
+    "2911": 1,
+    "2995": 1,
+    "3": 10,
+    "3051": 1,
+    "321": 1,
+    "3324": 2,
+    "3352": 1,
+    "3513": 1,
+    "3562": 2,
+    "358": 1,
+    "370": 3,
+    "4": 10,
+    "41": 2,
+    "412": 2,
+    "434": 1,
+    "456": 1,
+    "48": 1,
+    "489": 1,
+    "491": 1,
+    "5": 6,
+    "51": 2,
+    "519": 1,
+    "524": 1,
+    "545": 2,
+    "552": 2,
+    "559": 2,
+    "58": 2,
+    "587": 1,
+    "603": 1,
+    "664": 2,
+    "671": 1,
+    "706": 1,
+    "71": 1,
+    "734": 2,
+    "748": 2,
+    "755": 2,
+    "79": 1,
+    "797": 3,
+    "798": 1,
+    "832": 3,
+    "862": 1,
+    "876": 1,
+    "897": 1,
+    "92": 2,
+    "930": 1,
+    "97": 1
+  },
+  "output": "data/derived/identity/ufc_weigh_in_identity_transport_candidate.csv",
+  "schema_version": 1,
+  "unique_pair_event_minus_article_days_distribution": {
+    "-1000": 9,
+    "-1007": 10,
+    "-1008": 8,
+    "-1009": 11,
+    "-1021": 9,
+    "-1028": 11,
+    "-1035": 13,
+    "-1042": 10,
+    "-105": 12,
+    "-1056": 9,
+    "-1077": 10,
+    "-1084": 8,
+    "-110": 10,
+    "-1105": 5,
+    "-1118": 9,
+    "-1133": 11,
+    "-1140": 7,
+    "-1147": 10,
+    "-1154": 10,
+    "-1157": 11,
+    "-1160": 8,
+    "-1161": 9,
+    "-1175": 8,
+    "-118": 11,
+    "-1182": 10,
+    "-1189": 9,
+    "-1196": 10,
+    "-1203": 10,
+    "-1210": 9,
+    "-1217": 10,
+    "-1224": 10,
+    "-1238": 13,
+    "-1245": 11,
+    "-125": 13,
+    "-1252": 8,
+    "-1259": 7,
+    "-1273": 10,
+    "-1280": 10,
+    "-1294": 8,
+    "-1300": 7,
+    "-1308": 6,
+    "-1322": 10,
+    "-1329": 10,
+    "-1335": 12,
+    "-1350": 8,
+    "-1364": 9,
+    "-1371": 9,
+    "-1372": 5,
+    "-1378": 10,
+    "-1392": 7,
+    "-1399": 8,
+    "-1406": 7,
+    "-1407": 8,
+    "-1420": 6,
+    "-1441": 20,
+    "-1448": 10,
+    "-1455": 12,
+    "-146": 9,
+    "-1462": 7,
+    "-1470": 8,
+    "-1483": 16,
+    "-1490": 9,
+    "-1511": 8,
+    "-1518": 9,
+    "-1521": 9,
+    "-153": 11,
+    "-1531": 9,
+    "-1532": 9,
+    "-1539": 17,
+    "-1553": 10,
+    "-1560": 11,
+    "-1567": 19,
+    "-1574": 11,
+    "-1588": 11,
+    "-16": 12,
+    "-160": 7,
+    "-1602": 10,
+    "-1609": 12,
+    "-1612": 11,
+    "-1617": 6,
+    "-1636": 9,
+    "-1644": 7,
+    "-1651": 9,
+    "-1658": 5,
+    "-1665": 11,
+    "-1672": 9,
+    "-1686": 8,
+    "-1693": 10,
+    "-1703": 11,
+    "-1714": 8,
+    "-1721": 7,
+    "-1735": 7,
+    "-1743": 10,
+    "-1749": 7,
+    "-1763": 11,
+    "-1770": 7,
+    "-1773": 10,
+    "-1784": 9,
+    "-1791": 11,
+    "-1801": 8,
+    "-181": 9,
+    "-1819": 10,
+    "-1836": 7,
+    "-1840": 12,
+    "-1843": 7,
+    "-1854": 10,
+    "-1868": 10,
+    "-1875": 9,
+    "-1896": 10,
+    "-1917": 11,
+    "-1924": 9,
+    "-1938": 9,
+    "-1945": 10,
+    "-195": 12,
+    "-1966": 10,
+    "-1973": 12,
+    "-1980": 10,
+    "-1987": 10,
+    "-2": 25,
+    "-2008": 12,
+    "-202": 10,
+    "-2022": 10,
+    "-2029": 11,
+    "-2036": 10,
+    "-2050": 7,
+    "-2057": 9,
+    "-2064": 9,
+    "-208": 9,
+    "-2085": 8,
+    "-2099": 11,
+    "-2100": 8,
+    "-2106": 8,
+    "-2127": 11,
+    "-2134": 8,
+    "-216": 9,
+    "-2162": 9,
+    "-2170": 9,
+    "-2176": 10,
+    "-2183": 10,
+    "-2225": 8,
+    "-223": 10,
+    "-2232": 7,
+    "-2246": 9,
+    "-2256": 11,
+    "-2274": 2,
+    "-2275": 10,
+    "-2289": 11,
+    "-2296": 10,
+    "-230": 11,
+    "-2302": 10,
+    "-2313": 12,
+    "-2323": 11,
+    "-2337": 10,
+    "-2344": 11,
+    "-237": 9,
+    "-2393": 8,
+    "-2403": 8,
+    "-2414": 9,
+    "-2421": 7,
+    "-2429": 9,
+    "-243": 11,
+    "-2435": 7,
+    "-2450": 7,
+    "-2470": 9,
+    "-2477": 9,
+    "-2491": 8,
+    "-2498": 6,
+    "-2505": 8,
+    "-2512": 9,
+    "-2533": 8,
+    "-2540": 8,
+    "-2547": 10,
+    "-2554": 10,
+    "-2575": 10,
+    "-258": 7,
+    "-2588": 10,
+    "-2596": 7,
+    "-2631": 10,
+    "-2637": 10,
+    "-2652": 11,
+    "-2659": 11,
+    "-2666": 7,
+    "-2694": 11,
+    "-272": 10,
+    "-2729": 11,
+    "-2736": 9,
+    "-2757": 11,
+    "-2778": 9,
+    "-279": 12,
+    "-2813": 10,
+    "-2834": 8,
+    "-2841": 9,
+    "-2855": 10,
+    "-286": 10,
+    "-2862": 10,
+    "-287": 9,
+    "-2883": 11,
+    "-2890": 10,
+    "-2911": 8,
+    "-2921": 9,
+    "-293": 12,
+    "-2939": 9,
+    "-2960": 9,
+    "-2966": 9,
+    "-2995": 10,
+    "-30": 20,
+    "-300": 14,
+    "-3016": 9,
+    "-3030": 10,
+    "-3051": 9,
+    "-307": 12,
+    "-3079": 9,
+    "-3089": 10,
+    "-3093": 8,
+    "-3099": 10,
+    "-314": 10,
+    "-3142": 11,
+    "-3168": 10,
+    "-3177": 9,
+    "-3198": 9,
+    "-3205": 8,
+    "-321": 11,
+    "-3219": 8,
+    "-3226": 10,
+    "-3247": 7,
+    "-328": 11,
+    "-3282": 8,
+    "-3285": 10,
+    "-3303": 11,
+    "-3324": 10,
+    "-3352": 9,
+    "-3373": 9,
+    "-3380": 9,
+    "-3401": 8,
+    "-342": 7,
+    "-3436": 10,
+    "-3453": 10,
+    "-3478": 9,
+    "-3492": 10,
+    "-3506": 7,
+    "-3513": 9,
+    "-3527": 9,
+    "-3548": 8,
+    "-3562": 8,
+    "-3565": 10,
+    "-357": 8,
+    "-3590": 9,
+    "-3611": 8,
+    "-3618": 10,
+    "-363": 8,
+    "-3660": 9,
+    "-3688": 9,
+    "-370": 9,
+    "-3709": 9,
+    "-3723": 9,
+    "-3737": 8,
+    "-3751": 11,
+    "-377": 12,
+    "-405": 9,
+    "-412": 9,
+    "-419": 13,
+    "-425": 10,
+    "-433": 10,
+    "-434": 9,
+    "-446": 11,
+    "-454": 10,
+    "-461": 11,
+    "-468": 9,
+    "-474": 10,
+    "-489": 9,
+    "-51": 9,
+    "-510": 11,
+    "-517": 9,
+    "-524": 10,
+    "-545": 9,
+    "-552": 9,
+    "-559": 9,
+    "-572": 9,
+    "-58": 8,
+    "-580": 6,
+    "-587": 9,
+    "-594": 12,
+    "-607": 9,
+    "-62": 1,
+    "-623": 9,
+    "-636": 11,
+    "-64": 11,
+    "-643": 12,
+    "-650": 11,
+    "-657": 8,
+    "-664": 21,
+    "-671": 7,
+    "-678": 10,
+    "-70": 12,
+    "-706": 10,
+    "-713": 12,
+    "-72": 12,
+    "-720": 10,
+    "-727": 9,
+    "-734": 8,
+    "-741": 9,
+    "-748": 7,
+    "-755": 11,
+    "-769": 11,
+    "-776": 11,
+    "-783": 11,
+    "-79": 9,
+    "-793": 9,
+    "-797": 9,
+    "-798": 9,
+    "-799": 10,
+    "-818": 11,
+    "-83": 12,
+    "-832": 9,
+    "-838": 10,
+    "-853": 9,
+    "-859": 9,
+    "-874": 9,
+    "-881": 10,
+    "-887": 11,
+    "-9": 21,
+    "-909": 11,
+    "-923": 10,
+    "-930": 11,
+    "-936": 10,
+    "-951": 11,
+    "-958": 12,
+    "-97": 12,
+    "-971": 12,
+    "-986": 10,
+    "0": 20,
+    "1": 2120,
+    "100": 1,
+    "103": 1,
+    "106": 2,
+    "11": 34,
+    "113": 1,
+    "15": 15,
+    "155": 1,
+    "17": 5,
+    "183": 1,
+    "19": 2,
+    "190": 1,
+    "2": 694,
+    "22": 1,
+    "24": 1,
+    "25": 1,
+    "29": 1,
+    "3": 250,
+    "306": 1,
+    "33": 1,
+    "36": 1,
+    "37": 1,
+    "39": 1,
+    "4": 208,
+    "44": 1,
+    "46": 1,
+    "5": 103,
+    "50": 1,
+    "54": 1,
+    "71": 1,
+    "78": 2,
+    "799": 1,
+    "8": 1,
+    "86": 1,
+    "9": 1,
+    "904": 1,
+    "92": 1,
+    "99": 3
+  }
+}
