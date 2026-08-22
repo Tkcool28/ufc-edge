@@ -1,0 +1,10 @@
+{
+  "audit": "external_mma_identity",
+  "completed_at_utc": "2026-08-22T22:10:01.940102Z",
+  "exit_code": 0,
+  "github_run_id": "32601659851",
+  "log": "provenance/runs/external_mma_identity_32601659851.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "1937aabc8243508e020e8811482a9e1ed95bb9b0"
+}
