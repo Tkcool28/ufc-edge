@@ -10,6 +10,8 @@ CONTRACT = ROOT / "schemas/canonical_data_contract_v0.json"
 SOURCE_MAP = ROOT / "schemas/source_field_map_v0.json"
 PRECEDENCE = ROOT / "schemas/source_precedence_v0.json"
 
+ALLOWED_STATUSES = {"active", "pending_acquisition", "acquired_qa_pending"}
+
 
 def main() -> int:
     contract = json.loads(CONTRACT.read_text(encoding="utf-8"))
@@ -19,7 +21,7 @@ def main() -> int:
     tables = contract.get("tables") or {}
     known_sources = {str(row.get("source")) for row in source_map.get("mappings") or [] if row.get("source")}
     families: set[str] = set()
-    active = pending = 0
+    active = pending_acquisition = acquired_qa_pending = 0
 
     for rule in precedence.get("rules") or []:
         family = str(rule.get("family") or "")
@@ -27,10 +29,11 @@ def main() -> int:
             raise RuntimeError(f"Missing/duplicate precedence family: {family!r}")
         families.add(family)
         status = rule.get("status")
-        if status not in {"active", "pending_acquisition"}:
+        if status not in ALLOWED_STATUSES:
             raise RuntimeError(f"Unsupported precedence status for {family}: {status!r}")
         active += status == "active"
-        pending += status == "pending_acquisition"
+        pending_acquisition += status == "pending_acquisition"
+        acquired_qa_pending += status == "acquired_qa_pending"
 
         target_tables = []
         if rule.get("canonical_table"):
@@ -51,12 +54,20 @@ def main() -> int:
             if missing:
                 raise RuntimeError(f"Unknown canonical fields in {family}: {missing}")
 
-        # Active source priorities must already be represented by the source-field map.
-        # Pending-acquisition rules may name the intended future source before mappings exist.
+        # Only active families may feed canonical values now, so their source IDs must
+        # already exist in the adapter map. Acquired-but-QA-pending families may name a
+        # raw provider before structured mappings are promoted.
         if status == "active":
             unknown_sources = [source for source in rule.get("priority") or [] if source not in known_sources]
             if unknown_sources:
                 raise RuntimeError(f"Unknown active priority sources in {family}: {unknown_sources}; known={sorted(known_sources)}")
+
+        if status == "acquired_qa_pending":
+            evidence = rule.get("evidence")
+            if not evidence:
+                raise RuntimeError(f"Acquired QA-pending family lacks acquisition evidence: {family}")
+            if not (ROOT / str(evidence)).exists():
+                raise RuntimeError(f"Acquired QA-pending evidence missing for {family}: {evidence}")
 
     for name, rel in (precedence.get("evidence") or {}).items():
         path = ROOT / str(rel)
@@ -66,7 +77,8 @@ def main() -> int:
     print(
         "SOURCE_PRECEDENCE_OK "
         f"version={precedence.get('precedence_version')} families={len(families)} "
-        f"active={active} pending={pending} sources={len(known_sources)}"
+        f"active={active} pending_acquisition={pending_acquisition} "
+        f"acquired_qa_pending={acquired_qa_pending} sources={len(known_sources)}"
     )
     return 0
 
