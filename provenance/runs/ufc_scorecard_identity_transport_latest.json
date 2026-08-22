@@ -1,10 +1,10 @@
 {
   "audit": "ufc_scorecard_identity_transport",
-  "completed_at_utc": "2026-08-22T23:47:26.575498Z",
+  "completed_at_utc": "2026-08-22T23:49:13.754633Z",
   "exit_code": 0,
-  "github_run_id": "32606145040",
-  "log": "provenance/runs/ufc_scorecard_identity_transport_32606145040.log",
+  "github_run_id": "32606215890",
+  "log": "provenance/runs/ufc_scorecard_identity_transport_32606215890.log",
   "schema_version": 1,
   "status": "success",
-  "trigger_sha": "1f507ba71e2187ad3848006cbeb00a868c3e0160"
+  "trigger_sha": "1b59fbb2b4ad8650cd9bb251f1aa5bfa88f84e8e"
 }

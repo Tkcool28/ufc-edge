@@ -1,24 +1,24 @@
 {
   "article_event_intersection_count_distribution": {
-    "0": 128,
-    "1": 214,
-    "2": 1
+    "0": 125,
+    "1": 218
   },
   "candidate_images": 3049,
   "counts": {
-    "articles_multi_event_intersection": 1,
-    "articles_no_resolvable_image_pair": 128,
-    "articles_singleton_event_intersection": 214,
-    "images_high_confidence_fight_candidate": 1505,
-    "images_with_two_fighter_pair_and_canonical_fight": 1506,
-    "images_with_two_fighters_no_canonical_pair": 200,
-    "images_without_exact_two_fighter_transport": 1343
+    "articles_conflicting_image_pair_events": 3,
+    "articles_no_resolvable_image_pair": 122,
+    "articles_singleton_event_intersection": 218,
+    "images_high_confidence_fight_candidate": 1538,
+    "images_with_two_fighter_pair_and_canonical_fight": 1558,
+    "images_with_two_fighters_no_canonical_pair": 182,
+    "images_without_exact_two_fighter_transport": 1309
   },
   "decision": {
     "canonical_judge_round_scores_written": false,
     "display_name_only_identity_trusted": false,
-    "event_headliner_prefix_excluded": true,
+    "event_headliner_prefix_excluded_from_alt_title_and_url": true,
     "high_confidence_image_fight_identity_is_candidate_only": true,
+    "name_suffix_aware_surname_uniqueness": true,
     "ocr_performed": false,
     "required_next": "Identity-filter official scorecard images before binary archival. Archive source image bytes plus hashes for the promoted subset before any OCR-derived layer; OCR output remains non-canonical until judge/round/fighter score semantics are independently verified.",
     "whole_image_url_identity_forbidden": true
@@ -26,16 +26,263 @@
   "examples": {
     "article_event_unresolved": [
       {
-        "article_status": "multi_event_intersection",
-        "article_url": "https://www.ufc.com/news/official-scorecards-ufc-fight-night-gane-vs-volkov",
-        "canonical_pair_fights": 2,
-        "identity_text": "ufc fight night gane vs volkov scorecards gane vs volkov jpg",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Gane vs Volkov - Scorecards - Gane vs Volkov.jpg",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2021-06/UFC%20Fight%20Night%20Gane%20vs%20Volkov%20-%20Scorecards%20-%20Gane%20vs%20Volkov.jpg?itok=TFj3Bh-M",
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "official result wang cong defeats victoria leonardo by knockout right hand at 1 02 of round 1",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official Result: Wang Cong defeats Victoria Leonardo by knockout (right hand) at 1:02 of Round 1",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082424-ufc-vegas-96-scorecard_wang-cong-def-victoria-leonardo.png?itok=m6q8nZAU",
         "matched_names": [
-          "Alexander Volkov",
-          "Ciryl Gane"
+          "Victoria Leonardo",
+          "Wang Cong"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "official result the featherweight bout between zygimantas ramaska and nathan fletcher has been cancelled",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official Result: The featherweight bout between Zygimantas Ramaska and Nathan Fletcher has been cancelled.",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082424-ufc-vegas-96-scorecard_ramaska-vs-fletcher.png?itok=YIHU-cIu",
+        "matched_names": [
+          "Zygimantas Ramaska",
+          "Nathan Fletcher"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "official result jacqueline cavalcanti 30 27 29 28 defeats josiane nunes 30 27 by split decision",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official Result: Jacqueline Cavalcanti (30-27, 29-28) defeats Josiane Nunes (30-27) by split decision",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082424-ufc-vegas-96-scorecard_jacqueline-cavalcanti-def-josiane-nunes.png?itok=fHIukbAn",
+        "matched_names": [
+          "Josiane Nunes",
+          "Jacqueline Cavalcanti"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "official result viacheslav borshchev 30 27 29 28 defeats james llontop by split decision 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official Result: Viacheslav Borshchev (30-27, 29-28) defeats James Llontop by split decision (29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082424-ufc-vegas-96-scorecard_viacheslav-borschev-def-james-llontop.png?itok=ksQ0ph9o",
+        "matched_names": [
+          "James Llontop",
+          "Viacheslav Borshchev"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "official result francis marshall 30 27 29 28 defeats dennis buzukja by split decision 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official Result: Francis Marshall (30-27, 29-28) defeats Dennis Buzukja by split decision (29-28) ",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082424-ufc-vegas-96-scorecard_francis-marshall-def-dennis-buzukja.png?itok=c0Ubgrux",
+        "matched_names": [
+          "Dennis Buzukja",
+          "Francis Marshall"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "gerald meerschaert defeats edmen shahbazyan by submission arm triangle choke at 4 12 of round 2",
+        "identity_text_source": "image_alt",
+        "image_alt": "Gerald Meerschaert defeats Edmen Shahbazyan by submission (arm-triangle choke) at 4:12 of Round 2",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/UFC%20Fight%20Night%20Cannonier%20vs.%20Borralho%20-%20Scorecards%20-%20Shahbazyan%20vs.%20Meerschaert%20copy.jpg?itok=1tYXTd0s",
+        "matched_names": [
+          "Gerald Meerschaert",
+          "Edmen Shahbazyan"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "official result mairon santos defeats kaan ofli by knockout left hook at 1 30 of round 2",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official Result: Mairon Santos defeats Kaan Ofli by knockout (left hook) at 1:30 of Round 2",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082424-ufc-vegas-96-scorecard_mairon-santos-def-kaan-ofli.png?itok=k1bKntcD",
+        "matched_names": [
+          "Mairon Santos",
+          "Kaan Ofli"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "official result tabatha ricci defeats angela hill by unanimous decision 29 28 29 28 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official Result: Tabatha Ricci defeats Angela Hill by unanimous decision (29-28, 29-28, 29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082424-ufc-vegas-96-scorecard_tabatha-ricci-def-angel-hill.png?itok=hAf6IbAf",
+        "matched_names": [
+          "Tabatha Ricci",
+          "Angela Hill"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-cannonier-vs-borralho-vegas-96",
+        "canonical_pair_fights": 1,
+        "identity_text": "official result caio borralho defeats jared cannonier by unanimous decision 49 45 49 45 48 46",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official Result: Caio Borralho defeats Jared Cannonier by unanimous decision (49-45, 49-45, 48-46) ",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082424-ufc-vegas-96-scorecard_caio-borralho-def-jared-cannonier.png?itok=jSAFXhKG",
+        "matched_names": [
+          "Jared Cannonier",
+          "Caio Borralho"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-scorecards-ufc-268-usman-vs-covington-2-namajunas-vs-zhang-msg",
+        "canonical_pair_fights": 2,
+        "identity_text": "announcer bruce buffer smiles before introducing cody garbrandt and tj dillashaw for their ufc bantamweight championship bout during the ufc 217 event at madison square garden on november 4 2017 in new york city photo by jeff bottari zuffa llc zuffa llc via getty images",
+        "identity_text_source": "image_alt",
+        "image_alt": "Announcer Bruce Buffer smiles before introducing Cody Garbrandt and TJ Dillashaw for their UFC bantamweight championship bout during the UFC 217 event at Madison Square Garden on November 4, 2017 in New York City. (Photo by Jeff Bottari/Zuffa LLC/Zuffa LLC via Getty Images)",
+        "image_url": "https://ufc.com/images/styles/background_image_sm/s3/2021-11/110621-ufc-268-usman-vs-covington-2-official-judges-scorecards-hero_GettyImages-870346752.jpg?h=d1cb525d&itok=El4hBXFN",
+        "matched_names": [
+          "Cody Garbrandt",
+          "TJ Dillashaw"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-scorecards-ufc-268-usman-vs-covington-2-namajunas-vs-zhang-msg",
+        "canonical_pair_fights": 1,
+        "identity_text": "vergara vs osbourne",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/UFC%20268%20Usman%20vs.%20Covington%202%20-%20Scorecards%20-%20Vergara%20vs.%20Osbourne.jpg?itok=2QzTZykx",
+        "matched_names": [
+          "CJ Vergara",
+          "Ode Osbourne"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-scorecards-ufc-268-usman-vs-covington-2-namajunas-vs-zhang-msg",
+        "canonical_pair_fights": 1,
+        "identity_text": "jacoby vs allan",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/UFC%20268%20Usman%20vs.%20Covington%202%20-%20Scorecards%20-%20Jacoby%20vs.%20Allan.jpg?itok=0L77HRVh",
+        "matched_names": [
+          "Dustin Jacoby",
+          "John Allan"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-scorecards-ufc-268-usman-vs-covington-2-namajunas-vs-zhang-msg",
+        "canonical_pair_fights": 1,
+        "identity_text": "burgos vs quarantillo",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/UFC%20268%20Usman%20vs.%20Covington%202%20-%20Scorecards%20-%20Burgos%20vs.%20Quarantillo.jpg?itok=TquHh0Jo",
+        "matched_names": [
+          "Shane Burgos",
+          "Billy Quarantillo"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/official-scorecards-ufc-268-usman-vs-covington-2-namajunas-vs-zhang-msg",
+        "canonical_pair_fights": 2,
+        "identity_text": "namajunas vs weili",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2021-11/UFC%20268%20Usman%20vs.%20Covington%202%20-%20Scorecards%20-%20Namajunas%20vs.%20Weili.jpg?itok=2TIuo-Q_",
+        "matched_names": [
+          "Zhang Weili",
+          "Rose Namajunas"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/ufc-fight-island-5-official-scorecards-moraes-sandhagen",
+        "canonical_pair_fights": 1,
+        "identity_text": "bruce buffer introduces the fighters prior to their welterweight bout between randy brown of jamaica and mickey gall during the ufc 217 event at madison square garden on november 4 2017 in new york city photo by jeff bottari zuffa llc zuffa llc",
+        "identity_text_source": "image_alt",
+        "image_alt": "Bruce Buffer introduces the fighters prior to their welterweight bout between Randy Brown of Jamaica and Mickey Gall during the UFC 217 event at Madison Square Garden on November 4, 2017 in New York City. (Photo by Jeff Bottari/Zuffa LLC/Zuffa LLC)",
+        "image_url": "https://ufc.com/images/styles/background_image_sm/s3/2020-10/Bruce%20Buffer%20Scorecard%20hero%20Blue%20lapel.jpg?h=0c2904f9&itok=55QVROrd",
+        "matched_names": [
+          "Mickey Gall",
+          "Randy Brown"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/ufc-fight-island-5-official-scorecards-moraes-sandhagen",
+        "canonical_pair_fights": 1,
+        "identity_text": "alqaisi vs kelley 1",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Moraes%20vs.%20Sandhagen%20-%20Scorecards%20-%20AlQaisi%20vs.%20Kelley%5B1%5D.jpg?itok=6sJBrXpV",
+        "matched_names": [
+          "Tony Kelley",
+          "Ali AlQaisi"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/ufc-fight-island-5-official-scorecards-moraes-sandhagen",
+        "canonical_pair_fights": 1,
+        "identity_text": "kasanganay vs buckley",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Moraes%20vs.%20Sandhagen%20-%20Scorecards%20-%20Kasanganay%20vs.%20Buckley.jpg?itok=aP62H2i_",
+        "matched_names": [
+          "Joaquin Buckley",
+          "Impa Kasanganay"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/ufc-fight-island-5-official-scorecards-moraes-sandhagen",
+        "canonical_pair_fights": 1,
+        "identity_text": "aspinall vs baudot",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Moraes%20vs.%20Sandhagen%20-%20Scorecards%20-%20Aspinall%20vs.%20Baudot.jpg?itok=Aqj3XFDC",
+        "matched_names": [
+          "Tom Aspinall",
+          "Alan Baudot"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/ufc-fight-island-5-official-scorecards-moraes-sandhagen",
+        "canonical_pair_fights": 1,
+        "identity_text": "rothwell vs tybura",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Moraes%20vs.%20Sandhagen%20-%20Scorecards%20-%20Rothwell%20vs.%20Tybura.jpg?itok=4EBrgDoK",
+        "matched_names": [
+          "Marcin Tybura",
+          "Ben Rothwell"
+        ]
+      },
+      {
+        "article_status": "conflicting_image_pair_events",
+        "article_url": "https://www.ufc.com/news/ufc-fight-island-5-official-scorecards-moraes-sandhagen",
+        "canonical_pair_fights": 1,
+        "identity_text": "barboza vs amirkhani 1",
+        "identity_text_source": "image_url_scorecard_suffix",
+        "image_alt": "",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2020-10/UFC%20Fight%20Night%20Moraes%20vs.%20Sandhagen%20-%20Scorecards%20-%20Barboza%20vs.%20Amirkhani%5B1%5D.jpg?itok=AL0M_7FB",
+        "matched_names": [
+          "Makwan Amirkhani",
+          "Edson Barboza"
         ]
       }
     ],
@@ -148,32 +395,6 @@
         "article_status": "no_resolvable_image_pair",
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
-        "identity_text": "brandon lewis vs mo miller scorecards dana white s contender series season 5 episode 3",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "Brandon Lewis vs Mo Miller Scorecards | Dana White's Contender Series Season 5 Episode 3",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.3%20-%20Scorecards%20-%20Lewis%20vs.%20Miller.jpg?itok=zn9S2lwI",
-        "matched_names": [
-          "Brandon Lewis",
-          "Mo Miller"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
-        "canonical_pair_fights": 0,
-        "identity_text": "lukasz brzeski vs dylan potter scorecards dana white s contender series season 5 episode 3",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "Lukasz Brzeski vs Dylan Potter Scorecards | Dana White's Contender Series Season 5, Episode 3",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.3%20-%20Scorecards%20-%20Brzeski%20vs.%20Potter.jpg?itok=c9F2YPHg",
-        "matched_names": [
-          "Dylan Potter",
-          "Lukasz Brzeski"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
-        "canonical_pair_fights": 0,
         "identity_text": "loosa vs della maddalena",
         "identity_text_source": "image_url_scorecard_suffix",
         "image_alt": "",
@@ -187,8 +408,8 @@
         "article_status": "no_resolvable_image_pair",
         "article_url": "https://www.ufc.com/news/dana-whites-contender-series-season-5-results-and-scorecards-dwcs",
         "canonical_pair_fights": 0,
-        "identity_text": "jasudavicius vs polastri scorecards dana white s contender series season 5 episode 3",
-        "identity_text_source": "image_alt_title",
+        "identity_text": "jasudavicius vs polastri",
+        "identity_text_source": "image_url_scorecard_suffix",
         "image_alt": "Jasudavicius vs Polastri Scorecards | Dana White's Contender Series Season 5 Episode 3",
         "image_url": "https://ufc.com/images/styles/inline/s3/2021-09/DWCS%205.3%20-%20Scorecards%20-%20Jasudavicius%20vs.%20Polastri.jpg?itok=se4rStzu",
         "matched_names": [
@@ -211,49 +432,10 @@
       },
       {
         "article_status": "singleton_event_intersection_unpromoted",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-noche-ufc-grasso-vs-shevchenko-2",
-        "canonical_pair_fights": 0,
-        "identity_text": "raul rosas jr defeats terrance mitchell by tko round 1 54",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "Raul Rosas Jr defeats Terrance Mitchell by TKO, Round 1, :54\u00a0",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2023-09/4444UFC_Fight_Night_Grasso_vs__Shevchenko_2_-_Scorecards_-_Rosas_Jr__vs__Mitchell_42__pdf.jpg?itok=e6F0mJC1",
-        "matched_names": [
-          "Jessie Rosas",
-          "Raul Rosas Jr."
-        ]
-      },
-      {
-        "article_status": "singleton_event_intersection_unpromoted",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-285-jones-vs-gane",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc 285 jones vs gane scorecards blackshear vs basharat",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC 285: Jones vs. Gane - Scorecards - Blackshear vs. Basharat",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2023-03/UFC%20285%20Jones%20vs.%20Gane%20-%20Scorecards%20-%20Blackshear%20vs.%20Basharat.jpg?itok=9t8jDy7b",
-        "matched_names": [
-          "Da'Mon Blackshear",
-          "Ciryl Gane"
-        ]
-      },
-      {
-        "article_status": "singleton_event_intersection_unpromoted",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-306-omalley-vs-dvalishvili-noche-ufc-sphere",
-        "canonical_pair_fights": 0,
-        "identity_text": "official result raul rosas jr defeats aoriqileng by unanimous decision 29 28 29 28 29 28",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "Official Result: Raul Rosas Jr. defeats Aoriqileng by unanimous decision (29-28, 29-28, 29-28)",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2024-09/091424-Rosas-Jr-vs-Aoriqileng-Official-Scorecard-UFC-306.png?itok=E-AlVMdz",
-        "matched_names": [
-          "Jessie Rosas",
-          "Raul Rosas Jr."
-        ]
-      },
-      {
-        "article_status": "singleton_event_intersection_unpromoted",
         "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-308-topuria-vs-holloway",
         "canonical_pair_fights": 0,
         "identity_text": "ibo aslan defeats rafael cerqueira via tko strikes at 51 of the first round",
-        "identity_text_source": "image_alt_title",
+        "identity_text_source": "image_alt",
         "image_alt": "Ibo Aslan defeats Rafael Cerqueira via TKO (strikes) at :51 of the first round",
         "image_url": "https://ufc.com/images/styles/inline/s3/2024-10/102624-aslan-cerqueira-ufc-308-scorecard.jpg?itok=MQB1fsF7",
         "matched_names": [
@@ -266,7 +448,7 @@
         "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-314-volkanovski-vs-lopes-kaseya-center-miami",
         "canonical_pair_fights": 0,
         "identity_text": "yair rodriguez defeats patricio pitbull by unanimous decision 30 27 30 27 30 27",
-        "identity_text_source": "image_alt_title",
+        "identity_text_source": "image_alt",
         "image_alt": "Yair Rodriguez defeats Patricio Pitbull by unanimous decision (30-27, 30-27, 30-27)",
         "image_url": "https://ufc.com/images/styles/inline/s3/2025-04/041225-Yair-Rodriguez-Official%20Scorecard%20Template_0.jpg?itok=BJEMeZrD",
         "matched_names": [
@@ -275,146 +457,16 @@
         ]
       },
       {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-blaydes-vs-daukaus-ufc-columbus",
+        "article_status": "singleton_event_intersection_unpromoted",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-adesanya-vs-imavov-saudi-arabia",
         "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night blaydes vs daukaus scorecards saldana vs souza",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Blaydes vs. Daukaus - Scorecards - Saldana vs. Souza",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20Fight%20Night%20Blaydes%20vs.%20Daukaus%20-%20Scorecards%20-%20Saldana%20vs.%20Souza.jpg?itok=MN28Uvsp",
+        "identity_text": "jasudavicius vs bueno silva",
+        "identity_text_source": "image_alt",
+        "image_alt": "UFC Fight Night: Adesanya vs. Imavov - Scorecards - Jasudavicius vs. Bueno Silva",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-02/UFC%20Fight%20Night-%20Adesanya%20vs.%20Imavov%20-%20Scorecards%20-%20Jasudavicius%20vs.%20Bueno%20Silva.png?itok=FdYKJDSk",
         "matched_names": [
-          "Curtis Blaydes",
-          "Luis Saldana"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-blaydes-vs-daukaus-ufc-columbus",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night blaydes vs daukaus scorecards maia vs fiorot",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Blaydes vs. Daukaus - Scorecards - Maia vs. Fiorot",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20Fight%20Night%20Blaydes%20vs.%20Daukaus%20-%20Scorecards%20-%20Maia%20vs.%20Fiorot.jpg?itok=B6V1QZgM",
-        "matched_names": [
-          "Curtis Blaydes",
-          "Manon Fiorot"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-blaydes-vs-daukaus-ufc-columbus",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night blaydes vs daukaus scorecards mcmann vs rosa",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Blaydes vs. Daukaus - Scorecards - McMann vs. Rosa",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20Fight%20Night%20Blaydes%20vs.%20Daukaus%20-%20Scorecards%20-%20McMann%20vs.%20Rosa.jpg?itok=plDqd735",
-        "matched_names": [
-          "Curtis Blaydes",
-          "Sara McMann"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-blaydes-vs-daukaus-ufc-columbus",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night blaydes vs daukaus scorecards magny vs griffin",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Blaydes vs. Daukaus - Scorecards - Magny vs. Griffin",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-03/01-UFC%20Fight%20Night%20Blaydes%20vs.%20Daukaus%20-%20Scorecards%20-%20Magny%20vs.%20Griffin.jpg?itok=3rijUntR",
-        "matched_names": [
-          "Curtis Blaydes",
-          "Neil Magny"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-blaydes-vs-daukaus-ufc-columbus",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night blaydes vs daukaus scorecards askarov vs kara france",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Blaydes vs. Daukaus - Scorecards - Askarov vs. Kara-France",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20Fight%20Night%20Blaydes%20vs.%20Daukaus%20-%20Scorecards%20-%20Askarov%20vs.%20Kara-France.jpg?itok=xAnkHHbJ",
-        "matched_names": [
-          "Curtis Blaydes",
-          "Askar Askarov"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-blaydes-vs-daukaus-ufc-columbus",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night blaydes vs daukaus scorecards brown vs barberena",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Blaydes vs. Daukaus - Scorecards - Brown vs. Barberena",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-03/1-UFC%20Fight%20Night%20Blaydes%20vs.%20Daukaus%20-%20Scorecards%20-%20Brown%20vs.%20Barberena.jpg?itok=HGIWojU_",
-        "matched_names": [
-          "Curtis Blaydes",
-          "Bryan Barberena"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-holm-vs-vieira-ufc-vegas-55",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night holm vs vieira scorecards morales vs medic",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Holm vs. Vieira - Scorecards - Morales vs. Medic",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20Fight%20Night%20Holm%20vs.%20Vieira%20-%20Scorecards%20-%20Morales%20vs.%20Medic.jpg?itok=IjO6xy1l",
-        "matched_names": [
-          "Holly Holm",
-          "Uros Medic"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-holm-vs-vieira-ufc-vegas-55",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night holm vs vieira scorecards almeida vs porter",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Holm vs. Vieira - Scorecards - Almeida vs. Porter",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20Fight%20Night%20Holm%20vs.%20Vieira%20-%20Scorecards%20-%20Almeida%20vs.%20Porter%5B1%5D.jpg?itok=vF-Y6tsu",
-        "matched_names": [
-          "Holly Holm",
-          "Parker Porter"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-holm-vs-vieira-ufc-vegas-55",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night holm vs vieira scorecards holmes vs amedovski",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Holm vs. Vieira - Scorecards - Holmes vs. Amedovski",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20Fight%20Night%20Holm%20vs.%20Vieira%20-%20Scorecards%20-%20Holmes%20vs.%20Amedovski.jpg?itok=X8upQ4jW",
-        "matched_names": [
-          "Alen Amedovski",
-          "Holly Holm"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-holm-vs-vieira-ufc-vegas-55",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night holm vs vieira scorecards njokuani vs todorovic",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Holm vs. Vieira - Scorecards - Njokuani vs. Todorovic",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20Fight%20Night%20Holm%20vs.%20Vieira%20-%20Scorecards%20-%20Njokuani%20vs.%20Todorovic.jpg?itok=a51VWqco",
-        "matched_names": [
-          "Dusko Todorovic",
-          "Holly Holm"
-        ]
-      },
-      {
-        "article_status": "no_resolvable_image_pair",
-        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-holm-vs-vieira-ufc-vegas-55",
-        "canonical_pair_fights": 0,
-        "identity_text": "ufc fight night holm vs vieira scorecards ponzinibbio vs pereira",
-        "identity_text_source": "image_alt_title",
-        "image_alt": "UFC Fight Night Holm vs. Vieira - Scorecards - Ponzinibbio vs. Pereira",
-        "image_url": "https://ufc.com/images/styles/inline/s3/2022-05/UFC%20Fight%20Night%20Holm%20vs.%20Vieira%20-%20Scorecards%20-%20Ponzinibbio%20vs.%20Pereira.jpg?itok=9z_0-MOI",
-        "matched_names": [
-          "Santiago Ponzinibbio",
-          "Holly Holm"
+          "Jasmine Jasudavicius",
+          "Francisco Bueno"
         ]
       },
       {
@@ -429,25 +481,220 @@
           "Manon Fiorot",
           "Francisco Bueno"
         ]
+      },
+      {
+        "article_status": "singleton_event_intersection_unpromoted",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-rozenstruik-vs-almeida",
+        "canonical_pair_fights": 0,
+        "identity_text": "bryan battle def gabriel green by ko right hand at 0 14 of round 1",
+        "identity_text_source": "image_alt",
+        "image_alt": "Bryan Battle def. Gabriel Green by KO (right hand) at 0:14 of Round 1",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2023-05/UFC%20Fight%20Night%20Rozenstruik%20vs.%20Almeida%20-%20Scorecards%20-%20Battle%20vs.%20Green.jpg?itok=EoCFgEZl",
+        "matched_names": [
+          "Gustavo Gabriel",
+          "Bryan Battle"
+        ]
+      },
+      {
+        "article_status": "singleton_event_intersection_unpromoted",
+        "article_url": "https://www.ufc.com/news/official-judges-scorecards-ufc-fight-night-yusuff-vs-barboza",
+        "canonical_pair_fights": 0,
+        "identity_text": "melissa dixon defeats irina alekseeva by unanimous decision 30 27 29 28 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "Melissa Dixon defeats Irina Alekseeva by unanimous decision (30-27, 29-28, 29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2023-10/10142023-Scorecards-Alekseeva-vs-Dixon.jpeg?itok=h1jh9eQU",
+        "matched_names": [
+          "Irina Alekseeva",
+          "Matt Dixon"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
+        "canonical_pair_fights": 0,
+        "identity_text": "for a road to ufc fight between shi ming and bruna brasil",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official scorecard for a Road To UFC fight between Shi Ming and Bruna Brasil",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-ming-vs-brasil.jpg?itok=xQbD5dIg",
+        "matched_names": [
+          "Bruna Brasil",
+          "Shi Ming"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
+        "canonical_pair_fights": 0,
+        "identity_text": "for a road to ufc fight between nyamjargal tumendemberel and terrance saeteurn",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official scorecard for a Road To UFC fight between Nyamjargal Tumendemberel and Terrance Saeteurn",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-tumendemberel-vs-saeteurn.jpg?itok=rHVN6oLw",
+        "matched_names": [
+          "Terrance Saeteurn",
+          "Nyamjargal Tumendemberel"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
+        "canonical_pair_fights": 0,
+        "identity_text": "for a road to ufc fight between sangwook kim and ren yawei",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official scorecard for a Road To UFC fight between SangWook Kim and Ren Yawei",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082226-rtu-official-scorecard-yawei-vs-kim.jpg?itok=TQTmw1yx",
+        "matched_names": [
+          "Ren Yawei",
+          "Sangwook Kim"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
+        "canonical_pair_fights": 0,
+        "identity_text": "for a road to ufc fight between dom mar fan and jaehyun park",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official scorecard for a Road To UFC fight between Dom Mar Fan and JaeHyun Park",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-mar-fan-vs-park.jpg?itok=vjbOMy-T",
+        "matched_names": [
+          "JaeHyun Park",
+          "Dom Mar Fan"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
+        "canonical_pair_fights": 0,
+        "identity_text": "for a road to ufc fight between sebastian szalay and changmin yoon",
+        "identity_text_source": "image_alt",
+        "image_alt": "Official scorecard for a Road To UFC fight between Sebastian Szalay and ChangMin Yoon",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-yoon-vs-szalay.jpg?itok=B3cQNrmj",
+        "matched_names": [
+          "ChangMin Yoon",
+          "Sebastian Szalay"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-live-results-season-4-semifinals-shi-vs-brasil-recaps-official-scorecards-interviews-shanghai",
+        "canonical_pair_fights": 0,
+        "identity_text": "reading kitt campbell defeats yunseong jang by split decision 28 29 29 28 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "scorecard reading: Kitt Campbell defeats YunSeong Jang by split decision (28-29, 29-28, 29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2025-08/082225-rtu-official-scorecard-kitt-campbell-vs-yunseong-jang.jpg?itok=6ip1su06",
+        "matched_names": [
+          "YunSeong Jang",
+          "Kitt Campbell"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-judges-scorecards-season-3-semifinals-episodes-5-6",
+        "canonical_pair_fights": 0,
+        "identity_text": "danni mccormack defeats yan qihui by decision 30 27 30 27 29 27",
+        "identity_text_source": "image_alt",
+        "image_alt": "Danni McCormack defeats Yan Qihui by decision (30-27, 30-27, 29-27)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082324-yan-qihui-danni-mccormack-official-scorecards.jpg?itok=giOctSyv",
+        "matched_names": [
+          "Danni McCormack",
+          "Yan Qihui"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-judges-scorecards-season-3-semifinals-episodes-5-6",
+        "canonical_pair_fights": 0,
+        "identity_text": "kiru singh sahota defeats ruel panales by unanimous decision 30 27 30 27 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "Kiru Singh Sahota defeats Ruel Pa\u00f1ales by unanimous decision (30-27, 30-27, 29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/image/2024-08/082324-kiru-sahota-ruel-panales-official-scorecards.jpg?itok=h-lUX5Ne",
+        "matched_names": [
+          "Ruel Panales",
+          "Kiru Sahota"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-judges-scorecards-season-3-semifinals-episodes-5-6",
+        "canonical_pair_fights": 0,
+        "identity_text": "suyoung you defeats daermisi zhawupasi by split decision 30 27 28 29 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "SuYoung You defeats Daermisi Zhawupasi by split decision (30-27, 28-29, 29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082324-daermisi-zhawupasi-suyoung-you-official-scorecards.jpg?itok=DXXSU17O",
+        "matched_names": [
+          "SuYoung You",
+          "Daermisi Zhawupasi"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-judges-scorecards-season-3-semifinals-episodes-5-6",
+        "canonical_pair_fights": 0,
+        "identity_text": "baergeng jieleyisi defeats tokitaki nakanishi by unanimous decision 29 28 29 28 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "Baergeng Jieleyisi defeats Tokitaki Nakanishi by unanimous decision (29-28, 29-28, 29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082324-tokitaka-nakanishi-baergeng-jieleyisi-official-scorecards.jpg?itok=B9qhKAPi",
+        "matched_names": [
+          "Baergeng Jieleyisi",
+          "Tokitaka Nakanishi"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-judges-scorecards-season-3-semifinals-episodes-5-6",
+        "canonical_pair_fights": 0,
+        "identity_text": "samandar murodov defeats jonathan piersma by unanimous decision 30 27 30 27 30 27",
+        "identity_text_source": "image_alt",
+        "image_alt": "Samandar Murodov defeats Jonathan Piersma by unanimous decision (30-27, 30-27, 30-27)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082324-jonathan-piersma-samandar-murodov-official-scorecards.jpg?itok=Dn2SZRtv",
+        "matched_names": [
+          "Jonathan Piersma",
+          "Samandar Murodov"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-judges-scorecards-season-3-semifinals-episodes-5-6",
+        "canonical_pair_fights": 0,
+        "identity_text": "feng xiaocan defeats miki motono by unanimous decision 30 27 29 28 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "Feng Xiaocan defeats Miki Motono by unanimous decision (30-27, 29-28, 29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082324-feng-xiaocan-miki-motono-official-scorecards.jpg?itok=viF-cHay",
+        "matched_names": [
+          "Feng Xiaocan",
+          "Miki Motono"
+        ]
+      },
+      {
+        "article_status": "no_resolvable_image_pair",
+        "article_url": "https://www.ufc.com/news/road-to-ufc-results-judges-scorecards-season-3-semifinals-episodes-5-6",
+        "canonical_pair_fights": 0,
+        "identity_text": "zhu kanjie defeats shin haraguchi by split decision 29 28 28 29 29 28",
+        "identity_text_source": "image_alt",
+        "image_alt": "Zhu Kanjie defeats Shin Haraguchi by split decision (29-28, 28-29, 29-28)",
+        "image_url": "https://ufc.com/images/styles/inline/s3/2024-08/082324-zhu-kangjie-shin-haraguchi-official-scorecards.jpg?itok=GCCar5IS",
+        "matched_names": [
+          "Youmin Shin",
+          "Shin Haraguchi"
+        ]
       }
     ]
   },
-  "generated_at_utc": "2026-08-22T23:47:26.527575Z",
+  "generated_at_utc": "2026-08-22T23:49:13.724645Z",
   "identity_text_source_counts": {
-    "image_alt_title": 2033,
-    "image_url_scorecard_suffix": 720,
-    "none": 296
+    "image_alt": 2073,
+    "image_url_scorecard_suffix": 698,
+    "none": 278
   },
   "image_matched_fighter_count_distribution": {
-    "0": 463,
-    "1": 508,
-    "2": 1706,
-    "3": 316,
-    "4": 54,
-    "5": 2
+    "0": 465,
+    "1": 540,
+    "2": 1740,
+    "3": 284,
+    "4": 19,
+    "5": 1
   },
-  "mapped_articles": 214,
-  "mapped_fights": 1493,
+  "mapped_articles": 218,
+  "mapped_fights": 1530,
   "output": "data/derived/identity/ufc_scorecard_identity_transport_candidate.csv",
-  "schema_version": 2
+  "schema_version": 3
 }
