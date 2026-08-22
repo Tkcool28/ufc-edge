@@ -1,7 +1,7 @@
 # Canonical Data Contract v0
 
 Status: **DATA-PHASE DRAFT — semantic contract, not feature contract**  
-Machine contract: `schemas/canonical_data_contract_v0.json` (`0.3.0-draft`)
+Machine contract: `schemas/canonical_data_contract_v0.json` (`0.4.0-draft`)
 
 Purpose: every accepted provider can have a different raw format, but downstream UFC Edge code gets one stable definition for each concept.
 
@@ -237,12 +237,14 @@ Historical use requires the observation to precede the target information cutoff
 
 ## `weigh_ins`
 
-One fight-specific fighter weigh-in attempt:
+One fight-specific fighter **official weigh-in observation**. A published official result may
+have an unknown scale-attempt number; unknown is preserved as `null`, never fabricated as 1.
 
+- `weigh_in_observation_id` — stable canonical observation ID
 - `fight_id`
 - `fighter_id`
 - `weigh_in_date`
-- `attempt_number`
+- `attempt_number` — nullable; populated only when the source explicitly identifies the attempt
 - `scale_weight_lbs`
 - `contract_limit_lbs`
 - `missed_weight`
@@ -251,7 +253,11 @@ One fight-specific fighter weigh-in attempt:
 - `purse_penalty_pct`
 - `official_status_text`
 
-Roster/listed weight is not a substitute for scale weight.
+Primary key: `weigh_in_observation_id`.
+
+Roster/listed weight is not a substitute for scale weight. Page-local annotation markers are
+not global semantic codes: miss/penalty/attempt fields may be populated only from explicit
+source language tied to that observation.
 
 ## `judge_round_scores`
 

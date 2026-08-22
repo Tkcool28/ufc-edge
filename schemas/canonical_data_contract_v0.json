@@ -7,7 +7,7 @@
     "timestamp": "ISO-8601 UTC",
     "weight": "pounds"
   },
-  "contract_version": "0.3.0-draft",
+  "contract_version": "0.4.0-draft",
   "global_rules": {
     "display_name_only_identity_is_trusted": false,
     "missing_is_not_zero": true,
@@ -988,7 +988,8 @@
       "fields": {
         "attempt_number": {
           "min": 1,
-          "nullable": false,
+          "nullable": true,
+          "semantics": "scale attempt number only when source-explicit; null means unknown, not first attempt",
           "type": "integer"
         },
         "catchweight_bout": {
@@ -1041,13 +1042,16 @@
         "weigh_in_date": {
           "nullable": true,
           "type": "date"
+        },
+        "weigh_in_observation_id": {
+          "nullable": false,
+          "semantics": "stable canonical ID for one source-supported fight-specific fighter weigh-in observation",
+          "type": "string"
         }
       },
-      "grain": "one fighter fight-specific weigh-in attempt",
+      "grain": "one fight-specific fighter official weigh-in observation; scale-attempt number may be unknown",
       "primary_key": [
-        "fight_id",
-        "fighter_id",
-        "attempt_number"
+        "weigh_in_observation_id"
       ]
     }
   }
