@@ -1,9 +1,9 @@
 {
-  "audited_at_utc": "2026-08-22T23:05:43.029553Z",
-  "exit_code": 1,
-  "github_run_id": "32604260011",
-  "output": "Traceback (most recent call last):\n  File \"/home/runner/work/ufc-edge/ufc-edge/pipelines/validate_source_precedence.py\", line 75, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/home/runner/work/ufc-edge/ufc-edge/pipelines/validate_source_precedence.py\", line 31, in main\n    raise RuntimeError(f\"Unsupported precedence status for {family}: {status!r}\")\nRuntimeError: Unsupported precedence status for fight_specific_weigh_ins: 'acquired_qa_pending'\n",
-  "passed": false,
+  "audited_at_utc": "2026-08-22T23:06:07.622272Z",
+  "exit_code": 0,
+  "github_run_id": "32604280256",
+  "output": "SOURCE_PRECEDENCE_OK version=0.2.0-draft families=9 active=7 pending_acquisition=0 acquired_qa_pending=2 sources=8\n",
+  "passed": true,
   "schema_version": 1,
-  "trigger_sha": "0df0d1144590b110a9a8d6f6a9aa4c8c3b2bb2a8"
+  "trigger_sha": "b8d45ea2c4bb266a2862a24c6dc0a7b1ed87a8e1"
 }
