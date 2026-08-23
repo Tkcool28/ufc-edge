@@ -1,5 +1,6 @@
 name: Audit UFC weigh-in canonical readiness
 
+# Registered on main; trigger version 1.
 on:
   push:
     branches: [main]
