@@ -32,3 +32,5 @@ jobs:
           git commit -m "Fix fighter state builder Python literals [skip ci]" || true
           git pull --rebase origin "${{ github.ref_name }}"
           git push origin "HEAD:${{ github.ref_name }}"
+
+# Registration trigger.
