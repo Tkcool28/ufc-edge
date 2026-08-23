@@ -1,5 +1,6 @@
 name: Audit external MMA UFC misses
 
+# Registered on main; trigger version 1.
 on:
   push:
     branches: [main]
