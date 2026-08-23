@@ -4,7 +4,7 @@
     "canonical_rows_written": false,
     "required_next": "If trusted fighters have zero canonical participation while a same-name canonical identity carries fights, repair identity before promotion. Otherwise treat remaining absent pairs as candidate canonical fight omissions requiring source-level verification."
   },
-  "generated_at_utc": "2026-08-23T00:09:18.938817Z",
+  "generated_at_utc": "2026-08-23T00:09:31.472687Z",
   "involved_canonical_fighters": 34,
   "involved_with_same_name_canonical_duplicates": 5,
   "involved_with_zero_canonical_fight_participation": 7,

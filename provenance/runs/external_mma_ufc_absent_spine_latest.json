@@ -1,10 +1,10 @@
 {
   "audit": "external_mma_ufc_absent_spine",
-  "completed_at_utc": "2026-08-23T00:09:18.978535Z",
+  "completed_at_utc": "2026-08-23T00:09:31.545778Z",
   "exit_code": 0,
-  "github_run_id": "32607104210",
-  "log": "provenance/runs/external_mma_ufc_absent_spine_32607104210.log",
+  "github_run_id": "32607116650",
+  "log": "provenance/runs/external_mma_ufc_absent_spine_32607116650.log",
   "schema_version": 1,
   "status": "success",
-  "trigger_sha": "2e7f990b27e747b68ce77ce742d90a98757d8879"
+  "trigger_sha": "ed7ceeb4feb89c5acc6c3ec2f1352566a70a46b6"
 }
