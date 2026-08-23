@@ -1,0 +1,74 @@
+name: F00 Feature Contract
+
+on:
+  pull_request:
+    paths:
+      - 'features/**'
+      - 'src/ufc_edge/features/**'
+      - 'tests/features/**'
+      - '.github/workflows/f00-feature-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate feature contract
+        env:
+          PYTHONPATH: src
+        run: python -m ufc_edge.features.contract
+
+      - name: Run F00 contract tests
+        env:
+          PYTHONPATH: src
+        run: python -m unittest discover -s tests/features -p 'test_*.py' -v
+
+      - name: Check whitespace
+        run: git diff --check origin/main...HEAD
+
+      - name: Verify F00 did not modify frozen DATA
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            data/canonical/v0 \
+            schemas/canonical_data_contract_v0.json \
+            schemas/canonical_data_contract_v0.md \
+            schemas/source_field_map_v0.json \
+            schemas/source_precedence_v0.json \
+            provenance/data_phase_freeze_v0.json
+
+      - name: Verify F00 did not modify H00 or H01 implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            handicap \
+            src/ufc_edge/handicap \
+            src/ufc_edge/handicap_bridge \
+            tests/handicap \
+            tests/handicap_bridge \
+            .github/workflows/h01-handicap-request.yml
+
+      - name: Reject newly generated feature matrices or run directories
+        shell: bash
+        run: |
+          set -euo pipefail
+          added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
+          if printf '%s\n' "$added" | grep -E '(^|/)(runs?|output|artifacts)/|\.(csv|parquet|feather)$' | grep -v '^$'; then
+            echo 'F00 must not add generated matrices, run directories, or data artifacts.' >&2
+            exit 1
+          fi
