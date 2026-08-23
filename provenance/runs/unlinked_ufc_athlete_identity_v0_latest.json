@@ -1,0 +1,10 @@
+{
+  "audit": "unlinked_ufc_athlete_identity_v0",
+  "completed_at_utc": "2026-08-23T01:39:16.876573Z",
+  "exit_code": 1,
+  "github_run_id": "32610871343",
+  "log": "provenance/runs/unlinked_ufc_athlete_identity_v0_32610871343.log",
+  "schema_version": 1,
+  "status": "failed",
+  "trigger_sha": "f5961a493b017bb484056cdd7c84becf447d6f93"
+}
