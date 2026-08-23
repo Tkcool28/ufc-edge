@@ -1,10 +1,10 @@
 {
   "build": "canonical_external_mma_v0",
-  "completed_at_utc": "2026-08-23T00:21:54.688002Z",
+  "completed_at_utc": "2026-08-23T00:22:04.549007Z",
   "exit_code": 2,
-  "github_run_id": "32607642365",
-  "log": "provenance/runs/canonical_external_mma_v0_32607642365.log",
+  "github_run_id": "32607647077",
+  "log": "provenance/runs/canonical_external_mma_v0_32607647077.log",
   "schema_version": 1,
   "status": "failed",
-  "trigger_sha": "56ae1da195c1e81e479e6eab6c6db6a2c8381c29"
+  "trigger_sha": "334b7a726a00f23cb698e86f7acc560a53f7fac6"
 }

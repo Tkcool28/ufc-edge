@@ -1,0 +1,4 @@
+CONTRACT_OK version=0.4.0-draft tables=13 fields=152 missing_is_not_zero=true round_zero_actual=false sig_splits=true
+SOURCE_MAP_OK version=0.4.0-draft mappings=144 statuses={"provisional": 34, "rejected": 6, "unresolved": 27, "verified": 77} source_count=8
+SOURCE_PRECEDENCE_OK version=0.2.0-draft families=9 active=7 pending_acquisition=0 acquired_qa_pending=2 sources=8
+python: can't open file '/home/runner/work/ufc-edge/ufc-edge/pipelines/build_canonical_external_mma_v0.py': [Errno 2] No such file or directory
