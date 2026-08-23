@@ -1,0 +1,54 @@
+name: Patch external MMA builder header check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/patch-external-mma-builder-header.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - name: Apply exact fail-closed patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("pipelines/build_canonical_external_mma_v0.py")
+          text = p.read_text(encoding="utf-8")
+          old = '''    if list(current_events[0]) != EVENT_FIELDS or list(current_fights[0]) != FIGHT_FIELDS:
+              raise RuntimeError("canonical event/fight header drift")
+          if list(current_identity[0]) != IDENTITY_FIELDS or list(current_prov[0]) != PROV_FIELDS:
+              raise RuntimeError("canonical identity/provenance header drift")
+          '''
+          new = '''    def csv_header(path: Path) -> list[str]:
+              with path.open("r", encoding="utf-8-sig", newline="") as fh:
+                  return list(csv.DictReader(fh).fieldnames or [])
+
+          if csv_header(EVENTS) != EVENT_FIELDS or csv_header(FIGHTS) != FIGHT_FIELDS:
+              raise RuntimeError("canonical event/fight header drift")
+          if csv_header(IDENTITY) != IDENTITY_FIELDS or csv_header(PROVENANCE) != PROV_FIELDS:
+              raise RuntimeError("canonical identity/provenance header drift")
+          '''
+          if old not in text:
+              raise SystemExit("exact target block not found; refusing broad patch")
+          p.write_text(text.replace(old, new, 1), encoding="utf-8")
+          PY
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pipelines/build_canonical_external_mma_v0.py
+          git commit -m "Fix empty canonical provenance header validation" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
