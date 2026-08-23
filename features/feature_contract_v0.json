@@ -1,0 +1,163 @@
+{
+  "contract_version": "0.1.0-draft",
+  "phase": "FEATURES",
+  "status": "active_design",
+  "data_baseline": {
+    "completion_marker": "DATA_PHASE_COMPLETE.md",
+    "freeze_file": "provenance/data_phase_freeze_v0.json",
+    "required_freeze_status": "complete",
+    "rule": "Feature builders must verify the frozen DATA baseline before materialization. Any changed frozen input requires an explicit post-DATA migration, not silent consumption."
+  },
+  "fighter_state_primitives": {
+    "grain": "one pre-fight fighter state row for each participant in each canonical UFC target fight",
+    "target_scope": {
+      "promotion": "UFC",
+      "rows_per_target_fight": 2
+    },
+    "information_cutoff": {
+      "rule": "A historical fight is eligible only when its canonical event_date is strictly earlier than the target fight event_date.",
+      "same_day_policy": "Same-day fights are excluded as prior evidence because canonical v0 does not freeze trustworthy intra-event bout chronology for early tournament cards.",
+      "future_rows_allowed": false
+    },
+    "history_scope": {
+      "outcomes_and_experience": "All canonical promotions may contribute when event_date is strictly before target_event_date.",
+      "round_stat_primitives": "Only prior fights with a complete paired canonical fighter_round_stats surface and valid canonical round exposure timing contribute round-stat primitives.",
+      "external_fight_rule": "Bellator/ONE canonical history can contribute experience/outcome context but cannot fabricate UFC-style round statistics that are absent from canonical data."
+    },
+    "windows": {
+      "career": {
+        "definition": "all eligible prior history"
+      },
+      "recent3": {
+        "definition": "up to the three most recent eligible prior stat-observed fights",
+        "boundary_tie_rule": "If more fights share the boundary event_date than can be selected without inventing same-day order, recent3 stat primitives are null and recent3_boundary_ambiguous=true."
+      },
+      "recent5": {
+        "definition": "up to the five most recent eligible prior stat-observed fights",
+        "boundary_tie_rule": "If more fights share the boundary event_date than can be selected without inventing same-day order, recent5 stat primitives are null and recent5_boundary_ambiguous=true."
+      },
+      "ewm365": {
+        "definition": "all eligible prior stat-observed fights weighted by calendar recency",
+        "half_life_days": 365,
+        "weight_formula": "2 ** (-days_before_target / 365)",
+        "note": "Mechanical baseline only; this is not a tuned model hyperparameter. Same-day historical fights receive equal weight because no ordering is inferred."
+      }
+    },
+    "null_rules": {
+      "no_prior_history": "counts are observed zeros; rate-ready statistical numerators/denominators remain zero but downstream ratios with zero denominator must be null",
+      "missing_static_measurement": "null",
+      "ambiguous_recent_window": "window primitives null; ambiguity flag true",
+      "missing_or_incomplete_round_pair": "fight excluded from stat windows, preserved in audit counts; never treated as zero statistics"
+    },
+    "static_context_fields": [
+      "fighter_age_years",
+      "fighter_height_cm",
+      "fighter_reach_cm",
+      "fighter_leg_reach_cm",
+      "fighter_stance",
+      "target_weight_class",
+      "target_scheduled_rounds",
+      "target_title_bout"
+    ],
+    "observed_history_fields": [
+      "observed_prior_fight_count",
+      "observed_prior_ufc_fight_count",
+      "observed_prior_external_fight_count",
+      "observed_prior_win_count",
+      "observed_prior_loss_count",
+      "observed_prior_draw_count",
+      "observed_prior_no_contest_count",
+      "observed_prior_ko_win_count",
+      "observed_prior_submission_win_count",
+      "observed_prior_decision_win_count",
+      "observed_prior_ko_loss_count",
+      "observed_prior_submission_loss_count",
+      "observed_prior_decision_loss_count",
+      "observed_prior_r1_finish_win_count",
+      "observed_prior_r2_finish_win_count",
+      "observed_prior_r3plus_finish_win_count",
+      "observed_prior_r1_finish_loss_count",
+      "observed_prior_r2plus_finish_loss_count",
+      "days_since_last_fight",
+      "current_win_streak",
+      "current_loss_streak",
+      "history_sequence_ambiguous",
+      "same_day_other_fights_excluded"
+    ],
+    "stat_primitive_suffixes": [
+      "stat_fight_count",
+      "exposure_sec",
+      "sig_landed",
+      "sig_attempted",
+      "opp_sig_landed",
+      "opp_sig_attempted",
+      "head_landed",
+      "head_attempted",
+      "opp_head_landed",
+      "opp_head_attempted",
+      "body_landed",
+      "body_attempted",
+      "opp_body_landed",
+      "opp_body_attempted",
+      "leg_landed",
+      "leg_attempted",
+      "opp_leg_landed",
+      "opp_leg_attempted",
+      "distance_landed",
+      "distance_attempted",
+      "opp_distance_landed",
+      "opp_distance_attempted",
+      "clinch_landed",
+      "clinch_attempted",
+      "opp_clinch_landed",
+      "opp_clinch_attempted",
+      "ground_landed",
+      "ground_attempted",
+      "opp_ground_landed",
+      "opp_ground_attempted",
+      "knockdowns",
+      "knockdowns_suffered",
+      "takedowns_landed",
+      "takedowns_attempted",
+      "opp_takedowns_landed",
+      "opp_takedowns_attempted",
+      "control_sec",
+      "control_sec_allowed",
+      "submission_attempts",
+      "submission_attempts_faced",
+      "reversals",
+      "reversals_faced"
+    ],
+    "stat_window_prefixes": [
+      "career",
+      "recent3",
+      "recent5",
+      "ewm365"
+    ],
+    "lineage": {
+      "path": "features/v0/fighter_state_history_lineage.csv",
+      "rule": "Every included historical fight is emitted with target fight, fighter, history date, promotion, stat eligibility, recent-window membership, and EWM weight so leakage can be independently audited."
+    },
+    "output": "features/v0/fighter_state_primitives.csv",
+    "manifest": "features/v0/manifest.json"
+  },
+  "downstream_order": [
+    "striking_environment",
+    "wrestling_environment",
+    "submission_environment",
+    "durability",
+    "cardio_persistence",
+    "finish_profile",
+    "context",
+    "opponent_adjustment",
+    "matchup_interactions"
+  ],
+  "global_feature_rules": {
+    "missing_is_not_zero": true,
+    "no_future_leakage": true,
+    "market_prices_are_core_feature_inputs": false,
+    "shared_feature_definition_may_be_silently_redefined_by_model": false,
+    "source_raw_qa_only_data_may_feed_shared_features": false,
+    "percentages_and_rates_must_retain_or_document_numerator_and_denominator": true
+  }
+}
