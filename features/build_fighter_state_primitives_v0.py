@@ -559,12 +559,12 @@ def main() -> int:
             {"path": str(LINEAGE.relative_to(ROOT)), "bytes": LINEAGE.stat().st_size, "sha256": sha256(LINEAGE)},
         ],
         "rules": {
-            "missing_is_not_zero": true,
-            "same_day_order_inferred": false,
-            "external_fights_can_supply_missing_round_stats": false,
-            "recent_boundary_ties_fail_closed": true,
-            "ewm_uses_calendar_days_not_fabricated_fight_order": true,
-            "market_data_used": false
+            "missing_is_not_zero": True,
+            "same_day_order_inferred": False,
+            "external_fights_can_supply_missing_round_stats": False,
+            "recent_boundary_ties_fail_closed": True,
+            "ewm_uses_calendar_days_not_fabricated_fight_order": True,
+            "market_data_used": False
         }
     }
     MANIFEST.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -575,11 +575,11 @@ def main() -> int:
         "target_date_max": rows_out[-1]["target_event_date"] if rows_out else None,
         "max_included_history_event_date": max_lineage_date.isoformat() if max_lineage_date else None,
         "decision": {
-            "fighter_state_primitives_materialized": true,
-            "safe_for_feature_family_builders": true,
-            "opponent_adjustment_built": false,
-            "matchup_interactions_built": false,
-            "model_training_started": false
+            "fighter_state_primitives_materialized": True,
+            "safe_for_feature_family_builders": True,
+            "opponent_adjustment_built": False,
+            "matchup_interactions_built": False,
+            "model_training_started": False
         }
     }
     AUDIT_JSON.parent.mkdir(parents=True, exist_ok=True)
