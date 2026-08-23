@@ -79,3 +79,5 @@ jobs:
           git commit -m "Record DATA phase final-gate failure [skip ci]" || true
           git pull --rebase origin "${{ github.ref_name }}";git push origin "HEAD:${{ github.ref_name }}"
           exit "$code"
+
+# Registration trigger: final closeout workflow is now present on main.
