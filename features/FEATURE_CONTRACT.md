@@ -326,24 +326,25 @@ F00 performed the required self-review before expanding the catalog and made the
 13. **Validator wording was initially too literal.** GitHub CI rejected semantically valid `strictly-before`/`strictly pre-H` wording; the validator now normalizes equivalent strict-prior wording without weakening chronology.
 14. **Simulator training labels needed an explicit boundary.** Realized same-fight round outcomes may be component-training labels after predictor construction, but simulator components cannot be baseline Model 0/1/tree requirements and cannot enter the same fight's pre-fight state.
 
+15. **Elapsed-exposure contradiction caught at merge gate.** The initial draft deferred historical total fight duration while still marking multiple per-minute/per-second features materializable. Master review correctly identified that `fighter_round_stats` has no elapsed-round field and that F01 would otherwise need an unstated standard-round assumption. F00 now defers the full time-dependent feature chain, adds an explicit canonical-v0 exposure gate, and validates that no time-denominator concept can become materializable without an allowed source plus eligibility/provenance proof.
+
 After these corrections, fighter state and matchup interactions are separate; targets are isolated; predictive features are as-of; rates declare denominators; zero/missing are distinguishable; shrinkage/debutants are explicit; opponent adjustment is chronological; orientation is provider-neutral; external promotions are deliberate; coarse positional fields remain coarse; profiles/rankings are point-in-time; no core concept requires raw/provider layouts; variants are opt-in; and the repository remains understandable from this document plus the machine-readable contract files.
-16. **Elapsed-exposure contradiction caught at merge gate.** The initial draft deferred historical total fight duration while still marking multiple per-minute/per-second features materializable. Master review correctly identified that `fighter_round_stats` has no elapsed-round field and that F01 would otherwise need an unstated standard-round assumption. F00 now defers the full time-dependent feature chain, adds an explicit canonical-v0 exposure gate, and validates that no time-denominator concept can become materializable without an allowed source plus eligibility/provenance proof.
 
 ## 19. Answers to the 17 F00 architecture questions
 
 1. **What is fighter state?** Opponent-independent pre-fight historical state at a declared cutoff.
 2. **What is a matchup feature?** Deterministic interaction of two independent fighter states/context.
 3. **What historical windows exist?** Career plus opt-in last3, last5, 365-day EWMA, and sparse opt-in round bands.
-4. **How are rates normalized?** Explicit numerator/denominator/eligibility with no implicit denominator substitution.
-5. **How is exposure represented?** Elapsed seconds, attempts/opportunities, landed/absorbed events, or fight counts according to concept.
+4. **How are rates normalized?** Explicit numerator/denominator/eligibility with no implicit substitution; only denominators proven safe by the current DATA/feature contract are materializable.
+5. **How is exposure represented?** Under canonical v0, materializable exposure is attempts/opportunities, compatible event totals, landed/absorbed events, or eligible fight counts. Elapsed fight/round exposure is reserved and `DEFERRED` until a contract-safe source exists.
 6. **How are small samples shrunk?** Versioned population-prior shrinkage by weight class when supported, otherwise global.
 7. **How are debutants handled?** Known zero personal support plus population prior, never conflated with missing history.
 8. **How is missingness represented?** Observed positive, observed zero, missing, not applicable, insufficient exposure.
 9. **How is opponent adjustment defined?** Historical actual-minus-expected residual using the opponent's strictly pre-contest state.
 10. **How is fighter ordering defined?** Lexicographically sorted canonical fighter IDs; no provider/red-blue meaning.
-11. **Which concepts are V1?** Foundational striking, wrestling/control/submission activity, durability/pace/history, context, and a small set of deterministic matchup interactions.
-12. **Which wait for V2?** Chronological opponent-adjusted creation/suppression families.
-13. **Which are simulator-specific?** Event intensities/probabilities and persistence components; no simulator is built in F00.
+11. **Which concepts are V1?** Only concepts with contract-safe canonical-v0 denominators: attempt-conditioned striking/wrestling efficiencies, event compositions, method/durability history, context, and safe derived/matchup features. Time-normalized activity, pace, control-share, submission/reversal-rate concepts and their dependents are `DEFERRED`.
+12. **Which wait for V2?** `oa_takedown_creation` remains the active attempt-denominated V2 concept. Time-normalized opponent-adjusted striking/control/submission residuals are `DEFERRED` until elapsed exposure becomes contract-safe.
+13. **Which are simulator-specific?** `sim_takedown_success_probability` remains the active attempt-denominated simulator component. Time-intensity, interval-hazard, and persistence components are `DEFERRED`; no simulator is built in F00.
 14. **Which are research-only?** Rankings/profile narrative, camp/coaching, injury, short-notice, qualitative weigh-in, travel and similar human-handicap inputs.
 15. **Which are unsupported?** Exact sequence/state quantities not observed canonically, including exact KD recovery/conversion and exact ground/standing time.
 16. **How will a later materializer consume this?** Load/validate the versioned catalog, build PIT fighter states, orient/join matchups, create allowed variants, attach targets only for training, and emit a versioned manifest.
