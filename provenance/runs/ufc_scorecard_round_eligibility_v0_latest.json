@@ -1,10 +1,10 @@
 {
   "audit": "ufc_scorecard_round_eligibility_v0",
-  "completed_at_utc": "2026-08-23T01:06:22.103215Z",
+  "completed_at_utc": "2026-08-23T01:19:54.522434Z",
   "exit_code": 0,
-  "github_run_id": "32609534269",
-  "log": "provenance/runs/ufc_scorecard_round_eligibility_v0_32609534269.log",
+  "github_run_id": "32610084566",
+  "log": "provenance/runs/ufc_scorecard_round_eligibility_v0_32610084566.log",
   "schema_version": 1,
   "status": "success",
-  "trigger_sha": "f718355b2da9ea4c985003c76191364237940c26"
+  "trigger_sha": "07b72e824a9e12336f4d4ba84b0b2f4af6b21418"
 }

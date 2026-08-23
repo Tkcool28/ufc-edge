@@ -1,24 +1,24 @@
 {
   "decision": {
     "canonical_judge_round_scores_written": false,
-    "required_next": "Use expected_scored_rounds as a hard upper bound for any OCR score parser. Review any unresolved fight timing before emitting score candidates.",
-    "round_eligibility_can_guard_future_parser": false,
-    "unfinished_stoppage_round_is_score_eligible": false
+    "ordinary_stoppage_unfinished_round_is_score_eligible": false,
+    "required_next": "Use expected_scored_rounds as a hard upper bound. A partial finish round is eligible only where official scorecard/page evidence explicitly establishes a technical decision.",
+    "round_eligibility_can_guard_future_parser": true,
+    "source_verified_technical_decision_partial_round_is_score_eligible": true,
+    "technical_decision_requires_explicit_official_scorecard_evidence": true
   },
   "eligibility_status_counts": {
-    "eligible": 573,
-    "review": 2
+    "eligible": 575
   },
-  "expected_completed_round_count_distribution": {
+  "expected_completed_or_technical_scored_round_count_distribution": {
     "0": 152,
     "1": 95,
     "2": 50,
-    "3": 245,
+    "3": 247,
     "4": 2,
     "5": 29
   },
-  "fights_with_zero_expected_completed_rounds": 152,
-  "generated_at_utc": "2026-08-23T01:06:22.041746Z",
+  "generated_at_utc": "2026-08-23T01:19:54.484987Z",
   "method_counts": {
     "DECISION": 274,
     "DQ": 1,
@@ -28,37 +28,56 @@
     "SUBMISSION": 104
   },
   "output": "data/derived/qa/ufc_scorecard_round_eligibility_v0.csv",
-  "review_examples": [
+  "review_examples": [],
+  "schema_version": 2,
+  "scorecard_fights": 575,
+  "scorecard_images": 578,
+  "source_verified_technical_decisions": 2,
+  "technical_decision_examples": [
     {
-      "eligibility_status": "review",
+      "eligibility_status": "eligible",
       "event_date": "2021-04-17",
       "event_name": "UFC Fight Night: Whittaker vs. Gastelum",
-      "expected_scored_rounds": "",
+      "expected_scored_rounds": "1,2,3",
       "fight_id": "3fc07dd9-4d2b-5734-816e-45d12bfc4961",
       "finish_round": "3",
       "finish_time_sec": "65",
       "method": "DECISION",
-      "reason": "decision/draw carries sub-300 finish_time_sec; timing semantics need review",
+      "reason": "source-explicit technical decision scores rounds through the partial technical-decision round",
       "result": "win_loss",
       "scheduled_rounds": "3",
-      "scorecard_image_count": 1
+      "scorecard_image_count": 1,
+      "technical_decision_evidence": "archived_official_image_ocr"
     },
     {
-      "eligibility_status": "review",
+      "eligibility_status": "eligible",
       "event_date": "2022-04-16",
       "event_name": "UFC Fight Night: Luque vs. Muhammad",
-      "expected_scored_rounds": "",
+      "expected_scored_rounds": "1,2,3",
       "fight_id": "d3198a34-c07b-502f-af92-d2face325172",
       "finish_round": "3",
       "finish_time_sec": "236",
       "method": "DECISION",
-      "reason": "decision/draw carries sub-300 finish_time_sec; timing semantics need review",
+      "reason": "source-explicit technical decision scores rounds through the partial technical-decision round",
       "result": "win_loss",
       "scheduled_rounds": "3",
-      "scorecard_image_count": 1
+      "scorecard_image_count": 1,
+      "technical_decision_evidence": "archived_official_image_ocr;official_page_image_text"
+    },
+    {
+      "eligibility_status": "eligible",
+      "event_date": "2025-06-14",
+      "event_name": "UFC Fight Night: Usman vs. Buckley",
+      "expected_scored_rounds": "1,2",
+      "fight_id": "eb9431ad-0b0c-555a-9098-2d6eb61baead",
+      "finish_round": "3",
+      "finish_time_sec": "36",
+      "method": "NO_CONTEST",
+      "reason": "only fully completed rounds before stoppage round are score-eligible",
+      "result": "draw",
+      "scheduled_rounds": "3",
+      "scorecard_image_count": 1,
+      "technical_decision_evidence": "official_page_image_text"
     }
-  ],
-  "schema_version": 1,
-  "scorecard_fights": 575,
-  "scorecard_images": 578
+  ]
 }
