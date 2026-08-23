@@ -12,14 +12,14 @@ from typing import Iterable, Mapping
 class FightStats:
     fight_id: str
     numerators: Mapping[str, float]
-    denominator: float
+    denominators: Mapping[str, float]
     observation_count: int
 
 
 @dataclass(frozen=True)
 class AggregateStats:
     numerators: dict[str, float]
-    denominator: float
+    denominators: dict[str, float]
     fight_count: int
     observation_count: int
     fight_ids: tuple[str, ...]
@@ -41,7 +41,7 @@ def aggregate_fight_stats(
     weights: Mapping[str, float],
 ) -> AggregateStats:
     numerators: dict[str, float] = {}
-    denominator = 0.0
+    denominators: dict[str, float] = {}
     fight_ids: list[str] = []
     observation_count = 0
     for item in stats:
@@ -50,14 +50,17 @@ def aggregate_fight_stats(
         weight = float(weights[item.fight_id])
         if weight < 0 or not math.isfinite(weight):
             raise ValueError(f"invalid history weight for {item.fight_id}: {weight}")
-        denominator += weight * item.denominator
-        for component, numerator in item.numerators.items():
-            numerators[component] = numerators.get(component, 0.0) + weight * numerator
+        components = set(item.numerators) | set(item.denominators)
+        if set(item.numerators) != set(item.denominators):
+            raise ValueError(f"numerator/denominator component mismatch for {item.fight_id}: {sorted(components)}")
+        for component in components:
+            numerators[component] = numerators.get(component, 0.0) + weight * item.numerators[component]
+            denominators[component] = denominators.get(component, 0.0) + weight * item.denominators[component]
         observation_count += item.observation_count
         fight_ids.append(item.fight_id)
     return AggregateStats(
         numerators=numerators,
-        denominator=denominator,
+        denominators=denominators,
         fight_count=len(set(fight_ids)),
         observation_count=observation_count,
         fight_ids=tuple(sorted(set(fight_ids))),
@@ -110,11 +113,7 @@ def shrink_component(
 
 
 def minimum_support(feature: Mapping[str, object]) -> float | None:
-    """Extract the contract's stated raw-display support threshold when numeric.
-
-    The catalog remains authoritative; this helper does not invent thresholds. It
-    only reads the first explicit number in minimum_sample for audit-state labeling.
-    """
+    """Read the first explicit numeric threshold from minimum_sample for audit state."""
     text = str(feature["minimum_sample"])
     match = re.search(r"\b(\d+(?:\.\d+)?)\b", text)
     return float(match.group(1)) if match else None
