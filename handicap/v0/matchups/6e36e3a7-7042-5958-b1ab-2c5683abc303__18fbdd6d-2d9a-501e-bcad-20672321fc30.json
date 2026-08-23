@@ -16612,8 +16612,8 @@
         "note": "Use canonical table primary keys/row keys to audit detailed field provenance.",
         "path": "data/canonical/v0/field_provenance.csv"
       },
-      "generated_at_utc": "2026-08-23T03:55:00.845497Z",
-      "generator_commit": "92d5c35c18c3da143df275f67d90555efb315019",
+      "generated_at_utc": "2026-08-23T03:57:09.567521Z",
+      "generator_commit": "53576027c192e9aa525bbcf4142ea9d8f268f699",
       "generator_version": "h00-0.1.0",
       "information_cutoff": "2026-08-23T03:30:00Z",
       "packet_schema_version": "0.1.0",
@@ -23721,7 +23721,7 @@
         "weight_class": "Featherweight"
       }
     ],
-    "substantive_sha256": "e1eab7396c77bc05ec8c97d55bafdaf1a75670f9e92669bc49db26b4567ce551",
+    "substantive_sha256": "d49708e9733252642d8fad77af61742c95e20366e3be68feb45b5c999929dfd3",
     "weigh_in_history": [
       {
         "attempt_number": null,
@@ -36728,8 +36728,8 @@
         "note": "Use canonical table primary keys/row keys to audit detailed field provenance.",
         "path": "data/canonical/v0/field_provenance.csv"
       },
-      "generated_at_utc": "2026-08-23T03:55:00.845497Z",
-      "generator_commit": "92d5c35c18c3da143df275f67d90555efb315019",
+      "generated_at_utc": "2026-08-23T03:57:09.567521Z",
+      "generator_commit": "53576027c192e9aa525bbcf4142ea9d8f268f699",
       "generator_version": "h00-0.1.0",
       "information_cutoff": "2026-08-23T03:30:00Z",
       "packet_schema_version": "0.1.0",
@@ -42101,7 +42101,7 @@
         "weight_class": "Featherweight"
       }
     ],
-    "substantive_sha256": "36001b5cfe593c4b499825518f08c0344be3a78264fb006edf2bf9617c24b8d4",
+    "substantive_sha256": "a89b65d9f6e3e78c3e8f13b610de57ab0e3db8d2b3ecb47ba874b6004577dbaf",
     "weigh_in_history": [
       {
         "attempt_number": null,
@@ -42744,8 +42744,8 @@
       "id": "18fbdd6d-2d9a-501e-bcad-20672321fc30",
       "name": "Dustin Poirier"
     },
-    "generated_at_utc": "2026-08-23T03:55:00.845497Z",
-    "generator_commit": "92d5c35c18c3da143df275f67d90555efb315019",
+    "generated_at_utc": "2026-08-23T03:57:09.567521Z",
+    "generator_commit": "53576027c192e9aa525bbcf4142ea9d8f268f699",
     "generator_version": "h00-0.1.0",
     "information_cutoff": "2026-08-23T03:30:00Z",
     "packet_schema_version": "0.1.0",
@@ -43932,5 +43932,5 @@
       "optional_dossier_path": "handicap/v0/fighters/f8e397c8-cf0e-564f-b613-309d933821b1.json"
     }
   ],
-  "substantive_sha256": "f6b769c7da24b71e1a5384cbe7e47e5bcff94b74957b72046d6c518a471b3c92"
+  "substantive_sha256": "242d84426d2ec5ebbe3e4271abf5d47091696e6c623990bd2dc977c7ac52c814"
 }

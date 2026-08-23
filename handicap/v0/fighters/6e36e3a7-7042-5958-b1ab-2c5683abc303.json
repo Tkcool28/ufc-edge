@@ -15269,8 +15269,8 @@
       "note": "Use canonical table primary keys/row keys to audit detailed field provenance.",
       "path": "data/canonical/v0/field_provenance.csv"
     },
-    "generated_at_utc": "2026-08-23T03:54:58.041742Z",
-    "generator_commit": "92d5c35c18c3da143df275f67d90555efb315019",
+    "generated_at_utc": "2026-08-23T03:57:06.845956Z",
+    "generator_commit": "53576027c192e9aa525bbcf4142ea9d8f268f699",
     "generator_version": "h00-0.1.0",
     "information_cutoff": "2026-08-23T03:30:00Z",
     "packet_schema_version": "0.1.0",
@@ -22378,7 +22378,7 @@
       "weight_class": "Featherweight"
     }
   ],
-  "substantive_sha256": "e1eab7396c77bc05ec8c97d55bafdaf1a75670f9e92669bc49db26b4567ce551",
+  "substantive_sha256": "d49708e9733252642d8fad77af61742c95e20366e3be68feb45b5c999929dfd3",
   "weigh_in_history": [
     {
       "attempt_number": null,
