@@ -1,10 +1,10 @@
 {
   "audit": "external_mma_ufc_absent_identity",
-  "completed_at_utc": "2026-08-23T00:07:52.338157Z",
+  "completed_at_utc": "2026-08-23T00:08:05.530601Z",
   "exit_code": 0,
-  "github_run_id": "32607044799",
-  "log": "provenance/runs/external_mma_ufc_absent_identity_32607044799.log",
+  "github_run_id": "32607055790",
+  "log": "provenance/runs/external_mma_ufc_absent_identity_32607055790.log",
   "schema_version": 1,
   "status": "success",
-  "trigger_sha": "d631c090d089159995a69a83c11daa02a98f2af0"
+  "trigger_sha": "241bf6874b3b6cc799d93ffee940f3d8ddc93c37"
 }

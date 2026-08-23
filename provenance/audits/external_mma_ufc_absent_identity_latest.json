@@ -5,7 +5,7 @@
     "required_next": "Determine whether absent-pair clusters are caused by trusted same-name identity collisions or true canonical fight omissions. Quarantine any suspect trusted mapping before external fight promotion.",
     "trusted_crosswalk_mutated": false
   },
-  "generated_at_utc": "2026-08-23T00:07:52.299105Z",
+  "generated_at_utc": "2026-08-23T00:08:05.495343Z",
   "involved_canonical_id_frequency": [
     [
       "2cf2374a-411e-5a31-87ae-9facc2eefefb",
