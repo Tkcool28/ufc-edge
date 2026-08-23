@@ -35,6 +35,10 @@ jobs:
           end = workflow.index("\n          PY", start)
           raw = workflow[start:end]
           source = "\n".join(line[10:] if line.startswith("          ") else line for line in raw.splitlines())
+          source = source.replace(
+              'review_marker = "## 19. F00 outputs and future materializer contract"',
+              'review_marker = "## 19. Answers to the 17 F00 architecture questions"',
+          )
           exec(compile(source, 'f00-exposure-remediation', 'exec'), {'__name__': '__main__'})
           PY
 
