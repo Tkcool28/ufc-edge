@@ -8,9 +8,11 @@ on:
       - "pipelines/build_ufc_weigh_in_canonical_candidate_v2.py"
       - "pipelines/build_canonical_ufc_weigh_ins_v0.py"
       - "pipelines/migrate_canonical_validator_weigh_ins.py"
+      - "pipelines/promote_canonical_ufc_weigh_in_precedence.py"
       - "data/derived/identity/ufc_weigh_in_identity_candidate.csv"
       - "data/canonical/v0/fights.csv"
       - "schemas/canonical_data_contract_v0.json"
+      - "schemas/source_precedence_v0.json"
       - ".github/workflows/build-ufc-weigh-in-canonical-candidate-v2.yml"
   workflow_dispatch:
 
@@ -29,7 +31,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build, validate, and commit atomically
+      - name: Build, validate, promote precedence, and commit atomically
         shell: bash
         run: |
           set -uo pipefail
@@ -44,7 +46,9 @@ jobs:
             python pipelines/validate_source_field_map.py &&
             python pipelines/validate_source_precedence.py &&
             python pipelines/build_canonical_ufc_weigh_ins_v0.py &&
-            python pipelines/validate_canonical_data_v0.py
+            python pipelines/validate_canonical_data_v0.py &&
+            python pipelines/promote_canonical_ufc_weigh_in_precedence.py &&
+            python pipelines/validate_source_precedence.py
           } >"$log" 2>&1
           code=$?
           set -e
@@ -69,7 +73,7 @@ jobs:
 
           if [ "$code" -ne 0 ]; then
             for p in \
-              pipelines/validate_canonical_data_v0.py \
+              pipelines/validate_canonical_data_v0.py schemas/source_precedence_v0.json \
               data/canonical/v0/weigh_ins.csv data/canonical/v0/field_provenance.csv \
               data/canonical/v0/manifest.json data/derived/qa/canonical_ufc_weigh_in_exclusions_v0.csv \
               provenance/audits/canonical_ufc_weigh_ins_v0_latest.json \
@@ -88,7 +92,7 @@ jobs:
             data/derived/identity/ufc_weigh_in_canonical_candidate_v2.csv \
             provenance/audits/ufc_weigh_in_canonical_candidate_v2_latest.json
           if [ "$code" -eq 0 ]; then
-            git add pipelines/validate_canonical_data_v0.py \
+            git add pipelines/validate_canonical_data_v0.py schemas/source_precedence_v0.json \
               data/canonical/v0/weigh_ins.csv data/canonical/v0/field_provenance.csv data/canonical/v0/manifest.json \
               data/derived/qa/canonical_ufc_weigh_in_exclusions_v0.csv \
               provenance/audits/canonical_ufc_weigh_ins_v0_latest.json \
