@@ -1,0 +1,190 @@
+name: H01 Handicap Request Bridge
+
+on:
+  issues:
+    types: [opened, labeled]
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/ufc_edge/handicap_bridge/**"
+      - "tools/handicap_bridge/**"
+      - "tests/handicap_bridge/**"
+      - "handicap/H01_REQUEST_BRIDGE.md"
+      - ".github/workflows/h01-handicap-request.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bridge-tests:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test dependency
+        run: python -m pip install pytest
+      - name: Compile H01
+        run: python -m compileall -q src/ufc_edge/handicap_bridge tools/handicap_bridge tests/handicap_bridge
+      - name: Run H01 tests
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q tests/handicap_bridge
+      - name: Confirm H01 did not modify frozen DATA or H00 implementation
+        run: |
+          git diff --exit-code "${{ github.event.pull_request.base.sha || github.sha }}" -- \
+            data/raw data/canonical/v0 data/derived provenance schemas \
+            src/ufc_edge/handicap tools/handicap tests/handicap
+
+  process-request:
+    if: >-
+      github.event_name == 'issues' &&
+      (startsWith(github.event.issue.title, '[H00 REQUEST]') ||
+       contains(github.event.issue.labels.*.name, 'h00-request'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      issues: write
+    concurrency:
+      group: h01-handicap-cache-writer
+      cancel-in-progress: false
+    env:
+      PYTHONPATH: src
+      H01_STAGE: ${{ runner.temp }}/h01-stage
+      H01_H00_OUTPUT: ${{ runner.temp }}/h01-h00-output
+      H01_RESULT: ${{ runner.temp }}/h01-result.json
+      H01_CACHE: ${{ runner.temp }}/h01-cache-repo
+    steps:
+      - name: Checkout trusted main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Record trusted source SHA
+        id: source
+        shell: bash
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Process request into temporary staging
+        id: process
+        continue-on-error: true
+        run: |
+          python tools/handicap_bridge/process_request.py \
+            --event-path "$GITHUB_EVENT_PATH" \
+            --repository "$GITHUB_REPOSITORY" \
+            --repo-root "$GITHUB_WORKSPACE" \
+            --output-root "$H01_H00_OUTPUT" \
+            --stage-root "$H01_STAGE" \
+            --source-main-sha "${{ steps.source.outputs.sha }}" \
+            --result-path "$H01_RESULT"
+
+      - name: Read processing status
+        id: result
+        run: |
+          python - <<'PY'
+          import json, os
+          p=json.load(open(os.environ['H01_RESULT'], encoding='utf-8'))
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as f:
+              f.write('status=' + str(p.get('status','failed')) + '\n')
+              if p.get('issue_number'):
+                  f.write('issue_number=' + str(int(p['issue_number'])) + '\n')
+          PY
+
+      - name: Prepare disposable cache snapshot
+        if: steps.result.outputs.status == 'complete'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin handicap-cache || true
+          if git show-ref --verify --quiet refs/remotes/origin/handicap-cache; then
+            git worktree add --detach "$H01_CACHE" origin/handicap-cache
+          else
+            git worktree add --detach "$H01_CACHE" "${{ steps.source.outputs.sha }}"
+            git -C "$H01_CACHE" rm -rf .
+          fi
+          ISSUE="${{ steps.result.outputs.issue_number }}"
+          mkdir -p "$H01_CACHE/handicap/requests"
+          rm -rf "$H01_CACHE/handicap/requests/$ISSUE"
+          cp -a "$H01_STAGE/handicap/requests/$ISSUE" "$H01_CACHE/handicap/requests/$ISSUE"
+          python tools/handicap_bridge/prune_cache.py --cache-root "$H01_CACHE" --keep 20
+
+      - name: Publish replaceable handicap-cache snapshot
+        if: steps.result.outputs.status == 'complete'
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -C "$H01_CACHE" add -A
+          TREE=$(git -C "$H01_CACHE" write-tree)
+          COMMIT=$(printf '%s\n' "H01 cache snapshot for issue #${{ steps.result.outputs.issue_number }}" | \
+            git -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                -C "$H01_CACHE" commit-tree "$TREE")
+          git -C "$H01_CACHE" push --force origin "$COMMIT:refs/heads/handicap-cache"
+          echo "cache_commit=$COMMIT" >> "$GITHUB_OUTPUT"
+
+      - name: Comment success and label issue
+        if: steps.result.outputs.status == 'complete' && steps.publish.outcome == 'success'
+        uses: actions/github-script@v7
+        env:
+          CACHE_COMMIT: ${{ steps.publish.outputs.cache_commit }}
+          SOURCE_MAIN: ${{ steps.source.outputs.sha }}
+        with:
+          script: |
+            const fs = require('fs');
+            const result = JSON.parse(fs.readFileSync(process.env.H01_RESULT, 'utf8'));
+            const manifest = JSON.parse(fs.readFileSync(`${process.env.H01_STAGE}/${result.manifest_path}`, 'utf8'));
+            const base = `handicap/requests/${result.issue_number}`;
+            const lines = [
+              'H00_REQUEST_COMPLETE', '',
+              `request_issue: ${result.issue_number}`,
+              `kind: ${result.kind}`,
+              `source_main: ${process.env.SOURCE_MAIN}`,
+              'cache_branch: handicap-cache',
+              `cache_commit: ${process.env.CACHE_COMMIT}`,
+              `cutoff: ${manifest.information_cutoff}`, '',
+              'manifest:', `${base}/manifest.json`,
+            ];
+            for (const file of manifest.files) {
+              const rel = file.path.replace(/^handicap\/requests\/\d+\//, '');
+              const label = rel.endsWith('.md') ? 'markdown' : (rel.endsWith('.json') ? 'json' : 'file');
+              lines.push('', `${label}:`, `${base}/${rel}`);
+            }
+            await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: result.issue_number, body: lines.join('\n')});
+            try { await github.rest.issues.getLabel({owner: context.repo.owner, repo: context.repo.repo, name: 'h00-complete'}); }
+            catch (_) { await github.rest.issues.createLabel({owner: context.repo.owner, repo: context.repo.repo, name: 'h00-complete', color: '2da44e'}); }
+            await github.rest.issues.addLabels({owner: context.repo.owner, repo: context.repo.repo, issue_number: result.issue_number, labels: ['h00-complete']});
+            try { await github.rest.issues.removeLabel({owner: context.repo.owner, repo: context.repo.repo, issue_number: result.issue_number, name: 'h00-request'}); } catch (_) {}
+            await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: result.issue_number, state: 'closed'});
+
+      - name: Comment safe failure and label issue
+        if: steps.result.outputs.status != 'complete' || steps.publish.outcome == 'failure'
+        uses: actions/github-script@v7
+        env:
+          SOURCE_MAIN: ${{ steps.source.outputs.sha }}
+        with:
+          script: |
+            const fs = require('fs');
+            let result = {failure_category: 'bridge_failed', message: 'H01 bridge failed before completion.'};
+            try { result = JSON.parse(fs.readFileSync(process.env.H01_RESULT, 'utf8')); } catch (_) {}
+            const issue = context.issue.number;
+            const safe = String(result.message || 'H01 bridge failed.').replace(/[\r\n]+/g, ' ').slice(0, 500);
+            const body = [
+              'H00_REQUEST_FAILED', '',
+              `request_issue: ${issue}`,
+              `failure_category: ${result.failure_category || 'bridge_failed'}`,
+              `message: ${safe}`,
+              `source_main: ${process.env.SOURCE_MAIN}`,
+            ].join('\n');
+            await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: issue, body});
+            try { await github.rest.issues.getLabel({owner: context.repo.owner, repo: context.repo.repo, name: 'h00-failed'}); }
+            catch (_) { await github.rest.issues.createLabel({owner: context.repo.owner, repo: context.repo.repo, name: 'h00-failed', color: 'd1242f'}); }
+            await github.rest.issues.addLabels({owner: context.repo.owner, repo: context.repo.repo, issue_number: issue, labels: ['h00-failed']});
