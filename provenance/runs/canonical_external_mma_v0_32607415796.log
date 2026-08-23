@@ -1,0 +1,11 @@
+CONTRACT_OK version=0.4.0-draft tables=13 fields=152 missing_is_not_zero=true round_zero_actual=false sig_splits=true
+SOURCE_MAP_OK version=0.4.0-draft mappings=144 statuses={"provisional": 34, "rejected": 6, "unresolved": 27, "verified": 77} source_count=8
+SOURCE_PRECEDENCE_OK version=0.2.0-draft families=9 active=7 pending_acquisition=0 acquired_qa_pending=2 sources=8
+Traceback (most recent call last):
+  File "/home/runner/work/ufc-edge/ufc-edge/pipelines/build_canonical_external_mma_v0.py", line 524, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/runner/work/ufc-edge/ufc-edge/pipelines/build_canonical_external_mma_v0.py", line 159, in main
+    if list(current_identity[0]) != IDENTITY_FIELDS or list(current_prov[0]) != PROV_FIELDS:
+                                                            ~~~~~~~~~~~~^^^
+IndexError: list index out of range
