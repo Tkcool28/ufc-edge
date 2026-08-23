@@ -23,6 +23,8 @@ on:
 
 permissions:
   contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
   test-and-acceptance:
@@ -48,21 +50,26 @@ jobs:
         run: python -m pip install pytest
 
       - name: Compile H00
+        id: compile
         run: python -m compileall -q src/ufc_edge/handicap tools/handicap tests/handicap
 
       - name: Run H00 tests
+        id: tests
         run: python -m pytest -q tests/handicap
 
       - name: Build fighter index
+        id: index
         run: python tools/handicap/build_fighter_index.py
 
       - name: Build Max Holloway dossier
+        id: dossier
         run: |
           python tools/handicap/build_fighter_dossier.py \
             --fighter-id "$MAX_ID" \
             --cutoff "$H00_CUTOFF"
 
       - name: Build Holloway vs Poirier matchup
+        id: matchup
         run: |
           python tools/handicap/build_matchup_packet.py \
             --fighter-a "$MAX_ID" \
@@ -70,6 +77,7 @@ jobs:
             --cutoff "$H00_CUTOFF"
 
       - name: Validate generated demo
+        id: validation
         run: |
           python tools/handicap/validate_h00_demo.py \
             --index handicap/v0/index/fighters.json \
@@ -79,6 +87,7 @@ jobs:
             --report handicap/H00_VALIDATION.md
 
       - name: Confirm frozen DATA untouched
+        id: data_integrity
         run: |
           git diff --exit-code -- \
             data/raw \
@@ -91,6 +100,7 @@ jobs:
             schemas/source_adapter_contract_v0.md
 
       - name: Commit disposable acceptance artifacts
+        id: artifacts
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -106,3 +116,28 @@ jobs:
             git commit -m "Add H00 acceptance artifacts"
             git push origin HEAD:feat/handicap-access-h00
           fi
+
+      - name: Report acceptance result on draft PR
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const lines = [
+              `### H00 private canonical acceptance — ${context.sha.slice(0, 12)}`,
+              `- compile: **${{ steps.compile.outcome }}**`,
+              `- tests: **${{ steps.tests.outcome }}**`,
+              `- fighter index: **${{ steps.index.outcome }}**`,
+              `- Max Holloway dossier: **${{ steps.dossier.outcome }}**`,
+              `- Holloway/Poirier matchup: **${{ steps.matchup.outcome }}**`,
+              `- packet validation: **${{ steps.validation.outcome }}**`,
+              `- frozen DATA integrity: **${{ steps.data_integrity.outcome }}**`,
+              `- acceptance artifact commit: **${{ steps.artifacts.outcome }}**`,
+              `- workflow result: **${{ job.status }}**`,
+              `- run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+            ];
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: 2,
+              body: lines.join('\n'),
+            });
