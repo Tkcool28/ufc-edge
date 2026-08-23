@@ -1,0 +1,11 @@
+{
+  "build": "striking_environment_v0",
+  "completed_at_utc": "2026-08-23T02:14:02.285396Z",
+  "determinism_check": "pass",
+  "exit_code": 0,
+  "github_run_id": "32612303349",
+  "log": "features/provenance/runs/striking_environment_v0_32612303349.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "3a8338f76f5e04cfb4e2f9e154b82a2a8ddba96a"
+}
