@@ -1,0 +1,88 @@
+{
+  "feature_contract_version": "0.1.0-draft",
+  "registry_version": 1,
+  "purpose": "Fail-closed predictor/target and point-in-time leakage rules for the shared FEATURES contract.",
+  "prediction_rule": "A predictive value must be knowable at prediction_as_of. Current-fight post-event observations and future observations are forbidden.",
+  "current_target_postfight_fields": [
+    "fights.winner_id",
+    "fights.result",
+    "fights.method",
+    "fights.finish_round",
+    "fights.finish_time_sec"
+  ],
+  "current_target_round_tables": [
+    "fighter_round_stats",
+    "fighter_round_position",
+    "judge_round_scores"
+  ],
+  "historical_postfight_field_policy": {
+    "allowed_only_when_input_time_scope": "historical_only",
+    "required_cutoff_phrase": "strictly before",
+    "rule": "Post-fight fields may summarize prior contests only when each contributing contest is strictly before the target cutoff. The current target fight can never contribute."
+  },
+  "target_prefight_allowed_fight_fields": [
+    "fights.fight_id",
+    "fights.event_id",
+    "fights.fighter_a_id",
+    "fights.fighter_b_id",
+    "fights.scheduled_rounds",
+    "fights.weight_class",
+    "fights.title_bout",
+    "fights.promotion"
+  ],
+  "future_observation_rules": [
+    "Nearest-future ranking joins are forbidden.",
+    "Profile snapshots with observed_at_utc at or after prediction_as_of are forbidden.",
+    "Current/future weigh-in observations are usable only if their canonical observation semantics prove they were available before prediction_as_of; F00 v1 does not assume this.",
+    "Historical opponent state used for opponent adjustment must be computed strictly before that historical contest; future opponent career information is forbidden.",
+    "Population priors used in replay/backtest must be constructed only from information available before the target cutoff."
+  ],
+  "same_day_policy": "A historical contest sharing the target event_date is not prior evidence unless a future DATA migration provides trustworthy intra-day chronology. Canonical v0 does not, so F00 excludes same-day prior contests.",
+  "round_rules": {
+    "actual_round_minimum": 1,
+    "round_zero_is_real_round": false,
+    "round_zero_policy": "FightMetric round=0 is whole-fight QA summary only and is forbidden from predictive round state."
+  },
+  "position_precision_rules": {
+    "canonical_table": "fighter_round_position",
+    "required_precision_semantics": "quantized_interval_only",
+    "forbidden_claims": [
+      "exact positional seconds",
+      "exact standing seconds",
+      "exact ground seconds",
+      "exact position duration"
+    ],
+    "rule": "Bucket lower/upper seconds are quantization bounds, not observed exact durations."
+  },
+  "control_rule": "fighter_round_stats.control_sec is exact general control time where canonical, but is not synonymous with ground time and may not be used as an exact ground-opportunity denominator.",
+  "raw_boundary": {
+    "forbidden_path_prefixes": ["data/raw/", "raw/"],
+    "forbidden_provider_dependency_rule": "Predictive feature contracts reference canonical table/field names, never provider-specific raw paths or layouts.",
+    "raw_qa_only_allowed": false
+  },
+  "sportsbook_prohibited_terms": [
+    "betting_odds",
+    "sportsbook_odds",
+    "implied_probability",
+    "closing_line",
+    "line_movement",
+    "method_price",
+    "roi",
+    "clv"
+  ],
+  "identity_rule": "Display-name-only identity is never sufficient for feature joins. Ambiguous identities remain excluded/quarantined under the DATA contract.",
+  "mutable_context_rules": {
+    "rankings": "Use only dated observations strictly before prediction_as_of; ranking is not precomputed fighter quality.",
+    "fighter_profile_snapshots": "Use only snapshots strictly before prediction_as_of; current snapshots are never backfilled historically.",
+    "weigh_ins": "Use only source-explicit canonical semantics; do not infer universal miss, contract, penalty or attempt semantics."
+  },
+  "unsupported_sequence_claims": [
+    "exact knockdown recovery sequence",
+    "exact finish conversion after knockdown",
+    "exact submission finish conditional on threat/position",
+    "exact escape hazard conditional on state",
+    "exact chronological state transition matrix",
+    "exact standing minutes",
+    "exact ground minutes"
+  ]
+}

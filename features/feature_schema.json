@@ -1,0 +1,497 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ufc-edge.local/features/feature_schema.json",
+  "title": "UFC Edge F00 feature catalog schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feature_contract_version",
+    "catalog_schema_version",
+    "data_contract_version",
+    "authoritative",
+    "canonical_root",
+    "missingness_states",
+    "windows",
+    "round_bands",
+    "elapsed_exposure_policy",
+    "shrinkage_policies",
+    "orientation_policy",
+    "materialization_naming",
+    "features",
+    "targets"
+  ],
+  "properties": {
+    "feature_contract_version": {
+      "const": "0.1.1-draft"
+    },
+    "catalog_schema_version": {
+      "const": 1
+    },
+    "data_contract_version": {
+      "const": "0.4.0-draft"
+    },
+    "authoritative": {
+      "const": true
+    },
+    "canonical_root": {
+      "const": "data/canonical/v0/"
+    },
+    "missingness_states": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "observed_positive",
+          "observed_zero",
+          "missing_observation",
+          "not_applicable",
+          "insufficient_exposure"
+        ]
+      }
+    },
+    "windows": {
+      "type": "object"
+    },
+    "round_bands": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "r1",
+          "r2",
+          "r3plus"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "shrinkage_policies": {
+      "type": "object"
+    },
+    "orientation_policy": {
+      "type": "object"
+    },
+    "materialization_naming": {
+      "type": "object"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/featureConcept"
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/targetConcept"
+      }
+    },
+    "elapsed_exposure_policy": {
+      "$ref": "#/$defs/elapsedExposurePolicy"
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": [
+        "V1_MUST",
+        "V1_DERIVED",
+        "V2_OPPONENT_ADJUSTED",
+        "SIMULATOR_COMPONENT",
+        "RESEARCH_ONLY",
+        "PROXY_ONLY",
+        "DEFERRED",
+        "UNSUPPORTED"
+      ]
+    },
+    "layer": {
+      "enum": [
+        "fighter_state",
+        "context",
+        "opponent_adjusted",
+        "matchup_interaction",
+        "simulator_component",
+        "research",
+        "unsupported"
+      ]
+    },
+    "consumer": {
+      "enum": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking",
+        "component_wrestling",
+        "component_ground",
+        "component_submission",
+        "component_durability",
+        "simulator",
+        "human_research"
+      ]
+    },
+    "inputTimeScope": {
+      "enum": [
+        "historical_only",
+        "target_prefight_context",
+        "historical_and_target_prefight",
+        "derived_from_feature_state",
+        "none"
+      ]
+    },
+    "roundPolicy": {
+      "enum": [
+        "not_applicable",
+        "actual_rounds_only"
+      ]
+    },
+    "precisionSemantics": {
+      "enum": [
+        "exact_canonical",
+        "quantized_interval_only",
+        "not_applicable"
+      ]
+    },
+    "historyScope": {
+      "enum": [
+        "all_supported_canonical_fights",
+        "canonical_round_stats_only",
+        "canonical_position_rows_only",
+        "target_fight_context_only",
+        "derived_feature_state_only",
+        "research_external_only",
+        "none"
+      ]
+    },
+    "denominator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "numerator",
+        "denominator",
+        "eligibility",
+        "zero_denominator",
+        "missing_denominator"
+      ],
+      "properties": {
+        "numerator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "denominator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "eligibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zero_denominator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "missing_denominator": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "featureConcept": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "feature_name",
+        "family",
+        "layer",
+        "description",
+        "exact_formula_or_definition",
+        "canonical_input_tables",
+        "canonical_input_fields",
+        "unit",
+        "information_cutoff_rule",
+        "input_time_scope",
+        "history_scope",
+        "round_policy",
+        "precision_semantics",
+        "is_rate",
+        "exposure_denominator",
+        "minimum_sample",
+        "missingness_behavior",
+        "zero_semantics",
+        "shrinkage_rule",
+        "career_variant",
+        "recent_3_variant",
+        "recent_5_variant",
+        "ewma_variant",
+        "round_specific_variant",
+        "opponent_adjusted_variant",
+        "matchup_interaction_variant",
+        "coverage_expectation",
+        "known_limitations",
+        "intended_model_consumers",
+        "status",
+        "leakage_test",
+        "provenance_requirement"
+      ],
+      "properties": {
+        "feature_name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "layer": {
+          "$ref": "#/$defs/layer"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exact_formula_or_definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_input_tables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "canonical_input_fields": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "information_cutoff_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_time_scope": {
+          "$ref": "#/$defs/inputTimeScope"
+        },
+        "history_scope": {
+          "$ref": "#/$defs/historyScope"
+        },
+        "round_policy": {
+          "$ref": "#/$defs/roundPolicy"
+        },
+        "precision_semantics": {
+          "$ref": "#/$defs/precisionSemantics"
+        },
+        "is_rate": {
+          "type": "boolean"
+        },
+        "exposure_denominator": {
+          "$ref": "#/$defs/denominator"
+        },
+        "minimum_sample": {
+          "type": "string",
+          "minLength": 1
+        },
+        "missingness_behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zero_semantics": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shrinkage_rule": {
+          "enum": [
+            "none",
+            "time_rate_v1",
+            "attempt_probability_v1",
+            "composition_v1",
+            "fight_rate_v1"
+          ]
+        },
+        "career_variant": {
+          "type": "boolean"
+        },
+        "recent_3_variant": {
+          "type": "boolean"
+        },
+        "recent_5_variant": {
+          "type": "boolean"
+        },
+        "ewma_variant": {
+          "type": "boolean"
+        },
+        "round_specific_variant": {
+          "type": "boolean"
+        },
+        "opponent_adjusted_variant": {
+          "type": "boolean"
+        },
+        "matchup_interaction_variant": {
+          "type": "boolean"
+        },
+        "coverage_expectation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "known_limitations": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intended_model_consumers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/consumer"
+          },
+          "uniqueItems": true
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "leakage_test": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance_requirement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "uniqueItems": true
+        },
+        "elapsed_exposure_source": {
+          "$ref": "#/$defs/elapsedExposureSource"
+        }
+      }
+    },
+    "targetConcept": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_name",
+        "description",
+        "canonical_table",
+        "canonical_fields",
+        "definition",
+        "training_only"
+      ],
+      "properties": {
+        "target_name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_table": {
+          "type": "string"
+        },
+        "canonical_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "training_only": {
+          "const": true
+        }
+      }
+    },
+    "elapsedExposurePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "canonical_v0_status",
+        "allowed_sources",
+        "blocked_feature_concepts",
+        "forbidden_inferences",
+        "materializable_requirement",
+        "promotion_requirement"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "canonical_v0_status": {
+          "const": "no_general_safe_elapsed_round_or_fight_exposure_source"
+        },
+        "allowed_sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "blocked_feature_concepts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "uniqueItems": true
+        },
+        "forbidden_inferences": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "materializable_requirement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "promotion_requirement": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "elapsedExposureSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "eligibility",
+        "provenance",
+        "contract_safe"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "eligibility": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contract_safe": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
