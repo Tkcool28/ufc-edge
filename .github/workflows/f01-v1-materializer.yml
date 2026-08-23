@@ -1,0 +1,111 @@
+name: F01 V1 Materializer
+
+on:
+  push:
+    branches: [feat/v1-pit-fighter-state-f01]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Parse feature Python sources without bytecode output
+        shell: bash
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+
+          paths = sorted((Path('src/ufc_edge/features')).glob('*.py')) + [Path('tools/features/materialize_v1.py')]
+          for path in paths:
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+          print(f'parsed {len(paths)} Python files')
+          PY
+
+      - name: Validate F00 contract
+        run: python -m ufc_edge.features.contract
+
+      - name: Run F00 contract tests
+        run: python -m unittest discover -s tests/features -p 'test_feature_contract.py' -v
+
+      - name: Run F01 materializer tests
+        run: python -m unittest discover -s tests/features -p 'test_v1*.py' -v
+
+      - name: Bounded real canonical validation
+        run: python tools/features/materialize_v1.py --validate-bounded
+
+      - name: Check whitespace
+        run: git diff --check origin/main...HEAD
+
+      - name: Verify frozen DATA unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            data/canonical/v0 \
+            schemas/canonical_data_contract_v0.json \
+            schemas/canonical_data_contract_v0.md \
+            schemas/source_field_map_v0.json \
+            schemas/source_precedence_v0.json \
+            provenance/data_phase_freeze_v0.json
+
+      - name: Verify H00 and H01 unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            handicap \
+            src/ufc_edge/handicap \
+            src/ufc_edge/handicap_bridge \
+            tests/handicap \
+            tests/handicap_bridge \
+            .github/workflows/h01-handicap-request.yml
+
+      - name: Verify F00 semantic contract unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            features/FEATURE_CONTRACT.md \
+            features/feature_catalog.yaml \
+            features/feature_schema.json \
+            features/leakage_registry.yaml \
+            src/ufc_edge/features/contract.py \
+            tests/features/test_feature_contract.py \
+            .github/workflows/f00-feature-contract.yml
+
+      - name: Reject generated feature matrices and run directories
+        shell: bash
+        run: |
+          set -euo pipefail
+          added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
+          if printf '%s\n' "$added" | grep -E '(^|/)(runs?|output|generated|feature_store)/|\.(csv|parquet|feather)$' | grep -v '^$'; then
+            echo 'F01 must not commit generated matrices or run/output directories.' >&2
+            exit 1
+          fi
+
+      - name: Verify checkout clean
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(git status --porcelain=v1 --untracked-files=all)"
+          if [[ -n "$status" ]]; then
+            printf '%s\n' "$status"
+            echo 'F01 validation checkout is not clean.' >&2
+            exit 1
+          fi
