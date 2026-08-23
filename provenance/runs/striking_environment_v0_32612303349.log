@@ -1,0 +1,7 @@
+=== BUILD 1 ===
+{"columns": 201, "output_sha256": "f55de631699ed50490d2a217828cca063307d6e34551d64ec7ae2909bb9bcab4", "rows": 17538}
+STRIKING_ENVIRONMENT_OK family_version=0.1.0-draft rows=17538 columns=201 windows=career,recent3,recent5,ewm365 sha256=f55de631699ed50490d2a217828cca063307d6e34551d64ec7ae2909bb9bcab4
+=== BUILD 2 DETERMINISM CHECK ===
+{"columns": 201, "output_sha256": "f55de631699ed50490d2a217828cca063307d6e34551d64ec7ae2909bb9bcab4", "rows": 17538}
+STRIKING_ENVIRONMENT_OK family_version=0.1.0-draft rows=17538 columns=201 windows=career,recent3,recent5,ewm365 sha256=f55de631699ed50490d2a217828cca063307d6e34551d64ec7ae2909bb9bcab4
+f55de631699ed50490d2a217828cca063307d6e34551d64ec7ae2909bb9bcab4  features/v0/striking_environment.csv
