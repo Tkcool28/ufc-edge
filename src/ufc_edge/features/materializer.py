@@ -15,7 +15,7 @@ from .contract import (
     materialized_feature_names,
     validate_repository_contract,
 )
-from .history import CanonicalStore
+from .history import CanonicalStore, parse_cutoff
 from .state import (
     FighterState,
     MatchupState,
@@ -90,6 +90,35 @@ class V1Materializer:
     def names(self, consumer: str | None = None) -> list[str]:
         return selected_v1_names(self.catalog, consumer)
 
+    def _validate_target_request(
+        self,
+        requested_fighter_ids: tuple[str, ...],
+        prediction_as_of: str,
+        target_fight_id: str | None,
+    ) -> None:
+        """Fail closed before state construction when target identity/cutoff conflict.
+
+        Canonical v0 only proves event-date chronology. If a supplied target's
+        event date is strictly before the cutoff date, that fight is historical
+        under the same rule used by ``prior_fights`` and therefore cannot also
+        be treated as the prediction target.
+        """
+        if target_fight_id is None:
+            return
+        target = self.store.require_fight(target_fight_id)
+        target_fighters = {target.fighter_a_id, target.fighter_b_id}
+        missing = [fighter_id for fighter_id in requested_fighter_ids if fighter_id not in target_fighters]
+        if missing:
+            raise MaterializerError(
+                f"target fight {target_fight_id} does not include requested fighter(s): {sorted(missing)}"
+            )
+        cutoff_date = parse_cutoff(prediction_as_of).date()
+        if target.event_date < cutoff_date:
+            raise MaterializerError(
+                f"target fight {target_fight_id} on {target.event_date.isoformat()} is historical "
+                f"at prediction cutoff date {cutoff_date.isoformat()}"
+            )
+
     def materialize_fighter(
         self,
         fighter_id: str,
@@ -98,6 +127,7 @@ class V1Materializer:
         target_fight_id: str | None = None,
         consumer: str | None = None,
     ) -> FighterState:
+        self._validate_target_request((fighter_id,), prediction_as_of, target_fight_id)
         return self.builder.materialize_fighter(
             fighter_id,
             prediction_as_of,
@@ -114,6 +144,9 @@ class V1Materializer:
         target_fight_id: str | None = None,
         consumer: str | None = None,
     ) -> MatchupState:
+        self._validate_target_request(
+            (fighter_a_id, fighter_b_id), prediction_as_of, target_fight_id
+        )
         return self.builder.materialize_matchup(
             fighter_a_id,
             fighter_b_id,
