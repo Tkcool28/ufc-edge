@@ -1,0 +1,77 @@
+name: Build canonical external MMA history v0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/build_canonical_external_mma_v0.py"
+      - "pipelines/audit_external_mma_canonical_readiness.py"
+      - "data/derived/identity/external_mma_canonical_crosswalk_candidate.csv"
+      - "schemas/canonical_data_contract_v0.json"
+      - "schemas/source_precedence_v0.json"
+      - ".github/workflows/build-canonical-external-mma-v0.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build, validate, and commit
+        shell: bash
+        run: |
+          set -uo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          mkdir -p provenance/runs provenance/audits data/derived/qa data/canonical/v0
+          log="provenance/runs/canonical_external_mma_v0_${GITHUB_RUN_ID}.log"
+          set +e
+          {
+            python pipelines/validate_canonical_contract.py &&
+            python pipelines/validate_source_field_map.py &&
+            python pipelines/validate_source_precedence.py &&
+            python pipelines/build_canonical_external_mma_v0.py &&
+            python pipelines/validate_canonical_data_v0.py
+          } >"$log" 2>&1
+          code=$?
+          set -e
+          python - "$code" "$log" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          code, log = int(sys.argv[1]), sys.argv[2]
+          payload = {
+              "schema_version": 1,
+              "build": "canonical_external_mma_v0",
+              "status": "success" if code == 0 else "failed",
+              "exit_code": code,
+              "github_run_id": os.environ.get("GITHUB_RUN_ID"),
+              "trigger_sha": os.environ.get("GITHUB_SHA"),
+              "completed_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+              "log": log,
+          }
+          with open("provenance/runs/canonical_external_mma_v0_latest.json", "w", encoding="utf-8") as fh:
+              json.dump(payload, fh, indent=2, sort_keys=True); fh.write("\n")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$log" provenance/runs/canonical_external_mma_v0_latest.json
+          if [ "$code" -eq 0 ]; then
+            git add data/canonical/v0/events.csv data/canonical/v0/fights.csv \
+              data/canonical/v0/source_identity_links.csv data/canonical/v0/field_provenance.csv \
+              data/canonical/v0/manifest.json data/derived/qa/canonical_external_mma_exclusions_v0.csv \
+              provenance/audits/canonical_external_mma_v0_latest.json \
+              provenance/audits/canonical_external_mma_v0_latest.md
+          fi
+          git commit -m "Build canonical external MMA history v0 (${code}) [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+          exit "$code"
