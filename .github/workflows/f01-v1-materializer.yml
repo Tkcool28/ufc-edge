@@ -44,7 +44,7 @@ jobs:
         run: python -m unittest discover -s tests/features -p 'test_feature_contract.py' -v
 
       - name: Run F01 materializer tests
-        run: python -m unittest discover -s tests/features -p 'test_v1_materializer.py' -v
+        run: python -m unittest discover -s tests/features -p 'test_v1*.py' -v
 
       - name: Bounded real canonical validation
         run: python tools/features/materialize_v1.py --validate-bounded
