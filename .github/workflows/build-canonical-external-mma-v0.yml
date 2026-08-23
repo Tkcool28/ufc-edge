@@ -1,6 +1,6 @@
 name: Build canonical external MMA history v0
 
-# Registered on main; trigger version 3.
+# Registered on main; trigger version 4.
 on:
   push:
     branches: [main]
@@ -34,32 +34,6 @@ jobs:
           set -uo pipefail
           git pull --rebase origin "${{ github.ref_name }}"
           mkdir -p provenance/runs provenance/audits data/derived/qa data/canonical/v0
-
-          # Exact compatibility fix: field_provenance.csv may correctly contain only its header.
-          # Validate headers from DictReader.fieldnames instead of indexing row 0.
-          python - <<'PY'
-          from pathlib import Path
-          p = Path("pipelines/build_canonical_external_mma_v0.py")
-          text = p.read_text(encoding="utf-8")
-          old = '''    if list(current_events[0]) != EVENT_FIELDS or list(current_fights[0]) != FIGHT_FIELDS:
-              raise RuntimeError("canonical event/fight header drift")
-          if list(current_identity[0]) != IDENTITY_FIELDS or list(current_prov[0]) != PROV_FIELDS:
-              raise RuntimeError("canonical identity/provenance header drift")
-          '''
-          new = '''    def csv_header(path: Path) -> list[str]:
-              with path.open("r", encoding="utf-8-sig", newline="") as fh:
-                  return list(csv.DictReader(fh).fieldnames or [])
-
-          if csv_header(EVENTS) != EVENT_FIELDS or csv_header(FIGHTS) != FIGHT_FIELDS:
-              raise RuntimeError("canonical event/fight header drift")
-          if csv_header(IDENTITY) != IDENTITY_FIELDS or csv_header(PROVENANCE) != PROV_FIELDS:
-              raise RuntimeError("canonical identity/provenance header drift")
-          '''
-          if old in text:
-              p.write_text(text.replace(old, new, 1), encoding="utf-8")
-          elif new not in text:
-              raise SystemExit("expected old/new header validation block not found; refusing broad edit")
-          PY
 
           # The weigh-in contract migration moved the contract from 0.3.0-draft to 0.4.0-draft
           # without changing existing materialized core table schemas. Synchronize only that exact
@@ -115,7 +89,6 @@ jobs:
           if [ "$code" -ne 0 ]; then
             # Do not allow a failed materialization/validation attempt to leak canonical changes.
             for p in \
-              pipelines/build_canonical_external_mma_v0.py \
               data/canonical/v0/events.csv data/canonical/v0/fights.csv \
               data/canonical/v0/source_identity_links.csv data/canonical/v0/field_provenance.csv \
               data/canonical/v0/manifest.json data/derived/qa/canonical_external_mma_exclusions_v0.csv \
@@ -133,8 +106,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$log" provenance/runs/canonical_external_mma_v0_latest.json
           if [ "$code" -eq 0 ]; then
-            git add pipelines/build_canonical_external_mma_v0.py \
-              data/canonical/v0/events.csv data/canonical/v0/fights.csv \
+            git add data/canonical/v0/events.csv data/canonical/v0/fights.csv \
               data/canonical/v0/source_identity_links.csv data/canonical/v0/field_provenance.csv \
               data/canonical/v0/manifest.json data/derived/qa/canonical_external_mma_exclusions_v0.csv \
               provenance/audits/canonical_external_mma_v0_latest.json \
