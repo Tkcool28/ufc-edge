@@ -1,5 +1,6 @@
 name: Audit UFC scorecard spatial structure v0
 
+# Registered on main; trigger version 1.
 on:
   push:
     branches: [main]
