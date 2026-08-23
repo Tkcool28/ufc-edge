@@ -1,0 +1,38 @@
+name: Audit external MMA raw schema
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/audit_external_mma_raw_schema.py"
+      - "data/raw/kaggle_pro_mma_fights/v1/pro_mma_fights.csv"
+      - ".github/workflows/audit-external-mma-raw-schema.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          python pipelines/audit_external_mma_raw_schema.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add provenance/audits/external_mma_raw_schema_latest.json
+          git commit -m "Audit external MMA raw schema [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
