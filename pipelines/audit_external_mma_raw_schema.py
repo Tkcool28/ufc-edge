@@ -2,12 +2,12 @@
 """Report the exact raw schema of the pinned external pro-MMA fight CSV.
 
 DATA PHASE ONLY. This is a read-only source audit; no canonical rows are written.
+The audit is intentionally narrow: measure the source before writing any overlap logic.
 """
 from __future__ import annotations
 
 import csv
 import json
-from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -32,7 +32,8 @@ def main() -> int:
         for r in rows:
             v = (r.get(f) or "").strip()
             if v and v not in seen:
-                vals.append(v); seen.add(v)
+                vals.append(v)
+                seen.add(v)
             if len(vals) >= 8:
                 break
         samples[f] = vals
