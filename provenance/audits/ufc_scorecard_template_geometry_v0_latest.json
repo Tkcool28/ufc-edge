@@ -1,0 +1,72 @@
+{
+  "decision": {
+    "canonical_judge_round_scores_written": false,
+    "column_centers_learned_from_sample_not_single_image": true,
+    "exact_geometry_subset_can_advance_to_candidate_parser": false,
+    "fighter_column_identity_promoted": false,
+    "judge_name_identity_promoted": false,
+    "required_next": "Run a candidate parser only on exact_six_column_geometry_candidate template rows first. Prove fighter A/B column assignment and three judge-name blocks, then validate parsed totals/results before expanding coverage.",
+    "six_score_columns_repeatably_observed": true,
+    "top_to_bottom_round_order_promoted": false
+  },
+  "exact_geometry_max_x_deviation": 0.038,
+  "generated_at_utc": "2026-08-23T01:07:20.598374Z",
+  "geometry_status_counts": {
+    "not_exact_geometry": 37,
+    "zero_round_clean": 11
+  },
+  "grid_y_window": [
+    0.35,
+    0.67
+  ],
+  "learned_score_column_centers": [
+    0.07353,
+    0.28736,
+    0.38939,
+    0.60608,
+    0.71367,
+    0.92582
+  ],
+  "output": "data/derived/qa/ufc_scorecard_template_geometry_v0.csv",
+  "sample_images": 48,
+  "schema_version": 1,
+  "score_column_assignment_counts": {
+    "0": 25,
+    "1": 51,
+    "2": 29,
+    "3": 61,
+    "4": 22,
+    "5": 50
+  },
+  "score_column_max_abs_deviation": 0.05758,
+  "score_column_p95_abs_deviation": 0.02942,
+  "score_column_p99_abs_deviation": 0.05063,
+  "year_geometry_status_counts": {
+    "2020": {
+      "not_exact_geometry": 4,
+      "zero_round_clean": 2
+    },
+    "2021": {
+      "not_exact_geometry": 3,
+      "zero_round_clean": 3
+    },
+    "2022": {
+      "not_exact_geometry": 9,
+      "zero_round_clean": 1
+    },
+    "2023": {
+      "not_exact_geometry": 6
+    },
+    "2024": {
+      "not_exact_geometry": 7,
+      "zero_round_clean": 1
+    },
+    "2025": {
+      "not_exact_geometry": 6
+    },
+    "2026": {
+      "not_exact_geometry": 2,
+      "zero_round_clean": 4
+    }
+  }
+}
