@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_scorecard_adaptive_cell_ocr_v0",
+  "completed_at_utc": "2026-08-23T01:26:11.288961Z",
+  "exit_code": 0,
+  "github_run_id": "32610253820",
+  "log": "provenance/runs/ufc_scorecard_adaptive_cell_ocr_v0_32610253820.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "b47340911e9ab66d7b37af24cdaeadf49bef518b"
+}

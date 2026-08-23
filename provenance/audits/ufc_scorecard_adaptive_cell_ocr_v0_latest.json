@@ -1,0 +1,27 @@
+{
+  "accepted_cell_fraction": 0.466667,
+  "accepted_cells": 42,
+  "anchor_status_counts": {
+    "full_anchor": 6,
+    "partial_anchor": 29
+  },
+  "cards_all_cells_pairs_and_orientation_strict": 0,
+  "cards_all_cells_recovered": 0,
+  "cards_all_pairs_strict": 0,
+  "crop_half_height": 0.019,
+  "crop_half_width": 0.026,
+  "decision": {
+    "canonical_judge_round_scores_written": false,
+    "multi_variant_7_10_consensus_required": true,
+    "per_image_round_label_anchors_used": true,
+    "point_deduction_or_atypical_pairs_excluded": true,
+    "required_next": "Intersect strict adaptive-score cards with three-judge independently reconciled names. Validate source result totals before any canonical score rows.",
+    "strict_pair_requires_one_10": true
+  },
+  "full_anchor_expected_cells": 90,
+  "generated_at_utc": "2026-08-23T01:26:11.256739Z",
+  "output": "data/derived/qa/ufc_scorecard_adaptive_cell_ocr_v0.csv",
+  "schema_version": 1,
+  "score_offset_from_round_label": 0.1095,
+  "scored_sample_cards": 35
+}
