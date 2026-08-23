@@ -30,7 +30,7 @@ Positional/TIP evidence remains represented separately as canonical coarse bucke
 
 | Path | Bytes | Lines |
 | --- | ---: | ---: |
-| `handicap/v0/index/fighters.json` | 5957122 | 161043 |
+| `handicap/v0/index/fighters.json` | 1391990 | 1 |
 | `handicap/v0/fighters/6e36e3a7-7042-5958-b1ab-2c5683abc303.json` | 787772 | 23044 |
 | `handicap/v0/matchups/6e36e3a7-7042-5958-b1ab-2c5683abc303__18fbdd6d-2d9a-501e-bcad-20672321fc30.json` | 1590929 | 43936 |
 | `handicap/v0/matchups/6e36e3a7-7042-5958-b1ab-2c5683abc303__18fbdd6d-2d9a-501e-bcad-20672321fc30.md` | 315583 | 2754 |
