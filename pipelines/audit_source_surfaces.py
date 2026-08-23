@@ -176,6 +176,31 @@ def add_espn(out: list[dict[str, Any]]) -> None:
     })
 
 
+
+def add_ufc_official_articles(out: list[dict[str, Any]]) -> None:
+    base = ROOT / "ufc_official_articles"
+    if not base.exists():
+        return
+    for family in ("weigh_in", "scorecard"):
+        manifests = sorted(p for p in base.glob(f"*/{family}/manifest.json") if p.is_file())
+        manifest_path = latest(manifests)
+        if not manifest_path:
+            continue
+        m = load_json(manifest_path)
+        if m.get("complete_family_snapshot") is not True:
+            raise RuntimeError(f"Official UFC article family is not complete: {manifest_path}")
+        out.append({
+            "source": "ufc_official_content",
+            "collection": f"{family}_articles",
+            "snapshot": m.get("series_id") or manifest_path.parent.parent.name,
+            "manifest": manifest_path.as_posix(),
+            "rows": m.get("items"),
+            "attributes": ["raw_html"],
+            "status_counts": m.get("status_counts"),
+            "complete_family_snapshot": True,
+            "structured_parsing_requires_separate_audit": True,
+        })
+
 def add_manifest_source(out: list[dict[str, Any]], source: str, glob_pattern: str) -> None:
     manifest_path = latest([p for p in ROOT.glob(glob_pattern) if p.is_file()])
     if not manifest_path:
@@ -264,6 +289,7 @@ def main() -> int:
     add_greco(items)
     add_fightmetric(items)
     add_ufc_resources(items)
+    add_ufc_official_articles(items)
     add_espn(items)
     add_manifest_source(items, "tidytuesday_ufc_rankings", "tidytuesday_ufc_rankings/*/manifest.json")
     add_manifest_source(items, "kaggle_pro_mma_fights", "kaggle_pro_mma_fights/*/manifest.json")

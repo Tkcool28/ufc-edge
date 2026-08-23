@@ -1,5 +1,5 @@
 {
-  "map_version": "0.4.0-draft",
+  "map_version": "0.5.0-draft",
   "mapping_status_values": [
     "verified",
     "provisional",
@@ -1655,12 +1655,61 @@
       "target_table": "fighter_profile_snapshots",
       "temporal_class": "point_in_time_snapshot",
       "transform": "resolve_included_relationship_label"
+    },
+    {
+      "collection": "weigh_in_articles",
+      "mapping_status": "verified",
+      "notes": "Deterministic observation ID is minted only after context-clean official article extraction; raw article identity alone is not a fighter/fight identity.",
+      "source": "ufc_official_content",
+      "source_field": "raw_html",
+      "source_role": "primary_candidate",
+      "target_field": "weigh_in_observation_id",
+      "target_table": "weigh_ins",
+      "temporal_class": "historical_observation",
+      "transform": "extract_context_clean_bout_observation_then_uuid5"
+    },
+    {
+      "collection": "weigh_in_articles",
+      "mapping_status": "verified",
+      "notes": "Fight identity requires singleton article-event intersection plus exact contextual canonical participant pair; display name alone is insufficient.",
+      "source": "ufc_official_content",
+      "source_field": "raw_html",
+      "source_role": "primary_candidate",
+      "target_field": "fight_id",
+      "target_table": "weigh_ins",
+      "temporal_class": "historical_observation",
+      "transform": "resolve_singleton_event_and_exact_contextual_participant_pair"
+    },
+    {
+      "collection": "weigh_in_articles",
+      "mapping_status": "verified",
+      "notes": "Fighter identity is accepted only inside the audited exact fight participant context; raw display name alone is not trusted.",
+      "source": "ufc_official_content",
+      "source_field": "raw_html",
+      "source_role": "primary_candidate",
+      "target_field": "fighter_id",
+      "target_table": "weigh_ins",
+      "temporal_class": "historical_observation",
+      "transform": "resolve_fighter_within_context_clean_canonical_fight"
+    },
+    {
+      "collection": "weigh_in_articles",
+      "mapping_status": "verified",
+      "notes": "Official scale weight is parsed from the audited bout-local weigh-in line. Roster/listed weight is never substituted.",
+      "source": "ufc_official_content",
+      "source_field": "raw_html",
+      "source_role": "primary_candidate",
+      "target_field": "scale_weight_lbs",
+      "target_table": "weigh_ins",
+      "temporal_class": "historical_observation",
+      "transform": "parse_official_bout_local_scale_weight_lbs"
     }
   ],
   "rules": {
     "duration_units_require_semantic_verification": true,
     "missing_is_not_zero": true,
     "name_similarity_is_not_semantic_verification": true,
+    "official_weigh_in_annotation_semantics_require_observation_level_proof": true,
     "quantized_time_must_not_emit_exact_seconds": true,
     "rejected_mappings_do_not_emit_canonical_values": true,
     "ufc_athlete_profiles_are_point_in_time_only": true,

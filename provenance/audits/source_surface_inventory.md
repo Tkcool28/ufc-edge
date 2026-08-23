@@ -23,6 +23,8 @@ Generated from files already committed under `data/raw/`. This is an acquisition
 | ufc_datalab_scorecards | SCORECARDS | 2251 | 3268146c0521 | red_fighter_name, blue_fighter_name, event_date, red_fighter_total_pts, blue_fighter_total_pts |
 | ufc_fightmetric_official | fight_roundboard | 374 | 20260820T123046Z | combined, drupal_internal__id, fightmetric_id, metatag, rank, round, statname, value |
 | ufc_fightmetric_official | fight_stat | 57382 | 20260820T123046Z | back_ctl_time, body_sig_str_att, body_sig_str_land, body_str_att, body_str_land, clinch_body_str_att, clinch_body_str_land, clinch_head_str_att, clinch_head_str_land, clinch_leg_str_att, clinch_leg_str_land, clinch_sig_kick_att, … (+78) |
+| ufc_official_content | scorecard_articles | 582 | 20260821T210000Z | raw_html |
+| ufc_official_content | weigh_in_articles | 716 | 20260821T210000Z | raw_html |
 
 ## Rules
 

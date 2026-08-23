@@ -1,128 +1,185 @@
 {
-  "schema_version": 1,
-  "precedence_version": "0.2.0-draft",
-  "status": "data_phase_draft",
-  "global_rules": {
-    "precedence_applies_only_after_identity_resolution": true,
-    "missing_is_not_zero": true,
-    "lower_priority_source_never_overwrites_present_higher_priority_value_silently": true,
-    "all_selected_and_conflicting_values_require_field_provenance": true,
-    "quantized_measurement_never_becomes_exact_measurement": true,
-    "round_zero_is_qa_summary_only": true,
-    "duplicate_source_versions_fail_closed_until_rule_below_resolves_them": true,
-    "canonical_v0_shared_round_transport_is_greco": true
-  },
   "evidence": {
-    "ufc_greco_round_overlap": "provenance/audits/ufc_greco_round_overlap_latest.json",
+    "canonical_ufc_weigh_ins": "provenance/audits/canonical_ufc_weigh_ins_v0_latest.json",
+    "external_mma_fight_transport": "provenance/audits/external_mma_fight_transport_latest.json",
     "fightmetric_color_semantics": "provenance/audits/fightmetric_color_semantics_latest.json",
-    "fightmetric_era_coverage": "provenance/audits/fightmetric_era_coverage_latest.json",
     "fightmetric_duplicate_versions": "provenance/audits/fightmetric_duplicate_versions_latest.json",
+    "fightmetric_era_coverage": "provenance/audits/fightmetric_era_coverage_latest.json",
     "fightmetric_position_quality": "provenance/audits/fightmetric_position_time_quality_latest.json",
     "fightmetric_unidentified_rows": "provenance/audits/fightmetric_unidentified_rows_latest.json",
-    "external_mma_fight_transport": "provenance/audits/external_mma_fight_transport_latest.json"
+    "ufc_greco_round_overlap": "provenance/audits/ufc_greco_round_overlap_latest.json"
   },
+  "global_rules": {
+    "all_selected_and_conflicting_values_require_field_provenance": true,
+    "canonical_v0_shared_round_transport_is_greco": true,
+    "duplicate_source_versions_fail_closed_until_rule_below_resolves_them": true,
+    "lower_priority_source_never_overwrites_present_higher_priority_value_silently": true,
+    "missing_is_not_zero": true,
+    "precedence_applies_only_after_identity_resolution": true,
+    "quantized_measurement_never_becomes_exact_measurement": true,
+    "round_zero_is_qa_summary_only": true
+  },
+  "precedence_version": "0.3.0-draft",
   "rules": [
     {
-      "family": "ufc_fight_event_identity",
-      "status": "active",
-      "canonical_tables": ["events", "fights", "source_identity_links"],
-      "priority": ["ufc_com_official", "greco1899_ufcstats", "espn_mma"],
-      "selection_gate": "Prefer direct official UFC UUID/FightMetric/event relationships. Never create a trusted fighter/fight identity from display-name-only matching.",
-      "fallback_rule": "Use lower-priority source only where official identity is absent and the fallback has its own stable provider identity plus a validated crosswalk.",
-      "notes": "Official UFC is the preferred identity spine when a direct unambiguous relationship exists; canonical v0 may retain an already trusted Greco identity where the official relationship is missing or conflicting."
-    },
-    {
-      "family": "ufc_fighter_identity_and_static_profile",
-      "status": "active",
-      "canonical_tables": ["fighters", "fighter_profile_snapshots", "source_identity_links"],
-      "priority": ["ufc_com_official", "greco1899_ufcstats", "espn_mma"],
-      "selection_gate": "Static identity fields may reconcile across sources; mutable current profile fields require dated snapshots and may not be backfilled into old fights.",
-      "notes": "Current rank/status/gym/listed weight are point-in-time observations, not historical truth."
-    },
-    {
-      "family": "shared_round_count_stats",
-      "status": "active",
-      "canonical_table": "fighter_round_stats",
-      "fields": [
-        "knockdowns", "submission_attempts", "reversals",
-        "sig_strikes_landed", "sig_strikes_attempted",
-        "total_strikes_landed", "total_strikes_attempted",
-        "takedowns_landed", "takedowns_attempted",
-        "sig_head_landed", "sig_head_attempted",
-        "sig_body_landed", "sig_body_attempted",
-        "sig_leg_landed", "sig_leg_attempted",
-        "sig_distance_landed", "sig_distance_attempted",
-        "sig_clinch_landed", "sig_clinch_attempted",
-        "sig_ground_landed", "sig_ground_attempted"
+      "canonical_tables": [
+        "events",
+        "fights",
+        "source_identity_links"
       ],
-      "priority": ["greco1899_ufcstats", "ufc_fightmetric_official", "espn_mma"],
-      "selection_gate": "Canonical v0 uses the pinned Greco/UFCStats exact fighter-round transport for this shared family. Official UFC may validate or fill a genuinely missing value only after stable fight identity, audited numeric corner mapping 0=red/1=blue, round>=1, a non-null mapped field, and no unresolved duplicate source version for that fighter-round key.",
-      "fallback_rule": "Official UFC may fill a genuinely missing Greco shared-count value only through the strict eligibility gate and with field provenance. ESPN remains additive/QA until its grain/semantics are independently promoted.",
-      "qa": "Across 32,342 uncontested aligned fighter-round keys, shared official-vs-Greco count fields are generally ~99.35%-100% exact; disagreements remain provenance-visible.",
+      "fallback_rule": "Use lower-priority source only where official identity is absent and the fallback has its own stable provider identity plus a validated crosswalk.",
+      "family": "ufc_fight_event_identity",
+      "notes": "Official UFC is the preferred identity spine when a direct unambiguous relationship exists; canonical v0 may retain an already trusted Greco identity where the official relationship is missing or conflicting.",
+      "priority": [
+        "ufc_com_official",
+        "greco1899_ufcstats",
+        "espn_mma"
+      ],
+      "selection_gate": "Prefer direct official UFC UUID/FightMetric/event relationships. Never create a trusted fighter/fight identity from display-name-only matching.",
+      "status": "active"
+    },
+    {
+      "canonical_tables": [
+        "fighters",
+        "fighter_profile_snapshots",
+        "source_identity_links"
+      ],
+      "family": "ufc_fighter_identity_and_static_profile",
+      "notes": "Current rank/status/gym/listed weight are point-in-time observations, not historical truth.",
+      "priority": [
+        "ufc_com_official",
+        "greco1899_ufcstats",
+        "espn_mma"
+      ],
+      "selection_gate": "Static identity fields may reconcile across sources; mutable current profile fields require dated snapshots and may not be backfilled into old fights.",
+      "status": "active"
+    },
+    {
+      "canonical_table": "fighter_round_stats",
       "duplicate_policy": "For any conflicting FightMetric source-version key, do not choose first/last/newest automatically. Keep the clean Greco shared count and quarantine official-only TIP fields until a dedicated duplicate resolver promotes a version.",
+      "fallback_rule": "Official UFC may fill a genuinely missing Greco shared-count value only through the strict eligibility gate and with field provenance. ESPN remains additive/QA until its grain/semantics are independently promoted.",
+      "family": "shared_round_count_stats",
+      "fields": [
+        "knockdowns",
+        "submission_attempts",
+        "reversals",
+        "sig_strikes_landed",
+        "sig_strikes_attempted",
+        "total_strikes_landed",
+        "total_strikes_attempted",
+        "takedowns_landed",
+        "takedowns_attempted",
+        "sig_head_landed",
+        "sig_head_attempted",
+        "sig_body_landed",
+        "sig_body_attempted",
+        "sig_leg_landed",
+        "sig_leg_attempted",
+        "sig_distance_landed",
+        "sig_distance_attempted",
+        "sig_clinch_landed",
+        "sig_clinch_attempted",
+        "sig_ground_landed",
+        "sig_ground_attempted"
+      ],
+      "priority": [
+        "greco1899_ufcstats",
+        "ufc_fightmetric_official",
+        "espn_mma"
+      ],
+      "qa": "Across 32,342 uncontested aligned fighter-round keys, shared official-vs-Greco count fields are generally ~99.35%-100% exact; disagreements remain provenance-visible.",
+      "selection_gate": "Canonical v0 uses the pinned Greco/UFCStats exact fighter-round transport for this shared family. Official UFC may validate or fill a genuinely missing value only after stable fight identity, audited numeric corner mapping 0=red/1=blue, round>=1, a non-null mapped field, and no unresolved duplicate source version for that fighter-round key.",
+      "status": "active",
       "versioning_note": "Changing the primary shared-round transport away from Greco requires an explicit canonical dataset version/migration; it is not a silent precedence edit."
     },
     {
-      "family": "precise_round_control_time",
-      "status": "active",
       "canonical_table": "fighter_round_stats",
-      "fields": ["control_sec"],
-      "priority": ["greco1899_ufcstats", "espn_mma"],
-      "selection_gate": "Require exact-seconds semantics. UFC archived fight_stat.control_time is not eligible for control_sec.",
-      "rejected_for_exact_seconds": ["ufc_fightmetric_official.control_time"],
-      "notes": "UFC archived control_time equals floor(Greco control seconds/60) in 97.45% of 23,876 aligned comparisons; it is coarse QA evidence, not exact seconds."
-    },
-    {
-      "family": "round_position_time_buckets",
-      "status": "active",
-      "canonical_table": "fighter_round_position",
+      "family": "precise_round_control_time",
       "fields": [
-        "standing_bucket_min", "neutral_bucket_min", "distance_bucket_min",
-        "clinch_bucket_min", "ground_bucket_min", "ground_control_bucket_min",
-        "guard_control_bucket_min", "half_guard_control_bucket_min",
-        "side_control_bucket_min", "mount_control_bucket_min",
-        "back_control_bucket_min", "misc_ground_control_bucket_min"
+        "control_sec"
       ],
-      "priority": ["ufc_fightmetric_official"],
-      "selection_gate": "Stable identified actual-round row; mapped raw value is integer 0..5; fighter-round key has no unresolved duplicate FightMetric source version. Values >5 are preserved raw but canonical-ineligible.",
-      "precision_rule": "Store the accepted raw integer as a floor-whole-minute bucket and interval bounds only; never synthesize an observed exact-second duration.",
+      "notes": "UFC archived control_time equals floor(Greco control seconds/60) in 97.45% of 23,876 aligned comparisons; it is coarse QA evidence, not exact seconds.",
+      "priority": [
+        "greco1899_ufcstats",
+        "espn_mma"
+      ],
+      "rejected_for_exact_seconds": [
+        "ufc_fightmetric_official.control_time"
+      ],
+      "selection_gate": "Require exact-seconds semantics. UFC archived fight_stat.control_time is not eligible for control_sec.",
+      "status": "active"
+    },
+    {
+      "canonical_table": "fighter_round_position",
       "era_rule": "Coverage is source-observed missingness, not a reason to impute. TIP coverage is near-zero before 2013; strong for most fields from 2013 onward. ground_time is specifically incomplete and reaches 0% coverage in 2023-present, so preserve nulls.",
-      "notes": "The minimum 0..5 fraction among populated audited position fields is >99.6%; >5 anomalies fail closed."
+      "family": "round_position_time_buckets",
+      "fields": [
+        "standing_bucket_min",
+        "neutral_bucket_min",
+        "distance_bucket_min",
+        "clinch_bucket_min",
+        "ground_bucket_min",
+        "ground_control_bucket_min",
+        "guard_control_bucket_min",
+        "half_guard_control_bucket_min",
+        "side_control_bucket_min",
+        "mount_control_bucket_min",
+        "back_control_bucket_min",
+        "misc_ground_control_bucket_min"
+      ],
+      "notes": "The minimum 0..5 fraction among populated audited position fields is >99.6%; >5 anomalies fail closed.",
+      "precision_rule": "Store the accepted raw integer as a floor-whole-minute bucket and interval bounds only; never synthesize an observed exact-second duration.",
+      "priority": [
+        "ufc_fightmetric_official"
+      ],
+      "selection_gate": "Stable identified actual-round row; mapped raw value is integer 0..5; fighter-round key has no unresolved duplicate FightMetric source version. Values >5 are preserved raw but canonical-ineligible.",
+      "status": "active"
     },
     {
-      "family": "historical_rankings",
-      "status": "active",
       "canonical_table": "rankings",
-      "priority": ["tidytuesday_ufc_rankings"],
+      "family": "historical_rankings",
+      "future_join_rule": "Nearest future ranking is forbidden.",
+      "priority": [
+        "tidytuesday_ufc_rankings"
+      ],
       "selection_gate": "Resolve fighter identity; store dated observations only. Downstream historical use may select only observations strictly before the target information cutoff.",
-      "future_join_rule": "Nearest future ranking is forbidden."
+      "status": "active"
     },
     {
-      "family": "cross_promotion_fight_history",
-      "status": "active",
       "canonical_table": "fights",
-      "priority": ["kaggle_pro_mma_fights"],
-      "selection_gate": "Resolve fighter identity and deduplicate UFC overlap before canonical insertion. Source dates use audited abbreviated-month MDY semantics (for example Aug 7, 2021; parser %b %d, %Y). Source event URL is the event-key candidate, and (source event URL, match_nr) is the fight-key candidate except the single duplicated pair, which must be quarantined.",
+      "evidence": "provenance/audits/external_mma_fight_transport_latest.json",
+      "family": "cross_promotion_fight_history",
       "notes": "The transport audit covers all 10,448 rows: all dates parse as abbreviated-month MDY; 1,006 source event URLs map to 1,006 event signatures with no URL mapping to multiple signatures; exactly one duplicated (event URL, match_nr) pair spans two rows. Companion fighter-profile career totals are 2021 snapshot data and cannot be historical backfill.",
-      "evidence": "provenance/audits/external_mma_fight_transport_latest.json"
+      "priority": [
+        "kaggle_pro_mma_fights"
+      ],
+      "selection_gate": "Resolve fighter identity and deduplicate UFC overlap before canonical insertion. Source dates use audited abbreviated-month MDY semantics (for example Aug 7, 2021; parser %b %d, %Y). Source event URL is the event-key candidate, and (source event URL, match_nr) is the fight-key candidate except the single duplicated pair, which must be quarantined.",
+      "status": "active"
     },
     {
-      "family": "fight_specific_weigh_ins",
-      "status": "acquired_qa_pending",
       "canonical_table": "weigh_ins",
-      "priority": ["ufc_official_content"],
-      "selection_gate": "Raw official UFC pages and explicit scale-weight candidates are acquired. Canonical rows still require exact fight/fighter identity plus annotation QA for missed-weight, catchweight, attempt and penalty semantics. Current roster weight and UFC fight-node weight fields are not substitutes.",
-      "fallback_rule": "No fallback is canonical-approved yet.",
-      "evidence": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/manifest.json"
+      "evidence": "provenance/audits/canonical_ufc_weigh_ins_v0_latest.json",
+      "fallback_rule": "No fallback source is canonical-approved; roster/listed weight is never a scale-weight substitute.",
+      "family": "fight_specific_weigh_ins",
+      "notes": "Canonical v0 contains 12,890 official UFC scale-weight observations covering 6,445 fights and 2,249 fighters. Two false Strikeforce-context transports are quarantined; 172 marker-bearing source rows retain raw marker text only.",
+      "priority": [
+        "ufc_official_content"
+      ],
+      "selection_gate": "Canonical scale_weight_lbs requires an official UFC article observation with context-clean exact fight/fighter identity. Article publication time is not weigh-in date. attempt_number, contract_limit_lbs, missed_weight, pounds_over, catchweight_bout, purse_penalty_pct and official_status_text remain null unless source-explicit semantics are independently resolved for that observation; page-local annotation markers are never interpreted globally.",
+      "status": "active"
     },
     {
-      "family": "official_judge_round_scores",
-      "status": "acquired_qa_pending",
       "canonical_table": "judge_round_scores",
-      "priority": ["ufc_official_content"],
-      "selection_gate": "Official UFC scorecard pages are acquired. Canonical judge-round rows require a verified official scorecard image/text source, resolved fight/fighter/judge identity, and round-score plausibility. OCR output alone is never canonical.",
+      "evidence": "data/raw/ufc_official_articles/20260821T210000Z/scorecard/manifest.json",
       "fallback_rule": "UFC-DataLab OCR remains raw/QA-only; MMA Decisions is reference-only under the current conservative acquisition rule.",
-      "evidence": "data/raw/ufc_official_articles/20260821T210000Z/scorecard/manifest.json"
+      "family": "official_judge_round_scores",
+      "priority": [
+        "ufc_official_content"
+      ],
+      "selection_gate": "Official UFC scorecard pages are acquired. Canonical judge-round rows require a verified official scorecard image/text source, resolved fight/fighter/judge identity, and round-score plausibility. OCR output alone is never canonical.",
+      "status": "acquired_qa_pending"
     }
-  ]
+  ],
+  "schema_version": 1,
+  "status": "data_phase_draft"
 }

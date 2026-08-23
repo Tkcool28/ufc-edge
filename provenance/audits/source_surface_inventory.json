@@ -929,6 +929,36 @@
       },
       "snapshot": "20260820T123046Z",
       "source": "ufc_fightmetric_official"
+    },
+    {
+      "attributes": [
+        "raw_html"
+      ],
+      "collection": "scorecard_articles",
+      "complete_family_snapshot": true,
+      "manifest": "data/raw/ufc_official_articles/20260821T210000Z/scorecard/manifest.json",
+      "rows": 582,
+      "snapshot": "20260821T210000Z",
+      "source": "ufc_official_content",
+      "status_counts": {
+        "200": 582
+      },
+      "structured_parsing_requires_separate_audit": true
+    },
+    {
+      "attributes": [
+        "raw_html"
+      ],
+      "collection": "weigh_in_articles",
+      "complete_family_snapshot": true,
+      "manifest": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/manifest.json",
+      "rows": 716,
+      "snapshot": "20260821T210000Z",
+      "source": "ufc_official_content",
+      "status_counts": {
+        "200": 716
+      },
+      "structured_parsing_requires_separate_audit": true
     }
   ]
 }

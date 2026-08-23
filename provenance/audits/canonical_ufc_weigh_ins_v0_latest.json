@@ -3,7 +3,7 @@
   "canonical_fighters_covered": 2249,
   "canonical_fights_covered": 6445,
   "canonical_weigh_in_rows": 12890,
-  "field_provenance_rows_added_this_run": 51560,
+  "field_provenance_rows_added_this_run": 0,
   "outputs": {
     "exclusions": "data/derived/qa/canonical_ufc_weigh_in_exclusions_v0.csv",
     "field_provenance": "data/canonical/v0/field_provenance.csv",

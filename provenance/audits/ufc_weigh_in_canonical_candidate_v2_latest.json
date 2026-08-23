@@ -33,7 +33,7 @@
   "exclusion_reason_counts": {
     "explicit_non_ufc_article_context": 2
   },
-  "generated_at_utc": "2026-08-23T00:53:11.751011Z",
+  "generated_at_utc": "2026-08-23T00:57:36.862404Z",
   "nonempty_marker_rows_preserved_as_raw_only": 172,
   "output": "data/derived/identity/ufc_weigh_in_canonical_candidate_v2.csv",
   "schema_version": 2,

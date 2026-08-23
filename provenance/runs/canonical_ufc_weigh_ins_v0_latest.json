@@ -1,10 +1,10 @@
 {
   "build": "canonical_ufc_weigh_ins_v0",
-  "completed_at_utc": "2026-08-23T00:53:17.973136Z",
-  "exit_code": 1,
-  "github_run_id": "32608983720",
-  "log": "provenance/runs/canonical_ufc_weigh_ins_v0_32608983720.log",
+  "completed_at_utc": "2026-08-23T00:57:42.983444Z",
+  "exit_code": 0,
+  "github_run_id": "32609163232",
+  "log": "provenance/runs/canonical_ufc_weigh_ins_v0_32609163232.log",
   "schema_version": 1,
-  "status": "failed",
-  "trigger_sha": "999ae002cd836eae6caeb08bc76d766c7d171e7d"
+  "status": "success",
+  "trigger_sha": "fe245673c72142964a20b928590c92d35ebb885b"
 }
