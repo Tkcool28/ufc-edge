@@ -7,7 +7,7 @@
     "required_next": "Review probe recovery by PSM and image era/format. Choose a bounded OCR configuration for the full 578-image derived layer only if fighter/score text recovery is adequate; canonicalization still requires independent judge/round/fighter semantics.",
     "round_score_structure_resolved": false
   },
-  "generated_at_utc": "2026-08-23T00:57:25.779612Z",
+  "generated_at_utc": "2026-08-23T00:59:48.515659Z",
   "output": "data/derived/qa/ufc_scorecard_ocr_probe_v0.csv",
   "probe_sample_images": 53,
   "psm_summary": {
