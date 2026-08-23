@@ -60,16 +60,21 @@ jobs:
       cancel-in-progress: false
     env:
       PYTHONPATH: src
-      H01_STAGE: ${{ runner.temp }}/h01-stage
-      H01_H00_OUTPUT: ${{ runner.temp }}/h01-h00-output
-      H01_RESULT: ${{ runner.temp }}/h01-result.json
-      H01_CACHE: ${{ runner.temp }}/h01-cache-repo
     steps:
       - name: Checkout trusted main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
+
+      - name: Initialize runner temporary paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "H01_STAGE=$RUNNER_TEMP/h01-stage" >> "$GITHUB_ENV"
+          echo "H01_H00_OUTPUT=$RUNNER_TEMP/h01-h00-output" >> "$GITHUB_ENV"
+          echo "H01_RESULT=$RUNNER_TEMP/h01-result.json" >> "$GITHUB_ENV"
+          echo "H01_CACHE=$RUNNER_TEMP/h01-cache-repo" >> "$GITHUB_ENV"
 
       - name: Record trusted source SHA
         id: source

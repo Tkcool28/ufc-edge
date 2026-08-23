@@ -96,6 +96,18 @@ def test_completion_and_failure_labels_cannot_qualify_labeled_trigger() -> None:
     assert "h00-failed" not in gate
 
 
+def test_runner_temp_is_initialized_at_runtime_not_job_env() -> None:
+    workflow = Path(".github/workflows/h01-handicap-request.yml").read_text(encoding="utf-8")
+    process_job = workflow.split("  process-request:\n", 1)[1]
+    job_env = process_job.split("    env:\n", 1)[1].split("    steps:\n", 1)[0]
+    assert "runner.temp" not in job_env
+    assert "H01_STAGE: ${{ runner.temp }}" not in process_job
+    assert 'echo "H01_STAGE=$RUNNER_TEMP/h01-stage" >> "$GITHUB_ENV"' in process_job
+    assert 'echo "H01_H00_OUTPUT=$RUNNER_TEMP/h01-h00-output" >> "$GITHUB_ENV"' in process_job
+    assert 'echo "H01_RESULT=$RUNNER_TEMP/h01-result.json" >> "$GITHUB_ENV"' in process_job
+    assert 'echo "H01_CACHE=$RUNNER_TEMP/h01-cache-repo" >> "$GITHUB_ENV"' in process_job
+
+
 def test_replace_same_issue_is_idempotent_snapshot(tmp_path: Path) -> None:
     cache = tmp_path / "cache"
     staged = tmp_path / "staged"
