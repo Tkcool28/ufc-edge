@@ -1,0 +1,94 @@
+{
+  "archive_image_count": 578,
+  "decision": {
+    "canonical_judge_round_scores_written": false,
+    "fighter_pair_identity_from_ocr_used": false,
+    "judge_identity_resolved": false,
+    "ocr_complete_for_selected_archive": true,
+    "ocr_is_derived_qa_only": true,
+    "required_next": "Audit OCR text structure for judge-name blocks, fighter column ordering, round headers and per-round score cells. Do not canonicalize any OCR score until all four semantics are jointly resolved for that image/template.",
+    "round_score_structure_resolved": false
+  },
+  "fighter_name_hit_distribution": {
+    "0": 1,
+    "1": 36,
+    "2": 541
+  },
+  "generated_at_utc": "2026-08-23T01:05:28.004084Z",
+  "image_signature_counts": {
+    "jpeg": 492,
+    "png": 86
+  },
+  "images_with_10plus_words": 578,
+  "images_with_6plus_score_tokens": 295,
+  "mapped_fights": 575,
+  "ocr_engine": "tesseract",
+  "ocr_rows": 578,
+  "output": "data/derived/qa/ufc_scorecard_ocr_v0.csv",
+  "psm": 11,
+  "schema_version": 1,
+  "score_token_bucket_counts": {
+    "0": 81,
+    "12_plus": 89,
+    "1_5": 202,
+    "6_11": 206
+  },
+  "year_recovery": {
+    "2020": {
+      "avg_score_tokens": 6.82,
+      "avg_words": 100.7,
+      "images": 57,
+      "one_fighter_hit": 1,
+      "two_fighter_hits": 56,
+      "zero_fighter_hits": 0
+    },
+    "2021": {
+      "avg_score_tokens": 5.98,
+      "avg_words": 100.0,
+      "images": 140,
+      "one_fighter_hit": 9,
+      "two_fighter_hits": 131,
+      "zero_fighter_hits": 0
+    },
+    "2022": {
+      "avg_score_tokens": 4.68,
+      "avg_words": 95.68,
+      "images": 133,
+      "one_fighter_hit": 12,
+      "two_fighter_hits": 121,
+      "zero_fighter_hits": 0
+    },
+    "2023": {
+      "avg_score_tokens": 5.0,
+      "avg_words": 100.08,
+      "images": 37,
+      "one_fighter_hit": 5,
+      "two_fighter_hits": 31,
+      "zero_fighter_hits": 1
+    },
+    "2024": {
+      "avg_score_tokens": 8.24,
+      "avg_words": 102.59,
+      "images": 37,
+      "one_fighter_hit": 0,
+      "two_fighter_hits": 37,
+      "zero_fighter_hits": 0
+    },
+    "2025": {
+      "avg_score_tokens": 7.6,
+      "avg_words": 106.02,
+      "images": 89,
+      "one_fighter_hit": 4,
+      "two_fighter_hits": 85,
+      "zero_fighter_hits": 0
+    },
+    "2026": {
+      "avg_score_tokens": 5.48,
+      "avg_words": 105.15,
+      "images": 85,
+      "one_fighter_hit": 5,
+      "two_fighter_hits": 80,
+      "zero_fighter_hits": 0
+    }
+  }
+}
