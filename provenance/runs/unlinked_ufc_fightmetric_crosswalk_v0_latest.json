@@ -1,0 +1,10 @@
+{
+  "audit": "unlinked_ufc_fightmetric_crosswalk_v0",
+  "completed_at_utc": "2026-08-23T01:52:55.600084Z",
+  "exit_code": 0,
+  "github_run_id": "32611423632",
+  "log": "provenance/runs/unlinked_ufc_fightmetric_crosswalk_v0_32611423632.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "bddca3534f160f644da8088e453989206a5c268a"
+}
