@@ -1,0 +1,97 @@
+{
+  "decision": {
+    "canonical_rows_written": false,
+    "required_next": "Use canonical event/article context to quarantine false article-event transport before canonical weigh-in deduplication. Do not choose conflicting scale weight by averaging or arbitrary source order."
+  },
+  "duplicate_fight_fighter_groups": 2,
+  "generated_at_utc": "2026-08-23T00:28:07.669253Z",
+  "groups": [
+    {
+      "candidate_rows": [
+        {
+          "article_candidate_index": "17",
+          "article_published_time": "2018-09-14T08:36:04-0400",
+          "article_title": "Fight Night Charlotte: Weigh-in Results",
+          "article_url": "https://www.ufc.com/news/fight-night-charlotte-weigh-results",
+          "bout_ordinal_in_article": "1",
+          "candidate_event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+          "fighter_text": "Jacare Souza",
+          "marker": "",
+          "opponent_text": "Derek Brunson",
+          "raw_source_line": "Jacare Souza (186) vs Derek Brunson (185)",
+          "scale_weight_lbs": "186",
+          "source_line_number": "51",
+          "source_path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000017_fight-night-charlotte-weigh-results-4b86a21d9602.html",
+          "source_side": "a"
+        },
+        {
+          "article_candidate_index": "110",
+          "article_published_time": "2018-09-14T08:36:04-0400",
+          "article_title": "Official Strikeforce: Rousey vs. Kaufman Weigh In Results",
+          "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+          "bout_ordinal_in_article": "2",
+          "candidate_event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+          "fighter_text": "\u201cJacare\u201d Souza",
+          "marker": "",
+          "opponent_text": "Derek Brunson",
+          "raw_source_line": "Derek Brunson (186) vs \u201cJacare\u201d Souza (186)",
+          "scale_weight_lbs": "186",
+          "source_line_number": "53",
+          "source_path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000110_official-strikeforce-rousey-vs-kaufman-weigh-results-50a08af2699d.html",
+          "source_side": "b"
+        }
+      ],
+      "canonical_event_date": "2018-01-27",
+      "canonical_event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+      "canonical_event_name": "UFC Fight Night: Jacare vs. Brunson 2",
+      "canonical_promotion": "UFC",
+      "fight_id": "2fad6a2f-c635-53cf-8f23-6d4303e8670a",
+      "fighter_id": "8add16fd-652c-57d9-9619-e8b90c0cc620",
+      "fighter_name": "Jacare Souza"
+    },
+    {
+      "candidate_rows": [
+        {
+          "article_candidate_index": "17",
+          "article_published_time": "2018-09-14T08:36:04-0400",
+          "article_title": "Fight Night Charlotte: Weigh-in Results",
+          "article_url": "https://www.ufc.com/news/fight-night-charlotte-weigh-results",
+          "bout_ordinal_in_article": "1",
+          "candidate_event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+          "fighter_text": "Derek Brunson",
+          "marker": "",
+          "opponent_text": "Jacare Souza",
+          "raw_source_line": "Jacare Souza (186) vs Derek Brunson (185)",
+          "scale_weight_lbs": "185",
+          "source_line_number": "51",
+          "source_path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000000/item_000017_fight-night-charlotte-weigh-results-4b86a21d9602.html",
+          "source_side": "b"
+        },
+        {
+          "article_candidate_index": "110",
+          "article_published_time": "2018-09-14T08:36:04-0400",
+          "article_title": "Official Strikeforce: Rousey vs. Kaufman Weigh In Results",
+          "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+          "bout_ordinal_in_article": "2",
+          "candidate_event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+          "fighter_text": "Derek Brunson",
+          "marker": "",
+          "opponent_text": "\u201cJacare\u201d Souza",
+          "raw_source_line": "Derek Brunson (186) vs \u201cJacare\u201d Souza (186)",
+          "scale_weight_lbs": "186",
+          "source_line_number": "53",
+          "source_path": "data/raw/ufc_official_articles/20260821T210000Z/weigh_in/chunks/index_000075/item_000110_official-strikeforce-rousey-vs-kaufman-weigh-results-50a08af2699d.html",
+          "source_side": "a"
+        }
+      ],
+      "canonical_event_date": "2018-01-27",
+      "canonical_event_id": "1eb33285-c47d-566f-963e-a9fcf819a0e5",
+      "canonical_event_name": "UFC Fight Night: Jacare vs. Brunson 2",
+      "canonical_promotion": "UFC",
+      "fight_id": "2fad6a2f-c635-53cf-8f23-6d4303e8670a",
+      "fighter_id": "3e46fe68-7ebd-54d1-af3e-6fc3dca3a05c",
+      "fighter_name": "Derek Brunson"
+    }
+  ],
+  "schema_version": 1
+}

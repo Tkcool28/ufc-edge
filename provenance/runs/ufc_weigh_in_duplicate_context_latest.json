@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_weigh_in_duplicate_context",
+  "completed_at_utc": "2026-08-23T00:28:07.702605Z",
+  "exit_code": 0,
+  "github_run_id": "32607920907",
+  "log": "provenance/runs/ufc_weigh_in_duplicate_context_32607920907.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "f7ea37b78c8587e545917bc579ffd184328900fe"
+}
