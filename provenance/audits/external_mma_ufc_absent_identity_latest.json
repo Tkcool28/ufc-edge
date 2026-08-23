@@ -1,0 +1,2382 @@
+{
+  "absent_ufc_pair_rows": 25,
+  "decision": {
+    "canonical_rows_written": false,
+    "required_next": "Determine whether absent-pair clusters are caused by trusted same-name identity collisions or true canonical fight omissions. Quarantine any suspect trusted mapping before external fight promotion.",
+    "trusted_crosswalk_mutated": false
+  },
+  "generated_at_utc": "2026-08-23T00:07:52.299105Z",
+  "involved_canonical_id_frequency": [
+    [
+      "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+      8
+    ],
+    [
+      "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+      4
+    ],
+    [
+      "eff43f12-b0c4-5190-9475-b03c9296ee56",
+      3
+    ],
+    [
+      "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+      3
+    ],
+    [
+      "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+      3
+    ],
+    [
+      "93358056-d702-5095-953b-2caffab194a1",
+      1
+    ],
+    [
+      "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+      1
+    ],
+    [
+      "95991651-cc5e-52fa-bf11-aadc73430fe3",
+      1
+    ],
+    [
+      "2a52163a-7b6e-55b6-bc9b-6c2ea1b1fc04",
+      1
+    ],
+    [
+      "74ba2544-69cd-5159-b186-6dd1791dc391",
+      1
+    ],
+    [
+      "322a2f1e-9877-5e52-b90a-755c81398fcf",
+      1
+    ],
+    [
+      "e689dc0d-3641-5d7d-a26e-95c4917e47ac",
+      1
+    ],
+    [
+      "1a1f5e9c-7263-55a4-b13f-97cc87b5253b",
+      1
+    ],
+    [
+      "6efa1952-739c-5032-9bb1-3423df6bc57c",
+      1
+    ],
+    [
+      "15c52013-5292-52d0-b569-e8fafb0f5099",
+      1
+    ],
+    [
+      "1f4170fd-aba4-57bd-9503-c3496bafab8d",
+      1
+    ],
+    [
+      "57beebb1-7f13-567e-a87b-e5533f7d31d7",
+      1
+    ],
+    [
+      "0f502110-3d7c-5ed1-8f92-41ac4dabe6f9",
+      1
+    ],
+    [
+      "3a014558-33f6-524a-9be3-902406e7fc64",
+      1
+    ],
+    [
+      "f61d8d74-703c-5920-b99a-337de39b7b1d",
+      1
+    ],
+    [
+      "ae07bbf2-d084-5b6e-801f-193ef88d32f3",
+      1
+    ],
+    [
+      "cca32f37-427d-501a-82c7-1c88c42840b5",
+      1
+    ],
+    [
+      "7570bbff-4fcc-5ade-b9b5-602689cfb9af",
+      1
+    ],
+    [
+      "d87ad101-ea62-5663-9447-3eac1736298e",
+      1
+    ],
+    [
+      "b735741d-54b6-507a-87de-427091b1bd57",
+      1
+    ],
+    [
+      "263b6ea1-e4d4-5a99-9c46-2fa761bfa6de",
+      1
+    ],
+    [
+      "c7f2a178-e266-5e29-ac92-a330189026b3",
+      1
+    ],
+    [
+      "0721b9b7-2b29-51e6-b3e5-87bbd0d8aec3",
+      1
+    ],
+    [
+      "453589ad-bce1-5f85-ad15-bed39b8494e6",
+      1
+    ],
+    [
+      "210bb4ae-81ec-5eeb-a50a-b2e4bd731db1",
+      1
+    ],
+    [
+      "720ef9b8-3238-56c1-a9ea-a4e23dc0ade8",
+      1
+    ],
+    [
+      "e62dcccb-37ae-5909-bd3b-e0fe321ca1d1",
+      1
+    ],
+    [
+      "ac7c3d93-72ae-56a0-bc6f-fad2feddd13b",
+      1
+    ],
+    [
+      "b5400412-e94d-5683-b23e-747a4b184521",
+      1
+    ]
+  ],
+  "involved_external_name_frequency": [
+    [
+      "Michael McDonald",
+      8
+    ],
+    [
+      "Bruno Silva",
+      5
+    ],
+    [
+      "Kai Kamaka III",
+      3
+    ],
+    [
+      "Mike Davis",
+      3
+    ],
+    [
+      "Magomed Bibulatov",
+      3
+    ],
+    [
+      "Danny Chavez",
+      1
+    ],
+    [
+      "Wellington Turman",
+      1
+    ],
+    [
+      "Victor Rodriguez",
+      1
+    ],
+    [
+      "J.P. Buys",
+      1
+    ],
+    [
+      "Mason Jones",
+      1
+    ],
+    [
+      "Jonathan Pearce",
+      1
+    ],
+    [
+      "Tony Kelley",
+      1
+    ],
+    [
+      "David Dvorak",
+      1
+    ],
+    [
+      "Thomas Gifford",
+      1
+    ],
+    [
+      "Khalid Taha",
+      1
+    ],
+    [
+      "Gilbert Burns",
+      1
+    ],
+    [
+      "Rogerio Bontorin",
+      1
+    ],
+    [
+      "John Moraga",
+      1
+    ],
+    [
+      "Jenel Lausa",
+      1
+    ],
+    [
+      "John Lineker",
+      1
+    ],
+    [
+      "Rob Font",
+      1
+    ],
+    [
+      "Joey Gomez",
+      1
+    ],
+    [
+      "Urijah Faber",
+      1
+    ],
+    [
+      "Brad Pickett",
+      1
+    ],
+    [
+      "Renan Barao",
+      1
+    ],
+    [
+      "Miguel Torres",
+      1
+    ],
+    [
+      "Alex Soto",
+      1
+    ],
+    [
+      "Chris Cariaso",
+      1
+    ],
+    [
+      "Edwin Figueroa",
+      1
+    ],
+    [
+      "Ken Shamrock",
+      1
+    ],
+    [
+      "Patrick Smith",
+      1
+    ],
+    [
+      "Royce Gracie",
+      1
+    ],
+    [
+      "Art Jimmerson",
+      1
+    ]
+  ],
+  "rows": [
+    {
+      "date": "Jul 31, 2021",
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_result": "draw",
+      "fighter2_result": "draw",
+      "sides": [
+        {
+          "canonical_dob": "1987-03-14",
+          "canonical_fighter_id": "93358056-d702-5095-953b-2caffab194a1",
+          "canonical_name": "Danny Chavez",
+          "crosswalk_external_birth_date": "1987-03-14",
+          "crosswalk_external_name": "Danny Chavez",
+          "external_url": "/fighter/Danny-Chavez-59478",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Danny Chavez"
+          ],
+          "side": 1,
+          "source_name": "Danny Chavez",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1987-03-14",
+              "canonical_fighter_id": "93358056-d702-5095-953b-2caffab194a1",
+              "external_birth_date": "1987-03-14",
+              "external_name": "Danny Chavez",
+              "external_url": "/fighter/Danny-Chavez-59478"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1987-03-14",
+              "canonical_fighter_id": "93358056-d702-5095-953b-2caffab194a1",
+              "canonical_name": "Danny Chavez",
+              "external_birth_date": "1987-03-14",
+              "external_url": "/fighter/Danny-Chavez-59478"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1995-01-05",
+          "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+          "canonical_name": "Kai Kamaka III",
+          "crosswalk_external_birth_date": "1995-01-05",
+          "crosswalk_external_name": "Kai Kamaka III",
+          "external_url": "/fighter/Kai-Kamaka-III-117585",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Kai Kamaka III"
+          ],
+          "side": 2,
+          "source_name": "Kai Kamaka III",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1995-01-05",
+              "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+              "external_birth_date": "1995-01-05",
+              "external_name": "Kai Kamaka III",
+              "external_url": "/fighter/Kai-Kamaka-III-117585"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1995-01-05",
+              "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+              "canonical_name": "Kai Kamaka III",
+              "external_birth_date": "1995-01-05",
+              "external_url": "/fighter/Kai-Kamaka-III-117585"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "source_match_nr": "4",
+      "win_method": "Draw"
+    },
+    {
+      "date": "Jun 19, 2021",
+      "event_title": "UFC on ESPN 25 - Korean Zombie vs. Ige",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1989-07-13",
+          "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+          "canonical_name": "Bruno Silva",
+          "crosswalk_external_birth_date": "1989-07-13",
+          "crosswalk_external_name": "Bruno Silva",
+          "external_url": "/fighter/Bruno-Silva-66304",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Bruno Silva"
+          ],
+          "side": 1,
+          "source_name": "Bruno Silva",
+          "trusted_same_canonical_normalized_name_count": 2,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "external_birth_date": "1990-03-16",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "external_birth_date": "1989-07-13",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 2,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1990-03-16",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1989-07-13",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1996-07-22",
+          "canonical_fighter_id": "95991651-cc5e-52fa-bf11-aadc73430fe3",
+          "canonical_name": "Wellington Turman",
+          "crosswalk_external_birth_date": "1996-07-22",
+          "crosswalk_external_name": "Wellington Turman",
+          "external_url": "/fighter/Wellington-Turman-157451",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Wellington Turman"
+          ],
+          "side": 2,
+          "source_name": "Wellington Turman",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1996-07-22",
+              "canonical_fighter_id": "95991651-cc5e-52fa-bf11-aadc73430fe3",
+              "external_birth_date": "1996-07-22",
+              "external_name": "Wellington Turman",
+              "external_url": "/fighter/Wellington-Turman-157451"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1996-07-22",
+              "canonical_fighter_id": "95991651-cc5e-52fa-bf11-aadc73430fe3",
+              "canonical_name": "Wellington Turman",
+              "external_birth_date": "1996-07-22",
+              "external_url": "/fighter/Wellington-Turman-157451"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-on-ESPN-25-Korean-Zombie-vs-Ige-88795",
+      "source_match_nr": "8",
+      "win_method": "KO"
+    },
+    {
+      "date": "May 22, 2021",
+      "event_title": "UFC Fight Night 188 - Font vs. Garbrandt",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1990-03-16",
+          "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+          "canonical_name": "Bruno Silva",
+          "crosswalk_external_birth_date": "1990-03-16",
+          "crosswalk_external_name": "Bruno Silva",
+          "external_url": "/fighter/Bruno-Silva-118601",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Bruno Silva"
+          ],
+          "side": 1,
+          "source_name": "Bruno Silva",
+          "trusted_same_canonical_normalized_name_count": 2,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "external_birth_date": "1990-03-16",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "external_birth_date": "1989-07-13",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 2,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1990-03-16",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1989-07-13",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1992-09-05",
+          "canonical_fighter_id": "2a52163a-7b6e-55b6-bc9b-6c2ea1b1fc04",
+          "canonical_name": "Victor Rodriguez",
+          "crosswalk_external_birth_date": "1992-09-05",
+          "crosswalk_external_name": "Victor Rodriguez",
+          "external_url": "/fighter/Victor-Rodriguez-177975",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Victor Rodriguez"
+          ],
+          "side": 2,
+          "source_name": "Victor Rodriguez",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-09-05",
+              "canonical_fighter_id": "2a52163a-7b6e-55b6-bc9b-6c2ea1b1fc04",
+              "external_birth_date": "1992-09-05",
+              "external_name": "Victor Rodriguez",
+              "external_url": "/fighter/Victor-Rodriguez-177975"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-09-05",
+              "canonical_fighter_id": "2a52163a-7b6e-55b6-bc9b-6c2ea1b1fc04",
+              "canonical_name": "Victor Rodriguez",
+              "external_birth_date": "1992-09-05",
+              "external_url": "/fighter/Victor-Rodriguez-177975"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-188-Font-vs-Garbrandt-88695",
+      "source_match_nr": "4",
+      "win_method": "KO"
+    },
+    {
+      "date": "Mar 20, 2021",
+      "event_title": "UFC on ESPN 21 - Brunson vs. Holland",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1990-03-16",
+          "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+          "canonical_name": "Bruno Silva",
+          "crosswalk_external_birth_date": "1990-03-16",
+          "crosswalk_external_name": "Bruno Silva",
+          "external_url": "/fighter/Bruno-Silva-118601",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Bruno Silva"
+          ],
+          "side": 1,
+          "source_name": "Bruno Silva",
+          "trusted_same_canonical_normalized_name_count": 2,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "external_birth_date": "1990-03-16",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "external_birth_date": "1989-07-13",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 2,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1990-03-16",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1989-07-13",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1996-04-30",
+          "canonical_fighter_id": "74ba2544-69cd-5159-b186-6dd1791dc391",
+          "canonical_name": "JP Buys",
+          "crosswalk_external_birth_date": "1996-04-30",
+          "crosswalk_external_name": "J.P. Buys",
+          "external_url": "/fighter/JP-Buys-197069",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "J.P. Buys"
+          ],
+          "side": 2,
+          "source_name": "J.P. Buys",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1996-04-30",
+              "canonical_fighter_id": "74ba2544-69cd-5159-b186-6dd1791dc391",
+              "external_birth_date": "1996-04-30",
+              "external_name": "J.P. Buys",
+              "external_url": "/fighter/JP-Buys-197069"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1996-04-30",
+              "canonical_fighter_id": "74ba2544-69cd-5159-b186-6dd1791dc391",
+              "canonical_name": "JP Buys",
+              "external_birth_date": "1996-04-30",
+              "external_url": "/fighter/JP-Buys-197069"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-on-ESPN-21-Brunson-vs-Holland-88172",
+      "source_match_nr": "1",
+      "win_method": "TKO"
+    },
+    {
+      "date": "Jan 20, 2021",
+      "event_title": "UFC on ESPN 20 - Chiesa vs. Magny",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1992-10-07",
+          "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+          "canonical_name": "Mike Davis",
+          "crosswalk_external_birth_date": "1992-10-07",
+          "crosswalk_external_name": "Mike Davis",
+          "external_url": "/fighter/Mike-Davis-202169",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Mike Davis"
+          ],
+          "side": 1,
+          "source_name": "Mike Davis",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-10-07",
+              "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+              "external_birth_date": "1992-10-07",
+              "external_name": "Mike Davis",
+              "external_url": "/fighter/Mike-Davis-202169"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-10-07",
+              "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+              "canonical_name": "Mike Davis",
+              "external_birth_date": "1992-10-07",
+              "external_url": "/fighter/Mike-Davis-202169"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1995-04-26",
+          "canonical_fighter_id": "322a2f1e-9877-5e52-b90a-755c81398fcf",
+          "canonical_name": "Mason Jones",
+          "crosswalk_external_birth_date": "1995-04-26",
+          "crosswalk_external_name": "Mason Jones",
+          "external_url": "/fighter/Mason-Jones-256311",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Mason Jones"
+          ],
+          "side": 2,
+          "source_name": "Mason Jones",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1995-04-26",
+              "canonical_fighter_id": "322a2f1e-9877-5e52-b90a-755c81398fcf",
+              "external_birth_date": "1995-04-26",
+              "external_name": "Mason Jones",
+              "external_url": "/fighter/Mason-Jones-256311"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1995-04-26",
+              "canonical_fighter_id": "322a2f1e-9877-5e52-b90a-755c81398fcf",
+              "canonical_name": "Mason Jones",
+              "external_birth_date": "1995-04-26",
+              "external_url": "/fighter/Mason-Jones-256311"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-on-ESPN-20-Chiesa-vs-Magny-88171",
+      "source_match_nr": "3",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Nov 28, 2020",
+      "event_title": "UFC on ESPN 18 - Smith vs. Clark",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1992-05-01",
+          "canonical_fighter_id": "e689dc0d-3641-5d7d-a26e-95c4917e47ac",
+          "canonical_name": "Jonathan Pearce",
+          "crosswalk_external_birth_date": "1992-05-01",
+          "crosswalk_external_name": "Jonathan Pearce",
+          "external_url": "/fighter/Jonathan-Pearce-183541",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Jonathan Pearce"
+          ],
+          "side": 1,
+          "source_name": "Jonathan Pearce",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-05-01",
+              "canonical_fighter_id": "e689dc0d-3641-5d7d-a26e-95c4917e47ac",
+              "external_birth_date": "1992-05-01",
+              "external_name": "Jonathan Pearce",
+              "external_url": "/fighter/Jonathan-Pearce-183541"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-05-01",
+              "canonical_fighter_id": "e689dc0d-3641-5d7d-a26e-95c4917e47ac",
+              "canonical_name": "Jonathan Pearce",
+              "external_birth_date": "1992-05-01",
+              "external_url": "/fighter/Jonathan-Pearce-183541"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1995-01-05",
+          "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+          "canonical_name": "Kai Kamaka III",
+          "crosswalk_external_birth_date": "1995-01-05",
+          "crosswalk_external_name": "Kai Kamaka III",
+          "external_url": "/fighter/Kai-Kamaka-III-117585",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Kai Kamaka III"
+          ],
+          "side": 2,
+          "source_name": "Kai Kamaka III",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1995-01-05",
+              "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+              "external_birth_date": "1995-01-05",
+              "external_name": "Kai Kamaka III",
+              "external_url": "/fighter/Kai-Kamaka-III-117585"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1995-01-05",
+              "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+              "canonical_name": "Kai Kamaka III",
+              "external_birth_date": "1995-01-05",
+              "external_url": "/fighter/Kai-Kamaka-III-117585"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-on-ESPN-18-Smith-vs-Clark-87392",
+      "source_match_nr": "5",
+      "win_method": "TKO"
+    },
+    {
+      "date": "Aug 15, 2020",
+      "event_title": "UFC 252 - Miocic vs. Cormier 3",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1995-01-05",
+          "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+          "canonical_name": "Kai Kamaka III",
+          "crosswalk_external_birth_date": "1995-01-05",
+          "crosswalk_external_name": "Kai Kamaka III",
+          "external_url": "/fighter/Kai-Kamaka-III-117585",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Kai Kamaka III"
+          ],
+          "side": 1,
+          "source_name": "Kai Kamaka III",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1995-01-05",
+              "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+              "external_birth_date": "1995-01-05",
+              "external_name": "Kai Kamaka III",
+              "external_url": "/fighter/Kai-Kamaka-III-117585"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1995-01-05",
+              "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+              "canonical_name": "Kai Kamaka III",
+              "external_birth_date": "1995-01-05",
+              "external_url": "/fighter/Kai-Kamaka-III-117585"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1987-01-21",
+          "canonical_fighter_id": "1a1f5e9c-7263-55a4-b13f-97cc87b5253b",
+          "canonical_name": "Tony Kelley",
+          "crosswalk_external_birth_date": "1987-01-21",
+          "crosswalk_external_name": "Tony Kelley",
+          "external_url": "/fighter/Tony-Kelley-57658",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Tony Kelley"
+          ],
+          "side": 2,
+          "source_name": "Tony Kelley",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1987-01-21",
+              "canonical_fighter_id": "1a1f5e9c-7263-55a4-b13f-97cc87b5253b",
+              "external_birth_date": "1987-01-21",
+              "external_name": "Tony Kelley",
+              "external_url": "/fighter/Tony-Kelley-57658"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1987-01-21",
+              "canonical_fighter_id": "1a1f5e9c-7263-55a4-b13f-97cc87b5253b",
+              "canonical_name": "Tony Kelley",
+              "external_birth_date": "1987-01-21",
+              "external_url": "/fighter/Tony-Kelley-57658"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-252-Miocic-vs-Cormier-3-85053",
+      "source_match_nr": "1",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Mar 14, 2020",
+      "event_title": "UFC Fight Night 170 - Lee vs. Oliveira",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1992-06-05",
+          "canonical_fighter_id": "6efa1952-739c-5032-9bb1-3423df6bc57c",
+          "canonical_name": "David Dvorak",
+          "crosswalk_external_birth_date": "1992-06-05",
+          "crosswalk_external_name": "David Dvorak",
+          "external_url": "/fighter/David-Dvorak-67185",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "David Dvorak"
+          ],
+          "side": 1,
+          "source_name": "David Dvorak",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-06-05",
+              "canonical_fighter_id": "6efa1952-739c-5032-9bb1-3423df6bc57c",
+              "external_birth_date": "1992-06-05",
+              "external_name": "David Dvorak",
+              "external_url": "/fighter/David-Dvorak-67185"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-06-05",
+              "canonical_fighter_id": "6efa1952-739c-5032-9bb1-3423df6bc57c",
+              "canonical_name": "David Dvorak",
+              "external_birth_date": "1992-06-05",
+              "external_url": "/fighter/David-Dvorak-67185"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1990-03-16",
+          "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+          "canonical_name": "Bruno Silva",
+          "crosswalk_external_birth_date": "1990-03-16",
+          "crosswalk_external_name": "Bruno Silva",
+          "external_url": "/fighter/Bruno-Silva-118601",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Bruno Silva"
+          ],
+          "side": 2,
+          "source_name": "Bruno Silva",
+          "trusted_same_canonical_normalized_name_count": 2,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "external_birth_date": "1990-03-16",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "external_birth_date": "1989-07-13",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 2,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1990-03-16",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1989-07-13",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-170-Lee-vs-Oliveira-82429",
+      "source_match_nr": "2",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Oct 12, 2019",
+      "event_title": "UFC Fight Night 161 - Jedrzejczyk vs. Waterson",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1992-10-07",
+          "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+          "canonical_name": "Mike Davis",
+          "crosswalk_external_birth_date": "1992-10-07",
+          "crosswalk_external_name": "Mike Davis",
+          "external_url": "/fighter/Mike-Davis-202169",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Mike Davis"
+          ],
+          "side": 1,
+          "source_name": "Mike Davis",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-10-07",
+              "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+              "external_birth_date": "1992-10-07",
+              "external_name": "Mike Davis",
+              "external_url": "/fighter/Mike-Davis-202169"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-10-07",
+              "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+              "canonical_name": "Mike Davis",
+              "external_birth_date": "1992-10-07",
+              "external_url": "/fighter/Mike-Davis-202169"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1992-07-26",
+          "canonical_fighter_id": "15c52013-5292-52d0-b569-e8fafb0f5099",
+          "canonical_name": "Thomas Gifford",
+          "crosswalk_external_birth_date": "1992-07-26",
+          "crosswalk_external_name": "Thomas Gifford",
+          "external_url": "/fighter/Thomas-Gifford-74695",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Thomas Gifford"
+          ],
+          "side": 2,
+          "source_name": "Thomas Gifford",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-07-26",
+              "canonical_fighter_id": "15c52013-5292-52d0-b569-e8fafb0f5099",
+              "external_birth_date": "1992-07-26",
+              "external_name": "Thomas Gifford",
+              "external_url": "/fighter/Thomas-Gifford-74695"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-07-26",
+              "canonical_fighter_id": "15c52013-5292-52d0-b569-e8fafb0f5099",
+              "canonical_name": "Thomas Gifford",
+              "external_birth_date": "1992-07-26",
+              "external_url": "/fighter/Thomas-Gifford-74695"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-161-Jedrzejczyk-vs-Waterson-76593",
+      "source_match_nr": "7",
+      "win_method": "KO"
+    },
+    {
+      "date": "Oct 5, 2019",
+      "event_title": "UFC 243 - Whittaker vs. Adesanya",
+      "fighter1_result": "NC",
+      "fighter2_result": "NC",
+      "sides": [
+        {
+          "canonical_dob": "1992-02-15",
+          "canonical_fighter_id": "1f4170fd-aba4-57bd-9503-c3496bafab8d",
+          "canonical_name": "Khalid Taha",
+          "crosswalk_external_birth_date": "1992-02-15",
+          "crosswalk_external_name": "Khalid Taha",
+          "external_url": "/fighter/Khalid-Taha-117849",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Khalid Taha"
+          ],
+          "side": 1,
+          "source_name": "Khalid Taha",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-02-15",
+              "canonical_fighter_id": "1f4170fd-aba4-57bd-9503-c3496bafab8d",
+              "external_birth_date": "1992-02-15",
+              "external_name": "Khalid Taha",
+              "external_url": "/fighter/Khalid-Taha-117849"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-02-15",
+              "canonical_fighter_id": "1f4170fd-aba4-57bd-9503-c3496bafab8d",
+              "canonical_name": "Khalid Taha",
+              "external_birth_date": "1992-02-15",
+              "external_url": "/fighter/Khalid-Taha-117849"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1990-03-16",
+          "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+          "canonical_name": "Bruno Silva",
+          "crosswalk_external_birth_date": "1990-03-16",
+          "crosswalk_external_name": "Bruno Silva",
+          "external_url": "/fighter/Bruno-Silva-118601",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Bruno Silva"
+          ],
+          "side": 2,
+          "source_name": "Bruno Silva",
+          "trusted_same_canonical_normalized_name_count": 2,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "external_birth_date": "1990-03-16",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "external_birth_date": "1989-07-13",
+              "external_name": "Bruno Silva",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 2,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-03-16",
+              "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1990-03-16",
+              "external_url": "/fighter/Bruno-Silva-118601"
+            },
+            {
+              "canonical_dob": "1989-07-13",
+              "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+              "canonical_name": "Bruno Silva",
+              "external_birth_date": "1989-07-13",
+              "external_url": "/fighter/Bruno-Silva-66304"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-243-Whittaker-vs-Adesanya-76591",
+      "source_match_nr": "1",
+      "win_method": "No Contest"
+    },
+    {
+      "date": "Apr 27, 2019",
+      "event_title": "UFC Fight Night 150 - Jacare vs. Hermansson",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1986-07-20",
+          "canonical_fighter_id": "57beebb1-7f13-567e-a87b-e5533f7d31d7",
+          "canonical_name": "Gilbert Burns",
+          "crosswalk_external_birth_date": "1986-07-20",
+          "crosswalk_external_name": "Gilbert Burns",
+          "external_url": "/fighter/Gilbert-Burns-91727",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Gilbert Burns"
+          ],
+          "side": 1,
+          "source_name": "Gilbert Burns",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1986-07-20",
+              "canonical_fighter_id": "57beebb1-7f13-567e-a87b-e5533f7d31d7",
+              "external_birth_date": "1986-07-20",
+              "external_name": "Gilbert Burns",
+              "external_url": "/fighter/Gilbert-Burns-91727"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1986-07-20",
+              "canonical_fighter_id": "57beebb1-7f13-567e-a87b-e5533f7d31d7",
+              "canonical_name": "Gilbert Burns",
+              "external_birth_date": "1986-07-20",
+              "external_url": "/fighter/Gilbert-Burns-91727"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1992-10-07",
+          "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+          "canonical_name": "Mike Davis",
+          "crosswalk_external_birth_date": "1992-10-07",
+          "crosswalk_external_name": "Mike Davis",
+          "external_url": "/fighter/Mike-Davis-202169",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Mike Davis"
+          ],
+          "side": 2,
+          "source_name": "Mike Davis",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-10-07",
+              "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+              "external_birth_date": "1992-10-07",
+              "external_name": "Mike Davis",
+              "external_url": "/fighter/Mike-Davis-202169"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-10-07",
+              "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+              "canonical_name": "Mike Davis",
+              "external_birth_date": "1992-10-07",
+              "external_url": "/fighter/Mike-Davis-202169"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-150-Jacare-vs-Hermansson-73337",
+      "source_match_nr": "4",
+      "win_method": "Submission"
+    },
+    {
+      "date": "Feb 2, 2019",
+      "event_title": "UFC Fight Night 144 - Assuncao vs. Moraes 2",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1992-04-25",
+          "canonical_fighter_id": "0f502110-3d7c-5ed1-8f92-41ac4dabe6f9",
+          "canonical_name": "Rogerio Bontorin",
+          "crosswalk_external_birth_date": "1992-04-25",
+          "crosswalk_external_name": "Rogerio Bontorin",
+          "external_url": "/fighter/Rogerio-Bontorin-132211",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Rogerio Bontorin"
+          ],
+          "side": 1,
+          "source_name": "Rogerio Bontorin",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-04-25",
+              "canonical_fighter_id": "0f502110-3d7c-5ed1-8f92-41ac4dabe6f9",
+              "external_birth_date": "1992-04-25",
+              "external_name": "Rogerio Bontorin",
+              "external_url": "/fighter/Rogerio-Bontorin-132211"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1992-04-25",
+              "canonical_fighter_id": "0f502110-3d7c-5ed1-8f92-41ac4dabe6f9",
+              "canonical_name": "Rogerio Bontorin",
+              "external_birth_date": "1992-04-25",
+              "external_url": "/fighter/Rogerio-Bontorin-132211"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1988-08-22",
+          "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+          "canonical_name": "Magomed Bibulatov",
+          "crosswalk_external_birth_date": "1988-08-22",
+          "crosswalk_external_name": "Magomed Bibulatov",
+          "external_url": "/fighter/Magomed-Bibulatov-141553",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Magomed Bibulatov"
+          ],
+          "side": 2,
+          "source_name": "Magomed Bibulatov",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1988-08-22",
+              "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+              "external_birth_date": "1988-08-22",
+              "external_name": "Magomed Bibulatov",
+              "external_url": "/fighter/Magomed-Bibulatov-141553"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1988-08-22",
+              "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+              "canonical_name": "Magomed Bibulatov",
+              "external_birth_date": "1988-08-22",
+              "external_url": "/fighter/Magomed-Bibulatov-141553"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-144-Assuncao-vs-Moraes-2-72023",
+      "source_match_nr": "1",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Oct 7, 2017",
+      "event_title": "UFC 216 - Ferguson vs. Lee",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1984-03-20",
+          "canonical_fighter_id": "3a014558-33f6-524a-9be3-902406e7fc64",
+          "canonical_name": "John Moraga",
+          "crosswalk_external_birth_date": "1984-03-20",
+          "crosswalk_external_name": "John Moraga",
+          "external_url": "/fighter/John-Moraga-55159",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "John Moraga"
+          ],
+          "side": 1,
+          "source_name": "John Moraga",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1984-03-20",
+              "canonical_fighter_id": "3a014558-33f6-524a-9be3-902406e7fc64",
+              "external_birth_date": "1984-03-20",
+              "external_name": "John Moraga",
+              "external_url": "/fighter/John-Moraga-55159"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1984-03-20",
+              "canonical_fighter_id": "3a014558-33f6-524a-9be3-902406e7fc64",
+              "canonical_name": "John Moraga",
+              "external_birth_date": "1984-03-20",
+              "external_url": "/fighter/John-Moraga-55159"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1988-08-22",
+          "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+          "canonical_name": "Magomed Bibulatov",
+          "crosswalk_external_birth_date": "1988-08-22",
+          "crosswalk_external_name": "Magomed Bibulatov",
+          "external_url": "/fighter/Magomed-Bibulatov-141553",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Magomed Bibulatov"
+          ],
+          "side": 2,
+          "source_name": "Magomed Bibulatov",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1988-08-22",
+              "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+              "external_birth_date": "1988-08-22",
+              "external_name": "Magomed Bibulatov",
+              "external_url": "/fighter/Magomed-Bibulatov-141553"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1988-08-22",
+              "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+              "canonical_name": "Magomed Bibulatov",
+              "external_birth_date": "1988-08-22",
+              "external_url": "/fighter/Magomed-Bibulatov-141553"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-216-Ferguson-vs-Lee-61983",
+      "source_match_nr": "2",
+      "win_method": "KO"
+    },
+    {
+      "date": "Apr 8, 2017",
+      "event_title": "UFC 210 - Cormier vs. Johnson 2",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1988-08-22",
+          "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+          "canonical_name": "Magomed Bibulatov",
+          "crosswalk_external_birth_date": "1988-08-22",
+          "crosswalk_external_name": "Magomed Bibulatov",
+          "external_url": "/fighter/Magomed-Bibulatov-141553",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Magomed Bibulatov"
+          ],
+          "side": 1,
+          "source_name": "Magomed Bibulatov",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1988-08-22",
+              "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+              "external_birth_date": "1988-08-22",
+              "external_name": "Magomed Bibulatov",
+              "external_url": "/fighter/Magomed-Bibulatov-141553"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1988-08-22",
+              "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+              "canonical_name": "Magomed Bibulatov",
+              "external_birth_date": "1988-08-22",
+              "external_url": "/fighter/Magomed-Bibulatov-141553"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1988-08-01",
+          "canonical_fighter_id": "f61d8d74-703c-5920-b99a-337de39b7b1d",
+          "canonical_name": "Jenel Lausa",
+          "crosswalk_external_birth_date": "1988-08-01",
+          "crosswalk_external_name": "Jenel Lausa",
+          "external_url": "/fighter/Jenel-Lausa-86123",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Jenel Lausa"
+          ],
+          "side": 2,
+          "source_name": "Jenel Lausa",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1988-08-01",
+              "canonical_fighter_id": "f61d8d74-703c-5920-b99a-337de39b7b1d",
+              "external_birth_date": "1988-08-01",
+              "external_name": "Jenel Lausa",
+              "external_url": "/fighter/Jenel-Lausa-86123"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1988-08-01",
+              "canonical_fighter_id": "f61d8d74-703c-5920-b99a-337de39b7b1d",
+              "canonical_name": "Jenel Lausa",
+              "external_birth_date": "1988-08-01",
+              "external_url": "/fighter/Jenel-Lausa-86123"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-210-Cormier-vs-Johnson-2-57531",
+      "source_match_nr": "1",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Jul 13, 2016",
+      "event_title": "UFC Fight Night 91 - McDonald vs. Lineker",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1990-06-12",
+          "canonical_fighter_id": "ae07bbf2-d084-5b6e-801f-193ef88d32f3",
+          "canonical_name": "John Lineker",
+          "crosswalk_external_birth_date": "1990-06-12",
+          "crosswalk_external_name": "John Lineker",
+          "external_url": "/fighter/John-Lineker-41906",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "John Lineker"
+          ],
+          "side": 1,
+          "source_name": "John Lineker",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-06-12",
+              "canonical_fighter_id": "ae07bbf2-d084-5b6e-801f-193ef88d32f3",
+              "external_birth_date": "1990-06-12",
+              "external_name": "John Lineker",
+              "external_url": "/fighter/John-Lineker-41906"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1990-06-12",
+              "canonical_fighter_id": "ae07bbf2-d084-5b6e-801f-193ef88d32f3",
+              "canonical_name": "John Lineker",
+              "external_birth_date": "1990-06-12",
+              "external_url": "/fighter/John-Lineker-41906"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1991-01-15",
+          "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+          "canonical_name": "Michael McDonald",
+          "crosswalk_external_birth_date": "1991-01-15",
+          "crosswalk_external_name": "Michael McDonald",
+          "external_url": "/fighter/Michael-McDonald-30297",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Michael McDonald"
+          ],
+          "side": 2,
+          "source_name": "Michael McDonald",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "external_birth_date": "1991-01-15",
+              "external_name": "Michael McDonald",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "canonical_name": "Michael McDonald",
+              "external_birth_date": "1991-01-15",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-91-McDonald-vs-Lineker-51841",
+      "source_match_nr": "12",
+      "win_method": "KO"
+    },
+    {
+      "date": "Jan 17, 2016",
+      "event_title": "UFC Fight Night 81 - Dillashaw vs. Cruz",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1987-06-25",
+          "canonical_fighter_id": "cca32f37-427d-501a-82c7-1c88c42840b5",
+          "canonical_name": "Rob Font",
+          "crosswalk_external_birth_date": "1987-06-25",
+          "crosswalk_external_name": "Rob Font",
+          "external_url": "/fighter/Rob-Font-76100",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Rob Font"
+          ],
+          "side": 1,
+          "source_name": "Rob Font",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1987-06-25",
+              "canonical_fighter_id": "cca32f37-427d-501a-82c7-1c88c42840b5",
+              "external_birth_date": "1987-06-25",
+              "external_name": "Rob Font",
+              "external_url": "/fighter/Rob-Font-76100"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1987-06-25",
+              "canonical_fighter_id": "cca32f37-427d-501a-82c7-1c88c42840b5",
+              "canonical_name": "Rob Font",
+              "external_birth_date": "1987-06-25",
+              "external_url": "/fighter/Rob-Font-76100"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1986-07-21",
+          "canonical_fighter_id": "7570bbff-4fcc-5ade-b9b5-602689cfb9af",
+          "canonical_name": "Joey Gomez",
+          "crosswalk_external_birth_date": "1986-07-21",
+          "crosswalk_external_name": "Joey Gomez",
+          "external_url": "/fighter/Joey-Gomez-64975",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Joey Gomez"
+          ],
+          "side": 2,
+          "source_name": "Joey Gomez",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1986-07-21",
+              "canonical_fighter_id": "7570bbff-4fcc-5ade-b9b5-602689cfb9af",
+              "external_birth_date": "1986-07-21",
+              "external_name": "Joey Gomez",
+              "external_url": "/fighter/Joey-Gomez-64975"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1986-07-21",
+              "canonical_fighter_id": "7570bbff-4fcc-5ade-b9b5-602689cfb9af",
+              "canonical_name": "Joey Gomez",
+              "external_birth_date": "1986-07-21",
+              "external_url": "/fighter/Joey-Gomez-64975"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-81-Dillashaw-vs-Cruz-47783",
+      "source_match_nr": "2",
+      "win_method": "TKO"
+    },
+    {
+      "date": "Dec 14, 2013",
+      "event_title": "UFC on Fox 9 - Johnson vs. Benavidez 2",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1979-05-14",
+          "canonical_fighter_id": "d87ad101-ea62-5663-9447-3eac1736298e",
+          "canonical_name": "Urijah Faber",
+          "crosswalk_external_birth_date": "1979-05-14",
+          "crosswalk_external_name": "Urijah Faber",
+          "external_url": "/fighter/Urijah-Faber-8847",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Urijah Faber"
+          ],
+          "side": 1,
+          "source_name": "Urijah Faber",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1979-05-14",
+              "canonical_fighter_id": "d87ad101-ea62-5663-9447-3eac1736298e",
+              "external_birth_date": "1979-05-14",
+              "external_name": "Urijah Faber",
+              "external_url": "/fighter/Urijah-Faber-8847"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1979-05-14",
+              "canonical_fighter_id": "d87ad101-ea62-5663-9447-3eac1736298e",
+              "canonical_name": "Urijah Faber",
+              "external_birth_date": "1979-05-14",
+              "external_url": "/fighter/Urijah-Faber-8847"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1991-01-15",
+          "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+          "canonical_name": "Michael McDonald",
+          "crosswalk_external_birth_date": "1991-01-15",
+          "crosswalk_external_name": "Michael McDonald",
+          "external_url": "/fighter/Michael-McDonald-30297",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Michael McDonald"
+          ],
+          "side": 2,
+          "source_name": "Michael McDonald",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "external_birth_date": "1991-01-15",
+              "external_name": "Michael McDonald",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "canonical_name": "Michael McDonald",
+              "external_birth_date": "1991-01-15",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-on-Fox-9-Johnson-vs-Benavidez-2-26217",
+      "source_match_nr": "10",
+      "win_method": "Submission"
+    },
+    {
+      "date": "Aug 17, 2013",
+      "event_title": "UFC Fight Night 26 - Shogun vs. Sonnen",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1991-01-15",
+          "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+          "canonical_name": "Michael McDonald",
+          "crosswalk_external_birth_date": "1991-01-15",
+          "crosswalk_external_name": "Michael McDonald",
+          "external_url": "/fighter/Michael-McDonald-30297",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Michael McDonald"
+          ],
+          "side": 1,
+          "source_name": "Michael McDonald",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "external_birth_date": "1991-01-15",
+              "external_name": "Michael McDonald",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "canonical_name": "Michael McDonald",
+              "external_birth_date": "1991-01-15",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1978-09-24",
+          "canonical_fighter_id": "b735741d-54b6-507a-87de-427091b1bd57",
+          "canonical_name": "Brad Pickett",
+          "crosswalk_external_birth_date": "1978-09-24",
+          "crosswalk_external_name": "Brad Pickett",
+          "external_url": "/fighter/Brad-Pickett-11743",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Brad Pickett"
+          ],
+          "side": 2,
+          "source_name": "Brad Pickett",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1978-09-24",
+              "canonical_fighter_id": "b735741d-54b6-507a-87de-427091b1bd57",
+              "external_birth_date": "1978-09-24",
+              "external_name": "Brad Pickett",
+              "external_url": "/fighter/Brad-Pickett-11743"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1978-09-24",
+              "canonical_fighter_id": "b735741d-54b6-507a-87de-427091b1bd57",
+              "canonical_name": "Brad Pickett",
+              "external_birth_date": "1978-09-24",
+              "external_url": "/fighter/Brad-Pickett-11743"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-26-Shogun-vs-Sonnen-29795",
+      "source_match_nr": "7",
+      "win_method": "Submission"
+    },
+    {
+      "date": "Feb 16, 2013",
+      "event_title": "UFC on Fuel TV 7 - Barao vs. McDonald",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1987-01-31",
+          "canonical_fighter_id": "263b6ea1-e4d4-5a99-9c46-2fa761bfa6de",
+          "canonical_name": "Renan Barao",
+          "crosswalk_external_birth_date": "1987-01-31",
+          "crosswalk_external_name": "Renan Barao",
+          "external_url": "/fighter/Renan-Barao-23156",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Renan Barao"
+          ],
+          "side": 1,
+          "source_name": "Renan Barao",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1987-01-31",
+              "canonical_fighter_id": "263b6ea1-e4d4-5a99-9c46-2fa761bfa6de",
+              "external_birth_date": "1987-01-31",
+              "external_name": "Renan Barao",
+              "external_url": "/fighter/Renan-Barao-23156"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1987-01-31",
+              "canonical_fighter_id": "263b6ea1-e4d4-5a99-9c46-2fa761bfa6de",
+              "canonical_name": "Renan Barao",
+              "external_birth_date": "1987-01-31",
+              "external_url": "/fighter/Renan-Barao-23156"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1991-01-15",
+          "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+          "canonical_name": "Michael McDonald",
+          "crosswalk_external_birth_date": "1991-01-15",
+          "crosswalk_external_name": "Michael McDonald",
+          "external_url": "/fighter/Michael-McDonald-30297",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Michael McDonald"
+          ],
+          "side": 2,
+          "source_name": "Michael McDonald",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "external_birth_date": "1991-01-15",
+              "external_name": "Michael McDonald",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "canonical_name": "Michael McDonald",
+              "external_birth_date": "1991-01-15",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-on-Fuel-TV-7-Barao-vs-McDonald-26459",
+      "source_match_nr": "12",
+      "win_method": "Submission"
+    },
+    {
+      "date": "Apr 21, 2012",
+      "event_title": "UFC 145 - Jones vs. Evans",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1991-01-15",
+          "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+          "canonical_name": "Michael McDonald",
+          "crosswalk_external_birth_date": "1991-01-15",
+          "crosswalk_external_name": "Michael McDonald",
+          "external_url": "/fighter/Michael-McDonald-30297",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Michael McDonald"
+          ],
+          "side": 1,
+          "source_name": "Michael McDonald",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "external_birth_date": "1991-01-15",
+              "external_name": "Michael McDonald",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "canonical_name": "Michael McDonald",
+              "external_birth_date": "1991-01-15",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1981-01-18",
+          "canonical_fighter_id": "c7f2a178-e266-5e29-ac92-a330189026b3",
+          "canonical_name": "Miguel Torres",
+          "crosswalk_external_birth_date": "1981-01-18",
+          "crosswalk_external_name": "Miguel Torres",
+          "external_url": "/fighter/Miguel-Torres-3006",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Miguel Torres"
+          ],
+          "side": 2,
+          "source_name": "Miguel Torres",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1981-01-18",
+              "canonical_fighter_id": "c7f2a178-e266-5e29-ac92-a330189026b3",
+              "external_birth_date": "1981-01-18",
+              "external_name": "Miguel Torres",
+              "external_url": "/fighter/Miguel-Torres-3006"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1981-01-18",
+              "canonical_fighter_id": "c7f2a178-e266-5e29-ac92-a330189026b3",
+              "canonical_name": "Miguel Torres",
+              "external_birth_date": "1981-01-18",
+              "external_url": "/fighter/Miguel-Torres-3006"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-145-Jones-vs-Evans-20031",
+      "source_match_nr": "9",
+      "win_method": "KO"
+    },
+    {
+      "date": "Nov 19, 2011",
+      "event_title": "UFC 139 - Shogun vs. Henderson",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1991-01-15",
+          "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+          "canonical_name": "Michael McDonald",
+          "crosswalk_external_birth_date": "1991-01-15",
+          "crosswalk_external_name": "Michael McDonald",
+          "external_url": "/fighter/Michael-McDonald-30297",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Michael McDonald"
+          ],
+          "side": 1,
+          "source_name": "Michael McDonald",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "external_birth_date": "1991-01-15",
+              "external_name": "Michael McDonald",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "canonical_name": "Michael McDonald",
+              "external_birth_date": "1991-01-15",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1984-02-15",
+          "canonical_fighter_id": "0721b9b7-2b29-51e6-b3e5-87bbd0d8aec3",
+          "canonical_name": "Alex Soto",
+          "crosswalk_external_birth_date": "1984-02-15",
+          "crosswalk_external_name": "Alex Soto",
+          "external_url": "/fighter/Alex-Soto-50367",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Alex Soto"
+          ],
+          "side": 2,
+          "source_name": "Alex Soto",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1984-02-15",
+              "canonical_fighter_id": "0721b9b7-2b29-51e6-b3e5-87bbd0d8aec3",
+              "external_birth_date": "1984-02-15",
+              "external_name": "Alex Soto",
+              "external_url": "/fighter/Alex-Soto-50367"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1984-02-15",
+              "canonical_fighter_id": "0721b9b7-2b29-51e6-b3e5-87bbd0d8aec3",
+              "canonical_name": "Alex Soto",
+              "external_birth_date": "1984-02-15",
+              "external_url": "/fighter/Alex-Soto-50367"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-139-Shogun-vs-Henderson-17551",
+      "source_match_nr": "6",
+      "win_method": "KO"
+    },
+    {
+      "date": "May 28, 2011",
+      "event_title": "UFC 130 - Rampage vs. Hamill",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1991-01-15",
+          "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+          "canonical_name": "Michael McDonald",
+          "crosswalk_external_birth_date": "1991-01-15",
+          "crosswalk_external_name": "Michael McDonald",
+          "external_url": "/fighter/Michael-McDonald-30297",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Michael McDonald"
+          ],
+          "side": 1,
+          "source_name": "Michael McDonald",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "external_birth_date": "1991-01-15",
+              "external_name": "Michael McDonald",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "canonical_name": "Michael McDonald",
+              "external_birth_date": "1991-01-15",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1981-05-27",
+          "canonical_fighter_id": "453589ad-bce1-5f85-ad15-bed39b8494e6",
+          "canonical_name": "Chris Cariaso",
+          "crosswalk_external_birth_date": "1981-05-27",
+          "crosswalk_external_name": "Chris Cariaso",
+          "external_url": "/fighter/Chris-Cariaso-16467",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Chris Cariaso"
+          ],
+          "side": 2,
+          "source_name": "Chris Cariaso",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1981-05-27",
+              "canonical_fighter_id": "453589ad-bce1-5f85-ad15-bed39b8494e6",
+              "external_birth_date": "1981-05-27",
+              "external_name": "Chris Cariaso",
+              "external_url": "/fighter/Chris-Cariaso-16467"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1981-05-27",
+              "canonical_fighter_id": "453589ad-bce1-5f85-ad15-bed39b8494e6",
+              "canonical_name": "Chris Cariaso",
+              "external_birth_date": "1981-05-27",
+              "external_url": "/fighter/Chris-Cariaso-16467"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-130-Rampage-vs-Hamill-15685",
+      "source_match_nr": "2",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Mar 26, 2011",
+      "event_title": "UFC Fight Night 24 - Nogueira vs. Davis",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1991-01-15",
+          "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+          "canonical_name": "Michael McDonald",
+          "crosswalk_external_birth_date": "1991-01-15",
+          "crosswalk_external_name": "Michael McDonald",
+          "external_url": "/fighter/Michael-McDonald-30297",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_collision_resolved_by_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Michael McDonald"
+          ],
+          "side": 1,
+          "source_name": "Michael McDonald",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "external_birth_date": "1991-01-15",
+              "external_name": "Michael McDonald",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1991-01-15",
+              "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+              "canonical_name": "Michael McDonald",
+              "external_birth_date": "1991-01-15",
+              "external_url": "/fighter/Michael-McDonald-30297"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1984-07-31",
+          "canonical_fighter_id": "210bb4ae-81ec-5eeb-a50a-b2e4bd731db1",
+          "canonical_name": "Edwin Figueroa",
+          "crosswalk_external_birth_date": "1984-07-31",
+          "crosswalk_external_name": "Edwin Figueroa",
+          "external_url": "/fighter/Edwin-Figueroa-22490",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Edwin Figueroa"
+          ],
+          "side": 2,
+          "source_name": "Edwin Figueroa",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1984-07-31",
+              "canonical_fighter_id": "210bb4ae-81ec-5eeb-a50a-b2e4bd731db1",
+              "external_birth_date": "1984-07-31",
+              "external_name": "Edwin Figueroa",
+              "external_url": "/fighter/Edwin-Figueroa-22490"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1984-07-31",
+              "canonical_fighter_id": "210bb4ae-81ec-5eeb-a50a-b2e4bd731db1",
+              "canonical_name": "Edwin Figueroa",
+              "external_birth_date": "1984-07-31",
+              "external_url": "/fighter/Edwin-Figueroa-22490"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-Fight-Night-24-Nogueira-vs-Davis-15559",
+      "source_match_nr": "5",
+      "win_method": "Decision"
+    },
+    {
+      "date": "Nov 12, 1993",
+      "event_title": "UFC 1 - The Beginning",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1964-02-11",
+          "canonical_fighter_id": "720ef9b8-3238-56c1-a9ea-a4e23dc0ade8",
+          "canonical_name": "Ken Shamrock",
+          "crosswalk_external_birth_date": "1964-02-11",
+          "crosswalk_external_name": "Ken Shamrock",
+          "external_url": "/fighter/Ken-Shamrock-4",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Ken Shamrock"
+          ],
+          "side": 1,
+          "source_name": "Ken Shamrock",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1964-02-11",
+              "canonical_fighter_id": "720ef9b8-3238-56c1-a9ea-a4e23dc0ade8",
+              "external_birth_date": "1964-02-11",
+              "external_name": "Ken Shamrock",
+              "external_url": "/fighter/Ken-Shamrock-4"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1964-02-11",
+              "canonical_fighter_id": "720ef9b8-3238-56c1-a9ea-a4e23dc0ade8",
+              "canonical_name": "Ken Shamrock",
+              "external_birth_date": "1964-02-11",
+              "external_url": "/fighter/Ken-Shamrock-4"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1963-08-28",
+          "canonical_fighter_id": "e62dcccb-37ae-5909-bd3b-e0fe321ca1d1",
+          "canonical_name": "Patrick Smith",
+          "crosswalk_external_birth_date": "1963-08-28",
+          "crosswalk_external_name": "Patrick Smith",
+          "external_url": "/fighter/Patrick-Smith-21",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Patrick Smith"
+          ],
+          "side": 2,
+          "source_name": "Patrick Smith",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1963-08-28",
+              "canonical_fighter_id": "e62dcccb-37ae-5909-bd3b-e0fe321ca1d1",
+              "external_birth_date": "1963-08-28",
+              "external_name": "Patrick Smith",
+              "external_url": "/fighter/Patrick-Smith-21"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1963-08-28",
+              "canonical_fighter_id": "e62dcccb-37ae-5909-bd3b-e0fe321ca1d1",
+              "canonical_name": "Patrick Smith",
+              "external_birth_date": "1963-08-28",
+              "external_url": "/fighter/Patrick-Smith-21"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-1-The-Beginning-7",
+      "source_match_nr": "4",
+      "win_method": "Submission"
+    },
+    {
+      "date": "Nov 12, 1993",
+      "event_title": "UFC 1 - The Beginning",
+      "fighter1_result": "win",
+      "fighter2_result": "loss",
+      "sides": [
+        {
+          "canonical_dob": "1966-12-12",
+          "canonical_fighter_id": "ac7c3d93-72ae-56a0-bc6f-fad2feddd13b",
+          "canonical_name": "Royce Gracie",
+          "crosswalk_external_birth_date": "1966-12-12",
+          "crosswalk_external_name": "Royce Gracie",
+          "external_url": "/fighter/Royce-Gracie-19",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Royce Gracie"
+          ],
+          "side": 1,
+          "source_name": "Royce Gracie",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1966-12-12",
+              "canonical_fighter_id": "ac7c3d93-72ae-56a0-bc6f-fad2feddd13b",
+              "external_birth_date": "1966-12-12",
+              "external_name": "Royce Gracie",
+              "external_url": "/fighter/Royce-Gracie-19"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1966-12-12",
+              "canonical_fighter_id": "ac7c3d93-72ae-56a0-bc6f-fad2feddd13b",
+              "canonical_name": "Royce Gracie",
+              "external_birth_date": "1966-12-12",
+              "external_url": "/fighter/Royce-Gracie-19"
+            }
+          ]
+        },
+        {
+          "canonical_dob": "1963-08-04",
+          "canonical_fighter_id": "b5400412-e94d-5683-b23e-747a4b184521",
+          "canonical_name": "Art Jimmerson",
+          "crosswalk_external_birth_date": "1963-08-04",
+          "crosswalk_external_name": "Art Jimmerson",
+          "external_url": "/fighter/Art-Jimmerson-20",
+          "match_confidence": "1.0",
+          "match_method": "exact_normalized_name_plus_exact_dob_dmy_source",
+          "raw_names_seen_for_url": [
+            "Art Jimmerson"
+          ],
+          "side": 2,
+          "source_name": "Art Jimmerson",
+          "trusted_same_canonical_normalized_name_count": 1,
+          "trusted_same_canonical_normalized_name_mappings": [
+            {
+              "canonical_dob": "1963-08-04",
+              "canonical_fighter_id": "b5400412-e94d-5683-b23e-747a4b184521",
+              "external_birth_date": "1963-08-04",
+              "external_name": "Art Jimmerson",
+              "external_url": "/fighter/Art-Jimmerson-20"
+            }
+          ],
+          "trusted_same_external_normalized_name_count": 1,
+          "trusted_same_external_normalized_name_mappings": [
+            {
+              "canonical_dob": "1963-08-04",
+              "canonical_fighter_id": "b5400412-e94d-5683-b23e-747a4b184521",
+              "canonical_name": "Art Jimmerson",
+              "external_birth_date": "1963-08-04",
+              "external_url": "/fighter/Art-Jimmerson-20"
+            }
+          ]
+        }
+      ],
+      "source_event_url": "/events/UFC-1-The-Beginning-7",
+      "source_match_nr": "3",
+      "win_method": "Submission"
+    }
+  ],
+  "schema_version": 1,
+  "trusted_crosswalk_rows": 2005,
+  "trusted_external_urls_with_multiple_raw_names": {},
+  "unique_involved_external_urls": 34
+}
