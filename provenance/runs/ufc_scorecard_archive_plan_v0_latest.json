@@ -1,0 +1,10 @@
+{
+  "build": "ufc_scorecard_archive_plan_v0",
+  "completed_at_utc": "2026-08-23T00:46:54.567794Z",
+  "exit_code": 1,
+  "github_run_id": "32608719319",
+  "log": "provenance/runs/ufc_scorecard_archive_plan_v0_32608719319.log",
+  "schema_version": 1,
+  "status": "failed",
+  "trigger_sha": "39fef96f7a2449cdec4ab0e56f400ef266d28d54"
+}
