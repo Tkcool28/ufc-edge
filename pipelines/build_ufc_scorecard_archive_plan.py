@@ -26,6 +26,11 @@ FIELDS = [
     "fighter_left_phrase", "fighter_right_phrase", "matched_fighter_ids", "matched_fighter_names",
     "identity_text_source", "identity_text", "identity_status", "review_status",
 ]
+ALLOWED_IMAGE_HOSTS = {
+    "ufc.com",
+    "www.ufc.com",
+    "dmxg5wxfqgb4u.cloudfront.net",
+}
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -72,13 +77,17 @@ def main() -> int:
 
     url_groups: dict[str, list[dict[str, str]]] = defaultdict(list)
     fight_groups: dict[str, list[dict[str, str]]] = defaultdict(list)
+    host_counts = Counter()
     plan = []
     for row in selected:
         url = (row.get("image_url") or "").strip()
         fight_id = (row.get("candidate_fight_id") or "").strip()
         event_id = (row.get("candidate_event_id") or "").strip()
-        if not url.startswith(("https://ufc.com/", "https://www.ufc.com/")):
-            raise RuntimeError(f"selected image is not official UFC host: {url}")
+        parsed = urlsplit(url)
+        host = parsed.hostname or ""
+        host_counts[host] += 1
+        if parsed.scheme != "https" or host not in ALLOWED_IMAGE_HOSTS:
+            raise RuntimeError(f"selected image host outside audited UFC delivery allowlist: {url}")
         if not fight_id or not event_id:
             raise RuntimeError("high-confidence scorecard row lacks fight/event ID")
         if (row.get("review_status") or "").strip() != "candidate":
@@ -122,6 +131,8 @@ def main() -> int:
         "selected_images": len(plan),
         "unique_image_urls": len(url_groups),
         "mapped_fights": len(fight_groups),
+        "image_host_counts": dict(sorted(host_counts.items())),
+        "allowed_image_hosts": sorted(ALLOWED_IMAGE_HOSTS),
         "fights_with_multiple_selected_images": len(multi_image_fights),
         "multi_image_fight_multiplicity": {str(k): v for k, v in sorted(multiplicities.items())},
         "multi_image_fight_examples": multi_examples,
@@ -131,14 +142,15 @@ def main() -> int:
             "ocr_performed": False,
             "canonical_judge_round_scores_written": False,
             "selected_urls_ready_for_archive": True,
-            "required_next": "Archive exactly these 578 official UFC image URLs with response metadata, byte counts and SHA-256 hashes. Fail closed on HTTP/content/hash errors before any OCR."
+            "official_page_linked_cdn_allowed": True,
+            "required_next": "Archive exactly these 578 official-page-linked UFC image URLs with response metadata, byte counts and SHA-256 hashes. Fail closed on HTTP/content/hash errors before any OCR."
         },
     }
     AUDIT.parent.mkdir(parents=True, exist_ok=True)
     AUDIT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({
         "selected_images": len(plan), "unique_urls": len(url_groups), "mapped_fights": len(fight_groups),
-        "multi_image_fights": len(multi_image_fights), "multiplicity": dict(multiplicities),
+        "hosts": dict(host_counts), "multi_image_fights": len(multi_image_fights), "multiplicity": dict(multiplicities),
     }, sort_keys=True))
     return 0
 
