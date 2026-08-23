@@ -15,7 +15,7 @@ Authoritative F00 files:
 - `src/ufc_edge/features/contract.py` — lightweight fail-closed loader/validator
 - `tests/features/test_feature_contract.py` — contract tests
 
-Feature contract version: `0.1.0-draft`.
+Feature contract version: `0.1.1-draft`.
 
 The future shared feature flow is:
 
@@ -71,6 +71,7 @@ F00 inherits these non-negotiable rules:
 - Fighter state remains opponent-independent; matchup interactions are separate.
 - All predictive concepts declare an information cutoff.
 - Every rate declares numerator/denominator semantics and zero/missing behavior.
+- Canonical v0 has no general contract-safe elapsed-round exposure source: time-normalized features and their dependent interactions/components remain `DEFERRED`; no 300-second/five-minute historical round assumption is permitted.
 - Recent/EWMA/round variants are opt-in, not automatically multiplied across the catalog.
 - Small-sample shrinkage preserves the distinction between a true debutant and missing historical coverage.
 - Historical opponent adjustment must use the opponent's strictly pre-contest state; future opponent career information is forbidden.

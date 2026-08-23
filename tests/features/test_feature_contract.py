@@ -44,7 +44,7 @@ class FeatureContractTests(unittest.TestCase):
 
     def test_repository_contract_validates(self) -> None:
         summary = validate_repository_contract(ROOT)
-        self.assertEqual(summary["feature_contract_version"], "0.1.0-draft")
+        self.assertEqual(summary["feature_contract_version"], "0.1.1-draft")
         self.assertGreater(summary["feature_count"], 0)
         self.assertGreater(summary["materialized_name_count"], 0)
 
@@ -198,6 +198,56 @@ class FeatureContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "ground-time"):
             self.validate(catalog)
 
+    def test_elapsed_time_feature_is_blocked_without_safe_source(self) -> None:
+        catalog = deepcopy(self.catalog)
+        self.feature("sig_strike_flow", catalog)["status"] = "V1_MUST"
+        with self.assertRaisesRegex(ContractError, "elapsed|DEFERRED"):
+            self.validate(catalog)
+
+    def test_elapsed_exposure_blocked_concepts_are_deferred(self) -> None:
+        blocked = self.catalog["elapsed_exposure_policy"]["blocked_feature_concepts"]
+        self.assertIn("sig_strike_flow", blocked)
+        self.assertIn("historical_fight_duration", blocked)
+        for name in blocked:
+            self.assertEqual(self.feature(name)["status"], "DEFERRED", name)
+
+    def test_elapsed_exposure_can_only_be_promoted_with_allowed_source(self) -> None:
+        catalog = deepcopy(self.catalog)
+        feature = self.feature("sig_strike_flow", catalog)
+        feature["status"] = "V1_MUST"
+        feature["elapsed_exposure_source"] = {
+            "source": "canonical_round_elapsed_sec_v1",
+            "eligibility": "Only rows carrying the future canonical elapsed-round field are eligible.",
+            "provenance": "Future versioned DATA migration canonical elapsed-round field.",
+            "contract_safe": True,
+        }
+        catalog["elapsed_exposure_policy"]["allowed_sources"] = ["canonical_round_elapsed_sec_v1"]
+        catalog["elapsed_exposure_policy"]["blocked_feature_concepts"].remove("sig_strike_flow")
+        self.validate(catalog)
+
+    def test_standard_300_second_round_assumption_is_rejected(self) -> None:
+        catalog = deepcopy(self.catalog)
+        feature = self.feature("sig_strike_flow", catalog)
+        feature["status"] = "V1_MUST"
+        feature["elapsed_exposure_source"] = {
+            "source": "assumed_round_duration",
+            "eligibility": "Assume every historical nonterminal round is 300 seconds.",
+            "provenance": "Assumed five minute standard round.",
+            "contract_safe": True,
+        }
+        catalog["elapsed_exposure_policy"]["allowed_sources"] = ["assumed_round_duration"]
+        catalog["elapsed_exposure_policy"]["blocked_feature_concepts"].remove("sig_strike_flow")
+        with self.assertRaisesRegex(ContractError, "standard historical round duration"):
+            self.validate(catalog)
+
+    def test_safe_attempt_denominator_remains_materializable(self) -> None:
+        self.assertEqual(self.feature("takedown_conversion")["status"], "V1_MUST")
+        self.assertEqual(self.feature("oa_takedown_creation")["status"], "V2_OPPONENT_ADJUSTED")
+        self.assertEqual(self.feature("sim_takedown_success_probability")["status"], "SIMULATOR_COMPONENT")
+        names = materialized_feature_names(self.catalog)
+        self.assertTrue(any("takedown_conversion" in name for name in names))
+        self.assertFalse(any("sig_strike_flow" in name for name in names))
+
     # Materialization naming / consumers --------------------------------
 
     def test_materialized_names_are_deterministic_and_unique(self) -> None:
@@ -219,7 +269,7 @@ class FeatureContractTests(unittest.TestCase):
                 self.assertFalse(consumers & {"model0", "model1", "tree"}, feature["feature_name"])
 
         catalog = deepcopy(self.catalog)
-        self.feature("sim_strike_event_intensity", catalog)["intended_model_consumers"].append("model1")
+        self.feature("sim_takedown_success_probability", catalog)["intended_model_consumers"].append("model1")
         with self.assertRaisesRegex(ContractError, "baseline model"):
             self.validate(catalog)
 

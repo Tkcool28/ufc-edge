@@ -288,7 +288,7 @@ def _validate_point_in_time(feature: dict[str, Any], registry: dict[str, Any]) -
         # Simulator components declare realized historical round observations as
         # component-training labels, not as pre-fight predictors. Their consumer
         # restrictions and leakage tests enforce that boundary separately.
-        if feature["status"] not in ROUND_TARGET_ONLY_STATUSES and not _declares_strict_prior(cutoff):
+        if feature["status"] not in ROUND_TARGET_ONLY_STATUSES and not (feature["status"] == "DEFERRED" and feature["layer"] == "simulator_component") and not _declares_strict_prior(cutoff):
             raise ContractError(f"{name} round-stat history lacks strictly-before cutoff semantics")
 
     if scope == "target_prefight_context" and "fights" in feature["canonical_input_fields"]:
@@ -311,6 +311,67 @@ def _validate_denominator_and_missingness(feature: dict[str, Any]) -> None:
     if not feature["missingness_behavior"].strip() or not feature["zero_semantics"].strip():
         raise ContractError(f"{name} must distinguish missingness and zero semantics")
 
+
+
+def _uses_elapsed_time_exposure(feature: dict[str, Any]) -> bool:
+    """Detect fight/round elapsed-time denominators generically."""
+    denominator = feature["exposure_denominator"]["denominator"].lower().replace("-", " ")
+    unit = feature["unit"].lower().replace("-", "_")
+    elapsed_denominator = (
+        ("elapsed" in denominator and any(token in denominator for token in ("time", "minute", "second", "fight", "round")))
+        or "eligible minute" in denominator
+        or "compatible minute" in denominator
+        or "fight minute" in denominator
+        or "fight second" in denominator
+        or "round exposure" in denominator
+    )
+    time_unit = any(token in unit for token in ("per_minute", "per_15_minutes", "share_of_elapsed", "per_time_interval", "per_elapsed"))
+    return elapsed_denominator or time_unit
+
+
+def _validate_elapsed_exposure_policy(catalog: dict[str, Any], features: list[dict[str, Any]]) -> None:
+    policy = catalog.get("elapsed_exposure_policy")
+    if not isinstance(policy, dict):
+        raise ContractError("catalog must declare elapsed_exposure_policy")
+    _require_keys(policy, ("version", "canonical_v0_status", "allowed_sources", "blocked_feature_concepts", "forbidden_inferences", "materializable_requirement", "promotion_requirement"), "elapsed_exposure_policy")
+    if policy["version"] != 1:
+        raise ContractError("elapsed_exposure_policy.version must be 1")
+    if policy["canonical_v0_status"] != "no_general_safe_elapsed_round_or_fight_exposure_source":
+        raise ContractError("canonical v0 elapsed-exposure status cannot be weakened silently")
+    allowed_sources = policy["allowed_sources"]
+    blocked = policy["blocked_feature_concepts"]
+    if not isinstance(allowed_sources, list) or len(allowed_sources) != len(set(allowed_sources)):
+        raise ContractError("elapsed_exposure_policy.allowed_sources must be a unique list")
+    if not isinstance(blocked, list) or len(blocked) != len(set(blocked)):
+        raise ContractError("elapsed_exposure_policy.blocked_feature_concepts must be a unique list")
+    by_name = {feature["feature_name"]: feature for feature in features}
+    missing = sorted(set(blocked) - set(by_name))
+    if missing:
+        raise ContractError(f"elapsed-exposure policy references unknown concepts: {missing}")
+    for name in blocked:
+        if by_name[name]["status"] != "DEFERRED":
+            raise ContractError(f"{name} is blocked by canonical-v0 elapsed exposure and must remain DEFERRED")
+    for feature in features:
+        name = feature["feature_name"]
+        source = feature.get("elapsed_exposure_source")
+        if source is not None:
+            if not isinstance(source, dict):
+                raise ContractError(f"{name}.elapsed_exposure_source must be an object")
+            _require_keys(source, ("source", "eligibility", "provenance", "contract_safe"), f"{name}.elapsed_exposure_source")
+            if type(source["contract_safe"]) is not bool:
+                raise ContractError(f"{name}.elapsed_exposure_source.contract_safe must be boolean")
+            for field in ("source", "eligibility", "provenance"):
+                if not isinstance(source[field], str) or not source[field].strip():
+                    raise ContractError(f"{name}.elapsed_exposure_source.{field} must be explicit")
+            if source["contract_safe"] and source["source"] not in allowed_sources:
+                raise ContractError(f"{name} claims an elapsed-exposure source not allowed by the contract")
+        if _uses_elapsed_time_exposure(feature) and feature["status"] not in NON_MATERIALIZED_STATUSES:
+            if source is None or source["contract_safe"] is not True or source["source"] not in allowed_sources:
+                raise ContractError(f"{name} uses elapsed-time exposure without a contract-safe allowed source/eligibility")
+        if source is not None:
+            combined = " ".join(str(source[key]).lower() for key in ("source", "eligibility", "provenance")) + " " + feature["exact_formula_or_definition"].lower()
+            if ("300 second" in combined or "five minute" in combined or "5 minute" in combined) and "assum" in combined:
+                raise ContractError(f"{name} attempts to assume a standard historical round duration")
 
 def _validate_round_and_position_precision(feature: dict[str, Any]) -> None:
     name = feature["feature_name"]
@@ -403,8 +464,8 @@ def validate_catalog(
     registry: dict[str, Any],
 ) -> dict[str, Any]:
     _require_keys(catalog, schema["required"], "catalog")
-    if catalog["feature_contract_version"] != "0.1.0-draft":
-        raise ContractError("feature_contract_version must be 0.1.0-draft for F00")
+    if catalog["feature_contract_version"] != "0.1.1-draft":
+        raise ContractError("feature_contract_version must be 0.1.1-draft for remediated F00")
     if catalog["data_contract_version"] != canonical.get("contract_version"):
         raise ContractError("catalog DATA contract version does not match frozen canonical contract")
     if catalog["canonical_root"] != "data/canonical/v0/":
@@ -441,6 +502,7 @@ def validate_catalog(
         _validate_denominator_and_missingness(feature)
         _validate_round_and_position_precision(feature)
 
+    _validate_elapsed_exposure_policy(catalog, features)
     _validate_targets(catalog, schema, canonical_fields)
 
     materialized = materialized_feature_names(catalog)

@@ -2,7 +2,7 @@
 
 Status: **AUTHORITATIVE F00 DRAFT**
 
-Feature contract version: **0.1.0-draft**
+Feature contract version: **0.1.1-draft**
 
 Frozen DATA contract: **0.4.0-draft**
 
@@ -111,23 +111,25 @@ Round-specific state is opt-in and initially limited to `r1`, `r2`, and `r3plus`
 
 A rate is invalid until its numerator, denominator, eligibility, zero-denominator behavior, missing-denominator behavior, and minimum support are explicit.
 
-Primary exposure types are:
+### Canonical-v0 elapsed-exposure gate
 
-- elapsed eligible fight/round seconds for event rates;
+Canonical v0 does **not** expose a general elapsed-round field on `fighter_round_stats`, and it does not establish historical round-length/ruleset semantics broadly enough to reconstruct elapsed fight time safely across all eligible eras/promotions. Therefore F00 `0.1.1-draft` does **not** materialize any concept that requires elapsed fight/round time, directly or through an upstream feature.
+
+In particular, FEATURES must not assume that every historical nonterminal round lasted 300 seconds/five minutes, must not infer round length from `scheduled_rounds`, and must not derive total elapsed fight time from `finish_round`/`finish_time_sec` until a versioned DATA/feature contract proves the relevant historical round-length semantics. `control_sec` is an observed general-control numerator; it is not elapsed fight time or ground time.
+
+The catalog's `elapsed_exposure_policy` is the machine-readable gate. Under canonical v0 its `allowed_sources` list is empty. A time-normalized concept may move to a materializable status only after a versioned contract names an allowed canonical elapsed-exposure source and the concept declares explicit eligibility/provenance with `contract_safe=true`. The validator fails closed otherwise.
+
+Accordingly, the following kinds of exposure remain **currently materializable** where their canonical observations exist:
+
 - attempted events for conversion/accuracy/defense probabilities;
 - landed/absorbed events for explicitly named efficiency proxies;
+- compatible event totals for compositional shares;
 - eligible prior fights for historical result/method rates;
 - observed opportunities only where canonical DATA actually supplies an opportunity count.
 
-Examples:
+Elapsed-time normalization remains a **reserved future exposure type**, not a canonical-v0 V1 denominator. This defers strike flow/pace, KD-per-time, TD-pressure-per-time, control share of fight time, submission/reversal activity per time, their time-dependent matchup interactions, four V2 time residuals, and time-intensity/persistence simulator concepts. It does not block attempt-conditioned quantities such as significant-strike accuracy, takedown conversion/defense, KD-per-landed-strike proxies, target/environment composition, or fight-count method history.
 
-- significant strikes landed per minute = observed significant strikes landed / eligible observed elapsed minutes;
-- takedown success = takedowns landed / takedowns attempted, not takedowns landed / fights;
-- submission-attempt rate = attempts / eligible elapsed fight minutes in v1; exact ground-opportunity rate is unsupported because exact ground minutes are not canonically observed;
-- control rate = exact `control_sec` / eligible elapsed fight seconds; `control_sec` is **not** ground time;
-- strike defense = `1 - opponent_landed / opponent_attempted` over compatible observed coverage.
-
-A round contributes to a domain only when fields required by that concept are observed. Missing fields never borrow generic full-fight exposure and never become zero.
+Missing fields never borrow generic full-fight exposure and never become zero.
 
 ## 8. Missingness and zero
 
@@ -155,7 +157,7 @@ Population prior hierarchy:
 
 Mechanical prior strengths:
 
-- event/time rates: 15 equivalent eligible minutes;
+- event/time rates: 15 equivalent eligible minutes is a **reserved future** shrinkage policy and is not materializable under canonical v0;
 - attempt/conversion probabilities: 20 equivalent attempts/opportunities;
 - compositional shares: 30 equivalent events;
 - fight-result/method rates: 6 equivalent fights.
@@ -176,7 +178,7 @@ For every historical contest `H` contributing to fighter state at target time `T
 4. aggregate residuals over the chosen window using compatible exposure/opportunity weights;
 5. never recompute the historical opponent using information learned after `H`.
 
-Planned V2 families include significant-strike creation above expectation, strike suppression above expectation, takedown creation above expectation, control creation above expectation, and submission-attempt creation above expectation.
+Under canonical v0, only attempt-denominated `oa_takedown_creation` remains `V2_OPPONENT_ADJUSTED`. Significant-strike creation/suppression, control creation, and submission-attempt creation residuals are `DEFERRED` because their expected/actual residuals require the same unsafe elapsed-time exposure. Their chronology/sign semantics remain documented for a future contract-safe exposure source.
 
 This is chronological opponent adjustment, not retrospective opponent-career strength.
 
@@ -198,14 +200,7 @@ Canonical stance is `PROXY_ONLY` because it is not a dated stance history and sw
 
 F00 identifies component quantities but does not build a simulator.
 
-Aggregate canonical observations can later support component models for:
-
-- strike-event intensity;
-- knockdown-hazard proxy;
-- takedown-attempt intensity;
-- takedown success conditional on attempt;
-- submission-attempt intensity;
-- round/time persistence effects.
+Under canonical v0, `sim_takedown_success_probability` remains the only currently active simulator-component concept because its denominator is observed takedown attempts. Strike-event intensity, KD interval hazard, takedown-attempt intensity, submission-attempt intensity, and round/time persistence concepts are `DEFERRED` until elapsed exposure becomes contract-safe. The concepts remain documented so a future DATA migration can promote them without redefining their intent.
 
 F00 does **not** claim support for:
 
@@ -242,7 +237,7 @@ Initial target families:
 
 Targets attach only after the prediction feature row is complete. Historical result/method fields may support historical summaries only when explicitly scoped `historical_only`; the same fields from the current target fight are forbidden.
 
-F00 does not derive global total elapsed fight duration across all eras/promotions because canonical v0 does not expose a bout-level round-length/rule-set field sufficient to make one formula safe everywhere. That concept is `DEFERRED`.
+F00 does not derive global total elapsed fight duration across all eras/promotions because canonical v0 does not expose a bout-level round-length/rule-set field sufficient to make one formula safe everywhere. `historical_fight_duration` and every feature that depends on unproven elapsed fight/round exposure are therefore `DEFERRED` together; this is enforced by `elapsed_exposure_policy` rather than left to F01 implementation judgment.
 
 Sportsbook odds, implied probability, line movement, ROI, CLV, and method prices are outside the core feature contract.
 
@@ -332,6 +327,7 @@ F00 performed the required self-review before expanding the catalog and made the
 14. **Simulator training labels needed an explicit boundary.** Realized same-fight round outcomes may be component-training labels after predictor construction, but simulator components cannot be baseline Model 0/1/tree requirements and cannot enter the same fight's pre-fight state.
 
 After these corrections, fighter state and matchup interactions are separate; targets are isolated; predictive features are as-of; rates declare denominators; zero/missing are distinguishable; shrinkage/debutants are explicit; opponent adjustment is chronological; orientation is provider-neutral; external promotions are deliberate; coarse positional fields remain coarse; profiles/rankings are point-in-time; no core concept requires raw/provider layouts; variants are opt-in; and the repository remains understandable from this document plus the machine-readable contract files.
+16. **Elapsed-exposure contradiction caught at merge gate.** The initial draft deferred historical total fight duration while still marking multiple per-minute/per-second features materializable. Master review correctly identified that `fighter_round_stats` has no elapsed-round field and that F01 would otherwise need an unstated standard-round assumption. F00 now defers the full time-dependent feature chain, adds an explicit canonical-v0 exposure gate, and validates that no time-denominator concept can become materializable without an allowed source plus eligibility/provenance proof.
 
 ## 19. Answers to the 17 F00 architecture questions
 
