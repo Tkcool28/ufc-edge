@@ -10,6 +10,15 @@ on:
       - "tests/handicap/**"
       - "handicap/README.md"
       - ".github/workflows/h00-handicap-access.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "src/ufc_edge/handicap/**"
+      - "tools/handicap/**"
+      - "tests/handicap/**"
+      - "handicap/README.md"
+      - ".github/workflows/h00-handicap-access.yml"
   workflow_dispatch:
 
 permissions:
@@ -29,6 +38,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:
