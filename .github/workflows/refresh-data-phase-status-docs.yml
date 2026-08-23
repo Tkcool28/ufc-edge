@@ -1,0 +1,33 @@
+name: Refresh DATA phase status docs
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/refresh_data_phase_status_docs.py"
+      - "provenance/audits/official_scorecards_final_disposition_v0.json"
+      - "provenance/audits/unlinked_ufc_athlete_identity_v0_latest.json"
+      - "provenance/audits/unlinked_ufc_fightmetric_crosswalk_v0_latest.json"
+      - "data/canonical/v0/manifest.json"
+      - ".github/workflows/refresh-data-phase-status-docs.yml"
+  workflow_dispatch:
+permissions: {contents: write}
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: "${{ github.ref_name }}", fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Refresh and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          python pipelines/refresh_data_phase_status_docs.py
+          git config user.name "github-actions[bot]";git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add provenance/data_source_manifest.md provenance/free_source_sweep_2026-08-20.md
+          git commit -m "Refresh DATA phase source status docs [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
