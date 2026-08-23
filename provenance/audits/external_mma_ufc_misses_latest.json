@@ -5,7 +5,7 @@
     "pair_absent_rows_promoted": false,
     "required_next": "Use the measured mismatch deltas and absent-result semantics to decide whether this is timezone/date convention and/or a canonical-spine omission. Do not widen overlap identity without explicit evidence."
   },
-  "generated_at_utc": "2026-08-23T00:06:00.790418Z",
+  "generated_at_utc": "2026-08-23T00:06:25.231580Z",
   "pair_absent_examples": [
     {
       "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
