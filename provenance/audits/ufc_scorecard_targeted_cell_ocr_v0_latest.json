@@ -1,0 +1,49 @@
+{
+  "complete_card_count": 1,
+  "complete_card_count_by_rounds": {
+    "1": 1
+  },
+  "contract_valid_cell_recovery_fraction": 0.551852,
+  "contract_valid_cells_recovered": 298,
+  "crop_half_height": 0.024,
+  "crop_half_width": 0.032,
+  "decision": {
+    "canonical_judge_round_scores_written": false,
+    "fighter_column_identity_promoted": false,
+    "judge_name_identity_promoted": false,
+    "required_next": "Use only fully recovered targeted-cell cards for fighter-column/judge-line semantic validation. Do not infer missing cells or canonicalize partially recovered grids.",
+    "targeted_cell_ocr_is_qa_only": true,
+    "targeted_cell_recovery_measured": true,
+    "whole_page_missing_tokens_are_not_treated_as_empty_cells": true
+  },
+  "expected_score_cells": 540,
+  "generated_at_utc": "2026-08-23T01:17:55.320344Z",
+  "learned_score_column_centers": [
+    0.07353,
+    0.28736,
+    0.38939,
+    0.60608,
+    0.71367,
+    0.92582
+  ],
+  "learned_score_row_centers": [
+    0.4173,
+    0.4595,
+    0.5026,
+    0.5458,
+    0.5898
+  ],
+  "output": "data/derived/qa/ufc_scorecard_targeted_cell_ocr_v0.csv",
+  "sample_images": 48,
+  "schema_version": 1,
+  "scored_card_count_by_rounds": {
+    "1": 7,
+    "2": 7,
+    "3": 18,
+    "5": 3
+  },
+  "scored_sample_images": 35,
+  "typical_7_10_cells_recovered": 87,
+  "upscale": 7,
+  "within_one_missing_cell_card_count": 2
+}

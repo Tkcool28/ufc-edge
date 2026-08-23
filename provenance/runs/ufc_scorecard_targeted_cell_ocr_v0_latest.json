@@ -1,10 +1,10 @@
 {
   "audit": "ufc_scorecard_targeted_cell_ocr_v0",
-  "completed_at_utc": "2026-08-23T01:15:24.048633Z",
-  "exit_code": 1,
-  "github_run_id": "32609891052",
-  "log": "provenance/runs/ufc_scorecard_targeted_cell_ocr_v0_32609891052.log",
+  "completed_at_utc": "2026-08-23T01:17:55.352294Z",
+  "exit_code": 0,
+  "github_run_id": "32609953005",
+  "log": "provenance/runs/ufc_scorecard_targeted_cell_ocr_v0_32609953005.log",
   "schema_version": 1,
-  "status": "failed",
-  "trigger_sha": "62d59eaa1709b0173ceb900676073635a5876369"
+  "status": "success",
+  "trigger_sha": "324f1f90cace35be2fe29c985ee1126ca3fa3fa1"
 }
