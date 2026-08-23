@@ -1,0 +1,45 @@
+{
+  "archive_image_count": 578,
+  "decision": {
+    "canonical_judge_round_scores_written": false,
+    "judge_identity_resolved": false,
+    "ocr_is_derived_qa_only": true,
+    "required_next": "Review probe recovery by PSM and image era/format. Choose a bounded OCR configuration for the full 578-image derived layer only if fighter/score text recovery is adequate; canonicalization still requires independent judge/round/fighter semantics.",
+    "round_score_structure_resolved": false
+  },
+  "generated_at_utc": "2026-08-23T00:57:25.779612Z",
+  "output": "data/derived/qa/ufc_scorecard_ocr_probe_v0.csv",
+  "probe_sample_images": 53,
+  "psm_summary": {
+    "11": {
+      "fighter_name_hit_distribution": {
+        "1": 2,
+        "2": 51
+      },
+      "images": 53,
+      "images_with_10plus_words": 53,
+      "images_with_6plus_score_tokens": 36,
+      "mean_of_image_mean_confidence": 58.191,
+      "total_score_tokens_7_to_10": 1295,
+      "total_words": 4933
+    },
+    "6": {
+      "fighter_name_hit_distribution": {
+        "1": 11,
+        "2": 42
+      },
+      "images": 53,
+      "images_with_10plus_words": 53,
+      "images_with_6plus_score_tokens": 1,
+      "mean_of_image_mean_confidence": 50.569,
+      "total_score_tokens_7_to_10": 67,
+      "total_words": 5107
+    }
+  },
+  "sample_multi_image_fight_objects": 6,
+  "sample_signature_counts": {
+    "jpeg": 29,
+    "png": 24
+  },
+  "schema_version": 1
+}
