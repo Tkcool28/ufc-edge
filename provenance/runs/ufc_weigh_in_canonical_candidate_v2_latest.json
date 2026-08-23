@@ -1,10 +1,10 @@
 {
   "build": "ufc_weigh_in_canonical_candidate_v2",
-  "completed_at_utc": "2026-08-23T00:42:38.032869Z",
+  "completed_at_utc": "2026-08-23T00:43:08.360533Z",
   "exit_code": 0,
-  "github_run_id": "32608539211",
-  "log": "provenance/runs/ufc_weigh_in_canonical_candidate_v2_32608539211.log",
+  "github_run_id": "32608553046",
+  "log": "provenance/runs/ufc_weigh_in_canonical_candidate_v2_32608553046.log",
   "schema_version": 1,
   "status": "success",
-  "trigger_sha": "4fac1b248ffb21803b41923a72890af13f191c31"
+  "trigger_sha": "a9139a183290a24e03514d3bde0f7096fdd436cf"
 }
