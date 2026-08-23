@@ -1,0 +1,79 @@
+{
+  "canonical_contract_version": "0.4.0-draft",
+  "canonical_manifest_counts": {
+    "canonical_ufc_weigh_in_exclusions": 2,
+    "events": 1014,
+    "exclusions": 570,
+    "external_mma_exclusions": 9965,
+    "field_provenance": 57531,
+    "fighter_profile_snapshot_exclusions": 5,
+    "fighter_profile_snapshots": 2466,
+    "fighter_round_position": 32156,
+    "fighter_round_position_exclusions": 5955,
+    "fighter_round_stats": 41218,
+    "fighters": 4600,
+    "fights": 9252,
+    "rankings": 99077,
+    "rankings_exclusions": 1400,
+    "source_identity_links": 31426,
+    "weigh_ins": 12890
+  },
+  "completed_at_local": "2026-08-22T19:56:58.231434-06:00",
+  "freeze_rule": "These exact contract/source-map/precedence/manifest/status/provenance files define the DATA baseline for the first FEATURES phase. Changes require an explicit post-DATA migration, not silent editing.",
+  "frozen_files": [
+    {
+      "bytes": 28423,
+      "path": "schemas/canonical_data_contract_v0.json",
+      "sha256": "177c86ec2ab0cd13c3cda73294daf8b2bc4a914a66df766913d3d199302e614a"
+    },
+    {
+      "bytes": 66468,
+      "path": "schemas/source_field_map_v0.json",
+      "sha256": "2caa22d331259efa39f4999e31875fe9d202ae6e629357e4ea6d2d13f21b7780"
+    },
+    {
+      "bytes": 10919,
+      "path": "schemas/source_precedence_v0.json",
+      "sha256": "c946a8614e0f1631bf59badc178a5566cb909c210723696ea9dd0fd10878545f"
+    },
+    {
+      "bytes": 5484,
+      "path": "data/canonical/v0/manifest.json",
+      "sha256": "e68bccf4b1878263c0358dec3fc42390c59ea513650b09956f73f2d5e08af1f8"
+    },
+    {
+      "bytes": 19786,
+      "path": "provenance/data_source_manifest.md",
+      "sha256": "e752f46f1791114ad3688489a62d9cf34654dc024ac57a5e0a938b6831615043"
+    },
+    {
+      "bytes": 15490,
+      "path": "provenance/free_source_sweep_2026-08-20.md",
+      "sha256": "840d9dc1f0760d761c6dbde509b0fb87ce5ab0cec3b2ca96b9361b1c4ddefcc3"
+    },
+    {
+      "bytes": 2198,
+      "path": "provenance/greco1899.lock.json",
+      "sha256": "1905a5edfa48a04aaa0854980edde7d9c8f2b5271f46b28c68c1288f7b2fd29a"
+    },
+    {
+      "bytes": 2373,
+      "path": "provenance/tidytuesday_ufc_rankings.lock.json",
+      "sha256": "895b3f7420fa5ecaa755b68d5ea6b4169320e37bcc9df1e43cdbfbba6a420ea6"
+    },
+    {
+      "bytes": 1571,
+      "path": "provenance/kaggle_pro_mma_fights.lock.json",
+      "sha256": "4137850c351b784b76059ef60a2b03768c7548a5c0aa68cafe47f6bea7bf0b53"
+    },
+    {
+      "bytes": 1172,
+      "path": "provenance/kaggle_pro_mma_fighters.lock.json",
+      "sha256": "759218960a2215724438b0637c00279a86fe7488422b15408b0c372fd821817f"
+    }
+  ],
+  "phase": "DATA",
+  "schema_version": 1,
+  "status": "complete",
+  "timezone": "America/Denver"
+}

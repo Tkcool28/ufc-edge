@@ -1,0 +1,56 @@
+{
+  "accepted_identity_gap_nodes": 423,
+  "canonical_contract_version": "0.4.0-draft",
+  "completion_marker_required": true,
+  "generated_at_utc": "2026-08-23T01:57:07.122478Z",
+  "manifest_counts": {
+    "canonical_ufc_weigh_in_exclusions": 2,
+    "events": 1014,
+    "exclusions": 570,
+    "external_mma_exclusions": 9965,
+    "field_provenance": 57531,
+    "fighter_profile_snapshot_exclusions": 5,
+    "fighter_profile_snapshots": 2466,
+    "fighter_round_position": 32156,
+    "fighter_round_position_exclusions": 5955,
+    "fighter_round_stats": 41218,
+    "fighters": 4600,
+    "fights": 9252,
+    "rankings": 99077,
+    "rankings_exclusions": 1400,
+    "source_identity_links": 31426,
+    "weigh_ins": 12890
+  },
+  "manifest_files_verified": 16,
+  "mode": "final",
+  "required_evidence_verified": [
+    "provenance/audits/canonical_core_v0_latest.json",
+    "provenance/audits/canonical_fightmetric_position_v0_latest.json",
+    "provenance/audits/canonical_rankings_v0_latest.json",
+    "provenance/audits/canonical_ufc_profile_snapshots_v0_latest.json",
+    "provenance/audits/canonical_external_mma_v0_latest.json",
+    "provenance/audits/canonical_ufc_weigh_ins_v0_latest.json",
+    "provenance/audits/official_scorecards_final_disposition_v0.json",
+    "provenance/audits/unlinked_ufc_athlete_identity_v0_latest.json",
+    "provenance/audits/unlinked_ufc_fightmetric_crosswalk_v0_latest.json"
+  ],
+  "required_locks_verified": [
+    "provenance/greco1899.lock.json",
+    "provenance/tidytuesday_ufc_rankings.lock.json",
+    "provenance/kaggle_pro_mma_fights.lock.json",
+    "provenance/kaggle_pro_mma_fighters.lock.json"
+  ],
+  "schema_version": 1,
+  "scorecards": {
+    "canonical_rows": 0,
+    "status": "raw_qa_only"
+  },
+  "stable_id_crosswalk_safe_to_accept_gap": true,
+  "status": "pass",
+  "validator_outputs": {
+    "pipelines/validate_canonical_contract.py": "CONTRACT_OK version=0.4.0-draft tables=13 fields=152 missing_is_not_zero=true round_zero_actual=false sig_splits=true",
+    "pipelines/validate_canonical_data_v0.py": "TABLE_OK fighters rows=4600\nTABLE_OK events rows=1014\nTABLE_OK fights rows=9252\nTABLE_OK fighter_round_stats rows=41218\nTABLE_OK fighter_round_position rows=32156\nTABLE_OK source_identity_links rows=31426\nTABLE_OK field_provenance rows=57531\nTABLE_OK weigh_ins rows=12890\nCANONICAL_DATA_OK contract=0.4.0-draft fighters=4600 events=1014 fights=9252 rounds=41218 position_rows=32156 weigh_ins=12890 fight_coverage=104.436% round_coverage=98.911%",
+    "pipelines/validate_source_field_map.py": "SOURCE_MAP_OK version=0.5.0-draft mappings=148 statuses={\"provisional\": 34, \"rejected\": 6, \"unresolved\": 27, \"verified\": 81} source_count=9",
+    "pipelines/validate_source_precedence.py": "SOURCE_PRECEDENCE_OK version=0.4.0-draft families=9 active=8 pending_acquisition=0 acquired_qa_pending=0 raw_qa_only=1 sources=9"
+  }
+}
