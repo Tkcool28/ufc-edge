@@ -1,0 +1,66 @@
+name: Audit external MMA UFC overlap
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/audit_external_mma_ufc_overlap.py"
+      - "data/derived/identity/external_mma_canonical_crosswalk_candidate.csv"
+      - "data/canonical/v0/fights.csv"
+      - "data/canonical/v0/events.csv"
+      - ".github/workflows/audit-external-mma-ufc-overlap.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Audit and commit
+        shell: bash
+        run: |
+          set -uo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          mkdir -p provenance/runs provenance/audits data/derived/identity
+          log="provenance/runs/external_mma_ufc_overlap_${GITHUB_RUN_ID}.log"
+          set +e
+          python pipelines/audit_external_mma_ufc_overlap.py >"$log" 2>&1
+          code=$?
+          set -e
+          python - "$code" "$log" <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone
+          code, log = int(sys.argv[1]), sys.argv[2]
+          payload = {
+              "schema_version": 1,
+              "audit": "external_mma_ufc_overlap",
+              "status": "success" if code == 0 else "failed",
+              "exit_code": code,
+              "github_run_id": os.environ.get("GITHUB_RUN_ID"),
+              "trigger_sha": os.environ.get("GITHUB_SHA"),
+              "completed_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+              "log": log,
+          }
+          with open("provenance/runs/external_mma_ufc_overlap_latest.json", "w", encoding="utf-8") as fh:
+              json.dump(payload, fh, indent=2, sort_keys=True); fh.write("\n")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$log" provenance/runs/external_mma_ufc_overlap_latest.json
+          if [ "$code" -eq 0 ]; then
+            git add provenance/audits/external_mma_ufc_overlap_latest.json data/derived/identity/external_mma_ufc_overlap_candidate.csv
+          fi
+          git commit -m "Audit external MMA UFC overlap (${code}) [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+          exit "$code"
