@@ -1,0 +1,98 @@
+name: H00 Handicap Access
+
+on:
+  push:
+    branches:
+      - feat/handicap-access-h00
+    paths:
+      - "src/ufc_edge/handicap/**"
+      - "tools/handicap/**"
+      - "tests/handicap/**"
+      - "handicap/README.md"
+      - ".github/workflows/h00-handicap-access.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test-and-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONPATH: src
+      H00_CUTOFF: "2026-08-23T03:30:00Z"
+      MAX_ID: "1ca6e52b-4164-500c-9f35-babbe16e125a"
+      DUSTIN_ID: "c1661324-36dc-5257-b6ff-583a62cf8b70"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependency
+        run: python -m pip install pytest
+
+      - name: Compile H00
+        run: python -m compileall -q src/ufc_edge/handicap tools/handicap tests/handicap
+
+      - name: Run H00 tests
+        run: python -m pytest -q tests/handicap
+
+      - name: Build fighter index
+        run: python tools/handicap/build_fighter_index.py
+
+      - name: Build Max Holloway dossier
+        run: |
+          python tools/handicap/build_fighter_dossier.py \
+            --fighter-id "$MAX_ID" \
+            --cutoff "$H00_CUTOFF"
+
+      - name: Build Holloway vs Poirier matchup
+        run: |
+          python tools/handicap/build_matchup_packet.py \
+            --fighter-a "$MAX_ID" \
+            --fighter-b "$DUSTIN_ID" \
+            --cutoff "$H00_CUTOFF"
+
+      - name: Validate generated demo
+        run: |
+          python tools/handicap/validate_h00_demo.py \
+            --index handicap/v0/index/fighters.json \
+            --dossier "handicap/v0/fighters/${MAX_ID}.json" \
+            --matchup-json "handicap/v0/matchups/${MAX_ID}__${DUSTIN_ID}.json" \
+            --matchup-md "handicap/v0/matchups/${MAX_ID}__${DUSTIN_ID}.md" \
+            --report handicap/H00_VALIDATION.md
+
+      - name: Confirm frozen DATA untouched
+        run: |
+          git diff --exit-code -- \
+            data/raw \
+            data/canonical/v0 \
+            data/derived \
+            provenance/data_phase_freeze_v0.json \
+            schemas/canonical_data_contract_v0.json \
+            schemas/source_field_map_v0.json \
+            schemas/source_precedence_v0.json \
+            schemas/source_adapter_contract_v0.md
+
+      - name: Commit disposable acceptance artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            handicap/H00_VALIDATION.md \
+            handicap/v0/index/fighters.json \
+            "handicap/v0/fighters/${MAX_ID}.json" \
+            "handicap/v0/matchups/${MAX_ID}__${DUSTIN_ID}.json" \
+            "handicap/v0/matchups/${MAX_ID}__${DUSTIN_ID}.md"
+          if git diff --cached --quiet; then
+            echo "Acceptance artifacts unchanged."
+          else
+            git commit -m "Add H00 acceptance artifacts"
+            git push origin HEAD:feat/handicap-access-h00
+          fi
