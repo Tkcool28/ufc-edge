@@ -55,6 +55,15 @@ def _string_field(obj: dict[str, Any], key: str) -> str:
     return value.strip()
 
 
+def _canonical_id_field(obj: dict[str, Any], key: str) -> str:
+    value = _string_field(obj, key)
+    if value in {".", ".."} or ".." in value or "/" in value or "\\" in value:
+        raise RequestError(f"{key} must be a canonical ID, not a path")
+    if any(ord(ch) < 32 or ord(ch) == 127 for ch in value):
+        raise RequestError(f"{key} contains an invalid control character")
+    return value
+
+
 def parse_request(body: str) -> H01Request:
     try:
         obj = json.loads(body)
@@ -90,7 +99,7 @@ def parse_request(body: str) -> H01Request:
         payload["fighter_a"] = _string_field(obj, "fighter_a")
         payload["fighter_b"] = _string_field(obj, "fighter_b")
     else:
-        payload["event_id"] = _string_field(obj, "event_id")
+        payload["event_id"] = _canonical_id_field(obj, "event_id")
 
     canonical = {"schema": REQUEST_SCHEMA, "kind": kind, **payload, "cutoff": cutoff}
     digest = hashlib.sha256(
