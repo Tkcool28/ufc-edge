@@ -1,0 +1,41 @@
+{
+  "block_status_counts": {
+    "dual_ocr_consensus": 94,
+    "psm11_only": 6,
+    "psm7_only": 5,
+    "unresolved": 9
+  },
+  "card_status_counts": {
+    "judge_band_missing": 10,
+    "partial_or_unresolved_judges": 14,
+    "three_judges_dual_ocr_consensus": 24
+  },
+  "cards_with_spatial_judge_band": 38,
+  "cards_with_three_dual_ocr_consensus_judges": 24,
+  "decision": {
+    "canonical_judge_round_scores_written": false,
+    "judge_names_are_ocr_candidates_not_official_ids": true,
+    "per_block_dual_ocr_consensus_required": true,
+    "required_next": "Intersect three-judge consensus cards with strict fighter-column orientation and fully recovered score-cell cards. Validate paired round scores and decision totals before canonicalization.",
+    "three_judge_consensus_subset_can_advance": true
+  },
+  "generated_at_utc": "2026-08-23T01:18:18.799479Z",
+  "judge_band_half_height": 0.035,
+  "judge_block_bounds": [
+    [
+      0.02,
+      0.34
+    ],
+    [
+      0.34,
+      0.66
+    ],
+    [
+      0.66,
+      0.98
+    ]
+  ],
+  "output": "data/derived/qa/ufc_scorecard_judge_blocks_v0.csv",
+  "sample_images": 48,
+  "schema_version": 1
+}
