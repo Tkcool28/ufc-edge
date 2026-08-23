@@ -17,7 +17,7 @@ Authoritative F00 files:
 
 Feature contract version: `0.1.1-draft`.
 
-The future shared feature flow is:
+The shared feature flow is:
 
 ```text
 frozen canonical DATA
@@ -29,6 +29,18 @@ frozen canonical DATA
 ```
 
 Normal feature inputs are `data/canonical/v0/` plus the frozen DATA semantic/provenance contract needed to interpret those tables. Feature code does not read provider-specific raw layouts. Sportsbook odds and betting-performance fields are not core feature inputs.
+
+## F01 V1 point-in-time materializer
+
+F01 implements the first reference materialization path for the currently active core V1 concepts only. See `features/F01_MATERIALIZER.md` for architecture, PIT/window/shrinkage rules, audit-state semantics, elapsed-exposure safety, provenance, and the 16-question implementation checkpoint.
+
+Runtime entry point:
+
+```text
+python tools/features/materialize_v1.py --validate-bounded
+```
+
+The CLI writes to stdout by default. F01 does not commit a historical feature matrix and does not establish a permanent generated feature-store directory. The authoritative feature meanings remain in the F00 catalog; F01 fails closed if the active V1 catalog and executable implementation registry diverge.
 
 ## Quarantined pre-F00 prior art
 
@@ -51,7 +63,7 @@ The old files do not define current naming, window, denominator, shrinkage, orie
 
 DATA closed at `DATA_PHASE_COMPLETE.md`; the immutable baseline is `provenance/data_phase_freeze_v0.json`.
 
-F00 inherits these non-negotiable rules:
+F00/F01 inherit these non-negotiable rules:
 
 - missing is not zero;
 - no future leakage;
@@ -79,4 +91,4 @@ F00 inherits these non-negotiable rules:
 - `RAW_QA_ONLY` sources and `data/raw/` do not feed predictive features.
 - Betting odds, implied probabilities, line movement, ROI and CLV are outside the core feature contract.
 
-No production feature materialization or modeling should begin until F00 is reviewed and the next FEATURES task is explicitly authorized.
+F01 is infrastructure only. Modeling, V2 opponent adjustment, simulator work, sportsbook integration, and DATA migrations require separate reviewed tasks.
