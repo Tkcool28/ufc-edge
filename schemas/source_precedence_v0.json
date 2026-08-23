@@ -7,6 +7,7 @@
     "fightmetric_era_coverage": "provenance/audits/fightmetric_era_coverage_latest.json",
     "fightmetric_position_quality": "provenance/audits/fightmetric_position_time_quality_latest.json",
     "fightmetric_unidentified_rows": "provenance/audits/fightmetric_unidentified_rows_latest.json",
+    "official_scorecards_final_disposition": "provenance/audits/official_scorecards_final_disposition_v0.json",
     "ufc_greco_round_overlap": "provenance/audits/ufc_greco_round_overlap_latest.json"
   },
   "global_rules": {
@@ -19,7 +20,7 @@
     "quantized_measurement_never_becomes_exact_measurement": true,
     "round_zero_is_qa_summary_only": true
   },
-  "precedence_version": "0.3.0-draft",
+  "precedence_version": "0.4.0-draft",
   "rules": [
     {
       "canonical_tables": [
@@ -170,14 +171,15 @@
     },
     {
       "canonical_table": "judge_round_scores",
-      "evidence": "data/raw/ufc_official_articles/20260821T210000Z/scorecard/manifest.json",
+      "evidence": "provenance/audits/official_scorecards_final_disposition_v0.json",
       "fallback_rule": "UFC-DataLab OCR remains raw/QA-only; MMA Decisions is reference-only under the current conservative acquisition rule.",
       "family": "official_judge_round_scores",
+      "notes": "Official UFC scorecard pages and selected immutable image bytes are acquired and identity-audited, but strict OCR/geometry promotion failed. The strongest physical-grid three-round sample recovered 82/270 score cells, 0/15 complete cards, and 0 complete nine-pair cards. No canonical judge-round rows are written. Images/OCR/geometry/judge reconciliation remain QA assets only.",
       "priority": [
         "ufc_official_content"
       ],
-      "selection_gate": "Official UFC scorecard pages are acquired. Canonical judge-round rows require a verified official scorecard image/text source, resolved fight/fighter/judge identity, and round-score plausibility. OCR output alone is never canonical.",
-      "status": "acquired_qa_pending"
+      "selection_gate": "RAW_QA_ONLY final disposition for canonical v0. Promotion requires a future extraction method that independently recovers complete judge-round pairs from verified official source images with resolved fight/fighter/judge identity and passes result/round plausibility. Existing OCR output is not canonical.",
+      "status": "raw_qa_only"
     }
   ],
   "schema_version": 1,
