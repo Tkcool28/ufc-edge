@@ -12,7 +12,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, timezone
 import csv
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Iterable
 
 
 class HistoryError(ValueError):
@@ -125,7 +125,6 @@ class CanonicalStore:
 
         event_rows = _read_csv(canonical / "events.csv")
         self.events: dict[str, dict[str, str]] = {row["event_id"]: row for row in event_rows}
-
         self.fighters: dict[str, dict[str, str]] = {
             row["fighter_id"]: row for row in _read_csv(canonical / "fighters.csv")
         }
@@ -157,7 +156,7 @@ class CanonicalStore:
             self.fights_by_fighter[ref.fighter_b_id].append(ref)
 
         for fighter_id in self.fights_by_fighter:
-            self.fights_by_fighter[fighter_id].sort(key=lambda f: (f.event_date, f.fight_id))
+            self.fights_by_fighter[fighter_id].sort(key=lambda item: (item.event_date, item.fight_id))
 
         self.round_rows_by_fighter: dict[str, list[dict[str, str]]] = defaultdict(list)
         self.round_row_by_key: dict[tuple[str, str, int], dict[str, str]] = {}
@@ -192,46 +191,49 @@ class CanonicalStore:
         return parse_cutoff(prediction_as_of).date()
 
     def prior_fights(self, fighter_id: str, prediction_as_of: str | datetime) -> list[FightRef]:
-        """Return canonical fights whose event date is strictly before cutoff date.
+        """Return fights whose event date is strictly before the cutoff date.
 
-        A same-date event is excluded even if the caller supplied an intra-day
-        timestamp, because canonical v0 has no trusted bout-order chronology.
+        Same-date contests are excluded even for an intra-day cutoff because
+        canonical v0 does not supply trusted bout-order chronology.
         """
         self.require_fighter(fighter_id)
         cutoff = self.cutoff_date(prediction_as_of)
-        return [fight for fight in self.fights_by_fighter.get(fighter_id, []) if fight.event_date < cutoff]
+        return [item for item in self.fights_by_fighter.get(fighter_id, []) if item.event_date < cutoff]
 
     def all_prior_fights(self, prediction_as_of: str | datetime) -> list[FightRef]:
         cutoff = self.cutoff_date(prediction_as_of)
-        return [fight for fight in self.fights.values() if fight.event_date < cutoff]
+        return [item for item in self.fights.values() if item.event_date < cutoff]
 
     def round_rows_for_fight(self, fighter_id: str, fight_id: str) -> list[dict[str, str]]:
-        rows = [
-            row for row in self.round_rows_by_fighter.get(fighter_id, [])
-            if row["fight_id"] == fight_id
-        ]
+        rows = [row for row in self.round_rows_by_fighter.get(fighter_id, []) if row["fight_id"] == fight_id]
         return sorted(rows, key=lambda row: int(row["round"]))
 
     def opponent_round_row(self, fight_id: str, fighter_id: str, round_no: int) -> dict[str, str] | None:
         fight = self.require_fight(fight_id)
-        opponent_id = fight.opponent_of(fighter_id)
-        return self.round_row_by_key.get((fight_id, opponent_id, round_no))
+        return self.round_row_by_key.get((fight_id, fight.opponent_of(fighter_id), round_no))
 
     def prior_scale_weight(self, fighter_id: str, prediction_as_of: str | datetime) -> dict[str, str] | None:
-        prior_ids = {fight.fight_id for fight in self.prior_fights(fighter_id, prediction_as_of)}
+        prior_ids = {item.fight_id for item in self.prior_fights(fighter_id, prediction_as_of)}
         candidates = [
-            row for row in self.weigh_ins_by_fighter.get(fighter_id, [])
+            row
+            for row in self.weigh_ins_by_fighter.get(fighter_id, [])
             if row.get("fight_id") in prior_ids and _blank_to_none(row.get("scale_weight_lbs")) is not None
         ]
         if not candidates:
             return None
 
-        # Linked fight date, not weigh-in article/publication timing, defines PIT
-        # eligibility. Same-date linked target fights are absent from prior_ids.
-        def key(row: dict[str, str]) -> tuple[date, str, int]:
+        # Linked fight date proves strict prior eligibility. Within eligible
+        # history, explicit weigh-in date and attempt number define ordering;
+        # the opaque observation id is used only as a deterministic final tie key.
+        def key(row: dict[str, str]) -> tuple[date, date, int, str]:
             fight = self.require_fight(row["fight_id"])
+            weigh_in_date = (
+                parse_date(row["weigh_in_date"])
+                if _blank_to_none(row.get("weigh_in_date"))
+                else fight.event_date
+            )
             attempt = as_int(row.get("attempt_number")) or 0
-            return (fight.event_date, row.get("weigh_in_observation_id", ""), attempt)
+            return (fight.event_date, weigh_in_date, attempt, row.get("weigh_in_observation_id", ""))
 
         return max(candidates, key=key)
 
@@ -241,26 +243,30 @@ class CanonicalStore:
         window: str,
         prediction_as_of: str | datetime,
     ) -> WindowSelection:
-        unique = {fight.fight_id: fight for fight in fights}
-        ordered = sorted(unique.values(), key=lambda fight: (fight.event_date, fight.fight_id), reverse=True)
+        unique = {item.fight_id: item for item in fights}
+        ordered = sorted(unique.values(), key=lambda item: (item.event_date, item.fight_id), reverse=True)
+
         if window == "career":
-            ids = tuple(fight.fight_id for fight in reversed(ordered))
+            ids = tuple(item.fight_id for item in reversed(ordered))
             return WindowSelection(window, ids, {fight_id: 1.0 for fight_id in ids})
+
         if window == "ewma_365d":
             cutoff = self.cutoff_date(prediction_as_of)
-            ids = tuple(fight.fight_id for fight in reversed(ordered))
+            ids = tuple(item.fight_id for item in reversed(ordered))
             weights = {
-                fight.fight_id: 2.0 ** (-((cutoff - fight.event_date).days) / 365.0)
-                for fight in ordered
+                item.fight_id: 2.0 ** (-((cutoff - item.event_date).days) / 365.0)
+                for item in ordered
             }
             return WindowSelection(window, ids, weights)
+
         if window not in {"last3", "last5"}:
             raise HistoryError(f"unsupported contract window {window}")
 
         limit = 3 if window == "last3" else 5
         groups: dict[date, list[FightRef]] = defaultdict(list)
-        for fight in ordered:
-            groups[fight.event_date].append(fight)
+        for item in ordered:
+            groups[item.event_date].append(item)
+
         selected: list[FightRef] = []
         for fight_date in sorted(groups, reverse=True):
             group = groups[fight_date]
@@ -271,12 +277,16 @@ class CanonicalStore:
                 raise AmbiguousWindowBoundary(
                     f"{window} unavailable: unresolved same-date group on {fight_date} crosses boundary"
                 )
-            selected.extend(sorted(group, key=lambda fight: fight.fight_id))
-        ids = tuple(fight.fight_id for fight in selected)
+            # fight_id is serialization order only after the whole tied group is
+            # accepted; it never decides which tied fight enters the window.
+            selected.extend(sorted(group, key=lambda item: item.fight_id))
+
+        ids = tuple(item.fight_id for item in selected)
         return WindowSelection(window, ids, {fight_id: 1.0 for fight_id in ids})
 
     def fight_count_in_weight_class(self, weight_class: str, prediction_as_of: str | datetime) -> int:
         return sum(
-            1 for fight in self.all_prior_fights(prediction_as_of)
-            if fight.weight_class == weight_class
+            1
+            for item in self.all_prior_fights(prediction_as_of)
+            if item.weight_class == weight_class
         )
