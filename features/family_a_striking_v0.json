@@ -1,0 +1,55 @@
+{
+  "family": "A",
+  "name": "striking_environment",
+  "version": "0.1.0-draft",
+  "status": "active_design",
+  "input": "features/v0/fighter_state_primitives.csv",
+  "output": "features/v0/striking_environment.csv",
+  "grain": "one pre-fight fighter state row for each participant in each canonical UFC target fight",
+  "windows": ["career", "recent3", "recent5", "ewm365"],
+  "rules": {
+    "no_future_leakage": true,
+    "missing_is_not_zero": true,
+    "market_data_used": false,
+    "rate_denominator": "domain-specific observed exposure seconds from fighter-state primitives",
+    "share_coverage_rule": "Cross-domain shares/ratios are emitted only when the relevant observed exposure seconds are equal; otherwise null.",
+    "zero_denominator_rule": "Rates, accuracies, defenses and ratios are null when their denominator is zero or missing.",
+    "defense_formula": "1 - opponent_landed / opponent_attempted on the same observed domain coverage"
+  },
+  "window_features": {
+    "sample_and_exposure": [
+      "stat_fight_count", "sig_exposure_min", "head_exposure_min", "body_exposure_min", "leg_exposure_min",
+      "distance_exposure_min", "clinch_exposure_min", "ground_exposure_min", "knockdown_exposure_min"
+    ],
+    "opportunity_and_pace": [
+      "sig_attempts_per_min", "sig_landed_per_min", "sig_absorbed_per_min", "opp_sig_attempts_faced_per_min",
+      "distance_attempts_per_min", "clinch_attempts_per_min", "ground_attempts_per_min",
+      "exchange_pace_per_min", "sig_differential_per_min"
+    ],
+    "creation": [
+      "knockdowns_per_15", "knockdowns_per_sig_landed", "knockdowns_per_head_landed",
+      "head_landed_per_min", "head_attempts_per_min", "head_accuracy",
+      "body_landed_per_min", "body_attempts_per_min", "body_attempt_share",
+      "leg_landed_per_min", "leg_attempts_per_min", "leg_attempt_share",
+      "distance_landed_per_min", "distance_attempt_share", "clinch_landed_per_min", "clinch_attempt_share",
+      "ground_landed_per_min", "ground_attempt_share", "head_attempt_share", "sig_accuracy"
+    ],
+    "prevention": [
+      "head_absorbed_per_min", "opp_head_accuracy", "sig_defense", "head_defense",
+      "knockdowns_suffered_per_15", "knockdowns_suffered_per_head_absorbed",
+      "distance_strike_defense", "clinch_strike_defense_proxy", "ground_strike_defense_proxy"
+    ]
+  },
+  "career_outcome_features": [
+    "observed_prior_ko_loss_count",
+    "ko_tko_loss_per_observed_fight",
+    "ko_tko_share_of_observed_losses",
+    "ko_tko_win_per_observed_fight"
+  ],
+  "deferred_from_family_a_v0": {
+    "early_knockdown_rate": "requires round-specific historical state; implement with cardio/persistence round layer",
+    "late_knockdown_rate": "requires round-specific historical state; implement with cardio/persistence round layer",
+    "defensive_pace_suppression": "requires opponent expectation and belongs in Feature Family H opponent adjustment",
+    "damage_creation_proxy": "no arbitrary composite weights are authorized before a separately documented proxy definition and baseline audit"
+  }
+}
