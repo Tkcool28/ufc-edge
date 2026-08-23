@@ -45,8 +45,11 @@ jobs:
   process-request:
     if: >-
       github.event_name == 'issues' &&
-      (startsWith(github.event.issue.title, '[H00 REQUEST]') ||
-       contains(github.event.issue.labels.*.name, 'h00-request'))
+      github.event.issue.state == 'open' &&
+      ((github.event.action == 'opened' &&
+        startsWith(github.event.issue.title, '[H00 REQUEST]')) ||
+       (github.event.action == 'labeled' &&
+        github.event.label.name == 'h00-request'))
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
