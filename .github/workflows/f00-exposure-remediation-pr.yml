@@ -1,0 +1,61 @@
+name: F00 Exposure Remediation PR
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: write
+
+jobs:
+  remediate:
+    if: github.actor != 'github-actions[bot]' && github.head_ref == 'feat/feature-contract-f00'
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/feature-contract-f00
+          fetch-depth: 0
+
+      - name: Execute staged remediation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import textwrap
+
+          workflow = Path('.github/workflows/f00-exposure-remediation.yml').read_text(encoding='utf-8')
+          marker = "          python - <<'PY'\n"
+          start = workflow.index(marker) + len(marker)
+          end = workflow.index("\n          PY", start)
+          source = textwrap.dedent(workflow[start:end])
+          exec(compile(source, 'f00-exposure-remediation', 'exec'), {'__name__': '__main__'})
+          PY
+
+      - name: Validate remediated contract before commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m ufc_edge.features.contract
+          python -m unittest discover -s tests/features -p 'test_*.py' -v
+          git diff --check
+
+      - name: Commit remediation
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No remediation changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add features/FEATURE_CONTRACT.md features/README.md features/feature_catalog.yaml features/feature_schema.json src/ufc_edge/features/contract.py tests/features/test_feature_contract.py
+          git commit -m 'fix: gate unsafe elapsed-time feature exposure'
+          git push origin HEAD:feat/feature-contract-f00
