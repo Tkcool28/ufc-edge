@@ -1,6 +1,6 @@
 name: Build canonical external MMA history v0
 
-# Registered on main; trigger version 2.
+# Registered on main; trigger version 3.
 on:
   push:
     branches: [main]
@@ -61,6 +61,27 @@ jobs:
               raise SystemExit("expected old/new header validation block not found; refusing broad edit")
           PY
 
+          # The weigh-in contract migration moved the contract from 0.3.0-draft to 0.4.0-draft
+          # without changing existing materialized core table schemas. Synchronize only that exact
+          # stale manifest transition, then require the full canonical validator to accept it.
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          contract_path = Path("schemas/canonical_data_contract_v0.json")
+          manifest_path = Path("data/canonical/v0/manifest.json")
+          contract = json.loads(contract_path.read_text(encoding="utf-8"))
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          current = manifest.get("canonical_contract_version")
+          target = contract.get("contract_version")
+          if current == target:
+              pass
+          elif current == "0.3.0-draft" and target == "0.4.0-draft":
+              manifest["canonical_contract_version"] = target
+              manifest_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+          else:
+              raise SystemExit(f"unexpected manifest/contract version transition: {current!r} -> {target!r}")
+          PY
+
           log="provenance/runs/canonical_external_mma_v0_${GITHUB_RUN_ID}.log"
           set +e
           {
@@ -72,6 +93,7 @@ jobs:
           } >"$log" 2>&1
           code=$?
           set -e
+
           python - "$code" "$log" <<'PY'
           import json, os, sys
           from datetime import datetime, timezone
@@ -89,6 +111,24 @@ jobs:
           with open("provenance/runs/canonical_external_mma_v0_latest.json", "w", encoding="utf-8") as fh:
               json.dump(payload, fh, indent=2, sort_keys=True); fh.write("\n")
           PY
+
+          if [ "$code" -ne 0 ]; then
+            # Do not allow a failed materialization/validation attempt to leak canonical changes.
+            for p in \
+              pipelines/build_canonical_external_mma_v0.py \
+              data/canonical/v0/events.csv data/canonical/v0/fights.csv \
+              data/canonical/v0/source_identity_links.csv data/canonical/v0/field_provenance.csv \
+              data/canonical/v0/manifest.json data/derived/qa/canonical_external_mma_exclusions_v0.csv \
+              provenance/audits/canonical_external_mma_v0_latest.json \
+              provenance/audits/canonical_external_mma_v0_latest.md; do
+              if git ls-files --error-unmatch "$p" >/dev/null 2>&1; then
+                git restore --worktree -- "$p"
+              else
+                rm -f "$p"
+              fi
+            done
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$log" provenance/runs/canonical_external_mma_v0_latest.json
