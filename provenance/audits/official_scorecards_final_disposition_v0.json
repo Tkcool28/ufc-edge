@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "accepted_gap_raw_and_qa_only",
+  "family": "official_scorecards",
+  "canonical_table": "judge_round_scores",
+  "canonical_rows_written": 0,
+  "source_acquisition": {
+    "official_scorecard_pages": 582,
+    "http_200_pages": 582,
+    "selected_high_confidence_images": 578,
+    "mapped_canonical_fights": 575,
+    "immutable_image_archive_bytes": 39932633,
+    "all_selected_objects_sha256_hashed": true,
+    "jpeg_images": 492,
+    "png_images": 86
+  },
+  "identity_and_structure_audits": {
+    "full_ocr_images": 578,
+    "full_ocr_two_fighter_name_hits": 541,
+    "all_fights_round_eligibility_resolved": 575,
+    "source_verified_technical_decisions": 2,
+    "fighter_orientation_sample_supporting_cards": 41,
+    "fighter_orientation_sample_cards": 48,
+    "reconciled_judge_blocks": 86,
+    "scorecard_judge_blocks_audited": 114,
+    "sample_cards_with_three_distinct_reconciled_judges": 18,
+    "printed_grid_rich_sample_cards": 48,
+    "printed_grid_sample_cards": 48,
+    "common_three_round_row_topology_verified": true
+  },
+  "final_strict_extraction_gate": {
+    "method": "printed physical grid boundaries + independently proven three-round row topology + multi-variant digits-only OCR consensus",
+    "eligible_three_round_sample_cards": 15,
+    "expected_score_cells": 270,
+    "accepted_score_cells": 82,
+    "accepted_cell_fraction": 0.303704,
+    "cards_all_18_cells_recovered": 0,
+    "cards_all_9_judge_round_pairs_strict": 0,
+    "cards_all_cells_pairs_and_fighter_orientation_strict": 0,
+    "safe_sample_subset_exists": false
+  },
+  "decision": {
+    "official_images_remain_authoritative_raw_evidence": true,
+    "ocr_outputs_remain_derived_qa_only": true,
+    "espn_judge_data_used_only_for_identity_spelling_aid": true,
+    "ufc_datalab_ocr_remains_qa_only": true,
+    "judge_round_scores_intentionally_omitted_from_canonical_v0": true,
+    "source_precedence_remains_acquired_qa_pending": true,
+    "no_missing_score_cell_imputation": true,
+    "no_ocr_token_order_semantics": true,
+    "no_partial_card_canonicalization_without_complete_pair_structure": true,
+    "reason": "Multiple increasingly structure-aware extraction routes failed the end-to-end strict score-cell/pair gate. The final physical-grid route recovered only 82 of 270 expected cells and zero complete safe three-round cards. Forcing canonical rows would violate fail-closed data rules.",
+    "phase_closeout_treatment": "Accepted data gap permitted by DATA_PHASE_HANDOFF.md: retain immutable raw images, derived OCR/geometry/identity diagnostics, and exclusions; do not force judge_round_scores."
+  },
+  "evidence": [
+    "provenance/audits/ufc_scorecard_archive_plan_v0_latest.json",
+    "provenance/audits/ufc_scorecard_selected_archive_latest.json",
+    "provenance/audits/ufc_scorecard_ocr_v0_latest.json",
+    "provenance/audits/ufc_scorecard_round_eligibility_v0_latest.json",
+    "provenance/audits/ufc_scorecard_fighter_column_orientation_v0_latest.json",
+    "provenance/audits/ufc_scorecard_judge_identity_reconciliation_v0_latest.json",
+    "provenance/audits/ufc_scorecard_grid_lines_v0_latest.json",
+    "provenance/audits/ufc_scorecard_grid_row_topology_v0_latest.json",
+    "provenance/audits/ufc_scorecard_physical_cell_ocr_3r_v0_latest.json"
+  ]
+}
