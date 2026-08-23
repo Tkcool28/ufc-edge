@@ -1,0 +1,34 @@
+{
+  "decision": {
+    "canonical_identity_links_written": false,
+    "display_name_matching_used": false,
+    "fight_participating_unlinked_nodes_require_explicit_gap_documentation": true,
+    "official_uuid_relationships_are_evidence_only": true,
+    "profile_only_unlinked_nodes_can_remain_accepted_gap": true,
+    "required_next": "Document fight-participating unlinked nodes as an accepted identity coverage gap unless a stable pre-existing source crosswalk resolves them. Do not create links by name similarity."
+  },
+  "disposition_counts": {
+    "profile_only_legacy_identity": 272,
+    "profile_only_unlinked_no_stable_fight_bridge": 44,
+    "profile_only_unlinked_with_fightmetric_id": 954,
+    "unlinked_with_official_fight_history": 423
+  },
+  "generated_at_utc": "2026-08-23T01:50:57.825152Z",
+  "meaningful_fight_identity_gap_nodes": 423,
+  "official_athlete_nodes": 4161,
+  "official_fight_resources": 12069,
+  "output": "data/derived/qa/unlinked_ufc_athlete_identity_v0.csv",
+  "schema_version": 2,
+  "trusted_official_athlete_links": 2468,
+  "unlinked_official_athlete_nodes": 1693,
+  "unlinked_status_text_counts": {
+    "<missing>": 20,
+    "Active": 379,
+    "Not Fighting": 1083,
+    "Released": 200,
+    "Retired": 11
+  },
+  "unlinked_with_any_official_fight_participation": 423,
+  "unlinked_with_fightmetric_id": 1359,
+  "unlinked_with_legacy_old_id_or_url": 741
+}

@@ -1,10 +1,10 @@
 {
   "audit": "unlinked_ufc_athlete_identity_v0",
-  "completed_at_utc": "2026-08-23T01:39:16.876573Z",
-  "exit_code": 1,
-  "github_run_id": "32610871343",
-  "log": "provenance/runs/unlinked_ufc_athlete_identity_v0_32610871343.log",
+  "completed_at_utc": "2026-08-23T01:50:57.865954Z",
+  "exit_code": 0,
+  "github_run_id": "32611344127",
+  "log": "provenance/runs/unlinked_ufc_athlete_identity_v0_32611344127.log",
   "schema_version": 1,
-  "status": "failed",
-  "trigger_sha": "f5961a493b017bb484056cdd7c84becf447d6f93"
+  "status": "success",
+  "trigger_sha": "f1307eec11166ed2271d4f776413b0a3cdda365d"
 }
