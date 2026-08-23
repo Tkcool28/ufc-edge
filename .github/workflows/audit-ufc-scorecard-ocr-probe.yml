@@ -1,5 +1,6 @@
 name: Audit UFC scorecard OCR probe
 
+# Registered on main; trigger version 1.
 on:
   push:
     branches: [main]
