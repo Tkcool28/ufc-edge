@@ -1,0 +1,690 @@
+{
+  "absent_ufc_pair_rows": 25,
+  "decision": {
+    "canonical_rows_written": false,
+    "required_next": "If trusted fighters have zero canonical participation while a same-name canonical identity carries fights, repair identity before promotion. Otherwise treat remaining absent pairs as candidate canonical fight omissions requiring source-level verification."
+  },
+  "generated_at_utc": "2026-08-23T00:09:18.938817Z",
+  "involved_canonical_fighters": 34,
+  "involved_with_same_name_canonical_duplicates": 5,
+  "involved_with_zero_canonical_fight_participation": 7,
+  "rows": [
+    {
+      "absent_pair_row_count": 8,
+      "canonical_dob": "1991-01-15",
+      "canonical_fight_participation_count": 0,
+      "canonical_fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb",
+      "canonical_name": "Michael McDonald",
+      "same_normalized_canonical_name_count": 2,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Michael McDonald",
+          "dob": "1991-01-15",
+          "fighter_id": "2cf2374a-411e-5a31-87ae-9facc2eefefb"
+        },
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Michael McDonald",
+          "dob": "1965-02-06",
+          "fighter_id": "79298f00-87dd-5728-b6a1-03aa3cf2877a"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Michael McDonald"
+      ]
+    },
+    {
+      "absent_pair_row_count": 4,
+      "canonical_dob": "1990-03-16",
+      "canonical_fight_participation_count": 0,
+      "canonical_fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9",
+      "canonical_name": "Bruno Silva",
+      "same_normalized_canonical_name_count": 2,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Bruno Silva",
+          "dob": "1990-03-16",
+          "fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9"
+        },
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Bruno Silva",
+          "dob": "1989-07-13",
+          "fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Bruno Silva"
+      ]
+    },
+    {
+      "absent_pair_row_count": 3,
+      "canonical_dob": "1995-01-05",
+      "canonical_fight_participation_count": 2,
+      "canonical_fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56",
+      "canonical_name": "Kai Kamaka III",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 2,
+          "canonical_name": "Kai Kamaka III",
+          "dob": "1995-01-05",
+          "fighter_id": "eff43f12-b0c4-5190-9475-b03c9296ee56"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Kai Kamaka III"
+      ]
+    },
+    {
+      "absent_pair_row_count": 3,
+      "canonical_dob": "1992-10-07",
+      "canonical_fight_participation_count": 0,
+      "canonical_fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d",
+      "canonical_name": "Mike Davis",
+      "same_normalized_canonical_name_count": 2,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Mike Davis",
+          "dob": "",
+          "fighter_id": "328c8531-780c-5e40-9e43-deb8cb3ede44"
+        },
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Mike Davis",
+          "dob": "1992-10-07",
+          "fighter_id": "79b922f8-ea3d-59dd-b3b7-c1f1edac603d"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Mike Davis"
+      ]
+    },
+    {
+      "absent_pair_row_count": 3,
+      "canonical_dob": "1988-08-22",
+      "canonical_fight_participation_count": 0,
+      "canonical_fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7",
+      "canonical_name": "Magomed Bibulatov",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Magomed Bibulatov",
+          "dob": "1988-08-22",
+          "fighter_id": "f5cbf9f1-f582-56d1-8ca8-5aa25e4260f7"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Magomed Bibulatov"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1987-03-14",
+      "canonical_fight_participation_count": 3,
+      "canonical_fighter_id": "93358056-d702-5095-953b-2caffab194a1",
+      "canonical_name": "Danny Chavez",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 3,
+          "canonical_name": "Danny Chavez",
+          "dob": "1987-03-14",
+          "fighter_id": "93358056-d702-5095-953b-2caffab194a1"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Danny Chavez"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1989-07-13",
+      "canonical_fight_participation_count": 0,
+      "canonical_fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5",
+      "canonical_name": "Bruno Silva",
+      "same_normalized_canonical_name_count": 2,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Bruno Silva",
+          "dob": "1990-03-16",
+          "fighter_id": "2b3eefd6-6608-5d9a-b3cc-988ef705d7e9"
+        },
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Bruno Silva",
+          "dob": "1989-07-13",
+          "fighter_id": "e5a492dd-8632-5033-a8fa-9b77f944b2b5"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Bruno Silva"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1996-07-22",
+      "canonical_fight_participation_count": 8,
+      "canonical_fighter_id": "95991651-cc5e-52fa-bf11-aadc73430fe3",
+      "canonical_name": "Wellington Turman",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 8,
+          "canonical_name": "Wellington Turman",
+          "dob": "1996-07-22",
+          "fighter_id": "95991651-cc5e-52fa-bf11-aadc73430fe3"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Wellington Turman"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1992-09-05",
+      "canonical_fight_participation_count": 1,
+      "canonical_fighter_id": "2a52163a-7b6e-55b6-bc9b-6c2ea1b1fc04",
+      "canonical_name": "Victor Rodriguez",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 1,
+          "canonical_name": "Victor Rodriguez",
+          "dob": "1992-09-05",
+          "fighter_id": "2a52163a-7b6e-55b6-bc9b-6c2ea1b1fc04"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Victor Rodriguez"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1996-04-30",
+      "canonical_fight_participation_count": 3,
+      "canonical_fighter_id": "74ba2544-69cd-5159-b186-6dd1791dc391",
+      "canonical_name": "JP Buys",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 3,
+          "canonical_name": "JP Buys",
+          "dob": "1996-04-30",
+          "fighter_id": "74ba2544-69cd-5159-b186-6dd1791dc391"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "J.P. Buys"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1995-04-26",
+      "canonical_fight_participation_count": 6,
+      "canonical_fighter_id": "322a2f1e-9877-5e52-b90a-755c81398fcf",
+      "canonical_name": "Mason Jones",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 6,
+          "canonical_name": "Mason Jones",
+          "dob": "1995-04-26",
+          "fighter_id": "322a2f1e-9877-5e52-b90a-755c81398fcf"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Mason Jones"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1992-05-01",
+      "canonical_fight_participation_count": 8,
+      "canonical_fighter_id": "e689dc0d-3641-5d7d-a26e-95c4917e47ac",
+      "canonical_name": "Jonathan Pearce",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 8,
+          "canonical_name": "Jonathan Pearce",
+          "dob": "1992-05-01",
+          "fighter_id": "e689dc0d-3641-5d7d-a26e-95c4917e47ac"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Jonathan Pearce"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1987-01-21",
+      "canonical_fight_participation_count": 3,
+      "canonical_fighter_id": "1a1f5e9c-7263-55a4-b13f-97cc87b5253b",
+      "canonical_name": "Tony Kelley",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 3,
+          "canonical_name": "Tony Kelley",
+          "dob": "1987-01-21",
+          "fighter_id": "1a1f5e9c-7263-55a4-b13f-97cc87b5253b"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Tony Kelley"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1992-06-05",
+      "canonical_fight_participation_count": 5,
+      "canonical_fighter_id": "6efa1952-739c-5032-9bb1-3423df6bc57c",
+      "canonical_name": "David Dvorak",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 5,
+          "canonical_name": "David Dvorak",
+          "dob": "1992-06-05",
+          "fighter_id": "6efa1952-739c-5032-9bb1-3423df6bc57c"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "David Dvorak"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1992-07-26",
+      "canonical_fight_participation_count": 1,
+      "canonical_fighter_id": "15c52013-5292-52d0-b569-e8fafb0f5099",
+      "canonical_name": "Thomas Gifford",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 1,
+          "canonical_name": "Thomas Gifford",
+          "dob": "1992-07-26",
+          "fighter_id": "15c52013-5292-52d0-b569-e8fafb0f5099"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Thomas Gifford"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1992-02-15",
+      "canonical_fight_participation_count": 5,
+      "canonical_fighter_id": "1f4170fd-aba4-57bd-9503-c3496bafab8d",
+      "canonical_name": "Khalid Taha",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 5,
+          "canonical_name": "Khalid Taha",
+          "dob": "1992-02-15",
+          "fighter_id": "1f4170fd-aba4-57bd-9503-c3496bafab8d"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Khalid Taha"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1986-07-20",
+      "canonical_fight_participation_count": 24,
+      "canonical_fighter_id": "57beebb1-7f13-567e-a87b-e5533f7d31d7",
+      "canonical_name": "Gilbert Burns",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 24,
+          "canonical_name": "Gilbert Burns",
+          "dob": "1986-07-20",
+          "fighter_id": "57beebb1-7f13-567e-a87b-e5533f7d31d7"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Gilbert Burns"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1992-04-25",
+      "canonical_fight_participation_count": 5,
+      "canonical_fighter_id": "0f502110-3d7c-5ed1-8f92-41ac4dabe6f9",
+      "canonical_name": "Rogerio Bontorin",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 5,
+          "canonical_name": "Rogerio Bontorin",
+          "dob": "1992-04-25",
+          "fighter_id": "0f502110-3d7c-5ed1-8f92-41ac4dabe6f9"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Rogerio Bontorin"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1984-03-20",
+      "canonical_fight_participation_count": 13,
+      "canonical_fighter_id": "3a014558-33f6-524a-9be3-902406e7fc64",
+      "canonical_name": "John Moraga",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 13,
+          "canonical_name": "John Moraga",
+          "dob": "1984-03-20",
+          "fighter_id": "3a014558-33f6-524a-9be3-902406e7fc64"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "John Moraga"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1988-08-01",
+      "canonical_fight_participation_count": 3,
+      "canonical_fighter_id": "f61d8d74-703c-5920-b99a-337de39b7b1d",
+      "canonical_name": "Jenel Lausa",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 3,
+          "canonical_name": "Jenel Lausa",
+          "dob": "1988-08-01",
+          "fighter_id": "f61d8d74-703c-5920-b99a-337de39b7b1d"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Jenel Lausa"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1990-06-12",
+      "canonical_fight_participation_count": 15,
+      "canonical_fighter_id": "ae07bbf2-d084-5b6e-801f-193ef88d32f3",
+      "canonical_name": "John Lineker",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 15,
+          "canonical_name": "John Lineker",
+          "dob": "1990-06-12",
+          "fighter_id": "ae07bbf2-d084-5b6e-801f-193ef88d32f3"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "John Lineker"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1987-06-25",
+      "canonical_fight_participation_count": 20,
+      "canonical_fighter_id": "cca32f37-427d-501a-82c7-1c88c42840b5",
+      "canonical_name": "Rob Font",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 20,
+          "canonical_name": "Rob Font",
+          "dob": "1987-06-25",
+          "fighter_id": "cca32f37-427d-501a-82c7-1c88c42840b5"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Rob Font"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1986-07-21",
+      "canonical_fight_participation_count": 0,
+      "canonical_fighter_id": "7570bbff-4fcc-5ade-b9b5-602689cfb9af",
+      "canonical_name": "Joey Gomez",
+      "same_normalized_canonical_name_count": 2,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Joey Gomez",
+          "dob": "1986-07-21",
+          "fighter_id": "7570bbff-4fcc-5ade-b9b5-602689cfb9af"
+        },
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Joey Gomez",
+          "dob": "1989-08-29",
+          "fighter_id": "ba08dc37-9799-5888-a093-e57976527666"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Joey Gomez"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1979-05-14",
+      "canonical_fight_participation_count": 17,
+      "canonical_fighter_id": "d87ad101-ea62-5663-9447-3eac1736298e",
+      "canonical_name": "Urijah Faber",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 17,
+          "canonical_name": "Urijah Faber",
+          "dob": "1979-05-14",
+          "fighter_id": "d87ad101-ea62-5663-9447-3eac1736298e"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Urijah Faber"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1978-09-24",
+      "canonical_fight_participation_count": 13,
+      "canonical_fighter_id": "b735741d-54b6-507a-87de-427091b1bd57",
+      "canonical_name": "Brad Pickett",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 13,
+          "canonical_name": "Brad Pickett",
+          "dob": "1978-09-24",
+          "fighter_id": "b735741d-54b6-507a-87de-427091b1bd57"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Brad Pickett"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1987-01-31",
+      "canonical_fight_participation_count": 16,
+      "canonical_fighter_id": "263b6ea1-e4d4-5a99-9c46-2fa761bfa6de",
+      "canonical_name": "Renan Barao",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 16,
+          "canonical_name": "Renan Barao",
+          "dob": "1987-01-31",
+          "fighter_id": "263b6ea1-e4d4-5a99-9c46-2fa761bfa6de"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Renan Barao"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1981-01-18",
+      "canonical_fight_participation_count": 3,
+      "canonical_fighter_id": "c7f2a178-e266-5e29-ac92-a330189026b3",
+      "canonical_name": "Miguel Torres",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 3,
+          "canonical_name": "Miguel Torres",
+          "dob": "1981-01-18",
+          "fighter_id": "c7f2a178-e266-5e29-ac92-a330189026b3"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Miguel Torres"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1984-02-15",
+      "canonical_fight_participation_count": 1,
+      "canonical_fighter_id": "0721b9b7-2b29-51e6-b3e5-87bbd0d8aec3",
+      "canonical_name": "Alex Soto",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 1,
+          "canonical_name": "Alex Soto",
+          "dob": "1984-02-15",
+          "fighter_id": "0721b9b7-2b29-51e6-b3e5-87bbd0d8aec3"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Alex Soto"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1981-05-27",
+      "canonical_fight_participation_count": 12,
+      "canonical_fighter_id": "453589ad-bce1-5f85-ad15-bed39b8494e6",
+      "canonical_name": "Chris Cariaso",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 12,
+          "canonical_name": "Chris Cariaso",
+          "dob": "1981-05-27",
+          "fighter_id": "453589ad-bce1-5f85-ad15-bed39b8494e6"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Chris Cariaso"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1984-07-31",
+      "canonical_fight_participation_count": 5,
+      "canonical_fighter_id": "210bb4ae-81ec-5eeb-a50a-b2e4bd731db1",
+      "canonical_name": "Edwin Figueroa",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 5,
+          "canonical_name": "Edwin Figueroa",
+          "dob": "1984-07-31",
+          "fighter_id": "210bb4ae-81ec-5eeb-a50a-b2e4bd731db1"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Edwin Figueroa"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1964-02-11",
+      "canonical_fight_participation_count": 13,
+      "canonical_fighter_id": "720ef9b8-3238-56c1-a9ea-a4e23dc0ade8",
+      "canonical_name": "Ken Shamrock",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 13,
+          "canonical_name": "Ken Shamrock",
+          "dob": "1964-02-11",
+          "fighter_id": "720ef9b8-3238-56c1-a9ea-a4e23dc0ade8"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Ken Shamrock"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1963-08-28",
+      "canonical_fight_participation_count": 5,
+      "canonical_fighter_id": "e62dcccb-37ae-5909-bd3b-e0fe321ca1d1",
+      "canonical_name": "Patrick Smith",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 5,
+          "canonical_name": "Patrick Smith",
+          "dob": "1963-08-28",
+          "fighter_id": "e62dcccb-37ae-5909-bd3b-e0fe321ca1d1"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Patrick Smith"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1966-12-12",
+      "canonical_fight_participation_count": 10,
+      "canonical_fighter_id": "ac7c3d93-72ae-56a0-bc6f-fad2feddd13b",
+      "canonical_name": "Royce Gracie",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 10,
+          "canonical_name": "Royce Gracie",
+          "dob": "1966-12-12",
+          "fighter_id": "ac7c3d93-72ae-56a0-bc6f-fad2feddd13b"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Royce Gracie"
+      ]
+    },
+    {
+      "absent_pair_row_count": 1,
+      "canonical_dob": "1963-08-04",
+      "canonical_fight_participation_count": 0,
+      "canonical_fighter_id": "b5400412-e94d-5683-b23e-747a4b184521",
+      "canonical_name": "Art Jimmerson",
+      "same_normalized_canonical_name_count": 1,
+      "same_normalized_canonical_name_rows": [
+        {
+          "canonical_fight_participation_count": 0,
+          "canonical_name": "Art Jimmerson",
+          "dob": "1963-08-04",
+          "fighter_id": "b5400412-e94d-5683-b23e-747a4b184521"
+        }
+      ],
+      "source_names_in_absent_rows": [
+        "Art Jimmerson"
+      ]
+    }
+  ],
+  "schema_version": 1
+}
