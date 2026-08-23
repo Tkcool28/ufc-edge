@@ -1,0 +1,59 @@
+name: Build fighter state primitives v0
+on:
+  push:
+    branches: [main]
+    paths:
+      - "features/feature_contract_v0.json"
+      - "features/build_fighter_state_primitives_v0.py"
+      - "features/validate_fighter_state_primitives_v0.py"
+      - ".github/workflows/build-fighter-state-primitives-v0.yml"
+  workflow_dispatch:
+permissions: {contents: write}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: "${{ github.ref_name }}", fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Build twice, validate, and commit deterministic outputs
+        shell: bash
+        run: |
+          set -uo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          mkdir -p provenance/runs provenance/audits features/v0
+          log="provenance/runs/fighter_state_primitives_v0_${GITHUB_RUN_ID}.log"
+          set +e
+          {
+            python -m py_compile features/build_fighter_state_primitives_v0.py features/validate_fighter_state_primitives_v0.py
+            echo '=== BUILD 1 ==='
+            python features/build_fighter_state_primitives_v0.py
+            python features/validate_fighter_state_primitives_v0.py
+            sha256sum features/v0/fighter_state_primitives.csv features/v0/fighter_state_history_lineage.csv > /tmp/feature_hashes_1
+            echo '=== BUILD 2 DETERMINISM CHECK ==='
+            python features/build_fighter_state_primitives_v0.py
+            python features/validate_fighter_state_primitives_v0.py
+            sha256sum features/v0/fighter_state_primitives.csv features/v0/fighter_state_history_lineage.csv > /tmp/feature_hashes_2
+            diff -u /tmp/feature_hashes_1 /tmp/feature_hashes_2
+            cat /tmp/feature_hashes_2
+          } >"$log" 2>&1
+          code=$?
+          set -e
+          python - "$code" "$log" <<'PY'
+          import json,os,sys
+          from datetime import datetime,timezone
+          code,log=int(sys.argv[1]),sys.argv[2]
+          p={"schema_version":1,"build":"fighter_state_primitives_v0","status":"success" if code==0 else "failed","exit_code":code,"github_run_id":os.environ.get("GITHUB_RUN_ID"),"trigger_sha":os.environ.get("GITHUB_SHA"),"completed_at_utc":datetime.now(timezone.utc).isoformat().replace("+00:00","Z"),"log":log,"determinism_check":"pass" if code==0 else "not_passed"}
+          open("provenance/runs/fighter_state_primitives_v0_latest.json","w").write(json.dumps(p,indent=2,sort_keys=True)+"\n")
+          PY
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$log" provenance/runs/fighter_state_primitives_v0_latest.json
+          if [ "$code" -eq 0 ]; then
+            git add features/v0/fighter_state_primitives.csv features/v0/fighter_state_history_lineage.csv features/v0/manifest.json provenance/audits/fighter_state_primitives_v0_latest.json provenance/audits/fighter_state_primitives_v0_latest.md
+          fi
+          git commit -m "Build fighter state primitives v0 (${code}) [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
+          exit "$code"
