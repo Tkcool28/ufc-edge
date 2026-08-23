@@ -9,7 +9,6 @@ runs digits-only OCR. Results are QA evidence for whether a strict parser is via
 from __future__ import annotations
 
 import csv
-import io
 import json
 import re
 import statistics
@@ -25,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SPATIAL = ROOT / "data/derived/qa/ufc_scorecard_spatial_structure_v0.csv"
 GEOMETRY_AUDIT = ROOT / "provenance/audits/ufc_scorecard_template_geometry_v0_latest.json"
 ROUND_ELIG = ROOT / "data/derived/qa/ufc_scorecard_round_eligibility_v0.csv"
-ARCHIVE_DIR = ROOT / "data/raw/ufc_official_scorecard_images/selected_v0"
+ARCHIVE_DIR = ROOT / "data/raw/ufc_official_scorecard_images/selected_v0/images"
 OUT = ROOT / "data/derived/qa/ufc_scorecard_targeted_cell_ocr_v0.csv"
 AUDIT = ROOT / "provenance/audits/ufc_scorecard_targeted_cell_ocr_v0_latest.json"
 
@@ -147,7 +146,7 @@ def main() -> int:
         if not image_path.exists():
             raise RuntimeError(f"archived image missing: {image_path}")
         image = Image.open(image_path)
-        parsed = 0; typical = 0; values = []
+        parsed = 0; typical = 0
         for rnd in rounds:
             y = centers_y[rnd - 1]
             for col, x in enumerate(centers_x):
@@ -156,8 +155,6 @@ def main() -> int:
                 valid = intval is not None and 0 <= intval <= 10
                 usual = intval is not None and 7 <= intval <= 10
                 parsed += int(valid); typical += int(usual)
-                if intval is not None:
-                    values.append(intval)
                 rows_out.append({
                     "archive_key": row["archive_key"],
                     "fight_id": row["candidate_fight_id"],
