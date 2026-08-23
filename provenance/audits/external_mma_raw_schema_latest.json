@@ -1,0 +1,205 @@
+{
+  "bounded_distinct_samples": {
+    "date": [
+      "Aug 7, 2021",
+      "Jul 31, 2021",
+      "Jul 24, 2021",
+      "Jul 17, 2021",
+      "Jul 10, 2021",
+      "Jun 26, 2021",
+      "Jun 19, 2021",
+      "Jun 12, 2021"
+    ],
+    "event_title": [
+      "UFC 265 - Lewis vs. Gane",
+      "UFC on ESPN 28 - Hall vs. Strickland",
+      "UFC on ESPN 27 - Sandhagen vs. Dillashaw",
+      "UFC on ESPN 26 - Makhachev vs. Moises",
+      "UFC 264 - Poirier vs. McGregor 3",
+      "UFC Fight Night 190 - Gane vs. Volkov",
+      "UFC on ESPN 25 - Korean Zombie vs. Ige",
+      "UFC 263 - Adesanya vs. Vettori 2"
+    ],
+    "fighter1_name": [
+      "Ciryl Gane",
+      "Jose Aldo",
+      "Vicente Luque",
+      "Tecia Torres",
+      "Yadong Song",
+      "Rafael Fiziev",
+      "Vince Morales",
+      "Alonzo Menifield"
+    ],
+    "fighter1_result": [
+      "win",
+      "draw",
+      "NC"
+    ],
+    "fighter1_url": [
+      "/fighter/Ciryl-Gane-293973",
+      "/fighter/Jose-Aldo-11506",
+      "/fighter/Vicente-Luque-66474",
+      "/fighter/Tecia-Torres-85096",
+      "/fighter/Yadong-Song-103807",
+      "/fighter/Rafael-Fiziev-202657",
+      "/fighter/Vince-Morales-177019",
+      "/fighter/Alonzo-Menifield-210501"
+    ],
+    "fighter2_name": [
+      "Derrick Lewis",
+      "Pedro Munhoz",
+      "Michael Chiesa",
+      "Angela Hill",
+      "Casey Kenney",
+      "Bobby Green",
+      "Drako Rodriguez",
+      "Ed Herman"
+    ],
+    "fighter2_result": [
+      "loss",
+      "draw",
+      "NC"
+    ],
+    "fighter2_url": [
+      "/fighter/Derrick-Lewis-59284",
+      "/fighter/Pedro-Munhoz-52407",
+      "/fighter/Michael-Chiesa-46224",
+      "/fighter/Angela-Hill-148517",
+      "/fighter/Casey-Kenney-211031",
+      "/fighter/Bobby-Green-27953",
+      "/fighter/Drako-Rodriguez-203421",
+      "/fighter/Ed-Herman-6561"
+    ],
+    "location": [
+      "Toyota Center, Houston, Texas, United States",
+      "UFC Apex, Las Vegas, Nevada, United States",
+      "T-Mobile Arena, Las Vegas, Nevada, United States",
+      "Gila River Arena, Glendale, Arizona, United States",
+      "VyStar Veterans Memorial Arena, Jacksonville, Florida, United States",
+      "Etihad Arena, Yas Island, Abu Dhabi, United Arab Emirates",
+      "Flash Forum, Yas Island, Abu Dhabi, United Arab Emirates",
+      "Gin\u00e1sio Nilson Nelson, Brasilia, Federal District, Brazil"
+    ],
+    "match_nr": [
+      "13",
+      "12",
+      "11",
+      "10",
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "organisation": [
+      "Ultimate Fighting Championship (UFC)",
+      "Bellator MMA",
+      "One Championship"
+    ],
+    "referee": [
+      "Dan Miragliotta",
+      "Mike Beltran",
+      "Kerry Hatley",
+      "Jacob Montalvo",
+      "Jeff Rexroad",
+      "Herb Dean",
+      "Mark Smith",
+      "Keith Peterson"
+    ],
+    "round": [
+      "3",
+      "1",
+      "2",
+      "5",
+      "4",
+      "0"
+    ],
+    "time": [
+      "4:11",
+      "05:00",
+      "03:25",
+      "04:32",
+      "04:44",
+      "01:16",
+      "02:35",
+      "5:00"
+    ],
+    "url": [
+      "/events/UFC-265-Lewis-vs-Gane-89140",
+      "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "/events/UFC-on-ESPN-27-Sandhagen-vs-Dillashaw-89119",
+      "/events/UFC-on-ESPN-26-Makhachev-vs-Moises-88983",
+      "/events/UFC-264-Poirier-vs-McGregor-3-88969",
+      "/events/UFC-Fight-Night-190-Gane-vs-Volkov-88824",
+      "/events/UFC-on-ESPN-25-Korean-Zombie-vs-Ige-88795",
+      "/events/UFC-263-Adesanya-vs-Vettori-2-88760"
+    ],
+    "win_details": [
+      "Punches",
+      "Unanimous",
+      "Brabo Choke",
+      "Split",
+      "Armbar",
+      "Flying Knee and Punches",
+      "Punch",
+      "Arm Injury"
+    ],
+    "win_method": [
+      "TKO",
+      "Decision",
+      "Submission",
+      "KO",
+      "Draw",
+      "No Contest",
+      "Technical Submission",
+      "Disqualification"
+    ]
+  },
+  "column_count": 17,
+  "columns": [
+    "url",
+    "event_title",
+    "organisation",
+    "date",
+    "location",
+    "match_nr",
+    "fighter1_url",
+    "fighter2_url",
+    "fighter1_name",
+    "fighter2_name",
+    "fighter1_result",
+    "fighter2_result",
+    "win_method",
+    "win_details",
+    "referee",
+    "round",
+    "time"
+  ],
+  "decision": {
+    "canonical_rows_written": false,
+    "required_next": "Use only these measured column names to build the external-MMA fight identity/overlap audit.",
+    "schema_inferred_from_filename": false
+  },
+  "generated_at_utc": "2026-08-23T00:00:27.414532Z",
+  "nonempty_counts": {
+    "date": 10448,
+    "event_title": 10448,
+    "fighter1_name": 10448,
+    "fighter1_result": 10448,
+    "fighter1_url": 10448,
+    "fighter2_name": 10448,
+    "fighter2_result": 10448,
+    "fighter2_url": 10448,
+    "location": 10448,
+    "match_nr": 10448,
+    "organisation": 10448,
+    "referee": 10448,
+    "round": 10448,
+    "time": 10448,
+    "url": 10448,
+    "win_details": 10448,
+    "win_method": 10448
+  },
+  "row_count": 10448,
+  "schema_version": 1,
+  "source": "data/raw/kaggle_pro_mma_fights/v1/pro_mma_fights.csv"
+}
