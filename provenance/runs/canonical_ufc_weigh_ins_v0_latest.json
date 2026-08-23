@@ -1,0 +1,10 @@
+{
+  "build": "canonical_ufc_weigh_ins_v0",
+  "completed_at_utc": "2026-08-23T00:51:07.247761Z",
+  "exit_code": 0,
+  "github_run_id": "32608894989",
+  "log": "provenance/runs/canonical_ufc_weigh_ins_v0_32608894989.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "8958169719f63087647ce21a092ee8b4514b7a8e"
+}

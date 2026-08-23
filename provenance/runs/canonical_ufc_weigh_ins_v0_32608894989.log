@@ -1,0 +1,15 @@
+{"canonical_candidate_fights": 6445, "canonical_candidate_rows": 12890, "excluded_rows": 2, "exclusion_reason_counts": {"explicit_non_ufc_article_context": 2}, "source_rows": 12892}
+CANONICAL_VALIDATOR_WEIGH_INS_MIGRATION_OK
+CONTRACT_OK version=0.4.0-draft tables=13 fields=152 missing_is_not_zero=true round_zero_actual=false sig_splits=true
+SOURCE_MAP_OK version=0.4.0-draft mappings=144 statuses={"provisional": 34, "rejected": 6, "unresolved": 27, "verified": 77} source_count=8
+SOURCE_PRECEDENCE_OK version=0.2.0-draft families=9 active=7 pending_acquisition=0 acquired_qa_pending=2 sources=8
+{"canonical_weigh_ins": 12890, "fighters_covered": 2249, "fights_covered": 6445, "marker_rows_raw_only": 172, "provenance_rows_added": 51560, "provenance_rows_total": 57531, "qa_exclusions": 2}
+TABLE_OK fighters rows=4600
+TABLE_OK events rows=1014
+TABLE_OK fights rows=9252
+TABLE_OK fighter_round_stats rows=41218
+TABLE_OK fighter_round_position rows=32156
+TABLE_OK source_identity_links rows=31426
+TABLE_OK field_provenance rows=57531
+TABLE_OK weigh_ins rows=12890
+CANONICAL_DATA_OK contract=0.4.0-draft fighters=4600 events=1014 fights=9252 rounds=41218 position_rows=32156 weigh_ins=12890 fight_coverage=104.436% round_coverage=98.911%

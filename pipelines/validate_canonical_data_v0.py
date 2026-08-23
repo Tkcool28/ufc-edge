@@ -22,6 +22,7 @@ TABLE_FILES = {
     "fighter_round_position": "fighter_round_position.csv",
     "source_identity_links": "source_identity_links.csv",
     "field_provenance": "field_provenance.csv",
+    "weigh_ins": "weigh_ins.csv",
 }
 
 
@@ -151,6 +152,14 @@ def main() -> int:
         if row["result"] in {"draw", "no_contest"} and row["winner_id"]:
             fail(f"fight {row['fight_id']} {row['result']} must not have winner")
 
+    for row in tables["weigh_ins"]:
+        validate_uuid(row["weigh_in_observation_id"], "weigh_ins")
+        fight = fight_by_id.get(row["fight_id"])
+        if not fight:
+            fail(f"weigh-in references missing fight {row['fight_id']}")
+        if row["fighter_id"] not in {fight["fighter_a_id"], fight["fighter_b_id"]}:
+            fail(f"weigh-in {row['weigh_in_observation_id']} references nonparticipant fighter")
+
     for row in tables["fighter_round_stats"]:
         fight = fight_by_id.get(row["fight_id"])
         if not fight:
@@ -197,7 +206,7 @@ def main() -> int:
     manifest = json.loads((DATA / "manifest.json").read_text(encoding="utf-8"))
     if manifest.get("canonical_contract_version") != contract.get("contract_version"):
         fail("manifest contract version does not match current contract")
-    for name in ("fighters", "fights", "fighter_round_stats", "fighter_round_position"):
+    for name in ("fighters", "fights", "fighter_round_stats", "fighter_round_position", "field_provenance", "weigh_ins"):
         if manifest.get("counts", {}).get(name) != len(tables[name]):
             fail(f"manifest {name} count mismatch")
 
@@ -219,7 +228,7 @@ def main() -> int:
         "CANONICAL_DATA_OK "
         f"contract={contract.get('contract_version')} fighters={len(fighter_ids)} events={len(event_ids)} "
         f"fights={len(fight_ids)} rounds={len(tables['fighter_round_stats'])} "
-        f"position_rows={len(tables['fighter_round_position'])} "
+        f"position_rows={len(tables['fighter_round_position'])} weigh_ins={len(tables['weigh_ins'])} "
         f"fight_coverage={fight_fraction:.3%} round_coverage={round_fraction:.3%}"
     )
     return 0

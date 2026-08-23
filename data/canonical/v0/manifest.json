@@ -2,10 +2,11 @@
   "build": "canonical_core_v0",
   "canonical_contract_version": "0.4.0-draft",
   "counts": {
+    "canonical_ufc_weigh_in_exclusions": 2,
     "events": 1014,
     "exclusions": 570,
     "external_mma_exclusions": 9965,
-    "field_provenance": 5971,
+    "field_provenance": 57531,
     "fighter_profile_snapshot_exclusions": 5,
     "fighter_profile_snapshots": 2466,
     "fighter_round_position": 32156,
@@ -15,7 +16,8 @@
     "fights": 9252,
     "rankings": 99077,
     "rankings_exclusions": 1400,
-    "source_identity_links": 31426
+    "source_identity_links": 31426,
+    "weigh_ins": 12890
   },
   "exclusion_reason_counts": {
     "duplicate_canonical_fighter_round_key": 2,
@@ -34,9 +36,9 @@
       "sha256": "7bd9d33111fab3fd2506eb651a7870b9de2ee38d3db739fe58ac0ee0ad26261e"
     },
     {
-      "bytes": 1324085,
+      "bytes": 19624912,
       "path": "data/canonical/v0/field_provenance.csv",
-      "sha256": "2fcc9690fc85473055b5f127207f490d6c23a7f72ef23d3340fc618821b1098a"
+      "sha256": "af9cad7a6c7de17cb218c7edcada08303e0cfc5ab041800ecc7dda5805c5ff76"
     },
     {
       "bytes": 347699,
@@ -74,6 +76,11 @@
       "sha256": "026c273ad8c5212260db8167a6f9f2763c3f7442ab3b2f4108f0625de5f1018f"
     },
     {
+      "bytes": 1605937,
+      "path": "data/canonical/v0/weigh_ins.csv",
+      "sha256": "77bb22277bc4cedced13e81e5b697b25f6b88c4e1fd6893eab2da819be58bf73"
+    },
+    {
       "bytes": 120581,
       "path": "data/derived/qa/canonical_core_exclusions_v0.csv",
       "sha256": "8dbbc02a0b0867e658404d3b9fa28a0ba3a332c53147dfda083c0b6e98a056a9"
@@ -97,11 +104,17 @@
       "bytes": 785,
       "path": "data/derived/qa/canonical_ufc_profile_snapshot_exclusions_v0.csv",
       "sha256": "951f126d521c03ea313a21ecae659446f463bbb9211e05a8f8afd9b2ad80f1e4"
+    },
+    {
+      "bytes": 550,
+      "path": "data/derived/qa/canonical_ufc_weigh_in_exclusions_v0.csv",
+      "sha256": "702d0d697cd507b47612fae7884d5f1f868a7e4e95989297591dea1d7a973ba5"
     }
   ],
-  "generated_at_utc": "2026-08-23T00:24:24.078539Z",
+  "generated_at_utc": "2026-08-23T00:51:03.696556Z",
   "rules": {
     "ambiguous_identity_rows_are_quarantined": true,
+    "article_publication_time_is_not_weigh_in_date": true,
     "canonical_ids_are_opaque_uuid5_from_first_trusted_source_identity": true,
     "display_name_only_identity_is_trusted": false,
     "exact_control_seconds_source": "greco1899_ufcstats",
@@ -111,10 +124,12 @@
     "fightmetric_position_uses_quantized_buckets_only": true,
     "greco_is_default_historical_transport_for_shared_round_counts": true,
     "missing_is_not_zero": true,
+    "official_ufc_weigh_in_scale_weight_requires_context_clean_fight_fighter_identity": true,
     "rankings_are_dated_observations_not_features": true,
     "round_zero_allowed": false,
     "ufc_profiles_are_point_in_time_snapshots": true,
-    "unique_normalized_name_used_only_as_fail_closed_transport_resolution": true
+    "unique_normalized_name_used_only_as_fail_closed_transport_resolution": true,
+    "weigh_in_annotation_semantics_are_null_unless_source_explicit": true
   },
   "schema_version": 1,
   "source_snapshots": {
@@ -123,6 +138,7 @@
     "kaggle_pro_mma_fights": "v1",
     "tidytuesday_ufc_rankings": "107ff6c70de0",
     "ufc_com_official_athletes": "20260820T194553Z",
-    "ufc_fightmetric_official": "20260820T123046Z"
+    "ufc_fightmetric_official": "20260820T123046Z",
+    "ufc_official_weigh_in_articles": "20260821T210000Z"
   }
 }

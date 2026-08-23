@@ -1,0 +1,32 @@
+{
+  "canonical_contract_version": "0.4.0-draft",
+  "canonical_fighters_covered": 2249,
+  "canonical_fights_covered": 6445,
+  "canonical_weigh_in_rows": 12890,
+  "field_provenance_rows_added_this_run": 51560,
+  "outputs": {
+    "exclusions": "data/derived/qa/canonical_ufc_weigh_in_exclusions_v0.csv",
+    "field_provenance": "data/canonical/v0/field_provenance.csv",
+    "weigh_ins": "data/canonical/v0/weigh_ins.csv"
+  },
+  "qa_exclusions": 2,
+  "raw_marker_rows_not_semantically_promoted": 172,
+  "rules": {
+    "article_publication_time_used_as_weigh_in_date": false,
+    "attempt_number_promoted": false,
+    "catchweight_promoted": false,
+    "contract_limit_promoted": false,
+    "fight_and_fighter_identity_promoted": true,
+    "marker_global_semantics_used": false,
+    "missed_weight_promoted": false,
+    "official_status_text_promoted": false,
+    "pounds_over_promoted": false,
+    "purse_penalty_promoted": false,
+    "roster_weight_used": false,
+    "scale_weight_promoted": true,
+    "weigh_in_date_promoted": false
+  },
+  "schema_version": 1,
+  "source": "ufc_official_content",
+  "source_snapshot_id": "20260821T210000Z"
+}
