@@ -179,7 +179,7 @@
     "required_next": "Use only these measured column names to build the external-MMA fight identity/overlap audit.",
     "schema_inferred_from_filename": false
   },
-  "generated_at_utc": "2026-08-23T00:00:27.414532Z",
+  "generated_at_utc": "2026-08-23T00:00:52.095412Z",
   "nonempty_counts": {
     "date": 10448,
     "event_title": 10448,
