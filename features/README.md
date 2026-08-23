@@ -1,10 +1,18 @@
 # Features
 
-The **FEATURES phase is active**. DATA closed successfully at `DATA_PHASE_COMPLETE.md`; the exact input baseline is frozen in `provenance/data_phase_freeze_v0.json`.
+> **STATUS: INACTIVE / QUARANTINED AFTER DATA-PHASE BOUNDARY CORRECTION.**
+>
+> The files under `features/` were created after `DATA_PHASE_COMPLETE.md` even though the originating chat was intended to perform DATA acquisition/foundation work only. They are preserved here so no work is lost, but **feature engineering is stopped**. Nothing in this directory is part of the frozen DATA baseline, and no feature workflow is active under `.github/workflows/`.
 
-Feature definitions and builders consume only canonical DATA-phase outputs. They must remain leakage-safe, preserve missingness, and fail closed when chronology or identity is ambiguous. Models may choose among shared features, but may not silently redefine a shared field or feature for their own convenience.
+DATA closed successfully at `DATA_PHASE_COMPLETE.md`; the exact immutable input baseline is frozen in `provenance/data_phase_freeze_v0.json`.
 
-## Phase rules
+All accidental feature-specific code, outputs, audits, run logs, contracts, and archived workflow definitions are intentionally contained under this `features/` tree. The global `data/`, `schemas/`, `pipelines/`, `src/ufc_edge/data/`, and `provenance/` namespaces remain the DATA foundation.
+
+## If/when FEATURES is deliberately resumed
+
+Feature definitions and builders must consume only canonical DATA-phase outputs. They must remain leakage-safe, preserve missingness, and fail closed when chronology or identity is ambiguous. Models may choose among shared features, but may not silently redefine a shared field or feature for their own convenience.
+
+### Phase rules
 
 - Verify the frozen DATA baseline before every shared feature build.
 - Historical state for a target fight uses only information strictly available before the target cutoff.
@@ -14,7 +22,7 @@ Feature definitions and builders consume only canonical DATA-phase outputs. They
 - Sportsbook prices are not inputs to the independent core fighter-state/model feature set.
 - No model training begins until the shared fighter-state and matchup feature contracts validate.
 
-## Build order
+### Preserved accidental build order/design
 
 1. **Fighter state primitives v0** — canonical observed history, career/recent-3/recent-5/calendar-EWM windows, exact lineage and missing-safe domain exposures.
 2. **Feature Family A — Striking environment** — pace, creation and prevention.
@@ -27,8 +35,19 @@ Feature definitions and builders consume only canonical DATA-phase outputs. They
 9. **Opponent adjustment** — phase-specific performance relative to opponent expectation.
 10. **Matchup interaction engine** — explicit KO, submission, decision and environment-control interactions.
 
-Only after those shared features have chronological validation should the project move to the historical baseline and simple predictive Model 1.
+Only after an explicit decision to reopen FEATURES should this work continue.
 
-## Current contract
+## Current preserved feature artifacts
 
-`features/feature_contract_v0.json` is the machine-readable authority for the first fighter-state build. `features/v0/manifest.json` will bind materialized feature files back to the exact DATA freeze.
+- `features/feature_contract_v0.json`
+- `features/family_a_striking_v0.json`
+- `features/build_fighter_state_primitives_v0.py`
+- `features/validate_fighter_state_primitives_v0.py`
+- `features/build_striking_environment_v0.py`
+- `features/validate_striking_environment_v0.py`
+- `features/audit_striking_environment_coverage_v0.py`
+- `features/v0/` — materialized accidental feature outputs and manifests
+- `features/provenance/` — feature-only audits and run logs
+- `features/workflows/archive/` — disabled copies of the former GitHub Actions workflows
+
+These artifacts are **not raw data, not canonical DATA tables, and not part of the DATA freeze**.
