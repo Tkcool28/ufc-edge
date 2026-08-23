@@ -2,33 +2,31 @@
 
 Status: **F01 implementation draft**
 
-Authoritative feature semantics remain in F00 `features/feature_catalog.yaml` version `0.1.1-draft`. F01 implements those semantics; this document does not redefine them.
+Authoritative semantics remain F00 `features/feature_catalog.yaml` version `0.1.1-draft`. F01 implements that contract; this document records implementation choices and validation boundaries without redefining feature meaning.
 
 ## Scope
-
-F01 builds the first production-quality reference path:
 
 ```text
 frozen canonical DATA
 → canonical history index
-→ strictly point-in-time eligible observations
-→ concept-specific sufficient statistics
+→ strict point-in-time eligibility
+→ concept/component sufficient statistics
 → contract-approved windows
-→ point-in-time population prior/shrinkage
+→ point-in-time population priors/shrinkage
 → auditable fighter state
-→ deterministic canonical-ID matchup assembly
-→ model-consumer projection
+→ canonical-ID matchup assembly
+→ consumer projection
 ```
 
-No model is trained. No V2 opponent adjustment, simulator, sportsbook input, web research, raw-provider recovery, or DATA migration is performed.
+No model training, V2 opponent adjustment, simulator modeling, sportsbook input, web research, raw-provider recovery, DATA migration, or committed historical feature matrix is part of F01.
 
 ## Contract selection
 
-Core F01 selection is deliberately narrower than F00's generic `materialized_feature_names()` universe. F01 selects exactly statuses `V1_MUST` and `V1_DERIVED`, optionally intersected with a requested consumer tag. It does not select `V2_OPPONENT_ADJUSTED`, `SIMULATOR_COMPONENT`, `PROXY_ONLY`, `RESEARCH_ONLY`, `DEFERRED`, or `UNSUPPORTED`.
+F01 selects exactly `V1_MUST` and `V1_DERIVED`, optionally intersected with a consumer tag. It excludes `V2_OPPONENT_ADJUSTED`, `SIMULATOR_COMPONENT`, `PROXY_ONLY`, `RESEARCH_ONLY`, `DEFERRED`, and `UNSUPPORTED`.
 
-The current active implementation registry must equal the contract-selected V1 concept set exactly. A newly promoted V1 concept therefore fails closed until a reviewed implementation exists; Python cannot silently expand the feature specification.
+The executable implementation registry must equal the contract-selected V1 set. A newly promoted V1 concept therefore fails closed until reviewed implementation exists.
 
-Under `0.1.1-draft`, the active concepts are:
+Current active concepts (18):
 
 - `prior_fight_count`
 - `sig_strike_efficiency`
@@ -49,75 +47,69 @@ Under `0.1.1-draft`, the active concepts are:
 - `knockdown_creation_vs_vulnerability`
 - `reach_difference_cm`
 
-The contract-derived V1 vocabulary is 58 names: 53 fighter/context state names and 5 matchup-interaction names.
+The contract-derived core V1 vocabulary is 58 names: 53 fighter/context state names plus 5 matchup-interaction names.
 
 ## Modules
 
-- `history.py` — canonical CSV indexing, strict event-date PIT filtering, safe recent-window selection, EWMA weights, explicit prior weigh-in lookup.
-- `aggregations.py` — component-specific sufficient statistics, pooled weighted aggregation, mechanical shrinkage, semantic support state.
-- `state.py` — executable dispatch for the contract-selected concepts, PIT priors, auditable fighter-state values, orientation and matchup interactions.
-- `materializer.py` — public API, contract validation, deterministic selection, bounded real-data validation and provenance manifests.
-- `tools/features/materialize_v1.py` — bounded CLI; stdout by default and no implicit generated-output directory.
+- `history.py` — canonical CSV indexing, strict date eligibility, recent-window tie policy, EWMA weights, prior explicit scale-weight lookup.
+- `aggregations.py` — component-specific sufficient statistics, weighted pooling, mechanical shrinkage, support/missingness state.
+- `state.py` — active concept implementations, PIT priors, auditable fighter state, central orientation and matchup interactions.
+- `materializer.py` — public API, contract checks, deterministic selection, bounded real-data validation and provenance manifests.
+- `tools/features/materialize_v1.py` — bounded CLI; stdout by default, no implicit output hierarchy.
 
-The implementation deliberately remains one reference path. An optimized replay engine is deferred until profiling demonstrates a need; correctness and equivalence tests come first.
+F01 deliberately keeps one reference-correct implementation. An optimized replay engine should only be introduced later with equivalence tests if profiling justifies it.
 
 ## Fighter-state grain
 
-Historical fighter state is keyed by:
+Historical state identity is `fighter_id + prediction_as_of`. Target-bout context requires `target_fight_id`, so a complete pre-fight row may additionally carry that context key. Historical fighter state remains opponent-independent; matchup assembly occurs only after both fighter states are built at the same cutoff.
 
-- `fighter_id`
-- `prediction_as_of`
+## Point-in-time and ordering
 
-Target-bout context concepts require `target_fight_id`, so a full pre-fight row additionally records that context key. Historical state construction remains opponent-independent. Matchup assembly happens only after two independent fighter states are built at the same cutoff.
+F01 treats canonical `events.event_date` as the trustworthy chronology boundary.
 
-## Point-in-time policy
+For target cutoff date `T`:
 
-F01 uses canonical `events.event_date` as the trustworthy historical ordering boundary.
-
-For cutoff date `T`:
-
-- only fights with `event_date < T` enter historical state;
-- the target fight and every same-date contest are excluded from history;
-- intra-day bout order is never inferred from fight ID, row order, provider order, or CSV order;
-- current target result/method/finish/round-stat fields never enter predictors;
-- current profile/ranking context is not selected into core V1;
+- only fights with `event_date < T` enter history;
+- the target fight and every same-date fight are excluded;
+- intra-day order is never inferred from `fight_id`, provider side, row order, or CSV order;
+- current target winner/result/method/finish/round-stat fields do not enter predictors;
+- rankings/profile snapshots are not selected into core V1;
 - current-fight weigh-in context remains deferred.
 
-`last3` and `last5` operate on concept/component-eligible fights. Same-date groups are included only if the whole tied group fits within the remaining slots. If a same-date group crosses the N-fight boundary, that window is unavailable and the audit state records `missing_observation` plus an explicit ambiguity reason. Career/EWMA aggregation does not require tie order; same-date observations receive the same EWMA age.
+`last3` / `last5` operate on concept/component-eligible fights. A same-date group is accepted only if the whole tied group fits in the remaining slots. If it crosses the N-fight boundary, the window is unavailable and returns `missing_observation` with an explicit ambiguity reason. `fight_id` may order a fully included tied group only for stable serialization; it never decides membership.
+
+Career/EWMA do not require tie order. Same-date observations receive the same EWMA age.
 
 ## Windows and sufficient statistics
 
-Variants are read from each concept's catalog flags; F01 never expands all windows universally.
+Variants are read from each concept's F00 flags; F01 does not auto-expand windows.
 
-- `career`: all concept-eligible prior observations.
-- `last3`: up to three most recent eligible fights with fail-closed tied-boundary behavior.
-- `last5`: same for five.
+- `career`: all concept-eligible strict-prior observations.
+- `last3`: up to three most recent eligible fights, with tied-boundary fail-closed behavior.
+- `last5`: analogous five-fight window.
 - `ewma_365d`: `2 ** (-age_days / 365)`.
 
-Probabilities and compositions pool weighted numerators and denominators separately. F01 never averages per-fight percentages when count sufficient statistics exist.
+EWMA applies weights to numerators and denominators separately. F01 never averages already-computed per-fight percentages when pooled sufficient statistics exist.
 
-Support is component-specific. For example, significant-strike accuracy and defense have different attempt denominators, and knockdown creation/vulnerability have different landed-strike denominators. This was caught during the architecture checkpoint before feature expansion.
+Support is component-specific. This matters for paired quantities: significant-strike accuracy and defense have different attempt denominators; knockdown creation/vulnerability have different landed-strike denominators; takedown success/defense have different attempt denominators.
 
 ## Missingness and audit state
 
-Every materialized estimate has an `AuditValue` containing:
+Every materialized value has an `AuditValue` carrying:
 
-- source concept
-- component
-- window
-- model value
-- missingness state
-- personal numerator
-- personal denominator/support
-- posterior denominator where shrinkage applies
-- contributing fight count
-- contributing observation count
+- column and source concept
+- component/window
+- model-facing value
+- one of the five F00 missingness states
+- personal numerator and denominator/support
+- posterior denominator where applicable
+- contributing fight/observation counts
 - shrinkage rule
 - prior source/value
 - contributing fight IDs
-- explicit reason when unavailable/missing
+- explicit reason when unavailable
 
-The five F00 semantic states remain distinct:
+States remain distinct:
 
 - `observed_positive`
 - `observed_zero`
@@ -127,35 +119,56 @@ The five F00 semantic states remain distinct:
 
 Examples:
 
-- zero TD attempts with observed attempt fields → undefined raw conversion, positive observation coverage, `insufficient_exposure`; the shrunk model value may still equal the PIT prior.
-- four observed attempts and zero landed → numeric 0 raw conversion, not missing.
-- prior fights but no compatible canonical stat observations → `missing_observation`, not zero.
-- a resolved canonical fighter with zero prior canonical fights → known zero personal history; population prior may be used where the F00 shrinkage rule permits.
+- 0 TD landed from 4 observed attempts → raw conversion 0, real observed zero.
+- 0 observed TD attempts → raw conversion undefined; denominator support 0, not a failed conversion rate.
+- prior fights but no compatible round-stat rows → missing observation, not zero-filled statistics.
+- layoff with no prior canonical fight → not applicable.
 
-## Shrinkage
+## Zero canonical history versus true debut
 
-F01 implements only the F00 mechanical rules:
+F00 permits a population-prior estimate for a **known true debutant**, but canonical v0 does not expose a historical-completeness/debut flag. Therefore F01 does **not** equate `prior_fight_count == 0` with a proven MMA debut.
+
+For a resolved fighter with zero strict-prior canonical fights:
+
+- `prior_fight_count` is legitimately observed zero for the canonical history count;
+- rate/composition personal support remains zero;
+- F01 withholds population-prior substitution with `prior_source = withheld:zero_canonical_history_debut_unproven`;
+- audit reason records that true debut status is not proven by canonical v0.
+
+The generic shrinkage primitive still supports the F00 true-debut rule if a future canonical/contract version supplies a trustworthy debut/completeness signal. Until then, F01 fails conservative rather than turning coverage uncertainty into debutant semantics.
+
+## Shrinkage and population priors
+
+Mechanical strengths only:
 
 - `attempt_probability_v1`: 20 equivalent opportunities
-- `composition_v1`: 30 equivalent observed events
+- `composition_v1`: 30 equivalent events
 - `fight_rate_v1`: 6 equivalent fights
-- `time_rate_v1`: rejected as non-materializable under contract `0.1.1-draft`
+- `time_rate_v1`: rejected under `0.1.1-draft`
 
-For component numerator `n`, support `d`, prior probability `p`, and prior strength `a`:
+For personal numerator `n`, support `d`, population probability `p`, prior strength `a`:
 
 ```text
 posterior = (n + a*p) / (d + a)
 ```
 
-Population priors are computed separately for every prediction cutoff. No all-history prior is reused for historical rows.
+Population priors are rebuilt as-of each cutoff. A complete-history prior is never reused for earlier rows.
 
-Prior hierarchy implementation:
+Hierarchy:
 
-1. Count canonical historical fights in the target weight class strictly before the cutoff.
-2. If that fight count is at least 100, choose the weight-class prior population; otherwise choose global.
-3. Within the selected population, the feature prior numerator/denominator uses only rows compatible with that specific concept/component.
+1. count canonical target-weight-class fights strictly before cutoff;
+2. if count >= 100, select that weight-class population, otherwise global;
+3. within the selected population, calculate each concept/component prior only from compatible observed numerator/denominator rows.
 
-Thus missing round-stat fights can help establish that the weight-class history universe has 100 fights, but they **do not** become statistical denominator support for a round-stat prior. If the selected population has no compatible statistical support, the prior is unavailable rather than fabricated.
+The 100-fight hierarchy threshold and statistical support are deliberately separate. Missing stat rows may be part of the historical fight universe but never become round-stat denominator support. If the selected population has no compatible support, the prior is unavailable.
+
+## Context details
+
+- age uses canonical DOB and target event date with deterministic day-based years (`days / 365.2425`); missing DOB stays missing;
+- layoff is target event/cutoff date minus the **maximum strict-prior event date**. Multiple fights sharing that prior date do not make calendar days-since-date ambiguous;
+- height/reach use contract-authorized canonical fighter values and preserve missingness;
+- prior scale weight uses only scale observations linked to strict-prior canonical fights. Ordering uses linked fight date, explicit `weigh_in_date`, explicit attempt number, then observation ID only as a deterministic final tie key;
+- stance remains `PROXY_ONLY`; rankings remain `RESEARCH_ONLY`; current-fight weigh-in context remains `DEFERRED`.
 
 ## Elapsed-exposure safety
 
@@ -165,37 +178,37 @@ F01 pins to:
 elapsed_exposure_policy.allowed_sources = []
 ```
 
-It never assumes standard historical round duration, reconstructs historical elapsed fight duration from terminal fields, treats `scheduled_rounds` as round length, treats `control_sec` as elapsed/ground time, uses quantized position buckets as exact duration, or reads raw/provider data to recover exposure.
+F01 does not assume standard historical round duration, derive historical elapsed duration from finish fields, treat scheduled rounds as round length, use `control_sec` as elapsed or ground time, convert positional buckets to exact duration, or read provider/raw files to recover time exposure.
 
-Any catalog change that makes a blocked elapsed feature active fails the F01 registry/selection gate.
+Any blocked time concept promoted into V1 fails the implementation/contract selection gate. `time_rate_v1` also raises if invoked.
 
 ## Matchup orientation and dependency closure
 
-Central orientation is exactly F00 version 1:
+Central orientation:
 
 ```text
 fighter_1_id = lexicographically smaller canonical fighter_id
 fighter_2_id = lexicographically larger canonical fighter_id
 ```
 
-Input/provider order does not alter the matchup projection.
+Input/provider A/B order therefore cannot alter the projection.
 
-Only two matchup concepts are currently V1-active:
+Current active V1 interactions:
 
 - `knockdown_creation_vs_vulnerability`
 - `reach_difference_cm`
 
-They consume already-materialized upstream V1 state. A missing or unselected dependency fails closed; a deferred upstream concept cannot be revived through an interaction.
+They consume already-selected upstream V1 state. Missing/unselected dependencies fail closed, and a deferred dependency cannot be revived indirectly through matchup code.
 
 ## Target boundary
 
-F01 does not attach training targets. Its public fighter/matchup objects contain predictors/audit state only. A later training-table task must first freeze the predictor row and only then attach labels. Current `winner_id`, result, method, finish round/time and current fight round stats are never read by F01 as target-fight predictors.
+F01 attaches no training targets. Predictor state is the only public output. Tests mutate current target winner/result/method/finish fields and require the predictor projection to remain identical. A future training-table task must freeze predictors first and attach labels afterward.
 
-## Output and provenance
+## Runtime output and provenance
 
-F01 intentionally creates no default feature-store directory and commits no matrix. The CLI writes JSON to stdout unless an explicit runtime `--output` path is supplied.
+F01 creates no default feature-store directory. The CLI writes JSON to stdout unless the caller explicitly requests a runtime output path.
 
-A provenance manifest includes:
+Manifest deterministic identity includes:
 
 - feature contract version
 - feature catalog/schema/leakage-registry hashes
@@ -205,41 +218,44 @@ A provenance manifest includes:
 - materializer code commit
 - prediction cutoff
 - consumer/status scope
-- fighter-orientation policy
+- orientation policy
 - window policy
 - shrinkage policy
 - elapsed-exposure policy
 - materialized names
 - row count
-- generation timestamp
 
-The timestamp is outside the deterministic payload. `deterministic_payload_sha256` therefore remains identical for the same DATA/contract/code/cutoff/scope even when generation timestamps differ.
+`generated_at_utc` is deliberately outside the deterministic payload hash, so generation timestamps do not change `deterministic_payload_sha256`.
 
 ## Architecture checkpoint — 16 questions
 
-1. **Can target fight enter history?** No. Eligibility is `event_date < cutoff_date`; same-day target is excluded.
-2. **Can same-day unresolved order leak?** No. Same-day target history is excluded; recent-window tied boundaries fail closed.
-3. **Can future population priors leak?** No. Prior scans use the same strict cutoff and cache by cutoff date/concept/component/scope.
-4. **Can missing stats become zeros?** No. Component stats exist only when their required canonical fields are observed.
-5. **Can external fights without round stats enter stat denominators?** No. They can enter result/experience history but create no round-stat sufficient statistics.
-6. **Can a DEFERRED time feature sneak in?** No. Core selection is V1-only and cross-checks the F00 blocked list; time-rate shrinkage raises.
-7. **Can an interaction activate a deferred dependency?** No. Active interaction registry is exact and dependencies must already exist in selected fighter state.
-8. **Can provider A/B ordering leak?** No. Canonical IDs are sorted once centrally.
-9. **Can current weigh-in/profile/ranking data backfill historically?** No. Profile/ranking concepts are not selected; scale weight is linked only to strictly prior fights; current weigh-in is deferred.
-10. **Are EWMA numerator/denominator aggregates correct?** Yes. Weights apply to sufficient statistics separately, not already-computed ratios.
-11. **Can true zero prior history be distinguished from missing history?** Yes for resolved canonical fighter identities. Zero canonical prior fights is explicit; unresolved/unknown fighter identity fails before materialization and missing compatible domains remain missing.
-12. **Is shrinkage support domain-specific?** Yes. Every component carries its own denominator and only compatible rows enter prior support.
-13. **Are targets attached after predictors?** F01 attaches no targets at all.
-14. **Are names generated from the contract?** Yes. Layer prefix, components, variant flags and estimator suffix come from catalog metadata and are checked against F00's global generated-name set.
-15. **Is the repo compact?** Yes. Four coherent modules, one CLI, one test file, one workflow and this document; no generated/run hierarchy.
-16. **Can one value be explained?** Yes. `AuditValue` preserves sufficient statistics, support, prior, lineage, shrinkage rule and missingness reason.
+1. **Can the target fight enter history?** No: historical eligibility requires event date strictly before cutoff date.
+2. **Can same-day unresolved order leak?** No: same-date target history is excluded and recent-window tied boundaries fail closed.
+3. **Can future priors leak?** No: prior scans use the same strict cutoff and cache by cutoff/concept/component/scope.
+4. **Can missing stats become zero?** No: a component contributes only when its required canonical observations exist.
+5. **Can external fights without round stats enter stat denominators?** No: result/count history can include them, but round-stat sufficient-stat lineage cannot.
+6. **Can a deferred time feature sneak in?** No: core selection is V1-only, checks the blocked list, and rejects active time shrinkage.
+7. **Can a matchup interaction revive a deferred dependency?** No: only active interactions exist and upstream state must already be selected.
+8. **Can provider/red-blue ordering leak?** No: canonical IDs are sorted centrally.
+9. **Can current weigh-in/profile/ranking data backfill?** No: those current/research concepts are not selected; prior scale weight is strict-prior linked.
+10. **Does EWMA aggregate sufficient statistics correctly?** Yes: numerator and denominator are weighted separately.
+11. **Can true debut be distinguished from zero canonical history?** Not with canonical v0; therefore F01 explicitly withholds debutant prior semantics when only zero canonical history is known.
+12. **Is shrinkage support domain-specific?** Yes: component-specific denominators and compatible prior rows only.
+13. **Are targets attached only after predictors?** F01 attaches none.
+14. **Are names generated from the contract?** Yes: layer prefix/components/variant flags/estimator suffix come from F00 and are collision-checked.
+15. **Is the repo compact?** Yes: four coherent modules, one CLI, one focused test file, one workflow, one implementation document.
+16. **Can one value be explained?** Yes: audit state preserves sufficient statistics, support, prior, lineage, rule and reason.
 
-## Risks/mistakes caught before broad expansion
+## Risks/mistakes caught before completion
 
-- A first draft represented support with one denominator per concept. Review caught that paired components often have different denominators; the representation was changed to component-specific sufficient statistics before feature formulas expanded.
-- Recent-window selection was deliberately implemented by same-date groups rather than a convenient `(event_date, fight_id)` truncation. Fight ID is used only for deterministic serialization inside a fully included tied group, never to infer chronology.
-- F01 selection is not based on F00's generic non-materialized-status list because that would also admit V2/simulator/proxy concepts. Core selection explicitly requires V1 status plus consumer projection.
-- Population-prior hierarchy separates the 100-fight universe test from feature-compatible statistical support so missing stat rows never become denominator evidence.
-- Runtime output has no implicit repository directory, avoiding a premature DATA/FEATURES storage decision or committed historical matrix.
+- Initial aggregation used one denominator per concept. Review caught that paired components can have different supports; F01 moved to component-specific sufficient statistics before expansion.
+- The first same-date boundary test accidentally used a tied group that exactly filled the remaining slots. CI correctly showed the materializer was right and the fixture was wrong; the fixture now crosses a one-slot boundary.
+- A first prior-threshold fixture forgot that population sufficient statistics include both fighters in a fight. The expected support was corrected from `1/2` to `2/4` without changing the production prior logic.
+- `prior_scale_weight_lbs` initially used an opaque observation ID too early in ordering. It now prefers explicit weigh-in chronology and uses the ID only as a final deterministic tie key.
+- Layoff initially treated multiple bouts on the same latest date as ambiguous. Since layoff requires only the maximum date, that over-conservative behavior was removed.
+- Review identified that zero prior **canonical** history does not prove a true debut. F01 now withholds population-prior substitution unless a future canonical signal can prove debut/completeness.
+- F01 selection deliberately does not reuse F00's broad generic materializable set because that would admit non-core V2/simulator/proxy concepts.
+- CI source parsing is artifact-free; it does not create bytecode that would invalidate the clean-checkout gate.
+- Runtime output has no implicit repository directory, avoiding a premature DATA/FEATURES storage decision.
 
-F01 remains an infrastructure task. Model training, opponent adjustment, simulator work and sportsbook integration remain out of scope.
+F01 remains feature infrastructure only. Modeling, V2 opponent adjustment, simulator work, sportsbook work, and DATA changes require separate reviewed tasks.
