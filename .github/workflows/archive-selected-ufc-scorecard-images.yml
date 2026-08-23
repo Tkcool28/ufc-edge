@@ -1,5 +1,6 @@
 name: Archive selected official UFC scorecard images
 
+# Registered on main; trigger version 1.
 on:
   push:
     branches: [main]
