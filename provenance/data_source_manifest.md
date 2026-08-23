@@ -1,5 +1,37 @@
 # UFC Edge — Data Source Manifest
 
+<!-- DATA_PHASE_CURRENT_STATUS_START -->
+## Current DATA-phase status — 2026-08-22
+
+This block is the current operational truth. Material below it is retained as historical acquisition/research context and may describe earlier pending states.
+
+### Canonical v0 now materialized
+
+| Family | Final DATA-phase disposition | Current evidence |
+|---|---|---|
+| Core fighter/event/fight + classic round history | **CANONICAL** | `4,600` fighters; `1,014` events; `9,252` fights; `41,218` fighter-round rows. |
+| Official FightMetric positional/TIP buckets | **CANONICAL** | `32,156` eligible fighter-round position rows; quantized bucket semantics only. |
+| Historical rankings | **CANONICAL** | `99,077` dated ranking observations; future/nearest-future joins remain forbidden. |
+| Official UFC athlete profiles | **CANONICAL point-in-time subset** | `2,466` dated profile snapshots; never historical backfill. |
+| Cross-promotion fight history | **CANONICAL clean subset** | External MMA inserted only after stable identity/dedup gates; lower-precedence UFC-labelled rows never repair UFC history. |
+| Official fight-specific weigh-ins | **CANONICAL** | `12,890` scale-weight observations; non-explicit attempt/miss/penalty semantics remain null. |
+| Official judge round scorecards | **RAW_QA_ONLY — accepted gap** | Verified official pages/images are archived, but strict extraction failed; **0 canonical judge-round rows**. |
+| ESPN MMA | **RAW_QA_ONLY / additive QA** | Retained for officials, redundancy and future additive work; not allowed to overwrite canonical higher-precedence values. |
+| UFC-DataLab OCR scorecards | **RAW_QA_ONLY** | Known OCR/fighter-pair association errors; never score authority. |
+| Access-gated sequential/live sources | **DEFERRED_ACCESS_GATED** | FightGeek / IMG / Sportradar remain future licensed/access tracks, not DATA-phase blockers. |
+
+### Accepted gaps carried forward explicitly
+
+- **Official scorecards:** the strongest physical-grid three-round sample had 15 eligible cards / 270 expected score cells, only 82 strict accepted cells, 0/15 complete 18-cell cards, and 0 complete nine-pair cards. The source remains raw/QA-only; no inferred scores were written.
+- **Official athlete identity coverage:** `1,693` of `4,161` official athlete nodes are not trusted canonical identities. `423` of those appear in official fight resources and are therefore a real identity-coverage gap rather than profile-only clutter.
+- **FightMetric stable-ID follow-up:** `405` of the `423` fight-participating unlinked athletes carry a source-explicit FightMetric ID, but the exact trusted-source-ID audit found **0** unique match candidates and **0** ambiguous exact matches. No name or URL-token matching was used.
+- **UFC historical spine coverage:** lower-precedence external-MMA audits identified UFC-labelled trusted-pair rows absent from the canonical UFC spine, including ordinary win/loss bouts. They remain documented QA gaps; external data was deliberately not used to repair higher-precedence UFC history.
+
+### Phase rule
+
+No further free-source hunting, OCR threshold loosening, or identity guessing is authorized merely to make DATA appear complete. Remaining gaps above are explicit and durable. Feature engineering may use only canonical tables/semantics and must respect point-in-time and missingness rules.
+<!-- DATA_PHASE_CURRENT_STATUS_END -->
+
 Status date: 2026-08-20 (America/Denver)
 
 Purpose: durable manifest of every material data source investigated during the acquisition pass: what landed, what failed, why, what each source contains, likely use, and how much UFC Edge should trust future refreshes.
