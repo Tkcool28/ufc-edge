@@ -1,0 +1,24 @@
+{
+  "archive_id": "selected_v0",
+  "decision": {
+    "all_selected_objects_hashed": true,
+    "binary_images_archived": true,
+    "canonical_judge_round_scores_written": false,
+    "ocr_performed": false,
+    "required_next": "Run OCR only as a derived candidate layer against these immutable hashed images, then independently validate judge/fighter/round score semantics before any canonical score rows."
+  },
+  "final_host_counts": {
+    "dmxg5wxfqgb4u.cloudfront.net": 1,
+    "www.ufc.com": 577
+  },
+  "image_count": 578,
+  "image_signature_counts": {
+    "jpeg": 492,
+    "png": 86
+  },
+  "manifest": "data/raw/ufc_official_scorecard_images/selected_v0/manifest.json",
+  "mapped_fight_count": 575,
+  "reused_existing_objects": 0,
+  "schema_version": 1,
+  "total_bytes": 39932633
+}
