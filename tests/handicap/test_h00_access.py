@@ -13,6 +13,7 @@ from ufc_edge.handicap.builders import (
     build_matchup_packet,
     packet_output_guard,
 )
+from ufc_edge.handicap.output import resolve_output_root
 from ufc_edge.handicap.store import CanonicalStore
 
 STAT_FIELDS = [
@@ -24,8 +25,10 @@ STAT_FIELDS = [
     "sig_ground_landed","sig_ground_attempted",
 ]
 
+
 def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
 
 def _write_csv(path: Path, fields: list[str], rows: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -34,6 +37,7 @@ def _write_csv(path: Path, fields: list[str], rows: list[dict]) -> None:
         writer.writeheader()
         for row in rows:
             writer.writerow(row)
+
 
 @pytest.fixture()
 def mini_repo(tmp_path: Path) -> Path:
@@ -92,6 +96,7 @@ def mini_repo(tmp_path: Path) -> Path:
         {"fight_id":"f1","event_id":"e1","fighter_a_id":"fa","fighter_b_id":"fb","winner_id":"fa","result":"W/L","method":"KO/TKO","finish_round":"2","finish_time_sec":"30","weight_class":"Lightweight","scheduled_rounds":"3"},
         {"fight_id":"f2","event_id":"e2","fighter_a_id":"fa","fighter_b_id":"fb","winner_id":"fb","result":"L/W","method":"Decision - Unanimous","finish_round":"3","finish_time_sec":"300","weight_class":"Lightweight","scheduled_rounds":"3"},
     ]
+
     def stat(fid, fighter, rnd, kd, ctrl):
         row = {f:"" for f in STAT_FIELDS}
         row.update({"fight_id":fid,"fighter_id":fighter,"round":str(rnd),"knockdowns":str(kd),
@@ -102,6 +107,7 @@ def mini_repo(tmp_path: Path) -> Path:
             "sig_leg_landed":"2","sig_leg_attempted":"5","sig_distance_landed":"7","sig_distance_attempted":"14",
             "sig_clinch_landed":"2","sig_clinch_attempted":"4","sig_ground_landed":"1","sig_ground_attempted":"2"})
         return row
+
     stats = [
         stat("f1","fa",0,9,"999"),
         stat("f1","fa",1,1,"60"), stat("f1","fb",1,0,""),
@@ -139,7 +145,17 @@ def mini_repo(tmp_path: Path) -> Path:
     _write_csv(canonical/"source_identity_links.csv", list(links[0]), links)
     _write_csv(canonical/"weigh_ins.csv", list(weighins[0]), weighins)
 
-    manifest = {"canonical_contract_version":"0.4.0-draft","files":[]}
+    manifest = {
+        "canonical_contract_version":"0.4.0-draft",
+        "files":[
+            {
+                "path": path.relative_to(root).as_posix(),
+                "sha256": _sha(path),
+                "bytes": path.stat().st_size,
+            }
+            for path in sorted(canonical.glob("*.csv"))
+        ],
+    }
     (canonical/"manifest.json").write_text(json.dumps(manifest))
     frozen_paths = [
         "schemas/canonical_data_contract_v0.json",
@@ -154,6 +170,7 @@ def mini_repo(tmp_path: Path) -> Path:
     (provenance/"data_phase_freeze_v0.json").write_text(json.dumps(freeze))
     return root
 
+
 def test_identity_is_fail_closed(mini_repo: Path):
     store = CanonicalStore(mini_repo)
     assert store.resolve_fighter("fa") == "fa"
@@ -163,10 +180,12 @@ def test_identity_is_fail_closed(mini_repo: Path):
     with pytest.raises(KeyError):
         store.resolve_fighter("Alph One")
 
+
 def test_normalized_ambiguity_fails_closed(mini_repo: Path):
     store = CanonicalStore(mini_repo)
     with pytest.raises(ValueError):
         store.resolve_fighter("alpha one")
+
 
 def test_cutoff_excludes_future_fight_ranking_profile_and_weighin(mini_repo: Path):
     store = CanonicalStore(mini_repo)
@@ -175,6 +194,7 @@ def test_cutoff_excludes_future_fight_ranking_profile_and_weighin(mini_repo: Pat
     assert [x["ranking_date"] for x in packet["ranking_history"]] == ["2019-12-01"]
     assert [x["observed_at_utc"] for x in packet["profile_snapshots"]] == ["2019-12-15T00:00:00Z"]
     assert [x["weigh_in_observation_id"] for x in packet["weigh_in_history"]] == ["w1"]
+
 
 def test_round_zero_missingness_and_control_semantics(mini_repo: Path):
     store = CanonicalStore(mini_repo)
@@ -188,6 +208,7 @@ def test_round_zero_missingness_and_control_semantics(mini_repo: Path):
     assert pos["back_control_lower_sec"] == 60
     assert fight["fighter_round_stats"][0]["control_sec"] == 60
 
+
 def test_matchup_contains_both_complete_histories_and_prior_meeting(mini_repo: Path):
     store = CanonicalStore(mini_repo)
     packet = build_matchup_packet(store, "fa", "fb", "2021-01-01", generated_at=datetime(2026,1,1,tzinfo=timezone.utc), generator_commit_sha="test")
@@ -198,17 +219,45 @@ def test_matchup_contains_both_complete_histories_and_prior_meeting(mini_repo: P
     assert [x["canonical_fight"]["fight_id"] for x in packet["direct_prior_meetings"]] == ["f1"]
     assert packet["fighter_a"]["fight_history"][0]["fighter_round_stats"][0]["sig_head_landed"] == 5
 
+
 def test_substantive_determinism_ignores_generation_timestamp(mini_repo: Path):
     store = CanonicalStore(mini_repo)
     p1 = build_matchup_packet(store, "fa", "fb", "2021-01-01", generated_at=datetime(2026,1,1,tzinfo=timezone.utc), generator_commit_sha="test")
     p2 = build_matchup_packet(store, "fa", "fb", "2021-01-01", generated_at=datetime(2026,2,1,tzinfo=timezone.utc), generator_commit_sha="test")
     assert p1["substantive_sha256"] == p2["substantive_sha256"]
 
+
 def test_output_guard_rejects_non_handicap_path(mini_repo: Path):
     good = mini_repo / "handicap/v0/fighters/fa.json"
     assert packet_output_guard(mini_repo, good) == good.resolve()
     with pytest.raises(ValueError):
         packet_output_guard(mini_repo, mini_repo / "data/canonical/v0/nope.json")
+
+
+def test_explicit_repo_local_output_cannot_target_protected_paths(mini_repo: Path, tmp_path: Path):
+    good = mini_repo / "handicap" / "custom"
+    assert resolve_output_root(mini_repo, good) == good.resolve()
+
+    for protected in (
+        mini_repo / "data",
+        mini_repo / "data/canonical/v0",
+        mini_repo / "schemas",
+        mini_repo / "provenance",
+        mini_repo,
+    ):
+        with pytest.raises(ValueError, match="repo-local output"):
+            resolve_output_root(mini_repo, protected)
+
+    external = tmp_path / "isolated-output"
+    assert resolve_output_root(mini_repo, external) == external.resolve()
+
+
+def test_canonical_csv_corruption_is_rejected(mini_repo: Path):
+    corrupted = mini_repo / "data/canonical/v0/fighter_round_stats.csv"
+    corrupted.write_text(corrupted.read_text(encoding="utf-8") + "\n", encoding="utf-8")
+    with pytest.raises(RuntimeError, match="canonical table hash mismatch.*fighter_round_stats.csv"):
+        CanonicalStore(mini_repo)
+
 
 def test_delete_and_regenerate_in_memory(mini_repo: Path):
     store = CanonicalStore(mini_repo)
@@ -220,10 +269,12 @@ def test_delete_and_regenerate_in_memory(mini_repo: Path):
     p2 = build_fighter_dossier(CanonicalStore(mini_repo), "fa", "2021-01-01", generated_at=datetime(2026,1,1,tzinfo=timezone.utc), generator_commit_sha="test")
     assert p1["substantive_sha256"] == p2["substantive_sha256"]
 
+
 def test_missing_position_stays_absent_not_zero(mini_repo: Path):
     store = CanonicalStore(mini_repo)
     packet = build_fighter_dossier(store, "fb", "2021-01-01", generated_at=datetime(2026,1,1,tzinfo=timezone.utc), generator_commit_sha="test")
     assert packet["fight_history"][0]["fighter_round_position"] == []
+
 
 def test_read_only_build_does_not_modify_frozen_inputs(mini_repo: Path):
     protected = [
@@ -237,6 +288,7 @@ def test_read_only_build_does_not_modify_frozen_inputs(mini_repo: Path):
     build_matchup_packet(store, "fa", "fb", "2021-01-01", generated_at=datetime(2026,1,1,tzinfo=timezone.utc), generator_commit_sha="test")
     after = {str(path): _sha(path) for path in protected}
     assert before == after
+
 
 def test_card_builder_and_unknown_event(mini_repo: Path):
     from ufc_edge.handicap.cards import build_card_packets

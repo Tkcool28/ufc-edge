@@ -26,8 +26,10 @@ CANONICAL_TABLES = (
     "weigh_ins",
 )
 
+
 def repository_root() -> Path:
     return Path(__file__).resolve().parents[3]
+
 
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
@@ -36,12 +38,14 @@ def sha256_file(path: Path) -> str:
             digest.update(chunk)
     return digest.hexdigest()
 
+
 def normalize_lookup_text(value: str) -> str:
     value = unicodedata.normalize("NFKD", value)
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
     value = value.casefold()
     value = re.sub(r"[^a-z0-9]+", " ", value)
     return " ".join(value.split())
+
 
 def parse_cutoff(value: str | datetime | date) -> datetime:
     if isinstance(value, datetime):
@@ -59,8 +63,10 @@ def parse_cutoff(value: str | datetime | date) -> datetime:
         parsed = parsed.replace(tzinfo=timezone.utc)
     return parsed.astimezone(timezone.utc)
 
+
 def iso_utc(value: datetime) -> str:
     return value.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
+
 
 class CanonicalStore:
     """Read-only, schema-driven view over frozen canonical DATA."""
@@ -95,6 +101,7 @@ class CanonicalStore:
                 "H00 requires frozen DATA contract "
                 f"{EXPECTED_DATA_CONTRACT}; observed {sorted(str(v) for v in versions)}"
             )
+
         frozen = {item["path"]: item["sha256"] for item in self.freeze.get("frozen_files", [])}
         expected_manifest_hash = frozen.get("data/canonical/v0/manifest.json")
         if not expected_manifest_hash:
@@ -102,6 +109,7 @@ class CanonicalStore:
         actual_manifest_hash = sha256_file(self.manifest_path)
         if actual_manifest_hash != expected_manifest_hash:
             raise RuntimeError("canonical manifest no longer matches DATA freeze")
+
         for rel in (
             "schemas/canonical_data_contract_v0.json",
             "schemas/source_field_map_v0.json",
@@ -110,6 +118,25 @@ class CanonicalStore:
             expected = frozen.get(rel)
             if not expected or sha256_file(self.root / rel) != expected:
                 raise RuntimeError(f"frozen DATA authority changed: {rel}")
+
+        manifest_files = {
+            item.get("path"): item.get("sha256")
+            for item in self.manifest.get("files", [])
+            if isinstance(item, dict)
+        }
+        for table in CANONICAL_TABLES:
+            rel = f"data/canonical/v0/{table}.csv"
+            expected = manifest_files.get(rel)
+            if not expected:
+                raise RuntimeError(f"canonical manifest does not bind H00 input: {rel}")
+            path = self.root / rel
+            if not path.is_file():
+                raise RuntimeError(f"canonical H00 input missing: {rel}")
+            actual = sha256_file(path)
+            if actual != expected:
+                raise RuntimeError(
+                    f"canonical table hash mismatch for {rel}: expected {expected}, observed {actual}"
+                )
 
     @property
     def manifest_sha256(self) -> str:
@@ -241,7 +268,6 @@ class CanonicalStore:
         )
 
     def trusted_aliases(self, fighter_id: str) -> list[str]:
-        # Alias text may only come from already-trusted canonical identity-link columns.
         aliases: set[str] = set()
         for row in self.trusted_fighter_links(fighter_id):
             for field in ("alias", "source_alias", "source_display_name", "display_name"):
