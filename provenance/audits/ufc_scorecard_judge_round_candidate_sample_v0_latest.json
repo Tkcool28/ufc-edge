@@ -16,7 +16,7 @@
   },
   "exclusion_rows": 6,
   "exclusions": "data/derived/qa/ufc_scorecard_judge_round_candidate_sample_exclusions_v0.csv",
-  "generated_at_utc": "2026-08-23T01:26:55.131097Z",
+  "generated_at_utc": "2026-08-23T01:27:26.853832Z",
   "official_alt_total_checks": {},
   "output": "data/derived/qa/ufc_scorecard_judge_round_candidate_sample_v0.csv",
   "sample_cards_considered": 6,

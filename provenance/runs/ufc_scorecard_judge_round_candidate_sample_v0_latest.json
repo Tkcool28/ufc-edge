@@ -1,10 +1,10 @@
 {
   "build": "ufc_scorecard_judge_round_candidate_sample_v0",
-  "completed_at_utc": "2026-08-23T01:26:55.149147Z",
+  "completed_at_utc": "2026-08-23T01:27:26.881049Z",
   "exit_code": 0,
-  "github_run_id": "32610362196",
-  "log": "provenance/runs/ufc_scorecard_judge_round_candidate_sample_v0_32610362196.log",
+  "github_run_id": "32610381647",
+  "log": "provenance/runs/ufc_scorecard_judge_round_candidate_sample_v0_32610381647.log",
   "schema_version": 1,
   "status": "success",
-  "trigger_sha": "a9a7c84452b59f540ee40e9267a0075eb9ef4ec2"
+  "trigger_sha": "6a42d873190520c1b3581c2575ef0ac0c66ba297"
 }
