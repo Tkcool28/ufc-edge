@@ -28,13 +28,13 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-          import textwrap
 
           workflow = Path('.github/workflows/f00-exposure-remediation.yml').read_text(encoding='utf-8')
           marker = "          python - <<'PY'\n"
           start = workflow.index(marker) + len(marker)
           end = workflow.index("\n          PY", start)
-          source = textwrap.dedent(workflow[start:end])
+          raw = workflow[start:end]
+          source = "\n".join(line[10:] if line.startswith("          ") else line for line in raw.splitlines())
           exec(compile(source, 'f00-exposure-remediation', 'exec'), {'__name__': '__main__'})
           PY
 
