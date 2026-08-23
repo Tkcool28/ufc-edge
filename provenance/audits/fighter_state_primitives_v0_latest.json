@@ -1,0 +1,58 @@
+{
+  "counts": {
+    "canonical_fights": 9252,
+    "fighter_state_rows": 17538,
+    "history_lineage_rows": 100367,
+    "recent3_boundary_ambiguous_rows": 28,
+    "recent5_boundary_ambiguous_rows": 18,
+    "rows_with_same_day_other_fights_excluded": 152,
+    "rows_without_prior_history": 2703,
+    "rows_without_prior_stat_history": 2811,
+    "stat_eligible_fighter_fight_keys": 17406,
+    "ufc_target_fights": 8769
+  },
+  "cutoff_rule": "history_event_date < target_event_date",
+  "data_phase_completed_at_local": "2026-08-22T19:57:54.931596-06:00",
+  "data_phase_freeze_sha256": "d938a48f5b620a08a3255eda7172f5ecdbb3806bb9e6726f18daec2c00b83f70",
+  "decision": {
+    "fighter_state_primitives_materialized": true,
+    "matchup_interactions_built": false,
+    "model_training_started": false,
+    "opponent_adjustment_built": false,
+    "safe_for_feature_family_builders": true
+  },
+  "ewm365_half_life_days": 365,
+  "feature_contract_version": "0.1.0-draft",
+  "files": [
+    {
+      "bytes": 29625813,
+      "path": "features/v0/fighter_state_primitives.csv",
+      "sha256": "255073ce6e44c904becebc445c760ffee7af3288612f64f97e5e8c25b3fc08cc"
+    },
+    {
+      "bytes": 16782691,
+      "path": "features/v0/fighter_state_history_lineage.csv",
+      "sha256": "c251f3996d5ce0867fc121f5e2d7ebfa42cdca29d29fe48c63af974be640c9f0"
+    }
+  ],
+  "generated_at_utc": "2026-08-23T02:08:13.717916Z",
+  "lineage_columns": 10,
+  "max_included_history_event_date": "2026-06-27",
+  "output_columns": 257,
+  "rules": {
+    "ewm_uses_calendar_days_not_fabricated_fight_order": true,
+    "external_fights_can_supply_missing_round_stats": false,
+    "market_data_used": false,
+    "missing_is_not_zero": true,
+    "recent_boundary_ties_fail_closed": true,
+    "same_day_order_inferred": false
+  },
+  "same_day_policy": "exclude same-day other fights as prior evidence",
+  "schema_version": 1,
+  "stat_ineligible_reason_counts": {
+    "invalid_or_missing_finish_timing": 45
+  },
+  "target_date_max": "2026-08-15",
+  "target_date_min": "1994-03-11",
+  "target_scope": "canonical promotion == UFC"
+}
