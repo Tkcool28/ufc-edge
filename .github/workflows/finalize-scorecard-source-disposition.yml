@@ -1,0 +1,31 @@
+name: Finalize official scorecard source disposition
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/finalize_scorecard_source_disposition.py"
+      - "provenance/audits/official_scorecards_final_disposition_v0.json"
+      - ".github/workflows/finalize-scorecard-source-disposition.yml"
+  workflow_dispatch:
+permissions: {contents: write}
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: "${{ github.ref_name }}", fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Finalize, validate, and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          python pipelines/finalize_scorecard_source_disposition.py
+          python pipelines/validate_source_precedence.py
+          git config user.name "github-actions[bot]";git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add schemas/source_precedence_v0.json
+          git commit -m "Finalize official scorecards as raw QA-only [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin "HEAD:${{ github.ref_name }}"
