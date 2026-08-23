@@ -1,5 +1,6 @@
 name: Build full derived UFC scorecard OCR v0
 
+# Registered on main; trigger version 1.
 on:
   push:
     branches: [main]
