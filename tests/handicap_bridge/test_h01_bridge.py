@@ -78,6 +78,24 @@ def test_request_hash_is_stable_and_key_order_independent() -> None:
     assert one.request_hash == two.request_hash
 
 
+def test_issue_workflow_lifecycle_gate_is_event_specific() -> None:
+    workflow = Path(".github/workflows/h01-handicap-request.yml").read_text(encoding="utf-8")
+    assert "github.event.issue.state == 'open'" in workflow
+    assert "github.event.action == 'opened'" in workflow
+    assert "startsWith(github.event.issue.title, '[H00 REQUEST]')" in workflow
+    assert "github.event.action == 'labeled'" in workflow
+    assert "github.event.label.name == 'h00-request'" in workflow
+    assert "contains(github.event.issue.labels.*.name, 'h00-request')" not in workflow
+
+
+def test_completion_and_failure_labels_cannot_qualify_labeled_trigger() -> None:
+    workflow = Path(".github/workflows/h01-handicap-request.yml").read_text(encoding="utf-8")
+    gate = workflow.split("  process-request:\n", 1)[1].split("    runs-on:", 1)[0]
+    assert "github.event.label.name == 'h00-request'" in gate
+    assert "h00-complete" not in gate
+    assert "h00-failed" not in gate
+
+
 def test_replace_same_issue_is_idempotent_snapshot(tmp_path: Path) -> None:
     cache = tmp_path / "cache"
     staged = tmp_path / "staged"
