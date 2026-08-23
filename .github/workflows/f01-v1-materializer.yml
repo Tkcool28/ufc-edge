@@ -24,8 +24,18 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Compile feature package and CLI
-        run: python -m compileall -q src/ufc_edge/features tools/features/materialize_v1.py
+      - name: Parse feature Python sources without bytecode output
+        shell: bash
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+
+          paths = sorted((Path('src/ufc_edge/features')).glob('*.py')) + [Path('tools/features/materialize_v1.py')]
+          for path in paths:
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+          print(f'parsed {len(paths)} Python files')
+          PY
 
       - name: Validate F00 contract
         run: python -m ufc_edge.features.contract
@@ -37,7 +47,7 @@ jobs:
         run: python -m unittest discover -s tests/features -p 'test_v1_materializer.py' -v
 
       - name: Bounded real canonical validation
-        run: python tools/features/materialize_v1.py --validate-bounded >/tmp/f01-bounded-validation.json
+        run: python tools/features/materialize_v1.py --validate-bounded
 
       - name: Check whitespace
         run: git diff --check origin/main...HEAD
