@@ -1,5 +1,6 @@
 name: Patch external MMA builder header check
 
+# Registered on main; trigger version 1.
 on:
   push:
     branches: [main]
