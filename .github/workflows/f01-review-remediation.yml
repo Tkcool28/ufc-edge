@@ -1,6 +1,8 @@
 name: F01 Review Remediation
 
 on:
+  push:
+    branches: [feat/v1-pit-fighter-state-f01]
   pull_request:
     branches: [main]
     types: [synchronize]
@@ -10,7 +12,7 @@ permissions:
 
 jobs:
   remediate:
-    if: github.actor != 'github-actions[bot]' && github.head_ref == 'feat/v1-pit-fighter-state-f01'
+    if: github.actor != 'github-actions[bot]' && (github.event_name == 'push' || github.head_ref == 'feat/v1-pit-fighter-state-f01')
     runs-on: ubuntu-24.04
     env:
       PYTHONDONTWRITEBYTECODE: '1'
@@ -28,8 +30,6 @@ jobs:
           python - <<'PY'
           from pathlib import Path
 
-          # 1. The intended last3 ambiguity fixture must leave one slot before
-          # a two-fight same-date group; the previous fixture exactly fit.
           path = Path('tests/features/test_v1_materializer.py')
           text = path.read_text(encoding='utf-8')
           old = '''        rows = [
@@ -50,9 +50,6 @@ jobs:
               raise SystemExit('same-date ambiguity fixture anchor missing')
           path.write_text(text.replace(old, new), encoding='utf-8')
 
-          # 2. Prior scale weight ordering uses explicit linked fight date,
-          # explicit weigh-in date, explicit attempt number, then opaque ID only
-          # as a deterministic tie key. The ID is never chronology evidence.
           path = Path('src/ufc_edge/features/history.py')
           text = path.read_text(encoding='utf-8')
           old = '''        def key(row: dict[str, str]) -> tuple[date, str, int]:
@@ -70,8 +67,6 @@ jobs:
               raise SystemExit('prior-scale ordering anchor missing')
           path.write_text(text.replace(old, new), encoding='utf-8')
 
-          # 3. Layoff is defined by max prior event date; multiple bouts on that
-          # date do not make calendar days since that date ambiguous.
           path = Path('src/ufc_edge/features/state.py')
           text = path.read_text(encoding='utf-8')
           old = '''                    latest_date = max(f.event_date for f in prior_fights)
