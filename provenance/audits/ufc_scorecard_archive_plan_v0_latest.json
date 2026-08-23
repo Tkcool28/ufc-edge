@@ -1,0 +1,71 @@
+{
+  "allowed_image_hosts": [
+    "dmxg5wxfqgb4u.cloudfront.net",
+    "ufc.com",
+    "www.ufc.com"
+  ],
+  "decision": {
+    "binary_images_archived": false,
+    "canonical_judge_round_scores_written": false,
+    "ocr_performed": false,
+    "official_page_linked_cdn_allowed": true,
+    "required_next": "Archive exactly these 578 official-page-linked UFC image URLs with response metadata, byte counts and SHA-256 hashes. Fail closed on HTTP/content/hash errors before any OCR.",
+    "selected_urls_ready_for_archive": true
+  },
+  "fights_with_multiple_selected_images": 3,
+  "generated_at_utc": "2026-08-23T00:47:52.101958Z",
+  "image_host_counts": {
+    "dmxg5wxfqgb4u.cloudfront.net": 1,
+    "ufc.com": 577
+  },
+  "mapped_fights": 575,
+  "multi_image_fight_examples": [
+    {
+      "event_date": "2022-02-12",
+      "event_name": "UFC 271: Adesanya vs. Whittaker 2",
+      "fight_id": "49329e8c-d3b6-5d73-927b-50363d6b8e4d",
+      "identity_texts": [
+        "silva de andrade vs morozov",
+        "silva de andrade vs morozov 0"
+      ],
+      "image_urls": [
+        "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20271%20Adesanya%20vs.%20Whittaker%202%20-%20Scorecards%20-%20Silva%20de%20Andrade%20vs.%20Morozov.jpg?itok=aM8d10-P",
+        "https://ufc.com/images/styles/inline/s3/2022-02/UFC%20271%20Adesanya%20vs.%20Whittaker%202%20-%20Scorecards%20-%20Silva%20de%20Andrade%20vs.%20Morozov_0.jpg?itok=EEnIRV10"
+      ]
+    },
+    {
+      "event_date": "2024-11-02",
+      "event_name": "UFC Fight Night: Moreno vs. Albazi",
+      "fight_id": "848d77c2-5260-5ca7-90ca-fe77b78b7340",
+      "identity_texts": [
+        "cody gibson def chad anheliger",
+        "cody gibson def chad anheliger 0"
+      ],
+      "image_urls": [
+        "https://ufc.com/images/styles/inline/s3/2024-11/110224-official-scorecard-cody-gibson-def-chad-anheliger.jpeg?itok=hgcL2XOT",
+        "https://ufc.com/images/styles/inline/s3/2024-11/110224-official-scorecard-cody-gibson-def-chad-anheliger_0.jpeg?itok=wHx-ZLbc"
+      ]
+    },
+    {
+      "event_date": "2022-03-19",
+      "event_name": "UFC Fight Night: Volkov vs. Aspinall",
+      "fight_id": "ddc84dec-2fc9-5606-9994-c39abc600b53",
+      "identity_texts": [
+        "mccann vs carolina 67",
+        "mccann vs carolina 67 0"
+      ],
+      "image_urls": [
+        "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20Fight%20Night%20Volkov%20vs.%20Aspinall%20-%20Scorecards%20-%20McCann%20vs.%20Carolina%5B67%5D.jpg?itok=2VZqOUi5",
+        "https://ufc.com/images/styles/inline/s3/2022-03/UFC%20Fight%20Night%20Volkov%20vs.%20Aspinall%20-%20Scorecards%20-%20McCann%20vs.%20Carolina%5B67%5D_0.jpg?itok=u9BhT7U_"
+      ]
+    }
+  ],
+  "multi_image_fight_multiplicity": {
+    "2": 3
+  },
+  "output": "data/derived/identity/ufc_scorecard_archive_plan_v0.csv",
+  "schema_version": 1,
+  "selected_images": 578,
+  "source_candidate_rows": 3049,
+  "unique_image_urls": 578
+}
