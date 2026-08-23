@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_scorecard_physical_cell_ocr_v0",
+  "completed_at_utc": "2026-08-23T01:43:51.136467Z",
+  "exit_code": 0,
+  "github_run_id": "32610499688",
+  "log": "provenance/runs/ufc_scorecard_physical_cell_ocr_v0_32610499688.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "b973ed617c600dbe15ce306cde38865fd4ae30f7"
+}
