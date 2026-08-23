@@ -60,6 +60,12 @@ def test_unknown_field_rejected() -> None:
         parse_request(body(schema="h00-request-0.1", kind="fighter", fighter="Max Holloway", cutoff=CUTOFF, surprise="x"))
 
 
+@pytest.mark.parametrize("event_id", ["../escape", "a/b", "a\\b", ".."])
+def test_card_event_id_cannot_be_path_like(event_id: str) -> None:
+    with pytest.raises(RequestError, match="canonical ID"):
+        parse_request(body(schema="h00-request-0.1", kind="card", event_id=event_id, cutoff=CUTOFF))
+
+
 def test_authorization_is_owner_only_and_case_insensitive() -> None:
     assert actor_is_authorized("Tkcool28", "Tkcool28")
     assert actor_is_authorized("tkcool28", "Tkcool28")
