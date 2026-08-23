@@ -1,8 +1,0 @@
-=== BUILD 1 ===
-{"fighter_state_rows": 17538, "lineage_rows": 100367, "recent3_ambiguous": 28, "recent5_ambiguous": 18, "stat_eligible_keys": 17406, "ufc_target_fights": 8769}
-FIGHTER_STATE_OK contract=0.1.0-draft targets=8769 state_rows=17538 lineage_rows=100367 recent3_ambiguous=28 recent5_ambiguous=18 same_day_exclusion_rows=152
-=== BUILD 2 DETERMINISM CHECK ===
-{"fighter_state_rows": 17538, "lineage_rows": 100367, "recent3_ambiguous": 28, "recent5_ambiguous": 18, "stat_eligible_keys": 17406, "ufc_target_fights": 8769}
-FIGHTER_STATE_OK contract=0.1.0-draft targets=8769 state_rows=17538 lineage_rows=100367 recent3_ambiguous=28 recent5_ambiguous=18 same_day_exclusion_rows=152
-255073ce6e44c904becebc445c760ffee7af3288612f64f97e5e8c25b3fc08cc  features/v0/fighter_state_primitives.csv
-c251f3996d5ce0867fc121f5e2d7ebfa42cdca29d29fe48c63af974be640c9f0  features/v0/fighter_state_history_lineage.csv
