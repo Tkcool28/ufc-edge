@@ -15,6 +15,8 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -70,5 +72,16 @@ jobs:
           added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
           if printf '%s\n' "$added" | grep -E '(^|/)(runs?|output|artifacts)/|\.(csv|parquet|feather)$' | grep -v '^$'; then
             echo 'F00 must not add generated matrices, run directories, or data artifacts.' >&2
+            exit 1
+          fi
+
+      - name: Verify checkout has no runtime or untracked junk
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(git status --porcelain=v1 --untracked-files=all)"
+          if [[ -n "$status" ]]; then
+            printf '%s\n' "$status"
+            echo 'F00 validation checkout is not clean.' >&2
             exit 1
           fi
