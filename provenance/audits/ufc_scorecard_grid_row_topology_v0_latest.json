@@ -5,7 +5,7 @@
     "required_next": "If template mapping is strict, use its horizontal intervals with physical outer score-cell boundaries. Do not OCR round labels per cell. Quarantine line-count/template classes without strict mapping.",
     "template_mapping_strict_enough": false
   },
-  "generated_at_utc": "2026-08-23T01:32:20.602219Z",
+  "generated_at_utc": "2026-08-23T01:32:43.744137Z",
   "output": "data/derived/qa/ufc_scorecard_grid_row_topology_v0.csv",
   "sample_images": 48,
   "schema_version": 1,
