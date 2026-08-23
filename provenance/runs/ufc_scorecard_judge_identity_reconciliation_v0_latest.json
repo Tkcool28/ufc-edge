@@ -1,10 +1,10 @@
 {
   "audit": "ufc_scorecard_judge_identity_reconciliation_v0",
-  "completed_at_utc": "2026-08-23T01:24:54.643644Z",
+  "completed_at_utc": "2026-08-23T01:25:34.861445Z",
   "exit_code": 0,
-  "github_run_id": "32610280071",
-  "log": "provenance/runs/ufc_scorecard_judge_identity_reconciliation_v0_32610280071.log",
+  "github_run_id": "32610309888",
+  "log": "provenance/runs/ufc_scorecard_judge_identity_reconciliation_v0_32610309888.log",
   "schema_version": 1,
   "status": "success",
-  "trigger_sha": "f96ea3e786e06c0d0eeaa9e8fb85a62ea77f0b95"
+  "trigger_sha": "6b92c52e05bcc474f319179cc657ac72bf2d93d3"
 }
