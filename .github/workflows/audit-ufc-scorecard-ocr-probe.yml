@@ -1,11 +1,12 @@
-name: Audit UFC scorecard OCR probe
+name: Build UFC scorecard OCR derived layer
 
-# Registered on main; trigger version 1.
+# Proven registered workflow path; full selected-archive OCR routed here.
 on:
   push:
     branches: [main]
     paths:
       - "pipelines/audit_ufc_scorecard_ocr_probe.py"
+      - "pipelines/build_ufc_scorecard_ocr_v0.py"
       - "data/raw/ufc_official_scorecard_images/selected_v0/manifest.json"
       - "data/derived/identity/ufc_scorecard_archive_plan_v0.csv"
       - ".github/workflows/audit-ufc-scorecard-ocr-probe.yml"
@@ -15,9 +16,9 @@ permissions:
   contents: write
 
 jobs:
-  probe:
+  ocr:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,15 +33,18 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq tesseract-ocr
           tesseract --version | head -1
-      - name: Run bounded OCR probe and commit QA artifacts
+      - name: Run probe, full OCR, and commit derived QA artifacts
         shell: bash
         run: |
           set -uo pipefail
           git pull --rebase origin "${{ github.ref_name }}"
           mkdir -p provenance/runs provenance/audits data/derived/qa
-          log="provenance/runs/ufc_scorecard_ocr_probe_v0_${GITHUB_RUN_ID}.log"
+          log="provenance/runs/ufc_scorecard_ocr_v0_${GITHUB_RUN_ID}.log"
           set +e
-          python pipelines/audit_ufc_scorecard_ocr_probe.py >"$log" 2>&1
+          {
+            python pipelines/audit_ufc_scorecard_ocr_probe.py &&
+            python pipelines/build_ufc_scorecard_ocr_v0.py
+          } >"$log" 2>&1
           code=$?
           set -e
           python - "$code" "$log" <<'PY'
@@ -49,7 +53,7 @@ jobs:
           code, log = int(sys.argv[1]), sys.argv[2]
           payload = {
               "schema_version": 1,
-              "audit": "ufc_scorecard_ocr_probe_v0",
+              "build": "ufc_scorecard_ocr_v0",
               "status": "success" if code == 0 else "failed",
               "exit_code": code,
               "github_run_id": os.environ.get("GITHUB_RUN_ID"),
@@ -57,17 +61,19 @@ jobs:
               "completed_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
               "log": log,
           }
-          with open("provenance/runs/ufc_scorecard_ocr_probe_v0_latest.json", "w", encoding="utf-8") as fh:
+          with open("provenance/runs/ufc_scorecard_ocr_v0_latest.json", "w", encoding="utf-8") as fh:
               json.dump(payload, fh, indent=2, sort_keys=True); fh.write("\n")
           PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$log" provenance/runs/ufc_scorecard_ocr_probe_v0_latest.json
+          git add "$log" provenance/runs/ufc_scorecard_ocr_v0_latest.json
           if [ "$code" -eq 0 ]; then
             git add data/derived/qa/ufc_scorecard_ocr_probe_v0.csv \
-              provenance/audits/ufc_scorecard_ocr_probe_v0_latest.json
+              provenance/audits/ufc_scorecard_ocr_probe_v0_latest.json \
+              data/derived/qa/ufc_scorecard_ocr_v0.csv \
+              provenance/audits/ufc_scorecard_ocr_v0_latest.json
           fi
-          git commit -m "Audit UFC scorecard OCR probe (${code}) [skip ci]" || true
+          git commit -m "Build UFC scorecard OCR v0 (${code}) [skip ci]" || true
           git pull --rebase origin "${{ github.ref_name }}"
           git push origin "HEAD:${{ github.ref_name }}"
           exit "$code"
