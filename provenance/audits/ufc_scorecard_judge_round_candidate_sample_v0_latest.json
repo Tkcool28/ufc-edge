@@ -1,0 +1,24 @@
+{
+  "accepted_cards": 0,
+  "accepted_fights": 0,
+  "accepted_judge_round_rows": 0,
+  "card_status_counts": {
+    "excluded_pre_candidate": 6
+  },
+  "decision": {
+    "all_candidate_rows_are_derived_qa_only": true,
+    "all_independent_gates_required": true,
+    "canonical_judge_round_scores_written": false,
+    "decision_verdict_consistency_required": true,
+    "official_alt_totals_match_when_available": true,
+    "required_next": "Manually/audit-programmatically inspect accepted sample rows. If coherent, scale the identical strict parser gates to all 578 archived images; unresolved cards remain exclusions.",
+    "sample_candidate_subset_can_advance": false
+  },
+  "exclusion_rows": 6,
+  "exclusions": "data/derived/qa/ufc_scorecard_judge_round_candidate_sample_exclusions_v0.csv",
+  "generated_at_utc": "2026-08-23T01:26:55.131097Z",
+  "official_alt_total_checks": {},
+  "output": "data/derived/qa/ufc_scorecard_judge_round_candidate_sample_v0.csv",
+  "sample_cards_considered": 6,
+  "schema_version": 1
+}

@@ -1,0 +1,10 @@
+{
+  "build": "ufc_scorecard_judge_round_candidate_sample_v0",
+  "completed_at_utc": "2026-08-23T01:26:55.149147Z",
+  "exit_code": 0,
+  "github_run_id": "32610362196",
+  "log": "provenance/runs/ufc_scorecard_judge_round_candidate_sample_v0_32610362196.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "a9a7c84452b59f540ee40e9267a0075eb9ef4ec2"
+}
