@@ -2,7 +2,7 @@
   "accepted_identity_gap_nodes": 423,
   "canonical_contract_version": "0.4.0-draft",
   "completion_marker_required": true,
-  "generated_at_utc": "2026-08-23T01:57:07.122478Z",
+  "generated_at_utc": "2026-08-23T01:58:03.924335Z",
   "manifest_counts": {
     "canonical_ufc_weigh_in_exclusions": 2,
     "events": 1014,

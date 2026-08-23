@@ -1,11 +1,11 @@
 {
-  "completed_at_utc": "2026-08-23T01:57:07.148140Z",
+  "completed_at_utc": "2026-08-23T01:58:03.949805Z",
   "exit_code": 0,
   "gate": "data_phase_final_gate",
-  "github_run_id": "32611586999",
-  "log": "provenance/runs/data_phase_final_gate_32611586999.log",
+  "github_run_id": "32611624279",
+  "log": "provenance/runs/data_phase_final_gate_32611624279.log",
   "schema_version": 1,
   "stage": "final",
   "status": "success",
-  "trigger_sha": "fbd019e6f7ef1672cc85f2ae0c2cb09dc2074e39"
+  "trigger_sha": "43af6da14614f5d0ed8e9b319a16f5bc85a1b29d"
 }
