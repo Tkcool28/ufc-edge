@@ -1,0 +1,81 @@
+name: Finalize UFC Edge DATA phase
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/final_data_phase_gate.py"
+      - "pipelines/finalize_data_phase.py"
+      - ".github/workflows/finalize-data-phase.yml"
+  workflow_dispatch:
+permissions: {contents: write}
+jobs:
+  closeout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: "${{ github.ref_name }}", fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Preclose, finalize, revalidate, and commit
+        shell: bash
+        run: |
+          set -uo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          mkdir -p provenance/runs provenance/audits
+          log="provenance/runs/data_phase_final_gate_${GITHUB_RUN_ID}.log"
+
+          set +e
+          python pipelines/final_data_phase_gate.py >"$log" 2>&1
+          pre=$?
+          set -e
+          if [ "$pre" -ne 0 ]; then
+            python - "$pre" "$log" <<'PY'
+          import json,os,sys
+          from datetime import datetime,timezone
+          code,log=int(sys.argv[1]),sys.argv[2]
+          p={"schema_version":1,"gate":"data_phase_final_gate","stage":"preclose","status":"failed","exit_code":code,"github_run_id":os.environ.get("GITHUB_RUN_ID"),"trigger_sha":os.environ.get("GITHUB_SHA"),"completed_at_utc":datetime.now(timezone.utc).isoformat().replace("+00:00","Z"),"log":log}
+          open("provenance/runs/data_phase_final_gate_latest.json","w").write(json.dumps(p,indent=2,sort_keys=True)+"\n")
+          PY
+            git config user.name "github-actions[bot]";git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add "$log" provenance/runs/data_phase_final_gate_latest.json
+            git commit -m "Record DATA phase preclose failure [skip ci]" || true
+            git pull --rebase origin "${{ github.ref_name }}";git push origin "HEAD:${{ github.ref_name }}"
+            exit "$pre"
+          fi
+
+          set +e
+          {
+            python pipelines/finalize_data_phase.py
+            python pipelines/validate_canonical_contract.py
+            python pipelines/validate_source_field_map.py
+            python pipelines/validate_source_precedence.py
+            python pipelines/validate_canonical_data_v0.py
+            python pipelines/final_data_phase_gate.py --require-complete-marker
+          } >>"$log" 2>&1
+          code=$?
+          set -e
+
+          python - "$code" "$log" <<'PY'
+          import json,os,sys
+          from datetime import datetime,timezone
+          code,log=int(sys.argv[1]),sys.argv[2]
+          p={"schema_version":1,"gate":"data_phase_final_gate","stage":"final","status":"success" if code==0 else "failed","exit_code":code,"github_run_id":os.environ.get("GITHUB_RUN_ID"),"trigger_sha":os.environ.get("GITHUB_SHA"),"completed_at_utc":datetime.now(timezone.utc).isoformat().replace("+00:00","Z"),"log":log}
+          open("provenance/runs/data_phase_final_gate_latest.json","w").write(json.dumps(p,indent=2,sort_keys=True)+"\n")
+          PY
+
+          git config user.name "github-actions[bot]";git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "$code" -eq 0 ]; then
+            git add DATA_PHASE_COMPLETE.md provenance/data_phase_freeze_v0.json schemas/source_precedence_v0.json provenance/audits/data_phase_final_gate_latest.json "$log" provenance/runs/data_phase_final_gate_latest.json
+            git commit -m "Complete UFC Edge DATA phase [skip ci]" || true
+            git pull --rebase origin "${{ github.ref_name }}";git push origin "HEAD:${{ github.ref_name }}"
+            exit 0
+          fi
+
+          # Fail closed: never publish a completion marker or machine-complete status on failed final validation.
+          git restore schemas/source_precedence_v0.json provenance/audits/data_phase_final_gate_latest.json 2>/dev/null || true
+          rm -f DATA_PHASE_COMPLETE.md provenance/data_phase_freeze_v0.json
+          git add "$log" provenance/runs/data_phase_final_gate_latest.json
+          git commit -m "Record DATA phase final-gate failure [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}";git push origin "HEAD:${{ github.ref_name }}"
+          exit "$code"
