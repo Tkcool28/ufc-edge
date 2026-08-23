@@ -1,0 +1,11 @@
+{
+  "build": "fighter_state_primitives_v0",
+  "completed_at_utc": "2026-08-23T02:08:18.956841Z",
+  "determinism_check": "pass",
+  "exit_code": 0,
+  "github_run_id": "32612054682",
+  "log": "features/provenance/runs/fighter_state_primitives_v0_32612054682.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "34487670ba2b75e97f933411a58bf4de8e41b3ae"
+}
