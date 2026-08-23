@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_scorecard_round_eligibility_v0",
+  "completed_at_utc": "2026-08-23T01:05:23.398493Z",
+  "exit_code": 0,
+  "github_run_id": "32609490187",
+  "log": "provenance/runs/ufc_scorecard_round_eligibility_v0_32609490187.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "b749c7245c1911431ace9dbbadb6b9b90a43dd59"
+}

@@ -1,0 +1,64 @@
+{
+  "decision": {
+    "canonical_judge_round_scores_written": false,
+    "required_next": "Use expected_scored_rounds as a hard upper bound for any OCR score parser. Review any unresolved fight timing before emitting score candidates.",
+    "round_eligibility_can_guard_future_parser": false,
+    "unfinished_stoppage_round_is_score_eligible": false
+  },
+  "eligibility_status_counts": {
+    "eligible": 573,
+    "review": 2
+  },
+  "expected_completed_round_count_distribution": {
+    "0": 152,
+    "1": 95,
+    "2": 50,
+    "3": 245,
+    "4": 2,
+    "5": 29
+  },
+  "fights_with_zero_expected_completed_rounds": 152,
+  "generated_at_utc": "2026-08-23T01:05:23.367652Z",
+  "method_counts": {
+    "DECISION": 274,
+    "DQ": 1,
+    "KO_TKO": 189,
+    "NO_CONTEST": 4,
+    "OTHER": 3,
+    "SUBMISSION": 104
+  },
+  "output": "data/derived/qa/ufc_scorecard_round_eligibility_v0.csv",
+  "review_examples": [
+    {
+      "eligibility_status": "review",
+      "event_date": "2021-04-17",
+      "event_name": "UFC Fight Night: Whittaker vs. Gastelum",
+      "expected_scored_rounds": "",
+      "fight_id": "3fc07dd9-4d2b-5734-816e-45d12bfc4961",
+      "finish_round": "3",
+      "finish_time_sec": "65",
+      "method": "DECISION",
+      "reason": "decision/draw carries sub-300 finish_time_sec; timing semantics need review",
+      "result": "win_loss",
+      "scheduled_rounds": "3",
+      "scorecard_image_count": 1
+    },
+    {
+      "eligibility_status": "review",
+      "event_date": "2022-04-16",
+      "event_name": "UFC Fight Night: Luque vs. Muhammad",
+      "expected_scored_rounds": "",
+      "fight_id": "d3198a34-c07b-502f-af92-d2face325172",
+      "finish_round": "3",
+      "finish_time_sec": "236",
+      "method": "DECISION",
+      "reason": "decision/draw carries sub-300 finish_time_sec; timing semantics need review",
+      "result": "win_loss",
+      "scheduled_rounds": "3",
+      "scorecard_image_count": 1
+    }
+  ],
+  "schema_version": 1,
+  "scorecard_fights": 575,
+  "scorecard_images": 578
+}
