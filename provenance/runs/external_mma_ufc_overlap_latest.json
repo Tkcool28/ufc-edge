@@ -1,0 +1,10 @@
+{
+  "audit": "external_mma_ufc_overlap",
+  "completed_at_utc": "2026-08-23T00:04:11.887668Z",
+  "exit_code": 0,
+  "github_run_id": "32606888194",
+  "log": "provenance/runs/external_mma_ufc_overlap_32606888194.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "0db1aa23f73d75f10ef9f98eeecbd5a36de608be"
+}
