@@ -41,8 +41,6 @@ jobs:
           )
           exec(compile(source, 'f00-exposure-remediation', 'exec'), {'__name__': '__main__'})
 
-          # The staged workflow embeds Python that embeds Python; normalize the
-          # inserted validator block explicitly so YAML indentation cannot alter it.
           contract_path = Path('src/ufc_edge/features/contract.py')
           contract = contract_path.read_text(encoding='utf-8')
           block_start = contract.index('def _uses_elapsed_time_exposure')
@@ -68,23 +66,17 @@ jobs:
               '    policy = catalog.get("elapsed_exposure_policy")',
               '    if not isinstance(policy, dict):',
               '        raise ContractError("catalog must declare elapsed_exposure_policy")',
-              '    _require_keys(',
-              '        policy,',
-              '        ("version", "canonical_v0_status", "allowed_sources", "blocked_feature_concepts", "forbidden_inferences", "materializable_requirement", "promotion_requirement"),',
-              '        "elapsed_exposure_policy",',
-              '    )',
+              '    _require_keys(policy, ("version", "canonical_v0_status", "allowed_sources", "blocked_feature_concepts", "forbidden_inferences", "materializable_requirement", "promotion_requirement"), "elapsed_exposure_policy")',
               '    if policy["version"] != 1:',
               '        raise ContractError("elapsed_exposure_policy.version must be 1")',
               '    if policy["canonical_v0_status"] != "no_general_safe_elapsed_round_or_fight_exposure_source":',
               '        raise ContractError("canonical v0 elapsed-exposure status cannot be weakened silently")',
-              '',
               '    allowed_sources = policy["allowed_sources"]',
               '    blocked = policy["blocked_feature_concepts"]',
               '    if not isinstance(allowed_sources, list) or len(allowed_sources) != len(set(allowed_sources)):',
               '        raise ContractError("elapsed_exposure_policy.allowed_sources must be a unique list")',
               '    if not isinstance(blocked, list) or len(blocked) != len(set(blocked)):',
               '        raise ContractError("elapsed_exposure_policy.blocked_feature_concepts must be a unique list")',
-              '',
               '    by_name = {feature["feature_name"]: feature for feature in features}',
               '    missing = sorted(set(blocked) - set(by_name))',
               '    if missing:',
@@ -92,7 +84,6 @@ jobs:
               '    for name in blocked:',
               '        if by_name[name]["status"] != "DEFERRED":',
               '            raise ContractError(f"{name} is blocked by canonical-v0 elapsed exposure and must remain DEFERRED")',
-              '',
               '    for feature in features:',
               '        name = feature["feature_name"]',
               '        source = feature.get("elapsed_exposure_source")',
@@ -107,11 +98,9 @@ jobs:
               '                    raise ContractError(f"{name}.elapsed_exposure_source.{field} must be explicit")',
               '            if source["contract_safe"] and source["source"] not in allowed_sources:',
               '                raise ContractError(f"{name} claims an elapsed-exposure source not allowed by the contract")',
-              '',
               '        if _uses_elapsed_time_exposure(feature) and feature["status"] not in NON_MATERIALIZED_STATUSES:',
               '            if source is None or source["contract_safe"] is not True or source["source"] not in allowed_sources:',
               '                raise ContractError(f"{name} uses elapsed-time exposure without a contract-safe allowed source/eligibility")',
-              '',
               '        if source is not None:',
               '            combined = " ".join(str(source[key]).lower() for key in ("source", "eligibility", "provenance")) + " " + feature["exact_formula_or_definition"].lower()',
               '            if ("300 second" in combined or "five minute" in combined or "5 minute" in combined) and "assum" in combined:',
@@ -121,6 +110,11 @@ jobs:
           ]
           clean_block = "\n".join(lines)
           contract = contract[:block_start] + clean_block + contract[block_end:]
+          old_guard = 'if feature["status"] not in ROUND_TARGET_ONLY_STATUSES and not _declares_strict_prior(cutoff):'
+          new_guard = 'if feature["status"] not in ROUND_TARGET_ONLY_STATUSES and not (feature["status"] == "DEFERRED" and feature["layer"] == "simulator_component") and not _declares_strict_prior(cutoff):'
+          if old_guard not in contract:
+              raise SystemExit('simulator PIT guard anchor missing')
+          contract = contract.replace(old_guard, new_guard)
           contract_path.write_text(contract, encoding='utf-8')
           PY
 
