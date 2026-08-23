@@ -1,0 +1,90 @@
+{
+  "decision": {
+    "attempt_number_promoted": false,
+    "canonical_rows_written": false,
+    "dedupe_rule_candidate": "one canonical observation per exact (fight_id, fighter_id) only if all official source rows agree on scale_weight_lbs",
+    "identity_promotable": true,
+    "marker_semantics_promoted": false,
+    "required_next": "If identity, weight, and duplicate agreement gates pass, materialize one canonical weigh-in observation per fight/fighter with scale weight only. Preserve all supporting official article records in field provenance; leave page-local semantics null unless explicitly resolved observation-by-observation.",
+    "scale_weight_promotable": false,
+    "weigh_in_date_promoted": false
+  },
+  "duplicate_extra_source_rows": 2,
+  "duplicate_fight_fighter_groups": 2,
+  "duplicate_group_examples": [
+    {
+      "article_urls": [
+        "https://www.ufc.com/news/fight-night-charlotte-weigh-results",
+        "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results"
+      ],
+      "fight_id": "2fad6a2f-c635-53cf-8f23-6d4303e8670a",
+      "fighter_id": "8add16fd-652c-57d9-9619-e8b90c0cc620",
+      "markers": [
+        ""
+      ],
+      "row_count": 2,
+      "source_records": [
+        {
+          "article_candidate_index": "17",
+          "bout_ordinal_in_article": "1",
+          "source_side": "a"
+        },
+        {
+          "article_candidate_index": "110",
+          "bout_ordinal_in_article": "2",
+          "source_side": "b"
+        }
+      ],
+      "weights": [
+        186.0
+      ]
+    },
+    {
+      "article_urls": [
+        "https://www.ufc.com/news/fight-night-charlotte-weigh-results",
+        "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results"
+      ],
+      "fight_id": "2fad6a2f-c635-53cf-8f23-6d4303e8670a",
+      "fighter_id": "3e46fe68-7ebd-54d1-af3e-6fc3dca3a05c",
+      "markers": [
+        ""
+      ],
+      "row_count": 2,
+      "source_records": [
+        {
+          "article_candidate_index": "17",
+          "bout_ordinal_in_article": "1",
+          "source_side": "b"
+        },
+        {
+          "article_candidate_index": "110",
+          "bout_ordinal_in_article": "2",
+          "source_side": "a"
+        }
+      ],
+      "weights": [
+        185.0,
+        186.0
+      ]
+    }
+  ],
+  "duplicate_groups_with_conflicting_marker": 0,
+  "duplicate_groups_with_conflicting_scale_weight": 1,
+  "expected_two_per_distinct_fight": 12890,
+  "generated_at_utc": "2026-08-23T00:26:58.426932Z",
+  "integrity_counts": {},
+  "invalid_examples": [],
+  "marker_counts": {
+    "*": 114,
+    "**": 44,
+    "***": 9,
+    "****": 5,
+    "<empty>": 12720
+  },
+  "schema_version": 1,
+  "source_articles": 614,
+  "source_candidate_rows": 12892,
+  "source_fighters": 2249,
+  "source_fights": 6445,
+  "unique_fight_fighter_observations": 12890
+}

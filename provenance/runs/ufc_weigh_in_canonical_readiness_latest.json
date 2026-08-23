@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_weigh_in_canonical_readiness",
+  "completed_at_utc": "2026-08-23T00:26:58.463553Z",
+  "exit_code": 0,
+  "github_run_id": "32607872302",
+  "log": "provenance/runs/ufc_weigh_in_canonical_readiness_32607872302.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "f8f5e73312947bf1c577538b3b658788a3d74ebf"
+}
