@@ -1,0 +1,41 @@
+{
+  "canonical_candidate_fighters": 2249,
+  "canonical_candidate_fights": 6445,
+  "canonical_candidate_rows": 12890,
+  "decision": {
+    "attempt_number_promoted": false,
+    "canonical_rows_written": false,
+    "exact_two_observations_per_fight": true,
+    "explicit_non_ufc_article_context_excluded": true,
+    "identity_promotable": true,
+    "marker_semantics_promoted": false,
+    "required_next": "Materialize 12,890 canonical UFC weigh-in observations (6,445 fights x 2 fighters) with fight/fighter identity and scale weight. Preserve source article lineage in field provenance; leave unresolved annotation/date/attempt semantics null.",
+    "scale_weight_promotable": true,
+    "weigh_in_date_promoted": false
+  },
+  "excluded_rows": 2,
+  "exclusion_examples": [
+    {
+      "article_title": "Official Strikeforce: Rousey vs. Kaufman Weigh In Results",
+      "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+      "fight_id": "2fad6a2f-c635-53cf-8f23-6d4303e8670a",
+      "fighter_id": "3e46fe68-7ebd-54d1-af3e-6fc3dca3a05c",
+      "reason": "explicit_strikeforce_article_context"
+    },
+    {
+      "article_title": "Official Strikeforce: Rousey vs. Kaufman Weigh In Results",
+      "article_url": "https://www.ufc.com/news/official-strikeforce-rousey-vs-kaufman-weigh-results",
+      "fight_id": "2fad6a2f-c635-53cf-8f23-6d4303e8670a",
+      "fighter_id": "8add16fd-652c-57d9-9619-e8b90c0cc620",
+      "reason": "explicit_strikeforce_article_context"
+    }
+  ],
+  "exclusion_reason_counts": {
+    "explicit_non_ufc_article_context": 2
+  },
+  "generated_at_utc": "2026-08-23T00:42:37.991084Z",
+  "nonempty_marker_rows_preserved_as_raw_only": 172,
+  "output": "data/derived/identity/ufc_weigh_in_canonical_candidate_v2.csv",
+  "schema_version": 2,
+  "source_rows": 12892
+}
