@@ -1,0 +1,134 @@
+name: H00 Handicap Access
+
+on:
+  push:
+    branches:
+      - feat/handicap-access-h00
+    paths:
+      - "src/ufc_edge/handicap/**"
+      - "tools/handicap/**"
+      - "tests/handicap/**"
+      - "handicap/README.md"
+      - ".github/workflows/h00-handicap-access.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "src/ufc_edge/handicap/**"
+      - "tools/handicap/**"
+      - "tests/handicap/**"
+      - "handicap/README.md"
+      - ".github/workflows/h00-handicap-access.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  test-and-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONPATH: src
+      H00_CUTOFF: "2026-08-23T03:30:00Z"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependency
+        run: python -m pip install pytest
+
+      - name: Compile H00
+        id: compile
+        run: python -m compileall -q src/ufc_edge/handicap tools/handicap tests/handicap
+
+      - name: Run H00 tests
+        id: tests
+        run: python -m pytest -q tests/handicap
+
+      - name: Build fighter index
+        id: index
+        run: python tools/handicap/build_fighter_index.py
+
+      - name: Resolve acceptance identities from trusted index
+        id: identities
+        run: |
+          MAX_ID=$(python -c 'import json; p=json.load(open("handicap/v0/index/fighters.json")); ids=p["lookup"]["exact"].get("Max Holloway", []); assert len(ids)==1, ids; print(ids[0])')
+          DUSTIN_ID=$(python -c 'import json; p=json.load(open("handicap/v0/index/fighters.json")); ids=p["lookup"]["exact"].get("Dustin Poirier", []); assert len(ids)==1, ids; print(ids[0])')
+          echo "MAX_ID=$MAX_ID" >> "$GITHUB_ENV"
+          echo "DUSTIN_ID=$DUSTIN_ID" >> "$GITHUB_ENV"
+          echo "Resolved Max Holloway: $MAX_ID"
+          echo "Resolved Dustin Poirier: $DUSTIN_ID"
+
+      - name: Build Max Holloway dossier
+        id: dossier
+        run: |
+          python tools/handicap/build_fighter_dossier.py \
+            --fighter-id "$MAX_ID" \
+            --cutoff "$H00_CUTOFF"
+
+      - name: Build Holloway vs Poirier matchup
+        id: matchup
+        run: |
+          python tools/handicap/build_matchup_packet.py \
+            --fighter-a "$MAX_ID" \
+            --fighter-b "$DUSTIN_ID" \
+            --cutoff "$H00_CUTOFF"
+
+      - name: Validate generated demo
+        id: validation
+        run: |
+          python tools/handicap/validate_h00_demo.py \
+            --index handicap/v0/index/fighters.json \
+            --dossier "handicap/v0/fighters/${MAX_ID}.json" \
+            --matchup-json "handicap/v0/matchups/${MAX_ID}__${DUSTIN_ID}.json" \
+            --matchup-md "handicap/v0/matchups/${MAX_ID}__${DUSTIN_ID}.md" \
+            --report handicap/H00_VALIDATION.md
+
+      - name: Confirm frozen DATA untouched
+        id: data_integrity
+        run: |
+          git diff --exit-code -- \
+            data/raw \
+            data/canonical/v0 \
+            data/derived \
+            provenance/data_phase_freeze_v0.json \
+            schemas/canonical_data_contract_v0.json \
+            schemas/source_field_map_v0.json \
+            schemas/source_precedence_v0.json \
+            schemas/source_adapter_contract_v0.md
+
+      - name: Report acceptance result on draft PR
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const lines = [
+              `### H00 private canonical acceptance — ${context.sha.slice(0, 12)}`,
+              `- compile: **${{ steps.compile.outcome }}**`,
+              `- tests: **${{ steps.tests.outcome }}**`,
+              `- fighter index: **${{ steps.index.outcome }}**`,
+              `- acceptance identity resolution: **${{ steps.identities.outcome }}**`,
+              `- Max Holloway dossier: **${{ steps.dossier.outcome }}**`,
+              `- Holloway/Poirier matchup: **${{ steps.matchup.outcome }}**`,
+              `- packet validation: **${{ steps.validation.outcome }}**`,
+              `- frozen DATA integrity: **${{ steps.data_integrity.outcome }}**`,
+              `- CI persistence: **none (validation-only)**`,
+              `- workflow result: **${{ job.status }}**`,
+              `- run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+            ];
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: 2,
+              body: lines.join('\n'),
+            });
