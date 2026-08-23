@@ -1,0 +1,10 @@
+{
+  "audit": "external_mma_canonical_readiness",
+  "completed_at_utc": "2026-08-23T00:13:09.977044Z",
+  "exit_code": 0,
+  "github_run_id": "32607267960",
+  "log": "provenance/runs/external_mma_canonical_readiness_32607267960.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "f7f560ac149ae8b4662dd6f96c8b821de91ac985"
+}
