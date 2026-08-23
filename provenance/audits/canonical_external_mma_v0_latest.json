@@ -1,0 +1,58 @@
+{
+  "canonical_contract_version": "0.4.0-draft",
+  "canonical_events_total": 1014,
+  "canonical_fights_total": 9252,
+  "event_identity_links": 230,
+  "events_added_this_run": 230,
+  "exclusion_reason_counts": {
+    "duplicate_source_fight_key_quarantine": 2,
+    "ufc_label_excluded_lower_precedence": 6212,
+    "unresolved_trusted_fighter_identity": 3751
+  },
+  "exclusions": 9965,
+  "field_provenance_rows_added_this_run": 5971,
+  "fight_identity_links": 483,
+  "fights_added_this_run": 483,
+  "identity_links_added_this_run": 1079,
+  "materialized_external_events": 230,
+  "materialized_external_fights": 483,
+  "materialized_field_provenance_rows": 5971,
+  "outputs": {
+    "events": "data/canonical/v0/events.csv",
+    "exclusions": "data/derived/qa/canonical_external_mma_exclusions_v0.csv",
+    "field_provenance": "data/canonical/v0/field_provenance.csv",
+    "fights": "data/canonical/v0/fights.csv",
+    "source_identity_links": "data/canonical/v0/source_identity_links.csv"
+  },
+  "promoted_fighter_identity_links": 366,
+  "promoted_method_counts": {
+    "DECISION": 220,
+    "DRAW": 4,
+    "KO_TKO": 148,
+    "NO_CONTEST": 5,
+    "SUBMISSION": 106
+  },
+  "promoted_organisation_counts": {
+    "Bellator MMA": 466,
+    "One Championship": 17
+  },
+  "promoted_result_counts": {
+    "draw": 4,
+    "no_contest": 5,
+    "win_loss": 474
+  },
+  "rules": {
+    "display_name_identity_used": false,
+    "duplicate_source_key_quarantined": true,
+    "external_round_stats_added": false,
+    "scheduled_rounds_invented": false,
+    "title_bout_invented": false,
+    "trusted_external_fighter_url_required_both_sides": true,
+    "ufc_labelled_external_rows_promoted": false,
+    "ufc_overlap_pair_date_tolerance_days": 1,
+    "weight_class_invented": false
+  },
+  "schema_version": 1,
+  "source": "kaggle_pro_mma_fights",
+  "source_snapshot_id": "v1"
+}

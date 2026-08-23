@@ -1,0 +1,12 @@
+CONTRACT_OK version=0.4.0-draft tables=13 fields=152 missing_is_not_zero=true round_zero_actual=false sig_splits=true
+SOURCE_MAP_OK version=0.4.0-draft mappings=144 statuses={"provisional": 34, "rejected": 6, "unresolved": 27, "verified": 77} source_count=8
+SOURCE_PRECEDENCE_OK version=0.2.0-draft families=9 active=7 pending_acquisition=0 acquired_qa_pending=2 sources=8
+{"canonical_events_total": 1014, "canonical_fights_total": 9252, "events_added_this_run": 230, "exclusion_reason_counts": {"duplicate_source_fight_key_quarantine": 2, "ufc_label_excluded_lower_precedence": 6212, "unresolved_trusted_fighter_identity": 3751}, "exclusions": 9965, "external_events": 230, "external_fighter_urls_used": 366, "external_fights": 483, "external_provenance_rows": 5971, "fights_added_this_run": 483, "identity_links_added_this_run": 1079, "provenance_rows_added_this_run": 5971}
+TABLE_OK fighters rows=4600
+TABLE_OK events rows=1014
+TABLE_OK fights rows=9252
+TABLE_OK fighter_round_stats rows=41218
+TABLE_OK fighter_round_position rows=32156
+TABLE_OK source_identity_links rows=31426
+TABLE_OK field_provenance rows=5971
+CANONICAL_DATA_OK contract=0.4.0-draft fighters=4600 events=1014 fights=9252 rounds=41218 position_rows=32156 fight_coverage=104.436% round_coverage=98.911%
