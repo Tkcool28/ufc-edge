@@ -1,0 +1,41 @@
+name: Audit UFC scorecard physical cell OCR v0
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pipelines/audit_ufc_scorecard_physical_cell_ocr_v0.py"
+      - "data/derived/qa/ufc_scorecard_grid_lines_v0.csv"
+      - "data/derived/qa/ufc_scorecard_round_eligibility_v0.csv"
+      - ".github/workflows/audit-ufc-scorecard-physical-cell-ocr.yml"
+  workflow_dispatch:
+permissions: {contents: write}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: "${{ github.ref_name }}", fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr && python -m pip install --quiet Pillow
+      - name: Audit physical score cells and commit
+        shell: bash
+        run: |
+          set -uo pipefail
+          git pull --rebase origin "${{ github.ref_name }}"
+          mkdir -p provenance/runs provenance/audits data/derived/qa
+          log="provenance/runs/ufc_scorecard_physical_cell_ocr_v0_${GITHUB_RUN_ID}.log"
+          set +e; python pipelines/audit_ufc_scorecard_physical_cell_ocr_v0.py >"$log" 2>&1; code=$?; set -e
+          python - "$code" "$log" <<'PY'
+          import json,os,sys
+          from datetime import datetime,timezone
+          code,log=int(sys.argv[1]),sys.argv[2]
+          p={"schema_version":1,"audit":"ufc_scorecard_physical_cell_ocr_v0","status":"success" if code==0 else "failed","exit_code":code,"github_run_id":os.environ.get("GITHUB_RUN_ID"),"trigger_sha":os.environ.get("GITHUB_SHA"),"completed_at_utc":datetime.now(timezone.utc).isoformat().replace("+00:00","Z"),"log":log}
+          open("provenance/runs/ufc_scorecard_physical_cell_ocr_v0_latest.json","w").write(json.dumps(p,indent=2,sort_keys=True)+"\n")
+          PY
+          git config user.name "github-actions[bot]";git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$log" provenance/runs/ufc_scorecard_physical_cell_ocr_v0_latest.json
+          if [ "$code" -eq 0 ]; then git add data/derived/qa/ufc_scorecard_physical_cell_ocr_v0.csv provenance/audits/ufc_scorecard_physical_cell_ocr_v0_latest.json; fi
+          git commit -m "Audit UFC scorecard physical cell OCR (${code}) [skip ci]" || true
+          git pull --rebase origin "${{ github.ref_name }}";git push origin "HEAD:${{ github.ref_name }}";exit "$code"
