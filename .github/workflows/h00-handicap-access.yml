@@ -33,8 +33,6 @@ jobs:
     env:
       PYTHONPATH: src
       H00_CUTOFF: "2026-08-23T03:30:00Z"
-      MAX_ID: "1ca6e52b-4164-500c-9f35-babbe16e125a"
-      DUSTIN_ID: "c1661324-36dc-5257-b6ff-583a62cf8b70"
 
     steps:
       - uses: actions/checkout@v4
@@ -60,6 +58,16 @@ jobs:
       - name: Build fighter index
         id: index
         run: python tools/handicap/build_fighter_index.py
+
+      - name: Resolve acceptance identities from trusted index
+        id: identities
+        run: |
+          MAX_ID=$(python -c 'import json; p=json.load(open("handicap/v0/index/fighters.json")); ids=p["lookup"]["exact"].get("Max Holloway", []); assert len(ids)==1, ids; print(ids[0])')
+          DUSTIN_ID=$(python -c 'import json; p=json.load(open("handicap/v0/index/fighters.json")); ids=p["lookup"]["exact"].get("Dustin Poirier", []); assert len(ids)==1, ids; print(ids[0])')
+          echo "MAX_ID=$MAX_ID" >> "$GITHUB_ENV"
+          echo "DUSTIN_ID=$DUSTIN_ID" >> "$GITHUB_ENV"
+          echo "Resolved Max Holloway: $MAX_ID"
+          echo "Resolved Dustin Poirier: $DUSTIN_ID"
 
       - name: Build Max Holloway dossier
         id: dossier
@@ -127,6 +135,7 @@ jobs:
               `- compile: **${{ steps.compile.outcome }}**`,
               `- tests: **${{ steps.tests.outcome }}**`,
               `- fighter index: **${{ steps.index.outcome }}**`,
+              `- acceptance identity resolution: **${{ steps.identities.outcome }}**`,
               `- Max Holloway dossier: **${{ steps.dossier.outcome }}**`,
               `- Holloway/Poirier matchup: **${{ steps.matchup.outcome }}**`,
               `- packet validation: **${{ steps.validation.outcome }}**`,
