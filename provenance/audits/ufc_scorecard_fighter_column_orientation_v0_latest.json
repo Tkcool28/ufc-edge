@@ -1,0 +1,52 @@
+{
+  "column_side_vote_counts": {
+    "0": {
+      "left": 44
+    },
+    "1": {
+      "left": 3,
+      "right": 40
+    },
+    "2": {
+      "left": 42,
+      "right": 3
+    },
+    "3": {
+      "left": 4,
+      "right": 36
+    },
+    "4": {
+      "left": 43,
+      "right": 2
+    },
+    "5": {
+      "left": 4,
+      "right": 42
+    }
+  },
+  "conflicting_votes": 16,
+  "decision": {
+    "canonical_judge_round_scores_written": false,
+    "fighter_column_orientation_audited": true,
+    "fighter_left_is_even_columns_candidate": false,
+    "fighter_right_is_odd_columns_candidate": false,
+    "required_next": "Combine only accepted fighter-column orientation with fully recovered targeted score cells and independently resolved judge-name blocks before emitting score candidates.",
+    "source_filename_phrase_identity_used_only_after_canonical_participant_resolution": true
+  },
+  "generated_at_utc": "2026-08-23T01:15:52.418743Z",
+  "left_even_votes": 129,
+  "left_odd_votes": 11,
+  "orientation_status_counts": {
+    "mixed_or_conflicting_anchor_orientation": 3,
+    "no_unique_anchor_votes": 4,
+    "supports_left_even_right_odd": 41
+  },
+  "output": "data/derived/qa/ufc_scorecard_fighter_column_orientation_v0.csv",
+  "phrase_identity_resolution_failures": 0,
+  "right_even_votes": 5,
+  "right_odd_votes": 118,
+  "sample_images": 48,
+  "schema_version": 1,
+  "support_fraction": 0.939163,
+  "supporting_votes": 247
+}

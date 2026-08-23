@@ -1,0 +1,10 @@
+{
+  "audit": "ufc_scorecard_fighter_column_orientation_v0",
+  "completed_at_utc": "2026-08-23T01:15:52.443189Z",
+  "exit_code": 0,
+  "github_run_id": "32609922673",
+  "log": "provenance/runs/ufc_scorecard_fighter_column_orientation_v0_32609922673.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "9a84a60026da2916ded31c495ee9764302acc2fa"
+}
