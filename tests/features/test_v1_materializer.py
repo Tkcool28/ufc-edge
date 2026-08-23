@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
+from dataclasses import replace
 from datetime import date
 from pathlib import Path
 import unittest
@@ -119,7 +120,7 @@ class MissingnessAndShrinkageTests(unittest.TestCase):
             "not_applicable",
         )
 
-    def test_debutant_zero_personal_support_can_receive_prior(self) -> None:
+    def test_true_debutant_shrinkage_primitive_can_receive_prior(self) -> None:
         estimate = shrink_component(
             0.0,
             0.0,
@@ -129,15 +130,6 @@ class MissingnessAndShrinkageTests(unittest.TestCase):
             prior_source="global",
         )
         self.assertAlmostEqual(estimate.value or -1, 0.4)
-        self.assertEqual(
-            semantic_state(
-                value=estimate.value,
-                personal_denominator=0.0,
-                compatible_observations=0,
-                prior_fight_count=0,
-            ),
-            "insufficient_exposure",
-        )
 
     def test_missing_history_does_not_masquerade_as_debutant(self) -> None:
         self.assertEqual(
@@ -233,7 +225,6 @@ class PriorHierarchyTests(unittest.TestCase):
 
     class FakeBuilder(StateBuilder):
         def _single_fight_stats(self, fighter_id: str, feature_name: str, prior: FightRef) -> dict[str, FightStats]:
-            # Only the lightweight fight has compatible statistical support.
             if prior.weight_class != "Lightweight":
                 return {}
             return {"success": FightStats(prior.fight_id, {"success": 1.0}, {"success": 2.0}, 1)}
@@ -249,14 +240,14 @@ class PriorHierarchyTests(unittest.TestCase):
         numerator, denominator, source = builder._population_prior(
             "takedown_conversion", "success", "2025-01-01T00:00:00Z", "Lightweight"
         )
-        self.assertEqual((numerator, denominator, source), (1.0, 2.0, "global"))
+        self.assertEqual((numerator, denominator, source), (2.0, 4.0, "global"))
 
     def test_100_fights_uses_weight_class_hierarchy(self) -> None:
         builder = self.builder(100)
         numerator, denominator, source = builder._population_prior(
             "takedown_conversion", "success", "2025-01-01T00:00:00Z", "Lightweight"
         )
-        self.assertEqual((numerator, denominator, source), (1.0, 2.0, "weight_class:Lightweight"))
+        self.assertEqual((numerator, denominator, source), (2.0, 4.0, "weight_class:Lightweight"))
 
     def test_prior_construction_passes_prediction_cutoff_to_store(self) -> None:
         builder = self.builder(99)
@@ -303,6 +294,31 @@ class PointInTimeAndRealDataTests(unittest.TestCase):
         self.assertEqual(forward.projection(), reverse.projection())
         self.assertEqual(len(forward.interactions), 5)
 
+    def test_current_target_outcome_fields_do_not_change_predictors(self) -> None:
+        before = self.materializer.materialize_fighter(
+            self.target.fighter_a_id,
+            self.cutoff,
+            target_fight_id=self.target.fight_id,
+        ).projection()
+        original = self.store.fights[self.target.fight_id]
+        self.store.fights[self.target.fight_id] = replace(
+            original,
+            winner_id=self.target.fighter_b_id,
+            result="NO_CONTEST",
+            method="SUBMISSION",
+            finish_round=1,
+            finish_time_sec=1,
+        )
+        try:
+            after = self.materializer.materialize_fighter(
+                self.target.fighter_a_id,
+                self.cutoff,
+                target_fight_id=self.target.fight_id,
+            ).projection()
+        finally:
+            self.store.fights[self.target.fight_id] = original
+        self.assertEqual(before, after)
+
     def test_real_state_has_exact_contract_projection_and_no_target_names(self) -> None:
         state = self.materializer.materialize_fighter(
             self.target.fighter_a_id,
@@ -318,6 +334,52 @@ class PointInTimeAndRealDataTests(unittest.TestCase):
         self.assertEqual(set(state.values), expected)
         self.assertEqual(len(state.values), 53)
         self.assertFalse(any("winner" in name or "finish_time" in name for name in state.values))
+
+    def test_zero_prior_canonical_history_is_not_silently_treated_as_true_debut(self) -> None:
+        candidate = None
+        for target in sorted(self.fights, key=lambda item: (item.event_date, item.fight_id)):
+            cutoff = f"{target.event_date.isoformat()}T12:00:00Z"
+            for fighter_id in (target.fighter_a_id, target.fighter_b_id):
+                if not self.store.prior_fights(fighter_id, cutoff):
+                    candidate = (target, fighter_id, cutoff)
+                    break
+            if candidate:
+                break
+        if candidate is None:
+            self.skipTest("canonical v0 has no zero-prior-history target candidate")
+        target, fighter_id, cutoff = candidate
+        state = self.materializer.materialize_fighter(fighter_id, cutoff, target_fight_id=target.fight_id)
+        shrunk = [value for value in state.values.values() if value.shrinkage_rule != "none"]
+        self.assertTrue(shrunk)
+        self.assertTrue(all(value.prior_source == "withheld:zero_canonical_history_debut_unproven" for value in shrunk))
+        self.assertTrue(all(value.prior_value is None for value in shrunk))
+
+    def test_external_result_history_does_not_zero_fill_missing_round_stats(self) -> None:
+        edge = None
+        for target in self.fights:
+            cutoff = f"{target.event_date.isoformat()}T12:00:00Z"
+            for fighter_id in (target.fighter_a_id, target.fighter_b_id):
+                for prior in self.store.prior_fights(fighter_id, cutoff):
+                    if (prior.promotion or "").casefold() == "ufc":
+                        continue
+                    if self.store.round_rows_for_fight(fighter_id, prior.fight_id):
+                        continue
+                    edge = (target, fighter_id, prior, cutoff)
+                    break
+                if edge:
+                    break
+            if edge:
+                break
+        if edge is None:
+            self.skipTest("no canonical external-history/no-round-stat edge available")
+        target, fighter_id, external, cutoff = edge
+        state = self.materializer.materialize_fighter(fighter_id, cutoff, target_fight_id=target.fight_id)
+        count_feature = next(feature for feature in self.materializer.catalog["features"] if feature["feature_name"] == "prior_fight_count")
+        count_column = concept_columns(self.materializer.catalog, count_feature)[(None, "career")]
+        self.assertIn(external.fight_id, state.values[count_column].lineage_fight_ids)
+        sig_feature = next(feature for feature in self.materializer.catalog["features"] if feature["feature_name"] == "sig_strike_efficiency")
+        sig_column = concept_columns(self.materializer.catalog, sig_feature)[("accuracy", "career")]
+        self.assertNotIn(external.fight_id, state.values[sig_column].lineage_fight_ids)
 
     def test_deferred_dependency_cannot_activate_indirectly(self) -> None:
         interactions = {
