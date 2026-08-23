@@ -21,6 +21,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Runner trigger version 1: workflow is now registered on main.
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data/raw/kaggle_pro_mma_fights/v1/pro_mma_fights.csv"
 XWALK = ROOT / "data/derived/identity/external_mma_canonical_crosswalk_candidate.csv"
