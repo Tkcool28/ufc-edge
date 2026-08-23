@@ -1,5 +1,6 @@
 name: Build context-clean UFC weigh-in canonical candidate v2
 
+# Registered on main; trigger version 1.
 on:
   push:
     branches: [main]
