@@ -4,7 +4,7 @@
     "required_next": "Use canonical event/article context to quarantine false article-event transport before canonical weigh-in deduplication. Do not choose conflicting scale weight by averaging or arbitrary source order."
   },
   "duplicate_fight_fighter_groups": 2,
-  "generated_at_utc": "2026-08-23T00:28:07.669253Z",
+  "generated_at_utc": "2026-08-23T00:28:19.351591Z",
   "groups": [
     {
       "candidate_rows": [
