@@ -1,0 +1,10 @@
+{
+  "audit": "external_mma_ufc_misses",
+  "completed_at_utc": "2026-08-23T00:06:00.815423Z",
+  "exit_code": 0,
+  "github_run_id": "32606967686",
+  "log": "provenance/runs/external_mma_ufc_misses_32606967686.log",
+  "schema_version": 1,
+  "status": "success",
+  "trigger_sha": "7c1aae6e9d7e634c5b8eb32efe332cd6179aa51e"
+}

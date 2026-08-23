@@ -1,0 +1,2350 @@
+{
+  "decision": {
+    "canonical_rows_written": false,
+    "date_tolerance_promoted": false,
+    "pair_absent_rows_promoted": false,
+    "required_next": "Use the measured mismatch deltas and absent-result semantics to decide whether this is timezone/date convention and/or a canonical-spine omission. Do not widen overlap identity without explicit evidence."
+  },
+  "generated_at_utc": "2026-08-23T00:06:00.790418Z",
+  "pair_absent_examples": [
+    {
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Danny Chavez",
+      "fighter1_result": "draw",
+      "fighter2_name": "Kai Kamaka III",
+      "fighter2_result": "draw",
+      "round": "3",
+      "source_event_date": "2021-07-31",
+      "source_event_url": "/events/UFC-on-ESPN-28-Hall-vs-Strickland-89161",
+      "source_match_nr": "4",
+      "time": "05:00",
+      "win_details": "Majority",
+      "win_method": "Draw"
+    },
+    {
+      "event_title": "UFC on ESPN 25 - Korean Zombie vs. Ige",
+      "fighter1_name": "Bruno Silva",
+      "fighter1_result": "win",
+      "fighter2_name": "Wellington Turman",
+      "fighter2_result": "loss",
+      "round": "1",
+      "source_event_date": "2021-06-19",
+      "source_event_url": "/events/UFC-on-ESPN-25-Korean-Zombie-vs-Ige-88795",
+      "source_match_nr": "8",
+      "time": "04:45",
+      "win_details": "Punches",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC Fight Night 188 - Font vs. Garbrandt",
+      "fighter1_name": "Bruno Silva",
+      "fighter1_result": "win",
+      "fighter2_name": "Victor Rodriguez",
+      "fighter2_result": "loss",
+      "round": "1",
+      "source_event_date": "2021-05-22",
+      "source_event_url": "/events/UFC-Fight-Night-188-Font-vs-Garbrandt-88695",
+      "source_match_nr": "4",
+      "time": "01:00",
+      "win_details": "Punches",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC on ESPN 21 - Brunson vs. Holland",
+      "fighter1_name": "Bruno Silva",
+      "fighter1_result": "win",
+      "fighter2_name": "J.P. Buys",
+      "fighter2_result": "loss",
+      "round": "2",
+      "source_event_date": "2021-03-20",
+      "source_event_url": "/events/UFC-on-ESPN-21-Brunson-vs-Holland-88172",
+      "source_match_nr": "1",
+      "time": "02:56",
+      "win_details": "Punch",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC on ESPN 20 - Chiesa vs. Magny",
+      "fighter1_name": "Mike Davis",
+      "fighter1_result": "win",
+      "fighter2_name": "Mason Jones",
+      "fighter2_result": "loss",
+      "round": "3",
+      "source_event_date": "2021-01-20",
+      "source_event_url": "/events/UFC-on-ESPN-20-Chiesa-vs-Magny-88171",
+      "source_match_nr": "3",
+      "time": "05:00",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 18 - Smith vs. Clark",
+      "fighter1_name": "Jonathan Pearce",
+      "fighter1_result": "win",
+      "fighter2_name": "Kai Kamaka III",
+      "fighter2_result": "loss",
+      "round": "2",
+      "source_event_date": "2020-11-28",
+      "source_event_url": "/events/UFC-on-ESPN-18-Smith-vs-Clark-87392",
+      "source_match_nr": "5",
+      "time": "04:28",
+      "win_details": "Punches",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC 252 - Miocic vs. Cormier 3",
+      "fighter1_name": "Kai Kamaka III",
+      "fighter1_result": "win",
+      "fighter2_name": "Tony Kelley",
+      "fighter2_result": "loss",
+      "round": "3",
+      "source_event_date": "2020-08-15",
+      "source_event_url": "/events/UFC-252-Miocic-vs-Cormier-3-85053",
+      "source_match_nr": "1",
+      "time": "05:00",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC Fight Night 170 - Lee vs. Oliveira",
+      "fighter1_name": "David Dvorak",
+      "fighter1_result": "win",
+      "fighter2_name": "Bruno Silva",
+      "fighter2_result": "loss",
+      "round": "3",
+      "source_event_date": "2020-03-14",
+      "source_event_url": "/events/UFC-Fight-Night-170-Lee-vs-Oliveira-82429",
+      "source_match_nr": "2",
+      "time": "05:00",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC Fight Night 161 - Jedrzejczyk vs. Waterson",
+      "fighter1_name": "Mike Davis",
+      "fighter1_result": "win",
+      "fighter2_name": "Thomas Gifford",
+      "fighter2_result": "loss",
+      "round": "3",
+      "source_event_date": "2019-10-12",
+      "source_event_url": "/events/UFC-Fight-Night-161-Jedrzejczyk-vs-Waterson-76593",
+      "source_match_nr": "7",
+      "time": "04:45",
+      "win_details": "Punch",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC 243 - Whittaker vs. Adesanya",
+      "fighter1_name": "Khalid Taha",
+      "fighter1_result": "NC",
+      "fighter2_name": "Bruno Silva",
+      "fighter2_result": "NC",
+      "round": "3",
+      "source_event_date": "2019-10-05",
+      "source_event_url": "/events/UFC-243-Whittaker-vs-Adesanya-76591",
+      "source_match_nr": "1",
+      "time": "03:00",
+      "win_details": "Overturned by VPBCSB",
+      "win_method": "No Contest"
+    },
+    {
+      "event_title": "UFC Fight Night 150 - Jacare vs. Hermansson",
+      "fighter1_name": "Gilbert Burns",
+      "fighter1_result": "win",
+      "fighter2_name": "Mike Davis",
+      "fighter2_result": "loss",
+      "round": "2",
+      "source_event_date": "2019-04-27",
+      "source_event_url": "/events/UFC-Fight-Night-150-Jacare-vs-Hermansson-73337",
+      "source_match_nr": "4",
+      "time": "04:15",
+      "win_details": "Rear-Naked Choke",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC Fight Night 144 - Assuncao vs. Moraes 2",
+      "fighter1_name": "Rogerio Bontorin",
+      "fighter1_result": "win",
+      "fighter2_name": "Magomed Bibulatov",
+      "fighter2_result": "loss",
+      "round": "3",
+      "source_event_date": "2019-02-02",
+      "source_event_url": "/events/UFC-Fight-Night-144-Assuncao-vs-Moraes-2-72023",
+      "source_match_nr": "1",
+      "time": "05:00",
+      "win_details": "Split",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 216 - Ferguson vs. Lee",
+      "fighter1_name": "John Moraga",
+      "fighter1_result": "win",
+      "fighter2_name": "Magomed Bibulatov",
+      "fighter2_result": "loss",
+      "round": "1",
+      "source_event_date": "2017-10-07",
+      "source_event_url": "/events/UFC-216-Ferguson-vs-Lee-61983",
+      "source_match_nr": "2",
+      "time": "01:38",
+      "win_details": "Punch",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC 210 - Cormier vs. Johnson 2",
+      "fighter1_name": "Magomed Bibulatov",
+      "fighter1_result": "win",
+      "fighter2_name": "Jenel Lausa",
+      "fighter2_result": "loss",
+      "round": "3",
+      "source_event_date": "2017-04-08",
+      "source_event_url": "/events/UFC-210-Cormier-vs-Johnson-2-57531",
+      "source_match_nr": "1",
+      "time": "05:00",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC Fight Night 91 - McDonald vs. Lineker",
+      "fighter1_name": "John Lineker",
+      "fighter1_result": "win",
+      "fighter2_name": "Michael McDonald",
+      "fighter2_result": "loss",
+      "round": "1",
+      "source_event_date": "2016-07-13",
+      "source_event_url": "/events/UFC-Fight-Night-91-McDonald-vs-Lineker-51841",
+      "source_match_nr": "12",
+      "time": "2:43",
+      "win_details": "Punches",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC Fight Night 81 - Dillashaw vs. Cruz",
+      "fighter1_name": "Rob Font",
+      "fighter1_result": "win",
+      "fighter2_name": "Joey Gomez",
+      "fighter2_result": "loss",
+      "round": "2",
+      "source_event_date": "2016-01-17",
+      "source_event_url": "/events/UFC-Fight-Night-81-Dillashaw-vs-Cruz-47783",
+      "source_match_nr": "2",
+      "time": "04:13",
+      "win_details": "Punches",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC on Fox 9 - Johnson vs. Benavidez 2",
+      "fighter1_name": "Urijah Faber",
+      "fighter1_result": "win",
+      "fighter2_name": "Michael McDonald",
+      "fighter2_result": "loss",
+      "round": "2",
+      "source_event_date": "2013-12-14",
+      "source_event_url": "/events/UFC-on-Fox-9-Johnson-vs-Benavidez-2-26217",
+      "source_match_nr": "10",
+      "time": "03:22",
+      "win_details": "Guillotine Choke",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC Fight Night 26 - Shogun vs. Sonnen",
+      "fighter1_name": "Michael McDonald",
+      "fighter1_result": "win",
+      "fighter2_name": "Brad Pickett",
+      "fighter2_result": "loss",
+      "round": "2",
+      "source_event_date": "2013-08-17",
+      "source_event_url": "/events/UFC-Fight-Night-26-Shogun-vs-Sonnen-29795",
+      "source_match_nr": "7",
+      "time": "03:43",
+      "win_details": "Triangle Choke",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC on Fuel TV 7 - Barao vs. McDonald",
+      "fighter1_name": "Renan Barao",
+      "fighter1_result": "win",
+      "fighter2_name": "Michael McDonald",
+      "fighter2_result": "loss",
+      "round": "4",
+      "source_event_date": "2013-02-16",
+      "source_event_url": "/events/UFC-on-Fuel-TV-7-Barao-vs-McDonald-26459",
+      "source_match_nr": "12",
+      "time": "3:57",
+      "win_details": "Arm-Triangle Choke",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC 145 - Jones vs. Evans",
+      "fighter1_name": "Michael McDonald",
+      "fighter1_result": "win",
+      "fighter2_name": "Miguel Torres",
+      "fighter2_result": "loss",
+      "round": "1",
+      "source_event_date": "2012-04-21",
+      "source_event_url": "/events/UFC-145-Jones-vs-Evans-20031",
+      "source_match_nr": "9",
+      "time": "03:18",
+      "win_details": "Punches",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC 139 - Shogun vs. Henderson",
+      "fighter1_name": "Michael McDonald",
+      "fighter1_result": "win",
+      "fighter2_name": "Alex Soto",
+      "fighter2_result": "loss",
+      "round": "1",
+      "source_event_date": "2011-11-19",
+      "source_event_url": "/events/UFC-139-Shogun-vs-Henderson-17551",
+      "source_match_nr": "6",
+      "time": "00:56",
+      "win_details": "Punches",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC 130 - Rampage vs. Hamill",
+      "fighter1_name": "Michael McDonald",
+      "fighter1_result": "win",
+      "fighter2_name": "Chris Cariaso",
+      "fighter2_result": "loss",
+      "round": "3",
+      "source_event_date": "2011-05-28",
+      "source_event_url": "/events/UFC-130-Rampage-vs-Hamill-15685",
+      "source_match_nr": "2",
+      "time": "05:00",
+      "win_details": "Split",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC Fight Night 24 - Nogueira vs. Davis",
+      "fighter1_name": "Michael McDonald",
+      "fighter1_result": "win",
+      "fighter2_name": "Edwin Figueroa",
+      "fighter2_result": "loss",
+      "round": "3",
+      "source_event_date": "2011-03-26",
+      "source_event_url": "/events/UFC-Fight-Night-24-Nogueira-vs-Davis-15559",
+      "source_match_nr": "5",
+      "time": "05:00",
+      "win_details": "Unanimous",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 1 - The Beginning",
+      "fighter1_name": "Ken Shamrock",
+      "fighter1_result": "win",
+      "fighter2_name": "Patrick Smith",
+      "fighter2_result": "loss",
+      "round": "1",
+      "source_event_date": "1993-11-12",
+      "source_event_url": "/events/UFC-1-The-Beginning-7",
+      "source_match_nr": "4",
+      "time": "01:49",
+      "win_details": "Heel Hook",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC 1 - The Beginning",
+      "fighter1_name": "Royce Gracie",
+      "fighter1_result": "win",
+      "fighter2_name": "Art Jimmerson",
+      "fighter2_result": "loss",
+      "round": "1",
+      "source_event_date": "1993-11-12",
+      "source_event_url": "/events/UFC-1-The-Beginning-7",
+      "source_match_nr": "3",
+      "time": "02:18",
+      "win_details": "Smother Choke",
+      "win_method": "Submission"
+    }
+  ],
+  "pair_absent_result_pair_counts": {
+    "NC|NC": 1,
+    "draw|draw": 1,
+    "win|loss": 23
+  },
+  "pair_absent_win_method_counts": {
+    "Decision": 7,
+    "Draw": 1,
+    "KO": 7,
+    "No Contest": 1,
+    "Submission": 6,
+    "TKO": 3
+  },
+  "pair_date_mismatch_all_candidate_delta_days": {
+    "-167": 1,
+    "-511": 1,
+    "-707": 1,
+    "1": 72
+  },
+  "pair_date_mismatch_examples": [
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2020-02-22",
+          "canonical_event_id": "8e9bc9b9-7db9-5577-b0f7-8e730138eba2",
+          "canonical_fight_id": "5f774ae7-c6d9-54a0-9edb-4fe04d283af3",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 168 - Felder vs. Hooker",
+      "fighter1_name": "Jimmy Crute",
+      "fighter1_result": "win",
+      "fighter2_name": "Michal Oleksiejczuk",
+      "fighter2_result": "loss",
+      "source_event_date": "2020-02-23",
+      "source_event_url": "/events/UFC-Fight-Night-168-Felder-vs-Hooker-82983",
+      "source_match_nr": "11",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2020-02-22",
+          "canonical_event_id": "8e9bc9b9-7db9-5577-b0f7-8e730138eba2",
+          "canonical_fight_id": "08f092c1-0d5b-5484-a5f7-11a4a42cea87",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 168 - Felder vs. Hooker",
+      "fighter1_name": "Marcos Rogerio de Lima",
+      "fighter1_result": "win",
+      "fighter2_name": "Ben Sosoli",
+      "fighter2_result": "loss",
+      "source_event_date": "2020-02-23",
+      "source_event_url": "/events/UFC-Fight-Night-168-Felder-vs-Hooker-82983",
+      "source_match_nr": "9",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2020-02-22",
+          "canonical_event_id": "8e9bc9b9-7db9-5577-b0f7-8e730138eba2",
+          "canonical_fight_id": "91584625-1e66-537b-ab6c-75c16cc2909c",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 168 - Felder vs. Hooker",
+      "fighter1_name": "Brad Riddell",
+      "fighter1_result": "win",
+      "fighter2_name": "Magomed Mustafaev",
+      "fighter2_result": "loss",
+      "source_event_date": "2020-02-23",
+      "source_event_url": "/events/UFC-Fight-Night-168-Felder-vs-Hooker-82983",
+      "source_match_nr": "8",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2020-02-22",
+          "canonical_event_id": "8e9bc9b9-7db9-5577-b0f7-8e730138eba2",
+          "canonical_fight_id": "dd325296-5d74-5c66-869f-7569c55b28b9",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 168 - Felder vs. Hooker",
+      "fighter1_name": "Zubaira Tukhugov",
+      "fighter1_result": "win",
+      "fighter2_name": "Kevin Aguilar",
+      "fighter2_result": "loss",
+      "source_event_date": "2020-02-23",
+      "source_event_url": "/events/UFC-Fight-Night-168-Felder-vs-Hooker-82983",
+      "source_match_nr": "7",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2020-02-22",
+          "canonical_event_id": "8e9bc9b9-7db9-5577-b0f7-8e730138eba2",
+          "canonical_fight_id": "efa04daf-5cc7-546a-9d8c-eabe58501ad9",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 168 - Felder vs. Hooker",
+      "fighter1_name": "Jake Matthews",
+      "fighter1_result": "win",
+      "fighter2_name": "Emil Meek",
+      "fighter2_result": "loss",
+      "source_event_date": "2020-02-23",
+      "source_event_url": "/events/UFC-Fight-Night-168-Felder-vs-Hooker-82983",
+      "source_match_nr": "5",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2020-02-22",
+          "canonical_event_id": "8e9bc9b9-7db9-5577-b0f7-8e730138eba2",
+          "canonical_fight_id": "b332faa2-7f8e-5d24-8f85-99515861857b",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 168 - Felder vs. Hooker",
+      "fighter1_name": "Kai Kara France",
+      "fighter1_result": "win",
+      "fighter2_name": "Tyson Nam",
+      "fighter2_result": "loss",
+      "source_event_date": "2020-02-23",
+      "source_event_url": "/events/UFC-Fight-Night-168-Felder-vs-Hooker-82983",
+      "source_match_nr": "3",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2020-02-22",
+          "canonical_event_id": "8e9bc9b9-7db9-5577-b0f7-8e730138eba2",
+          "canonical_fight_id": "65550409-2762-5677-a6c1-96ec82e3e557",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 168 - Felder vs. Hooker",
+      "fighter1_name": "Priscila Cachoeira",
+      "fighter1_result": "win",
+      "fighter2_name": "Shana Dobson",
+      "fighter2_result": "loss",
+      "source_event_date": "2020-02-23",
+      "source_event_url": "/events/UFC-Fight-Night-168-Felder-vs-Hooker-82983",
+      "source_match_nr": "1",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "1ee4dbd1-64d7-5e5d-a8fb-cf43b3365a26",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "Stipe Miocic",
+      "fighter1_result": "win",
+      "fighter2_name": "Mark Hunt",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "12",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "9c4e2ef1-fdc5-5ac8-adba-4f4f05810b3f",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "Robert Whittaker",
+      "fighter1_result": "win",
+      "fighter2_name": "Brad Tavares",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "11",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "04154069-4346-5210-b59b-37071115c0ce",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "James Vick",
+      "fighter1_result": "win",
+      "fighter2_name": "Jake Matthews",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "9",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "4e2e306a-8ba5-5090-ba2f-bf8285dedb8e",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "Dan Hooker",
+      "fighter1_result": "win",
+      "fighter2_name": "Hatsu Hioki",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "8",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "2ad0c073-608b-51bf-8f45-2a5076f1b7a2",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "Kyle Noke",
+      "fighter1_result": "win",
+      "fighter2_name": "Jonavin Webb",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "7",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "537d033d-3966-5068-a7b2-23d76fb21d37",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "Sam Alvey",
+      "fighter1_result": "win",
+      "fighter2_name": "Daniel Kelly",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "6",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "d9b3142b-f3b3-567c-97b0-dc85078844da",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "Bec Rawlings",
+      "fighter1_result": "win",
+      "fighter2_name": "Lisa Ellis",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "5",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "c05b00eb-6db7-52e6-8f33-5b1999b8c6f6",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "Brendan O'Reilly",
+      "fighter1_result": "win",
+      "fighter2_name": "Vik Grujic",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "2",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-05-09",
+          "canonical_event_id": "624fbb25-9c13-55d6-96db-a900d0474c30",
+          "canonical_fight_id": "cf83fb47-f28c-510f-8345-335feb4b899c",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 65 - Miocic vs. Hunt",
+      "fighter1_name": "Ben Nguyen",
+      "fighter1_result": "win",
+      "fighter2_name": "Alptekin Ozkilic",
+      "fighter2_result": "loss",
+      "source_event_date": "2015-05-10",
+      "source_event_url": "/events/UFC-Fight-Night-65-Miocic-vs-Hunt-42195",
+      "source_match_nr": "1",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2015-11-14",
+          "canonical_event_id": "f10690ff-f4d9-5b1d-bd94-f452cf3d5d5f",
+          "canonical_fight_id": "bb50d69a-1428-52a5-bdb7-8a34776a804b",
+          "source_minus_canonical_days": -707
+        },
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "c4ba2c25-6dcd-56ae-b974-975eee75d9cb",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Mark Hunt",
+      "fighter1_result": "draw",
+      "fighter2_name": "Antonio Silva",
+      "fighter2_result": "draw",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "11",
+      "win_method": "Draw"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "ed6c6dac-a0e2-5477-a798-1cf3149ae0e1",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Mauricio Rua",
+      "fighter1_result": "win",
+      "fighter2_name": "James Te Huna",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "10",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "820c93b3-200e-58b4-8411-34ca97d98363",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Soa Palelei",
+      "fighter1_result": "win",
+      "fighter2_name": "Pat Barry",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "8",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "23493dc2-bae6-5846-9883-1332f8b885ed",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Clint Hester",
+      "fighter1_result": "win",
+      "fighter2_name": "Dylan Andrews",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "7",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "b0d1be15-094b-520d-b49e-72dfde8fbb90",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Bethe Correia",
+      "fighter1_result": "win",
+      "fighter2_name": "Julie Kedzie",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "6",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "3c1bb401-324b-53f0-9785-e08bef8c2107",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Takeya Mizugaki",
+      "fighter1_result": "win",
+      "fighter2_name": "Nam Phan",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "5",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "82dacfb3-70db-5b89-91cb-a9e21b296272",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Caio Magalhaes",
+      "fighter1_result": "win",
+      "fighter2_name": "Nick Ring",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "4",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "a0677258-bc9e-5db0-bb02-3165698dbae0",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Justin Scoggins",
+      "fighter1_result": "win",
+      "fighter2_name": "Richie Vaculik",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "3",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "ac6c75c8-df10-5916-a4fa-0d1d41de4f7e",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Krzysztof Jotko",
+      "fighter1_result": "win",
+      "fighter2_name": "Bruno Santos",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "2",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-12-06",
+          "canonical_event_id": "777b4faa-6809-5453-91b7-82119b95688e",
+          "canonical_fight_id": "77341179-d562-509a-b5fb-8f0c1a0e24ec",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC Fight Night 33 - Hunt vs. Bigfoot",
+      "fighter1_name": "Alex Garcia",
+      "fighter1_result": "win",
+      "fighter2_name": "Ben Wall",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-12-07",
+      "source_event_url": "/events/UFC-Fight-Night-33-Hunt-vs-Bigfoot-32293",
+      "source_match_nr": "1",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "450c08ce-98b6-512f-aa1e-44ece6ce5c32",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Wanderlei Silva",
+      "fighter1_result": "win",
+      "fighter2_name": "Brian Stann",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "11",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "5f083315-f559-5612-a092-48612aa5b316",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Mark Hunt",
+      "fighter1_result": "win",
+      "fighter2_name": "Stefan Struve",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "10",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "55ebf345-4d4e-5ade-894b-e3c0fc7aa5a2",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Diego Sanchez",
+      "fighter1_result": "win",
+      "fighter2_name": "Takanori Gomi",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "9",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "90ce0f00-d35d-59b3-85f2-90c4b16cd822",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Yushin Okami",
+      "fighter1_result": "win",
+      "fighter2_name": "Hector Lombard",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "8",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "35a754a9-3626-5dd2-bd24-09620dfeb131",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Rani Yahya",
+      "fighter1_result": "win",
+      "fighter2_name": "Mizuto Hirota",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "7",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "b6ea4810-df2f-5ec1-a5b0-d8bf8b9ee6b1",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Dong Hyun Kim",
+      "fighter1_result": "win",
+      "fighter2_name": "Siyar Bahadurzada",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "6",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "bc182728-9ab8-5a0c-9a03-9e7747094bc4",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Brad Tavares",
+      "fighter1_result": "win",
+      "fighter2_name": "Riki Fukuda",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "5",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "83be3640-7404-5a84-9b13-d0e2682e534c",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Takeya Mizugaki",
+      "fighter1_result": "win",
+      "fighter2_name": "Bryan Caraway",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "4",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "db4e84f9-615b-5695-84dc-f106decf2e2f",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Kazuki Tokudome",
+      "fighter1_result": "win",
+      "fighter2_name": "Cristiano Marcello",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "3",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "369e10cd-1831-575b-b72e-3bf70837baec",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Alex Caceres",
+      "fighter1_result": "NC",
+      "fighter2_name": "Kyung Ho Kang",
+      "fighter2_result": "NC",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "2",
+      "win_method": "No Contest"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2013-03-02",
+          "canonical_event_id": "7fce3946-f8b7-5683-bfeb-ae1530c71f03",
+          "canonical_fight_id": "b7bab0f9-91b1-53ad-bb89-bd27a87a0787",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on Fuel TV 8 - Silva vs. Stann",
+      "fighter1_name": "Hyun Gyu Lim",
+      "fighter1_result": "win",
+      "fighter2_name": "Marcelo Guimaraes",
+      "fighter2_result": "loss",
+      "source_event_date": "2013-03-03",
+      "source_event_url": "/events/UFC-on-Fuel-TV-8-Silva-vs-Stann-26333",
+      "source_match_nr": "1",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-12-14",
+          "canonical_event_id": "d8e86a44-b567-575a-b182-fa750e8fb96d",
+          "canonical_fight_id": "8b8c2f47-d483-508b-8c02-7d322617d6bd",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 6 - Sotiropoulos vs. Pearson",
+      "fighter1_name": "Ross Pearson",
+      "fighter1_result": "win",
+      "fighter2_name": "George Sotiropoulos",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-12-15",
+      "source_event_url": "/events/UFC-on-FX-6-Sotiropoulos-vs-Pearson-24707",
+      "source_match_nr": "10",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-12-14",
+          "canonical_event_id": "d8e86a44-b567-575a-b182-fa750e8fb96d",
+          "canonical_fight_id": "e6f7149b-b031-580d-a429-267fc24c5891",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 6 - Sotiropoulos vs. Pearson",
+      "fighter1_name": "Norman Parke",
+      "fighter1_result": "win",
+      "fighter2_name": "Colin Fletcher",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-12-15",
+      "source_event_url": "/events/UFC-on-FX-6-Sotiropoulos-vs-Pearson-24707",
+      "source_match_nr": "8",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-12-14",
+          "canonical_event_id": "d8e86a44-b567-575a-b182-fa750e8fb96d",
+          "canonical_fight_id": "cf82a952-ea51-57b2-95e5-ea06edbbbed5",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 6 - Sotiropoulos vs. Pearson",
+      "fighter1_name": "Chad Mendes",
+      "fighter1_result": "win",
+      "fighter2_name": "Yaotzin Meza",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-12-15",
+      "source_event_url": "/events/UFC-on-FX-6-Sotiropoulos-vs-Pearson-24707",
+      "source_match_nr": "6",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-12-14",
+          "canonical_event_id": "d8e86a44-b567-575a-b182-fa750e8fb96d",
+          "canonical_fight_id": "7a5ce747-4adf-5bad-a73b-c1c6a2cdf3d8",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 6 - Sotiropoulos vs. Pearson",
+      "fighter1_name": "Mike Pierce",
+      "fighter1_result": "win",
+      "fighter2_name": "Seth Baczynski",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-12-15",
+      "source_event_url": "/events/UFC-on-FX-6-Sotiropoulos-vs-Pearson-24707",
+      "source_match_nr": "4",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-12-14",
+          "canonical_event_id": "d8e86a44-b567-575a-b182-fa750e8fb96d",
+          "canonical_fight_id": "78e3a59d-d008-5f68-a10b-49c3936e0e16",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 6 - Sotiropoulos vs. Pearson",
+      "fighter1_name": "Ben Alloway",
+      "fighter1_result": "win",
+      "fighter2_name": "Manuel Rodriguez",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-12-15",
+      "source_event_url": "/events/UFC-on-FX-6-Sotiropoulos-vs-Pearson-24707",
+      "source_match_nr": "3",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-12-14",
+          "canonical_event_id": "d8e86a44-b567-575a-b182-fa750e8fb96d",
+          "canonical_fight_id": "316ae869-a963-5632-be11-ba1701e7d482",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 6 - Sotiropoulos vs. Pearson",
+      "fighter1_name": "Mike Wilkinson",
+      "fighter1_result": "win",
+      "fighter2_name": "Brendan Loughnane",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-12-15",
+      "source_event_url": "/events/UFC-on-FX-6-Sotiropoulos-vs-Pearson-24707",
+      "source_match_nr": "2",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-12-14",
+          "canonical_event_id": "d8e86a44-b567-575a-b182-fa750e8fb96d",
+          "canonical_fight_id": "6a41f774-a2ab-57a4-9eee-7fb956ab2e99",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 6 - Sotiropoulos vs. Pearson",
+      "fighter1_name": "Cody Donovan",
+      "fighter1_result": "win",
+      "fighter2_name": "Nick Penner",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-12-15",
+      "source_event_url": "/events/UFC-on-FX-6-Sotiropoulos-vs-Pearson-24707",
+      "source_match_nr": "1",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-03-02",
+          "canonical_event_id": "b3220a1b-9f34-5536-9604-89c725f18613",
+          "canonical_fight_id": "3e75ace2-f0a6-56ad-8990-1238846499ad",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 2 - Alves vs. Kampmann",
+      "fighter1_name": "Martin Kampmann",
+      "fighter1_result": "win",
+      "fighter2_name": "Thiago Alves",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-03-03",
+      "source_event_url": "/events/UFC-on-FX-2-Alves-vs-Kampmann-19379",
+      "source_match_nr": "11",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-03-02",
+          "canonical_event_id": "b3220a1b-9f34-5536-9604-89c725f18613",
+          "canonical_fight_id": "e5ec8d5c-74c6-52fb-b944-b668d2b9e43d",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 2 - Alves vs. Kampmann",
+      "fighter1_name": "Joseph Benavidez",
+      "fighter1_result": "win",
+      "fighter2_name": "Yasuhiro Urushitani",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-03-03",
+      "source_event_url": "/events/UFC-on-FX-2-Alves-vs-Kampmann-19379",
+      "source_match_nr": "10",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-03-02",
+          "canonical_event_id": "b3220a1b-9f34-5536-9604-89c725f18613",
+          "canonical_fight_id": "56e05893-b142-520e-96f6-f8fc71f34f8e",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 2 - Alves vs. Kampmann",
+      "fighter1_name": "James Te Huna",
+      "fighter1_result": "win",
+      "fighter2_name": "Aaron Rosa",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-03-03",
+      "source_event_url": "/events/UFC-on-FX-2-Alves-vs-Kampmann-19379",
+      "source_match_nr": "7",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-03-02",
+          "canonical_event_id": "b3220a1b-9f34-5536-9604-89c725f18613",
+          "canonical_fight_id": "46f72af3-b083-57ca-a993-9141058def71",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 2 - Alves vs. Kampmann",
+      "fighter1_name": "Steven Siler",
+      "fighter1_result": "win",
+      "fighter2_name": "Cole Miller",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-03-03",
+      "source_event_url": "/events/UFC-on-FX-2-Alves-vs-Kampmann-19379",
+      "source_match_nr": "5",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-03-02",
+          "canonical_event_id": "b3220a1b-9f34-5536-9604-89c725f18613",
+          "canonical_fight_id": "972bc3fd-3a9c-55a5-85d8-ac0abef153c1",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 2 - Alves vs. Kampmann",
+      "fighter1_name": "Andrew Craig",
+      "fighter1_result": "win",
+      "fighter2_name": "Kyle Noke",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-03-03",
+      "source_event_url": "/events/UFC-on-FX-2-Alves-vs-Kampmann-19379",
+      "source_match_nr": "4",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-03-02",
+          "canonical_event_id": "b3220a1b-9f34-5536-9604-89c725f18613",
+          "canonical_fight_id": "0bb0c41b-9b97-5fca-9b7c-59d8dabb7111",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 2 - Alves vs. Kampmann",
+      "fighter1_name": "T.J. Waldburger",
+      "fighter1_result": "win",
+      "fighter2_name": "Jake Hecht",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-03-03",
+      "source_event_url": "/events/UFC-on-FX-2-Alves-vs-Kampmann-19379",
+      "source_match_nr": "3",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-03-02",
+          "canonical_event_id": "b3220a1b-9f34-5536-9604-89c725f18613",
+          "canonical_fight_id": "eece9331-5512-513e-beed-f1fc0d336819",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 2 - Alves vs. Kampmann",
+      "fighter1_name": "Daniel Pineda",
+      "fighter1_result": "win",
+      "fighter2_name": "Mackens Semerzier",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-03-03",
+      "source_event_url": "/events/UFC-on-FX-2-Alves-vs-Kampmann-19379",
+      "source_match_nr": "2",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-03-02",
+          "canonical_event_id": "b3220a1b-9f34-5536-9604-89c725f18613",
+          "canonical_fight_id": "7bb47264-bc0e-5484-b730-9ae02c02e8d2",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC on FX 2 - Alves vs. Kampmann",
+      "fighter1_name": "Shawn Jordan",
+      "fighter1_result": "win",
+      "fighter2_name": "Oli Thompson",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-03-03",
+      "source_event_url": "/events/UFC-on-FX-2-Alves-vs-Kampmann-19379",
+      "source_match_nr": "1",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "4da55590-4b14-553a-9803-78c833d4e19f",
+          "source_minus_canonical_days": 1
+        },
+        {
+          "canonical_event_date": "2012-08-11",
+          "canonical_event_id": "5220f7dd-428b-50d6-bc65-7b5d27bad01c",
+          "canonical_fight_id": "a7169b5c-4029-593d-80c9-f139f9fa445d",
+          "source_minus_canonical_days": -167
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Benson Henderson",
+      "fighter1_result": "win",
+      "fighter2_name": "Frankie Edgar",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "12",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "8526bcfa-86d9-5c36-b0e2-63218662164d",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Ryan Bader",
+      "fighter1_result": "win",
+      "fighter2_name": "Quinton Jackson",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "11",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "11152b42-070e-5e6b-86ad-4367a25e848e",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Mark Hunt",
+      "fighter1_result": "win",
+      "fighter2_name": "Cheick Kongo",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "10",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "c45bb520-ea80-5c6a-b0c7-d61418ae5ca7",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Jake Shields",
+      "fighter1_result": "win",
+      "fighter2_name": "Yoshihiro Akiyama",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "9",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "afdf7f4c-673c-591c-9bd5-a490d948d15d",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Tim Boetsch",
+      "fighter1_result": "win",
+      "fighter2_name": "Yushin Okami",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "8",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "5c0bc625-0b3a-5e55-9606-7455a65b5d3e",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Hatsu Hioki",
+      "fighter1_result": "win",
+      "fighter2_name": "Bart Palaszewski",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "7",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "bb791051-8e49-5960-ad5e-874601f6fc26",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Anthony Pettis",
+      "fighter1_result": "win",
+      "fighter2_name": "Joe Lauzon",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "6",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "26b341f7-5a3e-50bc-8373-d0af316bad33",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Takanori Gomi",
+      "fighter1_result": "win",
+      "fighter2_name": "Eiji Mitsuoka",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "5",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "0dbe5765-dd25-5146-9ce0-49fa0c0d41c0",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Vaughan Lee",
+      "fighter1_result": "win",
+      "fighter2_name": "Norifumi Yamamoto",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "4",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "d6289d5c-ca68-58ae-9b07-5638199633f3",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Riki Fukuda",
+      "fighter1_result": "win",
+      "fighter2_name": "Steve Cantwell",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "3",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2012-02-25",
+          "canonical_event_id": "8c086b99-1366-5596-9a36-0d4908c86b50",
+          "canonical_fight_id": "007f4f30-cbd2-512f-a1b0-a37bf0a4b0ef",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 144 - Edgar vs. Henderson",
+      "fighter1_name": "Chris Cariaso",
+      "fighter1_result": "win",
+      "fighter2_name": "Takeya Mizugaki",
+      "fighter2_result": "loss",
+      "source_event_date": "2012-02-26",
+      "source_event_url": "/events/UFC-144-Edgar-vs-Henderson-18347",
+      "source_match_nr": "2",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "565d67da-8ec3-56c7-b713-cf04eab20334",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Jon Fitch",
+      "fighter1_result": "draw",
+      "fighter2_name": "B.J. Penn",
+      "fighter2_result": "draw",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "12",
+      "win_method": "Draw"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "bd9de124-a2c3-512a-9141-89796031f819",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Michael Bisping",
+      "fighter1_result": "win",
+      "fighter2_name": "Jorge Rivera",
+      "fighter2_result": "loss",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "11",
+      "win_method": "TKO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "174363f5-a047-53b3-a5af-5427d6b51fb5",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Dennis Siver",
+      "fighter1_result": "win",
+      "fighter2_name": "George Sotiropoulos",
+      "fighter2_result": "loss",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "10",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "d9a98ac2-d408-5bcc-8dd4-b2e5352363e1",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Brian Ebersole",
+      "fighter1_result": "win",
+      "fighter2_name": "Chris Lytle",
+      "fighter2_result": "loss",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "9",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "4ec0b570-2252-5b7b-8bd1-ae2a7780a3af",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Kyle Noke",
+      "fighter1_result": "win",
+      "fighter2_name": "Chris Camozzi",
+      "fighter2_result": "loss",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "8",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "b879b869-b8b0-5af7-af52-c627b96e6eef",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Ross Pearson",
+      "fighter1_result": "win",
+      "fighter2_name": "Spencer Fisher",
+      "fighter2_result": "loss",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "7",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "267eaa0a-e927-530c-a422-69225a59e147",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Alexander Gustafsson",
+      "fighter1_result": "win",
+      "fighter2_name": "James Te Huna",
+      "fighter2_result": "loss",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "6",
+      "win_method": "Submission"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "9594f83c-5df0-5ab8-896a-6a992240c3df",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Nick Ring",
+      "fighter1_result": "win",
+      "fighter2_name": "Riki Fukuda",
+      "fighter2_result": "loss",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "5",
+      "win_method": "Decision"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "2011-02-26",
+          "canonical_event_id": "4208082e-608d-5c79-b76b-d8f82710773a",
+          "canonical_fight_id": "53ece359-6c3e-55e9-b32d-45ad1c129822",
+          "source_minus_canonical_days": 1
+        }
+      ],
+      "event_title": "UFC 127 - Penn vs. Fitch",
+      "fighter1_name": "Mark Hunt",
+      "fighter1_result": "win",
+      "fighter2_name": "Chris Tuchscherer",
+      "fighter2_result": "loss",
+      "source_event_date": "2011-02-27",
+      "source_event_url": "/events/UFC-127-Penn-vs-Fitch-15202",
+      "source_match_nr": "2",
+      "win_method": "KO"
+    },
+    {
+      "canonical_candidates": [
+        {
+          "canonical_event_date": "1995-04-07",
+          "canonical_event_id": "603568a7-b582-537d-931d-4a8ad5744403",
+          "canonical_fight_id": "922217b4-0621-5530-97d5-cfa71b91a902",
+          "source_minus_canonical_days": -511
+        }
+      ],
+      "event_title": "UFC 1 - The Beginning",
+      "fighter1_name": "Royce Gracie",
+      "fighter1_result": "win",
+      "fighter2_name": "Ken Shamrock",
+      "fighter2_result": "loss",
+      "source_event_date": "1993-11-12",
+      "source_event_url": "/events/UFC-1-The-Beginning-7",
+      "source_match_nr": "6",
+      "win_method": "Submission"
+    }
+  ],
+  "pair_date_mismatch_nearest_delta_days": {
+    "-511": 1,
+    "1": 72
+  },
+  "schema_version": 1,
+  "status_counts": {
+    "exact_pair_plus_date": 4617,
+    "pair_absent_from_canonical_spine": 25,
+    "pair_exists_date_mismatch": 73,
+    "unresolved_trusted_fighter_identity": 1497
+  },
+  "trusted_fighter_count_distribution": {
+    "0": 148,
+    "1": 1349,
+    "2": 4715
+  },
+  "ufc_labelled_source_rows": 6212,
+  "unresolved_examples": [
+    {
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Ciryl Gane",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Derrick Lewis",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-08-07",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Tecia Torres",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Angela Hill",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-08-07",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Yadong Song",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Casey Kenney",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-08-07",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Rafael Fiziev",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Bobby Green",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-08-07",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 265 - Lewis vs. Gane",
+      "fighter1_name": "Johnny Munoz Jr.",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Jamey Simmons",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-08-07",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Cheyanne Buys",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Gloria de Paula",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-07-31",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC on ESPN 28 - Hall vs. Strickland",
+      "fighter1_name": "Philip Rowe",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Orion Cosce",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-07-31",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC on ESPN 27 - Sandhagen vs. Dillashaw",
+      "fighter1_name": "Nassourdine Imavov",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Ian Heinisch",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-07-24",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC on ESPN 26 - Makhachev vs. Moises",
+      "fighter1_name": "Islam Makhachev",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Thiago Moises",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-07-17",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC on ESPN 26 - Makhachev vs. Moises",
+      "fighter1_name": "Mateusz Gamrot",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Jeremy Stephens",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-07-17",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC on ESPN 26 - Makhachev vs. Moises",
+      "fighter1_name": "Amanda Lemos",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Montserrat Ruiz",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-07-17",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC 264 - Poirier vs. McGregor 3",
+      "fighter1_name": "Irene Aldana",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Yana Kunitskaya",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-07-10",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC Fight Night 190 - Gane vs. Volkov",
+      "fighter1_name": "Ciryl Gane",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Alexander Volkov",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-06-26",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC Fight Night 190 - Gane vs. Volkov",
+      "fighter1_name": "Tanner Boser",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Ovince St. Preux",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-06-26",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC Fight Night 190 - Gane vs. Volkov",
+      "fighter1_name": "Renato Carneiro",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Jai Herbert",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-06-26",
+      "win_method": "Submission"
+    },
+    {
+      "event_title": "UFC Fight Night 190 - Gane vs. Volkov",
+      "fighter1_name": "Marcin Prachnio",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Isaac Villanueva",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-06-26",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC on ESPN 25 - Korean Zombie vs. Ige",
+      "fighter1_name": "Sergey Spivak",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Alexey Oleynik",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-06-19",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 25 - Korean Zombie vs. Ige",
+      "fighter1_name": "Kalinn Williams",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Matthew Semelsberger",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-06-19",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 263 - Adesanya vs. Vettori 2",
+      "fighter1_name": "Lauren Murphy",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Joanne Calderwood",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-06-12",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 263 - Adesanya vs. Vettori 2",
+      "fighter1_name": "Carlos Felipe",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Jake Collier",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-06-12",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC Fight Night 189 - Rozenstruik vs. Sakai",
+      "fighter1_name": "Jairzinho Rozenstruik",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Augusto Sakai",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-06-05",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC Fight Night 189 - Rozenstruik vs. Sakai",
+      "fighter1_name": "Montana De La Rosa",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Ariane Lipski",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-06-05",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC Fight Night 189 - Rozenstruik vs. Sakai",
+      "fighter1_name": "Ilir Latifi",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Tanner Boser",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-06-05",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC Fight Night 189 - Rozenstruik vs. Sakai",
+      "fighter1_name": "Alan Patrick",
+      "fighter1_result": "NC",
+      "fighter1_trusted": false,
+      "fighter2_name": "Mason Jones",
+      "fighter2_result": "NC",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-06-05",
+      "win_method": "No Contest"
+    },
+    {
+      "event_title": "UFC Fight Night 188 - Font vs. Garbrandt",
+      "fighter1_name": "Carla Esparza",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Xiaonan Yan",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-05-22",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC Fight Night 188 - Font vs. Garbrandt",
+      "fighter1_name": "Joshua Culibao",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Nuerdanbieke Shayilan",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-05-22",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC Fight Night 188 - Font vs. Garbrandt",
+      "fighter1_name": "Damir Ismagulov",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Rafael Alves",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-05-22",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 262 - Oliveira vs. Chandler",
+      "fighter1_name": "Katlyn Chookagian",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Viviane Araujo",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-05-15",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 262 - Oliveira vs. Chandler",
+      "fighter1_name": "Andre Muniz",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Ronaldo Souza",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-05-15",
+      "win_method": "Technical Submission"
+    },
+    {
+      "event_title": "UFC 262 - Oliveira vs. Chandler",
+      "fighter1_name": "Lando Vannata",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Mike Grundy",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-05-15",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 24 - Rodriguez vs. Waterson",
+      "fighter1_name": "Marina Rodriguez",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Michelle Waterson",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-05-08",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 24 - Rodriguez vs. Waterson",
+      "fighter1_name": "Gregor Gillespie",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Diego Ferreira",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-05-08",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC on ESPN 24 - Rodriguez vs. Waterson",
+      "fighter1_name": "Carlston Lindsay Harris",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Christian Aguilera",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-05-08",
+      "win_method": "Technical Submission"
+    },
+    {
+      "event_title": "UFC on ESPN 23 - Reyes vs. Prochazka",
+      "fighter1_name": "Luana Pinheiro",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Randa Markos",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-05-01",
+      "win_method": "Disqualification"
+    },
+    {
+      "event_title": "UFC on ESPN 23 - Reyes vs. Prochazka",
+      "fighter1_name": "T.J. Brown",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Kai Kamaka III",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-05-01",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 23 - Reyes vs. Prochazka",
+      "fighter1_name": "Konklak Suphisara",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Sam Hughes",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-05-01",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 23 - Reyes vs. Prochazka",
+      "fighter1_name": "Felipe Dias Colares",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Luke Sanders",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-05-01",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 261 - Usman vs. Masvidal 2",
+      "fighter1_name": "Rose Namajunas",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Weili Zhang",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-04-24",
+      "win_method": "KO"
+    },
+    {
+      "event_title": "UFC 261 - Usman vs. Masvidal 2",
+      "fighter1_name": "Danaa Batgerel",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Kevin Natividad",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-04-24",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC 261 - Usman vs. Masvidal 2",
+      "fighter1_name": "Rodrigo Vargas",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Zhu Rong",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-04-24",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 261 - Usman vs. Masvidal 2",
+      "fighter1_name": "Jeff Molina",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Qileng Aori",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-04-24",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 261 - Usman vs. Masvidal 2",
+      "fighter1_name": "Ariane Carnelossi",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Na Liang",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-04-24",
+      "win_method": "TKO"
+    },
+    {
+      "event_title": "UFC on ESPN 22 - Whittaker vs. Gastelum",
+      "fighter1_name": "Andrei Arlovski",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Chase Sherman",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-04-17",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 22 - Whittaker vs. Gastelum",
+      "fighter1_name": "Luis Pena",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Alex Munoz",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-04-17",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 22 - Whittaker vs. Gastelum",
+      "fighter1_name": "Alexander Romanov",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Juan Espino",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-04-17",
+      "win_method": "Technical Decision"
+    },
+    {
+      "event_title": "UFC on ESPN 22 - Whittaker vs. Gastelum",
+      "fighter1_name": "Jessica Penne",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Lupita Godinez",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-04-17",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ABC 2 - Vettori vs. Holland",
+      "fighter1_name": "Arnold Allen",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "Sodiq Yusuff",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-04-10",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ABC 2 - Vettori vs. Holland",
+      "fighter1_name": "Luis Saldana",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Jordan Griffin",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-04-10",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC on ABC 2 - Vettori vs. Holland",
+      "fighter1_name": "Da Un Jung",
+      "fighter1_result": "win",
+      "fighter1_trusted": false,
+      "fighter2_name": "William Knight",
+      "fighter2_result": "loss",
+      "fighter2_trusted": true,
+      "source_event_date": "2021-04-10",
+      "win_method": "Decision"
+    },
+    {
+      "event_title": "UFC 260 - Miocic vs. Ngannou 2",
+      "fighter1_name": "Vicente Luque",
+      "fighter1_result": "win",
+      "fighter1_trusted": true,
+      "fighter2_name": "Tyron Woodley",
+      "fighter2_result": "loss",
+      "fighter2_trusted": false,
+      "source_event_date": "2021-03-27",
+      "win_method": "Submission"
+    }
+  ]
+}
