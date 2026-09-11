@@ -90,8 +90,8 @@ jobs:
             .github/workflows/f00-feature-contract.yml
           )
           if ! git diff --quiet origin/main...HEAD -- "${paths[@]}"; then
-            base_version="$(git show origin/main:features/feature_catalog.yaml | python -c 'import json,sys; print(json.load(sys.stdin)[\"feature_contract_version\"])')"
-            head_version="$(python -c 'import json; print(json.load(open(\"features/feature_catalog.yaml\"))[\"feature_contract_version\"])')"
+            base_version="$(git show origin/main:features/feature_catalog.yaml | python -c 'import json,sys; print(json.load(sys.stdin)["feature_contract_version"])')"
+            head_version="$(python -c 'import json; print(json.load(open("features/feature_catalog.yaml"))["feature_contract_version"])')"
             if [[ "$base_version" == "$head_version" ]]; then
               echo "F00 semantic files changed without a feature_contract_version bump." >&2
               exit 1
