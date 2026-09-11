@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "registry_version": "elapsed_exposure_rulesets_v1",
+  "canonical_data_contract_version": "0.4.0-draft",
+  "principle": "Unknown duration must not be guessed. Promotion/era eligibility may authorize a fixed round duration only where cited rules evidence establishes it.",
+  "source_refs": {
+    "abc_unified_rules_2025": {
+      "url": "https://www.dca.ca.gov/csac/forms_pubs/publications/unified_rules_judging_criteria.pdf",
+      "title": "Association of Boxing Commissions and Combative Sports — Unified Rules of Mixed Martial Arts",
+      "effective_or_publication_date": "2025-08-06",
+      "evidence_class": "PRIMARY_REGULATORY",
+      "note": "Professional rounds are five minutes; professional bouts may consist of one through five five-minute rounds."
+    },
+    "ufc_28_modern_boundary": {
+      "url": "https://jp.ufc.com/news/ufc-hall-fame-faq",
+      "title": "UFC Hall of Fame FAQ",
+      "effective_or_publication_date": null,
+      "evidence_class": "PRIMARY_PROMOTION",
+      "note": "UFC 28 on 2000-11-17 was the first UFC event using the Unified Rules; UFC states pre-UFC-28 rules could vary by event or fight and post-UFC-28 rules were standardized."
+    },
+    "ufcstats_time_format": {
+      "url": "http://ufcstats.com/fight-details/1d7015553debd1c8",
+      "title": "UFCStats fight details — Alvarez vs McGregor",
+      "effective_or_publication_date": "2016-11-12",
+      "evidence_class": "PRIMARY_STAT_PROVIDER",
+      "note": "Provider displays Method KO/TKO, Round 2, Time 3:04, Time format 5 Rnd (5-5-5-5-5)."
+    },
+    "ufc_official_time_semantics": {
+      "url": "https://www.ufc.com/news/ufc-205-final-results-and-news-nyc",
+      "title": "UFC 205 final results and news from NYC",
+      "effective_or_publication_date": "2016-11-12",
+      "evidence_class": "PRIMARY_PROMOTION",
+      "note": "UFC describes the same Alvarez-McGregor stoppage as second-round TKO at 3:04, establishing count-up elapsed time within the terminal round."
+    },
+    "bellator_csac_2011": {
+      "url": "https://www.dca.ca.gov/csac/forms_pubs/publications/sherdog.pdf",
+      "title": "California State Athletic Commission — All-Access Pass, March 5, 2011",
+      "effective_or_publication_date": "2011-03-05",
+      "evidence_class": "PRIMARY_REGULATORY",
+      "note": "Commission account of Bellator tournament rules identifies a fourth five-minute tie-break round after the third round."
+    },
+    "bellator_unified_rules_support_2016": {
+      "url": "https://www.dca.ca.gov/csac/meetings/materials/20161216.pdf",
+      "title": "California State Athletic Commission meeting materials — Bellator Regulatory Affairs letter",
+      "effective_or_publication_date": "2016-12-02",
+      "evidence_class": "PRIMARY_PROMOTION_VIA_REGULATOR",
+      "note": "Bellator Regulatory Affairs formally endorses ABC modifications to the Unified Rules of MMA."
+    },
+    "bellator_launch_rounds_2008": {
+      "url": "https://www.mmamania.com/2008/11/19/194377/bellator-fighting-championships-signs-exclusive-tv-agreement-with-espn",
+      "title": "Bellator Fighting Championships launch/TV announcement",
+      "effective_or_publication_date": "2008-11-19",
+      "evidence_class": "CONTEMPORANEOUS_SECONDARY_QUOTING_PROMOTION",
+      "note": "Bellator season-one tournament format is described as three five-minute rounds."
+    },
+    "one_global_mma_rules": {
+      "url": "https://www.onefc.com/martial-arts/",
+      "title": "ONE Championship — Global Mixed Martial Arts Rule Set",
+      "effective_or_publication_date": null,
+      "evidence_class": "PRIMARY_PROMOTION",
+      "note": "ONE MMA bouts are three five-minute rounds; World Championship MMA bouts are five five-minute rounds. Other ONE disciplines use different durations and must not be conflated with MMA."
+    },
+    "one_early_mma_2012": {
+      "url": "https://www.sherdog.com/news/news/After-SylviaArlovski-Controversy-One-FC-Adopts-Full-Pride-Rules-Ahead-of-Oct-6-Event-45373",
+      "title": "Sherdog — ONE FC rule-change report",
+      "effective_or_publication_date": "2012-09-03",
+      "evidence_class": "CONTEMPORANEOUS_SECONDARY",
+      "note": "Documents early ONE FC MMA rules context; the change concerned soccer-kick legality, not round duration."
+    },
+    "external_finish_time_repo_provenance": {
+      "url": "repo:pipelines/build_canonical_external_mma_v0.py",
+      "title": "Canonical external MMA builder provenance",
+      "effective_or_publication_date": null,
+      "evidence_class": "INTERNAL_CANONICAL_PROVENANCE",
+      "note": "Builder records source M:SS as elapsed seconds within finish round."
+    }
+  },
+  "rulesets": [
+    {
+      "ruleset_id": "ufc_unified_5min_v1",
+      "promotion": "UFC",
+      "effective_start": "2000-11-17",
+      "effective_end": null,
+      "bout_scope": "Professional UFC MMA bouts from UFC 28 forward",
+      "round_duration_sec": 300,
+      "scheduled_round_options": [1, 2, 3, 4, 5],
+      "classification": "VERIFIED_STANDARD_5MIN",
+      "source_refs": ["abc_unified_rules_2025", "ufc_28_modern_boundary"],
+      "finish_time_semantics": "elapsed_within_terminal_round",
+      "finish_time_source_refs": ["ufcstats_time_format", "ufc_official_time_semantics"],
+      "confidence": "HIGH_PRIMARY",
+      "notes": "Pre-UFC-28 bouts are intentionally outside this ruleset because UFC states their rules could vary by event or fight."
+    },
+    {
+      "ruleset_id": "bellator_unified_5min_v1",
+      "promotion": "Bellator MMA",
+      "effective_start": "2009-04-03",
+      "effective_end": "2021-08-11",
+      "bout_scope": "Canonical Bellator professional MMA rows in the frozen external snapshot",
+      "round_duration_sec": 300,
+      "scheduled_round_options": [1, 2, 3, 4, 5],
+      "classification": "VERIFIED_STANDARD_5MIN",
+      "source_refs": ["bellator_launch_rounds_2008", "bellator_csac_2011", "bellator_unified_rules_support_2016"],
+      "finish_time_semantics": "elapsed_within_terminal_round",
+      "finish_time_source_refs": ["external_finish_time_repo_provenance"],
+      "confidence": "HIGH_MIXED_PRIMARY_SECONDARY",
+      "notes": "Tournament format changed round count in some eras, but cited evidence keeps round duration at five minutes. Canonical external rows do not carry scheduled_rounds, so decision-duration eligibility remains fail-closed."
+    },
+    {
+      "ruleset_id": "one_global_mma_5min_v1",
+      "promotion": "One Championship",
+      "effective_start": "2011-09-03",
+      "effective_end": "2021-08-11",
+      "bout_scope": "Canonical ONE professional MMA rows in the frozen pro-MMA external snapshot; not ONE Muay Thai, kickboxing, submission grappling, or hybrid special-rules contests",
+      "round_duration_sec": 300,
+      "scheduled_round_options": [3, 5],
+      "classification": "VERIFIED_STANDARD_5MIN",
+      "source_refs": ["one_global_mma_rules", "one_early_mma_2012"],
+      "finish_time_semantics": "elapsed_within_terminal_round",
+      "finish_time_source_refs": ["external_finish_time_repo_provenance"],
+      "confidence": "HIGH_PRIMARY_CURRENT_PLUS_HISTORICAL_CORROBORATION",
+      "notes": "The canonical source is explicitly a professional MMA dataset. Promotion name alone must never authorize non-MMA ONE disciplines."
+    }
+  ],
+  "fallback": {
+    "UFC_before_2000-11-17": {
+      "elapsed_exposure_status": "ambiguous",
+      "reason": "UFC states rules could vary by event or bout before UFC 28; exact bout rules are not established by canonical v0."
+    },
+    "unmatched_promotion_or_era": {
+      "elapsed_exposure_status": "unknown",
+      "reason": "No matching verified registry entry."
+    }
+  }
+}
