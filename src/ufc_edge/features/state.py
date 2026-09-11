@@ -665,6 +665,12 @@ class StateBuilder:
                 "finish_method_win_profile",
                 "finish_method_loss_profile",
                 "early_finish_profile",
+                "sig_strike_flow",
+                "knockdown_rate",
+                "takedown_pressure",
+                "control_rate",
+                "submission_attempt_rate",
+                "reversal_rate",
             }:
                 values.update(
                     self._materialize_rate_feature(fighter_id, cutoff, target_fight_id, feature, prior_count)
