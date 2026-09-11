@@ -1,0 +1,2508 @@
+{
+  "active_v1_concept_count": 24,
+  "catalog_declared_active_variant_count": 164,
+  "concept_count": 60,
+  "concepts": [
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "fighter_a_id",
+          "fighter_b_id",
+          "promotion"
+        ]
+      },
+      "canonical_name": "prior_fight_count",
+      "components": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "experience_support",
+      "feature_id": "FS_PRIOR_FIGHT_COUNT_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "sig_strikes_landed",
+          "sig_strikes_attempted"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
+        ]
+      },
+      "canonical_name": "sig_strike_flow",
+      "components": [
+        "attempted_per_min",
+        "landed_per_min",
+        "absorbed_per_min"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "striking",
+      "feature_id": "FS_SIG_STRIKE_FLOW_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": true,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last3",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "sig_strikes_landed",
+          "sig_strikes_attempted"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "sig_strike_efficiency",
+      "components": [
+        "accuracy",
+        "defense"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "striking",
+      "feature_id": "FS_SIG_STRIKE_EFFICIENCY_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "attempt_probability_v1",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "sig_head_attempted",
+          "sig_body_attempted",
+          "sig_leg_attempted"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "sig_target_mix",
+      "components": [
+        "head_share",
+        "body_share",
+        "leg_share"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "striking",
+      "feature_id": "FS_SIG_TARGET_MIX_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "composition_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "sig_distance_attempted",
+          "sig_clinch_attempted",
+          "sig_ground_attempted"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "sig_environment_mix",
+      "components": [
+        "distance_share",
+        "clinch_share",
+        "ground_share"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking",
+        "component_ground",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "striking",
+      "feature_id": "FS_SIG_ENVIRONMENT_MIX_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "composition_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "knockdowns"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
+        ]
+      },
+      "canonical_name": "knockdown_rate",
+      "components": [
+        "created_per_15",
+        "allowed_per_15"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking",
+        "component_durability",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "damage_durability",
+      "feature_id": "FS_KNOCKDOWN_RATE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last3",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "knockdowns",
+          "sig_strikes_landed"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "knockdown_efficiency",
+      "components": [
+        "creation",
+        "vulnerability"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_durability",
+        "simulator"
+      ],
+      "contract_status": "V1_DERIVED",
+      "elapsed_exposure_dependency": null,
+      "family": "damage_durability",
+      "feature_id": "FS_KNOCKDOWN_EFFICIENCY_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "attempt_probability_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "takedowns_attempted"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
+        ]
+      },
+      "canonical_name": "takedown_pressure",
+      "components": [
+        "created_per_15",
+        "faced_per_15"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_wrestling",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "wrestling",
+      "feature_id": "FS_TAKEDOWN_PRESSURE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last3",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "takedowns_landed",
+          "takedowns_attempted"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "takedown_conversion",
+      "components": [
+        "success",
+        "defense"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_wrestling",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "wrestling",
+      "feature_id": "FS_TAKEDOWN_CONVERSION_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "attempt_probability_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "control_sec"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
+        ]
+      },
+      "canonical_name": "control_rate",
+      "components": [
+        "created_share",
+        "allowed_share"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_ground",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "ground_control",
+      "feature_id": "FS_CONTROL_RATE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": true,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last3",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "submission_attempts"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
+        ]
+      },
+      "canonical_name": "submission_attempt_rate",
+      "components": [
+        "created_per_15",
+        "faced_per_15"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_submission",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "submission",
+      "feature_id": "FS_SUBMISSION_ATTEMPT_RATE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last3",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "reversals"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
+        ]
+      },
+      "canonical_name": "reversal_rate",
+      "components": [
+        "created_per_15",
+        "faced_per_15"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_ground",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "ground_control",
+      "feature_id": "FS_REVERSAL_RATE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "fighter_a_id",
+          "fighter_b_id",
+          "winner_id",
+          "result",
+          "method"
+        ]
+      },
+      "canonical_name": "finish_method_win_profile",
+      "components": [
+        "ko_tko",
+        "submission",
+        "decision"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking",
+        "component_submission",
+        "component_durability",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "result_method_history",
+      "feature_id": "FS_FINISH_METHOD_WIN_PROFILE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "fight_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "fighter_a_id",
+          "fighter_b_id",
+          "winner_id",
+          "result",
+          "method"
+        ]
+      },
+      "canonical_name": "finish_method_loss_profile",
+      "components": [
+        "ko_tko",
+        "submission",
+        "decision"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_durability",
+        "component_submission",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "result_method_history",
+      "feature_id": "FS_FINISH_METHOD_LOSS_PROFILE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "fight_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "fighter_a_id",
+          "fighter_b_id",
+          "winner_id",
+          "result",
+          "method",
+          "finish_round"
+        ]
+      },
+      "canonical_name": "early_finish_profile",
+      "components": [
+        "r1_finish_win",
+        "r1_finish_loss"
+      ],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_durability",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "result_method_history",
+      "feature_id": "FS_EARLY_FINISH_PROFILE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "fighter_state",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "fight_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "sig_strikes_landed"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "sig_strike_differential_rate",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "striking",
+      "feature_id": "FS_SIG_STRIKE_DIFFERENTIAL_RATE_V1",
+      "implementation_locations": [],
+      "layer": "fighter_state",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "control_sec"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "control_differential_rate",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_ground"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "ground_control",
+      "feature_id": "FS_CONTROL_DIFFERENTIAL_RATE_V1",
+      "implementation_locations": [],
+      "layer": "fighter_state",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "sig_strikes_attempted"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "late_round_pace_ratio",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "pace_persistence",
+      "feature_id": "FS_LATE_ROUND_PACE_RATIO_V1",
+      "implementation_locations": [],
+      "layer": "fighter_state",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career",
+        "last5"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighters": [
+          "fighter_id",
+          "dob"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "fighter_a_id",
+          "fighter_b_id"
+        ]
+      },
+      "canonical_name": "age_at_fight",
+      "components": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_durability",
+        "simulator"
+      ],
+      "contract_status": "V1_DERIVED",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_AGE_AT_FIGHT_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "context",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id",
+          "fighter_a_id",
+          "fighter_b_id"
+        ]
+      },
+      "canonical_name": "layoff_days",
+      "components": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "contract_status": "V1_DERIVED",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_LAYOFF_DAYS_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "context",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighters": [
+          "fighter_id",
+          "height_cm",
+          "reach_cm"
+        ]
+      },
+      "canonical_name": "physical_size_profile",
+      "components": [
+        "height_cm",
+        "reach_cm"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "contract_status": "V1_DERIVED",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_PHYSICAL_SIZE_PROFILE_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "context",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fights": [
+          "fight_id",
+          "scheduled_rounds"
+        ]
+      },
+      "canonical_name": "scheduled_rounds",
+      "components": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_SCHEDULED_ROUNDS_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "context",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fights": [
+          "fight_id",
+          "title_bout"
+        ]
+      },
+      "canonical_name": "title_bout",
+      "components": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_TITLE_BOUT_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "context",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fights": [
+          "fight_id",
+          "weight_class"
+        ]
+      },
+      "canonical_name": "weight_class",
+      "components": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "contract_status": "V1_MUST",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_WEIGHT_CLASS_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "context",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ],
+        "weigh_ins": [
+          "weigh_in_observation_id",
+          "fight_id",
+          "fighter_id",
+          "weigh_in_date",
+          "scale_weight_lbs"
+        ]
+      },
+      "canonical_name": "prior_scale_weight_lbs",
+      "components": [],
+      "consumers": [
+        "tree",
+        "human_research"
+      ],
+      "contract_status": "V1_DERIVED",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_PRIOR_SCALE_WEIGHT_LBS_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "context",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "sig_creation_vs_prevention",
+      "components": [
+        "f1_attack_vs_f2_prevention",
+        "f2_attack_vs_f1_prevention"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "matchup_striking",
+      "feature_id": "MX_SIG_CREATION_VS_PREVENTION_V1",
+      "implementation_locations": [],
+      "layer": "matchup_interaction",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1",
+        "FS_SIG_STRIKE_EFFICIENCY_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "knockdown_creation_vs_vulnerability",
+      "components": [
+        "f1_vs_f2",
+        "f2_vs_f1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_durability"
+      ],
+      "contract_status": "V1_DERIVED",
+      "elapsed_exposure_dependency": null,
+      "family": "matchup_damage",
+      "feature_id": "MX_KNOCKDOWN_CREATION_VS_VULNERABILITY_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "matchup_interaction",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [
+        "FS_KNOCKDOWN_RATE_V1",
+        "FS_KNOCKDOWN_EFFICIENCY_V1"
+      ],
+      "windows": [
+        "career",
+        "last5"
+      ]
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "takedown_pressure_vs_defense",
+      "components": [
+        "f1_vs_f2",
+        "f2_vs_f1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_wrestling"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "matchup_wrestling",
+      "feature_id": "MX_TAKEDOWN_PRESSURE_VS_DEFENSE_V1",
+      "implementation_locations": [],
+      "layer": "matchup_interaction",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [
+        "FS_TAKEDOWN_PRESSURE_V1",
+        "FS_TAKEDOWN_CONVERSION_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "control_creation_vs_allowed",
+      "components": [
+        "f1_vs_f2",
+        "f2_vs_f1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_ground"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "matchup_ground",
+      "feature_id": "MX_CONTROL_CREATION_VS_ALLOWED_V1",
+      "implementation_locations": [],
+      "layer": "matchup_interaction",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [
+        "FS_CONTROL_RATE_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "submission_pressure_vs_allowed",
+      "components": [
+        "f1_vs_f2",
+        "f2_vs_f1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_submission"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "matchup_submission",
+      "feature_id": "MX_SUBMISSION_PRESSURE_VS_ALLOWED_V1",
+      "implementation_locations": [],
+      "layer": "matchup_interaction",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [
+        "FS_SUBMISSION_ATTEMPT_RATE_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "pace_mismatch",
+      "components": [
+        "signed",
+        "absolute"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "matchup_pace",
+      "feature_id": "MX_PACE_MISMATCH_V1",
+      "implementation_locations": [],
+      "layer": "matchup_interaction",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1",
+        "FS_TAKEDOWN_PRESSURE_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "reach_difference_cm",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "contract_status": "V1_DERIVED",
+      "elapsed_exposure_dependency": null,
+      "family": "matchup_context",
+      "feature_id": "MX_REACH_DIFFERENCE_CM_V1",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "layer": "matchup_interaction",
+      "lifecycle_state": "ACTIVE",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [
+        "CTX_PHYSICAL_SIZE_PROFILE_V1"
+      ],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "sig_strikes_landed"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "oa_sig_creation",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "quality_opponent_adjustment",
+      "feature_id": "OA_OA_SIG_CREATION_V1",
+      "implementation_locations": [],
+      "layer": "opponent_adjusted",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "sig_strikes_landed"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "oa_sig_suppression",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "quality_opponent_adjustment",
+      "feature_id": "OA_OA_SIG_SUPPRESSION_V1",
+      "implementation_locations": [],
+      "layer": "opponent_adjusted",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1",
+        "FS_SIG_STRIKE_EFFICIENCY_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "takedowns_landed",
+          "takedowns_attempted"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "oa_takedown_creation",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_wrestling",
+        "simulator"
+      ],
+      "contract_status": "V2_OPPONENT_ADJUSTED",
+      "elapsed_exposure_dependency": null,
+      "family": "quality_opponent_adjustment",
+      "feature_id": "OA_OA_TAKEDOWN_CREATION_V1",
+      "implementation_locations": [],
+      "layer": "opponent_adjusted",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "attempt_probability_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_TAKEDOWN_PRESSURE_V1",
+        "FS_TAKEDOWN_CONVERSION_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "control_sec"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "oa_control_creation",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_ground",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "quality_opponent_adjustment",
+      "feature_id": "OA_OA_CONTROL_CREATION_V1",
+      "implementation_locations": [],
+      "layer": "opponent_adjusted",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_CONTROL_RATE_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "opponent_id",
+          "round",
+          "submission_attempts"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "oa_submission_creation",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_submission",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "quality_opponent_adjustment",
+      "feature_id": "OA_OA_SUBMISSION_CREATION_V1",
+      "implementation_locations": [],
+      "layer": "opponent_adjusted",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": true,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "time_rate_v1",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_SUBMISSION_ATTEMPT_RATE_V1"
+      ],
+      "windows": [
+        "career",
+        "last5",
+        "ewma_365d"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "sig_strikes_attempted"
+        ]
+      },
+      "canonical_name": "sim_strike_event_intensity",
+      "components": [],
+      "consumers": [
+        "component_striking",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "simulator_striking",
+      "feature_id": "SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "implementation_locations": [],
+      "layer": "simulator_component",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1"
+      ],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "knockdowns"
+        ]
+      },
+      "canonical_name": "sim_knockdown_hazard_proxy",
+      "components": [],
+      "consumers": [
+        "component_striking",
+        "component_durability",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "simulator_damage",
+      "feature_id": "SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "implementation_locations": [],
+      "layer": "simulator_component",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_KNOCKDOWN_RATE_V1",
+        "FS_KNOCKDOWN_EFFICIENCY_V1"
+      ],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "takedowns_attempted"
+        ]
+      },
+      "canonical_name": "sim_takedown_attempt_intensity",
+      "components": [],
+      "consumers": [
+        "component_wrestling",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "simulator_wrestling",
+      "feature_id": "SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "implementation_locations": [],
+      "layer": "simulator_component",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_TAKEDOWN_PRESSURE_V1"
+      ],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "takedowns_landed",
+          "takedowns_attempted"
+        ]
+      },
+      "canonical_name": "sim_takedown_success_probability",
+      "components": [],
+      "consumers": [
+        "component_wrestling",
+        "simulator"
+      ],
+      "contract_status": "SIMULATOR_COMPONENT",
+      "elapsed_exposure_dependency": null,
+      "family": "simulator_wrestling",
+      "feature_id": "SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "implementation_locations": [],
+      "layer": "simulator_component",
+      "lifecycle_state": "SIMULATOR_REQUIRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_TAKEDOWN_CONVERSION_V1"
+      ],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "submission_attempts"
+        ]
+      },
+      "canonical_name": "sim_submission_attempt_intensity",
+      "components": [],
+      "consumers": [
+        "component_submission",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "simulator_submission",
+      "feature_id": "SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "implementation_locations": [],
+      "layer": "simulator_component",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_SUBMISSION_ATTEMPT_RATE_V1"
+      ],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "sig_strikes_attempted",
+          "takedowns_attempted",
+          "control_sec"
+        ]
+      },
+      "canonical_name": "sim_fatigue_persistence_multiplier",
+      "components": [],
+      "consumers": [
+        "component_striking",
+        "component_wrestling",
+        "component_ground",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "simulator_persistence",
+      "feature_id": "SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "implementation_locations": [],
+      "layer": "simulator_component",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [
+        "FS_LATE_ROUND_PACE_RATIO_V1"
+      ],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "events": [
+          "event_id",
+          "event_date"
+        ],
+        "fighter_round_position": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "distance_bucket_min",
+          "distance_lower_sec",
+          "distance_upper_sec",
+          "clinch_bucket_min",
+          "clinch_lower_sec",
+          "clinch_upper_sec",
+          "ground_bucket_min",
+          "ground_lower_sec",
+          "ground_upper_sec"
+        ],
+        "fights": [
+          "fight_id",
+          "event_id"
+        ]
+      },
+      "canonical_name": "position_occupancy_profile",
+      "components": [
+        "distance",
+        "clinch",
+        "ground"
+      ],
+      "consumers": [
+        "component_ground",
+        "simulator"
+      ],
+      "contract_status": "PROXY_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "ground_environment",
+      "feature_id": "SIM_POSITION_OCCUPANCY_PROFILE_V1",
+      "implementation_locations": [],
+      "layer": "simulator_component",
+      "lifecycle_state": "PROXY_ONLY",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": [
+        "career"
+      ]
+    },
+    {
+      "canonical_inputs": {
+        "fighters": [
+          "fighter_id",
+          "stance"
+        ]
+      },
+      "canonical_name": "stance_profile",
+      "components": [],
+      "consumers": [
+        "tree",
+        "component_striking",
+        "human_research"
+      ],
+      "contract_status": "PROXY_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_STANCE_PROFILE_V1",
+      "implementation_locations": [],
+      "layer": "context",
+      "lifecycle_state": "PROXY_ONLY",
+      "matchup_dependency": true,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fights": [
+          "fight_id",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds",
+          "promotion"
+        ]
+      },
+      "canonical_name": "historical_fight_duration",
+      "components": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": "ruleset_registry_v1",
+      "family": "pace_persistence",
+      "feature_id": "FS_HISTORICAL_FIGHT_DURATION_V1",
+      "implementation_locations": [],
+      "layer": "fighter_state",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "weigh_ins": [
+          "weigh_in_observation_id",
+          "fight_id",
+          "fighter_id",
+          "weigh_in_date",
+          "scale_weight_lbs",
+          "attempt_number",
+          "contract_limit_lbs",
+          "missed_weight",
+          "pounds_over",
+          "catchweight_bout",
+          "purse_penalty_pct",
+          "official_status_text"
+        ]
+      },
+      "canonical_name": "current_fight_weighin_context",
+      "components": [],
+      "consumers": [
+        "tree",
+        "human_research"
+      ],
+      "contract_status": "DEFERRED",
+      "elapsed_exposure_dependency": null,
+      "family": "context",
+      "feature_id": "CTX_CURRENT_FIGHT_WEIGHIN_CONTEXT_V1",
+      "implementation_locations": [],
+      "layer": "context",
+      "lifecycle_state": "DEFERRED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "rankings": [
+          "ranking_date",
+          "fighter_id",
+          "weight_class",
+          "rank_numeric",
+          "is_champion",
+          "ranking_body"
+        ]
+      },
+      "canonical_name": "ranking_state_asof",
+      "components": [],
+      "consumers": [
+        "human_research"
+      ],
+      "contract_status": "RESEARCH_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "research_context",
+      "feature_id": "RES_RANKING_STATE_ASOF_V1",
+      "implementation_locations": [],
+      "layer": "research",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_profile_snapshots": [
+          "fighter_id",
+          "observed_at_utc",
+          "listed_weight_lbs",
+          "listed_weight_class",
+          "gym_text",
+          "fighting_style_text",
+          "status_text",
+          "residence_text",
+          "origin_text"
+        ]
+      },
+      "canonical_name": "profile_context_asof",
+      "components": [],
+      "consumers": [
+        "human_research"
+      ],
+      "contract_status": "RESEARCH_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "research_context",
+      "feature_id": "RES_PROFILE_CONTEXT_ASOF_V1",
+      "implementation_locations": [],
+      "layer": "research",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "camp_coaching_changes",
+      "components": [],
+      "consumers": [
+        "human_research"
+      ],
+      "contract_status": "RESEARCH_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "research_context",
+      "feature_id": "RES_CAMP_COACHING_CHANGES_V1",
+      "implementation_locations": [],
+      "layer": "research",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "injury_report",
+      "components": [],
+      "consumers": [
+        "human_research"
+      ],
+      "contract_status": "RESEARCH_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "research_context",
+      "feature_id": "RES_INJURY_REPORT_V1",
+      "implementation_locations": [],
+      "layer": "research",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "short_notice_circumstances",
+      "components": [],
+      "consumers": [
+        "human_research"
+      ],
+      "contract_status": "RESEARCH_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "research_context",
+      "feature_id": "RES_SHORT_NOTICE_CIRCUMSTANCES_V1",
+      "implementation_locations": [],
+      "layer": "research",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "qualitative_weighin_appearance",
+      "components": [],
+      "consumers": [
+        "human_research"
+      ],
+      "contract_status": "RESEARCH_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "research_context",
+      "feature_id": "RES_QUALITATIVE_WEIGHIN_APPEARANCE_V1",
+      "implementation_locations": [],
+      "layer": "research",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {},
+      "canonical_name": "travel_circumstances",
+      "components": [],
+      "consumers": [
+        "human_research"
+      ],
+      "contract_status": "RESEARCH_ONLY",
+      "elapsed_exposure_dependency": null,
+      "family": "research_context",
+      "feature_id": "RES_TRAVEL_CIRCUMSTANCES_V1",
+      "implementation_locations": [],
+      "layer": "research",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "knockdowns"
+        ]
+      },
+      "canonical_name": "exact_knockdown_sequence_dynamics",
+      "components": [],
+      "consumers": [
+        "simulator",
+        "human_research"
+      ],
+      "contract_status": "UNSUPPORTED",
+      "elapsed_exposure_dependency": null,
+      "family": "unsupported_sequence",
+      "feature_id": "UNSUP_EXACT_KNOCKDOWN_SEQUENCE_DYNAMICS_V1",
+      "implementation_locations": [],
+      "layer": "unsupported",
+      "lifecycle_state": "UNSUPPORTED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "submission_attempts"
+        ]
+      },
+      "canonical_name": "exact_submission_finish_given_threat",
+      "components": [],
+      "consumers": [
+        "component_submission",
+        "simulator"
+      ],
+      "contract_status": "UNSUPPORTED",
+      "elapsed_exposure_dependency": null,
+      "family": "unsupported_sequence",
+      "feature_id": "UNSUP_EXACT_SUBMISSION_FINISH_GIVEN_THREAT_V1",
+      "implementation_locations": [],
+      "layer": "unsupported",
+      "lifecycle_state": "UNSUPPORTED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_position": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "ground_bucket_min",
+          "ground_lower_sec",
+          "ground_upper_sec"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "control_sec",
+          "reversals"
+        ]
+      },
+      "canonical_name": "exact_escape_state_hazard",
+      "components": [],
+      "consumers": [
+        "component_ground",
+        "simulator"
+      ],
+      "contract_status": "UNSUPPORTED",
+      "elapsed_exposure_dependency": null,
+      "family": "unsupported_sequence",
+      "feature_id": "UNSUP_EXACT_ESCAPE_STATE_HAZARD_V1",
+      "implementation_locations": [],
+      "layer": "unsupported",
+      "lifecycle_state": "UNSUPPORTED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_position": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "standing_bucket_min",
+          "standing_lower_sec",
+          "standing_upper_sec",
+          "ground_bucket_min",
+          "ground_lower_sec",
+          "ground_upper_sec"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round",
+          "control_sec"
+        ]
+      },
+      "canonical_name": "exact_ground_standing_time",
+      "components": [],
+      "consumers": [
+        "component_ground",
+        "simulator"
+      ],
+      "contract_status": "UNSUPPORTED",
+      "elapsed_exposure_dependency": null,
+      "family": "unsupported_position",
+      "feature_id": "UNSUP_EXACT_GROUND_STANDING_TIME_V1",
+      "implementation_locations": [],
+      "layer": "unsupported",
+      "lifecycle_state": "UNSUPPORTED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "fighter_round_position": [
+          "fight_id",
+          "fighter_id",
+          "round"
+        ],
+        "fighter_round_stats": [
+          "fight_id",
+          "fighter_id",
+          "round"
+        ]
+      },
+      "canonical_name": "exact_state_transition_matrix",
+      "components": [],
+      "consumers": [
+        "simulator"
+      ],
+      "contract_status": "UNSUPPORTED",
+      "elapsed_exposure_dependency": null,
+      "family": "unsupported_sequence",
+      "feature_id": "UNSUP_EXACT_STATE_TRANSITION_MATRIX_V1",
+      "implementation_locations": [],
+      "layer": "unsupported",
+      "lifecycle_state": "UNSUPPORTED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": true,
+      "source_feature_ids": [],
+      "windows": []
+    },
+    {
+      "canonical_inputs": {
+        "judge_round_scores": [
+          "fight_id",
+          "round",
+          "judge_id",
+          "fighter_id",
+          "opponent_id",
+          "points"
+        ]
+      },
+      "canonical_name": "judge_round_scoring_state",
+      "components": [],
+      "consumers": [
+        "human_research"
+      ],
+      "contract_status": "UNSUPPORTED",
+      "elapsed_exposure_dependency": null,
+      "family": "unsupported_scoring",
+      "feature_id": "UNSUP_JUDGE_ROUND_SCORING_STATE_V1",
+      "implementation_locations": [],
+      "layer": "unsupported",
+      "lifecycle_state": "UNSUPPORTED",
+      "matchup_dependency": false,
+      "methodology_version": "1.0.0",
+      "opponent_adjusted_capability": false,
+      "round_specific": false,
+      "semantic_version": "1.0.0",
+      "shrinkage_policy": "none",
+      "simulator_relevance": false,
+      "source_feature_ids": [],
+      "windows": []
+    }
+  ],
+  "f01_selected_value_count": 104,
+  "feature_contract_version": "0.1.2-draft",
+  "fighter_state_context_value_count": 99,
+  "generated_view_version": 1,
+  "governance_version": "1.0.0",
+  "matchup_interaction_value_count": 5
+}
