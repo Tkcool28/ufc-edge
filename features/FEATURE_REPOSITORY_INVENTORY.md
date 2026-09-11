@@ -1,6 +1,6 @@
 # Feature Repository Inventory — Governance V1
 
-Baseline main: `d57038afcd356db0b76d2ce88c54ab5d626a6095`  
+Baseline main: `d57038afcd356db0b76d2ce88c54ab5d626a6095`
 PR #30 merge commit: `d57038afcd356db0b76d2ce88c54ab5d626a6095`
 
 This is the human-readable repository-surface inventory paired with `repository_inventory.json`.
