@@ -250,7 +250,7 @@ class FeatureContractTests(unittest.TestCase):
         self.assertEqual(self.feature("sim_takedown_success_probability")["status"], "SIMULATOR_COMPONENT")
         names = materialized_feature_names(self.catalog)
         self.assertTrue(any("takedown_conversion" in name for name in names))
-        self.assertFalse(any("sig_strike_flow" in name for name in names))
+        self.assertTrue(any("sig_strike_flow" in name for name in names))
 
     # Materialization naming / consumers --------------------------------
 
