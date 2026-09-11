@@ -6,7 +6,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter, defaultdict
 import csv
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 import hashlib
 import json
 import os
@@ -229,6 +229,8 @@ def audit() -> dict[str, Any]:
         "registry_sha256": registry_sha256(ROOT),
         "canonical_data_contract_version": "0.4.0-draft",
         "canonical_manifest_sha256": file_sha(CANON / "manifest.json"),
+        "data_freeze_sha256": file_sha(ROOT / "provenance/data_phase_freeze_v0.json"),
+        "feature_catalog_sha256": file_sha(ROOT / "features/feature_catalog.yaml"),
         "counts": {
             "canonical_fights": len(fights),
             "eligible_fights": safe_fights,
@@ -255,7 +257,10 @@ def audit() -> dict[str, Any]:
             "recent_ufc_fighter_round_stat_observations_pct": pct(recent_safe_rows, recent_rows),
         },
         "inventory_by_promotion": inventory,
-        "status_counts": sorted_counter(status),
+        "status_counts": {
+            key: int(status.get(key, 0))
+            for key in ("verified", "inferred_from_verified_ruleset", "known_nonstandard", "ambiguous", "unknown", "not_applicable")
+        },
         "ambiguity_reason_counts": sorted_counter(ambiguity_reasons),
         "ruleset_assignment_counts": sorted_counter(rulesets),
         "coverage_by_promotion": finalize_breakdown(by_promotion),
@@ -300,7 +305,8 @@ def main() -> None:
     payload = {
         "deterministic": report,
         "run": {
-            "code_sha": os.environ.get("GITHUB_SHA", "working_tree"),
+            "code_sha": os.environ.get("UFC_EDGE_CODE_SHA") or os.environ.get("GITHUB_HEAD_SHA") or os.environ.get("GITHUB_SHA", "working_tree"),
+            "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         },
     }
     text = json.dumps(payload, indent=2, sort_keys=True) + "\n"

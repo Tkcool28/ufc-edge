@@ -20,6 +20,7 @@ jobs:
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       PYTHONPATH: src
+      UFC_EDGE_CODE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
     steps:
       - uses: actions/checkout@v4
         with:

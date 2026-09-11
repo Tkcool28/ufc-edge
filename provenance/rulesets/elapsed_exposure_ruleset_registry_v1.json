@@ -61,11 +61,11 @@
       "note": "ONE MMA bouts are three five-minute rounds; World Championship MMA bouts are five five-minute rounds. Other ONE disciplines use different durations and must not be conflated with MMA."
     },
     "one_early_mma_2012": {
-      "url": "https://www.sherdog.com/news/news/After-SylviaArlovski-Controversy-One-FC-Adopts-Full-Pride-Rules-Ahead-of-Oct-6-Event-45373",
-      "title": "Sherdog — ONE FC rule-change report",
-      "effective_or_publication_date": "2012-09-03",
-      "evidence_class": "CONTEMPORANEOUS_SECONDARY",
-      "note": "Documents early ONE FC MMA rules context; the change concerned soccer-kick legality, not round duration."
+      "url": "https://sg.news.yahoo.com/mma--one-fc-brings-world-class-mma-to-the-philippines.html",
+      "title": "Yahoo News Singapore — ONE FC brings world-class MMA to the Philippines",
+      "effective_or_publication_date": "2012-07-18",
+      "evidence_class": "CONTEMPORANEOUS_SECONDARY_QUOTING_PROMOTION",
+      "note": "Contemporary ONE FC preview quoting CEO Victor Cui describes the rules blend and states each fight is scheduled for three five-minute rounds."
     },
     "external_finish_time_repo_provenance": {
       "url": "repo:pipelines/build_canonical_external_mma_v0.py",
@@ -135,7 +135,7 @@
     {
       "ruleset_id": "one_global_mma_5min_v1",
       "promotion": "One Championship",
-      "effective_start": "2011-09-03",
+      "effective_start": "2012-08-31",
       "effective_end": "2021-08-11",
       "bout_scope": "Canonical ONE professional MMA rows in the frozen pro-MMA external snapshot; not ONE Muay Thai, kickboxing, submission grappling, or hybrid special-rules contests",
       "round_duration_sec": 300,
@@ -152,8 +152,8 @@
       "finish_time_source_refs": [
         "external_finish_time_repo_provenance"
       ],
-      "confidence": "HIGH_PRIMARY_CURRENT_PLUS_HISTORICAL_CORROBORATION",
-      "notes": "The canonical source is explicitly a professional MMA dataset. Promotion name alone must never authorize non-MMA ONE disciplines.",
+      "confidence": "HIGH_PRIMARY_CURRENT_PLUS_CONTEMPORANEOUS_HISTORICAL",
+      "notes": "The canonical source is explicitly a professional MMA dataset. Promotion name alone must never authorize non-MMA ONE disciplines. Canonical ONE fights before 2012-08-31 remain unknown/ambiguous because this registry does not backfill current rules into the earliest promotion era without adequate historical evidence.",
       "duration_semantics": "FIXED_PER_ROUND"
     }
   ],
