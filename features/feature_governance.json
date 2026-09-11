@@ -1,0 +1,1515 @@
+{
+  "governance_schema_version": 1,
+  "governance_version": "1.0.0",
+  "feature_contract_version": "0.1.2-draft",
+  "catalog_authority": "features/feature_catalog.yaml",
+  "identity_policy": {
+    "convention": "<layer-prefix>_<canonical-feature-name-uppercase>_V<semantic-major>",
+    "stable_under_rename": true,
+    "never_recycled": true,
+    "semantic_change_requires_new_id": true,
+    "materialized_columns_are_variants_not_concepts": true
+  },
+  "lifecycle_states": [
+    "ACTIVE",
+    "DEFERRED",
+    "RESEARCH_ONLY",
+    "SIMULATOR_REQUIRED",
+    "DATA_REQUIRED",
+    "PROXY_ONLY",
+    "DEPRECATED",
+    "SUPERSEDED",
+    "UNSUPPORTED"
+  ],
+  "features": [
+    {
+      "feature_id": "FS_PRIOR_FIGHT_COUNT_V1",
+      "canonical_name": "prior_fight_count",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_SIG_STRIKE_FLOW_V1",
+      "canonical_name": "sig_strike_flow",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_SIG_STRIKE_EFFICIENCY_V1",
+      "canonical_name": "sig_strike_efficiency",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_SIG_TARGET_MIX_V1",
+      "canonical_name": "sig_target_mix",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_SIG_ENVIRONMENT_MIX_V1",
+      "canonical_name": "sig_environment_mix",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking",
+        "component_ground",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_KNOCKDOWN_RATE_V1",
+      "canonical_name": "knockdown_rate",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking",
+        "component_durability",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_KNOCKDOWN_EFFICIENCY_V1",
+      "canonical_name": "knockdown_efficiency",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_DERIVED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_durability",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_TAKEDOWN_PRESSURE_V1",
+      "canonical_name": "takedown_pressure",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_wrestling",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_TAKEDOWN_CONVERSION_V1",
+      "canonical_name": "takedown_conversion",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_wrestling",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_CONTROL_RATE_V1",
+      "canonical_name": "control_rate",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_ground",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": "Generic canonical control only; never positional/top/ground duration."
+    },
+    {
+      "feature_id": "FS_SUBMISSION_ATTEMPT_RATE_V1",
+      "canonical_name": "submission_attempt_rate",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_submission",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_REVERSAL_RATE_V1",
+      "canonical_name": "reversal_rate",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py",
+        "src/ufc_edge/features/elapsed_exposure.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_ground",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_FINISH_METHOD_WIN_PROFILE_V1",
+      "canonical_name": "finish_method_win_profile",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_striking",
+        "component_submission",
+        "component_durability",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_FINISH_METHOD_LOSS_PROFILE_V1",
+      "canonical_name": "finish_method_loss_profile",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_durability",
+        "component_submission",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_EARLY_FINISH_PROFILE_V1",
+      "canonical_name": "early_finish_profile",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_durability",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_SIG_STRIKE_DIFFERENTIAL_RATE_V1",
+      "canonical_name": "sig_strike_differential_rate",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_CONTROL_DIFFERENTIAL_RATE_V1",
+      "canonical_name": "control_differential_rate",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_ground"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_LATE_ROUND_PACE_RATIO_V1",
+      "canonical_name": "late_round_pace_ratio",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_AGE_AT_FIGHT_V1",
+      "canonical_name": "age_at_fight",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_DERIVED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "component_durability",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_LAYOFF_DAYS_V1",
+      "canonical_name": "layoff_days",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_DERIVED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_PHYSICAL_SIZE_PROFILE_V1",
+      "canonical_name": "physical_size_profile",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_DERIVED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_SCHEDULED_ROUNDS_V1",
+      "canonical_name": "scheduled_rounds",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_TITLE_BOUT_V1",
+      "canonical_name": "title_bout",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_WEIGHT_CLASS_V1",
+      "canonical_name": "weight_class",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_MUST",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "model0",
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_PRIOR_SCALE_WEIGHT_LBS_V1",
+      "canonical_name": "prior_scale_weight_lbs",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_DERIVED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [],
+      "consumers": [
+        "tree",
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "MX_SIG_CREATION_VS_PREVENTION_V1",
+      "canonical_name": "sig_creation_vs_prevention",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1",
+        "FS_SIG_STRIKE_EFFICIENCY_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "MX_KNOCKDOWN_CREATION_VS_VULNERABILITY_V1",
+      "canonical_name": "knockdown_creation_vs_vulnerability",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_DERIVED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [
+        "FS_KNOCKDOWN_RATE_V1",
+        "FS_KNOCKDOWN_EFFICIENCY_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_durability"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "MX_TAKEDOWN_PRESSURE_VS_DEFENSE_V1",
+      "canonical_name": "takedown_pressure_vs_defense",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_TAKEDOWN_PRESSURE_V1",
+        "FS_TAKEDOWN_CONVERSION_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_wrestling"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "MX_CONTROL_CREATION_VS_ALLOWED_V1",
+      "canonical_name": "control_creation_vs_allowed",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_CONTROL_RATE_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_ground"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "MX_SUBMISSION_PRESSURE_VS_ALLOWED_V1",
+      "canonical_name": "submission_pressure_vs_allowed",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_SUBMISSION_ATTEMPT_RATE_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_submission"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "MX_PACE_MISMATCH_V1",
+      "canonical_name": "pace_mismatch",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1",
+        "FS_TAKEDOWN_PRESSURE_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "MX_REACH_DIFFERENCE_CM_V1",
+      "canonical_name": "reach_difference_cm",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "ACTIVE",
+      "contract_status": "V1_DERIVED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [
+        "src/ufc_edge/features/state.py"
+      ],
+      "source_feature_ids": [
+        "CTX_PHYSICAL_SIZE_PROFILE_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "OA_OA_SIG_CREATION_V1",
+      "canonical_name": "oa_sig_creation",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "OA_OA_SIG_SUPPRESSION_V1",
+      "canonical_name": "oa_sig_suppression",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1",
+        "FS_SIG_STRIKE_EFFICIENCY_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_striking",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "OA_OA_TAKEDOWN_CREATION_V1",
+      "canonical_name": "oa_takedown_creation",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "V2_OPPONENT_ADJUSTED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_TAKEDOWN_PRESSURE_V1",
+        "FS_TAKEDOWN_CONVERSION_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_wrestling",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "OA_OA_CONTROL_CREATION_V1",
+      "canonical_name": "oa_control_creation",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_CONTROL_RATE_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_ground",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "OA_OA_SUBMISSION_CREATION_V1",
+      "canonical_name": "oa_submission_creation",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_SUBMISSION_ATTEMPT_RATE_V1"
+      ],
+      "consumers": [
+        "model1",
+        "tree",
+        "component_submission",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "canonical_name": "sim_strike_event_intensity",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1"
+      ],
+      "consumers": [
+        "component_striking",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "canonical_name": "sim_knockdown_hazard_proxy",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_KNOCKDOWN_RATE_V1",
+        "FS_KNOCKDOWN_EFFICIENCY_V1"
+      ],
+      "consumers": [
+        "component_striking",
+        "component_durability",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "canonical_name": "sim_takedown_attempt_intensity",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_TAKEDOWN_PRESSURE_V1"
+      ],
+      "consumers": [
+        "component_wrestling",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "canonical_name": "sim_takedown_success_probability",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "SIMULATOR_REQUIRED",
+      "contract_status": "SIMULATOR_COMPONENT",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_TAKEDOWN_CONVERSION_V1"
+      ],
+      "consumers": [
+        "component_wrestling",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "canonical_name": "sim_submission_attempt_intensity",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_SUBMISSION_ATTEMPT_RATE_V1"
+      ],
+      "consumers": [
+        "component_submission",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "canonical_name": "sim_fatigue_persistence_multiplier",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [
+        "FS_LATE_ROUND_PACE_RATIO_V1"
+      ],
+      "consumers": [
+        "component_striking",
+        "component_wrestling",
+        "component_ground",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "SIM_POSITION_OCCUPANCY_PROFILE_V1",
+      "canonical_name": "position_occupancy_profile",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "PROXY_ONLY",
+      "contract_status": "PROXY_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "component_ground",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_STANCE_PROFILE_V1",
+      "canonical_name": "stance_profile",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "PROXY_ONLY",
+      "contract_status": "PROXY_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "tree",
+        "component_striking",
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "FS_HISTORICAL_FIGHT_DURATION_V1",
+      "canonical_name": "historical_fight_duration",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "model1",
+        "tree",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "CTX_CURRENT_FIGHT_WEIGHIN_CONTEXT_V1",
+      "canonical_name": "current_fight_weighin_context",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "DEFERRED",
+      "contract_status": "DEFERRED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "tree",
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "RES_RANKING_STATE_ASOF_V1",
+      "canonical_name": "ranking_state_asof",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "contract_status": "RESEARCH_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "RES_PROFILE_CONTEXT_ASOF_V1",
+      "canonical_name": "profile_context_asof",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "contract_status": "RESEARCH_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "RES_CAMP_COACHING_CHANGES_V1",
+      "canonical_name": "camp_coaching_changes",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "contract_status": "RESEARCH_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "RES_INJURY_REPORT_V1",
+      "canonical_name": "injury_report",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "contract_status": "RESEARCH_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "RES_SHORT_NOTICE_CIRCUMSTANCES_V1",
+      "canonical_name": "short_notice_circumstances",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "contract_status": "RESEARCH_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "RES_QUALITATIVE_WEIGHIN_APPEARANCE_V1",
+      "canonical_name": "qualitative_weighin_appearance",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "contract_status": "RESEARCH_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "RES_TRAVEL_CIRCUMSTANCES_V1",
+      "canonical_name": "travel_circumstances",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "RESEARCH_ONLY",
+      "contract_status": "RESEARCH_ONLY",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "UNSUP_EXACT_KNOCKDOWN_SEQUENCE_DYNAMICS_V1",
+      "canonical_name": "exact_knockdown_sequence_dynamics",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "UNSUPPORTED",
+      "contract_status": "UNSUPPORTED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "simulator",
+        "human_research"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "UNSUP_EXACT_SUBMISSION_FINISH_GIVEN_THREAT_V1",
+      "canonical_name": "exact_submission_finish_given_threat",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "UNSUPPORTED",
+      "contract_status": "UNSUPPORTED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "component_submission",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "UNSUP_EXACT_ESCAPE_STATE_HAZARD_V1",
+      "canonical_name": "exact_escape_state_hazard",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "UNSUPPORTED",
+      "contract_status": "UNSUPPORTED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "component_ground",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "UNSUP_EXACT_GROUND_STANDING_TIME_V1",
+      "canonical_name": "exact_ground_standing_time",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "UNSUPPORTED",
+      "contract_status": "UNSUPPORTED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "component_ground",
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "UNSUP_EXACT_STATE_TRANSITION_MATRIX_V1",
+      "canonical_name": "exact_state_transition_matrix",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "UNSUPPORTED",
+      "contract_status": "UNSUPPORTED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "simulator"
+      ],
+      "simulator_relevance": true,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    },
+    {
+      "feature_id": "UNSUP_JUDGE_ROUND_SCORING_STATE_V1",
+      "canonical_name": "judge_round_scoring_state",
+      "semantic_version": "1.0.0",
+      "methodology_version": "1.0.0",
+      "lifecycle_state": "UNSUPPORTED",
+      "contract_status": "UNSUPPORTED",
+      "introduced_contract": "0.1.1-draft",
+      "semantic_authority": "features/feature_catalog.yaml",
+      "implementation_locations": [],
+      "source_feature_ids": [],
+      "consumers": [
+        "human_research"
+      ],
+      "simulator_relevance": false,
+      "replay_policy": "methodology_or_semantic_change_requires_replay",
+      "renamed_from": [],
+      "deprecated_in": null,
+      "superseded_by": null,
+      "notes": null
+    }
+  ]
+}
