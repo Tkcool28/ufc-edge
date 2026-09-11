@@ -1,0 +1,71 @@
+{
+  "migration_schema_version": 1,
+  "migrations": [
+    {
+      "migration_id": "F00_INITIAL_0_1_1",
+      "from_version": null,
+      "to_version": "0.1.1-draft",
+      "date": "2026-08-23",
+      "reason": "Initial shared feature architecture.",
+      "affected_feature_ids": "all concepts introduced by F00",
+      "semantic_changes": [
+        "Initial definitions"
+      ],
+      "methodology_changes": [],
+      "replay_requirement": "none; architecture initialization",
+      "compatibility": "baseline",
+      "pr": 7,
+      "commit": "8fdc27d4956cbf4bdae4500a5aa62a0009e57666"
+    },
+    {
+      "migration_id": "F01_INITIAL_MATERIALIZER",
+      "from_version": "0.1.1-draft",
+      "to_version": "0.1.1-draft",
+      "date": "2026-08-23",
+      "reason": "Initial PIT V1 materializer.",
+      "affected_feature_ids": "ACTIVE V1 subset",
+      "semantic_changes": [],
+      "methodology_changes": [
+        "Executable PIT/window/shrinkage materialization"
+      ],
+      "replay_requirement": "future historical artifacts must identify F01 methodology",
+      "compatibility": "additive implementation",
+      "pr": 8,
+      "commit": "e72c45b1d1d496542ef5035cf3c78af745b125b3"
+    },
+    {
+      "migration_id": "ELAPSED_EXPOSURE_0_1_2",
+      "from_version": "0.1.1-draft",
+      "to_version": "0.1.2-draft",
+      "date": "2026-09-11",
+      "reason": "Ruleset-qualified elapsed exposure restored six time-normalized primitives.",
+      "affected_feature_ids": [
+        "FS_SIG_STRIKE_FLOW_V1",
+        "FS_KNOCKDOWN_RATE_V1",
+        "FS_TAKEDOWN_PRESSURE_V1",
+        "FS_CONTROL_RATE_V1",
+        "FS_SUBMISSION_ATTEMPT_RATE_V1",
+        "FS_REVERSAL_RATE_V1"
+      ],
+      "semantic_changes": [
+        "Elapsed eligibility now uses ruleset_registry_v1; no universal five-minute fallback."
+      ],
+      "methodology_changes": [
+        "Time denominators restored only for verified eligible rounds."
+      ],
+      "replay_requirement": "required for affected elapsed-normalized artifacts",
+      "compatibility": "old 0.1.1 artifacts remain interpretable as pre-restoration",
+      "pr": 30,
+      "commit": "d57038afcd356db0b76d2ce88c54ab5d626a6095"
+    }
+  ],
+  "change_classes": {
+    "documentation_only": "no replay",
+    "display_rename_same_semantics": "alias/migration record; no new feature_id; replay only if physical column contract requires it",
+    "methodology_parameter_change": "bump methodology_version; replay affected concept variants",
+    "numerator_or_semantic_change": "new semantic identity/version; replay affected artifacts",
+    "add_materialized_variant": "partial replay for new variant",
+    "canonical_source_change": "semantic review required; replay normally required",
+    "add_consumer_tag": "no replay unless consumer requires a new variant"
+  }
+}
