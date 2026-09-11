@@ -13,7 +13,7 @@ Read these in order:
 5. `FEATURE_REFERENCE.md` — generated human-readable inventory.
 6. `feature_inventory.json` — generated machine-readable inventory.
 
-Current feature contract: **0.1.2-draft**.  
+Current feature contract: **0.1.2-draft**.
 Current governance version: **1.0.0**.
 
 Verified merged-main baseline after PR #30:
