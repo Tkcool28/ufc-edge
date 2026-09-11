@@ -73,8 +73,8 @@ class V1Materializer:
         if summary["feature_contract_version"] != "0.1.2-draft":
             raise MaterializerError("F01 requires feature contract 0.1.2-draft")
         self.catalog = load_feature_catalog(self.root)
-        if self.catalog["elapsed_exposure_policy"]["allowed_sources"] != []:
-            raise MaterializerError("F01 requires canonical-v0 elapsed_exposure_policy.allowed_sources=[]")
+        if self.catalog["elapsed_exposure_policy"]["allowed_sources"] != ["ruleset_registry_v1"]:
+            raise MaterializerError("F01 requires elapsed_exposure_policy.allowed_sources=[ruleset_registry_v1]")
         self.store = CanonicalStore(self.root)
         self.builder = StateBuilder(self.store, self.catalog)
 
