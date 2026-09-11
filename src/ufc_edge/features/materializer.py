@@ -15,6 +15,7 @@ from .contract import (
     materialized_feature_names,
     validate_repository_contract,
 )
+from .governance import artifact_feature_metadata, sha256_file
 from .history import CanonicalStore, parse_cutoff
 from .state import (
     FighterState,
@@ -172,11 +173,18 @@ class V1Materializer:
         selected_statuses = sorted({
             feature["status"] for feature in active_v1_features(self.catalog, consumer)
         })
+        governance_metadata = artifact_feature_metadata(materialized_names, self.root)
         deterministic = {
             "feature_contract_version": self.catalog["feature_contract_version"],
+            **governance_metadata,
             "feature_catalog_sha256": _sha256(self.root / "features/feature_catalog.yaml"),
             "feature_schema_sha256": _sha256(self.root / "features/feature_schema.json"),
             "leakage_registry_sha256": _sha256(self.root / "features/leakage_registry.yaml"),
+            "terminology_sha256": sha256_file(self.root / "features/terminology.json"),
+            "feature_dependencies_sha256": sha256_file(self.root / "features/dependencies.json"),
+            "ruleset_registry_sha256": sha256_file(
+                self.root / "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json"
+            ),
             "data_contract_version": self.catalog["data_contract_version"],
             "data_freeze_sha256": _sha256(freeze_path),
             "data_freeze_status": freeze.get("status"),
