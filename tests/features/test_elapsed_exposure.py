@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from copy import deepcopy
 from pathlib import Path
+import csv
 import unittest
 
 from ufc_edge.features.elapsed_exposure import (
@@ -51,28 +52,18 @@ class ElapsedExposureTests(unittest.TestCase):
 
     def test_r1_r2_r5_finishes(self):
         for rnd, terminal, expected in [(1, 91, 91), (2, 44, 344), (5, 299, 1499)]:
-            ex = infer_fight_exposure(
-                self.fight(
-                    finish_round=str(rnd),
-                    finish_time_sec=str(terminal),
-                    scheduled_rounds="5",
-                    method="KO_TKO",
-                ),
-                "2020-01-01",
-                self.registry,
+            fight = self.fight(
+                finish_round=str(rnd),
+                finish_time_sec=str(terminal),
+                scheduled_rounds="5",
+                method="KO_TKO",
             )
+            ex = infer_fight_exposure(fight, "2020-01-01", self.registry)
             self.assertEqual(ex.elapsed_sec, expected)
-            self.assertEqual(infer_round_exposure(
-                self.fight(
-                    finish_round=str(rnd),
-                    finish_time_sec=str(terminal),
-                    scheduled_rounds="5",
-                    method="KO_TKO",
-                ),
-                "2020-01-01",
-                str(rnd),
-                self.registry,
-            ), terminal)
+            self.assertEqual(
+                infer_round_exposure(fight, "2020-01-01", str(rnd), self.registry),
+                terminal,
+            )
 
     def test_known_nonstandard_10_5_5_fixture(self):
         registry = deepcopy(self.registry)
@@ -81,22 +72,33 @@ class ElapsedExposureTests(unittest.TestCase):
             "promotion": "Fixture Pride",
             "effective_start": "2000-01-01",
             "effective_end": "2000-12-31",
-            "bout_scope": "test fixture",
-            "round_duration_sec": 600,
+            "bout_scope": "synthetic nonstandard test fixture",
+            "round_durations_sec": [600, 300, 300],
             "scheduled_round_options": [3],
             "classification": "VERIFIED_NONSTANDARD_FIXED",
             "source_refs": ["abc_unified_rules_2025"],
             "finish_time_semantics": "elapsed_within_terminal_round",
             "finish_time_source_refs": ["ufc_official_time_semantics"],
             "confidence": "TEST",
-            "notes": "Synthetic fixed nonstandard test fixture; later-round duration is overridden below.",
+            "notes": "Synthetic only; proves explicit nonuniform vectors without a universal fallback.",
         })
-        # The production registry schema currently models one fixed per-round duration because
-        # all canonical rulesets are fixed 5-minute. Prove no false 10/5/5 support is claimed.
-        with self.assertRaises(ElapsedExposureError):
-            # A nonuniform vector requires a future explicit vector schema, never a guessed fallback.
-            if registry["rulesets"][-1]["round_duration_sec"] == 600:
-                raise ElapsedExposureError("nonuniform 10/5/5 requires explicit vector semantics")
+        r1 = self.fight(
+            promotion="Fixture Pride", finish_round="1", finish_time_sec="500",
+            scheduled_rounds="3", method="KO_TKO",
+        )
+        r2 = self.fight(
+            promotion="Fixture Pride", finish_round="2", finish_time_sec="120",
+            scheduled_rounds="3", method="SUBMISSION",
+        )
+        decision = self.fight(
+            promotion="Fixture Pride", finish_round="3", finish_time_sec="300",
+            scheduled_rounds="3", method="DECISION",
+        )
+        self.assertEqual(infer_fight_exposure(r1, "2000-06-01", registry).elapsed_sec, 500)
+        self.assertEqual(infer_fight_exposure(r2, "2000-06-01", registry).elapsed_sec, 720)
+        self.assertEqual(infer_fight_exposure(decision, "2000-06-01", registry).elapsed_sec, 1200)
+        self.assertEqual(infer_round_exposure(r2, "2000-06-01", "1", registry), 600)
+        self.assertEqual(infer_round_exposure(r2, "2000-06-01", "2", registry), 120)
 
     def test_pre_ufc28_is_ambiguous(self):
         assignment = assign_ruleset("UFC", "2000-11-16", self.registry)
@@ -126,9 +128,19 @@ class ElapsedExposureTests(unittest.TestCase):
         )
         self.assertFalse(ex.eligible)
 
+    def test_control_and_position_cannot_authorize_duration(self):
+        fight = self.fight(
+            promotion="Mystery FC",
+            control_sec="299",
+            sig_ground_attempted="100",
+            scheduled_rounds="3",
+        )
+        self.assertFalse(infer_fight_exposure(fight, "2020-01-01", self.registry).eligible)
+
     def test_no_universal_300_second_fallback(self):
         assignment = assign_ruleset("PRIDE", "2005-01-01", self.registry)
         self.assertIsNone(assignment.round_duration_sec)
+        self.assertIsNone(assignment.round_durations_sec)
 
     def test_external_decision_without_scheduled_rounds_fails_closed(self):
         ex = infer_fight_exposure(
@@ -179,7 +191,6 @@ class ElapsedExposureTests(unittest.TestCase):
         self.assertEqual(a, b)
 
     def test_real_data_examples_for_all_canonical_promotions(self):
-        import csv
         events = {}
         with (ROOT / "data/canonical/v0/events.csv").open(newline="", encoding="utf-8") as handle:
             for row in csv.DictReader(handle):

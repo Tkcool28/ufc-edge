@@ -1,5 +1,5 @@
 {
-  "feature_contract_version": "0.1.1-draft",
+  "feature_contract_version": "0.1.2-draft",
   "catalog_schema_version": 1,
   "data_contract_version": "0.4.0-draft",
   "authoritative": true,
@@ -36,8 +36,8 @@
     "prior_hierarchy": "Use the target weight-class population prior only when at least 100 eligible historical fights exist strictly before the cutoff; otherwise use the global eligible historical population.",
     "time_rate_v1": {
       "prior_strength": "15 equivalent eligible minutes",
-      "use": "Reserved for a future contract version after elapsed fight/round exposure becomes contract-safe; no canonical-v0 time-rate concept is currently materializable.",
-      "currently_materializable": false
+      "use": "Elapsed-time round-stat rates only where ruleset_registry_v1 proves compatible elapsed exposure; numerator and denominator units must preserve the concept's stated rate/share.",
+      "currently_materializable": true
     },
     "attempt_probability_v1": {
       "prior_strength": "20 equivalent attempts/opportunities",
@@ -159,7 +159,12 @@
         ],
         "fights": [
           "fight_id",
-          "event_id"
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
         ],
         "fighter_round_stats": [
           "fight_id",
@@ -184,7 +189,7 @@
         "zero_denominator": "Rate is null; known zero exposure is retained in support.",
         "missing_denominator": "Rate is null and missingness is missing_observation."
       },
-      "minimum_sample": "Raw display estimate requires 300 eligible seconds; shrunk estimate may retain smaller known support.",
+      "minimum_sample": "Raw display requires 5 eligible minutes; shrunk estimate may use smaller known support.",
       "missingness_behavior": "Observed zero counts over positive observed exposure produce 0; missing counts remove that round from domain exposure.",
       "zero_semantics": "0 means observed no events during positive eligible exposure.",
       "shrinkage_rule": "time_rate_v1",
@@ -195,8 +200,8 @@
       "round_specific_variant": true,
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
-      "coverage_expectation": "Strong for canonical UFC round-stat eras; external fights without round stats do not contribute.",
-      "known_limitations": "Elapsed exposure is fight/round time, not exact distance/clinch/ground time. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "coverage_expectation": "Strong for canonical UFC round-stat eras; external fights without round stats do not contribute. V1 eligibility is fail-closed to ruleset_registry_v1-compatible rounds.",
+      "known_limitations": "Elapsed exposure is fight/round time, not exact distance/clinch/ground time.",
       "intended_model_consumers": [
         "model0",
         "model1",
@@ -204,19 +209,19 @@
         "component_striking",
         "simulator"
       ],
-      "status": "DEFERRED",
+      "status": "V1_MUST",
       "leakage_test": "round must be >=1 and source fight date strictly before cutoff; current target round stats forbidden.",
-      "provenance_requirement": "Retain fight_id/round support and numerator/denominator totals by materialized window.",
+      "provenance_requirement": "Retain fight_id/round support and numerator/denominator totals by materialized window. Retain ruleset_id and elapsed seconds/minutes used by every contributing round.",
       "components": [
         "attempted_per_min",
         "landed_per_min",
         "absorbed_per_min"
       ],
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -450,7 +455,12 @@
         ],
         "fights": [
           "fight_id",
-          "event_id"
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
         ],
         "fighter_round_stats": [
           "fight_id",
@@ -474,7 +484,7 @@
         "zero_denominator": "Rate is null; zero support retained.",
         "missing_denominator": "Rate is null and marked missing_observation."
       },
-      "minimum_sample": "Raw display requires 300 eligible seconds; shrinkage is expected because knockdowns are sparse.",
+      "minimum_sample": "Raw display requires 5 eligible minutes; shrunk estimate may use smaller known support.",
       "missingness_behavior": "Observed zero KDs over positive exposure is a real zero; unobserved KD count is missing.",
       "zero_semantics": "0 means no knockdowns observed over positive eligible exposure.",
       "shrinkage_rule": "time_rate_v1",
@@ -485,8 +495,8 @@
       "round_specific_variant": false,
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
-      "coverage_expectation": "Good where canonical round statistics exist; rare-event uncertainty remains material.",
-      "known_limitations": "Does not observe knockdown severity, recovery sequence, or whether a later finish followed from that knockdown. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "coverage_expectation": "Good where canonical round statistics exist; rare-event uncertainty remains material. V1 eligibility is fail-closed to ruleset_registry_v1-compatible rounds.",
+      "known_limitations": "Does not observe knockdown severity, recovery sequence, or whether a later finish followed from that knockdown.",
       "intended_model_consumers": [
         "model0",
         "model1",
@@ -495,18 +505,18 @@
         "component_durability",
         "simulator"
       ],
-      "status": "DEFERRED",
+      "status": "V1_MUST",
       "leakage_test": "Only prior actual-round knockdowns; no target-fight knockdown rows.",
-      "provenance_requirement": "Retain KD totals, compatible elapsed exposure and round lineage.",
+      "provenance_requirement": "Retain KD totals, compatible elapsed exposure and round lineage. Retain ruleset_id and elapsed seconds/minutes used by every contributing round.",
       "components": [
         "created_per_15",
         "allowed_per_15"
       ],
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -597,7 +607,12 @@
         ],
         "fights": [
           "fight_id",
-          "event_id"
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
         ],
         "fighter_round_stats": [
           "fight_id",
@@ -621,7 +636,7 @@
         "zero_denominator": "Rate is null; zero support retained.",
         "missing_denominator": "Rate is null and marked missing_observation."
       },
-      "minimum_sample": "Raw display requires 300 eligible seconds; shrunk estimate may use smaller known support.",
+      "minimum_sample": "Raw display requires 5 eligible minutes; shrunk estimate may use smaller known support.",
       "missingness_behavior": "Observed zero attempts over positive exposure is meaningful; missing attempts are not zero.",
       "zero_semantics": "0 means no attempts during positive observed exposure.",
       "shrinkage_rule": "time_rate_v1",
@@ -632,8 +647,8 @@
       "round_specific_variant": false,
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
-      "coverage_expectation": "Strong in canonical UFC round-stat coverage.",
-      "known_limitations": "Attempt count does not encode shot type, chain-wrestling sequence or cage position. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "coverage_expectation": "Strong in canonical UFC round-stat coverage. V1 eligibility is fail-closed to ruleset_registry_v1-compatible rounds.",
+      "known_limitations": "Attempt count does not encode shot type, chain-wrestling sequence or cage position.",
       "intended_model_consumers": [
         "model0",
         "model1",
@@ -641,18 +656,18 @@
         "component_wrestling",
         "simulator"
       ],
-      "status": "DEFERRED",
+      "status": "V1_MUST",
       "leakage_test": "Only prior actual-round attempt observations.",
-      "provenance_requirement": "Retain attempt totals, elapsed exposure and round lineage.",
+      "provenance_requirement": "Retain attempt totals, elapsed exposure and round lineage. Retain ruleset_id and elapsed seconds/minutes used by every contributing round.",
       "components": [
         "created_per_15",
         "faced_per_15"
       ],
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -744,7 +759,12 @@
         ],
         "fights": [
           "fight_id",
-          "event_id"
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
         ],
         "fighter_round_stats": [
           "fight_id",
@@ -768,7 +788,7 @@
         "zero_denominator": "Rate is null; zero support retained.",
         "missing_denominator": "Rate is null and marked missing_observation."
       },
-      "minimum_sample": "Raw display requires 300 eligible seconds; shrinkage may use smaller known support.",
+      "minimum_sample": "Raw display requires 5 eligible minutes; shrunk estimate may use smaller known support.",
       "missingness_behavior": "Observed 0 control over positive exposure is real zero; missing control is not zero and removes that round from domain exposure.",
       "zero_semantics": "0 means observed no general control during positive eligible exposure.",
       "shrinkage_rule": "time_rate_v1",
@@ -779,8 +799,8 @@
       "round_specific_variant": true,
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
-      "coverage_expectation": "Good where exact canonical control_sec is available.",
-      "known_limitations": "General control is not synonymous with ground time and does not identify exact position or control sequence. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "coverage_expectation": "Good where exact canonical control_sec is available. V1 eligibility is fail-closed to ruleset_registry_v1-compatible rounds.",
+      "known_limitations": "General control is not synonymous with ground time and does not identify exact position or control sequence.",
       "intended_model_consumers": [
         "model0",
         "model1",
@@ -788,18 +808,18 @@
         "component_ground",
         "simulator"
       ],
-      "status": "DEFERRED",
+      "status": "V1_MUST",
       "leakage_test": "Only prior actual-round control values; never substitute FightMetric bucket time for exact control_sec.",
-      "provenance_requirement": "Retain exact control numerator, elapsed denominator, round lineage and canonical field provenance reference.",
+      "provenance_requirement": "Retain exact control numerator, elapsed denominator, round lineage and canonical field provenance reference. Retain ruleset_id and elapsed seconds/minutes used by every contributing round.",
       "components": [
         "created_share",
         "allowed_share"
       ],
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -820,7 +840,12 @@
         ],
         "fights": [
           "fight_id",
-          "event_id"
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
         ],
         "fighter_round_stats": [
           "fight_id",
@@ -844,7 +869,7 @@
         "zero_denominator": "Rate is null; zero support retained.",
         "missing_denominator": "Rate is null and marked missing_observation."
       },
-      "minimum_sample": "Raw display requires 300 eligible seconds; shrinkage is expected because attempts are sparse.",
+      "minimum_sample": "Raw display requires 5 eligible minutes; shrunk estimate may use smaller known support.",
       "missingness_behavior": "Observed zero attempts over positive exposure is real zero; missing attempts are not zero.",
       "zero_semantics": "0 means no submission attempts over positive eligible exposure.",
       "shrinkage_rule": "time_rate_v1",
@@ -855,8 +880,8 @@
       "round_specific_variant": false,
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
-      "coverage_expectation": "Good in canonical UFC round-stat coverage, but sparse by nature.",
-      "known_limitations": "Exact ground opportunity, submission type, position and threat duration are not observed. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "coverage_expectation": "Good in canonical UFC round-stat coverage, but sparse by nature. V1 eligibility is fail-closed to ruleset_registry_v1-compatible rounds.",
+      "known_limitations": "Exact ground opportunity, submission type, position and threat duration are not observed.",
       "intended_model_consumers": [
         "model0",
         "model1",
@@ -864,18 +889,18 @@
         "component_submission",
         "simulator"
       ],
-      "status": "DEFERRED",
+      "status": "V1_MUST",
       "leakage_test": "Only prior submission-attempt observations; exact ground minutes may not be invented as denominator.",
-      "provenance_requirement": "Retain attempt totals, elapsed exposure and round lineage.",
+      "provenance_requirement": "Retain attempt totals, elapsed exposure and round lineage. Retain ruleset_id and elapsed seconds/minutes used by every contributing round.",
       "components": [
         "created_per_15",
         "faced_per_15"
       ],
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -896,7 +921,12 @@
         ],
         "fights": [
           "fight_id",
-          "event_id"
+          "event_id",
+          "promotion",
+          "method",
+          "finish_round",
+          "finish_time_sec",
+          "scheduled_rounds"
         ],
         "fighter_round_stats": [
           "fight_id",
@@ -920,7 +950,7 @@
         "zero_denominator": "Rate is null; zero support retained.",
         "missing_denominator": "Rate is null and marked missing_observation."
       },
-      "minimum_sample": "Raw display requires 600 eligible seconds because reversals are sparse; shrunk estimate may use smaller known support.",
+      "minimum_sample": "Raw display requires 10 eligible minutes; shrunk estimate may use smaller known support.",
       "missingness_behavior": "Observed zero reversals over positive exposure is real zero; missing reversal count is not zero.",
       "zero_semantics": "0 means no reversals over positive eligible exposure.",
       "shrinkage_rule": "time_rate_v1",
@@ -931,26 +961,26 @@
       "round_specific_variant": false,
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
-      "coverage_expectation": "Observed but sparse in round-stat coverage.",
-      "known_limitations": "Without exact ground opportunity this is activity per fight time, not reversal probability conditional on bottom position. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "coverage_expectation": "Observed but sparse in round-stat coverage. V1 eligibility is fail-closed to ruleset_registry_v1-compatible rounds.",
+      "known_limitations": "Without exact ground opportunity this is activity per fight time, not reversal probability conditional on bottom position.",
       "intended_model_consumers": [
         "model1",
         "tree",
         "component_ground",
         "simulator"
       ],
-      "status": "DEFERRED",
+      "status": "V1_MUST",
       "leakage_test": "Only prior actual-round reversals.",
-      "provenance_requirement": "Retain reversal totals, elapsed exposure and round lineage.",
+      "provenance_requirement": "Retain reversal totals, elapsed exposure and round lineage. Retain ruleset_id and elapsed seconds/minutes used by every contributing round.",
       "components": [
         "created_per_15",
         "faced_per_15"
       ],
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -1214,7 +1244,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
       "coverage_expectation": "Strong where paired canonical significant strikes are observed.",
-      "known_limitations": "Net count does not encode damage quality or opponent quality. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Net count does not encode damage quality or opponent quality. Elapsed exposure is now contract-safe where eligible; this derived concept remains deferred until the promoted primitive rates are replayed and reviewed.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -1224,10 +1254,10 @@
       "leakage_test": "Both numerator sides must be historical and strictly pre-cutoff.",
       "provenance_requirement": "Retain paired numerator terms and compatible elapsed denominator.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -1284,7 +1314,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
       "coverage_expectation": "Good where exact canonical control is observed.",
-      "known_limitations": "Still general control, not exact ground-position dominance. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Still general control, not exact ground-position dominance. Elapsed exposure is now contract-safe where eligible; this derived concept remains deferred until the promoted primitive rates are replayed and reviewed.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -1294,10 +1324,10 @@
       "leakage_test": "Both control sides must be historical and strictly pre-cutoff.",
       "provenance_requirement": "Retain paired control terms and compatible elapsed denominator.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -1353,7 +1383,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Selective: unavailable for fighters/fights without observed later-round exposure.",
-      "known_limitations": "Selection into later rounds is endogenous; this is a persistence proxy, not pure cardio. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Selection into later rounds is endogenous; this is a persistence proxy, not pure cardio. Elapsed exposure is now contract-safe where eligible; this derived concept remains deferred until the promoted primitive rates are replayed and reviewed.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -1363,10 +1393,10 @@
       "leakage_test": "Later-round observations must come only from prior fights; R1 finishes cannot be imputed as later-round zeros.",
       "provenance_requirement": "Retain R1/R2+ attempt and exposure totals plus eligible fight count.",
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -1802,7 +1832,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Follows paired sig_strike_flow coverage.",
-      "known_limitations": "Simple gap is not yet opponent-adjusted and does not model tactical state transitions. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Simple gap is not yet opponent-adjusted and does not model tactical state transitions. Elapsed exposure is now contract-safe where eligible; this interaction remains deferred to the matchup-interaction phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -1816,10 +1846,10 @@
         "f2_attack_vs_f1_prevention"
       ],
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -1904,7 +1934,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Good where both wrestling state estimates exist.",
-      "known_limitations": "This is a simple interaction index, not a state-conditional takedown probability. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "This is a simple interaction index, not a state-conditional takedown probability. Elapsed exposure is now contract-safe where eligible; this interaction remains deferred to the matchup-interaction phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -1918,10 +1948,10 @@
         "f2_vs_f1"
       ],
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -1958,7 +1988,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Follows paired exact-control coverage.",
-      "known_limitations": "General control is not synonymous with ground position or exact escape probability. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "General control is not synonymous with ground position or exact escape probability. Elapsed exposure is now contract-safe where eligible; this interaction remains deferred to the matchup-interaction phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -1972,10 +2002,10 @@
         "f2_vs_f1"
       ],
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2012,7 +2042,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Follows submission-attempt state coverage.",
-      "known_limitations": "Attempt pressure is not submission finish probability; exact ground opportunity is unobserved. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Attempt pressure is not submission finish probability; exact ground opportunity is unobserved. Elapsed exposure is now contract-safe where eligible; this interaction remains deferred to the matchup-interaction phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -2026,10 +2056,10 @@
         "f2_vs_f1"
       ],
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2066,7 +2096,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Follows significant-strike pace coverage.",
-      "known_limitations": "Does not directly model which fighter imposes pace; that belongs to component/simulator models. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Does not directly model which fighter imposes pace; that belongs to component/simulator models. Elapsed exposure is now contract-safe where eligible; this interaction remains deferred to the matchup-interaction phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -2080,10 +2110,10 @@
         "absolute"
       ],
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2184,7 +2214,7 @@
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Lower than V1 because nested chronological opponent history is required.",
-      "known_limitations": "Expectation model is intentionally deferred; this contract freezes chronology and residual semantics, not its fitted coefficients. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Expectation model is intentionally deferred; this contract freezes chronology and residual semantics, not its fitted coefficients. Elapsed exposure is now contract-safe where eligible; this concept remains deferred to the chronological opponent-adjustment phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -2195,10 +2225,10 @@
       "leakage_test": "For every historical fight H, assert max opponent evidence date < H date and H date < target cutoff.",
       "provenance_requirement": "Retain H fight_id, opponent_id, opponent-state cutoff, actual/expected terms and exposure.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2255,7 +2285,7 @@
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Lower than V1 due nested historical support.",
-      "known_limitations": "Expectation model deferred; sign convention is frozen positive=better suppression. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Expectation model deferred; sign convention is frozen positive=better suppression. Elapsed exposure is now contract-safe where eligible; this concept remains deferred to the chronological opponent-adjustment phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -2266,10 +2296,10 @@
       "leakage_test": "For every H, opponent evidence must predate H and H must predate target cutoff.",
       "provenance_requirement": "Retain H/opponent/cutoffs and expected/actual terms.",
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2392,7 +2422,7 @@
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Moderate due exact-control and nested-state requirements.",
-      "known_limitations": "General control remains distinct from exact ground-position control. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "General control remains distinct from exact ground-position control. Elapsed exposure is now contract-safe where eligible; this concept remains deferred to the chronological opponent-adjustment phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -2403,10 +2433,10 @@
       "leakage_test": "Nested opponent allowance must predate each H; exact control source semantics preserved.",
       "provenance_requirement": "Retain actual/expected control terms, H, opponent and cutoffs.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2463,7 +2493,7 @@
       "opponent_adjusted_variant": true,
       "matchup_interaction_variant": true,
       "coverage_expectation": "Moderate/low because submission attempts and nested state are sparse.",
-      "known_limitations": "Adjusts attempt generation, not exact submission threat or finish conversion. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Adjusts attempt generation, not exact submission threat or finish conversion. Elapsed exposure is now contract-safe where eligible; this concept remains deferred to the chronological opponent-adjustment phase.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -2474,10 +2504,10 @@
       "leakage_test": "Nested opponent state must predate H; H predates target cutoff.",
       "provenance_requirement": "Retain actual/expected attempts, H, opponent and cutoffs.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2523,7 +2553,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
       "coverage_expectation": "Component training limited to canonical actual-round stat coverage.",
-      "known_limitations": "Round aggregates do not provide exact intra-round event timestamps. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Round aggregates do not provide exact intra-round event timestamps. Elapsed exposure is now contract-safe where eligible; this component remains deferred until simulator/component training.",
       "intended_model_consumers": [
         "component_striking",
         "simulator"
@@ -2532,10 +2562,10 @@
       "leakage_test": "Observed target-round counts cannot enter pre-fight predictors for the same fight.",
       "provenance_requirement": "Later component training must record source feature contract, target round and cutoff.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2581,7 +2611,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
       "coverage_expectation": "Sparse but available in canonical round stats.",
-      "known_limitations": "No knockdown timestamp, severity, recovery path or exact finish conversion is observed. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "No knockdown timestamp, severity, recovery path or exact finish conversion is observed. Elapsed exposure is now contract-safe where eligible; this component remains deferred until simulator/component training.",
       "intended_model_consumers": [
         "component_striking",
         "component_durability",
@@ -2591,10 +2621,10 @@
       "leakage_test": "Same-fight realized KD cannot appear among its pre-fight predictors.",
       "provenance_requirement": "Later component model records target/support lineage and contract version.",
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2640,7 +2670,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
       "coverage_expectation": "Good in canonical UFC round-stat coverage.",
-      "known_limitations": "No shot type or exact attempt timestamp/sequence. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "No shot type or exact attempt timestamp/sequence. Elapsed exposure is now contract-safe where eligible; this component remains deferred until simulator/component training.",
       "intended_model_consumers": [
         "component_wrestling",
         "simulator"
@@ -2649,10 +2679,10 @@
       "leakage_test": "Same-fight actual attempts are component targets, never pre-fight inputs.",
       "provenance_requirement": "Later training records target round/support and contract version.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2751,7 +2781,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
       "coverage_expectation": "Sparse but available in canonical round stats.",
-      "known_limitations": "No exact ground opportunity, threat type, position or sequence timing. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "No exact ground opportunity, threat type, position or sequence timing. Elapsed exposure is now contract-safe where eligible; this component remains deferred until simulator/component training.",
       "intended_model_consumers": [
         "component_submission",
         "simulator"
@@ -2760,10 +2790,10 @@
       "leakage_test": "Same-fight realized attempts cannot be pre-fight predictors.",
       "provenance_requirement": "Later training records target round/support and contract version.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2811,7 +2841,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
       "coverage_expectation": "Selective and survivorship-biased; only fighters reaching later rounds contribute observed late-round outcomes.",
-      "known_limitations": "Persistence mixes cardio, opponent behavior, damage, tactics and selection; it is not a pure physiological fatigue measurement. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Persistence mixes cardio, opponent behavior, damage, tactics and selection; it is not a pure physiological fatigue measurement. Elapsed exposure is now contract-safe where eligible; this component remains deferred until simulator/component training.",
       "intended_model_consumers": [
         "component_striking",
         "component_wrestling",
@@ -2822,10 +2852,10 @@
       "leakage_test": "No same-target late-round observation enters its pre-fight persistence state; early finishes not zero-filled.",
       "provenance_requirement": "Later component training records round-band support and selection rules.",
       "elapsed_exposure_source": {
-        "source": "blocked_upstream_time_state",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -2998,7 +3028,7 @@
       "opponent_adjusted_variant": false,
       "matchup_interaction_variant": false,
       "coverage_expectation": "Potentially broad after an explicit rule-duration eligibility policy.",
-      "known_limitations": "Canonical v0 does not expose a bout-level round-length/rule-set field needed to make one formula safe across all eras/promotions. Deferred under canonical v0 because required elapsed exposure (directly or through an upstream feature) is not contract-safe; no standard-round duration may be assumed.",
+      "known_limitations": "Elapsed duration is now safely derivable only for ruleset-eligible fights; whole-history fight-duration state remains deferred because all-fight coverage is lower than round-stat coverage and external full-distance fights can lack canonical scheduled_rounds.",
       "intended_model_consumers": [
         "model1",
         "tree",
@@ -3008,10 +3038,10 @@
       "leakage_test": "Any future implementation must use historical-only terminal fields and explicit round-duration eligibility.",
       "provenance_requirement": "Future version must record rule-set eligibility source plus terminal fields.",
       "elapsed_exposure_source": {
-        "source": "none_canonical_v0",
-        "eligibility": "No canonical-v0 materialization is eligible under elapsed_exposure_policy version 1.",
-        "provenance": "A future versioned DATA/feature-contract migration must identify the canonical elapsed-exposure source or safe upstream time-state dependency before this concept is promoted.",
-        "contract_safe": false
+        "source": "ruleset_registry_v1",
+        "eligibility": "Only actual historical rounds from fights strictly before prediction_as_of are eligible when canonical promotion + event_date match a historically applicable verified ruleset in provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json and the fight's canonical terminal timing permits positive round exposure. Ambiguous/unknown fights are excluded only from elapsed-denominated domains.",
+        "provenance": "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json + canonical events.event_date/fights promotion, method, finish_round, finish_time_sec, scheduled_rounds; deterministic derivation in src/ufc_edge/features/elapsed_exposure.py.",
+        "contract_safe": true
       }
     },
     {
@@ -3814,42 +3844,20 @@
     }
   ],
   "elapsed_exposure_policy": {
-    "version": 1,
-    "canonical_v0_status": "no_general_safe_elapsed_round_or_fight_exposure_source",
-    "allowed_sources": [],
-    "blocked_feature_concepts": [
-      "sig_strike_flow",
-      "knockdown_rate",
-      "takedown_pressure",
-      "control_rate",
-      "submission_attempt_rate",
-      "reversal_rate",
-      "sig_strike_differential_rate",
-      "control_differential_rate",
-      "late_round_pace_ratio",
-      "sig_creation_vs_prevention",
-      "takedown_pressure_vs_defense",
-      "control_creation_vs_allowed",
-      "submission_pressure_vs_allowed",
-      "pace_mismatch",
-      "oa_sig_creation",
-      "oa_sig_suppression",
-      "oa_control_creation",
-      "oa_submission_creation",
-      "sim_strike_event_intensity",
-      "sim_knockdown_hazard_proxy",
-      "sim_takedown_attempt_intensity",
-      "sim_submission_attempt_intensity",
-      "sim_fatigue_persistence_multiplier",
-      "historical_fight_duration"
+    "version": 2,
+    "canonical_v0_status": "partial_verified_ruleset_elapsed_exposure_available",
+    "allowed_sources": [
+      "ruleset_registry_v1"
     ],
+    "blocked_feature_concepts": [],
     "forbidden_inferences": [
       "Do not assume every nonterminal historical round lasted 300 seconds or five minutes.",
-      "Do not derive total elapsed fight time from finish_round and finish_time_sec unless historical round-length/ruleset semantics are canonically established for that contest.",
+      "Do not derive total elapsed fight time from finish_round and finish_time_sec unless a historically applicable verified ruleset establishes each required prior-round duration and finish_time_sec count-up semantics are established.",
       "Do not treat scheduled_rounds as evidence of round length.",
-      "Do not treat control_sec as elapsed fight time, ground time, or a round-duration field."
+      "Do not treat control_sec as elapsed fight time, ground time, top-position time, or a round-duration field.",
+      "Do not treat distance/clinch/ground significant-strike composition as positional-duration measurement."
     ],
-    "materializable_requirement": "Any concept whose value requires elapsed fight/round time must remain non-materializable unless a versioned contract names a canonical elapsed-exposure source in allowed_sources and the concept declares source-specific eligibility/provenance with contract_safe=true.",
-    "promotion_requirement": "Changing a blocked concept to a materializable status requires a versioned DATA/feature-contract change that supplies and validates the elapsed-exposure source; a calculator may not invent round duration locally."
+    "materializable_requirement": "A concept requiring elapsed fight/round time is materializable only when ruleset_registry_v1 assigns the historical fight to a verified applicable ruleset, the required terminal timing semantics are valid, every contributing round has positive derived elapsed exposure, and the concept declares source-specific eligibility/provenance with contract_safe=true. Ambiguous/unknown fights are missing only for elapsed-denominated domains.",
+    "promotion_requirement": "Ruleset eligibility is assigned deterministically from canonical promotion + event date against the versioned registry. scheduled_rounds, finish_round, statistics, or control values never authorize a ruleset. Any registry/ruleset semantic change requires a versioned contract migration."
   }
 }

@@ -143,16 +143,17 @@ class MissingnessAndShrinkageTests(unittest.TestCase):
             "missing_observation",
         )
 
-    def test_time_rate_shrinkage_is_inactive(self) -> None:
-        with self.assertRaisesRegex(ValueError, "not materializable"):
-            shrink_component(
-                1.0,
-                2.0,
-                shrinkage_rule="time_rate_v1",
-                prior_numerator=1.0,
-                prior_denominator=2.0,
-                prior_source="global",
-            )
+    def test_time_rate_shrinkage_uses_15_eligible_minutes(self) -> None:
+        estimate = shrink_component(
+            1.0,
+            2.0,
+            shrinkage_rule="time_rate_v1",
+            prior_numerator=4.0,
+            prior_denominator=8.0,
+            prior_source="global",
+        )
+        self.assertAlmostEqual(estimate.value or -1, 0.5)
+        self.assertEqual(estimate.posterior_denominator, 17.0)
 
 
 class ContractSelectionTests(unittest.TestCase):
@@ -161,13 +162,13 @@ class ContractSelectionTests(unittest.TestCase):
         cls.catalog = load_feature_catalog(ROOT)
 
     def test_contract_version_and_elapsed_gate(self) -> None:
-        self.assertEqual(self.catalog["feature_contract_version"], "0.1.1-draft")
-        self.assertEqual(self.catalog["elapsed_exposure_policy"]["allowed_sources"], [])
+        self.assertEqual(self.catalog["feature_contract_version"], "0.1.2-draft")
+        self.assertEqual(self.catalog["elapsed_exposure_policy"]["allowed_sources"], ["ruleset_registry_v1"])
 
     def test_only_current_v1_statuses_are_selected(self) -> None:
         selected = active_v1_features(self.catalog)
         self.assertEqual({feature["status"] for feature in selected}, ACTIVE_V1_STATUSES)
-        self.assertEqual(len(selected), 18)
+        self.assertEqual(len(selected), 24)
         self.assertEqual({feature["feature_name"] for feature in selected}, IMPLEMENTED_V1_CONCEPTS)
 
     def test_non_core_and_time_blocked_statuses_are_excluded(self) -> None:
@@ -195,14 +196,13 @@ class ContractSelectionTests(unittest.TestCase):
         names = selected_v1_names(self.catalog)
         self.assertEqual(names, selected_v1_names(deepcopy(self.catalog)))
         self.assertEqual(len(names), len(set(names)))
-        self.assertEqual(len(names), 58)
+        self.assertEqual(len(names), 104)
         self.assertTrue(set(names) <= set(materialized_feature_names(self.catalog)))
 
     def test_active_contract_change_fails_closed_without_implementation(self) -> None:
         catalog = deepcopy(self.catalog)
-        feature = next(item for item in catalog["features"] if item["feature_name"] == "reversal_rate")
+        feature = next(item for item in catalog["features"] if item["feature_name"] == "historical_fight_duration")
         feature["status"] = "V1_MUST"
-        catalog["elapsed_exposure_policy"]["blocked_feature_concepts"].remove("reversal_rate")
         with self.assertRaisesRegex(MaterializationError, "lack F01 implementation"):
             active_v1_features(catalog)
 
@@ -294,6 +294,18 @@ class PointInTimeAndRealDataTests(unittest.TestCase):
         self.assertEqual(forward.projection(), reverse.projection())
         self.assertEqual(len(forward.interactions), 5)
 
+    def test_elapsed_rate_primitives_are_in_the_v1_projection(self) -> None:
+        names = set(self.materializer.names("model1"))
+        for concept in (
+            "sig_strike_flow",
+            "knockdown_rate",
+            "takedown_pressure",
+            "control_rate",
+            "submission_attempt_rate",
+            "reversal_rate",
+        ):
+            self.assertTrue(any(concept in name for name in names), concept)
+
     def test_current_target_outcome_fields_do_not_change_predictors(self) -> None:
         before = self.materializer.materialize_fighter(
             self.target.fighter_a_id,
@@ -332,7 +344,7 @@ class PointInTimeAndRealDataTests(unittest.TestCase):
             for name in concept_columns(self.materializer.catalog, feature).values()
         }
         self.assertEqual(set(state.values), expected)
-        self.assertEqual(len(state.values), 53)
+        self.assertEqual(len(state.values), 99)
         self.assertFalse(any("winner" in name or "finish_time" in name for name in state.values))
 
     def test_zero_prior_canonical_history_is_not_silently_treated_as_true_debut(self) -> None:
@@ -393,9 +405,9 @@ class PointInTimeAndRealDataTests(unittest.TestCase):
         first = self.materializer.bounded_real_validation()
         second = self.materializer.bounded_real_validation()
         self.assertEqual(first, second)
-        self.assertEqual(first["active_v1_concept_count"], 18)
-        self.assertEqual(first["active_v1_name_count"], 58)
-        self.assertEqual(first["elapsed_allowed_sources"], [])
+        self.assertEqual(first["active_v1_concept_count"], 24)
+        self.assertEqual(first["active_v1_name_count"], 104)
+        self.assertEqual(first["elapsed_allowed_sources"], ["ruleset_registry_v1"])
         self.assertIn("long_history", first["cases"])
         self.assertIn("sparse_history", first["cases"])
 
@@ -451,16 +463,20 @@ class TimeExposureSafetyTests(unittest.TestCase):
         cls.catalog = load_feature_catalog(ROOT)
         cls.selected = active_v1_features(cls.catalog)
 
-    def test_no_elapsed_time_materializable_concepts_under_current_contract(self) -> None:
-        self.assertEqual(self.catalog["elapsed_exposure_policy"]["allowed_sources"], [])
+    def test_only_ruleset_eligible_elapsed_primitives_are_materializable(self) -> None:
+        self.assertEqual(self.catalog["elapsed_exposure_policy"]["allowed_sources"], ["ruleset_registry_v1"])
         selected_names = {feature["feature_name"] for feature in self.selected}
-        self.assertTrue({"historical_fight_duration", "control_rate", "position_occupancy_profile"}.isdisjoint(selected_names))
-        for feature in self.selected:
-            denominator = feature["exposure_denominator"]["denominator"].lower()
-            self.assertFalse(
-                "elapsed" in denominator and any(token in denominator for token in ("minute", "second", "time")),
-                feature["feature_name"],
-            )
+        expected = {
+            "sig_strike_flow", "knockdown_rate", "takedown_pressure",
+            "control_rate", "submission_attempt_rate", "reversal_rate",
+        }
+        self.assertTrue(expected <= selected_names)
+        self.assertNotIn("historical_fight_duration", selected_names)
+        for name in expected:
+            feature = next(item for item in self.selected if item["feature_name"] == name)
+            source = feature["elapsed_exposure_source"]
+            self.assertEqual(source["source"], "ruleset_registry_v1")
+            self.assertIs(source["contract_safe"], True)
 
     def test_f01_source_contains_no_hidden_standard_round_or_duration_reconstruction(self) -> None:
         text = "\n".join(

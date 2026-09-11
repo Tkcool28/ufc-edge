@@ -28,6 +28,7 @@ class RulesetAssignment:
     ruleset_id: str | None
     elapsed_exposure_status: str
     round_duration_sec: int | None
+    round_durations_sec: tuple[int, ...] | None
     evidence_source: tuple[str, ...]
     reason: str
 
@@ -79,9 +80,19 @@ def _parse_date(value: str | None) -> date | None:
         return None
 
 
+def _positive_int(value: Any) -> int | None:
+    if isinstance(value, bool):
+        return None
+    try:
+        parsed = int(value)
+    except (TypeError, ValueError):
+        return None
+    return parsed if parsed > 0 else None
+
+
 def validate_registry(registry: dict[str, Any]) -> None:
-    if registry.get("schema_version") != 1:
-        raise ElapsedExposureError("ruleset registry schema_version must be 1")
+    if registry.get("schema_version") not in {1, 2}:
+        raise ElapsedExposureError("ruleset registry schema_version must be 1 or 2")
     if not registry.get("registry_version"):
         raise ElapsedExposureError("ruleset registry version is required")
     source_refs = registry.get("source_refs")
@@ -90,11 +101,12 @@ def validate_registry(registry: dict[str, Any]) -> None:
         raise ElapsedExposureError("ruleset registry requires source_refs")
     if not isinstance(rulesets, list) or not rulesets:
         raise ElapsedExposureError("ruleset registry requires rulesets")
+
     ids: set[str] = set()
     for rule in rulesets:
         required = {
             "ruleset_id", "promotion", "effective_start", "effective_end", "bout_scope",
-            "round_duration_sec", "scheduled_round_options", "classification", "source_refs",
+            "scheduled_round_options", "classification", "source_refs",
             "finish_time_semantics", "finish_time_source_refs", "confidence", "notes",
         }
         missing = sorted(required - set(rule))
@@ -104,13 +116,35 @@ def validate_registry(registry: dict[str, Any]) -> None:
         if rid in ids:
             raise ElapsedExposureError(f"duplicate ruleset_id: {rid}")
         ids.add(rid)
-        if rule["round_duration_sec"] <= 0:
-            raise ElapsedExposureError(f"{rid} invalid round duration")
+
+        fixed = _positive_int(rule.get("round_duration_sec"))
+        vector_raw = rule.get("round_durations_sec")
+        vector = None
+        if vector_raw is not None:
+            if not isinstance(vector_raw, list) or not vector_raw:
+                raise ElapsedExposureError(f"{rid} round_durations_sec must be a non-empty list")
+            parsed = tuple(_positive_int(value) for value in vector_raw)
+            if any(value is None for value in parsed):
+                raise ElapsedExposureError(f"{rid} has invalid explicit round duration")
+            vector = tuple(int(value) for value in parsed if value is not None)
+        if (fixed is None) == (vector is None):
+            raise ElapsedExposureError(
+                f"{rid} must declare exactly one of round_duration_sec or round_durations_sec"
+            )
+
+        options = rule["scheduled_round_options"]
+        if not isinstance(options, list) or not options or any(_positive_int(x) is None for x in options):
+            raise ElapsedExposureError(f"{rid} scheduled_round_options invalid")
+        if vector is not None and any(int(x) != len(vector) for x in options):
+            raise ElapsedExposureError(
+                f"{rid} explicit duration vector requires scheduled_round_options={len(vector)}"
+            )
+
         if rule["finish_time_semantics"] != "elapsed_within_terminal_round":
             raise ElapsedExposureError(f"{rid} finish time semantics are not contract-safe")
-        for ref in list(rule["source_refs"]) + list(rule["finish_time_source_refs"]):
-            if ref not in source_refs:
-                raise ElapsedExposureError(f"{rid} references unknown evidence {ref}")
+        for source_ref in list(rule["source_refs"]) + list(rule["finish_time_source_refs"]):
+            if source_ref not in source_refs:
+                raise ElapsedExposureError(f"{rid} references unknown evidence {source_ref}")
         start = _parse_date(rule["effective_start"])
         end = _parse_date(rule["effective_end"])
         if rule["effective_start"] is not None and start is None:
@@ -134,7 +168,7 @@ def assign_ruleset(
     promo = (promotion or "").strip()
     when = _parse_date(event_date)
     if not promo or when is None:
-        return RulesetAssignment(None, "unknown", None, (), "missing promotion or valid event_date")
+        return RulesetAssignment(None, "unknown", None, None, (), "missing promotion or valid event_date")
 
     matches: list[dict[str, Any]] = []
     for rule in registry["rulesets"]:
@@ -158,10 +192,17 @@ def assign_ruleset(
             else "inferred_from_verified_ruleset"
         )
         refs = tuple(rule["source_refs"] + rule["finish_time_source_refs"])
+        fixed = _positive_int(rule.get("round_duration_sec"))
+        vector = (
+            tuple(int(x) for x in rule["round_durations_sec"])
+            if rule.get("round_durations_sec") is not None
+            else None
+        )
         return RulesetAssignment(
             rule["ruleset_id"],
             status,
-            int(rule["round_duration_sec"]),
+            fixed,
+            vector,
             refs,
             f"promotion/era matches {rule['ruleset_id']}",
         )
@@ -171,10 +212,11 @@ def assign_ruleset(
             None,
             "ambiguous",
             None,
+            None,
             ("ufc_28_modern_boundary",),
             "pre-UFC-28 rules could vary by event or bout",
         )
-    return RulesetAssignment(None, "unknown", None, (), "no verified promotion/era ruleset match")
+    return RulesetAssignment(None, "unknown", None, None, (), "no verified promotion/era ruleset match")
 
 
 def _as_int(value: Any) -> int | None:
@@ -184,6 +226,25 @@ def _as_int(value: Any) -> int | None:
         return int(value)
     except (TypeError, ValueError):
         return None
+
+
+def _rule_for(assignment: RulesetAssignment, registry: dict[str, Any]) -> dict[str, Any] | None:
+    if assignment.ruleset_id is None:
+        return None
+    return next(
+        (rule for rule in registry["rulesets"] if rule["ruleset_id"] == assignment.ruleset_id),
+        None,
+    )
+
+
+def _duration_for_round(assignment: RulesetAssignment, round_number: int) -> int | None:
+    if round_number < 1:
+        return None
+    if assignment.round_durations_sec is not None:
+        if round_number > len(assignment.round_durations_sec):
+            return None
+        return assignment.round_durations_sec[round_number - 1]
+    return assignment.round_duration_sec
 
 
 def scheduled_duration_vector(
@@ -196,11 +257,13 @@ def scheduled_duration_vector(
     n = _as_int(scheduled_rounds)
     if n is None:
         return None
-    rule = next(r for r in registry["rulesets"] if r["ruleset_id"] == assignment.ruleset_id)
-    if n not in set(int(x) for x in rule["scheduled_round_options"]):
+    rule = _rule_for(assignment, registry)
+    if rule is None or n not in {int(x) for x in rule["scheduled_round_options"]}:
         return None
-    assert assignment.round_duration_sec is not None
-    return tuple([assignment.round_duration_sec] * n)
+    durations = tuple(_duration_for_round(assignment, rnd) or 0 for rnd in range(1, n + 1))
+    if any(value <= 0 for value in durations):
+        return None
+    return durations
 
 
 def infer_fight_exposure(
@@ -218,15 +281,21 @@ def infer_fight_exposure(
 
     finish_round = _as_int(fight.get("finish_round"))
     finish_time = _as_int(fight.get("finish_time_sec"))
-    round_sec = assignment.round_duration_sec
-    if finish_round is None or finish_round < 1 or finish_time is None or round_sec is None:
+    if finish_round is None or finish_round < 1 or finish_time is None:
         return FightExposure(
             fight_id, assignment.ruleset_id, "ambiguous", None, None,
             assignment.evidence_source, "missing/invalid canonical finish_round or finish_time_sec",
         )
-    if not 0 <= finish_time <= round_sec:
+
+    terminal_duration = _duration_for_round(assignment, finish_round)
+    if terminal_duration is None:
+        return FightExposure(
+            fight_id, assignment.ruleset_id, "ambiguous", None, None,
+            assignment.evidence_source, "verified ruleset does not define the terminal round duration",
+        )
+    if not 0 <= finish_time <= terminal_duration:
         raise ElapsedExposureError(
-            f"{fight_id}: finish_time_sec={finish_time} outside 0..{round_sec}"
+            f"{fight_id}: finish_time_sec={finish_time} outside 0..{terminal_duration}"
         )
 
     scheduled = scheduled_duration_vector(assignment, fight.get("scheduled_rounds"), registry)
@@ -250,10 +319,16 @@ def infer_fight_exposure(
             "full scheduled duration from verified ruleset",
         )
 
-    # For a terminal non-decision, only contested prior rounds are needed. Their duration comes
-    # from the verified ruleset; finish_time_sec supplies actual elapsed terminal-round time.
-    contested = tuple([round_sec] * finish_round)
-    elapsed = (finish_round - 1) * round_sec + finish_time
+    contested = tuple(
+        _duration_for_round(assignment, rnd) or 0
+        for rnd in range(1, finish_round + 1)
+    )
+    if any(value <= 0 for value in contested):
+        return FightExposure(
+            fight_id, assignment.ruleset_id, "ambiguous", None, None,
+            assignment.evidence_source, "verified ruleset lacks a contested-round duration",
+        )
+    elapsed = sum(contested[:-1]) + finish_time
     return FightExposure(
         fight_id, assignment.ruleset_id, assignment.elapsed_exposure_status,
         contested, elapsed, assignment.evidence_source,

@@ -96,6 +96,8 @@ def audit() -> dict[str, Any]:
     bad_control_bounds: list[dict[str, Any]] = []
     control_states = Counter()
     examples: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    examples_by_promotion: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    ambiguity_reasons: Counter[str] = Counter()
 
     by_promotion: dict[str, Counter[str]] = defaultdict(Counter)
     by_year: dict[str, Counter[str]] = defaultdict(Counter)
@@ -107,6 +109,8 @@ def audit() -> dict[str, Any]:
         ex = infer_fight_exposure(fight, event_date, registry)
         exposure_by_fight[fight["fight_id"]] = ex
         status[ex.elapsed_exposure_status] += 1
+        if not ex.eligible:
+            ambiguity_reasons[ex.reason] += 1
         by_promotion[fight["promotion"]]["fights"] += 1
         year = (event_date or "unknown")[:4]
         by_year[year]["fights"] += 1
@@ -121,15 +125,20 @@ def audit() -> dict[str, Any]:
             if ex.eligible:
                 safe_ufc_fights += 1
         key = ex.elapsed_exposure_status
+        example = {
+            "fight_id": fight["fight_id"],
+            "promotion": fight["promotion"],
+            "event_date": event_date,
+            "ruleset_id": ex.ruleset_id,
+            "status": ex.elapsed_exposure_status,
+            "round_duration_vector": list(ex.round_duration_vector) if ex.round_duration_vector else None,
+            "elapsed_sec": ex.elapsed_sec,
+            "reason": ex.reason,
+        }
         if len(examples[key]) < 4:
-            examples[key].append({
-                "fight_id": fight["fight_id"],
-                "promotion": fight["promotion"],
-                "event_date": event_date,
-                "ruleset_id": ex.ruleset_id,
-                "elapsed_sec": ex.elapsed_sec,
-                "reason": ex.reason,
-            })
+            examples[key].append(example)
+        if len(examples_by_promotion[fight["promotion"]]) < 3:
+            examples_by_promotion[fight["promotion"]].append(example)
 
     for fight_id, fight_stats in stats_by_fight.items():
         fight = fight_by_id[fight_id]
@@ -247,21 +256,45 @@ def audit() -> dict[str, Any]:
         },
         "inventory_by_promotion": inventory,
         "status_counts": sorted_counter(status),
+        "ambiguity_reason_counts": sorted_counter(ambiguity_reasons),
         "ruleset_assignment_counts": sorted_counter(rulesets),
         "coverage_by_promotion": finalize_breakdown(by_promotion),
         "coverage_by_year": finalize_breakdown(by_year),
         "control_observation_states_on_eligible_rounds": sorted_counter(control_states),
         "control_elapsed_bound_violations": 0,
         "examples": dict(sorted(examples.items())),
+        "examples_by_promotion": dict(sorted(examples_by_promotion.items())),
     }
     encoded = json.dumps(deterministic, sort_keys=True, separators=(",", ":")).encode()
     deterministic["deterministic_payload_sha256"] = hashlib.sha256(encoded).hexdigest()
     return deterministic
 
 
+def write_fight_assignments(path: Path) -> None:
+    registry = load_registry(ROOT)
+    events = {row["event_id"]: row for row in rows(CANON / "events.csv")}
+    fights = rows(CANON / "fights.csv")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as handle:
+        for fight in sorted(fights, key=lambda row: row["fight_id"]):
+            event_date = events[fight["event_id"]]["event_date"]
+            ex = infer_fight_exposure(fight, event_date, registry)
+            record = {
+                "fight_id": fight["fight_id"],
+                "ruleset_id": ex.ruleset_id,
+                "elapsed_exposure_status": ex.elapsed_exposure_status,
+                "round_duration_vector": list(ex.round_duration_vector) if ex.round_duration_vector else None,
+                "elapsed_sec": ex.elapsed_sec,
+                "evidence_source": list(ex.evidence_source),
+                "reason": ex.reason,
+            }
+            handle.write(json.dumps(record, sort_keys=True, separators=(",", ":")) + "\\n")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", type=Path)
+    parser.add_argument("--fight-out", type=Path, help="Optional deterministic per-fight JSONL assignment output.")
     args = parser.parse_args()
     report = audit()
     payload = {
@@ -274,6 +307,8 @@ def main() -> None:
     if args.out:
         args.out.parent.mkdir(parents=True, exist_ok=True)
         args.out.write_text(text, encoding="utf-8")
+    if args.fight_out:
+        write_fight_assignments(args.fight_out)
     print(text, end="")
 
 

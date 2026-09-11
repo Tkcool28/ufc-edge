@@ -1,6 +1,6 @@
 {
-  "feature_contract_version": "0.1.0-draft",
-  "registry_version": 1,
+  "feature_contract_version": "0.1.2-draft",
+  "registry_version": 2,
   "purpose": "Fail-closed predictor/target and point-in-time leakage rules for the shared FEATURES contract.",
   "prediction_rule": "A predictive value must be knowable at prediction_as_of. Current-fight post-event observations and future observations are forbidden.",
   "current_target_postfight_fields": [
@@ -54,9 +54,12 @@
     ],
     "rule": "Bucket lower/upper seconds are quantization bounds, not observed exact durations."
   },
-  "control_rule": "fighter_round_stats.control_sec is exact general control time where canonical, but is not synonymous with ground time and may not be used as an exact ground-opportunity denominator.",
+  "control_rule": "fighter_round_stats.control_sec is exact generic control time where canonical. It may use verified ruleset-derived elapsed fight time as a denominator for generic control share/rate, but it is not synonymous with ground time/top-position time and may not be used as an exact ground-opportunity denominator.",
   "raw_boundary": {
-    "forbidden_path_prefixes": ["data/raw/", "raw/"],
+    "forbidden_path_prefixes": [
+      "data/raw/",
+      "raw/"
+    ],
     "forbidden_provider_dependency_rule": "Predictive feature contracts reference canonical table/field names, never provider-specific raw paths or layouts.",
     "raw_qa_only_allowed": false
   },
@@ -84,5 +87,6 @@
     "exact chronological state transition matrix",
     "exact standing minutes",
     "exact ground minutes"
-  ]
+  ],
+  "elapsed_exposure_rule": "Only ruleset_registry_v1-eligible historical fights/rounds may supply elapsed-time denominators. Promotion+era assignment must predate/apply to the historical bout; scheduled_rounds, finish_round, stats, or control values cannot authorize round duration."
 }

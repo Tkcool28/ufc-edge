@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'features/**'
+      - 'provenance/rulesets/**'
       - 'src/ufc_edge/features/**'
       - 'tests/features/**'
       - '.github/workflows/f00-feature-contract.yml'

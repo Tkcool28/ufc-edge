@@ -2,7 +2,7 @@
 
 Status: **AUTHORITATIVE F00 DRAFT**
 
-Feature contract version: **0.1.1-draft**
+Feature contract version: **0.1.2-draft**
 
 Frozen DATA contract: **0.4.0-draft**
 
@@ -111,25 +111,36 @@ Round-specific state is opt-in and initially limited to `r1`, `r2`, and `r3plus`
 
 A rate is invalid until its numerator, denominator, eligibility, zero-denominator behavior, missing-denominator behavior, and minimum support are explicit.
 
-### Canonical-v0 elapsed-exposure gate
+### Verified-ruleset elapsed-exposure gate
 
-Canonical v0 does **not** expose a general elapsed-round field on `fighter_round_stats`, and it does not establish historical round-length/ruleset semantics broadly enough to reconstruct elapsed fight time safely across all eligible eras/promotions. Therefore F00 `0.1.1-draft` does **not** materialize any concept that requires elapsed fight/round time, directly or through an upstream feature.
+Canonical v0 still does **not** expose a universal elapsed-round field. Contract `0.1.2-draft` instead adds a reproducible derived eligibility source, `ruleset_registry_v1`, backed by `provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json` and deterministic derivation in `src/ufc_edge/features/elapsed_exposure.py`.
 
-In particular, FEATURES must not assume that every historical nonterminal round lasted 300 seconds/five minutes, must not infer round length from `scheduled_rounds`, and must not derive total elapsed fight time from `finish_round`/`finish_time_sec` until a versioned DATA/feature contract proves the relevant historical round-length semantics. `control_sec` is an observed general-control numerator; it is not elapsed fight time or ground time.
+The source is fail-closed:
 
-The catalog's `elapsed_exposure_policy` is the machine-readable gate. Under canonical v0 its `allowed_sources` list is empty. A time-normalized concept may move to a materializable status only after a versioned contract names an allowed canonical elapsed-exposure source and the concept declares explicit eligibility/provenance with `contract_safe=true`. The validator fails closed otherwise.
+- promotion + historical event date must match a verified registry entry;
+- `scheduled_rounds` never proves round length;
+- `finish_round` never proves round length;
+- `finish_time_sec` is used only where its count-up terminal-round semantics are established;
+- completed prior rounds use only durations supplied by the applicable verified ruleset;
+- ambiguous, unknown, or semantically inconsistent fights return unavailable elapsed exposure rather than an approximation;
+- missing elapsed exposure excludes only elapsed-denominated domains; the same fight may still contribute to independently safe non-time concepts.
 
-Accordingly, the following kinds of exposure remain **currently materializable** where their canonical observations exist:
+For a ruleset-eligible terminal fight, elapsed fight time is the sum of verified durations for completed prior rounds plus canonical count-up `finish_time_sec` in the terminal round. A decision requires the full applicable scheduled duration and therefore also requires canonical `scheduled_rounds`; external full-distance rows without that field remain unavailable. Round-level exposure uses the verified full duration for completed nonterminal rounds and canonical terminal time for the finishing round.
 
-- attempted events for conversion/accuracy/defense probabilities;
-- landed/absorbed events for explicitly named efficiency proxies;
-- compatible event totals for compositional shares;
-- eligible prior fights for historical result/method rates;
-- observed opportunities only where canonical DATA actually supplies an opportunity count.
+The frozen-population audit supports activating the clean round-stat primitives: more than 98% of fighter-round-stat observations and more than 99% of recent-UFC-fighter round-stat history are safely eligible, while exclusions cluster in pre-UFC-28 history and small incomplete-timing pockets. Exact percentages and examples are preserved in the elapsed-normalization audit report.
 
-Elapsed-time normalization remains a **reserved future exposure type**, not a canonical-v0 V1 denominator. This defers strike flow/pace, KD-per-time, TD-pressure-per-time, control share of fight time, submission/reversal activity per time, their time-dependent matchup interactions, four V2 time residuals, and time-intensity/persistence simulator concepts. It does not block attempt-conditioned quantities such as significant-strike accuracy, takedown conversion/defense, KD-per-landed-strike proxies, target/environment composition, or fight-count method history.
+Accordingly, `0.1.2-draft` promotes the six primitive fighter-state concepts whose prior blocker was elapsed exposure alone:
 
-Missing fields never borrow generic full-fight exposure and never become zero.
+- `sig_strike_flow`;
+- `knockdown_rate`;
+- `takedown_pressure`;
+- `control_rate`;
+- `submission_attempt_rate`;
+- `reversal_rate`.
+
+`control_rate` remains **generic control** created/allowed over elapsed fight time. It is not ground-control time, top-position time, or positional dominance. Distance/clinch/ground strike composition remains event composition, not positional-duration measurement.
+
+Downstream differential/matchup, opponent-adjusted, simulator, and historical-duration concepts are no longer blocked merely because duration is unknowable, but they remain `DEFERRED` to their own later phase or coverage review. This prevents a denominator migration from silently expanding model complexity.
 
 ## 8. Missingness and zero
 
@@ -157,7 +168,7 @@ Population prior hierarchy:
 
 Mechanical prior strengths:
 
-- event/time rates: 15 equivalent eligible minutes is a **reserved future** shrinkage policy and is not materializable under canonical v0;
+- elapsed event/time rates: 15 equivalent ruleset-eligible minutes for `time_rate_v1`;
 - attempt/conversion probabilities: 20 equivalent attempts/opportunities;
 - compositional shares: 30 equivalent events;
 - fight-result/method rates: 6 equivalent fights.
@@ -178,7 +189,7 @@ For every historical contest `H` contributing to fighter state at target time `T
 4. aggregate residuals over the chosen window using compatible exposure/opportunity weights;
 5. never recompute the historical opponent using information learned after `H`.
 
-Under canonical v0, only attempt-denominated `oa_takedown_creation` remains `V2_OPPONENT_ADJUSTED`. Significant-strike creation/suppression, control creation, and submission-attempt creation residuals are `DEFERRED` because their expected/actual residuals require the same unsafe elapsed-time exposure. Their chronology/sign semantics remain documented for a future contract-safe exposure source.
+The six promoted V1 primitive rates may now provide ruleset-eligible elapsed denominators. Opponent-adjusted residuals other than the already attempt-denominated `oa_takedown_creation` remain `DEFERRED` because nested pre-H opponent-state reconstruction belongs to the V2 opponent-adjustment phase, not because elapsed exposure is still globally blocked.
 
 This is chronological opponent adjustment, not retrospective opponent-career strength.
 
@@ -200,7 +211,7 @@ Canonical stance is `PROXY_ONLY` because it is not a dated stance history and sw
 
 F00 identifies component quantities but does not build a simulator.
 
-Under canonical v0, `sim_takedown_success_probability` remains the only currently active simulator-component concept because its denominator is observed takedown attempts. Strike-event intensity, KD interval hazard, takedown-attempt intensity, submission-attempt intensity, and round/time persistence concepts are `DEFERRED` until elapsed exposure becomes contract-safe. The concepts remain documented so a future DATA migration can promote them without redefining their intent.
+`sim_takedown_success_probability` remains the only currently active simulator-component concept. Ruleset-qualified elapsed exposure now makes several other simulator denominators semantically possible, but strike/KD/takedown/submission intensity and persistence concepts remain `DEFERRED` until the simulator/component-training phase.
 
 F00 does **not** claim support for:
 
@@ -237,7 +248,7 @@ Initial target families:
 
 Targets attach only after the prediction feature row is complete. Historical result/method fields may support historical summaries only when explicitly scoped `historical_only`; the same fields from the current target fight are forbidden.
 
-F00 does not derive global total elapsed fight duration across all eras/promotions because canonical v0 does not expose a bout-level round-length/rule-set field sufficient to make one formula safe everywhere. `historical_fight_duration` and every feature that depends on unproven elapsed fight/round exposure are therefore `DEFERRED` together; this is enforced by `elapsed_exposure_policy` rather than left to F01 implementation judgment.
+F00 does not claim a global total elapsed fight duration across every era/promotion. `historical_fight_duration` is safely derivable only on ruleset-eligible fights and remains `DEFERRED` because its all-fight coverage is lower than the round-stat domain and external full-distance rows may lack canonical `scheduled_rounds`. The six promoted round-stat primitives use only eligible round exposure and preserve missingness elsewhere.
 
 Sportsbook odds, implied probability, line movement, ROI, CLV, and method prices are outside the core feature contract.
 
