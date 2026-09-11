@@ -1,0 +1,63 @@
+name: Elapsed Exposure Normalization V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'provenance/rulesets/**'
+      - 'src/ufc_edge/features/elapsed_exposure.py'
+      - 'tools/features/audit_elapsed_exposure_v1.py'
+      - 'tests/features/test_elapsed_exposure.py'
+      - '.github/workflows/elapsed-exposure-normalization-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+      UFC_EDGE_CODE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Parse elapsed-exposure Python
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          for path in [
+              Path('src/ufc_edge/features/elapsed_exposure.py'),
+              Path('tools/features/audit_elapsed_exposure_v1.py'),
+              Path('tests/features/test_elapsed_exposure.py'),
+          ]:
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+          PY
+
+      - name: Run elapsed-exposure tests
+        run: python -m unittest tests.features.test_elapsed_exposure -v
+
+      - name: Real canonical coverage audit
+        run: python tools/features/audit_elapsed_exposure_v1.py
+
+      - name: Verify frozen canonical DATA unchanged
+        run: |
+          git diff --quiet origin/main...HEAD -- \
+            data/canonical/v0 \
+            schemas/canonical_data_contract_v0.json \
+            schemas/canonical_data_contract_v0.md \
+            schemas/source_field_map_v0.json \
+            schemas/source_precedence_v0.json \
+            provenance/data_phase_freeze_v0.json
+
+      - name: Check whitespace
+        run: git diff --check origin/main...HEAD

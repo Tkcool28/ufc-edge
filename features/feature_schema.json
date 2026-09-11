@@ -22,7 +22,7 @@
   ],
   "properties": {
     "feature_contract_version": {
-      "const": "0.1.1-draft"
+      "const": "0.1.2-draft"
     },
     "catalog_schema_version": {
       "const": 1
@@ -427,10 +427,10 @@
       ],
       "properties": {
         "version": {
-          "const": 1
+          "const": 2
         },
         "canonical_v0_status": {
-          "const": "no_general_safe_elapsed_round_or_fight_exposure_source"
+          "const": "partial_verified_ruleset_elapsed_exposure_available"
         },
         "allowed_sources": {
           "type": "array",

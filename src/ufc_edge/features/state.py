@@ -17,6 +17,7 @@ from .aggregations import (
     semantic_state,
     shrink_component,
 )
+from .elapsed_exposure import control_share, infer_round_exposure, load_registry
 from .history import (
     AmbiguousWindowBoundary,
     CanonicalStore,
@@ -41,6 +42,12 @@ HISTORICAL_IMPLEMENTATIONS = {
     "early_finish_profile",
     "layoff_days",
     "prior_scale_weight_lbs",
+    "sig_strike_flow",
+    "knockdown_rate",
+    "takedown_pressure",
+    "control_rate",
+    "submission_attempt_rate",
+    "reversal_rate",
 }
 CONTEXT_IMPLEMENTATIONS = {
     "age_at_fight",
@@ -187,12 +194,129 @@ class StateBuilder:
                 f"F01 registry/catalog mismatch: missing={sorted(active - IMPLEMENTED_V1_CONCEPTS)} "
                 f"extra={sorted(IMPLEMENTED_V1_CONCEPTS - active)}"
             )
-        if catalog["elapsed_exposure_policy"]["allowed_sources"]:
-            raise MaterializationError("F01 is pinned to canonical-v0 empty elapsed-exposure allowed_sources")
+        allowed_elapsed = catalog["elapsed_exposure_policy"]["allowed_sources"]
+        if allowed_elapsed != ["ruleset_registry_v1"]:
+            raise MaterializationError(
+                f"F01 requires the reviewed ruleset_registry_v1 elapsed source, got {allowed_elapsed}"
+            )
+        self._elapsed_registry = load_registry(store.root)
+        self._round_elapsed_cache: dict[tuple[str, int], int | None] = {}
         self._prior_cache: dict[tuple[str, str, str, str | None], tuple[float, float, str]] = {}
+
+    def _round_elapsed_sec(self, fight: FightRef, round_no: int) -> int | None:
+        key = (fight.fight_id, round_no)
+        if key in self._round_elapsed_cache:
+            return self._round_elapsed_cache[key]
+        payload = {
+            "fight_id": fight.fight_id,
+            "promotion": fight.promotion,
+            "method": fight.method,
+            "finish_round": fight.finish_round,
+            "finish_time_sec": fight.finish_time_sec,
+            "scheduled_rounds": fight.scheduled_rounds,
+        }
+        elapsed = infer_round_exposure(
+            payload,
+            fight.event_date.isoformat(),
+            round_no,
+            self._elapsed_registry,
+        )
+        self._round_elapsed_cache[key] = elapsed
+        return elapsed
 
     def _single_fight_stats(self, fighter_id: str, feature_name: str, fight: FightRef) -> dict[str, FightStats]:
         rows = self.store.round_rows_for_fight(fighter_id, fight.fight_id)
+        if feature_name in {
+            "sig_strike_flow",
+            "knockdown_rate",
+            "takedown_pressure",
+            "control_rate",
+            "submission_attempt_rate",
+            "reversal_rate",
+        }:
+            numerators: dict[str, float] = {}
+            denominators: dict[str, float] = {}
+            observations: dict[str, int] = {}
+
+            def add(component: str, numerator: float, denominator_minutes: float) -> None:
+                if denominator_minutes <= 0:
+                    return
+                numerators[component] = numerators.get(component, 0.0) + numerator
+                denominators[component] = denominators.get(component, 0.0) + denominator_minutes
+                observations[component] = observations.get(component, 0) + 1
+
+            for row in rows:
+                round_no = int(row["round"])
+                elapsed_sec = self._round_elapsed_sec(fight, round_no)
+                if elapsed_sec is None or elapsed_sec <= 0:
+                    continue
+                elapsed_min = elapsed_sec / 60.0
+                opponent = self.store.opponent_round_row(fight.fight_id, fighter_id, round_no)
+
+                if feature_name == "sig_strike_flow":
+                    attempted = as_int(row.get("sig_strikes_attempted"))
+                    landed = as_int(row.get("sig_strikes_landed"))
+                    if attempted is not None:
+                        add("attempted_per_min", float(attempted), elapsed_min)
+                    if landed is not None:
+                        add("landed_per_min", float(landed), elapsed_min)
+                    if opponent is not None:
+                        absorbed = as_int(opponent.get("sig_strikes_landed"))
+                        if absorbed is not None:
+                            add("absorbed_per_min", float(absorbed), elapsed_min)
+                elif feature_name == "knockdown_rate":
+                    created = as_int(row.get("knockdowns"))
+                    if created is not None:
+                        add("created_per_15", 15.0 * created, elapsed_min)
+                    if opponent is not None:
+                        allowed = as_int(opponent.get("knockdowns"))
+                        if allowed is not None:
+                            add("allowed_per_15", 15.0 * allowed, elapsed_min)
+                elif feature_name == "takedown_pressure":
+                    created = as_int(row.get("takedowns_attempted"))
+                    if created is not None:
+                        add("created_per_15", 15.0 * created, elapsed_min)
+                    if opponent is not None:
+                        faced = as_int(opponent.get("takedowns_attempted"))
+                        if faced is not None:
+                            add("faced_per_15", 15.0 * faced, elapsed_min)
+                elif feature_name == "control_rate":
+                    created = as_int(row.get("control_sec"))
+                    if created is not None:
+                        control_share(created, elapsed_sec)  # bound validation; generic control only
+                        add("created_share", created / 60.0, elapsed_min)
+                    if opponent is not None:
+                        allowed = as_int(opponent.get("control_sec"))
+                        if allowed is not None:
+                            control_share(allowed, elapsed_sec)
+                            add("allowed_share", allowed / 60.0, elapsed_min)
+                elif feature_name == "submission_attempt_rate":
+                    created = as_int(row.get("submission_attempts"))
+                    if created is not None:
+                        add("created_per_15", 15.0 * created, elapsed_min)
+                    if opponent is not None:
+                        faced = as_int(opponent.get("submission_attempts"))
+                        if faced is not None:
+                            add("faced_per_15", 15.0 * faced, elapsed_min)
+                else:
+                    created = as_int(row.get("reversals"))
+                    if created is not None:
+                        add("created_per_15", 15.0 * created, elapsed_min)
+                    if opponent is not None:
+                        faced = as_int(opponent.get("reversals"))
+                        if faced is not None:
+                            add("faced_per_15", 15.0 * faced, elapsed_min)
+
+            return {
+                component: FightStats(
+                    fight.fight_id,
+                    {component: numerators[component]},
+                    {component: denominators[component]},
+                    observations[component],
+                )
+                for component in sorted(numerators)
+            }
+
         if feature_name in {
             "sig_strike_efficiency",
             "sig_target_mix",
@@ -541,6 +665,12 @@ class StateBuilder:
                 "finish_method_win_profile",
                 "finish_method_loss_profile",
                 "early_finish_profile",
+                "sig_strike_flow",
+                "knockdown_rate",
+                "takedown_pressure",
+                "control_rate",
+                "submission_attempt_rate",
+                "reversal_rate",
             }:
                 values.update(
                     self._materialize_rate_feature(fighter_id, cutoff, target_fight_id, feature, prior_count)

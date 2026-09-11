@@ -72,10 +72,9 @@ def prior_strength(shrinkage_rule: str) -> float:
         "attempt_probability_v1": 20.0,
         "composition_v1": 30.0,
         "fight_rate_v1": 6.0,
+        "time_rate_v1": 15.0,
         "none": 0.0,
     }
-    if shrinkage_rule == "time_rate_v1":
-        raise ValueError("time_rate_v1 is not materializable under feature contract 0.1.1-draft")
     try:
         return strengths[shrinkage_rule]
     except KeyError as exc:

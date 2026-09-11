@@ -76,18 +76,28 @@ jobs:
             tests/handicap_bridge \
             .github/workflows/h01-handicap-request.yml
 
-      - name: Verify F00 semantic contract unchanged
+      - name: Require version bump for F00 semantic migration
         shell: bash
         run: |
           set -euo pipefail
-          git diff --quiet origin/main...HEAD -- \
-            features/FEATURE_CONTRACT.md \
-            features/feature_catalog.yaml \
-            features/feature_schema.json \
-            features/leakage_registry.yaml \
-            src/ufc_edge/features/contract.py \
-            tests/features/test_feature_contract.py \
+          paths=(
+            features/FEATURE_CONTRACT.md
+            features/feature_catalog.yaml
+            features/feature_schema.json
+            features/leakage_registry.yaml
+            src/ufc_edge/features/contract.py
+            tests/features/test_feature_contract.py
             .github/workflows/f00-feature-contract.yml
+          )
+          if ! git diff --quiet origin/main...HEAD -- "${paths[@]}"; then
+            base_version="$(git show origin/main:features/feature_catalog.yaml | python -c 'import json,sys; print(json.load(sys.stdin)["feature_contract_version"])')"
+            head_version="$(python -c 'import json; print(json.load(open("features/feature_catalog.yaml"))["feature_contract_version"])')"
+            if [[ "$base_version" == "$head_version" ]]; then
+              echo "F00 semantic files changed without a feature_contract_version bump." >&2
+              exit 1
+            fi
+            echo "Reviewed versioned F00 migration: $base_version -> $head_version"
+          fi
 
       - name: Reject generated feature matrices and run directories
         shell: bash

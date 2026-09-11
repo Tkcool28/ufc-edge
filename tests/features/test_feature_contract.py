@@ -44,7 +44,7 @@ class FeatureContractTests(unittest.TestCase):
 
     def test_repository_contract_validates(self) -> None:
         summary = validate_repository_contract(ROOT)
-        self.assertEqual(summary["feature_contract_version"], "0.1.1-draft")
+        self.assertEqual(summary["feature_contract_version"], "0.1.2-draft")
         self.assertGreater(summary["feature_count"], 0)
         self.assertGreater(summary["materialized_name_count"], 0)
 
@@ -198,32 +198,37 @@ class FeatureContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "ground-time"):
             self.validate(catalog)
 
-    def test_elapsed_time_feature_is_blocked_without_safe_source(self) -> None:
+    def test_elapsed_time_feature_fails_without_safe_source(self) -> None:
         catalog = deepcopy(self.catalog)
-        self.feature("sig_strike_flow", catalog)["status"] = "V1_MUST"
-        with self.assertRaisesRegex(ContractError, "elapsed|DEFERRED"):
+        self.feature("sig_strike_flow", catalog)["elapsed_exposure_source"]["contract_safe"] = False
+        with self.assertRaisesRegex(ContractError, "elapsed-time exposure"):
             self.validate(catalog)
 
-    def test_elapsed_exposure_blocked_concepts_are_deferred(self) -> None:
-        blocked = self.catalog["elapsed_exposure_policy"]["blocked_feature_concepts"]
-        self.assertIn("sig_strike_flow", blocked)
-        self.assertIn("historical_fight_duration", blocked)
-        for name in blocked:
-            self.assertEqual(self.feature(name)["status"], "DEFERRED", name)
+    def test_ruleset_registry_is_the_only_allowed_elapsed_source(self) -> None:
+        policy = self.catalog["elapsed_exposure_policy"]
+        self.assertEqual(policy["version"], 2)
+        self.assertEqual(policy["allowed_sources"], ["ruleset_registry_v1"])
+        self.assertEqual(policy["blocked_feature_concepts"], [])
+        promoted = {
+            "sig_strike_flow",
+            "knockdown_rate",
+            "takedown_pressure",
+            "control_rate",
+            "submission_attempt_rate",
+            "reversal_rate",
+        }
+        for name in promoted:
+            feature = self.feature(name)
+            self.assertEqual(feature["status"], "V1_MUST", name)
+            self.assertEqual(feature["elapsed_exposure_source"]["source"], "ruleset_registry_v1")
+            self.assertIs(feature["elapsed_exposure_source"]["contract_safe"], True)
 
-    def test_elapsed_exposure_can_only_be_promoted_with_allowed_source(self) -> None:
+    def test_elapsed_source_must_be_contract_allowed(self) -> None:
         catalog = deepcopy(self.catalog)
         feature = self.feature("sig_strike_flow", catalog)
-        feature["status"] = "V1_MUST"
-        feature["elapsed_exposure_source"] = {
-            "source": "canonical_round_elapsed_sec_v1",
-            "eligibility": "Only rows carrying the future canonical elapsed-round field are eligible.",
-            "provenance": "Future versioned DATA migration canonical elapsed-round field.",
-            "contract_safe": True,
-        }
-        catalog["elapsed_exposure_policy"]["allowed_sources"] = ["canonical_round_elapsed_sec_v1"]
-        catalog["elapsed_exposure_policy"]["blocked_feature_concepts"].remove("sig_strike_flow")
-        self.validate(catalog)
+        feature["elapsed_exposure_source"]["source"] = "unreviewed_duration_source"
+        with self.assertRaisesRegex(ContractError, "not allowed"):
+            self.validate(catalog)
 
     def test_standard_300_second_round_assumption_is_rejected(self) -> None:
         catalog = deepcopy(self.catalog)
@@ -235,8 +240,7 @@ class FeatureContractTests(unittest.TestCase):
             "provenance": "Assumed five minute standard round.",
             "contract_safe": True,
         }
-        catalog["elapsed_exposure_policy"]["allowed_sources"] = ["assumed_round_duration"]
-        catalog["elapsed_exposure_policy"]["blocked_feature_concepts"].remove("sig_strike_flow")
+        catalog["elapsed_exposure_policy"]["allowed_sources"] = ["ruleset_registry_v1", "assumed_round_duration"]
         with self.assertRaisesRegex(ContractError, "standard historical round duration"):
             self.validate(catalog)
 
@@ -246,7 +250,7 @@ class FeatureContractTests(unittest.TestCase):
         self.assertEqual(self.feature("sim_takedown_success_probability")["status"], "SIMULATOR_COMPONENT")
         names = materialized_feature_names(self.catalog)
         self.assertTrue(any("takedown_conversion" in name for name in names))
-        self.assertFalse(any("sig_strike_flow" in name for name in names))
+        self.assertTrue(any("sig_strike_flow" in name for name in names))
 
     # Materialization naming / consumers --------------------------------
 

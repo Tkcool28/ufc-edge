@@ -2,7 +2,7 @@
 
 Status: **F01 implementation draft**
 
-Authoritative semantics remain F00 `features/feature_catalog.yaml` version `0.1.1-draft`. F01 implements that contract; this document records implementation choices and validation boundaries without redefining feature meaning.
+Authoritative semantics remain F00 `features/feature_catalog.yaml` version `0.1.2-draft`. F01 implements that contract; this document records implementation choices and validation boundaries without redefining feature meaning.
 
 ## Scope
 
@@ -144,7 +144,7 @@ Mechanical strengths only:
 - `attempt_probability_v1`: 20 equivalent opportunities
 - `composition_v1`: 30 equivalent events
 - `fight_rate_v1`: 6 equivalent fights
-- `time_rate_v1`: rejected under `0.1.1-draft`
+- `time_rate_v1`: rejected under `0.1.2-draft`
 
 For personal numerator `n`, support `d`, population probability `p`, prior strength `a`:
 

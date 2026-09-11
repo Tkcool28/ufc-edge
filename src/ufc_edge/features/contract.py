@@ -22,6 +22,7 @@ AUTHORITATIVE_FILES = (
     "features/feature_catalog.yaml",
     "features/feature_schema.json",
     "features/leakage_registry.yaml",
+    "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json",
     "src/ufc_edge/features/contract.py",
     "tests/features/test_feature_contract.py",
     ".github/workflows/f00-feature-contract.yml",
@@ -334,10 +335,10 @@ def _validate_elapsed_exposure_policy(catalog: dict[str, Any], features: list[di
     if not isinstance(policy, dict):
         raise ContractError("catalog must declare elapsed_exposure_policy")
     _require_keys(policy, ("version", "canonical_v0_status", "allowed_sources", "blocked_feature_concepts", "forbidden_inferences", "materializable_requirement", "promotion_requirement"), "elapsed_exposure_policy")
-    if policy["version"] != 1:
-        raise ContractError("elapsed_exposure_policy.version must be 1")
-    if policy["canonical_v0_status"] != "no_general_safe_elapsed_round_or_fight_exposure_source":
-        raise ContractError("canonical v0 elapsed-exposure status cannot be weakened silently")
+    if policy["version"] != 2:
+        raise ContractError("elapsed_exposure_policy.version must be 2")
+    if policy["canonical_v0_status"] != "partial_verified_ruleset_elapsed_exposure_available":
+        raise ContractError("elapsed-exposure status must match the versioned ruleset-eligibility migration")
     allowed_sources = policy["allowed_sources"]
     blocked = policy["blocked_feature_concepts"]
     if not isinstance(allowed_sources, list) or len(allowed_sources) != len(set(allowed_sources)):
@@ -464,8 +465,8 @@ def validate_catalog(
     registry: dict[str, Any],
 ) -> dict[str, Any]:
     _require_keys(catalog, schema["required"], "catalog")
-    if catalog["feature_contract_version"] != "0.1.1-draft":
-        raise ContractError("feature_contract_version must be 0.1.1-draft for remediated F00")
+    if catalog["feature_contract_version"] != "0.1.2-draft":
+        raise ContractError("feature_contract_version must be 0.1.2-draft for elapsed-exposure migration")
     if catalog["data_contract_version"] != canonical.get("contract_version"):
         raise ContractError("catalog DATA contract version does not match frozen canonical contract")
     if catalog["canonical_root"] != "data/canonical/v0/":
