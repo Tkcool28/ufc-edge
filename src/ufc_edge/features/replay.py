@@ -22,7 +22,7 @@ from .materializer import V1Materializer, deterministic_hash
 from .state import MATCHUP_IMPLEMENTATIONS, MatchupState, StateBuilder, active_v1_features
 
 
-REPLAY_SCHEMA_VERSION = "1.0.0"
+REPLAY_SCHEMA_VERSION = "1.0.1"
 TARGET_CONTRACT_VERSION = "1.0.0"
 REPLAY_STATUS = "F02_PREDICTOR_REPLAY_V1_COMPLETE"
 CUTOFF_POLICY = "target_event_date_start_utc; F01 date-only history requires event_date < cutoff_date"
@@ -672,6 +672,8 @@ class ReplayEngine:
                 f"expected={sorted(SHARED_FIGHT_CONTEXT_CONCEPTS)} actual={sorted(shared_by_concept)}"
             )
 
+        shared_values: dict[str, Any] = {}
+        shared_audit: dict[str, dict[str, Any]] = {}
         for concept in SHARED_FIGHT_CONTEXT_CONCEPTS:
             source_name = shared_by_concept[concept]
             left = matchup.fighter_1.values[source_name]
@@ -692,11 +694,11 @@ class ReplayEngine:
                         f"{row['scheduled_rounds']!r} != {left.value!r}"
                     )
             else:
-                row[name] = left.value
+                shared_values[name] = left.value
             meta = left.to_dict()
             meta["source_materialized_name"] = source_name
             meta["orientation_role"] = "fight_context"
-            audit[name] = meta
+            shared_audit[name] = meta
 
         for role, state in (("f1", matchup.fighter_1), ("f2", matchup.fighter_2)):
             for source_name, value in sorted(state.values.items()):
@@ -708,6 +710,10 @@ class ReplayEngine:
                 meta["source_materialized_name"] = source_name
                 meta["orientation_role"] = role
                 audit[name] = meta
+        for name, value in shared_values.items():
+            row[name] = value
+            audit[name] = shared_audit[name]
+        audit["scheduled_rounds"] = shared_audit["scheduled_rounds"]
         for source_name, value in sorted(matchup.interactions.items()):
             name = _row_name("mx", source_name)
             row[name] = value.value
