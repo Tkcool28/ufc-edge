@@ -17,10 +17,11 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     validate = sub.add_parser("validate")
     validate.add_argument("--f02-dir", type=Path, required=True)
+    validate.add_argument("--m0-dir", type=Path, required=True)
     validate.add_argument("--output-dir", type=Path, required=True)
     args = parser.parse_args()
     if args.command == "validate":
-        result = run_validation(args.f02_dir.resolve(), args.output_dir.resolve())
+        result = run_validation(args.f02_dir.resolve(), args.m0_dir.resolve(), args.output_dir.resolve())
         compact = {
             "status": result["status"],
             "dataset": result["dataset"],
