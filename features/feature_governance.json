@@ -4,11 +4,23 @@
   "feature_contract_version": "0.1.2-draft",
   "catalog_authority": "features/feature_catalog.yaml",
   "identity_policy": {
-    "convention": "<layer-prefix>_<canonical-feature-name-uppercase>_V<semantic-major>",
+    "convention": "<LAYER>_<CONCEPT>_V<SEMANTIC_MAJOR>",
+    "layer_prefixes": {
+      "fighter_state": "FS",
+      "context": "CTX",
+      "matchup_interaction": "MX",
+      "opponent_adjusted": "OA",
+      "simulator_component": "SIM",
+      "research": "RES",
+      "unsupported": "UNSUP"
+    },
+    "canonical_prefix_normalization": "If canonical_name begins with the same durable layer prefix plus '_' (case-insensitive), remove exactly that one redundant prefix from the concept token before constructing feature_id.",
+    "semantic_major_suffix": "The terminal _V<number> is the semantic_version major generation only. It is not the feature-contract version, methodology version, model version, consumer version, or implementation version.",
     "stable_under_rename": true,
     "never_recycled": true,
     "semantic_change_requires_new_id": true,
-    "materialized_columns_are_variants_not_concepts": true
+    "materialized_columns_are_variants_not_concepts": true,
+    "authority_boundary": "Because governance V1 is still pre-merge, malformed IDs may be corrected in place. After PR #31 merges, durable feature IDs are immutable historical identities and changes require the documented lifecycle/migration process."
   },
   "lifecycle_states": [
     "ACTIVE",
@@ -865,7 +877,7 @@
       "notes": null
     },
     {
-      "feature_id": "OA_OA_SIG_CREATION_V1",
+      "feature_id": "OA_SIG_CREATION_V1",
       "canonical_name": "oa_sig_creation",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -891,7 +903,7 @@
       "notes": null
     },
     {
-      "feature_id": "OA_OA_SIG_SUPPRESSION_V1",
+      "feature_id": "OA_SIG_SUPPRESSION_V1",
       "canonical_name": "oa_sig_suppression",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -918,7 +930,7 @@
       "notes": null
     },
     {
-      "feature_id": "OA_OA_TAKEDOWN_CREATION_V1",
+      "feature_id": "OA_TAKEDOWN_CREATION_V1",
       "canonical_name": "oa_takedown_creation",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -945,7 +957,7 @@
       "notes": null
     },
     {
-      "feature_id": "OA_OA_CONTROL_CREATION_V1",
+      "feature_id": "OA_CONTROL_CREATION_V1",
       "canonical_name": "oa_control_creation",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -971,7 +983,7 @@
       "notes": null
     },
     {
-      "feature_id": "OA_OA_SUBMISSION_CREATION_V1",
+      "feature_id": "OA_SUBMISSION_CREATION_V1",
       "canonical_name": "oa_submission_creation",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -997,7 +1009,7 @@
       "notes": null
     },
     {
-      "feature_id": "SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "feature_id": "SIM_STRIKE_EVENT_INTENSITY_V1",
       "canonical_name": "sim_strike_event_intensity",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -1021,7 +1033,7 @@
       "notes": null
     },
     {
-      "feature_id": "SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "feature_id": "SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "canonical_name": "sim_knockdown_hazard_proxy",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -1047,7 +1059,7 @@
       "notes": null
     },
     {
-      "feature_id": "SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "feature_id": "SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "canonical_name": "sim_takedown_attempt_intensity",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -1071,7 +1083,7 @@
       "notes": null
     },
     {
-      "feature_id": "SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "feature_id": "SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "canonical_name": "sim_takedown_success_probability",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -1095,7 +1107,7 @@
       "notes": null
     },
     {
-      "feature_id": "SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "feature_id": "SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "canonical_name": "sim_submission_attempt_intensity",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
@@ -1119,7 +1131,7 @@
       "notes": null
     },
     {
-      "feature_id": "SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "feature_id": "SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "canonical_name": "sim_fatigue_persistence_multiplier",
       "semantic_version": "1.0.0",
       "methodology_version": "1.0.0",
