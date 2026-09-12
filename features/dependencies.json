@@ -1919,656 +1919,656 @@
     },
     {
       "from": "canonical:events.event_id",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:events.event_date",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.fight_id",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.event_id",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.opponent_id",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.sig_strikes_landed",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_SIG_STRIKE_FLOW_V1",
-      "to": "feature:OA_OA_SIG_CREATION_V1",
+      "to": "feature:OA_SIG_CREATION_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:OA_OA_SIG_CREATION_V1",
+      "from": "feature:OA_SIG_CREATION_V1",
       "to": "consumer:model1",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SIG_CREATION_V1",
+      "from": "feature:OA_SIG_CREATION_V1",
       "to": "consumer:tree",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SIG_CREATION_V1",
+      "from": "feature:OA_SIG_CREATION_V1",
       "to": "consumer:component_striking",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SIG_CREATION_V1",
+      "from": "feature:OA_SIG_CREATION_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:events.event_id",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:events.event_date",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.fight_id",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.event_id",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.opponent_id",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.sig_strikes_landed",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_SIG_STRIKE_FLOW_V1",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "derived_from"
     },
     {
       "from": "feature:FS_SIG_STRIKE_EFFICIENCY_V1",
-      "to": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "to": "feature:OA_SIG_SUPPRESSION_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "from": "feature:OA_SIG_SUPPRESSION_V1",
       "to": "consumer:model1",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "from": "feature:OA_SIG_SUPPRESSION_V1",
       "to": "consumer:tree",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "from": "feature:OA_SIG_SUPPRESSION_V1",
       "to": "consumer:component_striking",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SIG_SUPPRESSION_V1",
+      "from": "feature:OA_SIG_SUPPRESSION_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:events.event_id",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:events.event_date",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.fight_id",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.event_id",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.opponent_id",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.takedowns_landed",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.takedowns_attempted",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "feature:FS_TAKEDOWN_PRESSURE_V1",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "derived_from"
     },
     {
       "from": "feature:FS_TAKEDOWN_CONVERSION_V1",
-      "to": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "to": "feature:OA_TAKEDOWN_CREATION_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "from": "feature:OA_TAKEDOWN_CREATION_V1",
       "to": "consumer:model1",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "from": "feature:OA_TAKEDOWN_CREATION_V1",
       "to": "consumer:tree",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "from": "feature:OA_TAKEDOWN_CREATION_V1",
       "to": "consumer:component_wrestling",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_TAKEDOWN_CREATION_V1",
+      "from": "feature:OA_TAKEDOWN_CREATION_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:events.event_id",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:events.event_date",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.fight_id",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.event_id",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.opponent_id",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.control_sec",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_CONTROL_RATE_V1",
-      "to": "feature:OA_OA_CONTROL_CREATION_V1",
+      "to": "feature:OA_CONTROL_CREATION_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:OA_OA_CONTROL_CREATION_V1",
+      "from": "feature:OA_CONTROL_CREATION_V1",
       "to": "consumer:model1",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_CONTROL_CREATION_V1",
+      "from": "feature:OA_CONTROL_CREATION_V1",
       "to": "consumer:tree",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_CONTROL_CREATION_V1",
+      "from": "feature:OA_CONTROL_CREATION_V1",
       "to": "consumer:component_ground",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_CONTROL_CREATION_V1",
+      "from": "feature:OA_CONTROL_CREATION_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:events.event_id",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:events.event_date",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.fight_id",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fights.event_id",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.opponent_id",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.submission_attempts",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_SUBMISSION_ATTEMPT_RATE_V1",
-      "to": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "to": "feature:OA_SUBMISSION_CREATION_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "from": "feature:OA_SUBMISSION_CREATION_V1",
       "to": "consumer:model1",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "from": "feature:OA_SUBMISSION_CREATION_V1",
       "to": "consumer:tree",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "from": "feature:OA_SUBMISSION_CREATION_V1",
       "to": "consumer:component_submission",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:OA_OA_SUBMISSION_CREATION_V1",
+      "from": "feature:OA_SUBMISSION_CREATION_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "to": "feature:SIM_STRIKE_EVENT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "to": "feature:SIM_STRIKE_EVENT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "to": "feature:SIM_STRIKE_EVENT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.sig_strikes_attempted",
-      "to": "feature:SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "to": "feature:SIM_STRIKE_EVENT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "to": "feature:SIM_STRIKE_EVENT_INTENSITY_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_SIG_STRIKE_FLOW_V1",
-      "to": "feature:SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "to": "feature:SIM_STRIKE_EVENT_INTENSITY_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "from": "feature:SIM_STRIKE_EVENT_INTENSITY_V1",
       "to": "consumer:component_striking",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_STRIKE_EVENT_INTENSITY_V1",
+      "from": "feature:SIM_STRIKE_EVENT_INTENSITY_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "to": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "to": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "to": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.knockdowns",
-      "to": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "to": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "to": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_KNOCKDOWN_RATE_V1",
-      "to": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "to": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "kind": "derived_from"
     },
     {
       "from": "feature:FS_KNOCKDOWN_EFFICIENCY_V1",
-      "to": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "to": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "from": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "to": "consumer:component_striking",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "from": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "to": "consumer:component_durability",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1",
+      "from": "feature:SIM_KNOCKDOWN_HAZARD_PROXY_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.takedowns_attempted",
-      "to": "feature:SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_TAKEDOWN_PRESSURE_V1",
-      "to": "feature:SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "from": "feature:SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "to": "consumer:component_wrestling",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
+      "from": "feature:SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "to": "feature:SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "to": "feature:SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "to": "feature:SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.takedowns_landed",
-      "to": "feature:SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "to": "feature:SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.takedowns_attempted",
-      "to": "feature:SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "to": "feature:SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "feature:FS_TAKEDOWN_CONVERSION_V1",
-      "to": "feature:SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "to": "feature:SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "from": "feature:SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "to": "consumer:component_wrestling",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
+      "from": "feature:SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.submission_attempts",
-      "to": "feature:SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_SUBMISSION_ATTEMPT_RATE_V1",
-      "to": "feature:SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "to": "feature:SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "from": "feature:SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "to": "consumer:component_submission",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
+      "from": "feature:SIM_SUBMISSION_ATTEMPT_INTENSITY_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
     {
       "from": "canonical:fighter_round_stats.fight_id",
-      "to": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "to": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.fighter_id",
-      "to": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "to": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.round",
-      "to": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "to": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.sig_strikes_attempted",
-      "to": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "to": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.takedowns_attempted",
-      "to": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "to": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "kind": "canonical_source"
     },
     {
       "from": "canonical:fighter_round_stats.control_sec",
-      "to": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "to": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "kind": "canonical_source"
     },
     {
       "from": "eligibility:ruleset_registry_v1",
-      "to": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "to": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "kind": "eligibility"
     },
     {
       "from": "feature:FS_LATE_ROUND_PACE_RATIO_V1",
-      "to": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "to": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "kind": "derived_from"
     },
     {
-      "from": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "from": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "to": "consumer:component_striking",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "from": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "to": "consumer:component_wrestling",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "from": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "to": "consumer:component_ground",
       "kind": "consumed_by"
     },
     {
-      "from": "feature:SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
+      "from": "feature:SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1",
       "to": "consumer:simulator",
       "kind": "consumed_by"
     },
