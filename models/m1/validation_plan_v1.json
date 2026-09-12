@@ -1,0 +1,29 @@
+{
+  "chronology": {
+    "fight_overlap_allowed": false,
+    "inner": "within each outer-training set, use the two immediately preceding calendar years as chronological validation folds; each inner model trains only on earlier history",
+    "outer": "train on all eligible history before calendar validation year",
+    "random_cv": false
+  },
+  "development_confirmation_boundary": {
+    "confirmation": [2024, 2025, 2026],
+    "development": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+    "procedure_changes_after_confirmation_seen": false
+  },
+  "family_diagnostic_rule": "remove one entire predefined family and rerun the frozen chronological selection procedure; never modify M1 afterward",
+  "family_diagnostics": [
+    "experience_context",
+    "striking",
+    "pace_output",
+    "wrestling",
+    "submission",
+    "control_grappling",
+    "durability_finish_history",
+    "sample_support_missingness",
+    "existing_matchup"
+  ],
+  "model_selection": "fixed grid; concatenated inner-fold chronological log loss only; frozen grid-order tie break",
+  "preprocessing": "all imputation and scaling fit inside each training period",
+  "status": "M1_VALIDATION_PLAN_FROZEN",
+  "version": "1.0.0"
+}
