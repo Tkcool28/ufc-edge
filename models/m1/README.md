@@ -36,14 +36,14 @@ For each outer year, C is selected using only that outer training set with neste
 
 ## Frozen comparator
 
-M1 reproduces the frozen M0 logistic OOF path on the same rows using the unchanged M0 implementation. The reproduced M0 OOF logical SHA-256 must equal:
+M1 loads the authoritative frozen M0 OOF artifact directly from Actions run 34676508116, artifact 10292502486 (ZIP SHA-256 69e2a4db932ecbfd747a387b708d5107e3d682223d4f608b850a00a605af3be0). Its M0 OOF logical SHA-256 must equal:
 
 708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c
 
-A mismatch is a hard failure rather than a new baseline.
+A mismatch is a hard failure rather than a new baseline. M0 probabilities are not numerically recomputed under a later dependency solve.
 
 ## Full validation
 
-python tools/models/run_m1.py validate --f02-dir <f02-artifact-dir> --output-dir <runtime-dir>
+python tools/models/run_m1.py validate --f02-dir <f02-artifact-dir> --m0-dir <m0-artifact-dir> --output-dir <runtime-dir>
 
 The full run writes m1_result.json, m1_oof_predictions.parquet, m1_coefficients.json, and m1_regularization_selection.json as runtime artifacts. Performance must not be used to revise the feature surface or C grid inside this task.
