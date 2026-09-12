@@ -14,6 +14,10 @@ F02 converts the governed F01 point-in-time materializer into one shared histori
 
 Current governed surface at F02 V1 is 60 durable concepts, 24 active V1 concepts, and 104 F01 materialized definitions. Of the 99 non-matchup F01 values, 96 are fighter-specific and three are shared fight context (`scheduled_rounds`, `title_bout`, `weight_class`). F02 therefore emits **200 row-level predictors**: 96 × 2 fighter-oriented values + 3 shared fight-context values + 5 matchup interactions. The predictor table has **207 total columns** including seven non-predictor identity/provenance fields.
 
+## Reviewed shared-context schema
+
+The pre-review 203-predictor layout duplicated three fight-level context concepts across both fighter namespaces. The reviewed F02 V1 layout removes that replay-layer duplication without changing F01: fighter-specific state remains oriented, shared fight context is represented once, and matchup interactions remain once per fight.
+
 ## Semantic authority
 
 F02 does not implement feature formulas. `V1Materializer` / `StateBuilder` remain the semantic authority for:
