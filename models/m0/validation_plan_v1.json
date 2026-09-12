@@ -1,0 +1,138 @@
+{
+  "validation_plan_version": "1.0.0",
+  "status": "PREDECLARED_BEFORE_M0_PERFORMANCE_EVALUATION",
+  "population_inspection": {
+    "github_actions_run_id": 34676255981,
+    "ufc_binary_eligible_total": 8617,
+    "fighter_1_win_rate": 0.49239874666357203,
+    "rows_from_2010": 7367,
+    "rationale": "2010 provides 250 UFC binary-eligible fights in the first modeling year, 7,367 rows through 2026, near-complete age/experience coverage, and materially improved governed-stat coverage while retaining a long independent walk-forward horizon."
+  },
+  "modeling_era": {
+    "start": "2010-01-01",
+    "reason": "Modern-era balance of rules stability, governed feature coverage, training depth, and validation horizon; selected from counts/coverage before model performance."
+  },
+  "outer_folds": [
+    {
+      "fold_id": "2015",
+      "train_start": "2010-01-01",
+      "train_end": "2014-12-31",
+      "validation_start": "2015-01-01",
+      "validation_end": "2015-12-31"
+    },
+    {
+      "fold_id": "2016",
+      "train_start": "2010-01-01",
+      "train_end": "2015-12-31",
+      "validation_start": "2016-01-01",
+      "validation_end": "2016-12-31"
+    },
+    {
+      "fold_id": "2017",
+      "train_start": "2010-01-01",
+      "train_end": "2016-12-31",
+      "validation_start": "2017-01-01",
+      "validation_end": "2017-12-31"
+    },
+    {
+      "fold_id": "2018",
+      "train_start": "2010-01-01",
+      "train_end": "2017-12-31",
+      "validation_start": "2018-01-01",
+      "validation_end": "2018-12-31"
+    },
+    {
+      "fold_id": "2019",
+      "train_start": "2010-01-01",
+      "train_end": "2018-12-31",
+      "validation_start": "2019-01-01",
+      "validation_end": "2019-12-31"
+    },
+    {
+      "fold_id": "2020",
+      "train_start": "2010-01-01",
+      "train_end": "2019-12-31",
+      "validation_start": "2020-01-01",
+      "validation_end": "2020-12-31"
+    },
+    {
+      "fold_id": "2021",
+      "train_start": "2010-01-01",
+      "train_end": "2020-12-31",
+      "validation_start": "2021-01-01",
+      "validation_end": "2021-12-31"
+    },
+    {
+      "fold_id": "2022",
+      "train_start": "2010-01-01",
+      "train_end": "2021-12-31",
+      "validation_start": "2022-01-01",
+      "validation_end": "2022-12-31"
+    },
+    {
+      "fold_id": "2023",
+      "train_start": "2010-01-01",
+      "train_end": "2022-12-31",
+      "validation_start": "2023-01-01",
+      "validation_end": "2023-12-31"
+    },
+    {
+      "fold_id": "2024",
+      "train_start": "2010-01-01",
+      "train_end": "2023-12-31",
+      "validation_start": "2024-01-01",
+      "validation_end": "2024-12-31"
+    },
+    {
+      "fold_id": "2025",
+      "train_start": "2010-01-01",
+      "train_end": "2024-12-31",
+      "validation_start": "2025-01-01",
+      "validation_end": "2025-12-31"
+    },
+    {
+      "fold_id": "2026",
+      "train_start": "2010-01-01",
+      "train_end": "2025-12-31",
+      "validation_start": "2026-01-01",
+      "validation_end": "2026-12-31"
+    }
+  ],
+  "primary_metrics": [
+    "log_loss",
+    "brier_score"
+  ],
+  "secondary_metrics": [
+    "accuracy",
+    "roc_auc"
+  ],
+  "calibration_bins": [
+    0,
+    0.2,
+    0.3,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.7,
+    0.8,
+    1
+  ],
+  "slices": {
+    "history_depth": {
+      "zero_history": "either fighter prior_fight_count == 0",
+      "sparse_history": "neither zero and min prior_fight_count < 3",
+      "established_history": "both prior_fight_count >= 3"
+    },
+    "fight_length": [
+      "3-round",
+      "5-round"
+    ],
+    "title": [
+      "title",
+      "non-title"
+    ],
+    "weight_class": "report categories with >=50 OOF rows"
+  }
+}
