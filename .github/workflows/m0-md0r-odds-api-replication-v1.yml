@@ -1,6 +1,8 @@
 name: M0 The Odds API Market Diagnostic Replication V1
 
 on:
+  push:
+    branches: [feat/m0-market-diagnostic-odds-api-replication-v1]
   workflow_dispatch:
     inputs:
       authorized_pull:
@@ -20,18 +22,36 @@ permissions:
 
 jobs:
   replicate:
+    if: >-
+      (github.event_name == 'workflow_dispatch' &&
+       inputs.authorized_pull == true &&
+       inputs.approved_credit_ceiling == '3000') ||
+      (github.event_name == 'push' &&
+       github.ref == 'refs/heads/feat/m0-market-diagnostic-odds-api-replication-v1' &&
+       contains(github.event.head_commit.message, '[AUTHORIZED_ODDS_API_PULL]'))
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       PYTHONPATH: src
     steps:
-      - name: Reject unauthorized dispatch before checkout
+      - name: Verify explicit authorization trigger before checkout
         shell: bash
         run: |
           set -euo pipefail
-          test "${{ inputs.authorized_pull }}" = "true"
-          test "${{ inputs.approved_credit_ceiling }}" = "3000"
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            test "${{ inputs.authorized_pull }}" = "true"
+            test "${{ inputs.approved_credit_ceiling }}" = "3000"
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            test "${{ github.ref }}" = "refs/heads/feat/m0-market-diagnostic-odds-api-replication-v1"
+            case "${{ github.event.head_commit.message }}" in
+              *"[AUTHORIZED_ODDS_API_PULL]"*) ;;
+              *) echo "missing authorized pull marker" >&2; exit 1 ;;
+            esac
+          else
+            echo "unsupported event" >&2
+            exit 1
+          fi
 
       - uses: actions/checkout@v4
         with:
