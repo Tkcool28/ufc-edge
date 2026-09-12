@@ -9,10 +9,10 @@ F02 converts the governed F01 point-in-time materializer into one shared histori
 - **Prediction cutoff:** target event date at `00:00:00Z`. F01 history eligibility is date-only and requires `event_date < cutoff_date`, so the target and every other same-date fight are excluded. F02 never invents bout order.
 - **Orientation:** F01/F00 orientation is authoritative: lexicographically smaller canonical fighter ID is fighter 1; larger ID is fighter 2.
 - **Shared surface:** all currently active V1 F01 concepts are replayed with `consumer=None`. Model-specific selection happens later from governance metadata.
-- **Namespacing:** fighter-state/context values are `f1__<F01 materialized name>` / `f2__<F01 materialized name>`. Matchup values remain exactly one `mx__` namespace.
+- **Namespacing:** fighter-specific state/context values are `f1__<F01 materialized name>` / `f2__<F01 materialized name>`; shared fight context is represented once as top-level `scheduled_rounds`, `ctx__title_bout`, and `ctx__weight_class`; matchup values remain exactly one `mx__` namespace.
 - **Predictor/target separation:** predictor chunks and their manifest are frozen first. Winner labels are attached afterward into a derived modeling table and a separate target manifest.
 
-Current governed surface at F02 V1 is 60 durable concepts, 24 active V1 concepts, 104 F01 materialized definitions (99 fighter-state/context plus 5 matchup interactions), and **203 row-level predictor columns** after fighter orientation is expanded across both sides.
+Current governed surface at F02 V1 is 60 durable concepts, 24 active V1 concepts, and 104 F01 materialized definitions. Of the 99 non-matchup F01 values, 96 are fighter-specific and three are shared fight context (`scheduled_rounds`, `title_bout`, `weight_class`). F02 therefore emits **200 row-level predictors**: 96 × 2 fighter-oriented values + 3 shared fight-context values + 5 matchup interactions. The predictor table has **207 total columns** including seven non-predictor identity/provenance fields.
 
 ## Semantic authority
 
@@ -34,7 +34,7 @@ F02 does not implement feature formulas. `V1Materializer` / `StateBuilder` remai
 
 The untouched F01 path is the reference. Full-history replay may use `ExactReplayStateBuilder`, whose only optimization is a population-prior index. For each feature/component/cutoff it applies scalar contributions in the same canonical fight order and fighter-A/fighter-B order as F01. It does not change formulas, windows, shrinkage, or cutoff semantics.
 
-Before optimized replay is accepted, F02 runs a representative bounded fixture through both reference and optimized materializers and compares the complete predictor row **and** F01 audit projection for exact Python equality. Any difference is a hard failure; the optimized path is not allowed to continue.
+Before optimized replay is accepted, F02 runs a representative bounded fixture through both reference and optimized materializers and compares the complete final F02 predictor row **and** its F02 audit projection for exact Python equality. The row transformation itself also proves that shared F01 context values agree exactly across the two fighter states. Any difference is a hard failure; the optimized path is not allowed to continue.
 
 ## Artifacts
 
@@ -63,7 +63,9 @@ Parquet is the production storage format. The core feature package remains impor
 
 ## Schema and missingness
 
-The runtime `schema.json` explicitly records ordered columns, types, nullability, roles, and F01 source materialized names. Missing predictor values remain null. No zero/mean/population fill is introduced outside F01's governed shrinkage.
+The runtime `schema.json` explicitly records ordered columns, types, nullability, predictor status, semantic role, F01 source materialized name, and source concept. Future model code discovers predictors from `predictor=true`, not from name prefixes. Identity/provenance fields such as fight/event IDs, dates, fighter IDs, and promotion remain non-predictors. `scheduled_rounds` is the intentional exception: its existing top-level field is both replay context metadata and the single model-eligible shared scheduled-rounds predictor.
+
+Shared fight context is materialized by F01 for both oriented fighter states, but F02 requires the complete F01 audit value to be exactly equal on both sides before collapsing it to one row value. Scalar disagreement or semantic missingness/lineage disagreement fails closed. Missing predictor values remain null. No zero/mean/population fill is introduced outside F01's governed shrinkage.
 
 F01 semantic states (`observed_positive`, `observed_zero`, `missing_observation`, `not_applicable`, `insufficient_exposure`) are retained in replay QA while producing coverage diagnostics. They are not duplicated into hundreds of model-matrix columns.
 
