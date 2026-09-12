@@ -1,0 +1,19 @@
+{
+  "target_contract_version": "1.0.0",
+  "binary_target": "fighter_1_win",
+  "orientation": "fighter_1 is the F00/F01 canonical fighter_1",
+  "fields": [
+    {"name": "target_state", "type": "string", "nullable": false},
+    {"name": "binary_winner_eligible", "type": "bool", "nullable": false},
+    {"name": "fighter_1_win", "type": "bool", "nullable": true},
+    {"name": "winner_id", "type": "string", "nullable": true}
+  ],
+  "state_policy": {
+    "win_loss": "eligible only when winner_id equals fighter_1_id or fighter_2_id",
+    "draw": "preserve state; binary target null",
+    "no_contest": "preserve state; binary target null",
+    "other": "preserve state; binary target null; do not infer overturned",
+    "unknown": "preserve state; binary target null",
+    "overturned": "not a current canonical result enum and is not inferred"
+  }
+}

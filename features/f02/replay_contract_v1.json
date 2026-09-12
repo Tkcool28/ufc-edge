@@ -1,0 +1,30 @@
+{
+  "replay_contract_version": "1.0.0",
+  "row_grain": "one canonical target fight",
+  "target_universe": "all canonical data/canonical/v0/fights.csv rows with resolvable distinct canonical participants",
+  "target_ordering": ["event_date", "event_id", "fight_id"],
+  "prediction_cutoff": "target event date at 00:00:00Z",
+  "history_rule": "F01 event_date must be strictly less than cutoff date",
+  "same_day_policy": "exclude all same-date fights; never infer bout order",
+  "orientation": "F00/F01 canonical fighter orientation",
+  "consumer_selection": "broad active V1 surface; no model-private matrix",
+  "namespaces": {
+    "fighter_1": "f1__<F01 materialized name>",
+    "fighter_2": "f2__<F01 materialized name>",
+    "matchup": "exactly one mx__ namespace"
+  },
+  "storage": {
+    "format": "parquet",
+    "chunking": "five-year event-date ranges",
+    "runtime_root": "artifacts/features/f02/v1/",
+    "committed_full_matrices": false
+  },
+  "predictor_target_separation": "predictor manifest/hash is frozen before target attachment",
+  "optimization_gate": "optimized row and full audit projection must equal reference F01 exactly on representative fixture",
+  "positional_duration_requirement": {
+    "requirement_id": "DR_EXACT_POSITIONAL_DURATION_V1",
+    "status": "DATA_REQUIRED",
+    "priority": "SIMULATOR_REQUIRED",
+    "blocks_f02": false
+  }
+}
