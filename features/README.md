@@ -12,11 +12,12 @@ Read these in order:
 4. `FEATURE_GOVERNANCE.md` — contributor rules for adding, changing, renaming, deprecating, or sourcing features.
 5. `FEATURE_REFERENCE.md` — generated human-readable inventory.
 6. `feature_inventory.json` — generated machine-readable inventory.
+7. `f02/README.md` — F02 deterministic historical predictor replay contract, reproduction, target separation, and artifact policy.
 
 Current feature contract: **0.1.2-draft**.
 Current governance version: **1.0.0**.
 
-Verified merged-main baseline after PR #30:
+Verified governed baseline after PR #31:
 
 - 60 durable feature concepts in the shared catalog;
 - 24 active V1 concepts;
@@ -24,7 +25,9 @@ Verified merged-main baseline after PR #30:
 - 99 fighter-state/context values + 5 matchup-interaction values;
 - 164 catalog-declared active variants when round-specific declarations are included.
 
-The last two counts are intentionally different. F00 declares possible round-specific variants; F01 currently emits the narrower reviewed 104-value surface.
+F02 expands the literal governed F01 matchup surface across both oriented fighters: 99 fighter/context values per side plus 5 matchup interactions = **203 row-level predictor columns**. It does not create model-private feature definitions.
+
+The 104 vs 164 counts are intentionally different. F00 declares possible round-specific variants; F01 currently emits the narrower reviewed 104-value surface.
 
 ## Authority map
 
@@ -38,8 +41,10 @@ The last two counts are intentionally different. F00 declares possible round-spe
 | Known missing source requirements | `data_requirements.json` |
 | Simulator suitability and blockers | `simulator_requirements.json` |
 | Evolution/migration history | `migrations/feature_migrations.json` |
-| Runtime implementation | `src/ufc_edge/features/` |
-| Deterministic generated reference | `FEATURE_REFERENCE.md`, `feature_inventory.json` |
+| Runtime feature implementation | `src/ufc_edge/features/` |
+| F02 replay/target contract | `f02/README.md`, `f02/replay_contract_v1.json`, `f02/target_contract_v1.json` |
+| F02 frozen replay identity | `f02/F02_PREDICTOR_REPLAY_V1_COMPLETE.json` |
+| Deterministic generated feature reference | `FEATURE_REFERENCE.md`, `feature_inventory.json` |
 
 No model may create a private semantic definition for a concept that belongs in this shared layer.
 
@@ -67,7 +72,7 @@ Generic `fighter_round_stats.control_sec` remains generic control. It is not top
 
 ## F01 V1 materializer
 
-F01 remains the reference point-in-time materializer.
+F01 remains the reference point-in-time materializer and semantic authority used by replay.
 
 Runtime entry point:
 
@@ -75,7 +80,22 @@ Runtime entry point:
 python tools/features/materialize_v1.py --validate-bounded
 ```
 
-Persisted manifests now include durable feature IDs, semantic/methodology versions, governance hash, dependency/terminology hashes, DATA freeze, canonical manifest, ruleset registry, feature catalog/schema, code commit, materialized columns, and prediction cutoff.
+Persisted manifests include durable feature IDs, semantic/methodology versions, governance hash, dependency/terminology hashes, DATA freeze, canonical manifest, ruleset registry, feature catalog/schema, code commit, materialized columns, and prediction cutoff.
+
+## F02 historical predictor replay
+
+F02 is the shared historical predictor surface for future model families. It replays canonical target fights in deterministic `event_date -> event_id -> fight_id` order, uses the target event date as the prediction cutoff, inherits F01's strict prior-date rule, and excludes all same-date history rather than guessing bout order.
+
+Runtime entry points:
+
+```text
+PYTHONPATH=src python tools/features/replay_f02.py inspect
+PYTHONPATH=src python tools/features/replay_f02.py equivalence --equivalence-targets 16
+PYTHONPATH=src python tools/features/replay_f02.py bounded --output-dir /tmp/ufc-edge-f02-bounded --attach-targets
+PYTHONPATH=src python tools/features/replay_f02.py full --output-dir /tmp/ufc-edge-f02-full --attach-targets --resume
+```
+
+The frozen V1 identity is `f02/F02_PREDICTOR_REPLAY_V1_COMPLETE.json`. Full Parquet matrices remain reproducible runtime artifacts and are not committed to git. Labels are attached only after the predictor artifact is frozen.
 
 ## Generated reference
 
@@ -103,6 +123,8 @@ The highest-priority simulator blocker is exact positional duration. Current dat
 - coarse FightMetric whole-minute position/TIP buckets.
 
 Neither is equivalent to exact top/bottom/back/clinch/ground duration. That distinction is enforced by terminology/governance tests.
+
+`DR_EXACT_POSITIONAL_DURATION_V1` remains unresolved and does **not** block F02 predictor replay.
 
 ## Quarantined pre-F00 prior art
 
@@ -133,4 +155,4 @@ Non-negotiable rules include:
 - ambiguous identities remain quarantined;
 - betting odds/ROI/CLV are outside the core feature contract.
 
-Historical replay, model training, opponent-adjustment implementation, and simulator implementation remain separate milestones.
+F02 historical replay is now a separate governed artifact layer above F01. Model training, opponent-adjustment implementation, and simulator implementation remain later milestones.
