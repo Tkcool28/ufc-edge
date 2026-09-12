@@ -1,5 +1,5 @@
 {
-  "inventory_version": "1.1.0",
+  "inventory_version": "1.1.1",
   "baseline_main": "d57038afcd356db0b76d2ce88c54ab5d626a6095",
   "pr30_merge_commit": "d57038afcd356db0b76d2ce88c54ab5d626a6095",
   "f02_base_main": "a672ac2022c49aa70aecdda9727862cf0554b0d2",
@@ -92,6 +92,11 @@
       "location": "features/README.md and repository inventory",
       "baseline_issue": "Governance V1 inventory predated F02 and still described historical replay as a future milestone.",
       "resolution": "Added the F02 replay contracts, implementation, tool, tests, workflow, freeze identity, and runtime-artifact policy without changing feature semantics."
+    },
+    {
+      "location": "F02 pre-review replay row schema",
+      "baseline_issue": "The initial F02 row duplicated scheduled_rounds, title_bout, and weight_class under both oriented fighter namespaces, producing 203 predictors.",
+      "resolution": "F02 now retains 96 fighter-specific values per side, represents scheduled_rounds/title_bout/weight_class once as shared fight context, and keeps five matchup interactions, producing 200 predictors without changing F01 semantics."
     }
   ]
 }
