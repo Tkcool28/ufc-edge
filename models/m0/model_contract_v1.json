@@ -1,0 +1,69 @@
+{
+  "contract_version": "1.0.0",
+  "task": "UFC binary fight-winner probability validation",
+  "status": "PREDECLARED_BEFORE_M0_PERFORMANCE_EVALUATION",
+  "source": {
+    "f02_freeze": "features/f02/F02_PREDICTOR_REPLAY_V1_COMPLETE.json",
+    "freeze_version": "1.0.1",
+    "replay_schema_version": "1.0.1",
+    "predictor_logical_sha256": "ac55fd6fc1f19be7afac2007fccceb43b5c3f98327554d0c58fbe6cb0b164383",
+    "predictor_manifest_sha256": "27b26736079bba7f5bc811bc96798f35ece36d54f1b0632cbd5e37f57ebd3c07",
+    "schema_sha256": "488c96eed4d86a75da8b763c879a65d6b85959393ec7b6c59f7051b0c03836a8",
+    "target_contract_sha256": "fe34f7fd2b70611ec0602d9c9208debf8ec11d7eb8ea1adc0a4104ddb46ffd52",
+    "target_logical_sha256": "02b735aabcb354fa16cd3800f72e5ccd504f5fb6dc9963510987c57438a44956"
+  },
+  "target_population": {
+    "promotion": "UFC",
+    "binary_winner_eligible": true,
+    "modeling_era_start": "2010-01-01"
+  },
+  "target_field": "fighter_1_win",
+  "feature_ids": [
+    "FS_PRIOR_FIGHT_COUNT_V1",
+    "CTX_AGE_AT_FIGHT_V1",
+    "CTX_LAYOFF_DAYS_V1",
+    "FS_SIG_STRIKE_EFFICIENCY_V1",
+    "FS_TAKEDOWN_CONVERSION_V1"
+  ],
+  "materialized_columns": [
+    "f1__fs__prior_fight_count__career__raw",
+    "f2__fs__prior_fight_count__career__raw",
+    "f1__ctx__age_at_fight",
+    "f2__ctx__age_at_fight",
+    "f1__ctx__layoff_days",
+    "f2__ctx__layoff_days",
+    "f1__fs__sig_strike_efficiency__accuracy__career__shrunk",
+    "f2__fs__sig_strike_efficiency__accuracy__career__shrunk",
+    "f1__fs__sig_strike_efficiency__defense__career__shrunk",
+    "f2__fs__sig_strike_efficiency__defense__career__shrunk",
+    "f1__fs__takedown_conversion__success__career__shrunk",
+    "f2__fs__takedown_conversion__success__career__shrunk",
+    "f1__fs__takedown_conversion__defense__career__shrunk",
+    "f2__fs__takedown_conversion__defense__career__shrunk"
+  ],
+  "feature_policy": "Predeclared compact model0-consumer subset; career-only fighter state plus age/layoff. No outcome-driven selection.",
+  "preprocessing": {
+    "paired_projection": "For each fighter-side pair, fit one pooled training-fold median across both sides, impute each side with that shared median, emit f1-minus-f2 and missing(f1)-missing(f2).",
+    "scaling": "StandardScaler(with_mean=false) fit on training fold only; scale-only preserves antisymmetric fighter-swap geometry",
+    "categorical_features": "none in M0-C",
+    "orientation": "All model inputs are antisymmetric under fighter swap; logistic fit_intercept=false."
+  },
+  "baselines": {
+    "naive": "p(fighter_1_win)=0.5",
+    "empirical": "Laplace-smoothed probability that the more-experienced fighter wins, estimated from unequal prior-fight-count training rows only; ties=0.5.",
+    "logistic": "L2 logistic regression, C=1.0, lbfgs, max_iter=2000, random_state=17, fit_intercept=false"
+  },
+  "forbidden": [
+    "sportsbook odds",
+    "ROI",
+    "random split",
+    "tree/boosting",
+    "outcome-driven feature selection",
+    "fighter IDs in model matrix"
+  ],
+  "verdict_rule": {
+    "confirmed": "OOF logistic improves log loss by >=0.01 and Brier by >=0.005 vs 50/50, beats empirical on both aggregate primary metrics, and improves both primary metrics vs 50/50 in at least two-thirds of outer folds.",
+    "weak_but_present": "OOF logistic improves both primary metrics vs 50/50 and improves both in at least half of outer folds.",
+    "not_confirmed": "Otherwise."
+  }
+}
