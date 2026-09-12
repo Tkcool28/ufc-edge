@@ -28,14 +28,119 @@ class F02ReplayContractTests(unittest.TestCase):
         self.assertEqual(inventory["catalog_declared_active_variant_count"], 164)
         self.assertEqual(inventory["governance_version"], "1.0.0")
         self.assertEqual(schema.f01_materialized_value_count, 104)
-        self.assertEqual(schema.fighter_state_context_value_count, 99)
+        self.assertEqual(schema.fighter_specific_value_count, 96)
+        self.assertEqual(schema.shared_fight_context_value_count, 3)
         self.assertEqual(schema.matchup_interaction_value_count, 5)
-        self.assertEqual(schema.row_predictor_count, 203)
-        predictors = [item["name"] for item in schema.columns if item["role"] != "identity"]
-        self.assertEqual(len(predictors), len(set(predictors)))
-        self.assertEqual(sum(name.startswith("f1__") for name in predictors), 99)
-        self.assertEqual(sum(name.startswith("f2__") for name in predictors), 99)
-        self.assertEqual(sum(name.startswith("mx__") for name in predictors), 5)
+        self.assertEqual(schema.row_predictor_count, 200)
+        predictors = [item for item in schema.columns if item["predictor"]]
+        self.assertEqual(len(predictors), 200)
+        self.assertEqual(len(schema.columns), 207)
+        self.assertEqual(len({item["name"] for item in predictors}), 200)
+        self.assertEqual(sum(item["role"] == "f1" for item in predictors), 96)
+        self.assertEqual(sum(item["role"] == "f2" for item in predictors), 96)
+        self.assertEqual(sum(item["role"] == "fight_context" for item in predictors), 3)
+        self.assertEqual(sum(item["role"] == "mx" for item in predictors), 5)
+
+    def test_shared_context_classification_and_nonduplication(self) -> None:
+        schema = self.engine.schema
+        shared = [item for item in schema.columns if item["role"] == "fight_context"]
+        self.assertEqual(
+            {item["source_concept"] for item in shared},
+            {"scheduled_rounds", "title_bout", "weight_class"},
+        )
+        by_concept = {item["source_concept"]: item for item in shared}
+        self.assertEqual(by_concept["scheduled_rounds"]["name"], "scheduled_rounds")
+        self.assertEqual(by_concept["title_bout"]["name"], "ctx__title_bout")
+        self.assertEqual(by_concept["weight_class"]["name"], "ctx__weight_class")
+        names = {item["name"] for item in schema.columns}
+        for concept in ("scheduled_rounds", "title_bout", "weight_class"):
+            source = by_concept[concept]["source_materialized_name"]
+            self.assertNotIn(f"f1__{source}", names)
+            self.assertNotIn(f"f2__{source}", names)
+
+    def test_fighter_specific_context_remains_oriented(self) -> None:
+        columns = self.engine.schema.columns
+        by_source_role = {
+            (item.get("source_materialized_name"), item["role"])
+            for item in columns
+            if item.get("source_materialized_name")
+        }
+        expected_concepts = {
+            "age_at_fight",
+            "layoff_days",
+            "physical_size_profile",
+            "prior_scale_weight_lbs",
+        }
+        sources_by_concept: dict[str, list[str]] = {}
+        for source in self.engine.materializer.names():
+            parts = source.split("__")
+            if len(parts) >= 2 and parts[1] in expected_concepts:
+                sources_by_concept.setdefault(parts[1], []).append(source)
+        self.assertEqual(set(sources_by_concept), expected_concepts)
+        for sources in sources_by_concept.values():
+            for source in sources:
+                self.assertIn((source, "f1"), by_source_role)
+                self.assertIn((source, "f2"), by_source_role)
+
+    def test_scheduled_rounds_is_exactly_one_model_predictor(self) -> None:
+        scheduled = [
+            item for item in self.engine.schema.columns
+            if item.get("source_concept") == "scheduled_rounds" and item["predictor"]
+        ]
+        self.assertEqual(len(scheduled), 1)
+        self.assertEqual(scheduled[0]["name"], "scheduled_rounds")
+        self.assertEqual(scheduled[0]["role"], "fight_context")
+        promotion = next(item for item in self.engine.schema.columns if item["name"] == "promotion")
+        self.assertFalse(promotion["predictor"])
+        self.assertEqual(promotion["role"], "identity")
+
+    def test_shared_context_equality_guard(self) -> None:
+        target = self.fixture[-1]
+        original = self.engine.materializer.materialize_matchup(
+            target.fighter_a_id,
+            target.fighter_b_id,
+            prediction_as_of(target),
+            target_fight_id=target.fight_id,
+        )
+        source = next(
+            name for name in original.fighter_2.values
+            if original.fighter_2.values[name].source_concept == "title_bout"
+        )
+        values = dict(original.fighter_2.values)
+        values[source] = replace(values[source], value=not bool(values[source].value))
+        broken = replace(original, fighter_2=replace(original.fighter_2, values=values))
+        materialize = self.engine.materializer.materialize_matchup
+        self.engine.materializer.materialize_matchup = lambda *args, **kwargs: broken
+        try:
+            with self.assertRaisesRegex(ReplayError, "shared fight-context disagreement"):
+                self.engine.build_row(target)
+        finally:
+            self.engine.materializer.materialize_matchup = materialize
+
+    def test_shared_context_missingness_guard(self) -> None:
+        target = self.fixture[-1]
+        original = self.engine.materializer.materialize_matchup(
+            target.fighter_a_id,
+            target.fighter_b_id,
+            prediction_as_of(target),
+            target_fight_id=target.fight_id,
+        )
+        source = next(
+            name for name in original.fighter_2.values
+            if original.fighter_2.values[name].source_concept == "weight_class"
+        )
+        values = dict(original.fighter_2.values)
+        current = values[source].missingness_state
+        alternate = "missing_observation" if current != "missing_observation" else "observed_positive"
+        values[source] = replace(values[source], missingness_state=alternate)
+        broken = replace(original, fighter_2=replace(original.fighter_2, values=values))
+        materialize = self.engine.materializer.materialize_matchup
+        self.engine.materializer.materialize_matchup = lambda *args, **kwargs: broken
+        try:
+            with self.assertRaisesRegex(ReplayError, "shared fight-context disagreement"):
+                self.engine.build_row(target)
+        finally:
+            self.engine.materializer.materialize_matchup = materialize
 
     def test_universe_is_unique_and_deterministically_ordered(self) -> None:
         ids = [item.fight_id for item in self.targets]
