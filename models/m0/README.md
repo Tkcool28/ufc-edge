@@ -41,3 +41,12 @@ Full validation consumes the frozen F02 Actions artifact and writes runtime outp
 Routine CI validates contracts and focused deterministic fixtures rather than rerunning the entire historical validation.
 
 The authoritative full validation is deliberately run once from the frozen contract and frozen F02 Actions artifact; performance is not used to revise the M0 subset.
+
+## Frozen result
+
+The authoritative validation result is frozen in:
+
+- `M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE.json`
+- `VALIDATION_REPORT_V1.md`
+
+Verdict: **M0_SIGNAL_CONFIRMED**. Runtime OOF predictions and fitted fold models remain outside git.
