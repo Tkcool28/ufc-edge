@@ -26,7 +26,7 @@ This is the human-readable repository-surface inventory paired with `repository_
 
 ## Historical replay authority
 
-F02 is a separate artifact/orchestration layer above F01; it does not redefine feature semantics.
+F02 is a separate artifact/orchestration layer above F01; it does not redefine feature semantics. Its reviewed row schema distinguishes 96 fighter-specific F01 values per side, three shared fight-context values represented once, and five matchup interactions, for 200 model-eligible predictors.
 
 - handoff/reproduction: `f02/README.md`
 - replay contract: `f02/replay_contract_v1.json`
