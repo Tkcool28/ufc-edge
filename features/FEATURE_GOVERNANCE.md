@@ -31,11 +31,29 @@ Every catalog concept has one durable `feature_id` in `feature_governance.json`.
 Rules:
 
 - IDs are human-readable and never recycled.
+- Durable shape is `<LAYER>_<CONCEPT>_V<SEMANTIC_MAJOR>`.
+- The layer namespace appears exactly once. If a canonical name begins with the same layer prefix plus `_`, remove exactly that one redundant prefix from the concept token before constructing the ID.
 - A pure rename keeps the same ID.
 - A semantic change requires a new semantic identity/version; do not overwrite the old meaning.
 - A methodology-only change bumps `methodology_version`.
 - Old IDs remain in migration history when deprecated or superseded.
 - Model consumers select shared IDs/tags; they do not redefine features privately.
+
+Current durable layer prefixes are `FS`, `CTX`, `MX`, `OA`, `SIM`, `RES`, and `UNSUP`. Existing clean IDs are not renamed merely for stylistic consistency.
+
+Example:
+
+```text
+SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1
+│   │                            │
+│   │                            └─ semantic major generation 1
+│   └─ semantic concept: takedown_success_probability
+└─ simulator-layer concept
+```
+
+The terminal `_V1` means **semantic identity major 1**. It does **not** mean feature-contract version 1, methodology version 1, model version 1, consumer version, or implementation version. Those remain separate explicit metadata.
+
+Because Governance V1 is still inside unmerged PR #31, malformed IDs discovered during review may be corrected directly and are not historical renames. Once PR #31 merges, durable feature IDs become immutable historical identities and any later replacement must follow the documented lifecycle/migration rules.
 
 ## 3. Concept vs materialized value
 
