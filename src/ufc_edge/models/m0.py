@@ -130,7 +130,7 @@ class M0Logistic:
     def fit(cls, frame: pd.DataFrame, target: pd.Series) -> "M0Logistic":
         projector = SymmetricPairProjector().fit(frame)
         matrix = projector.transform(frame)
-        scaler = StandardScaler()
+        scaler = StandardScaler(with_mean=False)
         scaled = scaler.fit_transform(matrix)
         model = LogisticRegression(
             penalty="l2",
