@@ -70,3 +70,13 @@ Across 5,626 OOF fights:
 The predeclared regularization procedure chose `C=0.01` in 11 of 12 folds and `C=0.1` once. No post-result feature pruning or grid revision was performed.
 
 This result establishes a stronger non-market winner benchmark. It does **not** establish sportsbook edge or profitability.
+
+## Frozen caveats
+
+- The result is not uniformly better: 2020 and 2023 are worse than M0 on both primary metrics; 2025 is mixed.
+- M1 ECE is 0.01809 versus M0 0.01465, so calibration-bin ECE is slightly worse despite better log loss and Brier.
+- Light Heavyweight remains weak (N=412, log loss 0.69489, Brier 0.25032, AUC 0.5788).
+- The largest mean absolute coefficient is a reach-data missingness difference, so data-availability dependence needs a later robustness audit.
+- Two successful hosted runs agreed in substantive metrics/verdict but not in exact raw-float OOF hash. The accepted Actions artifact is the authoritative identity; bitwise rerun determinism is not claimed.
+
+The M1 feature/model/C-grid methodology was not changed after performance was observed.

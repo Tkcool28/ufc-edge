@@ -12,9 +12,11 @@ This remains a model-quality result only. No odds, sportsbook, ROI, Kelly, price
 
 ## Authoritative evaluation
 
-The accepted evaluation is GitHub Actions run **34718520686**, full-validation job **103620043254**, from pre-performance head:
+The accepted evaluation is GitHub Actions run **34718520686**, full-validation job **103620043254**, from accepted evaluation head:
 
 `77ad61a954f3c845ba584cc55260c5e858436294`
+
+The M1 feature/model/regularization methodology was already frozen at `c109fd01dbb9da05ce120aecc7907da46df87296` before any accepted performance result. A successful precursor performance-bearing run later occurred at `45f080dec8438d619d28a559d16f57fb6011ceca`; after that, only frozen-M0 row-key normalization and comparator/provenance documentation changed. M1 features, model family, C grid, nested selection rule, and validation population did not change.
 
 Runtime artifact:
 
@@ -36,7 +38,7 @@ The M1 OOF logical SHA-256 is:
 | Accuracy | 49.52% | 59.44% | **61.89%** | **+2.45 pp** |
 | ROC AUC | 0.500000 | 0.634833 | **0.672769** | **+0.037936** |
 
-M1 expected calibration error was **0.01809**.
+M1 expected calibration error was **0.01809**, versus **0.01465** for frozen M0. So calibration-bin ECE became slightly worse even while the proper probability scores (log loss and Brier) improved materially.
 
 The hard fighter-swap geometry check remained exact to numerical tolerance: maximum fold error was **2.22e-16**.
 
@@ -76,6 +78,51 @@ Selected values:
 
 That is useful evidence in its own right: the broader F02 surface adds signal, but it also needs strong shrinkage. The improvement is not evidence that every raw feature deserves a large coefficient; it is evidence that the shared governed surface, when strongly regularized, beats the compact baseline.
 
+
+## Outer-fold stability
+
+| Fold | M0 log loss | M1 log loss | M0 Brier | M1 Brier | Primary-metric result |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 2015 | 0.67048 | **0.59364** | 0.23903 | **0.20594** | both better |
+| 2016 | 0.66500 | **0.62152** | 0.23641 | **0.21859** | both better |
+| 2017 | 0.66914 | **0.63946** | 0.23825 | **0.22520** | both better |
+| 2018 | 0.66717 | **0.64889** | 0.23734 | **0.22876** | both better |
+| 2019 | 0.68013 | **0.66644** | 0.24321 | **0.23708** | both better |
+| 2020 | **0.66640** | 0.66823 | **0.23692** | 0.23713 | both worse |
+| 2021 | 0.66190 | **0.65785** | 0.23480 | **0.23268** | both better |
+| 2022 | 0.65913 | **0.65651** | 0.23336 | **0.23252** | both better |
+| 2023 | **0.65793** | 0.66165 | **0.23313** | 0.23450 | both worse |
+| 2024 | 0.66433 | **0.63490** | 0.23636 | **0.22208** | both better |
+| 2025 | **0.65970** | 0.66058 | 0.23331 | **0.22318** | mixed |
+| 2026* | 0.64283 | **0.64223** | 0.22586 | **0.22477** | both better |
+
+\* 2026 is partial in frozen F02.
+
+The aggregate gain is therefore not universal. **2020 and 2023 are regressions on both primary metrics**, and **2025 is mixed**. The predeclared stability gate still passes because 9/12 folds improve both primary metrics.
+
+## Predefined diagnostic weaknesses
+
+### Light Heavyweight remains weak
+
+Light Heavyweight improves versus M0 but remains close to an uninformative probability benchmark:
+
+| Model | N | Log loss | Brier | Accuracy | AUC |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Frozen M0 | 412 | 0.70117 | 0.25353 | 52.43% | 0.5459 |
+| M1 | 412 | **0.69489** | **0.25032** | **54.61%** | **0.5788** |
+
+That is not a reason to retune M1 after the fact. It is a real slice-level failure point to carry forward.
+
+### Missingness dependence needs later robustness work
+
+The largest mean absolute coefficient across the 12 outer models is:
+
+`pair::ctx__physical_size_profile__reach_cm::missing_diff`
+
+Mean coefficient: **-0.6552**, negative in **12/12** folds.
+
+This is not target leakage under the chronological, training-fold-local construction. But it does mean the model is using **data availability itself** as a strong predictor. That could encode real historical/roster structure, source coverage patterns, or both. Before any production promotion, this deserves a dedicated missingness/data-quality robustness audit rather than being silently treated as ordinary fight signal.
+
 ## Frozen M0 comparator incident
 
 The first full M1 workflow, run **34718232000**, is not an accepted performance run.
@@ -95,6 +142,20 @@ Before accepting any M1 result, the M1 comparator contract was changed to consum
 - M0 OOF logical SHA-256: `708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c`
 
 The successful M1 evaluation then loaded that artifact, verified its hash, aligned exact fight rows, and compared M1 against those frozen probabilities.
+
+
+## Floating-point reproducibility note
+
+A successful precursor full-validation run, **34718491353** at head `45f080dec8438d619d28a559d16f57fb6011ceca`, produced the same substantive result:
+
+- log loss: 0.646334387319501
+- Brier: 0.2269899882350201
+- verdict: **M1_OUTPERFORMS_M0**
+- OOF logical SHA-256: `9c367452cd494d9f46e9ff2215448a8b8510fdcec57dec2bdd60bf308c587e89`
+
+The accepted run produced log loss 0.646334387315568 and Brier 0.226989988232787, but a different OOF logical SHA-256.
+
+The differences are at floating-point noise scale (roughly 1e-11 or smaller in aggregate metrics), and M1 methodology did not change between these runs. Still, this means **bitwise raw-probability rerun determinism has not been demonstrated** for the hosted logistic solve. The authoritative identity is therefore the accepted Actions artifact and its frozen OOF hash, not an assertion that a future rerun must reproduce every floating-point bit.
 
 ## Interpretation
 
@@ -121,6 +182,7 @@ The result also remains weaker than a claim of betting edge. M1 has not been opt
 - No sportsbook or market fields were used.
 - No nonlinear challenger was introduced.
 - No post-result feature pruning or C-grid expansion was performed.
+- After the first successful performance-bearing run, only M0 comparator row-key/provenance handling changed; M1 feature/model/regularization methodology did not.
 - Runtime parquet/model artifacts remain outside git.
 
 ## Conclusion

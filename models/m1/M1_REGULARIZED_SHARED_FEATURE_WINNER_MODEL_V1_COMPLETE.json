@@ -9,7 +9,11 @@
     "full_validation_job_id": 103620043254,
     "runtime_artifact_id": 10305672641,
     "runtime_artifact_name": "m1-regularized-shared-feature-winner-v1",
-    "runtime_artifact_zip_sha256": "00fde41cff76fbc05aad8f6715babcea358636c4fe0e3267e34ff065748e33f8"
+    "runtime_artifact_zip_sha256": "00fde41cff76fbc05aad8f6715babcea358636c4fe0e3267e34ff065748e33f8",
+    "methodology_freeze_head": "c109fd01dbb9da05ce120aecc7907da46df87296",
+    "first_successful_performance_run_id": 34718491353,
+    "first_successful_performance_head": "45f080dec8438d619d28a559d16f57fb6011ceca",
+    "accepted_evaluation_head": "77ad61a954f3c845ba584cc55260c5e858436294"
   },
   "f02": {
     "freeze_version": "1.0.1",
@@ -75,8 +79,8 @@
     "C_grid": [
       0.01,
       0.1,
-      1.0,
-      10.0
+      1,
+      10
     ],
     "selection": "Nested expanding chronological inner OOF pooled log loss; exact ties choose smaller C.",
     "inner_validation_start_year": 2013,
@@ -134,12 +138,22 @@
     "outer_fold_count": 12
   },
   "calibration": {
-    "expected_calibration_error": 0.01808862747658932
+    "expected_calibration_error": 0.01808862747658932,
+    "m0_expected_calibration_error": 0.014648158181517457,
+    "m1_expected_calibration_error": 0.01808862747658932,
+    "m1_minus_m0": 0.003440469295071863
   },
   "stability": {
     "orientation_max_abs_error": 2.220446049250313e-16,
     "folds_improving_both_primary_metrics_vs_m0": 9,
-    "outer_fold_count": 12
+    "outer_fold_count": 12,
+    "folds_worse_on_both_primary_metrics_vs_m0": [
+      "2020",
+      "2023"
+    ],
+    "mixed_primary_metric_fold_vs_m0": [
+      "2025"
+    ]
   },
   "oof": {
     "rows": 5626,
@@ -149,17 +163,72 @@
     "initial_run_id": 34718232000,
     "initial_run_status": "INVALID_FOR_M1_PERFORMANCE_FREEZE",
     "reason": "The first harness numerically regenerated M0 raw probabilities and correctly failed the frozen M0 OOF hash guard under a later dependency solve.",
-    "resolution": "Before accepting any M1 performance result, the comparator contract was changed to load and verify the authoritative frozen M0 Actions artifact directly. The successful authoritative run is 34718520686."
+    "resolution": "The comparator was changed to load and verify the authoritative frozen M0 Actions artifact directly. A successful precursor run at 45f080d produced the same substantive M1 result; after that only M0 row-key normalization/provenance changed. The authoritative accepted run is 34718520686."
   },
   "limitations": [
     "M1 is a validation benchmark, not a production betting model.",
     "No sportsbook odds, market probabilities, ROI, Kelly, price thresholds, or market-specific tuning are used.",
     "No tree, boosting, neural, ensemble, AutoML, opponent-adjustment, or simulator methodology is introduced.",
-    "The broad F02 surface materially improves M0, but the strong preference for C=0.01 in 11 of 12 outer folds shows that substantial regularization is necessary.",
+    "The broad F02 surface materially improves M0, but the strong preference for C=0.01 in 11 of 12 outer folds shows that substantial regularization is necessary and the lower edge of the predeclared grid is frequently preferred.",
+    "M1 expected calibration error is 0.01809 versus 0.01465 for M0, so calibration-bin error did not improve even though log loss and Brier did.",
+    "Light Heavyweight remains a materially weak slice: N=412, log loss 0.69489, Brier 0.25032, accuracy 54.61%, AUC 0.5788.",
+    "The largest mean absolute coefficient is the reach_cm missingness difference, indicating meaningful dependence on data-availability patterns that warrants later robustness review.",
+    "Exact raw-float M1 OOF hashes differed across two successful hosted runs despite essentially identical metrics and unchanged M1 methodology; the accepted runtime artifact is the authoritative identity and bitwise rerun determinism is not claimed.",
     "2026 is the partial latest-year fold represented by frozen F02."
   ],
   "self_review": {
     "question": "Did M1 improve the frozen M0 winner benchmark using only the governed F02 surface under chronological validation and predeclared regularization selection?",
     "answer": "YES"
+  },
+  "diagnostic_slices": {
+    "light_heavyweight": {
+      "rows": 412,
+      "m1": {
+        "log_loss": 0.6948936674880285,
+        "brier": 0.25031882902824887,
+        "accuracy": 0.5461165048543689,
+        "auc": 0.5787735849056603
+      },
+      "m0": {
+        "log_loss": 0.7011651860989155,
+        "brier": 0.25353343238672016,
+        "accuracy": 0.5242718446601942,
+        "auc": 0.5458726415094339
+      },
+      "interpretation": "M1 improves the frozen M0 Light Heavyweight slice but the slice remains materially weak and close to an uninformative probability benchmark."
+    }
+  },
+  "coefficient_diagnostics": {
+    "largest_mean_absolute_coefficient": {
+      "feature": "pair::ctx__physical_size_profile__reach_cm::missing_diff",
+      "mean_coefficient": -0.6552049825349269,
+      "negative_folds": 12,
+      "positive_folds": 0
+    },
+    "interpretation": "The strongest average coefficient is a reach-data missingness difference. This is not target leakage under the chronological fold-local design, but it shows M1 relies materially on data-availability patterns and should receive a dedicated robustness/data-quality audit before production use."
+  },
+  "performance_governance": {
+    "methodology_freeze_head": "c109fd01dbb9da05ce120aecc7907da46df87296",
+    "initial_full_run": {
+      "run_id": 34718232000,
+      "status": "FAILED_BEFORE_RESULT_ACCEPTANCE",
+      "reason": "Frozen M0 comparator OOF hash mismatch when the harness regenerated M0 probabilities under a later numerical dependency solve.",
+      "emitted_accepted_m1_result": false
+    },
+    "first_successful_performance_bearing_run": {
+      "run_id": 34718491353,
+      "head": "45f080dec8438d619d28a559d16f57fb6011ceca",
+      "m1_log_loss": 0.646334387319501,
+      "m1_brier": 0.2269899882350201,
+      "verdict": "M1_OUTPERFORMS_M0",
+      "oof_logical_sha256": "9c367452cd494d9f46e9ff2215448a8b8510fdcec57dec2bdd60bf308c587e89"
+    },
+    "changes_after_first_successful_performance_run": "Only frozen-M0 row-key normalization and comparator/provenance documentation changed. M1 feature construction, model family, C grid, nested selection rule, and validation population did not change.",
+    "accepted_authoritative_run": {
+      "run_id": 34718520686,
+      "head": "77ad61a954f3c845ba584cc55260c5e858436294",
+      "oof_logical_sha256": "d91ebe07db9569c8f47081ea78d1ed58d028bd2ba0df6ead51ba6ab73182447d"
+    },
+    "floating_point_reproducibility_note": "The two successful hosted runs agree in verdict and aggregate metrics to roughly 1e-11 but have different exact OOF logical hashes. The accepted Actions artifact is therefore the authoritative raw-float identity; bitwise OOF rerun determinism is not claimed."
   }
 }
