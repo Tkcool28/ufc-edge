@@ -38,4 +38,4 @@ Full validation consumes the frozen F02 Actions artifact and writes runtime outp
 
 `python tools/models/run_m0.py validate --f02-dir <f02-artifact-dir> --output-dir <runtime-dir>`
 
-Routine CI uses a bounded deterministic fixture and contract/unit tests rather than rerunning the entire historical validation.
+Routine CI validates contracts and focused deterministic fixtures rather than rerunning the entire historical validation.
