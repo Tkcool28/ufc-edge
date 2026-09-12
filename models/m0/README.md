@@ -39,3 +39,5 @@ Full validation consumes the frozen F02 Actions artifact and writes runtime outp
 `python tools/models/run_m0.py validate --f02-dir <f02-artifact-dir> --output-dir <runtime-dir>`
 
 Routine CI validates contracts and focused deterministic fixtures rather than rerunning the entire historical validation.
+
+The authoritative full validation is deliberately run once from the frozen contract and frozen F02 Actions artifact; performance is not used to revise the M0 subset.
