@@ -72,21 +72,25 @@ def _semantic_major(version: str) -> int:
 
 
 def expected_feature_id(
-    canonical_name: str,
+    identity_name: str,
     layer: str,
     semantic_version: str,
     layer_prefixes: dict[str, str],
 ) -> str:
-    """Construct the durable semantic ID without duplicating its layer namespace."""
+    """Construct an ID candidate from an identity-bearing canonical name.
+
+    This is a minting/history helper, not a rule that the durable ID must track
+    the current canonical name forever.
+    """
     prefix = layer_prefixes.get(layer)
     if not prefix:
         raise GovernanceError(f"missing durable layer prefix for {layer!r}")
-    concept = canonical_name.upper()
+    concept = identity_name.upper()
     duplicate = prefix + "_"
     if concept.startswith(duplicate):
         concept = concept[len(duplicate):]
     if not concept:
-        raise GovernanceError(f"empty durable concept token for {canonical_name!r}")
+        raise GovernanceError(f"empty durable concept token for {identity_name!r}")
     return f"{prefix}_{concept}_V{_semantic_major(semantic_version)}"
 
 
@@ -101,10 +105,26 @@ def feature_by_id(root: Path | None = None) -> dict[str, dict[str, Any]]:
 
 
 def feature_id_for_name(name: str, root: Path | None = None) -> str:
+    """Resolve a current canonical name only."""
     governance = load_governance(root)
     matches = [item["feature_id"] for item in governance["features"] if item["canonical_name"] == name]
     if len(matches) != 1:
         raise GovernanceError(f"expected exactly one durable feature ID for {name!r}, got {len(matches)}")
+    return matches[0]
+
+
+def feature_id_for_name_or_alias(name: str, root: Path | None = None) -> str:
+    """Resolve current or historical terminology to one durable identity."""
+    governance = load_governance(root)
+    matches = [
+        item["feature_id"]
+        for item in governance["features"]
+        if item.get("canonical_name") == name or name in item.get("renamed_from", [])
+    ]
+    if len(matches) != 1:
+        raise GovernanceError(
+            f"expected exactly one durable feature ID for current name/alias {name!r}, got {len(matches)}"
+        )
     return matches[0]
 
 
@@ -186,9 +206,32 @@ def validate_repository_governance(root: Path | None = None) -> dict[str, Any]:
             f"extra={sorted(set(names)-catalog_names)}"
         )
     catalog_by_name = {feature["feature_name"]: feature for feature in catalog["features"]}
+
+    claimed_names: dict[str, str] = {}
+    for item in items:
+        feature_id = item["feature_id"]
+        canonical_name = item["canonical_name"]
+        renamed_from = item.get("renamed_from")
+        if not isinstance(renamed_from, list):
+            raise GovernanceError(f"renamed_from must be a list for {feature_id}")
+        if any(not isinstance(alias, str) or not alias.strip() for alias in renamed_from):
+            raise GovernanceError(f"renamed_from must contain only non-empty strings for {feature_id}")
+        if len(renamed_from) != len(set(renamed_from)):
+            raise GovernanceError(f"renamed_from contains duplicate historical names for {feature_id}")
+        if canonical_name in renamed_from:
+            raise GovernanceError(f"current canonical_name cannot appear in renamed_from for {feature_id}")
+        for claimed_name in [canonical_name, *renamed_from]:
+            owner = claimed_names.get(claimed_name)
+            if owner is not None and owner != feature_id:
+                raise GovernanceError(
+                    f"feature name/alias {claimed_name!r} is ambiguous between {owner} and {feature_id}"
+                )
+            claimed_names[claimed_name] = feature_id
+
     for item in items:
         feature = catalog_by_name[item["canonical_name"]]
         feature_id = item["feature_id"]
+        renamed_from = item["renamed_from"]
         match = FEATURE_ID_RE.fullmatch(feature_id)
         if match is None:
             raise GovernanceError(f"malformed durable feature ID: {feature_id}")
@@ -212,16 +255,29 @@ def validate_repository_governance(root: Path | None = None) -> dict[str, Any]:
                 f"{feature_id} semantic-major suffix V{match.group('major')} "
                 f"does not match semantic_version {item['semantic_version']}"
             )
-        expected_id = expected_feature_id(
-            item["canonical_name"],
-            feature["layer"],
-            item["semantic_version"],
-            layer_prefixes,
-        )
-        if feature_id != expected_id:
-            raise GovernanceError(
-                f"{feature_id} does not match durable identity convention; expected {expected_id}"
+
+        if not renamed_from:
+            expected_id = expected_feature_id(
+                item["canonical_name"],
+                feature["layer"],
+                item["semantic_version"],
+                layer_prefixes,
             )
+            if feature_id != expected_id:
+                raise GovernanceError(
+                    f"{feature_id} does not match initial durable identity convention; expected {expected_id}"
+                )
+        else:
+            historical_candidates = {
+                expected_feature_id(alias, feature["layer"], item["semantic_version"], layer_prefixes)
+                for alias in renamed_from
+            }
+            if feature_id not in historical_candidates:
+                raise GovernanceError(
+                    f"{feature_id} is not reproducible from documented renamed_from history "
+                    f"for current canonical name {item['canonical_name']!r}"
+                )
+
         if item["lifecycle_state"] not in LIFECYCLE_STATES:
             raise GovernanceError(f"invalid lifecycle state for {item['feature_id']}")
         if not item["semantic_version"] or not item["methodology_version"]:
