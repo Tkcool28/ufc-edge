@@ -504,8 +504,9 @@ def run_validation(f02_dir: Path, m0_dir: Path, output_dir: Path) -> dict[str, A
             raise M1Error(f"orientation invariance failed for {year}: {swap_error}")
 
         m0_fold = frozen_m0[frozen_m0["fold_id"].eq(str(year))].set_index("fight_id")
+        m0_fold.index = m0_fold.index.astype(str)
         valid_ids = valid["fight_id"].astype(str).tolist()
-        if set(m0_fold.index.astype(str)) != set(valid_ids):
+        if set(m0_fold.index) != set(valid_ids):
             raise M1Error(f"frozen M0 row identity mismatch for outer fold {year}")
         m0_fold = m0_fold.loc[valid_ids]
         frozen_target = pd.to_numeric(m0_fold["target"], errors="raise").astype(int).to_numpy()
