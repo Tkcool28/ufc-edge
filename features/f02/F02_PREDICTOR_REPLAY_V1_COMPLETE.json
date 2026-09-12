@@ -9,7 +9,7 @@
   "remediation": "F02 shared fight-context schema cleanup: scheduled_rounds, title_bout, and weight_class are represented once per fight instead of duplicated across f1/f2.",
   "implementation_head": "077954fb937cb4b9493a4941874446f5b303c363",
   "validated_ci_checkout": "077954fb937cb4b9493a4941874446f5b303c363",
-  "validated_source_tree": "unknown",
+  "validated_source_tree": "893754f4f55b974f6079d02c525ebecf9a6392c9",
   "ci_checkout_note": "Authoritative remediation full replay ran from the exact branch push commit, not a synthetic pull-request merge checkout.",
   "pull_request": 32,
   "github_actions": {
