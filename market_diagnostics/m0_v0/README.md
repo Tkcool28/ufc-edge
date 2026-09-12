@@ -1,6 +1,6 @@
 # M0-MD0 — Bare-Bones Market Comparison V0
 
-Status: diagnostic implementation. Market data are not UFC Edge canonical DATA and are never an M0 training target.
+Status: **M0_MARKET_DIAGNOSTIC_V0_COMPLETE**. Verdict: **MARKET_COMPLEMENTARY**. Market data are not UFC Edge canonical DATA and are never an M0 training target.
 
 ## Question
 
@@ -28,6 +28,7 @@ The V0 diagnostic uses a pinned public fallback instead:
 - upstream market source documented by that repository: `betmma.tips`
 - listed rows: 4,452
 - observed date range: 2014-11-07 through 2023-12-16
+- fetched source SHA-256: `064d0b7bd94dd894d675180e4ebf8860f1925ac0193f7bbd4c30041db92489bf`
 
 The public dataset documents extraction timestamps, not the historical instant represented by each price. Therefore V0 calls these **historical listed odds**. It does not call them opening or closing lines.
 
@@ -43,6 +44,8 @@ Market display names are normalized only to resolve a unique UFC Edge canonical 
 
 Conflicting duplicate market rows for the same date/fighter-ID pair fail closed. Identical duplicates collapse deterministically.
 
+Completed coverage is **3,363 / 5,626 M0 OOF rows (59.78%)**, spanning **2015-01-03 through 2023-12-16**.
+
 ## Incremental-information test
 
 The diagnostic fits only:
@@ -52,9 +55,19 @@ The diagnostic fits only:
 
 Evaluation is expanding-year chronological walk-forward. The first matched year is training-only; every scored year is predicted from earlier matched years only. No random split, additional feature, blend-weight tuning, or outcome-driven parameter search exists.
 
+The market is substantially stronger than M0 alone. However, the chronological market+M0 diagnostic improves both log loss and Brier in **6/8** scored folds and the M0 logit coefficient is positive in **8/8**. The fixed 50/50 blend does **not** beat the market alone.
+
+That yields the predeclared V0 verdict: **MARKET_COMPLEMENTARY**.
+
 ## Runtime artifacts
 
 The matched diagnostic table and full machine result are generated in GitHub Actions and uploaded as runtime artifacts. Large odds/prediction tables are not committed.
+
+- full diagnostic Actions run: `34681219952`
+- runtime artifact ID: `10293394863`
+- diagnostic table logical SHA-256: `a9fe9c4d68876fff2b38b1d3ce99b9f4379797fb86477cf9253de966607b8a0e`
+
+See `validation_report_v0.md` for exact metrics.
 
 ## Explicit exclusions
 
