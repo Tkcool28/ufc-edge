@@ -166,18 +166,11 @@ def artifact_feature_metadata(
     }
 
 
-def validate_repository_governance(root: Path | None = None) -> dict[str, Any]:
-    root = root or repository_root()
-    catalog = load_feature_catalog(root)
-    governance = load_governance(root)
-    terminology = _load_json(root, "features/terminology.json")
-    requirements = _load_json(root, "features/data_requirements.json")
-    dependencies = _load_json(root, "features/dependencies.json")
-    simulator = _load_json(root, "features/simulator_requirements.json")
-    migrations = _load_json(root, "features/migrations/feature_migrations.json")
-
-    if governance.get("feature_contract_version") != catalog["feature_contract_version"]:
-        raise GovernanceError("governance feature_contract_version does not match feature catalog")
+def validate_feature_identities(
+    catalog: dict[str, Any],
+    governance: dict[str, Any],
+) -> None:
+    """Validate durable IDs, rename history, and the global name/alias namespace."""
     items = governance.get("features")
     if not isinstance(items, list) or not items:
         raise GovernanceError("feature_governance.features must be a non-empty list")
@@ -278,6 +271,28 @@ def validate_repository_governance(root: Path | None = None) -> dict[str, Any]:
                     f"for current canonical name {item['canonical_name']!r}"
                 )
 
+
+def validate_repository_governance(root: Path | None = None) -> dict[str, Any]:
+    root = root or repository_root()
+    catalog = load_feature_catalog(root)
+    governance = load_governance(root)
+    terminology = _load_json(root, "features/terminology.json")
+    requirements = _load_json(root, "features/data_requirements.json")
+    dependencies = _load_json(root, "features/dependencies.json")
+    simulator = _load_json(root, "features/simulator_requirements.json")
+    migrations = _load_json(root, "features/migrations/feature_migrations.json")
+
+    if governance.get("feature_contract_version") != catalog["feature_contract_version"]:
+        raise GovernanceError("governance feature_contract_version does not match feature catalog")
+    items = governance.get("features")
+    if not isinstance(items, list) or not items:
+        raise GovernanceError("feature_governance.features must be a non-empty list")
+
+    validate_feature_identities(catalog, governance)
+    items = governance["features"]
+    ids = [item["feature_id"] for item in items]
+
+    for item in items:
         if item["lifecycle_state"] not in LIFECYCLE_STATES:
             raise GovernanceError(f"invalid lifecycle state for {item['feature_id']}")
         if not item["semantic_version"] or not item["methodology_version"]:
