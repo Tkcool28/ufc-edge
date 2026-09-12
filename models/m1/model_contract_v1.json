@@ -14,7 +14,11 @@
     "target_logical_sha256": "02b735aabcb354fa16cd3800f72e5ccd504f5fb6dc9963510987c57438a44956",
     "m0_freeze": "models/m0/M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE.json",
     "m0_freeze_version": "1.0.0",
-    "m0_oof_logical_sha256": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c"
+    "m0_oof_logical_sha256": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c",
+    "m0_actions_run_id": 34676508116,
+    "m0_artifact_id": 10292502486,
+    "m0_artifact_zip_sha256": "69e2a4db932ecbfd747a387b708d5107e3d682223d4f608b850a00a605af3be0",
+    "m0_comparator_policy": "Consume the authoritative frozen M0 OOF artifact; do not numerically recompute its raw probabilities under a later dependency solve."
   },
   "target_population": {
     "promotion": "UFC",
@@ -48,13 +52,18 @@
     "fit_intercept": false,
     "max_iter": 4000,
     "random_state": 17,
-    "C_grid": [0.01, 0.1, 1.0, 10.0],
+    "C_grid": [
+      0.01,
+      0.1,
+      1,
+      10
+    ],
     "regularization_selection": "For each outer fold, choose C using only that outer training set with expanding chronological inner annual OOF folds beginning in 2013. Primary inner selection metric is pooled inner-OOF log loss. Exact ties choose smaller C."
   },
   "comparators": [
-    "50/50",
-    "M0 empirical experience baseline",
-    "frozen M0 logistic reproduced under the exact frozen M0 algorithm and required to match the frozen M0 OOF logical SHA-256"
+    "50/50 from the authoritative frozen M0 OOF artifact",
+    "M0 empirical experience baseline from the authoritative frozen M0 OOF artifact",
+    "frozen M0 logistic loaded from Actions run 34676508116 artifact 10292502486 and required to match the frozen M0 OOF logical SHA-256"
   ],
   "primary_metrics": [
     "log_loss",
