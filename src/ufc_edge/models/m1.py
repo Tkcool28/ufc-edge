@@ -25,7 +25,6 @@ from ufc_edge.models.m0 import (
     VALIDATION_YEARS,
     RANDOM_SEED,
     F02_IDENTITY,
-    M0Logistic,
     calibration_table,
     canonical_json,
     empirical_experience_probability,
@@ -41,6 +40,9 @@ from ufc_edge.models.m0 import (
 
 M0_OOF_LOGICAL_SHA256 = "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c"
 M0_FREEZE_VERSION = "1.0.0"
+M0_ACTIONS_RUN_ID = 34676508116
+M0_ARTIFACT_ID = 10292502486
+M0_ARTIFACT_ZIP_SHA256 = "69e2a4db932ecbfd747a387b708d5107e3d682223d4f608b850a00a605af3be0"
 C_GRID = (0.01, 0.1, 1.0, 10.0)
 INNER_VALIDATION_START_YEAR = 2013
 EXPECTED_F02_PREDICTORS = 200
@@ -338,6 +340,31 @@ def orientation_error(model: M1Logistic, frame: pd.DataFrame, contract: FeatureC
     return float(np.max(np.abs(original + swapped - 1.0)))
 
 
+def load_frozen_m0_oof(m0_dir: Path) -> pd.DataFrame:
+    path = m0_dir / "m0_oof_predictions.parquet"
+    if not path.exists():
+        raise M1Error(f"missing frozen M0 OOF artifact: {path}")
+    oof = pd.read_parquet(path)
+    required = (
+        "fight_id", "event_date", "fold_id", "target",
+        "naive_probability", "empirical_probability", "logistic_probability",
+    )
+    missing = [column for column in required if column not in oof.columns]
+    if missing:
+        raise M1Error(f"frozen M0 OOF artifact missing columns: {missing}")
+    oof = oof.loc[:, required].copy()
+    oof["event_date"] = oof["event_date"].astype(str)
+    oof["fold_id"] = oof["fold_id"].astype(str)
+    if oof["fight_id"].duplicated().any():
+        raise M1Error("frozen M0 OOF fight_id is not unique")
+    logical_hash = m0_oof_logical_hash(oof)
+    if logical_hash != M0_OOF_LOGICAL_SHA256:
+        raise M1Error(
+            f"authoritative frozen M0 OOF hash mismatch: {logical_hash} != {M0_OOF_LOGICAL_SHA256}"
+        )
+    return oof
+
+
 def inner_validation_years(outer_train: pd.DataFrame) -> tuple[int, ...]:
     years = sorted(int(year) for year in outer_train["event_date"].dt.year.unique())
     candidates = [year for year in years if year >= INNER_VALIDATION_START_YEAR]
@@ -450,11 +477,12 @@ def _verdict(aggregate: dict[str, dict[str, Any]], fold_rows: list[dict[str, Any
     return "M1_DOES_NOT_OUTPERFORM_M0"
 
 
-def run_validation(f02_dir: Path, output_dir: Path) -> dict[str, Any]:
+def run_validation(f02_dir: Path, m0_dir: Path, output_dir: Path) -> dict[str, Any]:
     identity = validate_f02_identity(f02_dir)
     contract = discover_feature_contract(identity["schema"])
     frame = load_modeling_table(f02_dir)
     population = primary_population(frame)
+    frozen_m0 = load_frozen_m0_oof(m0_dir)
 
     fold_results: list[dict[str, Any]] = []
     coefficient_rows: list[dict[str, Any]] = []
@@ -475,10 +503,17 @@ def run_validation(f02_dir: Path, output_dir: Path) -> dict[str, Any]:
         if swap_error > 1e-10:
             raise M1Error(f"orientation invariance failed for {year}: {swap_error}")
 
-        m0_model = M0Logistic.fit(train, y_train)
-        m0_prob = m0_model.predict_proba(valid)
-        naive = np.full(len(valid), 0.5, dtype=float)
-        empirical = empirical_experience_probability(train, valid)
+        m0_fold = frozen_m0[frozen_m0["fold_id"].eq(str(year))].set_index("fight_id")
+        valid_ids = valid["fight_id"].astype(str).tolist()
+        if set(m0_fold.index.astype(str)) != set(valid_ids):
+            raise M1Error(f"frozen M0 row identity mismatch for outer fold {year}")
+        m0_fold = m0_fold.loc[valid_ids]
+        frozen_target = pd.to_numeric(m0_fold["target"], errors="raise").astype(int).to_numpy()
+        if not np.array_equal(frozen_target, y_valid.to_numpy()):
+            raise M1Error(f"frozen M0 target mismatch for outer fold {year}")
+        m0_prob = pd.to_numeric(m0_fold["logistic_probability"], errors="raise").to_numpy(dtype=float)
+        naive = pd.to_numeric(m0_fold["naive_probability"], errors="raise").to_numpy(dtype=float)
+        empirical = pd.to_numeric(m0_fold["empirical_probability"], errors="raise").to_numpy(dtype=float)
 
         fold_results.append({
             "fold_id": str(year),
@@ -554,8 +589,11 @@ def run_validation(f02_dir: Path, output_dir: Path) -> dict[str, Any]:
         "source": {
             "f02_identity": F02_IDENTITY,
             "m0_freeze_version": M0_FREEZE_VERSION,
+            "m0_actions_run_id": M0_ACTIONS_RUN_ID,
+            "m0_artifact_id": M0_ARTIFACT_ID,
+            "m0_artifact_zip_sha256": M0_ARTIFACT_ZIP_SHA256,
             "m0_oof_logical_sha256_expected": M0_OOF_LOGICAL_SHA256,
-            "m0_oof_logical_sha256_reproduced": m0_hash,
+            "m0_oof_logical_sha256_loaded": m0_hash,
         },
         "dataset": {
             "total_f02_rows": int(len(frame)),
@@ -617,6 +655,7 @@ def run_validation(f02_dir: Path, output_dir: Path) -> dict[str, Any]:
         "limitations": [
             "M1 is validation-only; no production model is created.",
             "Shared scheduled-round/title/weight-class context is diagnostic-only and not a model input in M1.",
+            "Frozen M0 comparator probabilities are consumed from the authoritative M0 Actions artifact rather than numerically recomputed.",
             "No sportsbook, odds, market probability, ROI, Kelly, or threshold analysis is used in M1.",
             "No outcome-driven feature selection, nonlinear model, ensemble, AutoML, opponent adjustment, or simulator feature is introduced.",
             "2026 is a partial latest-year validation fold as represented in frozen F02.",
