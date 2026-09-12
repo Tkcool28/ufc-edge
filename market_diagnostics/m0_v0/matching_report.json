@@ -1,4 +1,28 @@
 {
-  "status": "PENDING_FROZEN_ARTIFACT_RUNTIME",
-  "note": "This file is replaced with the exact deterministic matching report after the first full diagnostic workflow run."
+  "earliest_matched_date": "2015-01-03",
+  "latest_matched_date": "2023-12-16",
+  "m0_oof_rows": 5626,
+  "market_ambiguous_name_rows": 22,
+  "market_conflicting_duplicate_groups": 0,
+  "market_identical_duplicate_rows_collapsed": 0,
+  "market_invalid_odds_rows": 53,
+  "market_source_rows": 4452,
+  "market_unresolved_name_rows": 719,
+  "market_usable_unique_rows": 3658,
+  "matched_by_year": {
+    "2015": 395,
+    "2016": 418,
+    "2017": 360,
+    "2018": 365,
+    "2019": 409,
+    "2020": 296,
+    "2021": 355,
+    "2022": 395,
+    "2023": 370
+  },
+  "matched_pct": 0.5977603981514398,
+  "matched_rows": 3363,
+  "orientation_favorite_rows": 1702,
+  "orientation_underdog_rows": 1661,
+  "unmatched_rows": 2263
 }
