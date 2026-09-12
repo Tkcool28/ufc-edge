@@ -1,16 +1,21 @@
 {
-  "replay_contract_version": "1.0.0",
+  "replay_contract_version": "1.0.1",
   "row_grain": "one canonical target fight",
   "target_universe": "all canonical data/canonical/v0/fights.csv rows with resolvable distinct canonical participants",
-  "target_ordering": ["event_date", "event_id", "fight_id"],
+  "target_ordering": [
+    "event_date",
+    "event_id",
+    "fight_id"
+  ],
   "prediction_cutoff": "target event date at 00:00:00Z",
   "history_rule": "F01 event_date must be strictly less than cutoff date",
   "same_day_policy": "exclude all same-date fights; never infer bout order",
   "orientation": "F00/F01 canonical fighter orientation",
   "consumer_selection": "broad active V1 surface; no model-private matrix",
   "namespaces": {
-    "fighter_1": "f1__<F01 materialized name>",
-    "fighter_2": "f2__<F01 materialized name>",
+    "fighter_1": "f1__<fighter-specific F01 materialized name>",
+    "fighter_2": "f2__<fighter-specific F01 materialized name>",
+    "fight_context": "scheduled_rounds (top-level model-eligible context), ctx__title_bout, ctx__weight_class",
     "matchup": "exactly one mx__ namespace"
   },
   "storage": {
@@ -26,5 +31,22 @@
     "status": "DATA_REQUIRED",
     "priority": "SIMULATOR_REQUIRED",
     "blocks_f02": false
+  },
+  "column_roles": {
+    "identity": "non-predictor identity/provenance; promotion remains non-predictor",
+    "fighter_1": "model-eligible fighter-1 state/context",
+    "fighter_2": "model-eligible fighter-2 state/context",
+    "fight_context": "model-eligible shared fight context represented exactly once",
+    "matchup": "model-eligible matchup interaction"
+  },
+  "predictor_discovery": "schema columns with predictor=true; do not infer predictor status from column-name prefixes",
+  "shared_fight_context": {
+    "concepts": [
+      "scheduled_rounds",
+      "title_bout",
+      "weight_class"
+    ],
+    "equality_policy": "fighter_1 and fighter_2 F01 AuditValue projections must be exactly equal; disagreement fails closed",
+    "scheduled_rounds_policy": "top-level scheduled_rounds is the single model-eligible representation and also replay context metadata"
   }
 }
