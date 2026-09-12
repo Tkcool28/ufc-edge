@@ -170,7 +170,21 @@ def _read_json(path: Path) -> dict[str, Any]:
 
 
 def validate_model_columns_against_schema(schema: dict[str, Any]) -> None:
-    validate_model_columns_against_schema(schema)
+    schema_by_name = {item["name"]: item for item in schema.get("columns", [])}
+    missing = sorted(set(MATERIALIZED_COLUMNS) - set(schema_by_name))
+    if missing:
+        raise M0Error(f"M0 materialized columns absent from F02 schema: {missing}")
+    for column in MATERIALIZED_COLUMNS:
+        if schema_by_name[column].get("predictor") is not True:
+            raise M0Error(f"M0 column is not predictor=true in F02 schema: {column}")
+    if IDENTITY_COLUMNS & set(MATERIALIZED_COLUMNS):
+        raise M0Error("identity/provenance column entered M0 feature contract")
+    bad = [
+        column for column in MATERIALIZED_COLUMNS
+        if any(token in column.casefold() for token in FORBIDDEN_MODEL_TOKENS)
+    ]
+    if bad:
+        raise M0Error(f"forbidden sportsbook/market token in M0 model matrix: {bad}")
 
 
 def validate_f02_identity(f02_dir: Path) -> dict[str, Any]:
@@ -195,21 +209,7 @@ def validate_f02_identity(f02_dir: Path) -> dict[str, Any]:
     if target_det.get("target_logical_sha256") != F02_IDENTITY["target_logical_sha256"]:
         raise M0Error("F02 target logical hash mismatch")
 
-    schema_by_name = {item["name"]: item for item in schema.get("columns", [])}
-    missing = sorted(set(MATERIALIZED_COLUMNS) - set(schema_by_name))
-    if missing:
-        raise M0Error(f"M0 materialized columns absent from F02 schema: {missing}")
-    for column in MATERIALIZED_COLUMNS:
-        if schema_by_name[column].get("predictor") is not True:
-            raise M0Error(f"M0 column is not predictor=true in F02 schema: {column}")
-    if IDENTITY_COLUMNS & set(MATERIALIZED_COLUMNS):
-        raise M0Error("identity/provenance column entered M0 feature contract")
-    bad = [
-        column for column in MATERIALIZED_COLUMNS
-        if any(token in column.casefold() for token in FORBIDDEN_MODEL_TOKENS)
-    ]
-    if bad:
-        raise M0Error(f"forbidden sportsbook/market token in M0 model matrix: {bad}")
+    validate_model_columns_against_schema(schema)
 
     return {
         "schema": schema,
