@@ -37,6 +37,12 @@ MISSINGNESS_STATES = (
     "insufficient_exposure",
 )
 
+SHARED_FIGHT_CONTEXT_CONCEPTS = (
+    "scheduled_rounds",
+    "title_bout",
+    "weight_class",
+)
+
 IDENTITY_SCHEMA: tuple[tuple[str, str, bool], ...] = (
     ("fight_id", "string", False),
     ("event_id", "string", False),
@@ -142,6 +148,11 @@ def _row_name(role: str, source_name: str) -> str:
         return f"f1__{source_name}"
     if role == "f2":
         return f"f2__{source_name}"
+    if role == "ctx":
+        concept = _concept_from_materialized(source_name)
+        if concept == "scheduled_rounds":
+            return "scheduled_rounds"
+        return f"ctx__{concept}"
     if role == "mx":
         # F01 matchup names are already mx__*.  Strip and re-add exactly once
         # so the F02 namespace is explicit without duplicate prefixes.
@@ -155,7 +166,8 @@ class ReplaySchema:
     columns: tuple[dict[str, Any], ...]
     schema_sha256: str
     f01_materialized_value_count: int
-    fighter_state_context_value_count: int
+    fighter_specific_value_count: int
+    shared_fight_context_value_count: int
     matchup_interaction_value_count: int
     row_predictor_count: int
 
@@ -474,18 +486,61 @@ class ReplayEngine:
 
     def _build_schema(self) -> ReplaySchema:
         selected = active_v1_features(self.materializer.catalog)
-        matchup_concepts = {item["feature_name"] for item in selected if item["feature_name"] in MATCHUP_IMPLEMENTATIONS}
+        matchup_concepts = {
+            item["feature_name"]
+            for item in selected
+            if item["feature_name"] in MATCHUP_IMPLEMENTATIONS
+        }
         source_names = self.materializer.names()
-        matchup_names = [name for name in source_names if _concept_from_materialized(name) in matchup_concepts]
-        fighter_names = [name for name in source_names if name not in matchup_names]
-        if len(fighter_names) != 99 or len(matchup_names) != 5:
-            raise ReplayError(
-                f"unexpected F01 surface fighter={len(fighter_names)} matchup={len(matchup_names)}"
-            )
-        columns: list[dict[str, Any]] = [
-            {"name": name, "type": kind, "nullable": nullable, "role": "identity"}
-            for name, kind, nullable in IDENTITY_SCHEMA
+        matchup_names = [
+            name for name in source_names
+            if _concept_from_materialized(name) in matchup_concepts
         ]
+        non_matchup_names = [name for name in source_names if name not in matchup_names]
+        shared_names = [
+            name for name in non_matchup_names
+            if _concept_from_materialized(name) in SHARED_FIGHT_CONTEXT_CONCEPTS
+        ]
+        fighter_names = [name for name in non_matchup_names if name not in shared_names]
+        shared_concepts = tuple(sorted(_concept_from_materialized(name) for name in shared_names))
+        if shared_concepts != tuple(sorted(SHARED_FIGHT_CONTEXT_CONCEPTS)):
+            raise ReplayError(
+                "unexpected shared fight-context surface "
+                f"expected={sorted(SHARED_FIGHT_CONTEXT_CONCEPTS)} actual={list(shared_concepts)}"
+            )
+        if len(fighter_names) != 96 or len(shared_names) != 3 or len(matchup_names) != 5:
+            raise ReplayError(
+                "unexpected F01 surface "
+                f"fighter_specific={len(fighter_names)} shared_context={len(shared_names)} "
+                f"matchup={len(matchup_names)}"
+            )
+
+        columns: list[dict[str, Any]] = []
+        for name, kind, nullable in IDENTITY_SCHEMA:
+            if name == "scheduled_rounds":
+                source_name = next(
+                    item for item in shared_names
+                    if _concept_from_materialized(item) == "scheduled_rounds"
+                )
+                columns.append({
+                    "name": name,
+                    "type": kind,
+                    "nullable": nullable,
+                    "role": "fight_context",
+                    "predictor": True,
+                    "source_materialized_name": source_name,
+                    "source_concept": "scheduled_rounds",
+                    "metadata_role": "replay_context",
+                })
+            else:
+                columns.append({
+                    "name": name,
+                    "type": kind,
+                    "nullable": nullable,
+                    "role": "identity",
+                    "predictor": False,
+                })
+
         for role in ("f1", "f2"):
             for source_name in fighter_names:
                 columns.append({
@@ -493,19 +548,41 @@ class ReplayEngine:
                     "type": predictor_type(source_name),
                     "nullable": True,
                     "role": role,
+                    "predictor": True,
                     "source_materialized_name": source_name,
+                    "source_concept": _concept_from_materialized(source_name),
                 })
+
+        for source_name in shared_names:
+            if _concept_from_materialized(source_name) == "scheduled_rounds":
+                continue
+            columns.append({
+                "name": _row_name("ctx", source_name),
+                "type": predictor_type(source_name),
+                "nullable": True,
+                "role": "fight_context",
+                "predictor": True,
+                "source_materialized_name": source_name,
+                "source_concept": _concept_from_materialized(source_name),
+            })
+
         for source_name in matchup_names:
             columns.append({
                 "name": _row_name("mx", source_name),
                 "type": predictor_type(source_name),
                 "nullable": True,
                 "role": "mx",
+                "predictor": True,
                 "source_materialized_name": source_name,
+                "source_concept": _concept_from_materialized(source_name),
             })
+
         names = [item["name"] for item in columns]
         if len(names) != len(set(names)):
             raise ReplayError("duplicate F02 replay schema column")
+        predictor_columns = [item for item in columns if item["predictor"]]
+        if len(predictor_columns) != 200:
+            raise ReplayError(f"unexpected F02 predictor count {len(predictor_columns)} != 200")
         payload = {
             "replay_schema_version": REPLAY_SCHEMA_VERSION,
             "columns": columns,
@@ -515,9 +592,10 @@ class ReplayEngine:
             columns=tuple(columns),
             schema_sha256=deterministic_hash(payload),
             f01_materialized_value_count=len(source_names),
-            fighter_state_context_value_count=len(fighter_names),
+            fighter_specific_value_count=len(fighter_names),
+            shared_fight_context_value_count=len(shared_names),
             matchup_interaction_value_count=len(matchup_names),
-            row_predictor_count=(2 * len(fighter_names)) + len(matchup_names),
+            row_predictor_count=len(predictor_columns),
         )
 
     def _build_target_contract(self) -> TargetContract:
@@ -581,8 +659,49 @@ class ReplayEngine:
             "fighter_2_id": matchup.fighter_2_id,
         }
         audit: dict[str, dict[str, Any]] = {}
+
+        shared_by_concept: dict[str, str] = {}
+        for source_name in sorted(matchup.fighter_1.values):
+            concept = _concept_from_materialized(source_name)
+            if concept in SHARED_FIGHT_CONTEXT_CONCEPTS:
+                shared_by_concept[concept] = source_name
+
+        if tuple(sorted(shared_by_concept)) != tuple(sorted(SHARED_FIGHT_CONTEXT_CONCEPTS)):
+            raise ReplayError(
+                "shared fight-context materialization drift "
+                f"expected={sorted(SHARED_FIGHT_CONTEXT_CONCEPTS)} actual={sorted(shared_by_concept)}"
+            )
+
+        for concept in SHARED_FIGHT_CONTEXT_CONCEPTS:
+            source_name = shared_by_concept[concept]
+            left = matchup.fighter_1.values[source_name]
+            right = matchup.fighter_2.values.get(source_name)
+            if right is None:
+                raise ReplayError(
+                    f"shared fight-context {source_name} missing from fighter_2 for {target.fight_id}"
+                )
+            if left.to_dict() != right.to_dict():
+                raise ReplayError(
+                    f"shared fight-context disagreement for {source_name} on {target.fight_id}"
+                )
+            name = _row_name("ctx", source_name)
+            if concept == "scheduled_rounds":
+                if row["scheduled_rounds"] != left.value:
+                    raise ReplayError(
+                        f"scheduled_rounds canonical/F01 disagreement on {target.fight_id}: "
+                        f"{row['scheduled_rounds']!r} != {left.value!r}"
+                    )
+            else:
+                row[name] = left.value
+            meta = left.to_dict()
+            meta["source_materialized_name"] = source_name
+            meta["orientation_role"] = "fight_context"
+            audit[name] = meta
+
         for role, state in (("f1", matchup.fighter_1), ("f2", matchup.fighter_2)):
             for source_name, value in sorted(state.values.items()):
+                if _concept_from_materialized(source_name) in SHARED_FIGHT_CONTEXT_CONCEPTS:
+                    continue
                 name = _row_name(role, source_name)
                 row[name] = value.value
                 meta = value.to_dict()
