@@ -57,17 +57,17 @@
 | MX_SUBMISSION_PRESSURE_VS_ALLOWED_V1 | submission_pressure_vs_allowed | matchup_interaction | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_submission |
 | MX_PACE_MISMATCH_V1 | pace_mismatch | matchup_interaction | DEFERRED | DEFERRED | 1.0.0 | model1, tree, simulator |
 | MX_REACH_DIFFERENCE_CM_V1 | reach_difference_cm | matchup_interaction | ACTIVE | V1_DERIVED | 1.0.0 | model1, tree, component_striking |
-| OA_OA_SIG_CREATION_V1 | oa_sig_creation | opponent_adjusted | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_striking, simulator |
-| OA_OA_SIG_SUPPRESSION_V1 | oa_sig_suppression | opponent_adjusted | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_striking, simulator |
-| OA_OA_TAKEDOWN_CREATION_V1 | oa_takedown_creation | opponent_adjusted | DEFERRED | V2_OPPONENT_ADJUSTED | 1.0.0 | model1, tree, component_wrestling, simulator |
-| OA_OA_CONTROL_CREATION_V1 | oa_control_creation | opponent_adjusted | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_ground, simulator |
-| OA_OA_SUBMISSION_CREATION_V1 | oa_submission_creation | opponent_adjusted | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_submission, simulator |
-| SIM_SIM_STRIKE_EVENT_INTENSITY_V1 | sim_strike_event_intensity | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_striking, simulator |
-| SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1 | sim_knockdown_hazard_proxy | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_striking, component_durability, simulator |
-| SIM_SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1 | sim_takedown_attempt_intensity | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_wrestling, simulator |
-| SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1 | sim_takedown_success_probability | simulator_component | SIMULATOR_REQUIRED | SIMULATOR_COMPONENT | 1.0.0 | component_wrestling, simulator |
-| SIM_SIM_SUBMISSION_ATTEMPT_INTENSITY_V1 | sim_submission_attempt_intensity | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_submission, simulator |
-| SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1 | sim_fatigue_persistence_multiplier | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_striking, component_wrestling, component_ground, simulator |
+| OA_SIG_CREATION_V1 | oa_sig_creation | opponent_adjusted | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_striking, simulator |
+| OA_SIG_SUPPRESSION_V1 | oa_sig_suppression | opponent_adjusted | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_striking, simulator |
+| OA_TAKEDOWN_CREATION_V1 | oa_takedown_creation | opponent_adjusted | DEFERRED | V2_OPPONENT_ADJUSTED | 1.0.0 | model1, tree, component_wrestling, simulator |
+| OA_CONTROL_CREATION_V1 | oa_control_creation | opponent_adjusted | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_ground, simulator |
+| OA_SUBMISSION_CREATION_V1 | oa_submission_creation | opponent_adjusted | DEFERRED | DEFERRED | 1.0.0 | model1, tree, component_submission, simulator |
+| SIM_STRIKE_EVENT_INTENSITY_V1 | sim_strike_event_intensity | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_striking, simulator |
+| SIM_KNOCKDOWN_HAZARD_PROXY_V1 | sim_knockdown_hazard_proxy | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_striking, component_durability, simulator |
+| SIM_TAKEDOWN_ATTEMPT_INTENSITY_V1 | sim_takedown_attempt_intensity | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_wrestling, simulator |
+| SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1 | sim_takedown_success_probability | simulator_component | SIMULATOR_REQUIRED | SIMULATOR_COMPONENT | 1.0.0 | component_wrestling, simulator |
+| SIM_SUBMISSION_ATTEMPT_INTENSITY_V1 | sim_submission_attempt_intensity | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_submission, simulator |
+| SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1 | sim_fatigue_persistence_multiplier | simulator_component | DEFERRED | DEFERRED | 1.0.0 | component_striking, component_wrestling, component_ground, simulator |
 | SIM_POSITION_OCCUPANCY_PROFILE_V1 | position_occupancy_profile | simulator_component | PROXY_ONLY | PROXY_ONLY | 1.0.0 | component_ground, simulator |
 | CTX_STANCE_PROFILE_V1 | stance_profile | context | PROXY_ONLY | PROXY_ONLY | 1.0.0 | tree, component_striking, human_research |
 | FS_HISTORICAL_FIGHT_DURATION_V1 | historical_fight_duration | fighter_state | DEFERRED | DEFERRED | 1.0.0 | model1, tree, simulator |
