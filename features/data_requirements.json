@@ -1,0 +1,51 @@
+{
+  "requirements_version": "1.0.0",
+  "requirements": [
+    {
+      "requirement_id": "DR_EXACT_POSITIONAL_DURATION_V1",
+      "status": "DATA_REQUIRED",
+      "priority": "SIMULATOR_REQUIRED",
+      "name": "Exact positional control duration",
+      "desired_semantics": [
+        "top-position seconds/share",
+        "bottom-position seconds/share",
+        "back-control seconds/share",
+        "clinch-control duration",
+        "ground-control duration",
+        "transition/state duration"
+      ],
+      "known_available": [
+        "fighter_round_stats.control_sec = generic control only",
+        "fighter_round_position = coarse whole-minute interval buckets"
+      ],
+      "forbidden_substitutions": [
+        "generic control_sec as exact positional duration",
+        "FightMetric bucket bounds as exact duration"
+      ],
+      "simulator_states": [
+        "clinch",
+        "ground/top-control environment",
+        "escape/reversal",
+        "submission environment"
+      ],
+      "integration_gate": "Must enter through DATA provenance/canonical semantic review before FEATURES consumption."
+    },
+    {
+      "requirement_id": "DR_JUDGE_ROUND_SCORES_V1",
+      "status": "DATA_REQUIRED",
+      "priority": "RESEARCH_ONLY",
+      "name": "Canonical judge-round scores",
+      "desired_semantics": [
+        "per-judge per-round score state"
+      ],
+      "known_available": [
+        "scorecard acquisition/provenance work exists, but F00 states no canonical judge-round score history"
+      ],
+      "forbidden_substitutions": [
+        "fight result as judge-round scoring state"
+      ],
+      "simulator_states": [],
+      "integration_gate": "Requires DATA canonicalization before feature promotion."
+    }
+  ]
+}

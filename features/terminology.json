@@ -1,0 +1,64 @@
+{
+  "terminology_version": "1.0.0",
+  "terms": {
+    "fighter_state": "Opponent-independent point-in-time summary of one fighter built only from information available before prediction_as_of.",
+    "matchup_interaction": "Deterministic interaction of two already-built point-in-time fighter states and/or known pre-fight context.",
+    "context": "Known pre-fight information attached to a fighter or target bout without using post-fight outcomes.",
+    "target": "Training-only post-fight outcome or label; never a predictor for the same fight.",
+    "predictor": "Pre-fight value eligible for a model consumer under the feature contract.",
+    "eligible_observation": "Historical observation that satisfies identity, point-in-time, source-semantic, and concept-specific eligibility rules.",
+    "support": "The auditable amount and unit of personal/history evidence contributing to an estimate.",
+    "exposure": "The denominator/opportunity domain over which an event count, rate, share, or probability is defined.",
+    "elapsed_exposure": "Verified elapsed fight/round time admitted only through an approved ruleset/interpretation source.",
+    "generic_control": "Canonical fighter_round_stats.control_sec; generic control time only.",
+    "top_position": "Exact or explicitly bounded time in top position; not synonymous with generic control.",
+    "ground_control": "Control occurring in a ground-state semantic domain; must not be inferred from generic control unless DATA explicitly supports it.",
+    "clinch_control": "Control occurring in a clinch-state semantic domain; currently not exact-duration canonical evidence.",
+    "positional_environment": "Distance/clinch/ground environment evidence; current FightMetric position data are quantized interval buckets, not exact duration.",
+    "attempt_composition": "Share vector over mutually exclusive attempt/event categories.",
+    "rate": "Numerator divided by an explicit exposure denominator with defined zero/missing behavior.",
+    "share": "Part-to-whole ratio over an explicitly defined compatible denominator.",
+    "probability": "Bounded event likelihood defined over explicit attempts/opportunities.",
+    "prior": "Population estimate constructed point-in-time and used only under the declared shrinkage policy.",
+    "shrinkage": "Mechanical combination of personal sufficient statistics with an eligible population prior.",
+    "opponent_adjustment": "Historical quality adjustment using opponents' states as they existed strictly before those historical contests.",
+    "canonical": "DATA-layer semantic authority approved by the frozen canonical contract.",
+    "derived": "Deterministic value computed from canonical facts or shared feature concepts.",
+    "proxy": "Approximation explicitly marked as not equivalent to the desired semantic.",
+    "research_only": "Concept retained for human/research work and not eligible for production predictor materialization.",
+    "deferred": "Defined concept whose implementation/methodology is intentionally postponed.",
+    "unsupported": "Desired semantic that current canonical data cannot represent safely.",
+    "materialized": "Concrete output column/value emitted from a feature concept plus approved variant specification.",
+    "consumer": "Shared model, component, simulator, or research surface that selects feature IDs/tags without redefining semantics.",
+    "historical_replay": "Point-in-time regeneration of historical feature artifacts under a specific contract/methodology identity.",
+    "artifact": "Persisted predictor/training output carrying sufficient manifest metadata for future interpretation.",
+    "contract_version": "Version of the overall shared FEATURES semantic contract.",
+    "methodology_version": "Version of the transformation/calculation for a specific durable feature identity."
+  },
+  "forbidden_aliases": [
+    {
+      "term": "control",
+      "must_mean": "generic_control",
+      "forbidden_meanings": [
+        "top_position",
+        "ground_control",
+        "back_control",
+        "positional_control"
+      ]
+    },
+    {
+      "term": "ground significant-strike share",
+      "must_mean": "share of significant-strike attempts/lands classified as ground environment",
+      "forbidden_meanings": [
+        "percentage of elapsed time spent on the ground"
+      ]
+    },
+    {
+      "term": "position time",
+      "must_mean": "exact duration only when DATA semantics explicitly support it",
+      "forbidden_meanings": [
+        "FightMetric whole-minute bucket lower/upper bounds treated as exact seconds"
+      ]
+    }
+  ]
+}

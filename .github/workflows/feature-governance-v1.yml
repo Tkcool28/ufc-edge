@@ -1,0 +1,110 @@
+name: Feature Governance V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'features/**'
+      - 'src/ufc_edge/features/**'
+      - 'tools/features/**'
+      - 'tests/features/**'
+      - 'provenance/rulesets/**'
+      - '.github/workflows/feature-governance-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Parse feature Python sources
+        shell: bash
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          paths = sorted(Path('src/ufc_edge/features').glob('*.py')) + sorted(Path('tools/features').glob('*.py'))
+          for path in paths:
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+          print(f'parsed {len(paths)} feature Python files')
+          PY
+
+      - name: Validate F00 contract
+        run: python -m ufc_edge.features.contract
+
+      - name: Validate governance contract
+        run: python -m ufc_edge.features.governance
+
+      - name: Verify generated reference is current
+        run: python tools/features/generate_feature_reference.py --check
+
+      - name: Run feature semantic tests
+        run: python -m unittest discover -s tests/features -p 'test_*.py' -v
+
+      - name: Bounded real canonical F01 validation
+        run: python tools/features/materialize_v1.py --validate-bounded
+
+      - name: Check whitespace
+        run: git diff --check origin/main...HEAD
+
+      - name: Verify frozen DATA unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            data/canonical/v0 \
+            schemas/canonical_data_contract_v0.json \
+            schemas/canonical_data_contract_v0.md \
+            schemas/source_field_map_v0.json \
+            schemas/source_precedence_v0.json \
+            provenance/data_phase_freeze_v0.json
+
+      - name: Verify H00 and H01 unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            handicap \
+            src/ufc_edge/handicap \
+            src/ufc_edge/handicap_bridge \
+            tests/handicap \
+            tests/handicap_bridge \
+            .github/workflows/h01-handicap-request.yml
+
+      - name: Reject new generated runtime artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
+          allowed='^features/(FEATURE_REFERENCE\.md|feature_inventory\.json|repository_inventory\.json|FEATURE_REPOSITORY_INVENTORY\.md)$'
+          bad="$(printf '%s\n' "$added" | grep -E '(^|/)(runs?|output|artifacts|feature_store)/|\.(csv|parquet|feather)$' | grep -Ev "$allowed" || true)"
+          if [[ -n "$bad" ]]; then
+            printf '%s\n' "$bad"
+            echo 'Governance V1 must not add replay matrices, runtime artifacts, or feature stores.' >&2
+            exit 1
+          fi
+
+      - name: Verify checkout clean
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(git status --porcelain=v1 --untracked-files=all)"
+          if [[ -n "$status" ]]; then
+            printf '%s\n' "$status"
+            echo 'Feature governance validation checkout is not clean.' >&2
+            exit 1
+          fi

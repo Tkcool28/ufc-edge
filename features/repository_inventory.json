@@ -1,0 +1,81 @@
+{
+  "inventory_version": "1.0.0",
+  "baseline_main": "d57038afcd356db0b76d2ce88c54ab5d626a6095",
+  "pr30_merge_commit": "d57038afcd356db0b76d2ce88c54ab5d626a6095",
+  "authoritative_contract": [
+    "features/FEATURE_CONTRACT.md",
+    "features/feature_catalog.yaml",
+    "features/feature_schema.json",
+    "features/leakage_registry.yaml",
+    "src/ufc_edge/features/contract.py"
+  ],
+  "governance": [
+    "features/feature_governance.json",
+    "features/terminology.json",
+    "features/dependencies.json",
+    "features/data_requirements.json",
+    "features/simulator_requirements.json",
+    "features/migrations/feature_migrations.json",
+    "features/FEATURE_GOVERNANCE.md"
+  ],
+  "implementation": [
+    "src/ufc_edge/features/aggregations.py",
+    "src/ufc_edge/features/history.py",
+    "src/ufc_edge/features/state.py",
+    "src/ufc_edge/features/materializer.py",
+    "src/ufc_edge/features/elapsed_exposure.py",
+    "src/ufc_edge/features/governance.py"
+  ],
+  "tools": [
+    "tools/features/materialize_v1.py",
+    "tools/features/audit_elapsed_exposure_v1.py",
+    "tools/features/generate_feature_reference.py"
+  ],
+  "tests": [
+    "tests/features/test_feature_contract.py",
+    "tests/features/test_v1_materializer.py",
+    "tests/features/test_v1_target_guard.py",
+    "tests/features/test_elapsed_exposure.py",
+    "tests/features/test_feature_governance.py"
+  ],
+  "feature_workflows": [
+    ".github/workflows/f00-feature-contract.yml",
+    ".github/workflows/f01-v1-materializer.yml",
+    ".github/workflows/elapsed-exposure-normalization-v1.yml",
+    ".github/workflows/feature-governance-v1.yml"
+  ],
+  "provenance": [
+    "provenance/data_phase_freeze_v0.json",
+    "data/canonical/v0/manifest.json",
+    "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json"
+  ],
+  "generated_reference": [
+    "features/FEATURE_REFERENCE.md",
+    "features/feature_inventory.json"
+  ],
+  "quarantined_prior_art": [
+    "features/feature_contract_v0.json",
+    "features/family_a_striking_v0.json",
+    "features/build_fighter_state_primitives_v0.py",
+    "features/validate_fighter_state_primitives_v0.py",
+    "features/build_striking_environment_v0.py",
+    "features/validate_striking_environment_v0.py",
+    "features/audit_striking_environment_coverage_v0.py",
+    "features/v0/",
+    "features/provenance/",
+    "features/workflows/archive/"
+  ],
+  "runtime_artifact_policy": "No historical replay matrix, run directory, model output, or feature store is authoritative or newly committed by governance V1.",
+  "disagreements_found": [
+    {
+      "location": "features/README.md",
+      "baseline_issue": "Still described 0.1.1-draft and claimed no contract-safe elapsed exposure after PR #30.",
+      "resolution": "Updated index to 0.1.2-draft and ruleset_registry_v1 without changing F00 semantics."
+    },
+    {
+      "location": "feature count handoff",
+      "baseline_issue": "Expected 104 active V1 names can be confused with catalog-declared round-specific expansion.",
+      "resolution": "Inventory now distinguishes 104 F01-selected values from 164 catalog-declared active variants."
+    }
+  ]
+}

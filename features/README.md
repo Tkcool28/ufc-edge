@@ -1,38 +1,73 @@
 # Features
 
-The FEATURES phase is now deliberately open.
+UFC Edge treats FEATURES as a versioned semantic system layered on frozen canonical DATA.
 
-## Authoritative F00 contract
+## Start here
 
-F00 defines architecture and validation only. It does **not** materialize production feature matrices or train models.
+Read these in order:
 
-Authoritative F00 files:
+1. `FEATURE_CONTRACT.md` — authoritative F00 semantics, PIT rules, denominators, missingness, orientation, and shared architecture.
+2. `feature_catalog.yaml` — authoritative machine-readable feature definitions and materialization declarations.
+3. `feature_governance.json` — durable feature IDs, lifecycle, semantic/methodology versions, implementation locations, and replacement history.
+4. `FEATURE_GOVERNANCE.md` — contributor rules for adding, changing, renaming, deprecating, or sourcing features.
+5. `FEATURE_REFERENCE.md` — generated human-readable inventory.
+6. `feature_inventory.json` — generated machine-readable inventory.
 
-- `features/FEATURE_CONTRACT.md` — human-readable architecture and self-review
-- `features/feature_catalog.yaml` — shared feature concepts, variants, targets, windows and policies
-- `features/feature_schema.json` — machine schema/enums for the catalog
-- `features/leakage_registry.yaml` — explicit predictor/target and point-in-time leakage rules
-- `src/ufc_edge/features/contract.py` — lightweight fail-closed loader/validator
-- `tests/features/test_feature_contract.py` — contract tests
+Current feature contract: **0.1.2-draft**.
+Current governance version: **1.0.0**.
 
-Feature contract version: `0.1.1-draft`.
+Verified merged-main baseline after PR #30:
 
-The shared feature flow is:
+- 60 durable feature concepts in the shared catalog;
+- 24 active V1 concepts;
+- 104 F01-selected values;
+- 99 fighter-state/context values + 5 matchup-interaction values;
+- 164 catalog-declared active variants when round-specific declarations are included.
 
-```text
-frozen canonical DATA
-→ point-in-time fighter state
-→ deterministic matchup join
-→ matchup interactions/context
-→ model-selected catalog subset
-→ targets attached only in training tables
-```
+The last two counts are intentionally different. F00 declares possible round-specific variants; F01 currently emits the narrower reviewed 104-value surface.
 
-Normal feature inputs are `data/canonical/v0/` plus the frozen DATA semantic/provenance contract needed to interpret those tables. Feature code does not read provider-specific raw layouts. Sportsbook odds and betting-performance fields are not core feature inputs.
+## Authority map
 
-## F01 V1 point-in-time materializer
+| Concern | Authority |
+| --- | --- |
+| Meaning, formula, eligibility, units, missingness | `feature_catalog.yaml` |
+| Stable identity, lifecycle, methodology version | `feature_governance.json` |
+| Vocabulary and forbidden semantic aliases | `terminology.json` |
+| Predictor/target leakage rules | `leakage_registry.yaml` |
+| Source/derived/consumer lineage | `dependencies.json` |
+| Known missing source requirements | `data_requirements.json` |
+| Simulator suitability and blockers | `simulator_requirements.json` |
+| Evolution/migration history | `migrations/feature_migrations.json` |
+| Runtime implementation | `src/ufc_edge/features/` |
+| Deterministic generated reference | `FEATURE_REFERENCE.md`, `feature_inventory.json` |
 
-F01 implements the first reference materialization path for the currently active core V1 concepts only. See `features/F01_MATERIALIZER.md` for architecture, PIT/window/shrinkage rules, audit-state semantics, elapsed-exposure safety, provenance, and the 16-question implementation checkpoint.
+No model may create a private semantic definition for a concept that belongs in this shared layer.
+
+## Current elapsed-exposure policy
+
+PR #30 migrated the contract to `0.1.2-draft`.
+
+Elapsed-time-normalized historical features may use only `ruleset_registry_v1`, with fail-closed bout/round eligibility from:
+
+- `provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json`
+- `src/ufc_edge/features/elapsed_exposure.py`
+
+There is still **no universal five-minute fallback**.
+
+The six restored V1 primitives are:
+
+- `sig_strike_flow`
+- `knockdown_rate`
+- `takedown_pressure`
+- `control_rate`
+- `submission_attempt_rate`
+- `reversal_rate`
+
+Generic `fighter_round_stats.control_sec` remains generic control. It is not top-position, ground-position, back-control, or exact positional duration.
+
+## F01 V1 materializer
+
+F01 remains the reference point-in-time materializer.
 
 Runtime entry point:
 
@@ -40,55 +75,62 @@ Runtime entry point:
 python tools/features/materialize_v1.py --validate-bounded
 ```
 
-The CLI writes to stdout by default. F01 does not commit a historical feature matrix and does not establish a permanent generated feature-store directory. The authoritative feature meanings remain in the F00 catalog; F01 fails closed if the active V1 catalog and executable implementation registry diverge.
+Persisted manifests now include durable feature IDs, semantic/methodology versions, governance hash, dependency/terminology hashes, DATA freeze, canonical manifest, ruleset registry, feature catalog/schema, code commit, materialized columns, and prediction cutoff.
+
+## Generated reference
+
+Regenerate after an approved governance/catalog change:
+
+```text
+python tools/features/generate_feature_reference.py
+```
+
+CI verifies the generated views are current:
+
+```text
+python tools/features/generate_feature_reference.py --check
+```
+
+Do not hand-edit generated reference files.
+
+## Known missing-data foundation
+
+The explicit registry is `data_requirements.json`.
+
+The highest-priority simulator blocker is exact positional duration. Current data provide:
+
+- exact generic `control_sec`;
+- coarse FightMetric whole-minute position/TIP buckets.
+
+Neither is equivalent to exact top/bottom/back/clinch/ground duration. That distinction is enforced by terminology/governance tests.
 
 ## Quarantined pre-F00 prior art
 
-Everything listed below predates the deliberate F00 architecture task and remains **INACTIVE / QUARANTINED PRIOR ART**. It is preserved so work is not lost, but it is not authoritative and may not be consumed by new feature materializers unless a later reviewed task explicitly migrates a concept into the F00 contract.
+The following remain **INACTIVE / QUARANTINED PRIOR ART**:
 
-- `features/feature_contract_v0.json`
-- `features/family_a_striking_v0.json`
-- `features/build_fighter_state_primitives_v0.py`
-- `features/validate_fighter_state_primitives_v0.py`
-- `features/build_striking_environment_v0.py`
-- `features/validate_striking_environment_v0.py`
-- `features/audit_striking_environment_coverage_v0.py`
-- `features/v0/` — accidental materialized outputs/manifests
-- `features/provenance/` — accidental feature-only audits/run logs
-- `features/workflows/archive/` — disabled copies of former feature workflows
+- `feature_contract_v0.json`
+- `family_a_striking_v0.json`
+- legacy `build_*_v0.py`, `validate_*_v0.py`, and coverage scripts
+- `features/v0/` generated matrices/manifests
+- `features/provenance/` old feature-only runs/audits
+- `features/workflows/archive/`
 
-The old files do not define current naming, window, denominator, shrinkage, orientation, or model-consumption policy. Where old ideas remain useful, they are restated explicitly in the new F00 contract.
+They are preserved for archaeology only. They are not semantic authorities and cannot feed new models unless a reviewed migration explicitly promotes a concept.
 
 ## Frozen DATA boundary
 
-DATA closed at `DATA_PHASE_COMPLETE.md`; the immutable baseline is `provenance/data_phase_freeze_v0.json`.
+FEATURES consumes canonical DATA and its provenance contract. It does not bypass DATA by reading provider-specific raw layouts.
 
-F00/F01 inherit these non-negotiable rules:
+Non-negotiable rules include:
 
 - missing is not zero;
 - no future leakage;
-- display-name-only identity is not trusted;
-- FightMetric `round=0` is not a real round;
-- FightMetric position/TIP values retain quantized bucket semantics and are never fabricated as exact seconds;
-- exact `control_sec` is authoritative where canonical and is not synonymous with ground time;
-- rankings and mutable profiles are point-in-time observations;
-- no canonical judge-round score history currently exists;
-- exact knockdown recovery, finish-after-knockdown sequences, exact ground/standing minutes and exact state-transition chronology are not directly observed;
-- weigh-in annotations are used only when their semantics are source-explicit;
-- ambiguous identities remain quarantined.
+- same-day chronology is not invented;
+- FightMetric round 0 is not a real round;
+- quantized position buckets are not exact duration;
+- generic control is not positional control;
+- mutable rankings/profiles are point-in-time observations;
+- ambiguous identities remain quarantined;
+- betting odds/ROI/CLV are outside the core feature contract.
 
-## Feature-phase rules
-
-- Concepts come before materialized columns.
-- Fighter state remains opponent-independent; matchup interactions are separate.
-- All predictive concepts declare an information cutoff.
-- Every rate declares numerator/denominator semantics and zero/missing behavior.
-- Canonical v0 has no general contract-safe elapsed-round exposure source: time-normalized features and their dependent interactions/components remain `DEFERRED`; no 300-second/five-minute historical round assumption is permitted.
-- Recent/EWMA/round variants are opt-in, not automatically multiplied across the catalog.
-- Small-sample shrinkage preserves the distinction between a true debutant and missing historical coverage.
-- Historical opponent adjustment must use the opponent's strictly pre-contest state; future opponent career information is forbidden.
-- Model subsets are selected with consumer/status tags from one shared catalog; models may not silently redefine shared features.
-- `RAW_QA_ONLY` sources and `data/raw/` do not feed predictive features.
-- Betting odds, implied probabilities, line movement, ROI and CLV are outside the core feature contract.
-
-F01 is infrastructure only. Modeling, V2 opponent adjustment, simulator work, sportsbook integration, and DATA migrations require separate reviewed tasks.
+Historical replay, model training, opponent-adjustment implementation, and simulator implementation remain separate milestones.

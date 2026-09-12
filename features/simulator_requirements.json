@@ -1,0 +1,86 @@
+{
+  "simulator_requirements_version": "1.0.0",
+  "states": [
+    {
+      "state": "distance standing",
+      "availability": "AVAILABLE_BUT_APPROXIMATE",
+      "feature_ids": [
+        "FS_SIG_ENVIRONMENT_MIX_V1",
+        "SIM_POSITION_OCCUPANCY_PROFILE_V1"
+      ],
+      "notes": "Strike environment mix is attempt composition; position buckets are quantized, not exact duration."
+    },
+    {
+      "state": "clinch",
+      "availability": "PROXY_ONLY",
+      "feature_ids": [
+        "FS_SIG_ENVIRONMENT_MIX_V1",
+        "SIM_POSITION_OCCUPANCY_PROFILE_V1"
+      ],
+      "blocked_by": [
+        "DR_EXACT_POSITIONAL_DURATION_V1"
+      ]
+    },
+    {
+      "state": "wrestling entry",
+      "availability": "AVAILABLE_NOW",
+      "feature_ids": [
+        "FS_TAKEDOWN_PRESSURE_V1",
+        "FS_TAKEDOWN_CONVERSION_V1",
+        "SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1"
+      ]
+    },
+    {
+      "state": "ground/top-control environment",
+      "availability": "DATA_REQUIRED",
+      "feature_ids": [
+        "FS_CONTROL_RATE_V1",
+        "SIM_POSITION_OCCUPANCY_PROFILE_V1"
+      ],
+      "blocked_by": [
+        "DR_EXACT_POSITIONAL_DURATION_V1"
+      ],
+      "notes": "Generic control rate is not positional ground/top duration."
+    },
+    {
+      "state": "submission environment",
+      "availability": "FUTURE_DERIVATION",
+      "feature_ids": [
+        "FS_SUBMISSION_ATTEMPT_RATE_V1",
+        "FS_FINISH_METHOD_WIN_PROFILE_V1",
+        "FS_FINISH_METHOD_LOSS_PROFILE_V1"
+      ],
+      "blocked_by": [
+        "DR_EXACT_POSITIONAL_DURATION_V1"
+      ]
+    },
+    {
+      "state": "escape/reversal",
+      "availability": "DATA_REQUIRED",
+      "feature_ids": [
+        "FS_REVERSAL_RATE_V1",
+        "UNSUP_EXACT_ESCAPE_STATE_HAZARD_V1"
+      ],
+      "blocked_by": [
+        "DR_EXACT_POSITIONAL_DURATION_V1"
+      ]
+    },
+    {
+      "state": "damage/knockdown",
+      "availability": "AVAILABLE_NOW",
+      "feature_ids": [
+        "FS_KNOCKDOWN_RATE_V1",
+        "FS_KNOCKDOWN_EFFICIENCY_V1",
+        "SIM_KNOCKDOWN_HAZARD_PROXY_V1"
+      ]
+    },
+    {
+      "state": "round/fatigue state",
+      "availability": "FUTURE_DERIVATION",
+      "feature_ids": [
+        "FS_LATE_ROUND_PACE_RATIO_V1",
+        "SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1"
+      ]
+    }
+  ]
+}
