@@ -47,3 +47,26 @@ A mismatch is a hard failure rather than a new baseline. M0 probabilities are no
 python tools/models/run_m1.py validate --f02-dir <f02-artifact-dir> --m0-dir <m0-artifact-dir> --output-dir <runtime-dir>
 
 The full run writes m1_result.json, m1_oof_predictions.parquet, m1_coefficients.json, and m1_regularization_selection.json as runtime artifacts. Performance must not be used to revise the feature surface or C grid inside this task.
+
+## Frozen result
+
+The authoritative full validation is frozen in:
+
+- `M1_REGULARIZED_SHARED_FEATURE_WINNER_MODEL_V1_COMPLETE.json`
+- `VALIDATION_REPORT_V1.md`
+
+Accepted Actions run: **34718520686**.
+
+Verdict: **M1_OUTPERFORMS_M0**.
+
+Across 5,626 OOF fights:
+
+- M1 log loss: **0.646334** vs frozen M0 **0.664170**
+- M1 Brier: **0.226990** vs frozen M0 **0.235893**
+- M1 accuracy: **61.89%** vs frozen M0 **59.44%**
+- M1 ROC AUC: **0.672769** vs frozen M0 **0.634833**
+- both primary metrics improved in **9 of 12** outer folds
+
+The predeclared regularization procedure chose `C=0.01` in 11 of 12 folds and `C=0.1` once. No post-result feature pruning or grid revision was performed.
+
+This result establishes a stronger non-market winner benchmark. It does **not** establish sportsbook edge or profitability.
