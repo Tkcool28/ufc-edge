@@ -1,0 +1,69 @@
+{
+  "contract_version": "0.1.0",
+  "name": "M0-MD0_BARE_BONES_MARKET_COMPARISON_V0",
+  "purpose": "Diagnostic comparison of frozen M0 OOF winner probabilities with historical listed UFC market probabilities.",
+  "frozen_m0": {
+    "oof_rows": 5626,
+    "oof_logical_sha256": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c",
+    "probability_column": "logistic_probability",
+    "retraining_allowed": false
+  },
+  "market": {
+    "selected_source": "betmma.tips via theGholland public scraper",
+    "timing_label": "historical_listed_odds_timing_unspecified",
+    "raw_implied_formula": "1 / decimal_odds",
+    "devig_method": "proportional_normalization",
+    "cross_book_aggregation": "not applicable to the selected single listed source",
+    "generic_multi_book_aggregation_if_needed": "median no-vig probability",
+    "external_outcome_column_allowed": false
+  },
+  "matching": {
+    "population_start": "frozen M0 OOF rows only",
+    "name_resolution": "conservative normalized display name to unique canonical fighter_id",
+    "ambiguous_name_policy": "fail_closed",
+    "join_key": ["event_date", "unordered canonical fighter_id pair"],
+    "conflicting_duplicate_policy": "fail_closed",
+    "identical_duplicate_policy": "collapse_deterministically",
+    "orientation": "market probability reoriented to F02/M0 canonical fighter_1"
+  },
+  "fixed_blend": {
+    "m0_weight": 0.5,
+    "market_weight": 0.5,
+    "weight_search_allowed": false
+  },
+  "same_sample_metrics": ["log_loss", "brier", "accuracy", "auc"],
+  "market_calibration": "10 equal-width probability bins plus ECE",
+  "disagreement": {
+    "statistics": ["pearson", "spearman", "mean_absolute_difference", "median_absolute_difference"],
+    "descriptive_buckets": ["<0.05", "0.05-0.10", "0.10-0.15", ">=0.15"],
+    "bucket_outcome_or_profit_analysis_allowed": false
+  },
+  "incremental_information": {
+    "market_only": "target ~ logit(market)",
+    "market_plus_m0": "target ~ logit(market) + logit(M0)",
+    "evaluation": "expanding-year chronological walk-forward over matched rows",
+    "preprocessing": "logit clipping only, fixed at 1e-6; training uses prior matched years only",
+    "random_split_allowed": false,
+    "additional_features_allowed": false,
+    "weight_tuning_allowed": false
+  },
+  "classification_policy": {
+    "MARKET_COMPETITIVE": "M0 is within 0.015 log loss and 0.0075 Brier of market and either fixed blend beats both or chronological M0 addition passes the complementary-information rule.",
+    "MARKET_COMPLEMENTARY": "Chronological market+M0 beats calibrated market-only on aggregate log loss and Brier, improves both in at least half of folds, and the M0 logit coefficient is positive in more folds than negative.",
+    "MARKET_DOMINANT": "No complementary-information rule passes and raw market beats M0 by more than 0.02 log loss and 0.01 Brier.",
+    "MARKET_REDUNDANT": "None of the above; M0 adds no robust incremental evidence under V0.",
+    "INSUFFICIENT_MARKET_DATA": "Used instead of a performance classification if provenance, timing characterization, matching ambiguity, or matched coverage fails the acceptance bar."
+  },
+  "forbidden": [
+    "ROI",
+    "profit",
+    "units",
+    "Kelly",
+    "bet thresholds",
+    "profitable market buckets",
+    "bookmaker selection by outcomes",
+    "M0 feature changes",
+    "M0 retraining",
+    "M1"
+  ]
+}
