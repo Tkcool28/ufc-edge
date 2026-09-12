@@ -174,13 +174,14 @@ class OddsApiReplicationV1Tests(unittest.TestCase):
         with self.assertRaises(MarketDiagnosticError):
             match_and_evaluate(eligible, market)
 
-    def test_no_roi_surface_in_replication_source(self):
+    def test_no_roi_optimization_surface_in_replication_source(self):
         source = Path("src/ufc_edge/market_diagnostics/odds_api_v1.py").read_text().lower()
         runner = Path("tools/market_diagnostics/run_m0_md0r_odds_api_v1.py").read_text().lower()
-        forbidden = ("kelly", "profit", "units", "edge_threshold", "roi")
+        forbidden = ("kelly", "profit", "units", "edge_threshold", "roi_threshold", "optimal_disagreement")
         for token in forbidden:
             self.assertNotIn(token, source)
             self.assertNotIn(token, runner)
+        self.assertIn('"roi_performed": false', runner)
 
 
 if __name__ == "__main__":
