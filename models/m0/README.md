@@ -17,7 +17,7 @@ M0 is the first deliberately simple winner-probability truth test on the frozen 
 2. **M0-B**: one-concept empirical experience baseline. The training fold estimates, with Laplace smoothing, how often the fighter with more prior canonical fights wins. Equal experience returns 0.50.
 3. **M0-C**: deterministic L2 logistic regression on a compact career-state subset.
 
-M0-C uses five governed feature concepts: prior fight count, age at fight, layoff days, career significant-strike accuracy/defense, and career takedown success/defense. Each paired fighter concept is projected to an antisymmetric f1-minus-f2 value after training-fold-only pooled-median imputation, plus an antisymmetric missingness difference. This keeps the linear model invariant to the arbitrary canonical fighter presentation. The model has no intercept.
+M0-C uses five governed feature concepts: prior fight count, age at fight, layoff days, career significant-strike accuracy/defense, and career takedown success/defense. Each paired fighter concept is projected to an antisymmetric f1-minus-f2 value after training-fold-only pooled-median imputation, plus an antisymmetric missingness difference. Training-fold standardization is scale-only (no mean centering), which preserves that antisymmetry. This keeps the linear model invariant to the arbitrary canonical fighter presentation. The model has no intercept.
 
 Shared fight context (weight class, scheduled rounds, title) is retained for predefined slices but intentionally not used as an orientation-direction predictor in M0-C.
 
