@@ -1,6 +1,6 @@
 # M0-MD0 Validation Report V0
 
-**Status:** M0_MARKET_DIAGNOSTIC_V0_COMPLETE  
+**Status:** M0_MARKET_DIAGNOSTIC_V0_COMPLETE
 **Verdict:** **MARKET_COMPLEMENTARY**
 
 ## Frozen input
