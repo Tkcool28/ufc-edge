@@ -44,7 +44,7 @@
   "feature_policy": "Predeclared compact model0-consumer subset; career-only fighter state plus age/layoff. No outcome-driven selection.",
   "preprocessing": {
     "paired_projection": "For each fighter-side pair, fit one pooled training-fold median across both sides, impute each side with that shared median, emit f1-minus-f2 and missing(f1)-missing(f2).",
-    "scaling": "StandardScaler fit on training fold only",
+    "scaling": "StandardScaler(with_mean=false) fit on training fold only; scale-only preserves antisymmetric fighter-swap geometry",
     "categorical_features": "none in M0-C",
     "orientation": "All model inputs are antisymmetric under fighter swap; logistic fit_intercept=false."
   },
