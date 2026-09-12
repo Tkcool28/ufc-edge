@@ -1,7 +1,8 @@
 {
-  "inventory_version": "1.0.0",
+  "inventory_version": "1.1.1",
   "baseline_main": "d57038afcd356db0b76d2ce88c54ab5d626a6095",
   "pr30_merge_commit": "d57038afcd356db0b76d2ce88c54ab5d626a6095",
+  "f02_base_main": "a672ac2022c49aa70aecdda9727862cf0554b0d2",
   "authoritative_contract": [
     "features/FEATURE_CONTRACT.md",
     "features/feature_catalog.yaml",
@@ -18,31 +19,41 @@
     "features/migrations/feature_migrations.json",
     "features/FEATURE_GOVERNANCE.md"
   ],
+  "historical_replay": [
+    "features/f02/README.md",
+    "features/f02/replay_contract_v1.json",
+    "features/f02/target_contract_v1.json",
+    "features/f02/F02_PREDICTOR_REPLAY_V1_COMPLETE.json"
+  ],
   "implementation": [
     "src/ufc_edge/features/aggregations.py",
     "src/ufc_edge/features/history.py",
     "src/ufc_edge/features/state.py",
     "src/ufc_edge/features/materializer.py",
     "src/ufc_edge/features/elapsed_exposure.py",
-    "src/ufc_edge/features/governance.py"
+    "src/ufc_edge/features/governance.py",
+    "src/ufc_edge/features/replay.py"
   ],
   "tools": [
     "tools/features/materialize_v1.py",
     "tools/features/audit_elapsed_exposure_v1.py",
-    "tools/features/generate_feature_reference.py"
+    "tools/features/generate_feature_reference.py",
+    "tools/features/replay_f02.py"
   ],
   "tests": [
     "tests/features/test_feature_contract.py",
     "tests/features/test_v1_materializer.py",
     "tests/features/test_v1_target_guard.py",
     "tests/features/test_elapsed_exposure.py",
-    "tests/features/test_feature_governance.py"
+    "tests/features/test_feature_governance.py",
+    "tests/features/test_f02_replay.py"
   ],
   "feature_workflows": [
     ".github/workflows/f00-feature-contract.yml",
     ".github/workflows/f01-v1-materializer.yml",
     ".github/workflows/elapsed-exposure-normalization-v1.yml",
-    ".github/workflows/feature-governance-v1.yml"
+    ".github/workflows/feature-governance-v1.yml",
+    ".github/workflows/f02-historical-predictor-replay-v1.yml"
   ],
   "provenance": [
     "provenance/data_phase_freeze_v0.json",
@@ -65,7 +76,7 @@
     "features/provenance/",
     "features/workflows/archive/"
   ],
-  "runtime_artifact_policy": "No historical replay matrix, run directory, model output, or feature store is authoritative or newly committed by governance V1.",
+  "runtime_artifact_policy": "F02 full replay Parquet matrices, run directories, model outputs, and feature stores are reproducible runtime artifacts and are not committed. Small contracts/docs and the F02 freeze identity manifest are committed.",
   "disagreements_found": [
     {
       "location": "features/README.md",
@@ -75,7 +86,17 @@
     {
       "location": "feature count handoff",
       "baseline_issue": "Expected 104 active V1 names can be confused with catalog-declared round-specific expansion.",
-      "resolution": "Inventory now distinguishes 104 F01-selected values from 164 catalog-declared active variants."
+      "resolution": "Inventory distinguishes 104 F01-selected values from 164 catalog-declared active variants."
+    },
+    {
+      "location": "features/README.md and repository inventory",
+      "baseline_issue": "Governance V1 inventory predated F02 and still described historical replay as a future milestone.",
+      "resolution": "Added the F02 replay contracts, implementation, tool, tests, workflow, freeze identity, and runtime-artifact policy without changing feature semantics."
+    },
+    {
+      "location": "F02 pre-review replay row schema",
+      "baseline_issue": "The initial F02 row duplicated scheduled_rounds, title_bout, and weight_class under both oriented fighter namespaces, producing 203 predictors.",
+      "resolution": "F02 now retains 96 fighter-specific values per side, represents scheduled_rounds/title_bout/weight_class once as shared fight context, and keeps five matchup interactions, producing 200 predictors without changing F01 semantics."
     }
   ]
 }

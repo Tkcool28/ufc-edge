@@ -1,0 +1,238 @@
+name: F02 Historical Predictor Replay V1
+
+on:
+  push:
+    branches: [feat/f02-historical-predictor-replay-v1]
+  pull_request:
+    branches: [main]
+    paths:
+      - 'features/f02/**'
+      - 'src/ufc_edge/features/replay.py'
+      - 'tools/features/replay_f02.py'
+      - 'tests/features/test_f02_replay.py'
+      - '.github/workflows/f02-historical-predictor-replay-v1.yml'
+      - '.gitignore'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install replay-only storage and optimization dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pyarrow==17.0.0
+
+      - name: Parse feature Python sources
+        shell: bash
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          paths = sorted(Path('src/ufc_edge/features').glob('*.py')) + sorted(Path('tools/features').glob('*.py'))
+          for path in paths:
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+          print(f'parsed {len(paths)} feature Python files')
+          PY
+
+      - name: Validate F00 contract and feature governance
+        run: |
+          python -m ufc_edge.features.contract
+          python -m ufc_edge.features.governance
+          python tools/features/generate_feature_reference.py --check
+
+      - name: Run F01 point-in-time tests
+        run: python -m unittest discover -s tests/features -p 'test_v1*.py' -v
+
+      - name: Run focused F02 replay tests
+        run: python -m unittest discover -s tests/features -p 'test_f02_replay.py' -v
+
+      - name: Inspect F02 universe and schema
+        run: python tools/features/replay_f02.py inspect
+
+      - name: Prove optimized/reference exact equivalence
+        run: python tools/features/replay_f02.py equivalence --equivalence-targets 12
+
+      - name: Bounded real 2024 replay
+        run: |
+          python tools/features/replay_f02.py bounded \
+            --start-year 2024 --end-year 2024 --limit 300 \
+            --output-dir "$RUNNER_TEMP/f02-bounded-a" \
+            --attach-targets
+
+      - name: Deterministic bounded rerun
+        run: |
+          python tools/features/replay_f02.py bounded \
+            --start-year 2024 --end-year 2024 --limit 300 \
+            --output-dir "$RUNNER_TEMP/f02-bounded-b" \
+            --attach-targets
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import os
+          root = Path(os.environ['RUNNER_TEMP'])
+          a = json.loads((root/'f02-bounded-a'/'summary.json').read_text())
+          b = json.loads((root/'f02-bounded-b'/'summary.json').read_text())
+          keys = ('predictor_logical_sha256', 'predictor_manifest_sha256')
+          for key in keys:
+              if a[key] != b[key]:
+                  raise SystemExit(f'determinism failure {key}: {a[key]} != {b[key]}')
+          ta = a['target_summary']
+          tb = b['target_summary']
+          if ta['target_logical_sha256'] != tb['target_logical_sha256']:
+              raise SystemExit('target attachment determinism failure')
+          print(json.dumps({key:a[key] for key in keys}, indent=2, sort_keys=True))
+          print('target_logical_sha256', ta['target_logical_sha256'])
+          PY
+
+      - name: Check whitespace
+        run: git diff --check origin/main...HEAD
+
+      - name: Verify frozen DATA unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            data/canonical/v0 \
+            schemas/canonical_data_contract_v0.json \
+            schemas/canonical_data_contract_v0.md \
+            schemas/source_field_map_v0.json \
+            schemas/source_precedence_v0.json \
+            provenance/data_phase_freeze_v0.json
+
+      - name: Verify H00 and H01 unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- \
+            handicap \
+            src/ufc_edge/handicap \
+            src/ufc_edge/handicap_bridge \
+            tests/handicap \
+            tests/handicap_bridge \
+            .github/workflows/h01-handicap-request.yml
+
+      - name: Reject committed runtime matrices and scratch output
+        shell: bash
+        run: |
+          set -euo pipefail
+          added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
+          bad="$(printf '%s\n' "$added" | grep -E '(^|/)(runs?|output|artifacts|feature_store)/|\.(csv|parquet|feather|prof|log)$' || true)"
+          if [[ -n "$bad" ]]; then
+            printf '%s\n' "$bad"
+            echo 'F02 must not commit runtime matrices, profiling dumps, or scratch output.' >&2
+            exit 1
+          fi
+
+      - name: Verify checkout clean
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(git status --porcelain=v1 --untracked-files=all)"
+          if [[ -n "$status" ]]; then
+            printf '%s\n' "$status"
+            echo 'F02 validation checkout is not clean.' >&2
+            exit 1
+          fi
+
+  full-replay:
+    if: >-
+      (github.event_name == 'pull_request' &&
+       github.event.action == 'opened' &&
+       contains(github.event.pull_request.body, '<!-- F02_FULL_REPLAY=1 -->')) ||
+      (github.event_name == 'push' &&
+       contains(github.event.head_commit.message, '[f02-full-replay]'))
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install replay-only storage and optimization dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pyarrow==17.0.0
+
+      - name: Full canonical F02 replay and target attachment
+        run: |
+          python tools/features/replay_f02.py full \
+            --output-dir "$RUNNER_TEMP/f02-full" \
+            --attach-targets
+
+      - name: Publish compact full replay report to job log
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          root = Path(os.environ["RUNNER_TEMP"]) / "f02-full"
+          summary = json.loads((root / "summary.json").read_text())
+          manifest = json.loads((root / "manifest.json").read_text())
+          targets = json.loads((root / "target_manifest.json").read_text())
+          deterministic = manifest["deterministic"]
+          target_det = targets["deterministic"]
+          compact = {
+              "status": summary["status"],
+              "code_commit": summary["code_commit"],
+              "canonical_total_fights": summary["canonical_total_fights"],
+              "selected_targets": summary["selected_targets"],
+              "predictor_rows": summary["predictor_rows"],
+              "predictor_columns": summary["predictor_columns"],
+              "table_columns": summary["table_columns"],
+              "f01_materialized_values": summary["f01_materialized_values"],
+              "years": summary["years"],
+              "promotions": summary["promotions"],
+              "runtime_seconds": summary["runtime_seconds"],
+              "peak_rss_kib": summary["peak_rss_kib"],
+              "predictor_parquet_bytes": summary["predictor_parquet_bytes"],
+              "target_parquet_bytes": summary["target_parquet_bytes"],
+              "predictor_logical_sha256": summary["predictor_logical_sha256"],
+              "predictor_manifest_sha256": summary["predictor_manifest_sha256"],
+              "schema_sha256": deterministic["replay_schema"]["schema_sha256"],
+              "target_contract_sha256": deterministic["target_contract"]["contract_sha256"],
+              "target_logical_sha256": target_det["target_logical_sha256"],
+              "binary_label_eligible_rows": target_det["binary_label_eligible_rows"],
+              "target_state_counts": target_det["target_state_counts"],
+              "excluded_target_count": deterministic["excluded_target_count"],
+              "chunks": deterministic["chunks"],
+              "optimized_reference_equivalence": deterministic["optimized_reference_equivalence"],
+              "coverage_sha256": deterministic["coverage_sha256"],
+              "feature_contract_version": deterministic["feature_contract_version"],
+              "governance_version": deterministic["governance_version"],
+              "data_contract_version": deterministic["data_contract_version"],
+              "feature_catalog_sha256": deterministic["feature_catalog_sha256"],
+              "feature_governance_sha256": deterministic["feature_governance_sha256"],
+              "canonical_manifest_sha256": deterministic["canonical_manifest_sha256"],
+              "data_freeze_sha256": deterministic["data_freeze_sha256"],
+              "ruleset_registry_sha256": deterministic["ruleset_registry_sha256"],
+          }
+          print("F02_FULL_SUMMARY_JSON=" + json.dumps(compact, sort_keys=True, separators=(",", ":")))
+          PY
+
+      - name: Upload F02 full replay artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02-full
+          if-no-files-found: error
+          retention-days: 30

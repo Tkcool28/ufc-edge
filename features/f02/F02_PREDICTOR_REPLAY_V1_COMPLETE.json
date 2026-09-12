@@ -1,0 +1,204 @@
+{
+  "status": "F02_PREDICTOR_REPLAY_V1_COMPLETE",
+  "freeze_version": "1.0.1",
+  "replay_schema_version": "1.0.1",
+  "target_contract_version": "1.0.0",
+  "repository": "Tkcool28/ufc-edge",
+  "base_main": "a672ac2022c49aa70aecdda9727862cf0554b0d2",
+  "prior_reviewed_head": "fde0ef6a69ccbc1afe47c759d87a7b43b43f6b6a",
+  "remediation": "F02 shared fight-context schema cleanup: scheduled_rounds, title_bout, and weight_class are represented once per fight instead of duplicated across f1/f2.",
+  "implementation_head": "077954fb937cb4b9493a4941874446f5b303c363",
+  "validated_ci_checkout": "077954fb937cb4b9493a4941874446f5b303c363",
+  "validated_source_tree": "893754f4f55b974f6079d02c525ebecf9a6392c9",
+  "ci_checkout_note": "Authoritative remediation full replay ran from the exact branch push commit, not a synthetic pull-request merge checkout.",
+  "pull_request": 32,
+  "github_actions": {
+    "workflow_run_id": 34673108776,
+    "validate_job_id": 103498092078,
+    "full_replay_job_id": 103498359442,
+    "artifact": {
+      "id": 10291736758,
+      "name": "f02-predictor-replay-v1",
+      "zip_sha256": "267a582330d76e0cfe04c63bf926346efc7cad29c5f2c359de159231f0e2d5af",
+      "zip_bytes": 25412765,
+      "created_at_utc": "2026-09-12T04:33:24Z",
+      "expires_at_utc": "2026-10-12T04:33:21Z",
+      "retention_note": "Runtime matrices are intentionally not committed; the artifact is reproducibly regenerated from the frozen contracts and source tree."
+    }
+  },
+  "feature_identity": {
+    "feature_contract_version": "0.1.2-draft",
+    "governance_version": "1.0.0",
+    "feature_catalog_sha256": "e08d2ffe34216f93aeeb23dc205ed498e57c691fbcf8dcfa56b9e1cf9399223a",
+    "feature_governance_sha256": "82e0c4611f4420082be7585d32642b9d708851ae9f8f1a7381190d8b88dab848",
+    "durable_concept_count": 60,
+    "active_v1_concept_count": 24,
+    "f01_materialized_value_count": 104,
+    "fighter_specific_value_count": 96,
+    "shared_fight_context_value_count": 3,
+    "shared_fight_context_concepts": [
+      "scheduled_rounds",
+      "title_bout",
+      "weight_class"
+    ],
+    "matchup_interaction_value_count": 5,
+    "row_predictor_count": 200
+  },
+  "data_identity": {
+    "data_contract_version": "0.4.0-draft",
+    "data_freeze_sha256": "d938a48f5b620a08a3255eda7172f5ecdbb3806bb9e6726f18daec2c00b83f70",
+    "canonical_manifest_sha256": "e68bccf4b1878263c0358dec3fc42390c59ea513650b09956f73f2d5e08af1f8",
+    "ruleset_registry_sha256": "9f200da69b7311ba270b39ea0120a429fd98d6623c49b823ee828c59f279f9ea"
+  },
+  "replay_contract": {
+    "target_universe": "all canonical fights with resolvable distinct canonical participants",
+    "target_ordering": "event_date,event_id,fight_id",
+    "prediction_cutoff": "target event date at 00:00:00Z; F01 history requires event_date < cutoff_date",
+    "same_day_policy": "exclude every same-date fight; never infer bout order",
+    "orientation": "F00/F01 deterministic canonical fighter orientation",
+    "consumer_selection": "broad active V1 surface; model-specific selection deferred",
+    "schema_roles": "identity/provenance is non-predictor except top-level scheduled_rounds; fighter-specific values use f1/f2; shared title_bout/weight_class use ctx__; matchup interactions use mx__",
+    "predictor_discovery": "schema predictor=true",
+    "shared_context_equality_guard": "complete F01 AuditValue projections must match exactly across oriented fighter states or replay fails closed",
+    "chunk_policy": "five-year event-date ranges",
+    "storage": "Parquet with explicit ordered schema; runtime matrices outside git",
+    "predictor_target_separation": "predictor manifest and logical hash are frozen before target attachment"
+  },
+  "schema": {
+    "schema_sha256": "488c96eed4d86a75da8b763c879a65d6b85959393ec7b6c59f7051b0c03836a8",
+    "non_predictor_identity_provenance_columns": 7,
+    "fighter_1_predictors": 96,
+    "fighter_2_predictors": 96,
+    "shared_fight_context_predictors": 3,
+    "matchup_predictors": 5,
+    "predictor_columns": 200,
+    "predictor_table_columns": 207
+  },
+  "reference_equivalence": {
+    "status": "exact_equal",
+    "target_count": 15,
+    "comparison_sha256": "56be6335ea2d0f652e08ea6fdbb37b61e8ba6be85d1bd7178997cb51e63f01e4",
+    "comparison_scope": "complete final F02 predictor rows and F02 audit projections after exact underlying F01 materialization; shared-context equality guard included"
+  },
+  "bounded_replay": {
+    "selected_targets": 300,
+    "predictor_rows": 300,
+    "predictor_columns": 200,
+    "predictor_table_columns": 207,
+    "predictor_parquet_bytes": 591390,
+    "target_parquet_bytes": 598520,
+    "predictor_logical_sha256": "b56f9103fbc3b709749f714b660d63729b9630eb7210c81ff77c8d5d56a035f1",
+    "predictor_manifest_sha256": "fbe3554d75d6b69baddbfbd5cf560420765f5135cea7087d31a8f83a8a6c6489",
+    "target_logical_sha256": "73a495dc62fe7dd5cf55acc998fe838e5422d2474fe4b0bae0920c69d8d8d87f",
+    "binary_label_eligible_rows": 296,
+    "runtime_seconds_first": 20.571951291999994,
+    "runtime_seconds_rerun": 20.631818432000017,
+    "peak_rss_kib": 628824,
+    "deterministic_rerun": "exact logical hashes matched"
+  },
+  "full_replay": {
+    "canonical_fights": 9252,
+    "selected_targets": 9252,
+    "predictor_rows": 9252,
+    "excluded_targets": 0,
+    "year_min": 1994,
+    "year_max": 2026,
+    "promotions": [
+      "Bellator MMA",
+      "One Championship",
+      "UFC"
+    ],
+    "runtime_seconds": 108.60333248100001,
+    "peak_rss_kib": 1083408,
+    "predictor_parquet_bytes": 14215808,
+    "predictor_logical_sha256": "ac55fd6fc1f19be7afac2007fccceb43b5c3f98327554d0c58fbe6cb0b164383",
+    "predictor_manifest_sha256": "27b26736079bba7f5bc811bc96798f35ece36d54f1b0632cbd5e37f57ebd3c07",
+    "coverage_sha256": "bdcf36dd17e1b39a871ab7a667d863bf2d2742d944ddfcc0f8088a27ee288cac"
+  },
+  "chunks": [
+    {
+      "chunk": "1990-1994",
+      "row_count": 31,
+      "logical_sha256": "321101d9d724b37815921e479756f8a8fe25e04595a9293a635851ce818af3e3",
+      "parquet_sha256": "6aa65183b439eb16175235797d6fedd6b5aafeaaceaa3c373ed6d2a4c7c26bc4",
+      "parquet_bytes": 113530
+    },
+    {
+      "chunk": "1995-1999",
+      "row_count": 192,
+      "logical_sha256": "57de3e62d4940550cd0b6695d38cb0a1816a40778981dc265e9299f4dad150d1",
+      "parquet_sha256": "ca1fbfc216b0780bd3becb99aa06cc4cbd536208dfa697bc9f3e9a913f153366",
+      "parquet_bytes": 186258
+    },
+    {
+      "chunk": "2000-2004",
+      "row_count": 216,
+      "logical_sha256": "2c3a8c6462291837a8f2ea0b512fbb3c7f6252faa562d36f1c7df328af3dd35d",
+      "parquet_sha256": "2d59a65bfb0bf63f1b05772a640bdfdc6e5df041c76b2b12f790149b22246d68",
+      "parquet_bytes": 359865
+    },
+    {
+      "chunk": "2005-2009",
+      "row_count": 833,
+      "logical_sha256": "a4ea07c94589400d4b3b734f906dca3a2f5a364be3c9e34b012cf4c85e32b85c",
+      "parquet_sha256": "ad942a03c88ad6fe99d710beace70eec668ca0cc816b7a1c7e3f411d02dc2d86",
+      "parquet_bytes": 1206587
+    },
+    {
+      "chunk": "2010-2014",
+      "row_count": 1958,
+      "logical_sha256": "46494fa70f5a3faaab942f8fb3d43c6012b17261a3140275bee6cf896ec8d177",
+      "parquet_sha256": "af3beccd83ef21ecb405900aba209c0e053ee37cde18edb18fb27f726ab0acd4",
+      "parquet_bytes": 2780057
+    },
+    {
+      "chunk": "2015-2019",
+      "row_count": 2661,
+      "logical_sha256": "3a4ad9e07bdbb8d1c04291f4f497b5b33abbdcc85801407985d0d7fa0580dc72",
+      "parquet_sha256": "b148bf550302e6b4e32bbcc88b345646bb99fbefc626edd28ee71073b235d485",
+      "parquet_bytes": 4108786
+    },
+    {
+      "chunk": "2020-2024",
+      "row_count": 2520,
+      "logical_sha256": "edb3b0ba161366fcf9d31d18875c2cac46d5f613c10e0749256cc0c9a20cf779",
+      "parquet_sha256": "28e68f1811909ee023366270044704da06aad95fb5dc0a468135a5692b426217",
+      "parquet_bytes": 4051385
+    },
+    {
+      "chunk": "2025-2029",
+      "row_count": 841,
+      "logical_sha256": "a949289981d7196710d362bb9efccb3d88c5581b42967b26beeeec30f526c751",
+      "parquet_sha256": "8d0a37f19f5b9ef83bbdd9d5a825e85cfb9cc792b28eb30dd2fe8481d7c5f05b",
+      "parquet_bytes": 1409340
+    }
+  ],
+  "target_attachment": {
+    "target_table_rows": 9252,
+    "binary_label_eligible_rows": 9091,
+    "target_state_counts": {
+      "draw": 68,
+      "no_contest": 93,
+      "win_loss": 9091
+    },
+    "other_or_unknown_rows": 0,
+    "target_parquet_bytes": 13590064,
+    "target_contract_sha256": "fe34f7fd2b70611ec0602d9c9208debf8ec11d7eb8ea1adc0a4104ddb46ffd52",
+    "target_logical_sha256": "02b735aabcb354fa16cd3800f72e5ccd504f5fb6dc9963510987c57438a44956"
+  },
+  "known_limitations": [
+    "DR_EXACT_POSITIONAL_DURATION_V1 remains DATA_REQUIRED / SIMULATOR_REQUIRED and does not block predictor replay.",
+    "Canonical v0 has no governed sex/gender field, so male/female coverage is not inferred.",
+    "Canonical event-date chronology cannot order bouts within the same day/event; all same-date history is excluded.",
+    "Runtime Parquet artifacts are reproducible generated outputs and are not committed to git."
+  ],
+  "semantic_equivalence": {
+    "f01_semantics_changed": false,
+    "predictor_formulas_changed": false,
+    "target_contract_changed": false,
+    "target_universe_changed": false,
+    "frozen_data_changed": false
+  },
+  "next_task": "M0 — empirical baseline / first model-family validation",
+  "next_task_started": false
+}
