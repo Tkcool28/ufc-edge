@@ -169,6 +169,10 @@ def _read_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def validate_model_columns_against_schema(schema: dict[str, Any]) -> None:
+    validate_model_columns_against_schema(schema)
+
+
 def validate_f02_identity(f02_dir: Path) -> dict[str, Any]:
     schema = _read_json(f02_dir / "schema.json")
     manifest = _read_json(f02_dir / "manifest.json")
