@@ -1,0 +1,349 @@
+{
+  "freeze_version": "1.0.0",
+  "status": "M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE",
+  "verdict": "M0_SIGNAL_CONFIRMED",
+  "source": {
+    "base_main": "3d4247e267dbb3a084bdda141c6280379a1ce60d",
+    "evaluation_head": "ca8babf19c095fe9b77a1e350ddd8f435e121713",
+    "github_actions_run_id": 34676508116,
+    "full_validation_job_id": 103507294073,
+    "runtime_artifact_id": 10292502486,
+    "runtime_artifact_zip_sha256": "69e2a4db932ecbfd747a387b708d5107e3d682223d4f608b850a00a605af3be0"
+  },
+  "f02": {
+    "freeze_version": "1.0.1",
+    "replay_schema_version": "1.0.1",
+    "predictor_logical_sha256": "ac55fd6fc1f19be7afac2007fccceb43b5c3f98327554d0c58fbe6cb0b164383",
+    "schema_sha256": "488c96eed4d86a75da8b763c879a65d6b85959393ec7b6c59f7051b0c03836a8",
+    "target_contract_sha256": "fe34f7fd2b70611ec0602d9c9208debf8ec11d7eb8ea1adc0a4104ddb46ffd52",
+    "target_logical_sha256": "02b735aabcb354fa16cd3800f72e5ccd504f5fb6dc9963510987c57438a44956"
+  },
+  "population": {
+    "total_f02_rows": 9252,
+    "ufc_rows": 8769,
+    "binary_eligible_ufc_rows": 8617,
+    "modeling_era_start": "2010-01-01",
+    "modeling_era_rows": 7367,
+    "oof_rows": 5626,
+    "fighter_1_win_rate_all_ufc_binary": 0.49239874666357203,
+    "fighter_1_win_rate_modeling_era": 0.49518121351975025
+  },
+  "feature_contract": {
+    "durable_feature_ids": [
+      "FS_PRIOR_FIGHT_COUNT_V1",
+      "CTX_AGE_AT_FIGHT_V1",
+      "CTX_LAYOFF_DAYS_V1",
+      "FS_SIG_STRIKE_EFFICIENCY_V1",
+      "FS_TAKEDOWN_CONVERSION_V1"
+    ],
+    "source_column_count": 14,
+    "projected_dimension_count": 14,
+    "preprocessing": "Pooled training-fold median per fighter-side pair; antisymmetric value difference plus missingness difference; StandardScaler(with_mean=false); fit_intercept=false."
+  },
+  "aggregate": {
+    "naive": {
+      "log_loss": 0.6931471805599454,
+      "brier": 0.25,
+      "accuracy": 0.4952008531816566,
+      "auc": 0.5
+    },
+    "empirical": {
+      "log_loss": 0.6948878530500814,
+      "brier": 0.25086853426767236,
+      "accuracy": 0.4880910060433701,
+      "auc": 0.494699794242844
+    },
+    "logistic": {
+      "log_loss": 0.6641703423957961,
+      "brier": 0.2358933842952002,
+      "accuracy": 0.5943832207607537,
+      "auc": 0.6348333720918475
+    }
+  },
+  "fold_logistic": [
+    {
+      "fold": "2015",
+      "rows": 464,
+      "log_loss": 0.6704770995140443,
+      "brier": 0.23903305667451485,
+      "accuracy": 0.5625,
+      "auc": 0.612945273075992
+    },
+    {
+      "fold": "2016",
+      "rows": 479,
+      "log_loss": 0.6650023732844859,
+      "brier": 0.23640657442201007,
+      "accuracy": 0.592901878914405,
+      "auc": 0.6288188976377953
+    },
+    {
+      "fold": "2017",
+      "rows": 444,
+      "log_loss": 0.6691399564238687,
+      "brier": 0.2382507740654058,
+      "accuracy": 0.5968468468468469,
+      "auc": 0.6241889225637166
+    },
+    {
+      "fold": "2018",
+      "rows": 469,
+      "log_loss": 0.667169789498159,
+      "brier": 0.23733639802417708,
+      "accuracy": 0.5906183368869936,
+      "auc": 0.6305930753267557
+    },
+    {
+      "fold": "2019",
+      "rows": 503,
+      "log_loss": 0.6801276095639771,
+      "brier": 0.24320526306795673,
+      "accuracy": 0.5725646123260437,
+      "auc": 0.6063792721168161
+    },
+    {
+      "fold": "2020",
+      "rows": 440,
+      "log_loss": 0.6664025591259047,
+      "brier": 0.23691649090426595,
+      "accuracy": 0.5977272727272728,
+      "auc": 0.6297169811320754
+    },
+    {
+      "fold": "2021",
+      "rows": 490,
+      "log_loss": 0.6618985566409087,
+      "brier": 0.23480361853995305,
+      "accuracy": 0.5938775510204082,
+      "auc": 0.6416955478539056
+    },
+    {
+      "fold": "2022",
+      "rows": 503,
+      "log_loss": 0.6591334288127498,
+      "brier": 0.23335760719500254,
+      "accuracy": 0.610337972166998,
+      "auc": 0.650532521871434
+    },
+    {
+      "fold": "2023",
+      "rows": 500,
+      "log_loss": 0.6579269438627966,
+      "brier": 0.23312526116228707,
+      "accuracy": 0.604,
+      "auc": 0.6414725890356142
+    },
+    {
+      "fold": "2024",
+      "rows": 504,
+      "log_loss": 0.6643299812914296,
+      "brier": 0.2363600605986565,
+      "accuracy": 0.5793650793650794,
+      "auc": 0.619934455158505
+    },
+    {
+      "fold": "2025",
+      "rows": 501,
+      "log_loss": 0.6597030618804094,
+      "brier": 0.23330576992307422,
+      "accuracy": 0.6087824351297405,
+      "auc": 0.6550352933661248
+    },
+    {
+      "fold": "2026",
+      "rows": 329,
+      "log_loss": 0.6428307776195376,
+      "brier": 0.22586484365425674,
+      "accuracy": 0.6352583586626139,
+      "auc": 0.681871994080651
+    }
+  ],
+  "stability": {
+    "folds_improving_both_primary_metrics_vs_naive": 12,
+    "outer_fold_count": 12,
+    "orientation_max_abs_error": 2.220446049250313e-16
+  },
+  "calibration": {
+    "expected_calibration_error": 0.014648158181517457,
+    "bins": [
+      {
+        "bin": "0.00-0.20",
+        "rows": 12,
+        "mean_predicted": 0.1811778594587735,
+        "actual_win_rate": 0.3333333333333333
+      },
+      {
+        "bin": "0.20-0.30",
+        "rows": 174,
+        "mean_predicted": 0.26640281510244757,
+        "actual_win_rate": 0.22413793103448276
+      },
+      {
+        "bin": "0.30-0.40",
+        "rows": 879,
+        "mean_predicted": 0.3597360221865322,
+        "actual_win_rate": 0.35267349260523323
+      },
+      {
+        "bin": "0.40-0.45",
+        "rows": 805,
+        "mean_predicted": 0.42612291823797066,
+        "actual_win_rate": 0.41987577639751555
+      },
+      {
+        "bin": "0.45-0.50",
+        "rows": 956,
+        "mean_predicted": 0.4753534889916219,
+        "actual_win_rate": 0.46338912133891214
+      },
+      {
+        "bin": "0.50-0.55",
+        "rows": 996,
+        "mean_predicted": 0.5250849668894877,
+        "actual_win_rate": 0.5070281124497992
+      },
+      {
+        "bin": "0.55-0.60",
+        "rows": 804,
+        "mean_predicted": 0.5734581967745082,
+        "actual_win_rate": 0.5833333333333334
+      },
+      {
+        "bin": "0.60-0.70",
+        "rows": 818,
+        "mean_predicted": 0.6398994467282171,
+        "actual_win_rate": 0.6552567237163814
+      },
+      {
+        "bin": "0.70-0.80",
+        "rows": 176,
+        "mean_predicted": 0.7320840804021096,
+        "actual_win_rate": 0.7897727272727273
+      },
+      {
+        "bin": "0.80-1.00",
+        "rows": 6,
+        "mean_predicted": 0.8193405024342525,
+        "actual_win_rate": 0.5
+      }
+    ]
+  },
+  "slices": {
+    "history_depth": {
+      "zero_history": {
+        "rows": 1091,
+        "log_loss": 0.6716634057321627,
+        "brier": 0.23935639932705935,
+        "accuracy": 0.5875343721356554,
+        "auc": 0.6189961551151782
+      },
+      "sparse_history": {
+        "rows": 1578,
+        "log_loss": 0.6591128408627168,
+        "brier": 0.23357931428474396,
+        "accuracy": 0.6020278833967047,
+        "auc": 0.6453341517340669
+      },
+      "established_history": {
+        "rows": 2957,
+        "log_loss": 0.6641046695243802,
+        "brier": 0.23585058858222815,
+        "accuracy": 0.5928305715251945,
+        "auc": 0.6357154948780477
+      }
+    },
+    "fight_length": {
+      "3_round": {
+        "rows": 5073,
+        "log_loss": 0.6639645858268507,
+        "brier": 0.23579408982538455,
+        "accuracy": 0.5953084959589986,
+        "auc": 0.6353855408203234
+      },
+      "5_round": {
+        "rows": 553,
+        "log_loss": 0.6660578705590142,
+        "brier": 0.23680427189985656,
+        "accuracy": 0.5858951175406871,
+        "auc": 0.6285923868905714
+      }
+    },
+    "title": {
+      "non_title": {
+        "rows": 5386,
+        "log_loss": 0.6642947736636307,
+        "brier": 0.23595777984256605,
+        "accuracy": 0.5943186037875975,
+        "auc": 0.6343237190625121
+      },
+      "title": {
+        "rows": 240,
+        "log_loss": 0.6613778973601409,
+        "brier": 0.23444824088639915,
+        "accuracy": 0.5958333333333333,
+        "auc": 0.6402252502780867
+      }
+    },
+    "notable_weak_slice": {
+      "weight_class": "Light Heavyweight",
+      "rows": 412,
+      "log_loss": 0.7011651860989155,
+      "brier": 0.25353343238672016,
+      "accuracy": 0.5242718446601942,
+      "auc": 0.5458726415094339
+    }
+  },
+  "coefficient_stability": {
+    "prior_fight_count_diff": {
+      "mean": 0.08097502303499732,
+      "positive_folds": 12,
+      "negative_folds": 0
+    },
+    "age_at_fight_diff": {
+      "mean": -0.34548085542631296,
+      "positive_folds": 0,
+      "negative_folds": 12
+    },
+    "sig_strike_accuracy_career_diff": {
+      "mean": 0.13862890709576134,
+      "positive_folds": 12,
+      "negative_folds": 0
+    },
+    "sig_strike_defense_career_diff": {
+      "mean": 0.25087696230944107,
+      "positive_folds": 12,
+      "negative_folds": 0
+    },
+    "takedown_defense_career_diff": {
+      "mean": 0.0824413020615726,
+      "positive_folds": 12,
+      "negative_folds": 0
+    },
+    "layoff_days_diff": {
+      "mean": -0.01551707595380078,
+      "positive_folds": 4,
+      "negative_folds": 8
+    },
+    "takedown_success_career_diff": {
+      "mean": -0.006631943875849443,
+      "positive_folds": 3,
+      "negative_folds": 9
+    }
+  },
+  "oof": {
+    "rows": 5626,
+    "logical_sha256": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c"
+  },
+  "limitations": [
+    "M0 is validation-only; no production model is created.",
+    "The broad 200-predictor F02 surface is intentionally not consumed by M0.",
+    "2026 is a partial latest-year fold ending 2026-08-15 in frozen F02.",
+    "External-history target slice is not reconstructed because the F02 predictor table does not carry that row-level flag.",
+    "Tiny extreme calibration bins must not be overinterpreted.",
+    "Light Heavyweight is a materially weak predefined slice for this compact M0."
+  ],
+  "self_review": {
+    "question": "Did M0 remain simple enough that poor performance would be interpretable?",
+    "answer": "YES"
+  }
+}
