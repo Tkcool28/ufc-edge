@@ -1,7 +1,7 @@
 # Feature Repository Inventory — Governance V1 + F02
 
-Governance baseline main: `d57038afcd356db0b76d2ce88c54ab5d626a6095`  
-PR #30 merge commit: `d57038afcd356db0b76d2ce88c54ab5d626a6095`  
+Governance baseline main: `d57038afcd356db0b76d2ce88c54ab5d626a6095`
+PR #30 merge commit: `d57038afcd356db0b76d2ce88c54ab5d626a6095`
 F02 base main after PR #31: `a672ac2022c49aa70aecdda9727862cf0554b0d2`
 
 This is the human-readable repository-surface inventory paired with `repository_inventory.json`.
