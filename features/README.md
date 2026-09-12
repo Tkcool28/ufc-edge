@@ -22,10 +22,10 @@ Verified governed baseline after PR #31:
 - 60 durable feature concepts in the shared catalog;
 - 24 active V1 concepts;
 - 104 F01-selected values;
-- 99 fighter-state/context values + 5 matchup-interaction values;
+- 99 non-matchup F01 values (96 fighter-specific + 3 shared fight-context) + 5 matchup-interaction values;
 - 164 catalog-declared active variants when round-specific declarations are included.
 
-F02 expands the literal governed F01 matchup surface across both oriented fighters: 99 fighter/context values per side plus 5 matchup interactions = **203 row-level predictor columns**. It does not create model-private feature definitions.
+F02 preserves semantic ownership instead of blindly duplicating the non-matchup surface: 96 fighter-specific values per side + 3 shared fight-context values represented once + 5 matchup interactions = **200 row-level predictor columns**. `scheduled_rounds` remains top-level and is the single model-eligible scheduled-rounds context value; `title_bout` and `weight_class` are `ctx__` predictors. It does not create model-private feature definitions.
 
 The 104 vs 164 counts are intentionally different. F00 declares possible round-specific variants; F01 currently emits the narrower reviewed 104-value surface.
 
