@@ -1,6 +1,6 @@
 # M0 Empirical UFC Winner Baseline V1 — Validation Report
 
-**Status:** M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE  
+**Status:** M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE
 **Verdict:** **M0_SIGNAL_CONFIRMED**
 
 ## Dataset
@@ -93,9 +93,9 @@ Zero-history means no prior canonical history for at least one fighter; it is **
 
 ### Fight length and title
 
-Three-round fights: log loss 0.66396, Brier 0.23579, N=5,073.  
-Five-round fights: log loss 0.66606, Brier 0.23680, N=553.  
-Non-title: log loss 0.66429, Brier 0.23596, N=5,386.  
+Three-round fights: log loss 0.66396, Brier 0.23579, N=5,073.
+Five-round fights: log loss 0.66606, Brier 0.23680, N=553.
+Non-title: log loss 0.66429, Brier 0.23596, N=5,386.
 Title: log loss 0.66138, Brier 0.23445, N=240.
 
 ### Important weak slice
