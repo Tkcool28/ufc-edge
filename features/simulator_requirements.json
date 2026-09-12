@@ -27,7 +27,7 @@
       "feature_ids": [
         "FS_TAKEDOWN_PRESSURE_V1",
         "FS_TAKEDOWN_CONVERSION_V1",
-        "SIM_SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1"
+        "SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1"
       ]
     },
     {
@@ -71,7 +71,7 @@
       "feature_ids": [
         "FS_KNOCKDOWN_RATE_V1",
         "FS_KNOCKDOWN_EFFICIENCY_V1",
-        "SIM_SIM_KNOCKDOWN_HAZARD_PROXY_V1"
+        "SIM_KNOCKDOWN_HAZARD_PROXY_V1"
       ]
     },
     {
@@ -79,7 +79,7 @@
       "availability": "FUTURE_DERIVATION",
       "feature_ids": [
         "FS_LATE_ROUND_PACE_RATIO_V1",
-        "SIM_SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1"
+        "SIM_FATIGUE_PERSISTENCE_MULTIPLIER_V1"
       ]
     }
   ]
