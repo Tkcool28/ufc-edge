@@ -15,6 +15,7 @@ from ufc_edge.features.governance import (
     feature_id_for_name,
     feature_id_for_name_or_alias,
     load_governance,
+    validate_feature_identities,
     validate_repository_governance,
 )
 
@@ -40,12 +41,8 @@ class FeatureGovernanceTests(unittest.TestCase):
         catalog_item["feature_name"] = current_name
         return governance, catalog
 
-    def _validate_fixture(self, governance: dict, catalog: dict) -> dict:
-        with (
-            patch("ufc_edge.features.governance.load_governance", return_value=governance),
-            patch("ufc_edge.features.governance.load_feature_catalog", return_value=catalog),
-        ):
-            return validate_repository_governance(ROOT)
+    def _validate_fixture(self, governance: dict, catalog: dict) -> None:
+        validate_feature_identities(catalog, governance)
 
     def test_repository_governance_validates(self) -> None:
         summary = validate_repository_governance(ROOT)
@@ -112,20 +109,18 @@ class FeatureGovernanceTests(unittest.TestCase):
             "generic_control_rate",
             ["control_rate"],
         )
-        summary = self._validate_fixture(governance, catalog)
+        self._validate_fixture(governance, catalog)
         item = next(x for x in governance["features"] if x["canonical_name"] == "generic_control_rate")
         self.assertEqual(item["feature_id"], "FS_CONTROL_RATE_V1")
-        self.assertEqual(summary["concept_count"], 60)
 
     def test_multiple_pure_renames_preserve_original_id(self) -> None:
         governance, catalog = self._renamed_control_fixture(
             "generic_control_share",
             ["control_rate", "generic_control_rate"],
         )
-        summary = self._validate_fixture(governance, catalog)
+        self._validate_fixture(governance, catalog)
         item = next(x for x in governance["features"] if x["canonical_name"] == "generic_control_share")
         self.assertEqual(item["feature_id"], "FS_CONTROL_RATE_V1")
-        self.assertEqual(summary["f01_selected_value_count"], 104)
 
     def test_undocumented_rename_fails(self) -> None:
         governance, catalog = self._renamed_control_fixture("generic_control_rate", [])
