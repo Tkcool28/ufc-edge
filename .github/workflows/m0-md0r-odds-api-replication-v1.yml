@@ -1,0 +1,122 @@
+name: M0 The Odds API Market Diagnostic Replication V1
+
+on:
+  workflow_dispatch:
+    inputs:
+      authorized_pull:
+        description: 'Explicit authorization to spend historical Odds API credits'
+        required: true
+        default: false
+        type: boolean
+      approved_credit_ceiling:
+        description: 'Hard approved credit ceiling; must equal 3000'
+        required: true
+        default: '3000'
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  replicate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - name: Reject unauthorized dispatch before checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ inputs.authorized_pull }}" = "true"
+          test "${{ inputs.approved_credit_ceiling }}" = "3000"
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install bounded diagnostic dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2 requests==2.32.3
+
+      - name: Run mocked/unit guardrail tests
+        run: python -m unittest discover -s tests/market_diagnostics -p 'test_odds_api_replication_v1.py' -v
+
+      - name: Download authoritative frozen F02 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download authoritative frozen M0 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: m0-empirical-winner-baseline-v1
+          path: ${{ runner.temp }}/m0
+          repository: Tkcool28/ufc-edge
+          run-id: 34676508116
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Historical Odds API pull and frozen replication
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$THE_ODDS_API_KEY"
+          python tools/market_diagnostics/run_m0_md0r_odds_api_v1.py \
+            --m0-dir "${{ runner.temp }}/m0" \
+            --f02-dir "${{ runner.temp }}/f02" \
+            --output-dir "${{ runner.temp }}/m0-md0r" \
+            --api-key "$THE_ODDS_API_KEY" \
+            --authorized-pull "true" \
+            --approved-credit-ceiling 3000
+
+      - name: Verify no API key leaked into generated artifacts
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])/"m0-md0r"
+          secret=os.environ["THE_ODDS_API_KEY"].encode()
+          for path in root.rglob("*"):
+              if path.is_file() and secret in path.read_bytes():
+                  raise SystemExit(f"secret leaked into {path}")
+          print("no API key present in generated artifacts")
+          PY
+
+      - name: Upload runtime replication artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: m0-md0r-odds-api-replication-v1
+          path: ${{ runner.temp }}/m0-md0r
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Commit compact provenance and results only
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p market_diagnostics/m0_md0r/reports
+          cp "${RUNNER_TEMP}/m0-md0r/reports/retrieval_manifest.json" market_diagnostics/m0_md0r/reports/
+          cp "${RUNNER_TEMP}/m0-md0r/reports/matching_report.json" market_diagnostics/m0_md0r/reports/
+          cp "${RUNNER_TEMP}/m0-md0r/reports/diagnostic_result.json" market_diagnostics/m0_md0r/reports/
+          git add market_diagnostics/m0_md0r/reports
+          if git diff --cached --quiet; then
+            echo "No compact result changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "market diagnostic: freeze Odds API replication result"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
