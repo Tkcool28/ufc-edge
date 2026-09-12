@@ -1,0 +1,291 @@
+{
+  "authorized_expected_credits": 2680,
+  "correlation": {
+    "distribution": {
+      "0.05-0.10": 525,
+      "0.10-0.15": 475,
+      "<0.05": 575,
+      ">=0.15": 807
+    },
+    "mean_absolute_difference": 0.12476482270737724,
+    "median_absolute_difference": 0.10888466540215302,
+    "pearson": 0.5367662051418497,
+    "spearman": 0.5261887941514919
+  },
+  "coverage_pct": 0.7602936482604532,
+  "eligible_m0_rows": 3133,
+  "guardrails": {
+    "features_changed": false,
+    "fixed_blend_weight": 0.5,
+    "m0_changed_or_retrained": false,
+    "market_used_only_diagnostically": true,
+    "roi_performed": false,
+    "thresholds_optimized": false
+  },
+  "incremental_test": {
+    "evaluation_rows": 2201,
+    "fold_count": 6,
+    "folds": [
+      {
+        "fold_year": "2021",
+        "market_only": {
+          "accuracy": 0.6246056782334385,
+          "auc": 0.6920330327934254,
+          "brier": 0.2227282832473961,
+          "log_loss": 0.6361444987075882,
+          "rows": 317
+        },
+        "market_plus_m0": {
+          "accuracy": 0.637223974763407,
+          "auc": 0.6969999202106439,
+          "brier": 0.2211542071530144,
+          "log_loss": 0.6325140395828475,
+          "rows": 317
+        },
+        "market_plus_m0_m0_logit_coefficient": 0.20285697336862746,
+        "train_rows": 181,
+        "validation_rows": 317
+      },
+      {
+        "fold_year": "2022",
+        "market_only": {
+          "accuracy": 0.6579572446555819,
+          "auc": 0.7338254548738091,
+          "brier": 0.20863178701490595,
+          "log_loss": 0.6038207798078912,
+          "rows": 421
+        },
+        "market_plus_m0": {
+          "accuracy": 0.669833729216152,
+          "auc": 0.7334642647523589,
+          "brier": 0.20851978242538585,
+          "log_loss": 0.6028639427838048,
+          "rows": 421
+        },
+        "market_plus_m0_m0_logit_coefficient": 0.5114076595363372,
+        "train_rows": 498,
+        "validation_rows": 421
+      },
+      {
+        "fold_year": "2023",
+        "market_only": {
+          "accuracy": 0.6862244897959183,
+          "auc": 0.7462844180225282,
+          "brier": 0.20383175187219782,
+          "log_loss": 0.5930904978757578,
+          "rows": 392
+        },
+        "market_plus_m0": {
+          "accuracy": 0.701530612244898,
+          "auc": 0.7480444305381727,
+          "brier": 0.20330319111607242,
+          "log_loss": 0.591798270873672,
+          "rows": 392
+        },
+        "market_plus_m0_m0_logit_coefficient": 0.429955759839971,
+        "train_rows": 919,
+        "validation_rows": 392
+      },
+      {
+        "fold_year": "2024",
+        "market_only": {
+          "accuracy": 0.6831683168316832,
+          "auc": 0.7526164504716981,
+          "brier": 0.2016875847680968,
+          "log_loss": 0.5882108731584343,
+          "rows": 404
+        },
+        "market_plus_m0": {
+          "accuracy": 0.6955445544554455,
+          "auc": 0.7533657625786163,
+          "brier": 0.20156614731105035,
+          "log_loss": 0.5876533928859359,
+          "rows": 404
+        },
+        "market_plus_m0_m0_logit_coefficient": 0.3976087017521294,
+        "train_rows": 1311,
+        "validation_rows": 404
+      },
+      {
+        "fold_year": "2025",
+        "market_only": {
+          "accuracy": 0.6649874055415617,
+          "auc": 0.7336252856054837,
+          "brier": 0.2106182367608258,
+          "log_loss": 0.6087225222586158,
+          "rows": 397
+        },
+        "market_plus_m0": {
+          "accuracy": 0.672544080604534,
+          "auc": 0.736024371667936,
+          "brier": 0.21021275386977803,
+          "log_loss": 0.6080883580271146,
+          "rows": 397
+        },
+        "market_plus_m0_m0_logit_coefficient": 0.36005730328530616,
+        "train_rows": 1715,
+        "validation_rows": 397
+      },
+      {
+        "fold_year": "2026",
+        "market_only": {
+          "accuracy": 0.7296296296296296,
+          "auc": 0.7962667254005836,
+          "brier": 0.18578495896059177,
+          "log_loss": 0.5535560783947738,
+          "rows": 270
+        },
+        "market_plus_m0": {
+          "accuracy": 0.7444444444444445,
+          "auc": 0.8008920213644625,
+          "brier": 0.1840827452962564,
+          "log_loss": 0.5493289959221987,
+          "rows": 270
+        },
+        "market_plus_m0_m0_logit_coefficient": 0.3266945317509474,
+        "train_rows": 2112,
+        "validation_rows": 270
+      }
+    ],
+    "folds_market_plus_m0_better_both": 6,
+    "folds_market_plus_m0_better_brier": 6,
+    "folds_market_plus_m0_better_log_loss": 6,
+    "m0_logit_coefficient": {
+      "max": 0.5114076595363372,
+      "mean": 0.3714301549222198,
+      "min": 0.20285697336862746,
+      "negative_folds": 0,
+      "positive_folds": 6
+    },
+    "market_only": {
+      "accuracy": 0.6728759654702408,
+      "auc": 0.7419906199425306,
+      "brier": 0.20608816811282152,
+      "log_loss": 0.5984179940099917,
+      "rows": 2201
+    },
+    "market_plus_m0": {
+      "accuracy": 0.6851431167651068,
+      "auc": 0.7436924067774219,
+      "brier": 0.20544165879875004,
+      "log_loss": 0.5967466925960474,
+      "rows": 2201
+    }
+  },
+  "matched_rows": 2382,
+  "matching_report_file": "matching_report.json",
+  "replication_verdict": "MARKET_COMPLEMENTARITY_REPLICATED",
+  "retrieval_manifest_file": "retrieval_manifest.json",
+  "same_sample_results": {
+    "50_50": {
+      "accuracy": 0.5020990764063812,
+      "auc": 0.5,
+      "brier": 0.25,
+      "log_loss": 0.6931471805599453,
+      "rows": 2382
+    },
+    "blend_50_50": {
+      "accuracy": 0.6817800167926112,
+      "auc": 0.7362695776252489,
+      "brier": 0.2137176265052645,
+      "log_loss": 0.617467523843429,
+      "rows": 2382
+    },
+    "m0": {
+      "accuracy": 0.6120906801007556,
+      "auc": 0.6545440958337798,
+      "brier": 0.2320925734150554,
+      "log_loss": 0.6562198143998652,
+      "rows": 2382
+    },
+    "market": {
+      "accuracy": 0.6717044500419815,
+      "auc": 0.7401628954299606,
+      "brier": 0.2071784432051256,
+      "log_loss": 0.601514634993262,
+      "rows": 2382
+    },
+    "market_calibration": [
+      {
+        "actual_win_rate": 0.0,
+        "bin": "0.0-0.1",
+        "mean_predicted": 0.08947875161643709,
+        "rows": 5
+      },
+      {
+        "actual_win_rate": 0.16494845360824742,
+        "bin": "0.1-0.2",
+        "mean_predicted": 0.16131042935079598,
+        "rows": 97
+      },
+      {
+        "actual_win_rate": 0.19767441860465115,
+        "bin": "0.2-0.3",
+        "mean_predicted": 0.2583346530363837,
+        "rows": 258
+      },
+      {
+        "actual_win_rate": 0.3394919168591224,
+        "bin": "0.3-0.4",
+        "mean_predicted": 0.35290015216486315,
+        "rows": 433
+      },
+      {
+        "actual_win_rate": 0.45073891625615764,
+        "bin": "0.4-0.5",
+        "mean_predicted": 0.45053033545782145,
+        "rows": 406
+      },
+      {
+        "actual_win_rate": 0.5185185185185185,
+        "bin": "0.5-0.6",
+        "mean_predicted": 0.5515242074375653,
+        "rows": 378
+      },
+      {
+        "actual_win_rate": 0.694954128440367,
+        "bin": "0.6-0.7",
+        "mean_predicted": 0.6491384139601031,
+        "rows": 436
+      },
+      {
+        "actual_win_rate": 0.7739463601532567,
+        "bin": "0.7-0.8",
+        "mean_predicted": 0.7468395141113575,
+        "rows": 261
+      },
+      {
+        "actual_win_rate": 0.9038461538461539,
+        "bin": "0.8-0.9",
+        "mean_predicted": 0.8387276373156444,
+        "rows": 104
+      },
+      {
+        "actual_win_rate": 1.0,
+        "bin": "0.9-1.0",
+        "mean_predicted": 0.9112093403889034,
+        "rows": 4
+      }
+    ],
+    "market_ece": 0.028965260027413935
+  },
+  "status": "M0_MD0R_ODDS_API_REPLICATION_COMPLETE",
+  "v0_reference": {
+    "both_primary_metrics_improved_folds": "6/8",
+    "m0_positive_folds": "8/8",
+    "market": {
+      "accuracy": 0.6533,
+      "auc": 0.717391,
+      "brier": 0.214158,
+      "log_loss": 0.61648
+    },
+    "market_plus_m0": {
+      "accuracy": 0.6664,
+      "auc": 0.725722,
+      "brier": 0.211733,
+      "log_loss": 0.611564
+    },
+    "matched_rows": 3363
+  },
+  "worth_continuing_decision": "YES \u2014 SUPPORTED, BUT MARKET GAP REMAINS LARGE"
+}
