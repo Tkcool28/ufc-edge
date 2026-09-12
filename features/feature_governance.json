@@ -14,13 +14,27 @@
       "research": "RES",
       "unsupported": "UNSUP"
     },
-    "canonical_prefix_normalization": "If canonical_name begins with the same durable layer prefix plus '_' (case-insensitive), remove exactly that one redundant prefix from the concept token before constructing feature_id.",
+    "canonical_prefix_normalization": "When minting an ID candidate from an identity-bearing current or historical name, remove exactly one leading duplicate of that feature's durable layer prefix plus '_' before constructing feature_id.",
     "semantic_major_suffix": "The terminal _V<number> is the semantic_version major generation only. It is not the feature-contract version, methodology version, model version, consumer version, or implementation version.",
     "stable_under_rename": true,
     "never_recycled": true,
     "semantic_change_requires_new_id": true,
     "materialized_columns_are_variants_not_concepts": true,
-    "authority_boundary": "Because governance V1 is still pre-merge, malformed IDs may be corrected in place. After PR #31 merges, durable feature IDs are immutable historical identities and changes require the documented lifecycle/migration process."
+    "authority_boundary": "Because governance V1 is still pre-merge, malformed IDs or validator contradictions may be corrected in place. After PR #31 merges, durable feature IDs are immutable historical identities and later changes require the documented lifecycle/migration process.",
+    "initial_minting": "For a feature with renamed_from == [], construct and validate feature_id from the current canonical_name, semantic layer, and semantic_version major.",
+    "post_creation_rename": "After the durable ID is established, a semantic-preserving rename updates canonical_name and renamed_from but does not regenerate feature_id from the new canonical_name.",
+    "canonical_name_role": "Current preferred terminology/presentation name. It is not the permanent identity token after a documented rename.",
+    "historical_name_role": "renamed_from records prior canonical names that preserve the same semantic identity and can reproduce the immutable durable ID.",
+    "rename_history_rules": [
+      "renamed_from must be a list of non-empty strings",
+      "renamed_from must not contain duplicates",
+      "current canonical_name must not appear in renamed_from",
+      "current names and historical aliases share one globally unambiguous namespace",
+      "a renamed feature's durable ID must be reproducible from at least one documented historical canonical name"
+    ],
+    "alias_resolution": "Current canonical names and historical renamed_from aliases may resolve to the same durable ID; unknown or ambiguous names fail closed.",
+    "semantic_change_boundary": "renamed_from is terminology history only. A semantic change requires a new semantic identity/version and cannot be represented as a pure rename.",
+    "methodology_change_boundary": "Methodology-only changes keep feature_id and semantic meaning, bump methodology_version, record migration, and replay affected artifacts."
   },
   "lifecycle_states": [
     "ACTIVE",
