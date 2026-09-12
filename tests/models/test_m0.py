@@ -15,6 +15,8 @@ from ufc_edge.models.m0 import (
     metric_bundle,
     primary_population,
     swap_pair_columns,
+    validate_model_columns_against_schema,
+    M0Error,
 )
 
 
@@ -47,6 +49,14 @@ class M0Tests(unittest.TestCase):
         self.assertNotIn("f0",set(out.fight_id))
         self.assertNotIn("f1",set(out.fight_id))
         self.assertNotIn("f2",set(out.fight_id))
+
+
+    def test_f02_predictor_metadata_selection(self):
+        schema={"columns":[{"name":c,"predictor":True} for c in MATERIALIZED_COLUMNS]}
+        validate_model_columns_against_schema(schema)
+        schema["columns"][0]["predictor"]=False
+        with self.assertRaises(M0Error):
+            validate_model_columns_against_schema(schema)
 
     def test_identity_columns_never_model_inputs(self):
         self.assertFalse(set(MATERIALIZED_COLUMNS)&IDENTITY_COLUMNS)
