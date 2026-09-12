@@ -32,10 +32,13 @@ Rules:
 
 - IDs are human-readable and never recycled.
 - Durable shape is `<LAYER>_<CONCEPT>_V<SEMANTIC_MAJOR>`.
-- The layer namespace appears exactly once. If a canonical name begins with the same layer prefix plus `_`, remove exactly that one redundant prefix from the concept token before constructing the ID.
-- A pure rename keeps the same ID.
+- At initial feature creation, the identity token is normally minted from the then-current canonical name.
+- During initial minting, the layer namespace appears exactly once. If the identity-bearing name begins with the same layer prefix plus `_`, remove exactly that one redundant prefix from the concept token.
+- After creation, `feature_id` is the immutable semantic identity. It is not regenerated from later terminology.
+- The current `canonical_name` is presentation/terminology; the durable ID is historical semantic identity.
+- A pure semantic-preserving rename keeps the same ID, updates `canonical_name`, and appends the prior canonical name to `renamed_from`.
 - A semantic change requires a new semantic identity/version; do not overwrite the old meaning.
-- A methodology-only change bumps `methodology_version`.
+- A methodology-only change keeps the durable ID and semantic meaning but bumps `methodology_version`.
 - Old IDs remain in migration history when deprecated or superseded.
 - Model consumers select shared IDs/tags; they do not redefine features privately.
 
@@ -52,6 +55,10 @@ SIM_TAKEDOWN_SUCCESS_PROBABILITY_V1
 ```
 
 The terminal `_V1` means **semantic identity major 1**. It does **not** mean feature-contract version 1, methodology version 1, model version 1, consumer version, or implementation version. Those remain separate explicit metadata.
+
+For an unrenamed concept, the current canonical name must still reproduce the clean initial durable ID. For a concept with rename history, the immutable ID must be reproducible from at least one documented historical canonical name in `renamed_from`; the current canonical name is no longer required to reproduce the ID.
+
+Names and historical aliases form one global namespace: no current name may also be another feature's alias, and no historical alias may belong to more than one durable feature ID. Historical aliases exist to interpret older terminology; they do not silently rewrite artifact contents.
 
 Because Governance V1 is still inside unmerged PR #31, malformed IDs discovered during review may be corrected directly and are not historical renames. Once PR #31 merges, durable feature IDs become immutable historical identities and any later replacement must follow the documented lifecycle/migration rules.
 
@@ -129,12 +136,14 @@ For a semantic-preserving rename:
 
 - retain `feature_id`;
 - update `canonical_name`;
-- record `renamed_from`;
+- append the prior canonical name to `renamed_from`;
 - record the migration;
 - retain old artifact interpretation;
-- add a compatibility alias only where needed.
+- ensure current and historical names remain globally unambiguous.
 
-Do not mint a new ID simply because wording improved.
+Do not mint a new ID simply because wording improved. For example, `FS_CONTROL_RATE_V1` may later use `generic_control_rate` as its current canonical name while retaining `control_rate` in `renamed_from`.
+
+A semantic change cannot be smuggled through `renamed_from`. Changing `control_rate` to an exact top-position share changes the underlying meaning and requires a new semantic concept/identity rather than a terminology alias.
 
 ## 8. Change methodology
 
