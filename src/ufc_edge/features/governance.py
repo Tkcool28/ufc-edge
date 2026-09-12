@@ -10,6 +10,7 @@ from __future__ import annotations
 from collections import Counter
 import hashlib
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -32,6 +33,8 @@ CONSUMER_PREFIX = "consumer:"
 FEATURE_PREFIX = "feature:"
 CANONICAL_PREFIX = "canonical:"
 ELIGIBILITY_PREFIX = "eligibility:"
+FEATURE_ID_RE = re.compile(r"^(?P<prefix>[A-Z][A-Z0-9]*)_(?P<concept>[A-Z0-9][A-Z0-9_]*)_V(?P<major>[0-9]+)$")
+SEMANTIC_VERSION_RE = re.compile(r"^(?P<major>[0-9]+)\.[0-9]+\.[0-9]+(?:[-+].*)?$")
 
 
 class GovernanceError(ValueError):
@@ -59,6 +62,32 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def _semantic_major(version: str) -> int:
+    match = SEMANTIC_VERSION_RE.fullmatch(version)
+    if match is None:
+        raise GovernanceError(f"invalid semantic_version: {version!r}")
+    return int(match.group("major"))
+
+
+def expected_feature_id(
+    canonical_name: str,
+    layer: str,
+    semantic_version: str,
+    layer_prefixes: dict[str, str],
+) -> str:
+    """Construct the durable semantic ID without duplicating its layer namespace."""
+    prefix = layer_prefixes.get(layer)
+    if not prefix:
+        raise GovernanceError(f"missing durable layer prefix for {layer!r}")
+    concept = canonical_name.upper()
+    duplicate = prefix + "_"
+    if concept.startswith(duplicate):
+        concept = concept[len(duplicate):]
+    if not concept:
+        raise GovernanceError(f"empty durable concept token for {canonical_name!r}")
+    return f"{prefix}_{concept}_V{_semantic_major(semantic_version)}"
 
 
 def load_governance(root: Path | None = None) -> dict[str, Any]:
@@ -133,6 +162,17 @@ def validate_repository_governance(root: Path | None = None) -> dict[str, Any]:
     if not isinstance(items, list) or not items:
         raise GovernanceError("feature_governance.features must be a non-empty list")
 
+    policy = governance.get("identity_policy", {})
+    layer_prefixes = policy.get("layer_prefixes")
+    catalog_layers = {feature["layer"] for feature in catalog["features"]}
+    if not isinstance(layer_prefixes, dict) or set(layer_prefixes) != catalog_layers:
+        raise GovernanceError("identity_policy.layer_prefixes must define every catalog layer exactly once")
+    recognized_prefixes = set(layer_prefixes.values())
+    if len(recognized_prefixes) != len(layer_prefixes):
+        raise GovernanceError("durable layer prefixes must be unique")
+    if any(not isinstance(prefix, str) or not prefix or prefix != prefix.upper() for prefix in recognized_prefixes):
+        raise GovernanceError("durable layer prefixes must be non-empty uppercase tokens")
+
     ids = [item.get("feature_id") for item in items]
     names = [item.get("canonical_name") for item in items]
     if len(ids) != len(set(ids)):
@@ -145,7 +185,43 @@ def validate_repository_governance(root: Path | None = None) -> dict[str, Any]:
             f"governance/catalog concept mismatch: missing={sorted(catalog_names-set(names))} "
             f"extra={sorted(set(names)-catalog_names)}"
         )
+    catalog_by_name = {feature["feature_name"]: feature for feature in catalog["features"]}
     for item in items:
+        feature = catalog_by_name[item["canonical_name"]]
+        feature_id = item["feature_id"]
+        match = FEATURE_ID_RE.fullmatch(feature_id)
+        if match is None:
+            raise GovernanceError(f"malformed durable feature ID: {feature_id}")
+        layer_prefix = layer_prefixes[feature["layer"]]
+        if match.group("prefix") != layer_prefix:
+            raise GovernanceError(
+                f"{feature_id} uses layer prefix {match.group('prefix')} but {feature['layer']} requires {layer_prefix}"
+            )
+        concept = match.group("concept")
+        duplicated_namespace = next(
+            (prefix for prefix in recognized_prefixes if concept.startswith(prefix + "_")),
+            None,
+        )
+        if duplicated_namespace is not None:
+            raise GovernanceError(
+                f"{feature_id} contains duplicated/nested durable layer prefix {duplicated_namespace}"
+            )
+        semantic_major = _semantic_major(item["semantic_version"])
+        if int(match.group("major")) != semantic_major:
+            raise GovernanceError(
+                f"{feature_id} semantic-major suffix V{match.group('major')} "
+                f"does not match semantic_version {item['semantic_version']}"
+            )
+        expected_id = expected_feature_id(
+            item["canonical_name"],
+            feature["layer"],
+            item["semantic_version"],
+            layer_prefixes,
+        )
+        if feature_id != expected_id:
+            raise GovernanceError(
+                f"{feature_id} does not match durable identity convention; expected {expected_id}"
+            )
         if item["lifecycle_state"] not in LIFECYCLE_STATES:
             raise GovernanceError(f"invalid lifecycle state for {item['feature_id']}")
         if not item["semantic_version"] or not item["methodology_version"]:
