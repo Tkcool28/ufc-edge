@@ -228,3 +228,48 @@ jobs:
           path: ${{ runner.temp }}/m1-ablation
           if-no-files-found: error
           retention-days: 30
+
+
+  missingness-audit:
+    needs: [validate, primary-validation]
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install M1 dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+      - name: Download authoritative frozen F02 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download primary M1 validation artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: m1-primary-validation-v1
+          path: ${{ runner.temp }}/m1-primary
+      - name: Run M1 missingness evidence-depth audit
+        run: >
+          python -c "from pathlib import Path; from ufc_edge.models.m1 import run_missingness_audit;
+          r=run_missingness_audit(Path(r'${{ runner.temp }}/f02'), Path('models/m1/feature_surface_v1.json'),
+          Path(r'${{ runner.temp }}/m1-primary/m1_oof_predictions.parquet'),
+          Path(r'${{ runner.temp }}/m1-primary/m1_coefficients.json'),
+          Path(r'${{ runner.temp }}/m1-missingness-audit/m1_missingness_audit.json'));
+          print(r['status']); print(r['overall'])"
+      - name: Upload M1 missingness audit artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-missingness-audit-v1
+          path: ${{ runner.temp }}/m1-missingness-audit
+          if-no-files-found: error
+          retention-days: 30
