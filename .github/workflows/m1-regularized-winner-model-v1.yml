@@ -231,7 +231,7 @@ jobs:
 
 
   missingness-audit:
-    needs: [validate, primary-validation]
+    needs: validate
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -253,11 +253,14 @@ jobs:
           repository: Tkcool28/ufc-edge
           run-id: 34673108776
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Download primary M1 validation artifact
+      - name: Download frozen primary M1 validation artifact
         uses: actions/download-artifact@v4
         with:
           name: m1-primary-validation-v1
           path: ${{ runner.temp }}/m1-primary
+          repository: Tkcool28/ufc-edge
+          run-id: 34786845908
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run M1 missingness evidence-depth audit
         run: >
           python -c "from pathlib import Path; from ufc_edge.models.m1 import run_missingness_audit;
