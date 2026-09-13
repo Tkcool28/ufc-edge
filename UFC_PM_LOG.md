@@ -331,3 +331,198 @@ After each UFC card, update this log with:
 Do not change methodology because of one isolated loss or one isolated win.
 
 Change the process when the same failure repeats, or when a result clearly exposes a structural flaw in the reasoning.
+
+
+---
+
+# 2026-09-12 — Noche UFC
+
+## Recommended allocation
+
+- Waldo Cortes-Acosta ML — **1.25% BR**
+- Yousri Belgaroui KO/TKO/DQ or Submission — **1.25% BR**
+- David Martinez by Decision — **1.00% BR**
+- Edgar Chairez by Submission — **0.50% BR**
+- McMillen/Rahiki Under 1.5 Rounds — **0.50% BR**
+- Waldo Cortes-Acosta ML + David Martinez Decision parlay — **0.50% BR**
+
+**Total planned exposure: 5.00% BR**
+
+## Actual result
+
+- Waldo Cortes-Acosta ML — **LOSS**
+- Yousri Belgaroui KO/TKO/DQ or Submission — **WIN**
+- David Martinez by Decision — **WIN**
+- Edgar Chairez by Submission — **LOSS**
+- McMillen/Rahiki Under 1.5 Rounds — **LOSS**
+- Waldo + Martinez parlay — **LOSS**
+
+Based on the actual tickets:
+
+- total staked: **$4.90**
+- net result: approximately **-$1.02**
+- ROI on amount wagered: approximately **-20.8%**
+- bankroll impact: approximately **-1.0% BR**
+
+The negative result does not justify a broad framework change. The card exposed a few specific issues while also confirming that some recent method-construction improvements are working.
+
+---
+
+## Noche UFC lessons
+
+### 1. Waldo vs Blaydes — surviving wrestling is not the same as neutralizing scoring
+
+The Waldo thesis correctly identified Curtis Blaydes' wrestling as the major danger and expected Waldo to survive that route.
+
+Waldo did survive. The problem was that survival alone was not enough.
+
+Blaydes did not need sustained domination or a finish. Takedowns, mat returns, defensive reactions, clinch work, and time spent forcing Waldo to defend were enough to affect round scoring and suppress Waldo's offense.
+
+### Process change: wrestling survival vs scoring denial
+
+Against control-oriented wrestlers, explicitly separate:
+
+- probability of being finished or held down for long stretches,
+- probability of repeatedly conceding takedowns or control moments,
+- offensive opportunity cost created by wrestling defense,
+- round-winning equity created by even intermittent control.
+
+Do not convert "can survive the wrestling" into "has neutralized the wrestling enough to win" without separately evaluating scoring and minute-loss risk.
+
+---
+
+### 2. Belgaroui KO/Sub — method-family construction worked again
+
+Belgaroui won inside the distance by strikes.
+
+The bet intentionally preserved both KO/TKO and submission branches because the incremental price relative to a narrower finish prop was small.
+
+This continues the positive pattern first highlighted after Sacramento and Paris:
+
+> When the expected dominant environment can naturally produce multiple terminal outcomes, preserve those branches unless the market charges too much for them.
+
+No process change is needed here.
+
+---
+
+### 3. Martinez Decision — strong side-plus-method fit
+
+Martinez won by decision as projected.
+
+The play combined:
+
+- a credible underlying side,
+- demonstrated ability to win decisions against UFC-level veterans,
+- an opponent whose UFC losses had overwhelmingly reached the scorecards,
+- a method price that remained acceptable.
+
+This is the type of method bet the framework should continue prioritizing.
+
+No process change is needed here.
+
+---
+
+### 4. Chairez Submission — submission-loss counts need an exposure denominator
+
+The Chairez case leaned partly on Elliott's history of UFC submission losses and his willingness to create grappling exchanges.
+
+The missing context is that a long-career, grappling-heavy fighter can accumulate submission losses partly because he has spent an unusually large number of minutes and exchanges in dangerous grappling positions.
+
+A raw count such as "five UFC submission losses" does not by itself tell us the conditional probability of being submitted in a given grappling exchange or fight.
+
+### Process change: exposure-adjusted submission vulnerability
+
+When using opponent submission history, distinguish:
+
+- raw number of submission losses,
+- total grappling-heavy fight exposure,
+- submission attempts faced,
+- survival/escape frequency,
+- recency of those losses,
+- quality and style of the submission threats faced.
+
+The goal is to separate true vulnerability from simple opportunity volume.
+
+---
+
+### 5. McMillen/Rahiki Under 1.5 — process was supported; result should not be mislabeled as a research failure
+
+This loss should **not** be logged as a failure to research finish timing.
+
+The pre-fight work explicitly examined both fighters' historical finish times, not just raw finish percentages.
+
+The combined professional history reportedly contained only about **three finishes occurring after the Round 2 2:30 cutoff**, which was part of the reason the Under 1.5 at plus money was approved.
+
+The fight itself still produced meaningful finishing danger but survived past the betting cutoff and ultimately reached decision.
+
+### PM classification
+
+**Outcome variance / durability realization**, not an identified process flaw.
+
+Do not create a new methodology rule simply because this particular Under lost.
+
+The existing requirement remains:
+
+> For Under 1.5 props, research actual finish-time distribution and opponent survival history rather than relying only on aggregate finish rate.
+
+That work was done here.
+
+Future samples should determine whether the historical timing signal is actually predictive enough to keep using, but one loss does not justify changing the method.
+
+---
+
+### 6. Parlay — duplicated exposure should be visible before approval
+
+The parlay paired:
+
+- Waldo ML,
+- Martinez Decision.
+
+Martinez hit; Waldo did not.
+
+Because Waldo also carried the largest single stake, the parlay increased total exposure tied to the same underlying Waldo win thesis.
+
+This is not inherently wrong, but the concentration should be explicit before betting.
+
+### Process change: total fighter-thesis exposure
+
+Before approving a core parlay, calculate each fighter's total bankroll exposure across:
+
+- singles,
+- same-fighter method derivatives,
+- parlays.
+
+A core parlay may duplicate a strong single, but the total correlated exposure should be visible and consciously accepted.
+
+Do not evaluate the parlay stake in isolation.
+
+---
+
+## Noche UFC classification
+
+### Positive confirmations
+
+- **Method-family construction:** Belgaroui KO/Sub correctly protected against unnecessary exact-method risk.
+- **Opponent-specific decision handicapping:** Martinez Decision matched the expected route.
+- **Finish-time research:** McMillen/Rahiki Under was based on actual timing distribution; the loss does not invalidate the process by itself.
+
+### Process issues
+
+- **Wrestling scoring equity underestimated:** Waldo vs Blaydes.
+- **Submission-loss denominator/context missing:** Chairez vs Elliott.
+- **Correlated exposure not made explicit enough:** Waldo single + Waldo/Martinez parlay.
+
+### Not a process issue
+
+- **McMillen/Rahiki Under 1.5:** classify as a researched plus-money total that lost, not as evidence that finish-time distribution was ignored.
+
+---
+
+# Additions to current approval checklist
+
+For future cards, add the following checks:
+
+15. Against a wrestler, are we distinguishing survival from actual scoring denial and offensive opportunity cost?
+16. When citing submission-loss history, are we adjusting mentally for total grappling exposure and survival volume?
+17. What is the total bankroll exposure to each underlying fighter thesis across singles and parlays?
+18. For round totals, was actual finish-time distribution researched? If yes, do not rewrite the process solely because one outcome missed.
