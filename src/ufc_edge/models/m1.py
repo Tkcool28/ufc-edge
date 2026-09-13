@@ -667,6 +667,73 @@ def _run_primary(population: pd.DataFrame, surface: dict[str, Any], frozen_m0: p
     return oof, fold_results, coefficient_rows
 
 
+
+def run_ablation_family(
+    f02_dir: Path,
+    m0_oof_path: Path,
+    surface_path: Path,
+    primary_result_path: Path,
+    output_dir: Path,
+    family: str,
+) -> dict[str, Any]:
+    """Run one predeclared post-freeze M1 feature-family ablation."""
+    validate_candidate_grid()
+    if family not in ABLATION_FAMILIES:
+        raise M1Error(f"unknown ablation family: {family}")
+
+    frame, surface = load_modeling_table(f02_dir, surface_path)
+    population = primary_population(frame)
+    frozen_m0 = load_frozen_m0_oof(m0_oof_path)
+    primary = _read_json(primary_result_path)
+
+    if primary.get("status") != "M1_REGULARIZED_SHARED_FEATURE_WINNER_V1_COMPLETE":
+        raise M1Error("primary M1 result is not complete")
+    if primary.get("source", {}).get("feature_surface_logical_sha256") != surface["feature_surface_logical_sha256"]:
+        raise M1Error("primary M1 feature-surface identity mismatch")
+    if primary.get("source", {}).get("m0", {}).get("logical_sha256") != M0_IDENTITY["logical_sha256"]:
+        raise M1Error("primary M1 frozen M0 identity mismatch")
+    if primary.get("source", {}).get("f02", {}).get("predictor_logical_sha256") != F02_IDENTITY["predictor_logical_sha256"]:
+        raise M1Error("primary M1 frozen F02 identity mismatch")
+
+    primary_metrics = primary.get("aggregate", {}).get("m1", {})
+    if "log_loss" not in primary_metrics or "brier" not in primary_metrics:
+        raise M1Error("primary M1 aggregate metrics missing")
+
+    ab_oof, ab_folds, _ = _run_primary(
+        population,
+        surface,
+        frozen_m0,
+        ablate_family=family,
+        collect_coefficients=False,
+    )
+    metrics = metric_bundle(ab_oof["target"], ab_oof["m1_probability"])
+    result = {
+        "status": "M1_FEATURE_FAMILY_ABLATION_V1_COMPLETE",
+        "family": family,
+        "source": {
+            "f02": F02_IDENTITY,
+            "m0": M0_IDENTITY,
+            "feature_surface_logical_sha256": surface["feature_surface_logical_sha256"],
+            "primary_oof_logical_sha256": primary.get("oof", {}).get("logical_sha256"),
+        },
+        "metrics": metrics,
+        "delta_vs_primary_m1": {
+            "log_loss": float(metrics["log_loss"] - float(primary_metrics["log_loss"])),
+            "brier": float(metrics["brier"] - float(primary_metrics["brier"])),
+        },
+        "selected_candidates": {
+            row["fold_id"]: row["selected_candidate"] for row in ab_folds
+        },
+        "folds": ab_folds,
+    }
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    (output_dir / f"m1_ablation_{family}.json").write_text(
+        json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n",
+        encoding="utf-8",
+    )
+    return result
+
 def run_validation(f02_dir: Path, m0_oof_path: Path, surface_path: Path, output_dir: Path, *, run_ablations: bool = True) -> dict[str, Any]:
     validate_candidate_grid()
     frame, surface = load_modeling_table(f02_dir, surface_path)
