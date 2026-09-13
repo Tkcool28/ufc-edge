@@ -803,7 +803,9 @@ def run_missingness_audit(
             })
         bucket_rows[label] = row
 
-    coefficient_payload = _read_json(coefficients_path)
+    coefficient_payload = json.loads(coefficients_path.read_text(encoding="utf-8"))
+    if not isinstance(coefficient_payload, list):
+        raise M1Error("M1 coefficient artifact must contain a JSON list")
     missing_coefficients: dict[str, list[float]] = {}
     for fold in coefficient_payload:
         for row in fold["coefficients"]:
