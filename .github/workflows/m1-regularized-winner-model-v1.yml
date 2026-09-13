@@ -122,11 +122,11 @@ jobs:
             exit 1
           fi
 
-  full-validation:
+  primary-validation:
     needs: validate
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-24.04
-    timeout-minutes: 180
+    timeout-minutes: 60
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       PYTHONPATH: src
@@ -153,17 +153,78 @@ jobs:
           repository: Tkcool28/ufc-edge
           run-id: 34676508116
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run complete M1 chronological validation
+      - name: Run primary M1 chronological validation
         run: |
           python tools/models/run_m1.py validate \
             --f02-dir "${{ runner.temp }}/f02" \
             --m0-oof "${{ runner.temp }}/m0/m0_oof_predictions.parquet" \
             --feature-surface models/m1/feature_surface_v1.json \
-            --output-dir "${{ runner.temp }}/m1"
-      - name: Upload M1 runtime validation artifact
+            --output-dir "${{ runner.temp }}/m1-primary" \
+            --skip-ablations
+      - name: Upload M1 primary validation artifact
         uses: actions/upload-artifact@v4
         with:
-          name: m1-regularized-winner-model-v1
-          path: ${{ runner.temp }}/m1
+          name: m1-primary-validation-v1
+          path: ${{ runner.temp }}/m1-primary
+          if-no-files-found: error
+          retention-days: 30
+
+  ablation-validation:
+    needs: [validate, primary-validation]
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        family:
+          - experience_context
+          - striking
+          - pace_output
+          - wrestling
+          - submission
+          - control_grappling
+          - durability_finish_history
+          - sample_support_missingness
+          - existing_matchup
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+      M1_ABLATION_FAMILY: ${{ matrix.family }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install M1 dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+      - name: Download authoritative frozen F02 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download authoritative frozen M0 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: m0-empirical-winner-baseline-v1
+          path: ${{ runner.temp }}/m0
+          repository: Tkcool28/ufc-edge
+          run-id: 34676508116
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run one frozen M1 feature-family ablation
+        run: |
+          python tools/models/run_m1.py validate \
+            --f02-dir "${{ runner.temp }}/f02" \
+            --m0-oof "${{ runner.temp }}/m0/m0_oof_predictions.parquet" \
+            --feature-surface models/m1/feature_surface_v1.json \
+            --output-dir "${{ runner.temp }}/m1-ablation"
+      - name: Upload M1 ablation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-ablation-${{ matrix.family }}-v1
+          path: ${{ runner.temp }}/m1-ablation
           if-no-files-found: error
           retention-days: 30
