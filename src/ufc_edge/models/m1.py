@@ -9,6 +9,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from hashlib import sha256
 import json
+import os
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
@@ -758,7 +759,14 @@ def run_validation(f02_dir: Path, m0_oof_path: Path, surface_path: Path, output_
     if run_ablations:
         primary_ll = float(aggregate_m1["log_loss"])
         primary_brier = float(aggregate_m1["brier"])
-        for family in ABLATION_FAMILIES:
+        requested_family = os.environ.get("M1_ABLATION_FAMILY")
+        if requested_family:
+            if requested_family not in ABLATION_FAMILIES:
+                raise M1Error(f"unknown ablation family: {requested_family}")
+            ablation_families = (requested_family,)
+        else:
+            ablation_families = ABLATION_FAMILIES
+        for family in ablation_families:
             ab_oof, ab_folds, _ = _run_primary(population, surface, frozen_m0, ablate_family=family, collect_coefficients=False)
             metrics = metric_bundle(ab_oof["target"], ab_oof["m1_probability"])
             ablations[family] = {"metrics": metrics, "delta_vs_primary_m1": {"log_loss": float(metrics["log_loss"] - primary_ll), "brier": float(metrics["brier"] - primary_brier)}, "selected_candidates": {row["fold_id"]: row["selected_candidate"] for row in ab_folds}}
