@@ -669,6 +669,230 @@ def _run_primary(population: pd.DataFrame, surface: dict[str, Any], frozen_m0: p
 
 
 
+
+def run_missingness_audit(
+    f02_dir: Path,
+    surface_path: Path,
+    primary_oof_path: Path,
+    coefficients_path: Path,
+    output_path: Path,
+) -> dict[str, Any]:
+    """Audit whether M1 missingness signal behaves like pre-fight evidence depth."""
+    frame, surface = load_modeling_table(f02_dir, surface_path)
+    population = primary_population(frame).copy()
+    population["event_year"] = population["event_date"].dt.year.astype(int)
+    population = population[population["event_year"].isin(OUTER_YEARS)].copy()
+
+    pairs = surface_pairs(surface)
+    f1_cols = [p["f1_column"] for p in pairs]
+    f2_cols = [p["f2_column"] for p in pairs]
+    population["f1_available"] = population[f1_cols].notna().sum(axis=1)
+    population["f2_available"] = population[f2_cols].notna().sum(axis=1)
+    population["availability_diff"] = population["f1_available"] - population["f2_available"]
+    population["abs_availability_diff"] = population["availability_diff"].abs()
+
+    prior_f1 = pd.to_numeric(
+        population["f1__fs__prior_fight_count__career__raw"], errors="coerce"
+    )
+    prior_f2 = pd.to_numeric(
+        population["f2__fs__prior_fight_count__career__raw"], errors="coerce"
+    )
+    age_f1 = pd.to_numeric(population["f1__ctx__age_at_fight"], errors="coerce")
+    age_f2 = pd.to_numeric(population["f2__ctx__age_at_fight"], errors="coerce")
+    population["prior_fight_diff"] = prior_f1 - prior_f2
+    population["age_diff"] = age_f1 - age_f2
+
+    oof = pd.read_parquet(primary_oof_path).copy()
+    oof["event_date"] = pd.to_datetime(oof["event_date"], errors="raise")
+    joined = population.merge(
+        oof[["fight_id", "target", "m0_probability", "m1_probability"]],
+        on="fight_id",
+        how="inner",
+        validate="one_to_one",
+        suffixes=("", "_oof"),
+    )
+    if len(joined) != M0_IDENTITY["rows"]:
+        raise M1Error(
+            f"missingness audit OOF alignment mismatch: {len(joined)} != {M0_IDENTITY['rows']}"
+        )
+
+    unequal = joined["availability_diff"].ne(0)
+    more_data_f1 = joined["availability_diff"].gt(0)
+    more_data_actual_win = np.where(
+        more_data_f1,
+        joined["target"].astype(int),
+        1 - joined["target"].astype(int),
+    )
+    more_data_m1_probability = np.where(
+        more_data_f1,
+        joined["m1_probability"],
+        1 - joined["m1_probability"],
+    )
+    more_data_m0_probability = np.where(
+        more_data_f1,
+        joined["m0_probability"],
+        1 - joined["m0_probability"],
+    )
+
+    stacked_available = pd.concat(
+        [population["f1_available"], population["f2_available"]], ignore_index=True
+    )
+    stacked_prior = pd.concat([prior_f1, prior_f2], ignore_index=True)
+    stacked_age = pd.concat([age_f1, age_f2], ignore_index=True)
+    stacked = pd.DataFrame(
+        {"available": stacked_available, "prior_fights": stacked_prior, "age": stacked_age}
+    )
+
+    def corr(a: pd.Series, b: pd.Series, method: str = "pearson") -> float | None:
+        valid = a.notna() & b.notna()
+        if int(valid.sum()) < 3:
+            return None
+        value = a[valid].corr(b[valid], method=method)
+        return None if pd.isna(value) else float(value)
+
+    def directional_summary(group: pd.DataFrame) -> dict[str, Any]:
+        mask = group["availability_diff"].ne(0)
+        if not mask.any():
+            return {"rows": int(len(group)), "unequal_rows": 0}
+        f1_more = group.loc[mask, "availability_diff"].gt(0)
+        actual = np.where(
+            f1_more,
+            group.loc[mask, "target"].astype(int),
+            1 - group.loc[mask, "target"].astype(int),
+        )
+        p1 = np.where(
+            f1_more,
+            group.loc[mask, "m1_probability"],
+            1 - group.loc[mask, "m1_probability"],
+        )
+        p0 = np.where(
+            f1_more,
+            group.loc[mask, "m0_probability"],
+            1 - group.loc[mask, "m0_probability"],
+        )
+        return {
+            "rows": int(len(group)),
+            "unequal_rows": int(mask.sum()),
+            "unequal_fraction": float(mask.mean()),
+            "mean_abs_availability_diff": float(group.loc[mask, "abs_availability_diff"].mean()),
+            "more_data_side_actual_win_rate": float(np.mean(actual)),
+            "m1_mean_probability_more_data_side": float(np.mean(p1)),
+            "m0_mean_probability_more_data_side": float(np.mean(p0)),
+            "m1_minus_m0_probability_toward_more_data_side": float(np.mean(p1 - p0)),
+        }
+
+    year_rows = {}
+    for year, group in joined.groupby("event_year", sort=True):
+        year_rows[str(int(year))] = directional_summary(group)
+
+    buckets = pd.cut(
+        joined["abs_availability_diff"],
+        bins=[-0.5, 0.5, 5.5, 15.5, np.inf],
+        labels=["equal", "1-5", "6-15", "16+"],
+    )
+    bucket_rows = {}
+    for label in ["equal", "1-5", "6-15", "16+"]:
+        group = joined[buckets == label]
+        row = {"rows": int(len(group))}
+        if len(group):
+            row.update({
+                "m1_log_loss": float(log_loss(group["target"], group["m1_probability"], labels=[0, 1])),
+                "m0_log_loss": float(log_loss(group["target"], group["m0_probability"], labels=[0, 1])),
+                "m1_brier": float(brier_score_loss(group["target"], group["m1_probability"])),
+                "m0_brier": float(brier_score_loss(group["target"], group["m0_probability"])),
+            })
+        bucket_rows[label] = row
+
+    coefficient_payload = _read_json(coefficients_path)
+    missing_coefficients: dict[str, list[float]] = {}
+    for fold in coefficient_payload:
+        for row in fold["coefficients"]:
+            if row.get("is_missingness"):
+                missing_coefficients.setdefault(row["feature"], []).append(float(row["coefficient"]))
+    mean_missing = [
+        {
+            "feature": feature,
+            "mean_coefficient": float(np.mean(values)),
+            "mean_abs_coefficient": float(np.mean(np.abs(values))),
+            "positive_folds": int(sum(v > 1e-10 for v in values)),
+            "negative_folds": int(sum(v < -1e-10 for v in values)),
+            "nonzero_folds": int(sum(abs(v) > 1e-10 for v in values)),
+        }
+        for feature, values in missing_coefficients.items()
+    ]
+    mean_missing.sort(key=lambda row: (-row["mean_abs_coefficient"], row["feature"]))
+
+    overall = directional_summary(joined)
+    overall.update({
+        "equal_availability_rows": int(joined["availability_diff"].eq(0).sum()),
+        "f1_more_available_rows": int(joined["availability_diff"].gt(0).sum()),
+        "f2_more_available_rows": int(joined["availability_diff"].lt(0).sum()),
+        "mean_f1_available_of_96": float(joined["f1_available"].mean()),
+        "mean_f2_available_of_96": float(joined["f2_available"].mean()),
+        "availability_diff_mean": float(joined["availability_diff"].mean()),
+        "availability_diff_vs_prior_fight_diff_pearson": corr(
+            joined["availability_diff"], joined["prior_fight_diff"]
+        ),
+        "availability_diff_vs_prior_fight_diff_spearman": corr(
+            joined["availability_diff"], joined["prior_fight_diff"], "spearman"
+        ),
+        "fighter_available_count_vs_prior_fights_pearson": corr(
+            stacked["available"], stacked["prior_fights"]
+        ),
+        "fighter_available_count_vs_prior_fights_spearman": corr(
+            stacked["available"], stacked["prior_fights"], "spearman"
+        ),
+        "fighter_available_count_vs_age_pearson": corr(stacked["available"], stacked["age"]),
+        "fighter_available_count_vs_age_spearman": corr(
+            stacked["available"], stacked["age"], "spearman"
+        ),
+    })
+
+    missing_rates = []
+    for pair in pairs:
+        a = population[pair["f1_column"]].isna()
+        b = population[pair["f2_column"]].isna()
+        missing_rates.append({
+            "feature": pair["semantic_key"],
+            "source_concept": pair["source_concept"],
+            "f1_missing_rate": float(a.mean()),
+            "f2_missing_rate": float(b.mean()),
+            "either_side_missing_rate": float((a | b).mean()),
+            "one_side_only_missing_rate": float((a ^ b).mean()),
+        })
+    missing_rates.sort(
+        key=lambda row: (-row["one_side_only_missing_rate"], row["feature"])
+    )
+
+    result = {
+        "status": "M1_MISSINGNESS_AUDIT_V1_COMPLETE",
+        "interpretation_boundary": (
+            "Diagnostic only. No feature, model, threshold, fold, or acceptance gate is changed."
+        ),
+        "overall": overall,
+        "by_year": year_rows,
+        "by_abs_availability_difference": bucket_rows,
+        "top_one_side_missing_features": missing_rates[:25],
+        "top_missingness_coefficients": mean_missing[:25],
+        "checks": {
+            "fighter_order_balance_abs_mean_availability_diff_le_1": bool(
+                abs(overall["availability_diff_mean"]) <= 1.0
+            ),
+            "more_data_side_win_rate_above_half": bool(
+                overall.get("more_data_side_actual_win_rate", 0.0) > 0.5
+            ),
+            "availability_tracks_prior_fight_count_positive": bool(
+                (overall["fighter_available_count_vs_prior_fights_spearman"] or 0.0) > 0.0
+            ),
+        },
+    }
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(
+        json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n",
+        encoding="utf-8",
+    )
+    return result
+
 def run_ablation_family(
     f02_dir: Path,
     m0_oof_path: Path,
