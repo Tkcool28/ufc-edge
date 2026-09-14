@@ -1,0 +1,35 @@
+{
+  "policy_version": "1.0.0",
+  "status": "validated_for_canonical_null_fill",
+  "scope": "fighters.height_cm and fighters.reach_cm only",
+  "official_provider": "ufc_com",
+  "snapshot_id": "20260820T194553Z",
+  "identity_requirement": {
+    "source_name": "ufc_com",
+    "source_entity_type": "athlete",
+    "review_status": "trusted"
+  },
+  "fields": {
+    "stats_height": {
+      "canonical_field": "height_cm",
+      "verified_unit": "inches",
+      "plausible_inches": [48, 90],
+      "selection": "validated official value fills canonical null only"
+    },
+    "stats_reach_arm": {
+      "canonical_field": "reach_cm",
+      "verified_unit": "inches",
+      "plausible_inches": [48, 96],
+      "selection": "validated official value fills canonical null only"
+    },
+    "stats_reach_leg": {
+      "canonical_field": "leg_reach_cm",
+      "verified_unit": "inches",
+      "plausible_inches": [24, 72],
+      "selection": "validated only; canonical enrichment disabled"
+    }
+  },
+  "rejection_behavior": "do not convert or guess alternate units; retain Greco fallback or canonical null and record provenance",
+  "temporal_semantics": "physical attributes are treated as static DATA attributes while source snapshot observation time remains preserved in provenance",
+  "global_precedence": "pending a separately reviewed complete overlap decision"
+}
