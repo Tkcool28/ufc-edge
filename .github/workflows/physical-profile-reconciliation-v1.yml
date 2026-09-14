@@ -1,0 +1,32 @@
+name: Physical Profile Reconciliation V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/ufc_edge/data/physical_profile_reconciliation.py"
+      - "pipelines/build_physical_profile_canonical_reconciliation_v1.py"
+      - "schemas/physical_profile_reconciliation_v1.json"
+      - "tests/test_physical_profile_reconciliation.py"
+      - ".github/workflows/physical-profile-reconciliation-v1.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  guards:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Parse reconciliation sources
+        run: python -m py_compile src/ufc_edge/data/physical_profile_reconciliation.py pipelines/build_physical_profile_canonical_reconciliation_v1.py
+      - name: Run physical-profile guard tests
+        run: python -m unittest tests/test_physical_profile_reconciliation.py -v
+      - name: Confirm frozen v0 DATA is untouched
+        run: git diff --quiet origin/main...HEAD -- data/canonical/v0 provenance/data_phase_freeze_v0.json
