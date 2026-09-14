@@ -47,6 +47,8 @@ def validate_official_inches(field: str, raw: object) -> Measurement:
         return Measurement(field, text, None, False, "non_numeric")
     if not inches.is_finite():
         return Measurement(field, text, None, False, "non_finite")
+    if inches == Decimal("0"):
+        return Measurement(field, text, None, False, "source_zero_missing")
     lo, hi = PHYSICAL_BOUNDS_IN[field]
     if not lo <= inches <= hi:
         return Measurement(field, text, None, False, f"outside_plausible_inches_{lo}_{hi}")
