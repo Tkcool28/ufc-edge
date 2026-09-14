@@ -11,8 +11,6 @@ from decimal import Decimal, InvalidOperation
 from typing import Any, Iterable
 
 INCH_TO_CM = Decimal("2.54")
-# Deliberately broad athlete-valid bounds, in inches.  These are not tuned to one
-# person; they reject unit contamination such as a centimetre value emitted as inches.
 PHYSICAL_BOUNDS_IN = {
     "height": (Decimal("48"), Decimal("90")),
     "reach_arm": (Decimal("48"), Decimal("96")),
@@ -37,12 +35,7 @@ def _clean(raw: object) -> str | None:
 
 
 def validate_official_inches(field: str, raw: object) -> Measurement:
-    """Validate a UFC official numeric profile value whose verified unit is inches.
-
-    Empty values remain absent.  Numeric values may be integral or decimal, but
-    non-finite values, malformed text, and out-of-range values are rejected rather
-    than guessed or converted under a different unit assumption.
-    """
+    """Validate a UFC official numeric profile value whose verified unit is inches."""
     if field not in PHYSICAL_BOUNDS_IN:
         raise ValueError(f"unsupported physical field: {field}")
     text = _clean(raw)
@@ -60,13 +53,7 @@ def validate_official_inches(field: str, raw: object) -> Measurement:
     return Measurement(field, text, inches * INCH_TO_CM, True, None)
 
 
-def selection(
-    *,
-    field: str,
-    canonical_value: object,
-    official_raw: object,
-    trusted_identity: bool,
-) -> tuple[Decimal | None, str, Measurement]:
+def selection(*, field: str, canonical_value: object, official_raw: object, trusted_identity: bool) -> tuple[Decimal | None, str, Measurement]:
     """Return NULL-FILL selection and a truthful, stable selection label."""
     current = _clean(canonical_value)
     checked = validate_official_inches(field, official_raw)
@@ -92,7 +79,7 @@ def agreement_category(left_cm: object, right_cm: object) -> tuple[Decimal | Non
         return None, "not_comparable"
     if diff == 0:
         return diff, "exact_agreement"
-    if diff <= Decimal("0.5"):
+    if diff < Decimal("0.5"):
         return diff, "small_rounding_difference"
     if diff == Decimal("0.5"):
         return diff, "half_inch_difference"
@@ -102,7 +89,6 @@ def agreement_category(left_cm: object, right_cm: object) -> tuple[Decimal | Non
 
 
 def walk_records(value: Any) -> Iterable[dict[str, Any]]:
-    """Yield nested UFC API record objects without coupling reconciliation to paging."""
     if isinstance(value, dict):
         yield value
         for child in value.values():
