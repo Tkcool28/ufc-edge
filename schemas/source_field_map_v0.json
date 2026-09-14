@@ -1068,7 +1068,7 @@
     },
     {
       "collection": "athletes",
-      "mapping_status": "provisional",
+      "mapping_status": "verified",
       "source": "ufc_com_official",
       "source_field": "stats_height",
       "source_role": "primary_candidate",
@@ -1079,7 +1079,7 @@
     },
     {
       "collection": "athletes",
-      "mapping_status": "provisional",
+      "mapping_status": "verified",
       "source": "ufc_com_official",
       "source_field": "stats_reach_arm",
       "source_role": "primary_candidate",
