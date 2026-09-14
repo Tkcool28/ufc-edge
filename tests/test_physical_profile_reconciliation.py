@@ -58,6 +58,12 @@ class PhysicalProfileReconciliationTests(unittest.TestCase):
         self.assertEqual(status, "canonical_null_unverified_official_mapping")
         self.assertTrue(checked.accepted)
 
+    def test_leg_reach_validates_but_canonical_enrichment_stays_disabled(self):
+        value, status, checked = selection(field="reach_leg", canonical_value="", official_raw="41", trusted_identity=True, allow_fill=False)
+        self.assertTrue(checked.accepted)
+        self.assertIsNone(value)
+        self.assertEqual(status, "official_validated_enrichment_disabled")
+
 
 if __name__ == "__main__":
     unittest.main()
