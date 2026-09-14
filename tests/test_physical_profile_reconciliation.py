@@ -34,9 +34,11 @@ class PhysicalProfileReconciliationTests(unittest.TestCase):
         self.assertEqual(status, "greco_retained_populated")
         self.assertEqual(checked.reason, "outside_plausible_inches_48_90")
 
-    def test_equal_minor_and_material_conflicts_are_classified(self):
+    def test_required_disagreement_categories_are_distinct(self):
         self.assertEqual(agreement_category("182.88", Decimal("182.88"))[1], "exact_agreement")
-        self.assertEqual(agreement_category("182.88", Decimal("184.15"))[1], "small_rounding_difference")
+        self.assertEqual(agreement_category("182.88", Decimal("183.515"))[1], "small_rounding_difference")
+        self.assertEqual(agreement_category("182.88", Decimal("184.15"))[1], "half_inch_difference")
+        self.assertEqual(agreement_category("182.88", Decimal("185.42"))[1], "one_inch_or_less_difference")
         self.assertEqual(agreement_category("180", Decimal("187.62"))[1], "greater_than_one_inch_difference")
 
     def test_trusted_identity_is_required(self):
