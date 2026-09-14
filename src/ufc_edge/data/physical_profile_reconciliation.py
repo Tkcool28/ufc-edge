@@ -68,6 +68,8 @@ def selection(*, field: str, canonical_value: object, official_raw: object, trus
         return None, "canonical_null_untrusted_official_identity", checked
     if not mapping_verified:
         return None, "canonical_null_unverified_official_mapping", checked
+    if checked.accepted and not allow_fill:
+        return None, "official_validated_enrichment_disabled", checked
     if checked.accepted:
         return checked.value_cm, "official_null_fill", checked
     return None, f"canonical_null_official_rejected_{checked.reason}", checked
