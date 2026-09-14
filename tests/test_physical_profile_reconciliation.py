@@ -23,7 +23,7 @@ class PhysicalProfileReconciliationTests(unittest.TestCase):
         self.assertEqual(status, "canonical_null_official_rejected_source_null")
 
     def test_malformed_and_implausible_official_values_are_rejected(self):
-        for raw, reason in (("x", "non_numeric"), ("Infinity", "non_finite"), ("155", "outside_plausible_inches_48_90")):
+        for raw, reason in (("x", "non_numeric"), ("Infinity", "non_finite"), ("0.00", "source_zero_missing"), ("155", "outside_plausible_inches_48_90")):
             checked = validate_official_inches("height", raw)
             self.assertFalse(checked.accepted)
             self.assertEqual(checked.reason, reason)
@@ -50,6 +50,13 @@ class PhysicalProfileReconciliationTests(unittest.TestCase):
     def test_only_explicit_official_profile_shapes_are_accepted(self):
         self.assertEqual(official_stats({"stats_height": "72", "stats_reach_arm": "75"}), {"height": "72", "reach_arm": "75", "reach_leg": None})
         self.assertIsNone(official_stats({"other": {"height": "72"}}))
+        self.assertEqual(official_stats({"id": "abc", "attributes": {"stats_height": "72", "stats_reach_arm": "75", "stats_reach_leg": "40"}}), {"height": "72", "reach_arm": "75", "reach_leg": "40"})
+
+    def test_unverified_mapping_cannot_emit_official_value(self):
+        value, status, checked = selection(field="height", canonical_value="", official_raw="72", trusted_identity=True, mapping_verified=False)
+        self.assertIsNone(value)
+        self.assertEqual(status, "canonical_null_unverified_official_mapping")
+        self.assertTrue(checked.accepted)
 
 
 if __name__ == "__main__":
