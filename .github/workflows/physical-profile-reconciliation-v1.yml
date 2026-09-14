@@ -27,6 +27,6 @@ jobs:
       - name: Parse reconciliation sources
         run: python -m py_compile src/ufc_edge/data/physical_profile_reconciliation.py pipelines/build_physical_profile_canonical_reconciliation_v1.py
       - name: Run physical-profile guard tests
-        run: python -m unittest tests/test_physical_profile_reconciliation.py -v
+        run: python -m unittest discover -s tests -p 'test_physical_profile_reconciliation.py' -v
       - name: Confirm frozen v0 DATA is untouched
         run: git diff --quiet origin/main...HEAD -- data/canonical/v0 provenance/data_phase_freeze_v0.json
