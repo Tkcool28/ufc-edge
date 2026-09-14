@@ -107,11 +107,13 @@ def official_stats(record: dict[str, Any]) -> dict[str, Any] | None:
     for candidate in (record.get("stats"), record.get("profileStats"), record.get("profile_stats")):
         if isinstance(candidate, dict) and any(k in candidate for k in ("height", "reach_arm", "reach_leg")):
             return candidate
-    if any(k in record for k in ("stats_height", "stats_reach_arm", "stats_reach_leg")):
+    attrs = record.get("attributes") if isinstance(record.get("attributes"), dict) else {}
+    candidate = record if any(k in record for k in ("stats_height", "stats_reach_arm", "stats_reach_leg")) else attrs
+    if any(k in candidate for k in ("stats_height", "stats_reach_arm", "stats_reach_leg")):
         return {
-            "height": record.get("stats_height"),
-            "reach_arm": record.get("stats_reach_arm"),
-            "reach_leg": record.get("stats_reach_leg"),
+            "height": candidate.get("stats_height"),
+            "reach_arm": candidate.get("stats_reach_arm"),
+            "reach_leg": candidate.get("stats_reach_leg"),
         }
     return None
 
