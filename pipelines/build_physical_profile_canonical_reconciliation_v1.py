@@ -96,7 +96,7 @@ def main() -> int:
         stats = athletes.get(uid, {}) if uid else {}
         for key, (canonical_field, raw_field) in FIELDS.items():
             raw, trusted = stats.get(key), bool(uid and uid in athletes)
-            selected, status, checked = selection(field=key, canonical_value=row[canonical_field], official_raw=raw, trusted_identity=trusted)
+            selected, status, checked = selection(field=key, canonical_value=row[canonical_field], official_raw=raw, trusted_identity=trusted, allow_fill=(key != "reach_leg"))
             if key in overlap and row[canonical_field] and checked.accepted:
                 diff, category = agreement_category(row[canonical_field], checked.value_cm)
                 overlap[key][category] += 1
