@@ -53,7 +53,7 @@ def validate_official_inches(field: str, raw: object) -> Measurement:
     return Measurement(field, text, inches * INCH_TO_CM, True, None)
 
 
-def selection(*, field: str, canonical_value: object, official_raw: object, trusted_identity: bool) -> tuple[Decimal | None, str, Measurement]:
+def selection(*, field: str, canonical_value: object, official_raw: object, trusted_identity: bool, mapping_verified: bool = True) -> tuple[Decimal | None, str, Measurement]:
     """Return NULL-FILL selection and a truthful, stable selection label."""
     current = _clean(canonical_value)
     checked = validate_official_inches(field, official_raw)
@@ -64,6 +64,8 @@ def selection(*, field: str, canonical_value: object, official_raw: object, trus
             raise ValueError(f"canonical {field} is non-numeric: {current!r}") from exc
     if not trusted_identity:
         return None, "canonical_null_untrusted_official_identity", checked
+    if not mapping_verified:
+        return None, "canonical_null_unverified_official_mapping", checked
     if checked.accepted:
         return checked.value_cm, "official_null_fill", checked
     return None, f"canonical_null_official_rejected_{checked.reason}", checked
