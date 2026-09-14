@@ -106,7 +106,7 @@ def main() -> int:
             if not row[canonical_field] and selected is not None:
                 out[canonical_field] = scalar(selected)
             if uid:
-                additions.append({"table_name": "fighters", "row_key": row["fighter_id"], "field_name": canonical_field, "source_name": "ufc_com", "source_snapshot_id": SNAPSHOT_ID, "source_record_id": uid, "source_field_name": raw_field, "selection_status": status, "selection_rule": "validated_official_null_fill_then_preserve_greco", "quality_note": checked.reason or "validated_inches"})
+                additions.append({"table_name": "fighters", "row_key": row["fighter_id"], "field_name": canonical_field, "source_name": "ufc_com", "source_snapshot_id": SNAPSHOT_ID, "source_record_id": uid, "source_field_name": raw_field, "selection_status": status, "selection_rule": "validated_official_null_fill_then_preserve_greco" if key != "reach_leg" else "validated_official_leg_reach_enrichment_disabled", "quality_note": checked.reason or "validated_inches"})
         output.append(out)
 
     OUT.mkdir(parents=True, exist_ok=True)
