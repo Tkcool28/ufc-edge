@@ -1,0 +1,70 @@
+from decimal import Decimal
+
+import pytest
+
+from ufc_edge.data.physical_profile_reconciliation import (
+    agreement_category,
+    official_stats,
+    selection,
+    validate_official_inches,
+)
+
+
+def test_official_populated_greco_null_selects_official():
+    value, status, checked = selection(field="height", canonical_value="", official_raw="72", trusted_identity=True)
+    assert checked.accepted
+    assert value == Decimal("182.88")
+    assert status == "official_null_fill"
+
+
+def test_official_null_greco_populated_retains_greco():
+    value, status, checked = selection(field="reach_arm", canonical_value="190.5", official_raw=None, trusted_identity=True)
+    assert value == Decimal("190.5")
+    assert status == "greco_retained_populated"
+    assert checked.reason == "source_null"
+
+
+def test_both_null_stays_null():
+    value, status, _ = selection(field="height", canonical_value=None, official_raw=None, trusted_identity=True)
+    assert value is None
+    assert status == "canonical_null_official_rejected_source_null"
+
+
+@pytest.mark.parametrize("raw,reason", [("x", "non_numeric"), ("Infinity", "non_finite"), ("155", "outside_plausible_inches_48_90")])
+def test_malformed_or_implausible_official_is_rejected(raw, reason):
+    checked = validate_official_inches("height", raw)
+    assert not checked.accepted
+    assert checked.reason == reason
+
+
+def test_rejected_official_falls_back_to_greco():
+    value, status, checked = selection(field="height", canonical_value="180.34", official_raw="155", trusted_identity=True)
+    assert value == Decimal("180.34")
+    assert status == "greco_retained_populated"
+    assert checked.reason == "outside_plausible_inches_48_90"
+
+
+def test_equal_and_minor_disagreement_are_governed_deterministically():
+    assert agreement_category("182.88", Decimal("182.88"))[1] == "exact_agreement"
+    assert agreement_category("182.88", Decimal("184.15"))[1] == "small_rounding_difference"
+
+
+def test_material_conflict_is_classified_not_silently_resolved():
+    assert agreement_category("180", Decimal("187.62"))[1] == "greater_than_one_inch_difference"
+
+
+def test_trusted_identity_is_required():
+    value, status, checked = selection(field="reach_arm", canonical_value="", official_raw="76", trusted_identity=False)
+    assert value is None
+    assert status == "canonical_null_untrusted_official_identity"
+    assert checked.accepted
+
+
+def test_missing_never_becomes_zero():
+    value, _, _ = selection(field="height", canonical_value="", official_raw="", trusted_identity=True)
+    assert value is None
+
+
+def test_only_explicit_official_profile_shapes_are_accepted():
+    assert official_stats({"stats_height": "72", "stats_reach_arm": "75"}) == {"height": "72", "reach_arm": "75", "reach_leg": None}
+    assert official_stats({"other": {"height": "72"}}) is None
