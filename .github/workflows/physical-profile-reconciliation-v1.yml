@@ -21,6 +21,8 @@ jobs:
       PYTHONPATH: src
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -30,3 +32,43 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_physical_profile_reconciliation.py' -v
       - name: Confirm frozen v0 DATA is untouched
         run: git diff --quiet origin/main...HEAD -- data/canonical/v0 provenance/data_phase_freeze_v0.json
+
+  evidence:
+    needs: guards
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build reconciliation evidence
+        run: python pipelines/build_physical_profile_canonical_reconciliation_v1.py
+      - name: Verify bounded cohort and no 2024 regression
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          audit = json.loads(Path("provenance/audits/physical_profile_canonical_reconciliation_v1.json").read_text())
+          assert audit["recent_cohort_rows"] == 57, audit["recent_cohort_rows"]
+          cov = audit["coverage"]["2024"]
+          assert cov["height_after_null"] <= cov["height_before_null"], cov
+          assert cov["reach_after_null"] <= cov["reach_before_null"], cov
+          print(json.dumps({"recent_cohort_rows": audit["recent_cohort_rows"], "coverage_2024": cov}, sort_keys=True))
+          PY
+      - name: Upload reconciliation evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: physical-profile-canonical-reconciliation-v1
+          path: |
+            data/canonical/v1
+            data/derived/qa/physical_profile_recent_cohort_v1.csv
+            data/derived/qa/physical_profile_recent_nulls_v1.csv
+            provenance/audits/physical_profile_canonical_reconciliation_v1.json
+            provenance/audits/physical_profile_canonical_reconciliation_v1.md
+          if-no-files-found: error
+          retention-days: 30
