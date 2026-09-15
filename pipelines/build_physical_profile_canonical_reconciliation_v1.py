@@ -14,7 +14,7 @@ from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
-from ufc_edge.data.physical_profile_reconciliation import agreement_category, official_stats, official_uuid, selection, walk_records
+from ufc_edge.data.physical_profile_reconciliation import agreement_category, official_stats, official_uuid, recovery_selection, selection, walk_records
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "data/canonical/v0"
@@ -24,6 +24,7 @@ AUDIT_JSON = ROOT / "provenance/audits/physical_profile_canonical_reconciliation
 AUDIT_MD = ROOT / "provenance/audits/physical_profile_canonical_reconciliation_v1.md"
 COHORT = ROOT / "data/derived/qa/physical_profile_recent_cohort_v1.csv"
 REMAINING = ROOT / "data/derived/qa/physical_profile_recent_nulls_v1.csv"
+RECOVERY = ROOT / "data/supplemental/physical_profile_recent_recovery_v1.csv"
 SNAPSHOT_ID = RAW.name
 PROV_FIELDS = ["table_name", "row_key", "field_name", "source_name", "source_snapshot_id", "source_record_id", "source_field_name", "selection_status", "selection_rule", "quality_note"]
 FIELDS = {"height": ("height_cm", "stats_height"), "reach_arm": ("reach_cm", "stats_reach_arm"), "reach_leg": ("leg_reach_cm", "stats_reach_leg")}
@@ -82,6 +83,13 @@ def main() -> int:
     if not BASE.exists():
         raise RuntimeError("canonical v0 is required and must be preserved")
     athletes, base_fighters, identities = official_by_uuid(), read_csv(BASE / "fighters.csv"), read_csv(BASE / "source_identity_links.csv")
+    recovery_rows = read_csv(RECOVERY)
+    recovery = {}
+    for evidence in recovery_rows:
+        key = (evidence["fighter_id"], evidence["field_name"])
+        if key in recovery:
+            raise RuntimeError(f"duplicate supplemental recovery row: {key}")
+        recovery[key] = evidence
     official_link = {r["canonical_id"]: r["source_id"] for r in identities if r["entity_type"] == "fighter" and r["source_name"] == "ufc_com" and r["source_entity_type"] == "athlete" and r["review_status"] == "trusted"}
     provenance = read_csv(BASE / "field_provenance.csv")
     output, additions = [], []
@@ -108,6 +116,85 @@ def main() -> int:
             if uid:
                 additions.append({"table_name": "fighters", "row_key": row["fighter_id"], "field_name": canonical_field, "source_name": "ufc_com", "source_snapshot_id": SNAPSHOT_ID, "source_record_id": uid, "source_field_name": raw_field, "selection_status": status, "selection_rule": "validated_official_null_fill_then_preserve_greco" if key != "reach_leg" else "validated_official_leg_reach_enrichment_disabled", "quality_note": checked.reason or "validated_inches"})
         output.append(out)
+
+    # Supplemental evidence must account for exactly the recent fields still null
+    # after the existing Greco/UFC Official reconciliation.
+    official_only_output = [dict(r) for r in output]
+    expected_recovery_keys = set()
+    for row in official_only_output:
+        if set(years.get(row["fighter_id"], ())) & {2025, 2026}:
+            for canonical_field in ("height_cm", "reach_cm"):
+                if not row[canonical_field]:
+                    expected_recovery_keys.add((row["fighter_id"], canonical_field))
+    if set(recovery) != expected_recovery_keys:
+        missing = sorted(expected_recovery_keys - set(recovery))
+        extra = sorted(set(recovery) - expected_recovery_keys)
+        raise RuntimeError(f"supplemental recovery cohort mismatch missing={missing} extra={extra}")
+
+    resolution_counts = Counter()
+    supplemental_changed = []
+    for out in output:
+        recent_years = sorted(y for y in years.get(out["fighter_id"], set()) if y in {2025, 2026})
+        if not recent_years:
+            continue
+        for canonical_field in ("height_cm", "reach_cm"):
+            evidence = recovery.get((out["fighter_id"], canonical_field))
+            if evidence is None:
+                continue
+            if evidence["fighter_name"] != out["canonical_name"]:
+                raise RuntimeError(f"supplemental fighter name mismatch for {out['fighter_id']}")
+            if evidence["fight_years"] != ",".join(map(str, recent_years)):
+                raise RuntimeError(f"supplemental fight-year mismatch for {out['fighter_id']} {canonical_field}")
+            value, status, checked = recovery_selection(
+                field_name=canonical_field,
+                canonical_value=out[canonical_field],
+                raw_value=evidence["raw_value"],
+                raw_unit=evidence["raw_unit"],
+                review_status=evidence["review_status"],
+                resolution_status=evidence["resolution_status"],
+            )
+            resolution_counts[evidence["resolution_status"]] += 1
+            if evidence["review_status"] == "accepted":
+                expected_cm = Decimal(evidence["normalized_value_cm"])
+                if checked.value_cm != expected_cm:
+                    raise RuntimeError(
+                        f"supplemental normalized value mismatch for {out['fighter_id']} {canonical_field}: "
+                        f"computed={checked.value_cm} evidence={expected_cm}"
+                    )
+                if value is None:
+                    raise RuntimeError(f"accepted supplemental evidence did not emit: {out['fighter_id']} {canonical_field}")
+                before_value = out[canonical_field]
+                out[canonical_field] = scalar(value)
+                supplemental_changed.append(
+                    {
+                        "fighter_id": out["fighter_id"],
+                        "fighter": out["canonical_name"],
+                        "field_name": canonical_field,
+                        "before": before_value,
+                        "after": out[canonical_field],
+                        "resolution_status": evidence["resolution_status"],
+                    }
+                )
+            elif value is not None:
+                raise RuntimeError(f"non-accepted supplemental evidence emitted canonical value: {out['fighter_id']} {canonical_field}")
+
+            additions.append(
+                {
+                    "table_name": "fighters",
+                    "row_key": out["fighter_id"],
+                    "field_name": canonical_field,
+                    "source_name": "physical_profile_recent_recovery_v1",
+                    "source_snapshot_id": evidence["retrieved_at"],
+                    "source_record_id": evidence["source_url_or_id"] or f"{out['fighter_id']}:{canonical_field}",
+                    "source_field_name": "raw_value",
+                    "selection_status": status,
+                    "selection_rule": "prior_populated_canonical_retained_else_validated_official_else_governed_supplemental_null_fill",
+                    "quality_note": evidence["resolution_status"] + "; " + evidence["notes"],
+                }
+            )
+
+    if len(recovery_rows) != sum(resolution_counts.values()):
+        raise RuntimeError("supplemental recovery resolution accounting is incomplete")
 
     OUT.mkdir(parents=True, exist_ok=True)
     write_csv(OUT / "fighters.csv", list(base_fighters[0]), output)
@@ -137,14 +224,55 @@ def main() -> int:
     write_csv(COHORT, cohort_fields, cohort_rows)
     write_csv(REMAINING, remaining_fields, remaining)
 
+    official_only_by_id = {r["fighter_id"]: r for r in official_only_output}
     coverage = {}
+    v0_to_official_coverage = {}
     for period, wanted in {"global": None, "2024": {2024}, "2025": {2025}, "2026": {2026}}.items():
         population = [r for r in output if wanted is None or set(years.get(r["fighter_id"], ())) & wanted]
-        before_population = [before_by_id[r["fighter_id"]] for r in population]
-        coverage[period] = {"fighters": len(population), "height_before_null": sum(not r["height_cm"] for r in before_population), "height_after_null": sum(not r["height_cm"] for r in population), "reach_before_null": sum(not r["reach_cm"] for r in before_population), "reach_after_null": sum(not r["reach_cm"] for r in population)}
+        completion_before = [official_only_by_id[r["fighter_id"]] for r in population]
+        v0_before = [before_by_id[r["fighter_id"]] for r in population]
+        official_rows = [official_only_by_id[r["fighter_id"]] for r in population]
+        coverage[period] = {
+            "fighters": len(population),
+            "height_before_null": sum(not r["height_cm"] for r in completion_before),
+            "height_after_null": sum(not r["height_cm"] for r in population),
+            "reach_before_null": sum(not r["reach_cm"] for r in completion_before),
+            "reach_after_null": sum(not r["reach_cm"] for r in population),
+        }
+        v0_to_official_coverage[period] = {
+            "fighters": len(population),
+            "height_before_null": sum(not r["height_cm"] for r in v0_before),
+            "height_after_null": sum(not r["height_cm"] for r in official_rows),
+            "reach_before_null": sum(not r["reach_cm"] for r in v0_before),
+            "reach_after_null": sum(not r["reach_cm"] for r in official_rows),
+        }
 
     largest = {field: sorted(rows, key=lambda r: Decimal(r["difference_inches"]), reverse=True)[:25] for field, rows in largest.items()}
-    manifest = {"schema_version": 2, "build": "physical_profile_canonical_reconciliation_v1", "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"), "base_canonical_version": "v0", "official_snapshot": SNAPSHOT_ID, "source_policy": "validated UFC Official null-fill only; populated Greco retained", "temporal_semantics": "static athlete attributes retain actual official snapshot timestamp; no pre-fight observation claim", "overlap": {k: dict(v) for k, v in overlap.items()}, "largest_disagreements": largest, "rejected_official_values": dict(rejected), "coverage": coverage, "recent_cohort_rows": len(cohort_rows), "recent_remaining_null_rows": len(remaining)}
+    target_keys = set(recovery)
+    changed_keys = {(r["fighter_id"], r["field_name"]) for r in supplemental_changed}
+    if not changed_keys <= target_keys:
+        raise RuntimeError("supplemental recovery changed a non-target field")
+    manifest = {
+        "schema_version": 3,
+        "build": "physical_profile_canonical_reconciliation_v1",
+        "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "base_canonical_version": "v0",
+        "official_snapshot": SNAPSHOT_ID,
+        "supplemental_recovery": str(RECOVERY.relative_to(ROOT)),
+        "source_policy": "populated canonical/Greco retained; validated UFC Official null-fill; then validated governed supplemental recovery null-fill",
+        "temporal_semantics": "static athlete attributes retain actual source observation/retrieval timestamps; no pre-fight observation claim",
+        "overlap": {k: dict(v) for k, v in overlap.items()},
+        "largest_disagreements": largest,
+        "rejected_official_values": dict(rejected),
+        "coverage": coverage,
+        "v0_to_official_coverage": v0_to_official_coverage,
+        "recovery_resolution_counts": dict(resolution_counts),
+        "supplemental_changed_fields": supplemental_changed,
+        "non_target_canonical_changes": 0,
+        "recent_cohort_rows": len(cohort_rows),
+        "initial_recent_null_field_rows": len(recovery_rows),
+        "recent_remaining_null_rows": len(remaining),
+    }
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     AUDIT_JSON.parent.mkdir(parents=True, exist_ok=True)
     AUDIT_JSON.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
