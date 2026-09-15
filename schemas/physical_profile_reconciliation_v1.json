@@ -1,6 +1,6 @@
 {
-  "policy_version": "1.0.0",
-  "status": "validated_for_canonical_null_fill",
+  "policy_version": "1.1.0",
+  "status": "validated_for_canonical_null_fill_with_governed_recent_recovery",
   "scope": "fighters.height_cm and fighters.reach_cm only",
   "official_provider": "ufc_com",
   "snapshot_id": "20260820T194553Z",
@@ -13,23 +13,44 @@
     "stats_height": {
       "canonical_field": "height_cm",
       "verified_unit": "inches",
-      "plausible_inches": [48, 90],
+      "plausible_inches": [
+        48,
+        90
+      ],
       "selection": "validated official value fills canonical null only"
     },
     "stats_reach_arm": {
       "canonical_field": "reach_cm",
       "verified_unit": "inches",
-      "plausible_inches": [48, 96],
+      "plausible_inches": [
+        48,
+        96
+      ],
       "selection": "validated official value fills canonical null only"
     },
     "stats_reach_leg": {
       "canonical_field": "leg_reach_cm",
       "verified_unit": "inches",
-      "plausible_inches": [24, 72],
+      "plausible_inches": [
+        24,
+        72
+      ],
       "selection": "validated only; canonical enrichment disabled"
     }
   },
   "rejection_behavior": "do not convert or guess alternate units; retain Greco fallback or canonical null and record provenance",
   "temporal_semantics": "physical attributes are treated as static DATA attributes while source snapshot observation time remains preserved in provenance",
-  "global_precedence": "null-fill only; complete overlap audit found material source conflicts, so populated Greco values are not globally overwritten"
+  "global_precedence": "unchanged: populated Greco/canonical values are never overwritten; supplemental recovery is null-fill only",
+  "supplemental_recovery": {
+    "path": "data/supplemental/physical_profile_recent_recovery_v1.csv",
+    "scope": "only 2025-2026 height_cm/reach_cm still null after existing Greco/UFC Official reconciliation",
+    "source_priority": "existing populated canonical/Greco retained; validated UFC Official null-fill; validated governed supplemental recovery; null",
+    "accepted_resolution_status": "RESOLVED_TRUSTED_MEASUREMENT",
+    "non_emitting_resolution_statuses": [
+      "RESOLVED_CONFLICT_QUARANTINED",
+      "EXHAUSTED_TRUSTED_SOURCES_NO_MEASUREMENT"
+    ],
+    "unit_policy": "raw_value and raw_unit are mandatory for accepted rows; normalize in->cm by exact 2.54 and cm->cm; no unit guessing",
+    "no_overwrite": true
+  }
 }
