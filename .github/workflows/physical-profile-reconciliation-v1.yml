@@ -6,6 +6,7 @@ on:
     paths:
       - "src/ufc_edge/data/physical_profile_reconciliation.py"
       - "pipelines/build_physical_profile_canonical_reconciliation_v1.py"
+      - "data/supplemental/physical_profile_recent_recovery_v1.csv"
       - "schemas/physical_profile_reconciliation_v1.json"
       - "tests/test_physical_profile_reconciliation.py"
       - ".github/workflows/physical-profile-reconciliation-v1.yml"
@@ -55,10 +56,24 @@ jobs:
           from pathlib import Path
           audit = json.loads(Path("provenance/audits/physical_profile_canonical_reconciliation_v1.json").read_text())
           assert audit["recent_cohort_rows"] == 57, audit["recent_cohort_rows"]
-          cov = audit["coverage"]["2024"]
-          assert cov["height_after_null"] <= cov["height_before_null"], cov
-          assert cov["reach_after_null"] <= cov["reach_before_null"], cov
-          print(json.dumps({"recent_cohort_rows": audit["recent_cohort_rows"], "coverage_2024": cov}, sort_keys=True))
+          assert audit["initial_recent_null_field_rows"] == 23, audit["initial_recent_null_field_rows"]
+          assert audit["recovery_resolution_counts"] == {
+              "RESOLVED_TRUSTED_MEASUREMENT": 12,
+              "RESOLVED_CONFLICT_QUARANTINED": 3,
+              "EXHAUSTED_TRUSTED_SOURCES_NO_MEASUREMENT": 8,
+          }, audit["recovery_resolution_counts"]
+          assert audit["non_target_canonical_changes"] == 0, audit["non_target_canonical_changes"]
+          assert len(audit["supplemental_changed_fields"]) == 12, audit["supplemental_changed_fields"]
+          cov_2024 = audit["coverage"]["2024"]
+          assert cov_2024["height_before_null"] == cov_2024["height_after_null"] == 0, cov_2024
+          assert cov_2024["reach_before_null"] == cov_2024["reach_after_null"] == 0, cov_2024
+          cov_2025 = audit["coverage"]["2025"]
+          assert cov_2025["height_before_null"] == cov_2025["height_after_null"] == 0, cov_2025
+          assert cov_2025["reach_before_null"] == 1 and cov_2025["reach_after_null"] == 0, cov_2025
+          cov_2026 = audit["coverage"]["2026"]
+          assert cov_2026["height_before_null"] == 2 and cov_2026["height_after_null"] == 1, cov_2026
+          assert cov_2026["reach_before_null"] == 20 and cov_2026["reach_after_null"] == 10, cov_2026
+          print(json.dumps({"recent_cohort_rows": audit["recent_cohort_rows"], "coverage": audit["coverage"], "resolution_counts": audit["recovery_resolution_counts"]}, sort_keys=True))
           PY
       - name: Upload reconciliation evidence
         uses: actions/upload-artifact@v4
@@ -66,6 +81,7 @@ jobs:
           name: physical-profile-canonical-reconciliation-v1
           path: |
             data/canonical/v1
+            data/supplemental/physical_profile_recent_recovery_v1.csv
             data/derived/qa/physical_profile_recent_cohort_v1.csv
             data/derived/qa/physical_profile_recent_nulls_v1.csv
             provenance/audits/physical_profile_canonical_reconciliation_v1.json
