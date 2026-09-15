@@ -202,6 +202,9 @@ def main() -> int:
         (OUT / filename).write_bytes((BASE / filename).read_bytes())
     all_provenance = provenance + additions
     all_provenance.sort(key=lambda r: (r["table_name"], r["row_key"], r["field_name"], r["source_name"], r["source_record_id"]))
+    recovery_provenance = [r for r in all_provenance if r["source_name"] == "physical_profile_recent_recovery_v1"]
+    if len(recovery_provenance) != len(recovery_rows):
+        raise RuntimeError(f"supplemental provenance incomplete: {len(recovery_provenance)} != {len(recovery_rows)}")
     write_csv(OUT / "field_provenance.csv", PROV_FIELDS, all_provenance)
 
     before_by_id = {r["fighter_id"]: r for r in base_fighters}
@@ -216,11 +219,12 @@ def main() -> int:
             for key, (canonical_field, _) in list(FIELDS.items())[:2]:
                 if not after[canonical_field]:
                     _, status, checked = selection(field=key, canonical_value=before[canonical_field], official_raw=stats.get(key), trusted_identity=bool(uid and uid in athletes))
-                    remaining.append({"fighter_id": after["fighter_id"], "fighter": after["canonical_name"], "field": canonical_field, "greco_state": "null", "official_state": checked.reason or "populated", "canonical_reason": status, "official_athlete_uuid": uid})
+                    evidence = recovery.get((after["fighter_id"], canonical_field), {})
+                    remaining.append({"fighter_id": after["fighter_id"], "fighter": after["canonical_name"], "field": canonical_field, "greco_state": "null", "official_state": checked.reason or "populated", "canonical_reason": status, "resolution_status": evidence.get("resolution_status", ""), "official_athlete_uuid": uid})
     cohort_rows.sort(key=lambda r: (r["fighter"], r["fighter_id"]))
     remaining.sort(key=lambda r: (r["fighter"], r["field"]))
     cohort_fields = ["fighter_id", "fighter", "years", "height_before_cm", "official_height_raw", "height_after_cm", "reach_before_cm", "official_reach_arm_raw", "reach_after_cm", "official_athlete_uuid"]
-    remaining_fields = ["fighter_id", "fighter", "field", "greco_state", "official_state", "canonical_reason", "official_athlete_uuid"]
+    remaining_fields = ["fighter_id", "fighter", "field", "greco_state", "official_state", "canonical_reason", "resolution_status", "official_athlete_uuid"]
     write_csv(COHORT, cohort_fields, cohort_rows)
     write_csv(REMAINING, remaining_fields, remaining)
 
@@ -250,8 +254,19 @@ def main() -> int:
     largest = {field: sorted(rows, key=lambda r: Decimal(r["difference_inches"]), reverse=True)[:25] for field, rows in largest.items()}
     target_keys = set(recovery)
     changed_keys = {(r["fighter_id"], r["field_name"]) for r in supplemental_changed}
-    if not changed_keys <= target_keys:
-        raise RuntimeError("supplemental recovery changed a non-target field")
+    actual_changes = []
+    final_by_id = {r["fighter_id"]: r for r in output}
+    for before in official_only_output:
+        after = final_by_id[before["fighter_id"]]
+        for field_name in ("height_cm", "reach_cm", "leg_reach_cm"):
+            if before[field_name] != after[field_name]:
+                actual_changes.append((before["fighter_id"], field_name))
+    actual_change_keys = set(actual_changes)
+    if actual_change_keys != changed_keys:
+        raise RuntimeError(f"supplemental change audit mismatch actual={sorted(actual_change_keys)} recorded={sorted(changed_keys)}")
+    non_target_changes = sorted(actual_change_keys - target_keys)
+    if non_target_changes:
+        raise RuntimeError(f"supplemental recovery changed non-target canonical fields: {non_target_changes}")
     manifest = {
         "schema_version": 3,
         "build": "physical_profile_canonical_reconciliation_v1",
@@ -268,7 +283,7 @@ def main() -> int:
         "v0_to_official_coverage": v0_to_official_coverage,
         "recovery_resolution_counts": dict(resolution_counts),
         "supplemental_changed_fields": supplemental_changed,
-        "non_target_canonical_changes": 0,
+        "non_target_canonical_changes": len(non_target_changes),
         "recent_cohort_rows": len(cohort_rows),
         "initial_recent_null_field_rows": len(recovery_rows),
         "recent_remaining_null_rows": len(remaining),
@@ -276,7 +291,21 @@ def main() -> int:
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     AUDIT_JSON.parent.mkdir(parents=True, exist_ok=True)
     AUDIT_JSON.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    AUDIT_MD.write_text("# Physical-profile canonical reconciliation v1\n\nPolicy: validated UFC Official NULL-FILL only; populated Greco values are retained.\n\n- Official athlete snapshot: " + SNAPSHOT_ID + "\n- Recent cohort rows: " + str(len(cohort_rows)) + "\n- Remaining recent null field rows: " + str(len(remaining)) + "\n- Official rejections: " + str(sum(rejected.values())) + "\n", encoding="utf-8")
+    AUDIT_MD.write_text(
+        "# Physical-profile canonical reconciliation v1\n\n"
+        "Policy: populated canonical/Greco values are retained; validated UFC Official fills nulls; "
+        "validated governed supplemental recovery is considered only when both remain null.\n\n"
+        f"- Official athlete snapshot: {SNAPSHOT_ID}\n"
+        f"- Initial recent unresolved field rows: {len(recovery_rows)}\n"
+        f"- Trusted supplemental measurements: {resolution_counts['RESOLVED_TRUSTED_MEASUREMENT']}\n"
+        f"- Conflict quarantines: {resolution_counts['RESOLVED_CONFLICT_QUARANTINED']}\n"
+        f"- Exhausted/no-measurement rows: {resolution_counts['EXHAUSTED_TRUSTED_SOURCES_NO_MEASUREMENT']}\n"
+        f"- Remaining recent null field rows: {len(remaining)}\n"
+        f"- Non-target canonical changes: {len(non_target_changes)}\n"
+        f"- Official rejections: {sum(rejected.values())}\n"
+        f"- Completion coverage: {json.dumps(coverage, sort_keys=True)}\n",
+        encoding="utf-8",
+    )
     print(json.dumps(coverage, sort_keys=True))
     return 0
 
