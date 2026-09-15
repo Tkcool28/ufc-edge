@@ -126,3 +126,72 @@ def official_uuid(record: dict[str, Any]) -> str | None:
         if value:
             return value
     return None
+
+
+RECOVERY_FIELDS = {
+    "height_cm": "height",
+    "reach_cm": "reach_arm",
+}
+RECOVERY_UNITS = {"in", "cm"}
+RECOVERY_REVIEW_STATUSES = {"accepted", "quarantined", "exhausted"}
+RECOVERY_RESOLUTION_STATUSES = {
+    "RESOLVED_TRUSTED_MEASUREMENT",
+    "RESOLVED_CONFLICT_QUARANTINED",
+    "EXHAUSTED_TRUSTED_SOURCES_NO_MEASUREMENT",
+}
+
+
+def validate_recovery_measurement(field_name: str, raw_value: object, raw_unit: object) -> Measurement:
+    """Validate a governed supplemental height/reach measurement and normalize to cm."""
+    if field_name not in RECOVERY_FIELDS:
+        raise ValueError(f"unsupported recovery field: {field_name}")
+    field = RECOVERY_FIELDS[field_name]
+    text = _clean(raw_value)
+    unit = (_clean(raw_unit) or "").lower()
+    if text is None:
+        return Measurement(field, None, None, False, "source_null")
+    if unit not in RECOVERY_UNITS:
+        return Measurement(field, text, None, False, "unsupported_or_missing_unit")
+    try:
+        value = Decimal(text)
+    except InvalidOperation:
+        return Measurement(field, text, None, False, "non_numeric")
+    if not value.is_finite():
+        return Measurement(field, text, None, False, "non_finite")
+    if value == 0:
+        return Measurement(field, text, None, False, "source_zero_missing")
+    value_cm = value * INCH_TO_CM if unit == "in" else value
+    lo_in, hi_in = PHYSICAL_BOUNDS_IN[field]
+    lo_cm, hi_cm = lo_in * INCH_TO_CM, hi_in * INCH_TO_CM
+    if not lo_cm <= value_cm <= hi_cm:
+        return Measurement(field, text, None, False, f"outside_plausible_cm_{lo_cm}_{hi_cm}")
+    return Measurement(field, text, value_cm, True, None)
+
+
+def recovery_selection(
+    *,
+    field_name: str,
+    canonical_value: object,
+    raw_value: object,
+    raw_unit: object,
+    review_status: str,
+    resolution_status: str,
+) -> tuple[Decimal | None, str, Measurement]:
+    """Apply supplemental evidence only after prior canonical/official selection remains null."""
+    checked = validate_recovery_measurement(field_name, raw_value, raw_unit)
+    current = _clean(canonical_value)
+    if current is not None:
+        try:
+            return Decimal(current), "prior_canonical_retained", checked
+        except InvalidOperation as exc:
+            raise ValueError(f"canonical {field_name} is non-numeric: {current!r}") from exc
+    if review_status not in RECOVERY_REVIEW_STATUSES:
+        return None, "supplemental_invalid_review_status", checked
+    if resolution_status not in RECOVERY_RESOLUTION_STATUSES:
+        return None, "supplemental_invalid_resolution_status", checked
+    if review_status != "accepted" or resolution_status != "RESOLVED_TRUSTED_MEASUREMENT":
+        label = "supplemental_conflict_quarantined" if review_status == "quarantined" else "supplemental_exhausted_no_measurement"
+        return None, label, checked
+    if not checked.accepted:
+        return None, f"supplemental_rejected_{checked.reason}", checked
+    return checked.value_cm, "supplemental_null_fill", checked
