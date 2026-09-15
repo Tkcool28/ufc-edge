@@ -1,7 +1,7 @@
 from decimal import Decimal
 import unittest
 
-from ufc_edge.data.physical_profile_reconciliation import agreement_category, official_stats, selection, validate_official_inches
+from ufc_edge.data.physical_profile_reconciliation import agreement_category, official_stats, recovery_selection, selection, validate_official_inches, validate_recovery_measurement
 
 
 class PhysicalProfileReconciliationTests(unittest.TestCase):
@@ -63,6 +63,70 @@ class PhysicalProfileReconciliationTests(unittest.TestCase):
         self.assertTrue(checked.accepted)
         self.assertIsNone(value)
         self.assertEqual(status, "official_validated_enrichment_disabled")
+
+    def test_governed_supplemental_recovery_fills_null(self):
+        value, status, checked = recovery_selection(
+            field_name="reach_cm", canonical_value="", raw_value="75", raw_unit="in",
+            review_status="accepted", resolution_status="RESOLVED_TRUSTED_MEASUREMENT",
+        )
+        self.assertTrue(checked.accepted)
+        self.assertEqual(value, Decimal("190.50"))
+        self.assertEqual(status, "supplemental_null_fill")
+
+    def test_supplemental_cannot_overwrite_populated_prior_canonical(self):
+        value, status, _ = recovery_selection(
+            field_name="height_cm", canonical_value="182.88", raw_value="70", raw_unit="in",
+            review_status="accepted", resolution_status="RESOLVED_TRUSTED_MEASUREMENT",
+        )
+        self.assertEqual(value, Decimal("182.88"))
+        self.assertEqual(status, "prior_canonical_retained")
+
+    def test_supplemental_cannot_overwrite_validated_official_fill(self):
+        official, _, _ = selection(field="height", canonical_value="", official_raw="72", trusted_identity=True)
+        value, status, _ = recovery_selection(
+            field_name="height_cm", canonical_value=official, raw_value="70", raw_unit="in",
+            review_status="accepted", resolution_status="RESOLVED_TRUSTED_MEASUREMENT",
+        )
+        self.assertEqual(value, Decimal("182.88"))
+        self.assertEqual(status, "prior_canonical_retained")
+
+    def test_conflicting_or_rejected_recovery_does_not_emit(self):
+        value, status, _ = recovery_selection(
+            field_name="reach_cm", canonical_value="", raw_value="", raw_unit="",
+            review_status="quarantined", resolution_status="RESOLVED_CONFLICT_QUARANTINED",
+        )
+        self.assertIsNone(value)
+        self.assertEqual(status, "supplemental_conflict_quarantined")
+
+    def test_exhausted_recovery_remains_null(self):
+        value, status, _ = recovery_selection(
+            field_name="reach_cm", canonical_value="", raw_value="", raw_unit="",
+            review_status="exhausted", resolution_status="EXHAUSTED_TRUSTED_SOURCES_NO_MEASUREMENT",
+        )
+        self.assertIsNone(value)
+        self.assertEqual(status, "supplemental_exhausted_no_measurement")
+
+    def test_recovery_malformed_and_implausible_values_rejected(self):
+        for raw, unit in (("x", "in"), ("Infinity", "cm"), ("0", "in"), ("20", "in"), ("500", "cm")):
+            self.assertFalse(validate_recovery_measurement("height_cm", raw, unit).accepted)
+
+    def test_recovery_unit_conversion_is_deterministic(self):
+        self.assertEqual(validate_recovery_measurement("reach_cm", "75", "in").value_cm, Decimal("190.50"))
+        self.assertEqual(validate_recovery_measurement("reach_cm", "190.5", "cm").value_cm, Decimal("190.5"))
+
+    def test_recovery_requires_explicit_units(self):
+        checked = validate_recovery_measurement("reach_cm", "75", "")
+        self.assertFalse(checked.accepted)
+        self.assertEqual(checked.reason, "unsupported_or_missing_unit")
+
+    def test_nonaccepted_resolution_cannot_emit_even_with_numeric_value(self):
+        value, status, checked = recovery_selection(
+            field_name="reach_cm", canonical_value="", raw_value="75", raw_unit="in",
+            review_status="quarantined", resolution_status="RESOLVED_CONFLICT_QUARANTINED",
+        )
+        self.assertTrue(checked.accepted)
+        self.assertIsNone(value)
+        self.assertEqual(status, "supplemental_conflict_quarantined")
 
 
 if __name__ == "__main__":
