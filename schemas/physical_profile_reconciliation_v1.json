@@ -64,6 +64,9 @@
     "future_missingness_status": "a recent field still null without pinned live evidence is LIVE_UFCSTATS_CHECK_REQUIRED",
     "populated_status": "LIVE_UFCSTATS_RECOVERED",
     "checked_null_status": "LIVE_UFCSTATS_CHECKED_STILL_NULL",
-    "no_overwrite": true
+    "no_overwrite": true,
+    "check_required_output": "data/derived/qa/physical_profile_live_ufcstats_check_required_v1.csv",
+    "check_required_output_contract": "same target schema accepted by the controlled fetch command: fighter_id, fighter_name, field_name, ufcstats_fighter_id, ufcstats_url, trusted_ufc_uuid, identity_basis",
+    "controlled_workflow": ".github/workflows/ufcstats-live-physical-recovery-v1.yml; workflow_dispatch only"
   }
 }
