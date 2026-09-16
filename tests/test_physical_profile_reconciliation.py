@@ -1,4 +1,6 @@
 from decimal import Decimal
+import hashlib
+import json
 import csv
 from pathlib import Path
 import unittest
@@ -202,6 +204,20 @@ class PhysicalProfileReconciliationTests(unittest.TestCase):
         self.assertEqual(len(rows), 11)
         self.assertEqual(len(keys), 11)
         self.assertTrue(all(r["field_name"] in {"height_cm", "reach_cm"} for r in rows))
+
+
+    def test_pinned_live_snapshot_manifest_hash_matches_observations(self):
+        root = Path("data/raw/ufcstats_live_recovery/35053621411")
+        manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+        observed = hashlib.sha256((root / "observations.csv").read_bytes()).hexdigest()
+        self.assertEqual(manifest["snapshot_id"], "35053621411")
+        self.assertEqual(manifest["source"], "ufcstats.com")
+        self.assertTrue(manifest["networked_acquisition"])
+        self.assertEqual(manifest["states"], {"POPULATED": 11})
+        self.assertEqual(observed, manifest["observations_sha256"])
+
+    def test_pinned_live_check_classification_is_explicit(self):
+        self.assertEqual(live_ufcstats_requirement("", pinned_live_checked=True), "LIVE_UFCSTATS_CHECKED")
 
 
 if __name__ == "__main__":
