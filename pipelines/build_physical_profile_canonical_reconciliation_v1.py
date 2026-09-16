@@ -14,7 +14,7 @@ from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
-from ufc_edge.data.physical_profile_reconciliation import agreement_category, official_stats, official_uuid, recovery_selection, selection, walk_records
+from ufc_edge.data.physical_profile_reconciliation import agreement_category, live_ufcstats_selection, official_stats, official_uuid, recovery_selection, selection, walk_records
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "data/canonical/v0"
@@ -25,7 +25,11 @@ AUDIT_MD = ROOT / "provenance/audits/physical_profile_canonical_reconciliation_v
 COHORT = ROOT / "data/derived/qa/physical_profile_recent_cohort_v1.csv"
 REMAINING = ROOT / "data/derived/qa/physical_profile_recent_nulls_v1.csv"
 RECOVERY = ROOT / "data/supplemental/physical_profile_recent_recovery_v1.csv"
+LIVE_RECOVERY_DIR = ROOT / "data/raw/ufcstats_live_recovery/35053621411"
+LIVE_RECOVERY = LIVE_RECOVERY_DIR / "observations.csv"
+LIVE_REQUIRED = ROOT / "data/derived/qa/physical_profile_live_ufcstats_check_required_v1.csv"
 SNAPSHOT_ID = RAW.name
+LIVE_SNAPSHOT_ID = LIVE_RECOVERY_DIR.name
 PROV_FIELDS = ["table_name", "row_key", "field_name", "source_name", "source_snapshot_id", "source_record_id", "source_field_name", "selection_status", "selection_rule", "quality_note"]
 FIELDS = {"height": ("height_cm", "stats_height"), "reach_arm": ("reach_cm", "stats_reach_arm"), "reach_leg": ("leg_reach_cm", "stats_reach_leg")}
 
@@ -84,6 +88,13 @@ def main() -> int:
         raise RuntimeError("canonical v0 is required and must be preserved")
     athletes, base_fighters, identities = official_by_uuid(), read_csv(BASE / "fighters.csv"), read_csv(BASE / "source_identity_links.csv")
     recovery_rows = read_csv(RECOVERY)
+    live_rows = read_csv(LIVE_RECOVERY)
+    live_recovery = {}
+    for evidence in live_rows:
+        key = (evidence["fighter_id"], evidence["field_name"])
+        if key in live_recovery:
+            raise RuntimeError(f"duplicate live UFCStats recovery row: {key}")
+        live_recovery[key] = evidence
     recovery = {}
     for evidence in recovery_rows:
         key = (evidence["fighter_id"], evidence["field_name"])
@@ -131,6 +142,66 @@ def main() -> int:
         extra = sorted(set(recovery) - expected_recovery_keys)
         raise RuntimeError(f"supplemental recovery cohort mismatch missing={missing} extra={extra}")
 
+    if not set(live_recovery).issubset(expected_recovery_keys):
+        raise RuntimeError(f"live UFCStats recovery contains non-governed keys: {sorted(set(live_recovery) - expected_recovery_keys)}")
+
+    # Pinned live UFCStats evidence is consumed offline before lower-tier
+    # supplemental recovery. No network call occurs anywhere in this build.
+    live_changed = []
+    live_state_counts = Counter()
+    for out in output:
+        for canonical_field in ("height_cm", "reach_cm"):
+            evidence = live_recovery.get((out["fighter_id"], canonical_field))
+            if evidence is None:
+                continue
+            if evidence["fighter_name"] != out["canonical_name"] or evidence["page_fighter_name"] != out["canonical_name"]:
+                raise RuntimeError(f"live UFCStats fighter identity mismatch for {out['fighter_id']} {canonical_field}")
+            identity_verified = evidence["identity_verified"].lower() == "true"
+            value, status, checked = live_ufcstats_selection(
+                field_name=canonical_field,
+                canonical_value=out[canonical_field],
+                raw_value_inches=evidence["raw_value_inches"],
+                identity_verified=identity_verified,
+                live_state=evidence["live_state"],
+            )
+            live_state_counts[evidence["live_state"]] += 1
+            if evidence["live_state"] == "POPULATED":
+                expected_cm = Decimal(evidence["normalized_value_cm"])
+                if checked.value_cm != expected_cm:
+                    raise RuntimeError(
+                        f"live UFCStats normalized value mismatch for {out['fighter_id']} {canonical_field}: "
+                        f"computed={checked.value_cm} evidence={expected_cm}"
+                    )
+            if status == "live_ufcstats_null_fill":
+                before_value = out[canonical_field]
+                out[canonical_field] = scalar(value)
+                live_changed.append({
+                    "fighter_id": out["fighter_id"],
+                    "fighter": out["canonical_name"],
+                    "field_name": canonical_field,
+                    "before": before_value,
+                    "after": out[canonical_field],
+                    "ufcstats_fighter_id": evidence["ufcstats_fighter_id"],
+                    "ufcstats_url": evidence["ufcstats_url"],
+                    "retrieved_at": evidence["retrieved_at"],
+                })
+            additions.append({
+                "table_name": "fighters",
+                "row_key": out["fighter_id"],
+                "field_name": canonical_field,
+                "source_name": "ufcstats_live",
+                "source_snapshot_id": LIVE_SNAPSHOT_ID,
+                "source_record_id": evidence["ufcstats_fighter_id"],
+                "source_field_name": "Height" if canonical_field == "height_cm" else "Reach",
+                "selection_status": status,
+                "selection_rule": "local_snapshot_missing_then_pinned_live_ufcstats_null_fill",
+                "quality_note": (
+                    f"live_state={evidence['live_state']}; url={evidence['ufcstats_url']}; "
+                    f"retrieved_at={evidence['retrieved_at']}; raw_display={evidence['raw_display_value']}; "
+                    "local stored source was missing/stale for this governed recent field"
+                ),
+            })
+
     resolution_counts = Counter()
     supplemental_changed = []
     for out in output:
@@ -154,7 +225,9 @@ def main() -> int:
                 resolution_status=evidence["resolution_status"],
             )
             resolution_counts[evidence["resolution_status"]] += 1
-            if evidence["review_status"] == "accepted":
+            if status == "prior_canonical_retained":
+                pass
+            elif evidence["review_status"] == "accepted":
                 expected_cm = Decimal(evidence["normalized_value_cm"])
                 if checked.value_cm != expected_cm:
                     raise RuntimeError(
@@ -227,6 +300,8 @@ def main() -> int:
     remaining_fields = ["fighter_id", "fighter", "field", "greco_state", "official_state", "canonical_reason", "resolution_status", "official_athlete_uuid"]
     write_csv(COHORT, cohort_fields, cohort_rows)
     write_csv(REMAINING, remaining_fields, remaining)
+    live_required = [r for r in remaining if (r["fighter_id"], r["field"]) not in live_recovery]
+    write_csv(LIVE_REQUIRED, remaining_fields, live_required)
 
     official_only_by_id = {r["fighter_id"]: r for r in official_only_output}
     coverage = {}
@@ -253,7 +328,7 @@ def main() -> int:
 
     largest = {field: sorted(rows, key=lambda r: Decimal(r["difference_inches"]), reverse=True)[:25] for field, rows in largest.items()}
     target_keys = set(recovery)
-    changed_keys = {(r["fighter_id"], r["field_name"]) for r in supplemental_changed}
+    changed_keys = {(r["fighter_id"], r["field_name"]) for r in live_changed} | {(r["fighter_id"], r["field_name"]) for r in supplemental_changed}
     actual_changes = []
     final_by_id = {r["fighter_id"]: r for r in output}
     for before in official_only_output:
@@ -263,18 +338,19 @@ def main() -> int:
                 actual_changes.append((before["fighter_id"], field_name))
     actual_change_keys = set(actual_changes)
     if actual_change_keys != changed_keys:
-        raise RuntimeError(f"supplemental change audit mismatch actual={sorted(actual_change_keys)} recorded={sorted(changed_keys)}")
+        raise RuntimeError(f"physical-profile change audit mismatch actual={sorted(actual_change_keys)} recorded={sorted(changed_keys)}")
     non_target_changes = sorted(actual_change_keys - target_keys)
     if non_target_changes:
         raise RuntimeError(f"supplemental recovery changed non-target canonical fields: {non_target_changes}")
     manifest = {
-        "schema_version": 3,
+        "schema_version": 4,
         "build": "physical_profile_canonical_reconciliation_v1",
         "generated_at_utc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "base_canonical_version": "v0",
         "official_snapshot": SNAPSHOT_ID,
         "supplemental_recovery": str(RECOVERY.relative_to(ROOT)),
-        "source_policy": "populated canonical/Greco retained; validated UFC Official null-fill; then validated governed supplemental recovery null-fill",
+        "live_ufcstats_snapshot": str(LIVE_RECOVERY_DIR.relative_to(ROOT)),
+        "source_policy": "populated canonical/Greco retained; validated UFC Official null-fill; pinned live UFCStats null-fill; then validated governed supplemental recovery null-fill",
         "temporal_semantics": "static athlete attributes retain actual source observation/retrieval timestamps; no pre-fight observation claim",
         "overlap": {k: dict(v) for k, v in overlap.items()},
         "largest_disagreements": largest,
@@ -282,6 +358,9 @@ def main() -> int:
         "coverage": coverage,
         "v0_to_official_coverage": v0_to_official_coverage,
         "recovery_resolution_counts": dict(resolution_counts),
+        "live_ufcstats_state_counts": dict(live_state_counts),
+        "live_ufcstats_changed_fields": live_changed,
+        "live_ufcstats_check_required": len(live_required),
         "supplemental_changed_fields": supplemental_changed,
         "non_target_canonical_changes": len(non_target_changes),
         "recent_cohort_rows": len(cohort_rows),
@@ -294,9 +373,12 @@ def main() -> int:
     AUDIT_MD.write_text(
         "# Physical-profile canonical reconciliation v1\n\n"
         "Policy: populated canonical/Greco values are retained; validated UFC Official fills nulls; "
-        "validated governed supplemental recovery is considered only when both remain null.\n\n"
+        "pinned live UFCStats fills governed recent nulls; supplemental recovery is considered afterward.\n\n"
         f"- Official athlete snapshot: {SNAPSHOT_ID}\n"
         f"- Initial recent unresolved field rows: {len(recovery_rows)}\n"
+        f"- Pinned live UFCStats snapshot: {LIVE_SNAPSHOT_ID}\n"
+        f"- Live UFCStats recovered fields: {len(live_changed)}\n"
+        f"- Live UFCStats check required: {len(live_required)}\n"
         f"- Trusted supplemental measurements: {resolution_counts['RESOLVED_TRUSTED_MEASUREMENT']}\n"
         f"- Conflict quarantines: {resolution_counts['RESOLVED_CONFLICT_QUARANTINED']}\n"
         f"- Exhausted/no-measurement rows: {resolution_counts['EXHAUSTED_TRUSTED_SOURCES_NO_MEASUREMENT']}\n"
