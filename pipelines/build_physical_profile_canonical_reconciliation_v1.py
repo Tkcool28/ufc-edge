@@ -32,6 +32,7 @@ SNAPSHOT_ID = RAW.name
 LIVE_SNAPSHOT_ID = LIVE_RECOVERY_DIR.name
 PROV_FIELDS = ["table_name", "row_key", "field_name", "source_name", "source_snapshot_id", "source_record_id", "source_field_name", "selection_status", "selection_rule", "quality_note"]
 FIELDS = {"height": ("height_cm", "stats_height"), "reach_arm": ("reach_cm", "stats_reach_arm"), "reach_leg": ("leg_reach_cm", "stats_reach_leg")}
+LIVE_TARGET_FIELDS = ["fighter_id", "fighter_name", "field_name", "ufcstats_fighter_id", "ufcstats_url", "trusted_ufc_uuid", "identity_basis"]
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -102,6 +103,14 @@ def main() -> int:
             raise RuntimeError(f"duplicate supplemental recovery row: {key}")
         recovery[key] = evidence
     official_link = {r["canonical_id"]: r["source_id"] for r in identities if r["entity_type"] == "fighter" and r["source_name"] == "ufc_com" and r["source_entity_type"] == "athlete" and r["review_status"] == "trusted"}
+    ufcstats_link = {
+        r["canonical_id"]: r["source_url"]
+        for r in identities
+        if r["entity_type"] == "fighter"
+        and r["source_name"] == "greco1899_ufcstats"
+        and r["source_entity_type"] == "fighter"
+        and r["review_status"] == "trusted"
+    }
     provenance = read_csv(BASE / "field_provenance.csv")
     output, additions = [], []
     overlap = {key: Counter() for key in ("height", "reach_arm")}
@@ -302,8 +311,21 @@ def main() -> int:
     remaining_fields = ["fighter_id", "fighter", "field", "greco_state", "official_state", "canonical_reason", "resolution_status", "official_athlete_uuid"]
     write_csv(COHORT, cohort_fields, cohort_rows)
     write_csv(REMAINING, remaining_fields, remaining)
-    live_required = [r for r in remaining if (r["fighter_id"], r["field"]) not in live_recovery]
-    write_csv(LIVE_REQUIRED, remaining_fields, live_required)
+    live_required = []
+    for r in remaining:
+        if (r["fighter_id"], r["field"]) in live_recovery:
+            continue
+        url = ufcstats_link.get(r["fighter_id"], "")
+        live_required.append({
+            "fighter_id": r["fighter_id"],
+            "fighter_name": r["fighter"],
+            "field_name": r["field"],
+            "ufcstats_fighter_id": url.rstrip("/").split("/")[-1] if url else "",
+            "ufcstats_url": url,
+            "trusted_ufc_uuid": r["official_athlete_uuid"],
+            "identity_basis": "canonical fighter ID + trusted UFCStats identity link + trusted UFC athlete UUID",
+        })
+    write_csv(LIVE_REQUIRED, LIVE_TARGET_FIELDS, live_required)
 
     official_only_by_id = {r["fighter_id"]: r for r in official_only_output}
     coverage = {}
