@@ -1,0 +1,93 @@
+{
+  "contract_version": "1.0.0",
+  "task": "M1 regularized shared-feature UFC binary fight-winner probability validation",
+  "status": "PREDECLARED_BEFORE_M1_PERFORMANCE_EVALUATION",
+  "source": {
+    "base_main": "4cd9bb9a51b0c8cd225c6a9bed91b9c5933ec1e3",
+    "f02_freeze": "features/f02/F02_PREDICTOR_REPLAY_V1_COMPLETE.json",
+    "f02_freeze_version": "1.0.1",
+    "replay_schema_version": "1.0.1",
+    "predictor_logical_sha256": "ac55fd6fc1f19be7afac2007fccceb43b5c3f98327554d0c58fbe6cb0b164383",
+    "predictor_manifest_sha256": "27b26736079bba7f5bc811bc96798f35ece36d54f1b0632cbd5e37f57ebd3c07",
+    "schema_sha256": "488c96eed4d86a75da8b763c879a65d6b85959393ec7b6c59f7051b0c03836a8",
+    "target_contract_sha256": "fe34f7fd2b70611ec0602d9c9208debf8ec11d7eb8ea1adc0a4104ddb46ffd52",
+    "target_logical_sha256": "02b735aabcb354fa16cd3800f72e5ccd504f5fb6dc9963510987c57438a44956",
+    "m0_freeze": "models/m0/M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE.json",
+    "m0_freeze_version": "1.0.0",
+    "m0_oof_logical_sha256": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c",
+    "m0_actions_run_id": 34676508116,
+    "m0_artifact_id": 10292502486,
+    "m0_artifact_zip_sha256": "69e2a4db932ecbfd747a387b708d5107e3d682223d4f608b850a00a605af3be0",
+    "m0_comparator_policy": "Consume the authoritative frozen M0 OOF artifact; do not numerically recompute its raw probabilities under a later dependency solve."
+  },
+  "target_population": {
+    "promotion": "UFC",
+    "binary_winner_eligible": true,
+    "modeling_era_start": "2010-01-01",
+    "outer_validation_years": "2015 through frozen-F02 2026"
+  },
+  "target_field": "fighter_1_win",
+  "feature_policy": {
+    "eligible_surface": "All frozen F02 schema columns with predictor=true are audited mechanically.",
+    "model_input": "All 96 fighter-specific f1/f2 source pairs plus all 5 matchup predictors, excluding the three shared fight-context predictors from the model matrix.",
+    "excluded_model_inputs": [
+      "scheduled_rounds",
+      "ctx__title_bout",
+      "ctx__weight_class"
+    ],
+    "diagnostic_context": "The excluded shared fight-context predictors remain available only for predefined reporting slices.",
+    "selection": "No outcome-driven feature selection, ablation-driven pruning, coefficient-threshold pruning, or performance-reactive feature revision is allowed in M1."
+  },
+  "preprocessing": {
+    "fighter_side_pairs": "Pair f1/f2 by exact F02 source_materialized_name. Fit one pooled median on the current training fold only, impute both sides with that shared median, then emit f1-minus-f2 and missing(f1)-missing(f2).",
+    "directional_matchup_pairs": "Pair f1_vs_f2/f2_vs_f1 matchup values by exact mirrored source_materialized_name. Use the same pooled-training-median value-difference and missingness-difference projection.",
+    "reach_difference": "The already-oriented reach-difference matchup feature is used directly; missing values receive neutral zero model-space imputation and no symmetric missingness flag so fighter-swap antisymmetry is preserved.",
+    "scaling": "StandardScaler(with_mean=false) fit on each training fold only.",
+    "orientation": "Every M1 model input is antisymmetric under fighter swap; fit_intercept=false. Exact p(f1)+p(swapped f1)=1 is a hard test."
+  },
+  "model": {
+    "family": "logistic_regression",
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "fit_intercept": false,
+    "max_iter": 4000,
+    "random_state": 17,
+    "C_grid": [
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "regularization_selection": "For each outer fold, choose C using only that outer training set with expanding chronological inner annual OOF folds beginning in 2013. Primary inner selection metric is pooled inner-OOF log loss. Exact ties choose smaller C."
+  },
+  "comparators": [
+    "50/50 from the authoritative frozen M0 OOF artifact",
+    "M0 empirical experience baseline from the authoritative frozen M0 OOF artifact",
+    "frozen M0 logistic loaded from Actions run 34676508116 artifact 10292502486 and required to match the frozen M0 OOF logical SHA-256"
+  ],
+  "primary_metrics": [
+    "log_loss",
+    "brier_score"
+  ],
+  "secondary_metrics": [
+    "accuracy",
+    "roc_auc",
+    "expected_calibration_error"
+  ],
+  "verdict_rule": {
+    "M1_OUTPERFORMS_M0": "M1 improves aggregate log loss and Brier versus frozen M0 and improves both primary metrics in at least two-thirds of outer folds.",
+    "M1_MIXED_VS_M0": "M1 improves at least one aggregate primary metric but does not satisfy the stable-both-metrics rule.",
+    "M1_DOES_NOT_OUTPERFORM_M0": "M1 improves neither aggregate primary metric versus frozen M0."
+  },
+  "forbidden": [
+    "sportsbook odds or market probabilities",
+    "ROI, Kelly, bet thresholds, price buckets, or sportsbook targeting",
+    "random train/test split",
+    "tree, boosting, neural, ensemble, AutoML, or nonlinear challenger models",
+    "outcome-driven feature selection",
+    "opponent adjustment beyond the frozen F02 feature surface",
+    "simulator-only features",
+    "fighter IDs, target fields, or identity/provenance columns in the model matrix",
+    "changes to F00, F01, F02, M0, frozen DATA, or market-diagnostic branches"
+  ]
+}

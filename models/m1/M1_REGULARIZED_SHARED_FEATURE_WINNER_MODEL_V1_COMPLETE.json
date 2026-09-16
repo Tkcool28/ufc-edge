@@ -1,0 +1,234 @@
+{
+  "freeze_version": "1.0.0",
+  "status": "M1_REGULARIZED_SHARED_FEATURE_WINNER_MODEL_V1_COMPLETE",
+  "verdict": "M1_OUTPERFORMS_M0",
+  "source": {
+    "base_main": "4cd9bb9a51b0c8cd225c6a9bed91b9c5933ec1e3",
+    "evaluation_head": "77ad61a954f3c845ba584cc55260c5e858436294",
+    "github_actions_run_id": 34718520686,
+    "full_validation_job_id": 103620043254,
+    "runtime_artifact_id": 10305672641,
+    "runtime_artifact_name": "m1-regularized-shared-feature-winner-v1",
+    "runtime_artifact_zip_sha256": "00fde41cff76fbc05aad8f6715babcea358636c4fe0e3267e34ff065748e33f8",
+    "methodology_freeze_head": "c109fd01dbb9da05ce120aecc7907da46df87296",
+    "first_successful_performance_run_id": 34718491353,
+    "first_successful_performance_head": "45f080dec8438d619d28a559d16f57fb6011ceca",
+    "accepted_evaluation_head": "77ad61a954f3c845ba584cc55260c5e858436294"
+  },
+  "f02": {
+    "freeze_version": "1.0.1",
+    "replay_schema_version": "1.0.1",
+    "github_actions_run_id": 34673108776,
+    "runtime_artifact_id": 10291736758,
+    "runtime_artifact_name": "f02-predictor-replay-v1",
+    "runtime_artifact_zip_sha256": "267a582330d76e0cfe04c63bf926346efc7cad29c5f2c359de159231f0e2d5af",
+    "predictor_logical_sha256": "ac55fd6fc1f19be7afac2007fccceb43b5c3f98327554d0c58fbe6cb0b164383",
+    "predictor_manifest_sha256": "27b26736079bba7f5bc811bc96798f35ece36d54f1b0632cbd5e37f57ebd3c07",
+    "schema_sha256": "488c96eed4d86a75da8b763c879a65d6b85959393ec7b6c59f7051b0c03836a8",
+    "target_contract_sha256": "fe34f7fd2b70611ec0602d9c9208debf8ec11d7eb8ea1adc0a4104ddb46ffd52",
+    "target_logical_sha256": "02b735aabcb354fa16cd3800f72e5ccd504f5fb6dc9963510987c57438a44956"
+  },
+  "m0_comparator": {
+    "freeze_version": "1.0.0",
+    "github_actions_run_id": 34676508116,
+    "runtime_artifact_id": 10292502486,
+    "runtime_artifact_name": "m0-empirical-winner-baseline-v1",
+    "runtime_artifact_zip_sha256": "69e2a4db932ecbfd747a387b708d5107e3d682223d4f608b850a00a605af3be0",
+    "oof_rows": 5626,
+    "oof_logical_sha256": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c",
+    "policy": "The authoritative frozen M0 OOF artifact is consumed directly. M0 raw probabilities are not numerically regenerated under a later dependency solve."
+  },
+  "population": {
+    "total_f02_rows": 9252,
+    "modeling_era_start": "2010-01-01",
+    "modeling_era_rows": 7367,
+    "oof_rows": 5626,
+    "outer_validation_years": [
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ]
+  },
+  "feature_contract": {
+    "f02_predictor_true_count": 200,
+    "diagnostic_only_shared_context_count": 3,
+    "diagnostic_only_shared_context": [
+      "scheduled_rounds",
+      "ctx__title_bout",
+      "ctx__weight_class"
+    ],
+    "model_source_predictor_count": 197,
+    "fighter_side_source_pairs": 96,
+    "directional_matchup_pairs": 2,
+    "self_antisymmetric_matchup_values": 1,
+    "projected_numeric_dimensions": 197,
+    "orientation_policy": "All model inputs are antisymmetric under fighter swap; fit_intercept=false."
+  },
+  "regularization": {
+    "family": "L2 logistic regression",
+    "solver": "lbfgs",
+    "C_grid": [
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "selection": "Nested expanding chronological inner OOF pooled log loss; exact ties choose smaller C.",
+    "inner_validation_start_year": 2013,
+    "selected_C_by_outer_fold": {
+      "2015": 0.01,
+      "2016": 0.1,
+      "2017": 0.01,
+      "2018": 0.01,
+      "2019": 0.01,
+      "2020": 0.01,
+      "2021": 0.01,
+      "2022": 0.01,
+      "2023": 0.01,
+      "2024": 0.01,
+      "2025": 0.01,
+      "2026": 0.01
+    }
+  },
+  "aggregate": {
+    "naive": {
+      "rows": 5626,
+      "log_loss": 0.6931471805599454,
+      "brier": 0.25,
+      "accuracy": 0.4952008531816566,
+      "auc": 0.5
+    },
+    "empirical": {
+      "rows": 5626,
+      "log_loss": 0.6948878530500814,
+      "brier": 0.25086853426767236,
+      "accuracy": 0.4880910060433701,
+      "auc": 0.494699794242844
+    },
+    "m0": {
+      "rows": 5626,
+      "log_loss": 0.6641703423957961,
+      "brier": 0.2358933842952002,
+      "accuracy": 0.5943832207607537,
+      "auc": 0.6348333720918475
+    },
+    "m1": {
+      "rows": 5626,
+      "log_loss": 0.6463343873155676,
+      "brier": 0.2269899882327872,
+      "accuracy": 0.6189121933878422,
+      "auc": 0.6727691526040667
+    }
+  },
+  "m1_minus_m0": {
+    "log_loss": -0.017835955080228505,
+    "brier": -0.008903396062413,
+    "accuracy": 0.02452897262708853,
+    "auc": 0.03793578051221913,
+    "folds_improving_both_primary_metrics": 9,
+    "outer_fold_count": 12
+  },
+  "calibration": {
+    "expected_calibration_error": 0.01808862747658932,
+    "m0_expected_calibration_error": 0.014648158181517457,
+    "m1_expected_calibration_error": 0.01808862747658932,
+    "m1_minus_m0": 0.003440469295071863
+  },
+  "stability": {
+    "orientation_max_abs_error": 2.220446049250313e-16,
+    "folds_improving_both_primary_metrics_vs_m0": 9,
+    "outer_fold_count": 12,
+    "folds_worse_on_both_primary_metrics_vs_m0": [
+      "2020",
+      "2023"
+    ],
+    "mixed_primary_metric_fold_vs_m0": [
+      "2025"
+    ]
+  },
+  "oof": {
+    "rows": 5626,
+    "logical_sha256": "d91ebe07db9569c8f47081ea78d1ed58d028bd2ba0df6ead51ba6ab73182447d"
+  },
+  "validation_note": {
+    "initial_run_id": 34718232000,
+    "initial_run_status": "INVALID_FOR_M1_PERFORMANCE_FREEZE",
+    "reason": "The first harness numerically regenerated M0 raw probabilities and correctly failed the frozen M0 OOF hash guard under a later dependency solve.",
+    "resolution": "The comparator was changed to load and verify the authoritative frozen M0 Actions artifact directly. A successful precursor run at 45f080d produced the same substantive M1 result; after that only M0 row-key normalization/provenance changed. The authoritative accepted run is 34718520686."
+  },
+  "limitations": [
+    "M1 is a validation benchmark, not a production betting model.",
+    "No sportsbook odds, market probabilities, ROI, Kelly, price thresholds, or market-specific tuning are used.",
+    "No tree, boosting, neural, ensemble, AutoML, opponent-adjustment, or simulator methodology is introduced.",
+    "The broad F02 surface materially improves M0, but the strong preference for C=0.01 in 11 of 12 outer folds shows that substantial regularization is necessary and the lower edge of the predeclared grid is frequently preferred.",
+    "M1 expected calibration error is 0.01809 versus 0.01465 for M0, so calibration-bin error did not improve even though log loss and Brier did.",
+    "Light Heavyweight remains a materially weak slice: N=412, log loss 0.69489, Brier 0.25032, accuracy 54.61%, AUC 0.5788.",
+    "The largest mean absolute coefficient is the reach_cm missingness difference, indicating meaningful dependence on data-availability patterns that warrants later robustness review.",
+    "Exact raw-float M1 OOF hashes differed across two successful hosted runs despite essentially identical metrics and unchanged M1 methodology; the accepted runtime artifact is the authoritative identity and bitwise rerun determinism is not claimed.",
+    "2026 is the partial latest-year fold represented by frozen F02."
+  ],
+  "self_review": {
+    "question": "Did M1 improve the frozen M0 winner benchmark using only the governed F02 surface under chronological validation and predeclared regularization selection?",
+    "answer": "YES"
+  },
+  "diagnostic_slices": {
+    "light_heavyweight": {
+      "rows": 412,
+      "m1": {
+        "log_loss": 0.6948936674880285,
+        "brier": 0.25031882902824887,
+        "accuracy": 0.5461165048543689,
+        "auc": 0.5787735849056603
+      },
+      "m0": {
+        "log_loss": 0.7011651860989155,
+        "brier": 0.25353343238672016,
+        "accuracy": 0.5242718446601942,
+        "auc": 0.5458726415094339
+      },
+      "interpretation": "M1 improves the frozen M0 Light Heavyweight slice but the slice remains materially weak and close to an uninformative probability benchmark."
+    }
+  },
+  "coefficient_diagnostics": {
+    "largest_mean_absolute_coefficient": {
+      "feature": "pair::ctx__physical_size_profile__reach_cm::missing_diff",
+      "mean_coefficient": -0.6552049825349269,
+      "negative_folds": 12,
+      "positive_folds": 0
+    },
+    "interpretation": "The strongest average coefficient is a reach-data missingness difference. This is not target leakage under the chronological fold-local design, but it shows M1 relies materially on data-availability patterns and should receive a dedicated robustness/data-quality audit before production use."
+  },
+  "performance_governance": {
+    "methodology_freeze_head": "c109fd01dbb9da05ce120aecc7907da46df87296",
+    "initial_full_run": {
+      "run_id": 34718232000,
+      "status": "FAILED_BEFORE_RESULT_ACCEPTANCE",
+      "reason": "Frozen M0 comparator OOF hash mismatch when the harness regenerated M0 probabilities under a later numerical dependency solve.",
+      "emitted_accepted_m1_result": false
+    },
+    "first_successful_performance_bearing_run": {
+      "run_id": 34718491353,
+      "head": "45f080dec8438d619d28a559d16f57fb6011ceca",
+      "m1_log_loss": 0.646334387319501,
+      "m1_brier": 0.2269899882350201,
+      "verdict": "M1_OUTPERFORMS_M0",
+      "oof_logical_sha256": "9c367452cd494d9f46e9ff2215448a8b8510fdcec57dec2bdd60bf308c587e89"
+    },
+    "changes_after_first_successful_performance_run": "Only frozen-M0 row-key normalization and comparator/provenance documentation changed. M1 feature construction, model family, C grid, nested selection rule, and validation population did not change.",
+    "accepted_authoritative_run": {
+      "run_id": 34718520686,
+      "head": "77ad61a954f3c845ba584cc55260c5e858436294",
+      "oof_logical_sha256": "d91ebe07db9569c8f47081ea78d1ed58d028bd2ba0df6ead51ba6ab73182447d"
+    },
+    "floating_point_reproducibility_note": "The two successful hosted runs agree in verdict and aggregate metrics to roughly 1e-11 but have different exact OOF logical hashes. The accepted Actions artifact is therefore the authoritative raw-float identity; bitwise OOF rerun determinism is not claimed."
+  }
+}

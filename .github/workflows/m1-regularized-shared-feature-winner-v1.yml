@@ -1,0 +1,168 @@
+name: M1 Regularized Shared-Feature Winner V1
+
+on:
+  push:
+    branches: [feat/m1-regularized-shared-feature-winner-v1]
+    paths:
+      - 'models/m1/**'
+      - 'src/ufc_edge/models/m1.py'
+      - 'tools/models/run_m1.py'
+      - 'tests/models/test_m1.py'
+      - '.github/workflows/m1-regularized-shared-feature-winner-v1.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'models/m1/**'
+      - 'src/ufc_edge/models/m1.py'
+      - 'tools/models/run_m1.py'
+      - 'tests/models/test_m1.py'
+      - '.github/workflows/m1-regularized-shared-feature-winner-v1.yml'
+  workflow_dispatch:
+    inputs:
+      full_validation:
+        description: 'Run full frozen-F02 M1 nested chronological validation'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install M1 dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+      - name: Parse M1 sources
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          for path in [Path('src/ufc_edge/models/m1.py'), Path('tools/models/run_m1.py'), Path('tests/models/test_m1.py')]:
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+          print('M1 Python sources parse')
+          PY
+      - name: Validate M1 JSON contracts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for path in [Path('models/m1/model_contract_v1.json'), Path('models/m1/validation_plan_v1.json')]:
+              json.loads(path.read_text(encoding='utf-8'))
+              print('valid', path)
+          PY
+      - name: Run focused M1 tests
+        run: python -m unittest discover -s tests/models -p 'test_m1.py' -v
+      - name: Verify frozen F02 identity
+        run: |
+          python - <<'PY'
+          import json
+          freeze=json.load(open('features/f02/F02_PREDICTOR_REPLAY_V1_COMPLETE.json'))
+          assert freeze['freeze_version']=='1.0.1'
+          assert freeze['replay_schema_version']=='1.0.1'
+          assert freeze['full_replay']['predictor_logical_sha256']=='ac55fd6fc1f19be7afac2007fccceb43b5c3f98327554d0c58fbe6cb0b164383'
+          assert freeze['full_replay']['predictor_manifest_sha256']=='27b26736079bba7f5bc811bc96798f35ece36d54f1b0632cbd5e37f57ebd3c07'
+          assert freeze['schema']['schema_sha256']=='488c96eed4d86a75da8b763c879a65d6b85959393ec7b6c59f7051b0c03836a8'
+          assert freeze['target_attachment']['target_contract_sha256']=='fe34f7fd2b70611ec0602d9c9208debf8ec11d7eb8ea1adc0a4104ddb46ffd52'
+          assert freeze['target_attachment']['target_logical_sha256']=='02b735aabcb354fa16cd3800f72e5ccd504f5fb6dc9963510987c57438a44956'
+          assert freeze['schema']['predictor_columns']==200
+          print('F02 freeze identity exact')
+          PY
+      - name: Verify frozen M0 identity
+        run: |
+          python - <<'PY'
+          import json
+          freeze=json.load(open('models/m0/M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE.json'))
+          assert freeze['freeze_version']=='1.0.0'
+          assert freeze['status']=='M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE'
+          assert freeze['oof']['rows']==5626
+          assert freeze['oof']['logical_sha256']=='708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c'
+          print('M0 freeze identity exact')
+          PY
+      - name: Reject large committed M1 runtime artifacts
+        run: |
+          set -euo pipefail
+          added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
+          bad="$(printf '%s\n' "$added" | grep -E '(^|/)(artifacts|runs?|output)/|\.(parquet|pkl|joblib|feather)$' || true)"
+          if [[ -n "$bad" ]]; then
+            printf '%s\n' "$bad"
+            echo 'M1 runtime predictions/models must not be committed.' >&2
+            exit 1
+          fi
+      - name: Verify frozen DATA and feature system unchanged
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- data/canonical/v0 schemas provenance/data_phase_freeze_v0.json
+          git diff --quiet origin/main...HEAD -- features/f02 src/ufc_edge/features tests/features tools/features
+      - name: Verify frozen M0 unchanged
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- models/m0 src/ufc_edge/models/m0.py tests/models/test_m0.py tools/models/run_m0.py .github/workflows/m0-empirical-winner-baseline-v1.yml
+      - name: Check whitespace
+        run: git diff --check origin/main...HEAD
+      - name: Verify checkout clean
+        run: |
+          set -euo pipefail
+          status="$(git status --porcelain=v1 --untracked-files=all)"
+          if [[ -n "$status" ]]; then
+            printf '%s\n' "$status"
+            exit 1
+          fi
+
+  full-validation:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.full_validation) ||
+      (github.event_name == 'push' && contains(github.event.head_commit.message, '[m1-full-validation]'))
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install M1 dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+      - name: Download authoritative frozen F02 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download authoritative frozen M0 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: m0-empirical-winner-baseline-v1
+          path: ${{ runner.temp }}/m0
+          repository: Tkcool28/ufc-edge
+          run-id: 34676508116
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run full M1 nested chronological validation
+        run: |
+          python tools/models/run_m1.py validate \
+            --f02-dir "${{ runner.temp }}/f02" \
+            --m0-dir "${{ runner.temp }}/m0" \
+            --output-dir "${{ runner.temp }}/m1"
+      - name: Upload M1 runtime validation artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-regularized-shared-feature-winner-v1
+          path: ${{ runner.temp }}/m1
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,99 @@
+{
+  "validation_plan_version": "1.0.0",
+  "status": "PREDECLARED_BEFORE_M1_PERFORMANCE_EVALUATION",
+  "outer_validation": {
+    "scheme": "expanding annual walk-forward",
+    "train_start": "2010-01-01",
+    "validation_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "same_population_as_m0": true,
+    "expected_oof_rows_from_frozen_m0": 5626
+  },
+  "nested_regularization_selection": {
+    "purpose": "Select only L2 strength without inspecting the outer validation year.",
+    "C_grid": [
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "inner_scheme": "expanding annual walk-forward inside each outer training set",
+    "inner_validation_start_year": 2013,
+    "selection_metric": "pooled inner-OOF log loss",
+    "tie_break": "smaller C",
+    "preprocessing_scope": "Every inner fold refits M1 imputation/scaling on that inner training partition only."
+  },
+  "primary_metrics": [
+    "log_loss",
+    "brier_score"
+  ],
+  "secondary_metrics": [
+    "accuracy",
+    "roc_auc"
+  ],
+  "calibration": {
+    "metric": "expected_calibration_error",
+    "bins": [
+      0,
+      0.2,
+      0.3,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.7,
+      0.8,
+      1
+    ]
+  },
+  "comparisons": {
+    "same_rows_required": true,
+    "m0_oof_logical_sha256_required": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c",
+    "report_per_fold": true,
+    "report_aggregate": true,
+    "report_m1_minus_m0": true,
+    "m0_source": {
+      "actions_run_id": 34676508116,
+      "artifact_id": 10292502486,
+      "artifact_zip_sha256": "69e2a4db932ecbfd747a387b708d5107e3d682223d4f608b850a00a605af3be0",
+      "artifact_name": "m0-empirical-winner-baseline-v1",
+      "policy": "Load frozen M0 OOF probabilities directly and require the frozen OOF logical hash; do not recompute M0 probabilities under a later dependency solve."
+    }
+  },
+  "diagnostic_slices_only": {
+    "history_depth": [
+      "zero_history",
+      "sparse_history",
+      "established_history"
+    ],
+    "fight_length": [
+      "3-round",
+      "5-round"
+    ],
+    "title": [
+      "title",
+      "non-title"
+    ],
+    "weight_class": "report categories with at least 50 OOF rows"
+  },
+  "runtime_artifacts": [
+    "m1_result.json",
+    "m1_oof_predictions.parquet",
+    "m1_coefficients.json",
+    "m1_regularization_selection.json"
+  ],
+  "repository_policy": "Runtime matrices and fitted fold artifacts are Actions artifacts only and must not be committed. Freeze/report files may be added only after authoritative full validation is observed."
+}
