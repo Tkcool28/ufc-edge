@@ -12,6 +12,7 @@ on:
       targets_path:
         description: "Governed target CSV; use canonical live-check-required QA output or an approved pinned target file"
         required: true
+        type: string
         default: "data/supplemental/ufcstats_live_recovery_targets_v1.csv"
 
 permissions:
