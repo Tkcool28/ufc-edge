@@ -34,16 +34,20 @@ This is a diagnostic replication of the frozen M0 market comparison. It does not
 
 The paid workflow has **workflow_dispatch only**. Routine push/PR CI is a separate zero-credit workflow using fixtures and static checks.
 
-## Runtime output
+## Runtime output and source-data boundary
 
-Large raw API responses and normalized parquet tables remain GitHub Actions artifacts:
+Raw The Odds API responses are provider-source material. They are created only in the runner-local `raw/` directory and are **not uploaded as GitHub Actions artifacts and are not committed to this repository**.
 
-`artifacts/market_diagnostics/m0_md0r/` conceptually maps to the workflow artifact `m0-md0r-odds-api-replication-v1`.
+Only derived runtime outputs are uploaded:
 
-Only compact reports are committed after successful authorized execution:
-
+- `normalized/market_rows.parquet`
+- `normalized/matched_rows.parquet`
 - `reports/retrieval_manifest.json`
 - `reports/matching_report.json`
 - `reports/diagnostic_result.json`
+
+Only the compact reports are committed after a successful authorized execution.
+
+For any future reuse of historical provider responses, stage them temporarily under the ignored `data/private_market/` path from the dedicated private market-data repository, run the diagnostic, retain only derived outputs, then delete the staged provider-source copy.
 
 The API key is injected only from `secrets.THE_ODDS_API_KEY` and is never written to generated artifacts.
