@@ -7,6 +7,7 @@ pinned 2026-08-20 official athlete snapshot; it does not rebuild features or mod
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -27,6 +28,7 @@ REMAINING = ROOT / "data/derived/qa/physical_profile_recent_nulls_v1.csv"
 RECOVERY = ROOT / "data/supplemental/physical_profile_recent_recovery_v1.csv"
 LIVE_RECOVERY_DIR = ROOT / "data/raw/ufcstats_live_recovery/35053621411"
 LIVE_RECOVERY = LIVE_RECOVERY_DIR / "observations.csv"
+LIVE_MANIFEST = LIVE_RECOVERY_DIR / "manifest.json"
 LIVE_REQUIRED = ROOT / "data/derived/qa/physical_profile_live_ufcstats_check_required_v1.csv"
 SNAPSHOT_ID = RAW.name
 LIVE_SNAPSHOT_ID = LIVE_RECOVERY_DIR.name
@@ -90,6 +92,16 @@ def main() -> int:
     athletes, base_fighters, identities = official_by_uuid(), read_csv(BASE / "fighters.csv"), read_csv(BASE / "source_identity_links.csv")
     recovery_rows = read_csv(RECOVERY)
     live_rows = read_csv(LIVE_RECOVERY)
+    live_manifest = json.loads(LIVE_MANIFEST.read_text(encoding="utf-8"))
+    if str(live_manifest.get("snapshot_id")) != LIVE_SNAPSHOT_ID:
+        raise RuntimeError("pinned live UFCStats snapshot id does not match manifest")
+    if live_manifest.get("source") != "ufcstats.com" or not live_manifest.get("networked_acquisition"):
+        raise RuntimeError("pinned live UFCStats manifest source/acquisition contract invalid")
+    if int(live_manifest.get("target_rows", -1)) != len(live_rows):
+        raise RuntimeError("pinned live UFCStats target row count mismatch")
+    observed_sha = hashlib.sha256(LIVE_RECOVERY.read_bytes()).hexdigest()
+    if observed_sha != live_manifest.get("observations_sha256"):
+        raise RuntimeError("pinned live UFCStats observations hash mismatch")
     live_recovery = {}
     for evidence in live_rows:
         key = (evidence["fighter_id"], evidence["field_name"])
@@ -111,6 +123,15 @@ def main() -> int:
         and r["source_entity_type"] == "fighter"
         and r["review_status"] == "trusted"
     }
+    for evidence in live_rows:
+        expected_url = ufcstats_link.get(evidence["fighter_id"], "")
+        if not expected_url or expected_url.rstrip("/") != evidence["ufcstats_url"].rstrip("/"):
+            raise RuntimeError(
+                f"live UFCStats URL does not match trusted identity link for {evidence['fighter_id']}: "
+                f"trusted={expected_url!r} live={evidence['ufcstats_url']!r}"
+            )
+        if evidence["live_state"] == "FETCH_OR_IDENTITY_FAILURE":
+            raise RuntimeError(f"failed live UFCStats observation cannot be pinned into canonical build: {evidence['fighter_id']} {evidence['field_name']}")
     provenance = read_csv(BASE / "field_provenance.csv")
     output, additions = [], []
     overlap = {key: Counter() for key in ("height", "reach_arm")}
@@ -313,7 +334,12 @@ def main() -> int:
     write_csv(REMAINING, remaining_fields, remaining)
     live_required = []
     for r in remaining:
-        if (r["fighter_id"], r["field"]) in live_recovery:
+        live_evidence = live_recovery.get((r["fighter_id"], r["field"]))
+        if (
+            live_evidence
+            and live_evidence["identity_verified"].lower() == "true"
+            and live_evidence["live_state"] in {"POPULATED", "CHECKED_STILL_NULL"}
+        ):
             continue
         url = ufcstats_link.get(r["fighter_id"], "")
         live_required.append({
@@ -351,7 +377,7 @@ def main() -> int:
         }
 
     largest = {field: sorted(rows, key=lambda r: Decimal(r["difference_inches"]), reverse=True)[:25] for field, rows in largest.items()}
-    target_keys = set(recovery)
+    target_keys = expected_recovery_keys
     changed_keys = {(r["fighter_id"], r["field_name"]) for r in live_changed} | {(r["fighter_id"], r["field_name"]) for r in supplemental_changed}
     actual_changes = []
     final_by_id = {r["fighter_id"]: r for r in output}
@@ -365,7 +391,7 @@ def main() -> int:
         raise RuntimeError(f"physical-profile change audit mismatch actual={sorted(actual_change_keys)} recorded={sorted(changed_keys)}")
     non_target_changes = sorted(actual_change_keys - target_keys)
     if non_target_changes:
-        raise RuntimeError(f"supplemental recovery changed non-target canonical fields: {non_target_changes}")
+        raise RuntimeError(f"physical-profile recovery changed non-target canonical fields: {non_target_changes}")
     manifest = {
         "schema_version": 4,
         "build": "physical_profile_canonical_reconciliation_v1",
