@@ -7,13 +7,6 @@ on:
       - "pipelines/fetch_ufcstats_live_physical_recovery_v1.py"
       - "data/supplemental/ufcstats_live_recovery_targets_v1.csv"
       - ".github/workflows/ufcstats-live-physical-recovery-v1.yml"
-  workflow_dispatch:
-    inputs:
-      targets_path:
-        description: "Governed target CSV; use canonical live-check-required QA output or an approved pinned target file"
-        required: true
-        type: string
-        default: "data/supplemental/ufcstats_live_recovery_targets_v1.csv"
 
 permissions:
   contents: read
