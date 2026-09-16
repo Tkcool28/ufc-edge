@@ -137,10 +137,12 @@ def main() -> int:
             for canonical_field in ("height_cm", "reach_cm"):
                 if not row[canonical_field]:
                     expected_recovery_keys.add((row["fighter_id"], canonical_field))
-    if set(recovery) != expected_recovery_keys:
-        missing = sorted(expected_recovery_keys - set(recovery))
-        extra = sorted(set(recovery) - expected_recovery_keys)
-        raise RuntimeError(f"supplemental recovery cohort mismatch missing={missing} extra={extra}")
+    # Existing governed supplemental rows may cover known legacy gaps, but they
+    # must never contain stale/non-null targets. Newly appearing recent nulls are
+    # allowed through so they can be classified LIVE_UFCSTATS_CHECK_REQUIRED.
+    extra = sorted(set(recovery) - expected_recovery_keys)
+    if extra:
+        raise RuntimeError(f"supplemental recovery contains non-null/non-governed targets: {extra}")
 
     if not set(live_recovery).issubset(expected_recovery_keys):
         raise RuntimeError(f"live UFCStats recovery contains non-governed keys: {sorted(set(live_recovery) - expected_recovery_keys)}")
@@ -364,7 +366,7 @@ def main() -> int:
         "supplemental_changed_fields": supplemental_changed,
         "non_target_canonical_changes": len(non_target_changes),
         "recent_cohort_rows": len(cohort_rows),
-        "initial_recent_null_field_rows": len(recovery_rows),
+        "initial_recent_null_field_rows": len(expected_recovery_keys),
         "recent_remaining_null_rows": len(remaining),
     }
     (OUT / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
