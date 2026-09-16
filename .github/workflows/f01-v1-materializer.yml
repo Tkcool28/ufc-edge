@@ -122,6 +122,7 @@ jobs:
             exit 1
           fi
 
+          # Governed DATA source/evidence files are allowed; generated model matrices are not.
           # Reject matrix-like files unless they are governed DATA inputs/evidence.
           # data/raw and data/supplemental are source/evidence surfaces, not F01 outputs.
           matrix_like="$(
