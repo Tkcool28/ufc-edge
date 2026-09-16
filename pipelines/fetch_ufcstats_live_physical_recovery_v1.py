@@ -19,11 +19,19 @@ def read_csv(path):
     with path.open(encoding="utf-8-sig",newline="") as fh: return list(csv.DictReader(fh))
 
 def text_value(doc,label):
-    m=re.search(rf">{label}:\s*</[^>]+>\s*<i[^>]*>(.*?)</i>",doc,re.I|re.S)
-    if not m: m=re.search(rf"{label}:\s*.*?<i[^>]*>(.*?)</i>",doc,re.I|re.S)
-    if not m: return None
-    v=html.unescape(re.sub(r"<[^>]+>","",m.group(1))).strip()
-    return None if v in {"","--"} else v
+    # UFCStats puts the label inside <i> and the displayed value as sibling
+    # text in the same profile-list <li>; never cross into the next row.
+    items=re.findall(r'<li[^>]*b-list__box-list-item[^>]*>(.*?)</li>',doc,re.I|re.S)
+    for item in items:
+        m=re.search(r'<i[^>]*>\s*([^<]+?)\s*</i>(.*)$',item,re.I|re.S)
+        if not m:
+            continue
+        item_label=html.unescape(m.group(1)).strip().rstrip(":").upper()
+        if item_label != label.upper():
+            continue
+        v=html.unescape(re.sub(r"<[^>]+>","",m.group(2))).strip()
+        return None if v in {"","--"} else v
+    return None
 
 def profile_name(doc):
     for pat in (r'b-content__title-highlight[^>]*>\s*(.*?)\s*</',r'<h2[^>]*>\s*(.*?)\s*</h2>'):
