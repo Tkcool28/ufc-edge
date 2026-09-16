@@ -69,6 +69,10 @@ jobs:
           assert audit["live_ufcstats_state_counts"] == {"POPULATED": 11}, audit["live_ufcstats_state_counts"]
           assert len(audit["live_ufcstats_changed_fields"]) == 11, audit["live_ufcstats_changed_fields"]
           assert audit["live_ufcstats_check_required"] == 0, audit["live_ufcstats_check_required"]
+          assert audit["recent_remaining_null_rows"] == 0, audit["recent_remaining_null_rows"]
+          cov_global = audit["coverage"]["global"]
+          assert cov_global["height_before_null"] == 434 and cov_global["height_after_null"] == 432, cov_global
+          assert cov_global["reach_before_null"] == 1970 and cov_global["reach_after_null"] == 1949, cov_global
           assert len(audit["supplemental_changed_fields"]) == 12, audit["supplemental_changed_fields"]
           cov_2024 = audit["coverage"]["2024"]
           assert cov_2024["height_before_null"] == cov_2024["height_after_null"] == 0, cov_2024
