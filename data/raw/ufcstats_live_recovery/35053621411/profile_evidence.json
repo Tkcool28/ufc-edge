@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "35053621411",
+  "retrieved_at": "2026-09-16T03:55:36.970371Z",
+  "source": "ufcstats.com",
+  "artifact_id": 10430320125,
+  "artifact_sha256": "a3ab075b91f6d5dfe9cb4f57b1e5edcadc14a9f80cce4a62a3da2fddfa7f8f09",
+  "pages": [
+    {"fighter_name":"Abubakar Vagaev","ufcstats_url":"http://ufcstats.com/fighter-details/f7adc1fd115f8fdd","ufcstats_fighter_id":"f7adc1fd115f8fdd","page_sha256":"f8db6cf1444697f2145119033278690c4ea79c52d4a96377c10e3f645b377c37","physical_profile_items":[{"label":"Height","raw_display":"5' 11\""},{"label":"Reach","raw_display":"73\""}]},
+    {"fighter_name":"Artur Minev","ufcstats_url":"http://ufcstats.com/fighter-details/20d37922ba85e6fc","ufcstats_fighter_id":"20d37922ba85e6fc","page_sha256":"b43b22a87a37c796f9f6d6124feefd93a18660e2479ffc8f0cf1d5ae89eedfb6","physical_profile_items":[{"label":"Height","raw_display":"5' 9\""},{"label":"Reach","raw_display":"69\""}]},
+    {"fighter_name":"Borislav Nikolic","ufcstats_url":"http://ufcstats.com/fighter-details/5f926979c980b87e","ufcstats_fighter_id":"5f926979c980b87e","page_sha256":"bde32675813c47967400ec0cd976084c44495a4e2402f40375a56657c0a08cfe","physical_profile_items":[{"label":"Height","raw_display":"5' 9\""},{"label":"Reach","raw_display":"72\""}]},
+    {"fighter_name":"Damian Rzepecki","ufcstats_url":"http://ufcstats.com/fighter-details/99223fbb4a05326b","ufcstats_fighter_id":"99223fbb4a05326b","page_sha256":"a1bb8baa93db91e8a8848fb2a866543c019f43814610b7f5d26759ebed3d1c04","physical_profile_items":[{"label":"Height","raw_display":"5' 10\""},{"label":"Reach","raw_display":"71\""}]},
+    {"fighter_name":"Magomed Tuchalov","ufcstats_url":"http://ufcstats.com/fighter-details/bc5a51159ec2fdf2","ufcstats_fighter_id":"bc5a51159ec2fdf2","page_sha256":"cdc9604dc6139b5250aa0fe853cade38b43725f08a64b506a18f3cf804df35d9","physical_profile_items":[{"label":"Height","raw_display":"6' 3\""},{"label":"Reach","raw_display":"78\""}]},
+    {"fighter_name":"Marina Spasic","ufcstats_url":"http://ufcstats.com/fighter-details/5847c1a960bb23af","ufcstats_fighter_id":"5847c1a960bb23af","page_sha256":"29417773eb8426646dc7b661e529578e35d6388c405cbc25ddcf511cbffe4d32","physical_profile_items":[{"label":"Height","raw_display":"5' 4\""},{"label":"Reach","raw_display":"64\""}]},
+    {"fighter_name":"Nina Milosevic","ufcstats_url":"http://ufcstats.com/fighter-details/eabece0edc2d62ca","ufcstats_fighter_id":"eabece0edc2d62ca","page_sha256":"6c9dff6adbe1809e564993c9b6461366da93f2dfe57fd6aa361deb751299721a","physical_profile_items":[{"label":"Height","raw_display":"5' 5\""},{"label":"Reach","raw_display":"67\""}]},
+    {"fighter_name":"Noah Gugnon","ufcstats_url":"http://ufcstats.com/fighter-details/6266abf6e4245c72","ufcstats_fighter_id":"6266abf6e4245c72","page_sha256":"caf0e3dd34a98c9a911ec5e3bc548ea2fb1ac0bb3bc42db00be27960513fe075","physical_profile_items":[{"label":"Height","raw_display":"5' 11\""},{"label":"Reach","raw_display":"71\""}]},
+    {"fighter_name":"Rodrigo Vera","ufcstats_url":"http://ufcstats.com/fighter-details/2b266e623e20737a","ufcstats_fighter_id":"2b266e623e20737a","page_sha256":"0c62f228a7bfdf7076d440ce6f54d46dbe97e6ad0578a06bdcdb169bf30bc659","physical_profile_items":[{"label":"Height","raw_display":"5' 8\""},{"label":"Reach","raw_display":"68\""}]},
+    {"fighter_name":"YiSak Lee","ufcstats_url":"http://ufcstats.com/fighter-details/e6666480a830f764","ufcstats_fighter_id":"e6666480a830f764","page_sha256":"358a1724cf8768e2be5e4a3acd74c9d0c14453b34dbe806758c7f297a219779e","physical_profile_items":[{"label":"Height","raw_display":"6' 0\""},{"label":"Reach","raw_display":"72\""}]}
+  ]
+}
