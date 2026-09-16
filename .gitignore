@@ -1,2 +1,5 @@
 # F02 runtime replay artifacts are reproducible outputs, not repository source.
 artifacts/features/f02/v1/
+
+# Historical provider-source market data must be staged only from the private market-data repository.
+data/private_market/
