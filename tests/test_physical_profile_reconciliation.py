@@ -1,7 +1,9 @@
 from decimal import Decimal
+import csv
+from pathlib import Path
 import unittest
 
-from ufc_edge.data.physical_profile_reconciliation import agreement_category, official_stats, recovery_selection, selection, validate_official_inches, validate_recovery_measurement
+from ufc_edge.data.physical_profile_reconciliation import agreement_category, live_ufcstats_requirement, live_ufcstats_selection, official_stats, recovery_selection, selection, validate_official_inches, validate_recovery_measurement
 
 
 class PhysicalProfileReconciliationTests(unittest.TestCase):
@@ -127,6 +129,79 @@ class PhysicalProfileReconciliationTests(unittest.TestCase):
         self.assertTrue(checked.accepted)
         self.assertIsNone(value)
         self.assertEqual(status, "supplemental_conflict_quarantined")
+
+
+    def test_local_snapshot_null_marks_live_check_required(self):
+        self.assertEqual(live_ufcstats_requirement("", pinned_live_checked=False), "LIVE_UFCSTATS_CHECK_REQUIRED")
+        self.assertEqual(live_ufcstats_requirement("180.34", pinned_live_checked=False), "LOCAL_SOURCE_POPULATED")
+
+    def test_pinned_live_ufcstats_populated_fills_null(self):
+        value, status, checked = live_ufcstats_selection(field_name="reach_cm", canonical_value="", raw_value_inches="73", identity_verified=True, live_state="POPULATED")
+        self.assertTrue(checked.accepted)
+        self.assertEqual(value, Decimal("185.42"))
+        self.assertEqual(status, "live_ufcstats_null_fill")
+
+    def test_live_ufcstats_cannot_overwrite_existing_canonical(self):
+        value, status, _ = live_ufcstats_selection(field_name="reach_cm", canonical_value="190.5", raw_value_inches="73", identity_verified=True, live_state="POPULATED")
+        self.assertEqual(value, Decimal("190.5"))
+        self.assertEqual(status, "prior_canonical_retained")
+
+    def test_live_ufcstats_outranks_supplemental_for_null_field(self):
+        live, status, _ = live_ufcstats_selection(field_name="reach_cm", canonical_value="", raw_value_inches="71", identity_verified=True, live_state="POPULATED")
+        later, later_status, _ = recovery_selection(field_name="reach_cm", canonical_value=live, raw_value="73.6", raw_unit="in", review_status="quarantined", resolution_status="RESOLVED_CONFLICT_QUARANTINED")
+        self.assertEqual(status, "live_ufcstats_null_fill")
+        self.assertEqual(later, Decimal("180.34"))
+        self.assertEqual(later_status, "prior_canonical_retained")
+
+    def test_live_ufcstats_resolves_lower_tier_conflict(self):
+        value, status, _ = live_ufcstats_selection(field_name="reach_cm", canonical_value="", raw_value_inches="72", identity_verified=True, live_state="POPULATED")
+        self.assertEqual(value, Decimal("182.88"))
+        self.assertEqual(status, "live_ufcstats_null_fill")
+
+    def test_live_checked_null_remains_null_with_explicit_status(self):
+        value, status, checked = live_ufcstats_selection(field_name="height_cm", canonical_value="", raw_value_inches="", identity_verified=True, live_state="CHECKED_STILL_NULL")
+        self.assertIsNone(value)
+        self.assertEqual(status, "live_ufcstats_checked_still_null")
+        self.assertEqual(checked.reason, "source_null")
+
+    def test_pinned_live_provenance_has_url_and_retrieval_timestamp(self):
+        rows = list(csv.DictReader(Path("data/raw/ufcstats_live_recovery/35053621411/observations.csv").open(encoding="utf-8")))
+        self.assertEqual(len(rows), 11)
+        self.assertTrue(all(r["ufcstats_url"].startswith("http://ufcstats.com/fighter-details/") for r in rows))
+        self.assertTrue(all(r["retrieved_at"].endswith("Z") for r in rows))
+        self.assertTrue(all(r["identity_verified"] == "true" for r in rows))
+
+    def test_live_malformed_value_is_rejected(self):
+        value, status, checked = live_ufcstats_selection(field_name="reach_cm", canonical_value="", raw_value_inches="x", identity_verified=True, live_state="POPULATED")
+        self.assertIsNone(value)
+        self.assertEqual(status, "live_ufcstats_rejected_non_numeric")
+        self.assertFalse(checked.accepted)
+
+    def test_live_implausible_value_is_rejected(self):
+        value, status, checked = live_ufcstats_selection(field_name="height_cm", canonical_value="", raw_value_inches="155", identity_verified=True, live_state="POPULATED")
+        self.assertIsNone(value)
+        self.assertTrue(status.startswith("live_ufcstats_rejected_outside_plausible"))
+        self.assertFalse(checked.accepted)
+
+    def test_canonical_builder_consumes_pinned_recovery_without_network(self):
+        source = Path("pipelines/build_physical_profile_canonical_reconciliation_v1.py").read_text(encoding="utf-8")
+        self.assertIn('data/raw/ufcstats_live_recovery/35053621411', source)
+        self.assertNotIn("urlopen(", source)
+        self.assertNotIn("requests.", source)
+
+    def test_ordinary_canonical_build_is_offline_by_contract(self):
+        fetch_source = Path("pipelines/fetch_ufcstats_live_physical_recovery_v1.py").read_text(encoding="utf-8")
+        build_source = Path("pipelines/build_physical_profile_canonical_reconciliation_v1.py").read_text(encoding="utf-8")
+        self.assertIn("build_opener", fetch_source)
+        self.assertNotIn("build_opener", build_source)
+        self.assertNotIn("urllib", build_source)
+
+    def test_live_target_scope_is_bounded_and_unique(self):
+        rows = list(csv.DictReader(Path("data/supplemental/ufcstats_live_recovery_targets_v1.csv").open(encoding="utf-8")))
+        keys = {(r["fighter_id"], r["field_name"]) for r in rows}
+        self.assertEqual(len(rows), 11)
+        self.assertEqual(len(keys), 11)
+        self.assertTrue(all(r["field_name"] in {"height_cm", "reach_cm"} for r in rows))
 
 
 if __name__ == "__main__":
