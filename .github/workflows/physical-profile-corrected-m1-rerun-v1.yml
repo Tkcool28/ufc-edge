@@ -162,6 +162,32 @@ jobs:
           src=Path("tools/models/compare_physical_profile_corrected_m1_v1.py.gz")
           dst=Path("${{ runner.temp }}/compare_physical_profile_corrected_m1_v1.py")
           dst.write_bytes(gzip.decompress(src.read_bytes()))
+          text=dst.read_text()
+          lines=text.splitlines()
+          marker='STOP: corrected F02 labels/target identity changed unexpectedly'
+          hit=[i for i,line in enumerate(lines) if marker in line]
+          if len(hit)!=1:
+              raise SystemExit(f'expected exactly one old false-positive guard, found {len(hit)}')
+          raise_i=hit[0]
+          if_i=raise_i-1
+          while if_i >= 0 and not lines[if_i].lstrip().startswith('if '):
+              if_i-=1
+          if if_i < 0 or raise_i-if_i > 3:
+              raise SystemExit('could not locate old target-hash guard')
+          indent=lines[if_i][:len(lines[if_i])-len(lines[if_i].lstrip())]
+          block=[
+              indent+"invariant_cols = ['fight_id','event_date','fighter_1_id','fighter_2_id','target_state','binary_winner_eligible','fighter_1_win','winner_id']",
+              indent+"if len(oldw) != len(neww):",
+              indent+"    raise RuntimeError('STOP: corrected F02 fight population row count changed')",
+              indent+"for _c in invariant_cols:",
+              indent+"    _x, _y = oldw[_c], neww[_c]",
+              indent+"    _eq = ((_x == _y) | (_x.isna() & _y.isna())).to_numpy()",
+              indent+"    if not bool(_eq.all()):",
+              indent+"        raise RuntimeError(f'STOP: corrected F02 invariant changed unexpectedly: {_c}')",
+          ]
+          lines[if_i:raise_i+1]=block
+          dst.write_text('\n'.join(lines)+'\n')
+          print('patched old composite target-hash guard to direct identity/label comparison')
           print(dst)
           PY
 
