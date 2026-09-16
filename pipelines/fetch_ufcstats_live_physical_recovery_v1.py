@@ -106,7 +106,9 @@ def main():
           "identity_verified":"true" if identity_ok else "false","raw_display_value":raw_display or "",
           "raw_value_inches":("" if raw_in is None or not identity_ok else f"{raw_in:g}"),
           "normalized_value_cm":normalized,"live_state":state,"retrieved_at":retrieved,"fetch_error":error or ""})
-    for row in obs:\n        print(json.dumps({k: row[k] for k in ("fighter_name","field_name","page_fighter_name","identity_verified","raw_display_value","live_state","fetch_error")}, sort_keys=True))\n    fields=list(obs[0])
+    for row in obs:
+        print(json.dumps({k: row[k] for k in ("fighter_name","field_name","page_fighter_name","identity_verified","raw_display_value","live_state","fetch_error")}, sort_keys=True))
+    fields=list(obs[0])
     with (out/"observations.csv").open("w",encoding="utf-8",newline="") as fh:
         w=csv.DictWriter(fh,fieldnames=fields); w.writeheader(); w.writerows(obs)
     manifest={"schema_version":1,"snapshot_id":snapshot,"retrieved_at":retrieved,"source":"ufcstats.com",
