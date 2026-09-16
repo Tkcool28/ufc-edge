@@ -7,11 +7,13 @@
   "target_file": "data/supplemental/ufcstats_live_recovery_targets_v1.csv",
   "target_rows": 11,
   "unique_pages": 10,
-  "states": {"POPULATED": 11},
+  "states": {
+    "POPULATED": 11
+  },
   "actions_run_id": 35053621411,
   "actions_artifact_id": 10430320125,
   "actions_artifact_sha256": "a3ab075b91f6d5dfe9cb4f57b1e5edcadc14a9f80cce4a62a3da2fddfa7f8f09",
-  "observations_sha256": "fb8a2fbe29fc8410ed752ecf3c8358d5ca354f88fba4ce0559af9d3a5bf0f564",
+  "observations_sha256": "a0c82831a1788f54748d9fb833a3e749a87b94e7408a8ea9176257874bd906c2",
   "raw_page_sha256": {
     "20d37922ba85e6fc": "b43b22a87a37c796f9f6d6124feefd93a18660e2479ffc8f0cf1d5ae89eedfb6",
     "2b266e623e20737a": "0c62f228a7bfdf7076d440ce6f54d46dbe97e6ad0578a06bdcdb169bf30bc659",
@@ -23,5 +25,6 @@
     "e6666480a830f764": "358a1724cf8768e2be5e4a3acd74c9d0c14453b34dbe806758c7f297a219779e",
     "eabece0edc2d62ca": "6c9dff6adbe1809e564993c9b6461366da93f2dfe57fd6aa361deb751299721a",
     "f7adc1fd115f8fdd": "f8db6cf1444697f2145119033278690c4ea79c52d4a96377c10e3f645b377c37"
-  }
+  },
+  "acquisition_observations_sha256": "fb8a2fbe29fc8410ed752ecf3c8358d5ca354f88fba4ce0559af9d3a5bf0f564"
 }
