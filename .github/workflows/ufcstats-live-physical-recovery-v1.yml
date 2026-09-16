@@ -7,6 +7,7 @@ on:
       - "pipelines/fetch_ufcstats_live_physical_recovery_v1.py"
       - "data/supplemental/ufcstats_live_recovery_targets_v1.csv"
       - ".github/workflows/ufcstats-live-physical-recovery-v1.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,7 +21,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Fetch bounded live UFCStats cohort
-        run: python pipelines/fetch_ufcstats_live_physical_recovery_v1.py --targets data/supplemental/ufcstats_live_recovery_targets_v1.csv --snapshot-id "${GITHUB_RUN_ID}"
+        run: python pipelines/fetch_ufcstats_live_physical_recovery_v1.py --snapshot-id "${GITHUB_RUN_ID}"
       - name: Upload raw live recovery snapshot
         if: always()
         uses: actions/upload-artifact@v4
