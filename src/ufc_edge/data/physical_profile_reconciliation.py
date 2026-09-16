@@ -168,6 +168,51 @@ def validate_recovery_measurement(field_name: str, raw_value: object, raw_unit: 
     return Measurement(field, text, value_cm, True, None)
 
 
+
+LIVE_UFCSTATS_STATES = {"POPULATED", "CHECKED_STILL_NULL", "FETCH_OR_IDENTITY_FAILURE"}
+
+
+def live_ufcstats_requirement(local_snapshot_value: object, *, pinned_live_checked: bool) -> str:
+    """Classify whether a recent local-source null still requires a controlled live check."""
+    if _clean(local_snapshot_value) is not None:
+        return "LOCAL_SOURCE_POPULATED"
+    if pinned_live_checked:
+        return "LIVE_UFCSTATS_CHECKED"
+    return "LIVE_UFCSTATS_CHECK_REQUIRED"
+
+
+def live_ufcstats_selection(
+    *,
+    field_name: str,
+    canonical_value: object,
+    raw_value_inches: object,
+    identity_verified: bool,
+    live_state: str,
+) -> tuple[Decimal | None, str, Measurement]:
+    """Apply one pinned live UFCStats observation as NULL-FILL only.
+
+    This function is deliberately network-free. Acquisition is handled separately;
+    canonical reconciliation consumes only pinned observations.
+    """
+    checked = validate_recovery_measurement(field_name, raw_value_inches, "in")
+    current = _clean(canonical_value)
+    if current is not None:
+        try:
+            return Decimal(current), "prior_canonical_retained", checked
+        except InvalidOperation as exc:
+            raise ValueError(f"canonical {field_name} is non-numeric: {current!r}") from exc
+    if live_state not in LIVE_UFCSTATS_STATES:
+        return None, "live_ufcstats_invalid_state", checked
+    if not identity_verified:
+        return None, "live_ufcstats_untrusted_identity", checked
+    if live_state == "CHECKED_STILL_NULL":
+        return None, "live_ufcstats_checked_still_null", checked
+    if live_state != "POPULATED":
+        return None, "live_ufcstats_fetch_or_identity_failure", checked
+    if not checked.accepted:
+        return None, f"live_ufcstats_rejected_{checked.reason}", checked
+    return checked.value_cm, "live_ufcstats_null_fill", checked
+
 def recovery_selection(
     *,
     field_name: str,
