@@ -6,9 +6,11 @@ It fetches only the governed target cohort and writes a timestamped raw snapshot
 """
 from __future__ import annotations
 import argparse, csv, hashlib, html, json, re, time
+from http.cookiejar import CookieJar
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.request import Request, urlopen
+from urllib.parse import urlencode, urljoin
+from urllib.request import HTTPCookieProcessor, Request, build_opener
 
 ROOT=Path(__file__).resolve().parents[1]
 DEFAULT_TARGETS=ROOT/"data/supplemental/ufcstats_live_recovery_targets_v1.csv"
@@ -37,6 +39,31 @@ def inches(v):
     m=re.fullmatch(r"(\d+(?:\.\d+)?)\s*\"?",s)
     return float(m.group(1)) if m else None
 
+def fetch_live_page(url):
+    jar=CookieJar()
+    opener=build_opener(HTTPCookieProcessor(jar))
+    headers={"User-Agent":"Mozilla/5.0 UFC-Edge governed recovery/1.0"}
+    def get():
+        with opener.open(Request(url,headers=headers),timeout=30) as r:
+            return getattr(r,"status",200), r.read().decode("utf-8","replace")
+    status, body=get()
+    if "Checking your browser" in body and '"/__c"' in body:
+        nonce_match=re.search(r'var nonce="([0-9a-f]+)"',body)
+        diff_match=re.search(r'target=new Array\((\d+)\+1\)',body)
+        if not nonce_match or not diff_match:
+            raise RuntimeError("unrecognized UFCStats browser challenge")
+        nonce=nonce_match.group(1); difficulty=int(diff_match.group(1))
+        prefix="0"*difficulty; n=0
+        while not hashlib.sha256(f"{nonce}:{n}".encode()).hexdigest().startswith(prefix):
+            n+=1
+        challenge=urljoin(url,"/__c")
+        data=urlencode({"nonce":nonce,"n":n}).encode()
+        req=Request(challenge,data=data,headers={**headers,"Content-Type":"application/x-www-form-urlencoded","Referer":url})
+        with opener.open(req,timeout=30) as r:
+            r.read()
+        status, body=get()
+    return status, body
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--targets",type=Path,default=DEFAULT_TARGETS)
@@ -51,10 +78,8 @@ def main():
     for target in rows:
         url=target["ufcstats_url"]
         if url not in page_cache:
-            req=Request(url,headers={"User-Agent":"Mozilla/5.0 UFC-Edge governed recovery/1.0"})
             try:
-                with urlopen(req,timeout=30) as r:
-                    body=r.read().decode("utf-8","replace"); status=getattr(r,"status",200)
+                status,body=fetch_live_page(url)
                 page_cache[url]=(status,body,None)
             except Exception as exc:
                 page_cache[url]=(None,"",f"{type(exc).__name__}: {exc}")
