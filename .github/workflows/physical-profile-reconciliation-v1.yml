@@ -7,6 +7,9 @@ on:
       - "src/ufc_edge/data/physical_profile_reconciliation.py"
       - "pipelines/build_physical_profile_canonical_reconciliation_v1.py"
       - "data/supplemental/physical_profile_recent_recovery_v1.csv"
+      - "data/supplemental/ufcstats_live_recovery_targets_v1.csv"
+      - "data/raw/ufcstats_live_recovery/**"
+      - "pipelines/fetch_ufcstats_live_physical_recovery_v1.py"
       - "schemas/physical_profile_reconciliation_v1.json"
       - "tests/test_physical_profile_reconciliation.py"
       - ".github/workflows/physical-profile-reconciliation-v1.yml"
@@ -28,7 +31,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Parse reconciliation sources
-        run: python -m py_compile src/ufc_edge/data/physical_profile_reconciliation.py pipelines/build_physical_profile_canonical_reconciliation_v1.py
+        run: python -m py_compile src/ufc_edge/data/physical_profile_reconciliation.py pipelines/build_physical_profile_canonical_reconciliation_v1.py pipelines/fetch_ufcstats_live_physical_recovery_v1.py
       - name: Run physical-profile guard tests
         run: python -m unittest discover -s tests -p 'test_physical_profile_reconciliation.py' -v
       - name: Confirm frozen v0 DATA is untouched
@@ -63,6 +66,9 @@ jobs:
               "EXHAUSTED_TRUSTED_SOURCES_NO_MEASUREMENT": 8,
           }, audit["recovery_resolution_counts"]
           assert audit["non_target_canonical_changes"] == 0, audit["non_target_canonical_changes"]
+          assert audit["live_ufcstats_state_counts"] == {"POPULATED": 11}, audit["live_ufcstats_state_counts"]
+          assert len(audit["live_ufcstats_changed_fields"]) == 11, audit["live_ufcstats_changed_fields"]
+          assert audit["live_ufcstats_check_required"] == 0, audit["live_ufcstats_check_required"]
           assert len(audit["supplemental_changed_fields"]) == 12, audit["supplemental_changed_fields"]
           cov_2024 = audit["coverage"]["2024"]
           assert cov_2024["height_before_null"] == cov_2024["height_after_null"] == 0, cov_2024
@@ -71,8 +77,8 @@ jobs:
           assert cov_2025["height_before_null"] == cov_2025["height_after_null"] == 0, cov_2025
           assert cov_2025["reach_before_null"] == 1 and cov_2025["reach_after_null"] == 0, cov_2025
           cov_2026 = audit["coverage"]["2026"]
-          assert cov_2026["height_before_null"] == 2 and cov_2026["height_after_null"] == 1, cov_2026
-          assert cov_2026["reach_before_null"] == 20 and cov_2026["reach_after_null"] == 10, cov_2026
+          assert cov_2026["height_before_null"] == 2 and cov_2026["height_after_null"] == 0, cov_2026
+          assert cov_2026["reach_before_null"] == 20 and cov_2026["reach_after_null"] == 0, cov_2026
           print(json.dumps({"recent_cohort_rows": audit["recent_cohort_rows"], "coverage": audit["coverage"], "resolution_counts": audit["recovery_resolution_counts"]}, sort_keys=True))
           PY
       - name: Upload reconciliation evidence
@@ -82,8 +88,11 @@ jobs:
           path: |
             data/canonical/v1
             data/supplemental/physical_profile_recent_recovery_v1.csv
+            data/supplemental/ufcstats_live_recovery_targets_v1.csv
+            data/raw/ufcstats_live_recovery/35053621411
             data/derived/qa/physical_profile_recent_cohort_v1.csv
             data/derived/qa/physical_profile_recent_nulls_v1.csv
+            data/derived/qa/physical_profile_live_ufcstats_check_required_v1.csv
             provenance/audits/physical_profile_canonical_reconciliation_v1.json
             provenance/audits/physical_profile_canonical_reconciliation_v1.md
           if-no-files-found: error
