@@ -1,0 +1,72 @@
+{
+  "policy_version": "1.2.0",
+  "status": "validated_for_canonical_null_fill_with_pinned_live_ufcstats_recovery",
+  "scope": "fighters.height_cm and fighters.reach_cm only",
+  "official_provider": "ufc_com",
+  "snapshot_id": "20260820T194553Z",
+  "identity_requirement": {
+    "source_name": "ufc_com",
+    "source_entity_type": "athlete",
+    "review_status": "trusted"
+  },
+  "fields": {
+    "stats_height": {
+      "canonical_field": "height_cm",
+      "verified_unit": "inches",
+      "plausible_inches": [
+        48,
+        90
+      ],
+      "selection": "validated official value fills canonical null only"
+    },
+    "stats_reach_arm": {
+      "canonical_field": "reach_cm",
+      "verified_unit": "inches",
+      "plausible_inches": [
+        48,
+        96
+      ],
+      "selection": "validated official value fills canonical null only"
+    },
+    "stats_reach_leg": {
+      "canonical_field": "leg_reach_cm",
+      "verified_unit": "inches",
+      "plausible_inches": [
+        24,
+        72
+      ],
+      "selection": "validated only; canonical enrichment disabled"
+    }
+  },
+  "rejection_behavior": "do not convert or guess alternate units; retain Greco fallback or canonical null and record provenance",
+  "temporal_semantics": "physical attributes are treated as static DATA attributes while source snapshot observation time remains preserved in provenance",
+  "global_precedence": "unchanged: populated Greco/canonical values are never overwritten; validated UFC Official fills nulls; pinned live UFCStats fills governed recent nulls; supplemental recovery is lower priority",
+  "supplemental_recovery": {
+    "path": "data/supplemental/physical_profile_recent_recovery_v1.csv",
+    "scope": "only 2025-2026 height_cm/reach_cm still null after existing Greco/UFC Official reconciliation",
+    "source_priority": "existing populated canonical/Greco retained; validated UFC Official null-fill; pinned live UFCStats null-fill; validated governed supplemental recovery; null",
+    "accepted_resolution_status": "RESOLVED_TRUSTED_MEASUREMENT",
+    "non_emitting_resolution_statuses": [
+      "RESOLVED_CONFLICT_QUARANTINED",
+      "EXHAUSTED_TRUSTED_SOURCES_NO_MEASUREMENT"
+    ],
+    "unit_policy": "raw_value and raw_unit are mandatory for accepted rows; normalize in->cm by exact 2.54 and cm->cm; no unit guessing",
+    "no_overwrite": true
+  },
+  "live_ufcstats_recovery": {
+    "snapshot_id": "35053621411",
+    "observations_path": "data/raw/ufcstats_live_recovery/35053621411/observations.csv",
+    "evidence_path": "data/raw/ufcstats_live_recovery/35053621411/profile_evidence.json",
+    "source_name": "ufcstats_live",
+    "scope": "bounded recent 2025-2026 height_cm/reach_cm missing after existing governed reconciliation review",
+    "acquisition": "controlled networked workflow fetches only machine-readable target cohort; browser challenge is solved in acquisition layer; normal canonical build performs no network calls",
+    "canonical_priority": "existing populated canonical/Greco; validated UFC Official null-fill; pinned live UFCStats null-fill; governed supplemental recovery; null",
+    "future_missingness_status": "a recent field still null without pinned live evidence is LIVE_UFCSTATS_CHECK_REQUIRED",
+    "populated_status": "LIVE_UFCSTATS_RECOVERED",
+    "checked_null_status": "LIVE_UFCSTATS_CHECKED_STILL_NULL",
+    "no_overwrite": true,
+    "check_required_output": "data/derived/qa/physical_profile_live_ufcstats_check_required_v1.csv",
+    "check_required_output_contract": "same target schema accepted by the controlled fetch command: fighter_id, fighter_name, field_name, ufcstats_fighter_id, ufcstats_url, trusted_ufc_uuid, identity_basis",
+    "controlled_workflow": ".github/workflows/ufcstats-live-physical-recovery-v1.yml; workflow_dispatch only"
+  }
+}
