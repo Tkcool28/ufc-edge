@@ -1,0 +1,84 @@
+{
+  "accepted_concepts": [
+    "age_at_fight",
+    "control_rate",
+    "early_finish_profile",
+    "finish_method_loss_profile",
+    "finish_method_win_profile",
+    "knockdown_creation_vs_vulnerability",
+    "knockdown_efficiency",
+    "knockdown_rate",
+    "layoff_days",
+    "physical_size_profile",
+    "prior_fight_count",
+    "prior_scale_weight_lbs",
+    "reach_difference_cm",
+    "reversal_rate",
+    "sig_environment_mix",
+    "sig_strike_efficiency",
+    "sig_strike_flow",
+    "sig_target_mix",
+    "submission_attempt_rate",
+    "takedown_conversion",
+    "takedown_pressure"
+  ],
+  "excluded_predictors": [
+    {"accepted": false, "column": "scheduled_rounds", "reason": "symmetric fight context held diagnostic-only in M1 V1", "source_concept": "scheduled_rounds"},
+    {"accepted": false, "column": "ctx__title_bout", "reason": "symmetric fight context held diagnostic-only in M1 V1", "source_concept": "title_bout"},
+    {"accepted": false, "column": "ctx__weight_class", "reason": "symmetric fight context held diagnostic-only in M1 V1", "source_concept": "weight_class"}
+  ],
+  "feature_surface_logical_sha256": "c65a6b15b882c591509ead03ebfb6e00bc4833a2577b0dcfbaa260292e4d4d66",
+  "market_firewall": {"market_fields_allowed": false, "odds_api_allowed": false, "roi_allowed": false, "sportsbook_probability_allowed": false},
+  "matchup_predictors": {
+    "review": [
+      {"accepted": true, "columns": ["mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw", "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"], "missingness_transformation": "missing_f1_vs_f2_minus_missing_f2_vs_f1", "source_concept": "knockdown_creation_vs_vulnerability", "swap_contract": "negates_by_directional_pair_exchange", "transformation": "pooled_outer_training_median_then_f1_vs_f2_minus_f2_vs_f1"},
+      {"accepted": true, "columns": ["mx__knockdown_creation_vs_vulnerability__f1_vs_f2__last5__raw", "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__last5__raw"], "missingness_transformation": "missing_f1_vs_f2_minus_missing_f2_vs_f1", "source_concept": "knockdown_creation_vs_vulnerability", "swap_contract": "negates_by_directional_pair_exchange", "transformation": "pooled_outer_training_median_then_f1_vs_f2_minus_f2_vs_f1"},
+      {"accepted": true, "columns": ["mx__reach_difference_cm"], "missingness_transformation": "none", "source_concept": "reach_difference_cm", "swap_contract": "governed_as_f1_reach_minus_f2_reach; value negates under fighter swap", "transformation": "signed_value_with_zero_imputation"}
+    ],
+    "reviewed_columns": 5
+  },
+  "paired_fighter_predictors": {
+    "concepts": {
+      "age_at_fight": ["ctx__age_at_fight"],
+      "control_rate": ["fs__control_rate__allowed_share__career__shrunk", "fs__control_rate__allowed_share__ewma_365d__shrunk", "fs__control_rate__allowed_share__last3__shrunk", "fs__control_rate__allowed_share__last5__shrunk", "fs__control_rate__created_share__career__shrunk", "fs__control_rate__created_share__ewma_365d__shrunk", "fs__control_rate__created_share__last3__shrunk", "fs__control_rate__created_share__last5__shrunk"],
+      "early_finish_profile": ["fs__early_finish_profile__r1_finish_loss__career__shrunk", "fs__early_finish_profile__r1_finish_loss__last5__shrunk", "fs__early_finish_profile__r1_finish_win__career__shrunk", "fs__early_finish_profile__r1_finish_win__last5__shrunk"],
+      "finish_method_loss_profile": ["fs__finish_method_loss_profile__decision__career__shrunk", "fs__finish_method_loss_profile__decision__last5__shrunk", "fs__finish_method_loss_profile__ko_tko__career__shrunk", "fs__finish_method_loss_profile__ko_tko__last5__shrunk", "fs__finish_method_loss_profile__submission__career__shrunk", "fs__finish_method_loss_profile__submission__last5__shrunk"],
+      "finish_method_win_profile": ["fs__finish_method_win_profile__decision__career__shrunk", "fs__finish_method_win_profile__decision__last5__shrunk", "fs__finish_method_win_profile__ko_tko__career__shrunk", "fs__finish_method_win_profile__ko_tko__last5__shrunk", "fs__finish_method_win_profile__submission__career__shrunk", "fs__finish_method_win_profile__submission__last5__shrunk"],
+      "knockdown_efficiency": ["fs__knockdown_efficiency__creation__career__shrunk", "fs__knockdown_efficiency__creation__last5__shrunk", "fs__knockdown_efficiency__vulnerability__career__shrunk", "fs__knockdown_efficiency__vulnerability__last5__shrunk"],
+      "knockdown_rate": ["fs__knockdown_rate__allowed_per_15__career__shrunk", "fs__knockdown_rate__allowed_per_15__ewma_365d__shrunk", "fs__knockdown_rate__allowed_per_15__last3__shrunk", "fs__knockdown_rate__allowed_per_15__last5__shrunk", "fs__knockdown_rate__created_per_15__career__shrunk", "fs__knockdown_rate__created_per_15__ewma_365d__shrunk", "fs__knockdown_rate__created_per_15__last3__shrunk", "fs__knockdown_rate__created_per_15__last5__shrunk"],
+      "layoff_days": ["ctx__layoff_days"],
+      "physical_size_profile": ["ctx__physical_size_profile__height_cm", "ctx__physical_size_profile__reach_cm"],
+      "prior_fight_count": ["fs__prior_fight_count__career__raw"],
+      "prior_scale_weight_lbs": ["ctx__prior_scale_weight_lbs"],
+      "reversal_rate": ["fs__reversal_rate__created_per_15__career__shrunk", "fs__reversal_rate__faced_per_15__career__shrunk"],
+      "sig_environment_mix": ["fs__sig_environment_mix__clinch_share__career__shrunk", "fs__sig_environment_mix__clinch_share__last5__shrunk", "fs__sig_environment_mix__distance_share__career__shrunk", "fs__sig_environment_mix__distance_share__last5__shrunk", "fs__sig_environment_mix__ground_share__career__shrunk", "fs__sig_environment_mix__ground_share__last5__shrunk"],
+      "sig_strike_efficiency": ["fs__sig_strike_efficiency__accuracy__career__shrunk", "fs__sig_strike_efficiency__accuracy__ewma_365d__shrunk", "fs__sig_strike_efficiency__accuracy__last5__shrunk", "fs__sig_strike_efficiency__defense__career__shrunk", "fs__sig_strike_efficiency__defense__ewma_365d__shrunk", "fs__sig_strike_efficiency__defense__last5__shrunk"],
+      "sig_strike_flow": ["fs__sig_strike_flow__absorbed_per_min__career__shrunk", "fs__sig_strike_flow__absorbed_per_min__ewma_365d__shrunk", "fs__sig_strike_flow__absorbed_per_min__last3__shrunk", "fs__sig_strike_flow__absorbed_per_min__last5__shrunk", "fs__sig_strike_flow__attempted_per_min__career__shrunk", "fs__sig_strike_flow__attempted_per_min__ewma_365d__shrunk", "fs__sig_strike_flow__attempted_per_min__last3__shrunk", "fs__sig_strike_flow__attempted_per_min__last5__shrunk", "fs__sig_strike_flow__landed_per_min__career__shrunk", "fs__sig_strike_flow__landed_per_min__ewma_365d__shrunk", "fs__sig_strike_flow__landed_per_min__last3__shrunk", "fs__sig_strike_flow__landed_per_min__last5__shrunk"],
+      "sig_target_mix": ["fs__sig_target_mix__body_share__career__shrunk", "fs__sig_target_mix__body_share__last5__shrunk", "fs__sig_target_mix__head_share__career__shrunk", "fs__sig_target_mix__head_share__last5__shrunk", "fs__sig_target_mix__leg_share__career__shrunk", "fs__sig_target_mix__leg_share__last5__shrunk"],
+      "submission_attempt_rate": ["fs__submission_attempt_rate__created_per_15__career__shrunk", "fs__submission_attempt_rate__created_per_15__ewma_365d__shrunk", "fs__submission_attempt_rate__created_per_15__last3__shrunk", "fs__submission_attempt_rate__created_per_15__last5__shrunk", "fs__submission_attempt_rate__faced_per_15__career__shrunk", "fs__submission_attempt_rate__faced_per_15__ewma_365d__shrunk", "fs__submission_attempt_rate__faced_per_15__last3__shrunk", "fs__submission_attempt_rate__faced_per_15__last5__shrunk"],
+      "takedown_conversion": ["fs__takedown_conversion__defense__career__shrunk", "fs__takedown_conversion__defense__ewma_365d__shrunk", "fs__takedown_conversion__defense__last5__shrunk", "fs__takedown_conversion__success__career__shrunk", "fs__takedown_conversion__success__ewma_365d__shrunk", "fs__takedown_conversion__success__last5__shrunk"],
+      "takedown_pressure": ["fs__takedown_pressure__created_per_15__career__shrunk", "fs__takedown_pressure__created_per_15__ewma_365d__shrunk", "fs__takedown_pressure__created_per_15__last3__shrunk", "fs__takedown_pressure__created_per_15__last5__shrunk", "fs__takedown_pressure__faced_per_15__career__shrunk", "fs__takedown_pressure__faced_per_15__ewma_365d__shrunk", "fs__takedown_pressure__faced_per_15__last3__shrunk", "fs__takedown_pressure__faced_per_15__last5__shrunk"]
+    },
+    "missingness_transformation": "missing_f1_minus_missing_f2",
+    "pairing_rule": "for each semantic_key, eligible columns are f1__<semantic_key> and f2__<semantic_key>",
+    "semantic_pairs": 96,
+    "source_columns": 192,
+    "transformation": "pooled_outer_training_median_then_f1_minus_f2"
+  },
+  "preprocessing": {
+    "intercept": false,
+    "matchup_pair_imputation": "one pooled median across opposing directional columns fit on training data only",
+    "paired_imputation": "one pooled median per semantic pair fit on training data only; same median for f1/f2",
+    "reach_imputation": "zero, preserving signed antisymmetry",
+    "scaling": "StandardScaler(with_mean=False), fit on training data only"
+  },
+  "projection": {"final_projected_dimensions": 197, "matchup_missingness_dimensions": 2, "matchup_value_dimensions": 3, "paired_missingness_dimensions": 96, "paired_value_dimensions": 96},
+  "shared_context_diagnostic_only": [
+    {"accepted": false, "column": "scheduled_rounds", "reason": "symmetric fight context held diagnostic-only in M1 V1", "source_concept": "scheduled_rounds"},
+    {"accepted": false, "column": "ctx__title_bout", "reason": "symmetric fight context held diagnostic-only in M1 V1", "source_concept": "title_bout"},
+    {"accepted": false, "column": "ctx__weight_class", "reason": "symmetric fight context held diagnostic-only in M1 V1", "source_concept": "weight_class"}
+  ],
+  "source": {"f02_predictor_count": 200, "f02_replay_schema_version": "1.0.1", "f02_schema_sha256": "488c96eed4d86a75da8b763c879a65d6b85959393ec7b6c59f7051b0c03836a8", "selection_rule": "discover only schema columns with predictor == true"},
+  "status": "M1_FEATURE_SURFACE_V1_FROZEN",
+  "version": "1.0.0"
+}

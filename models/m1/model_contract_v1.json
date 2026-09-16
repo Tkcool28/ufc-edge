@@ -1,0 +1,58 @@
+{
+  "base_main": "4cd9bb9a51b0c8cd225c6a9bed91b9c5933ec1e3",
+  "candidate_grid": {
+    "elasticnet_C": [0.03, 0.1, 0.3],
+    "elasticnet_l1_ratio": [0.1, 0.5, 0.9],
+    "inner_validation_years_per_outer_fold": 2,
+    "l2_C": [0.03, 0.1, 0.3, 1.0],
+    "random_seed": 17,
+    "selection_objective": "chronological log loss only",
+    "tie_break": "frozen grid order"
+  },
+  "f02": {
+    "predictor_count": 200,
+    "predictor_logical_sha256": "ac55fd6fc1f19be7afac2007fccceb43b5c3f98327554d0c58fbe6cb0b164383",
+    "replay_schema_version": "1.0.1",
+    "schema_sha256": "488c96eed4d86a75da8b763c879a65d6b85959393ec7b6c59f7051b0c03836a8"
+  },
+  "feature_surface": {
+    "frozen_before_outcome_evaluation": true,
+    "logical_sha256": "c65a6b15b882c591509ead03ebfb6e00bc4833a2577b0dcfbaa260292e4d4d66",
+    "path": "models/m1/feature_surface_v1.json",
+    "projected_dimensions": 197
+  },
+  "m0": {
+    "frozen": true,
+    "oof_logical_sha256": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c",
+    "oof_rows": 5626
+  },
+  "market_firewall": {
+    "market_artifacts": false,
+    "market_in_feature_selection": false,
+    "market_in_hyperparameter_selection": false,
+    "market_residuals": false,
+    "odds_api": false,
+    "roi": false,
+    "sportsbook_probabilities": false
+  },
+  "population": {
+    "binary_winner_eligible": true,
+    "confirmation_years": [2024, 2025, 2026],
+    "development_years": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+    "modeling_era_start": "2010-01-01",
+    "outer_validation_years": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+    "promotion": "UFC",
+    "target": "fighter_1_win"
+  },
+  "projection": {
+    "fit_intercept": false,
+    "paired_fighter": "pooled outer-training median, f1-f2 value diff plus missingness diff",
+    "paired_matchup": "pooled outer-training median, f1_vs_f2-f2_vs_f1 value diff plus missingness diff",
+    "reach_matchup": "signed F02 reach difference with zero imputation",
+    "scaling": "StandardScaler(with_mean=false), training-only",
+    "shared_context": "diagnostic only"
+  },
+  "purpose": "Broad, market-independent UFC winner probability model over frozen F02 predictors.",
+  "status": "M1_MODEL_CONTRACT_FROZEN",
+  "version": "1.0.0"
+}
