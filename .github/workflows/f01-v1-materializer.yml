@@ -31,7 +31,10 @@ jobs:
           import ast
           from pathlib import Path
 
-          paths = sorted((Path('src/ufc_edge/features')).glob('*.py')) + [Path('tools/features/materialize_v1.py')]
+          paths = sorted((Path('src/ufc_edge/features')).glob('*.py')) + [
+              Path('tools/features/materialize_v1.py'),
+              Path('tools/features/check_repo_artifact_hygiene.py'),
+          ]
           for path in paths:
               ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
           print(f'parsed {len(paths)} Python files')
@@ -103,26 +106,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
-
-          # Always reject generated/run/output directories anywhere in the tree.
-          if printf '%s\n' "$added" | grep -E '(^|/)(runs?|output|generated|feature_store)/' | grep -v '^$'; then
-            echo 'F01 must not commit generated run/output directories.' >&2
-            exit 1
-          fi
-
-          # Governed DATA source/evidence files are allowed; generated model matrices are not.
-          matrix_like="$(
-            printf '%s\n' "$added" \
-              | grep -E '\.(csv|parquet|feather)$' \
-              | grep -Ev '^data/(raw|supplemental)/' \
-              || true
-          )"
-          if [[ -n "$matrix_like" ]]; then
-            printf '%s\n' "$matrix_like"
-            echo 'F01 must not commit generated feature matrices outside governed DATA source/evidence paths.' >&2
-            exit 1
-          fi
+          git diff --diff-filter=A --name-only origin/main...HEAD \
+            | python tools/features/check_repo_artifact_hygiene.py
 
       - name: Verify checkout clean
         shell: bash
