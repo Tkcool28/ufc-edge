@@ -176,6 +176,8 @@ jobs:
               raise SystemExit('could not locate old target-hash guard')
           indent=lines[if_i][:len(lines[if_i])-len(lines[if_i].lstrip())]
           block=[
+              indent+"oldw = pd.read_parquet(Path(args.old_f02_dir) / 'winner_modeling_table.parquet')",
+              indent+"neww = pd.read_parquet(Path(args.new_f02_dir) / 'winner_modeling_table.parquet')",
               indent+"invariant_cols = ['fight_id','event_date','fighter_1_id','fighter_2_id','target_state','binary_winner_eligible','fighter_1_win','winner_id']",
               indent+"if len(oldw) != len(neww):",
               indent+"    raise RuntimeError('STOP: corrected F02 fight population row count changed')",
