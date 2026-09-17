@@ -1,13 +1,13 @@
 {
   "artifacts": {
     "stage_a": {
-      "artifact_id": 10513853322,
-      "digest": "sha256:f9b260758dd83b15de4de2ced4d6e581b0feaf34661f1aa936c0b1c6ddedf4c5",
+      "artifact_id": 10521336672,
+      "digest": "sha256:fbcf03a90cbc6ddced977bec202121506dd6acf2df484bc7a4e7108d7ea63cc8",
       "name": "model-validation-bucket-contract-v1-stage-a"
     },
     "stage_b": {
-      "artifact_id": 10514821807,
-      "digest": "sha256:c1f6e28e3f1f05345fa9894621763cbf05b702479991fd27234ba284c0294261",
+      "artifact_id": 10521027401,
+      "digest": "sha256:9ed9432429bef1c12643d3f5ade89303e4cc91c9fba6d0186a6422a55972d9a3",
       "name": "model-validation-bucket-contract-v1-stage-b"
     }
   },
@@ -20,7 +20,7 @@
     "rows": 5729,
     "unassignable": 1111
   },
-  "authoritative_artifact_commit": "79ceac2db1d2affd9657a6efac02edad2a15bf91",
+  "authoritative_artifact_commit": "7aeecb983979a60f1d6095de2690462bbf219253",
   "branch": "feat/model-validation-bucket-contract-v1",
   "corrected_f02": {
     "logical_sha256": "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0",
@@ -28,8 +28,16 @@
   },
   "corrected_m1_oof_sha256": "5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78",
   "deterministic_regeneration": "PASS",
-  "final_branch_head_before_completion_marker": "79ceac2db1d2affd9657a6efac02edad2a15bf91",
+  "final_branch_head_before_completion_marker": "7aeecb983979a60f1d6095de2690462bbf219253",
   "final_recommendation": "VALIDATION_TERRAIN_V1_READY_FOR_PERMANENT_USE",
+  "frozen_percentile_reference": {
+    "generation_method_identity": "POOLED_UFC_2015_2026_FIGHTER_SIDE_MIDRANK_RLE_V1",
+    "path": "governance/model_validation_bucket_v1/MODEL_VALIDATION_PERCENTILE_REFERENCE_V1.json",
+    "sha256": "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa",
+    "source_f02_logical_sha256": "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0",
+    "source_f02_table_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "version": "MODEL_VALIDATION_PERCENTILE_REFERENCE_V1"
+  },
   "guardrails": {
     "DATA_changed": "NO",
     "F00_changed": "NO",
@@ -46,14 +54,15 @@
   "hashes": {
     "calibration_report_sha256": "1fcf0898321fc30d57cc5e5743231cbbf82b323567e30c7ec75177dfb6d35ccb",
     "canonical_fights_sha256": "b972ebb0c6b1fdfdd512c8d6004129f7e0620fe6759ca8acfa1d2f1184029e76",
-    "contract_sha256": "bb665751bc5d843d6ac8c69b82ea152e788d011142778b0b013f3ddaf1bbe22a",
-    "stage_a_generator_sha256": "898a5bf06b77cba14b9c2d1f63f73e4b10b977b021d5ff6e4dd52b274c88d0ca",
+    "contract_sha256": "23bb56aa33116b126c73054396ad3a08c16d04481226985e246224d21b3f1aac",
+    "percentile_reference_sha256": "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa",
+    "stage_a_generator_sha256": "6696384b9bcee30792c241767dbb620f17c6e80d0af23f56eaeb68a76d3a68fe",
     "stage_b_generator_sha256": "d6aaec3f02498d68c235d7eaca7f264f65d69175dabfbf62126fbf4430293470",
     "threshold_evidence_sha256": "52b373bf87d0045c52de920396a7436f6ea8d4a9eb084b465f6f7834d685ff0f"
   },
   "jobs": {
-    "stage_a_job_id": 105335227537,
-    "stage_b_job_id": 105335486559
+    "stage_a_job_id": 105391812556,
+    "stage_b_job_id": 105391981107
   },
   "pull_request": 70,
   "starting_main": "aa57e8e2822f291f397bcfb6dd50929dbf40fb89",
@@ -62,7 +71,7 @@
   "workflow": {
     "conclusion": "success",
     "name": "Model Validation Bucket Contract V1",
-    "run_id": 35260655363,
-    "source_head": "9d5173eb05c23e7a1e6bd86a876789ab8b673d7f"
+    "run_id": 35277590067,
+    "source_head": "7aeecb983979a60f1d6095de2690462bbf219253"
   }
 }
