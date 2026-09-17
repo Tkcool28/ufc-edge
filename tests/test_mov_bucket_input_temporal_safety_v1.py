@@ -25,15 +25,15 @@ def test_era_assignment_boundaries():
 
 def test_missingness_calculation_is_pair_symmetric():
     f = pd.DataFrame({
-        "event_date": pd.to_datetime(["2025-01-01", "2025-01-02", "2025-01-03"]),
+        "event_date": pd.to_datetime(["2023-01-01", "2024-01-02", "2025-01-03"]),
         "x1": [1.0, None, None],
         "x2": [2.0, 3.0, None],
     })
-    # coverage_table is independent of target/model outputs and counts the three states exactly.
+    # coverage_table is independent of target/model outputs and counts the three states by year.
     rows = m.coverage_table(f.rename(columns={"x1": "a", "x2": "b"}), "a", "b")
-    assert rows[0]["both_observed"] == 1
-    assert rows[1]["both_observed"] == 0
-    assert rows[2]["any_observed_rate"] == 0.0
+    assert rows[0]["year"] == 2023 and rows[0]["both_observed"] == 1
+    assert rows[1]["year"] == 2024 and rows[1]["both_observed"] == 0 and rows[1]["any_observed_rate"] == 1.0
+    assert rows[2]["year"] == 2025 and rows[2]["any_observed_rate"] == 0.0
 
 
 def test_pit_classifier_does_not_flag_on_target_association_alone():
