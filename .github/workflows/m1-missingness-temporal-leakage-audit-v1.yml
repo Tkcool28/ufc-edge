@@ -1,0 +1,89 @@
+name: M1 Missingness Temporal Leakage Audit V1
+
+on:
+  pull_request:
+    branches: [feat/physical-profile-m1-diagnostic-v1]
+    paths:
+      - "tools/models/audit_m1_missingness_temporal_leakage_v1.py"
+      - ".github/workflows/m1-missingness-temporal-leakage-audit-v1.yml"
+      - "governance/M1_MISSINGNESS_POINT_IN_TIME_SAFETY_V1.md"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0
+      - name: Compile audit
+        run: python -m py_compile tools/models/audit_m1_missingness_temporal_leakage_v1.py
+      - name: Download authoritative old F02
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02-old
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download corrected F02
+        uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02-new
+          repository: Tkcool28/ufc-edge
+          run-id: 35177629733
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download authoritative old M1
+        uses: actions/download-artifact@v4
+        with:
+          name: m1-primary-validation-v1
+          path: ${{ runner.temp }}/m1-old
+          repository: Tkcool28/ufc-edge
+          run-id: 34786836606
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download corrected M1 comparison artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-m1-rerun-v1
+          path: ${{ runner.temp }}/rerun
+          repository: Tkcool28/ufc-edge
+          run-id: 35177629733
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Locate corrected M1 artifact
+        id: locate
+        shell: bash
+        run: |
+          set -euo pipefail
+          result="$(find "${{ runner.temp }}/rerun" -path '*/m1_corrected/m1_result.json' -print -quit)"
+          test -n "$result"
+          dir="$(dirname "$result")"
+          test -s "$dir/m1_oof_predictions.parquet"
+          test -s "$dir/m1_coefficients.json"
+          echo "new_m1_dir=$dir" >> "$GITHUB_OUTPUT"
+      - name: Run read-only leakage audit
+        run: |
+          python tools/models/audit_m1_missingness_temporal_leakage_v1.py \
+            --old-f02-dir "${{ runner.temp }}/f02-old" \
+            --new-f02-dir "${{ runner.temp }}/f02-new" \
+            --old-m1-dir "${{ runner.temp }}/m1-old" \
+            --new-m1-dir "${{ steps.locate.outputs.new_m1_dir }}" \
+            --feature-surface models/m1/feature_surface_v1.json \
+            --feature-catalog features/feature_catalog.yaml \
+            --output-dir "${{ runner.temp }}/audit"
+      - name: Publish summary
+        run: cat "${{ runner.temp }}/audit/audit_report.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: m1-missingness-temporal-leakage-audit-v1
+          path: ${{ runner.temp }}/audit
+          if-no-files-found: error
+          retention-days: 30
