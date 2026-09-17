@@ -195,7 +195,7 @@ def main():
         "largest_harmful_direct_shifts": worst.to_dict("records"),
         "largest_helpful_direct_shifts": best.to_dict("records"),
     }
-    (a.output_dir / "diagnostic_report.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+    (a.output_dir / "diagnostic_report.json").write_text(json.dumps(report, indent=2, sort_keys=True, default=str) + "\n")
     year_df.to_csv(a.output_dir / "year_decomposition.csv", index=False)
     pd.DataFrame(folds).to_csv(a.output_dir / "fold_mechanics.csv", index=False)
     joined.to_csv(a.output_dir / "oof_diagnostic_rows.csv", index=False)
