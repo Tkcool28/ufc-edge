@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "tools/features/audit_mov_bucket_input_temporal_safety_v1.py"
+      - "tools/features/finalize_mov_bucket_input_audit_v1.py"
       - "tests/test_mov_bucket_input_temporal_safety_v1.py"
       - ".github/workflows/mov-bucket-input-temporal-safety-audit-v1.yml"
       - "governance/MOV_BUCKET_INPUT_TEMPORAL_SAFETY_AUDIT_V1_COMPLETE.json"
@@ -25,7 +26,7 @@ jobs:
       - name: Install audit dependencies
         run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 pytest==8.3.3 tabulate==0.9.0
       - name: Compile audit harness
-        run: python -m py_compile tools/features/audit_mov_bucket_input_temporal_safety_v1.py
+        run: python -m py_compile tools/features/audit_mov_bucket_input_temporal_safety_v1.py tools/features/finalize_mov_bucket_input_audit_v1.py
       - name: Run focused harness tests
         run: pytest -q tests/test_mov_bucket_input_temporal_safety_v1.py
       - name: Download authoritative original F02 positive-control artifact
@@ -63,13 +64,18 @@ jobs:
         run: |
           python tools/features/audit_mov_bucket_input_temporal_safety_v1.py \
             --f02-dir "${{ runner.temp }}/f02-current" \
-            --old-f02-dir "${{ runner.temp }}/f02-old" \
             --catalog features/feature_catalog.yaml \
             --inventory features/feature_inventory.json \
             --source-precedence schemas/source_precedence_v0.json \
             --source-field-map schemas/source_field_map_v0.json \
             --canonical-root data/canonical/v0 \
             --output-dir "${{ runner.temp }}/mov-audit"
+      - name: Validate governed reach positive control
+        run: |
+          python tools/features/finalize_mov_bucket_input_audit_v1.py \
+            --output-dir "${{ runner.temp }}/mov-audit" \
+            --old-f02-dir "${{ runner.temp }}/f02-old" \
+            --new-f02-dir "${{ runner.temp }}/f02-current"
       - name: Publish audit summary
         run: cat "${{ runner.temp }}/mov-audit/audit_report.md" >> "$GITHUB_STEP_SUMMARY"
       - name: Upload audit evidence
