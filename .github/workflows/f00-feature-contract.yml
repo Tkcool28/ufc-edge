@@ -7,6 +7,7 @@ on:
       - 'provenance/rulesets/**'
       - 'src/ufc_edge/features/**'
       - 'tests/features/**'
+      - 'tools/features/check_repo_artifact_hygiene.py'
       - '.github/workflows/f00-feature-contract.yml'
   workflow_dispatch:
 
@@ -71,10 +72,16 @@ jobs:
         run: |
           set -euo pipefail
           added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
-          if printf '%s\n' "$added" | grep -E '(^|/)(runs?|output|artifacts)/|\.(csv|parquet|feather)$' | grep -v '^$'; then
-            echo 'F00 must not add generated matrices, run directories, or data artifacts.' >&2
+
+          # Preserve F00's existing explicit rejection of artifact directories.
+          if printf '%s\n' "$added" | grep -E '(^|/)artifacts/' | grep -v '^$'; then
+            echo 'F00 must not add artifact directories.' >&2
             exit 1
           fi
+
+          # Shared fail-closed guard: only explicit governed namespaces may contain
+          # matrix-like files; generated/run/output/feature-store directories remain rejected.
+          printf '%s\n' "$added" | python tools/features/check_repo_artifact_hygiene.py
 
       - name: Verify checkout has no runtime or untracked junk
         shell: bash
