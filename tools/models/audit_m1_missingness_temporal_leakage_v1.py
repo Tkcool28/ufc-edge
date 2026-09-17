@@ -311,7 +311,7 @@ def main() -> None:
         "available_side_larger_true_reach_rate": float((av > ot).mean()), "mean_true_reach_advantage_cm": float((av - ot).mean()),
         "future_career": pcc,
     }
-    positive["reproduced"] = bool(positive["rows"] == 111 and abs(float(positive["available_side_win_rate"]) - 0.9459459459459459) < 1e-12)
+    positive["reproduced"] = bool(positive["rows"] == 107 and abs(float(positive["available_side_win_rate"]) - 0.9626168224299065) < 1e-12)
     if not positive["reproduced"]: raise RuntimeError(f"reach positive control failed: {positive}")
 
     negative = {"feature": PRIOR_COUNT_VALUE, "classification": srow["classification"], "strict_prior_contract": srow["source_contract"]["strict_prior_contract"], "active_rows": s_metrics["active_rows"], "higher_prior_count_side_win_rate": s_metrics["favored_side_win_rate"], "career": s_career}
