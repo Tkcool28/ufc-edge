@@ -34,6 +34,11 @@ jobs:
           python-version: "3.12"
       - name: Install validation dependencies
         run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2 pytest==8.3.5
+      - name: Verify frozen percentile reference identity
+        run: |
+          REF=governance/model_validation_bucket_v1/MODEL_VALIDATION_PERCENTILE_REFERENCE_V1.json
+          test -s "$REF"
+          test "$(sha256sum "$REF" | awk '{print $1}')" = "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa"
       - name: Run validation terrain tests
         run: python -m pytest -q tests/test_model_validation_bucket_contract_v1.py
       - name: Download pinned corrected F02
@@ -50,28 +55,41 @@ jobs:
             --f02-dir "${{ runner.temp }}/corrected-f02" \
             --audit-marker governance/MOV_BUCKET_INPUT_TEMPORAL_SAFETY_AUDIT_V1_COMPLETE.json \
             --canonical-fights data/canonical/v0/fights.csv \
+            --percentile-reference governance/model_validation_bucket_v1/MODEL_VALIDATION_PERCENTILE_REFERENCE_V1.json \
             --output-dir "${{ runner.temp }}/stage-a"
           gzip -n -c "${{ runner.temp }}/stage-a/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv" \
             > "${{ runner.temp }}/stage-a/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz"
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          root=Path(os.environ["RUNNER_TEMP"])/"stage-a"
+          manifest=json.loads((root/"manifest.json").read_text())
+          required_logical="a23b138ea103a751ae988cce5f90369b265547bfeec1c0e708484b4428015665"
+          required_physical="8b59c09e103997e4c6d6311608620e7178962aac0cdf807dfa9d1740c7aa6d97"
+          if manifest["assignment_logical_sha256"] != required_logical:
+              raise SystemExit("PR70_PERCENTILE_REFERENCE_FIX_REQUIRES_REVIEW: logical assignment changed")
+          physical=hashlib.sha256((root/"MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv").read_bytes()).hexdigest()
+          if physical != required_physical or manifest["assignment_physical_sha256"] != required_physical:
+              raise SystemExit("PR70_PERCENTILE_REFERENCE_FIX_REQUIRES_REVIEW: physical assignment changed")
+          print("Historical V1 assignment identity unchanged")
+          PY
       - name: Prove deterministic Stage-A regeneration
         run: |
           python tools/validation/build_bucket_assignment_v1.py \
             --f02-dir "${{ runner.temp }}/corrected-f02" \
             --audit-marker governance/MOV_BUCKET_INPUT_TEMPORAL_SAFETY_AUDIT_V1_COMPLETE.json \
             --canonical-fights data/canonical/v0/fights.csv \
+            --percentile-reference governance/model_validation_bucket_v1/MODEL_VALIDATION_PERCENTILE_REFERENCE_V1.json \
             --output-dir "${{ runner.temp }}/stage-a-repeat"
-          cmp "${{ runner.temp }}/stage-a/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv" \
-              "${{ runner.temp }}/stage-a-repeat/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv"
-          cmp "${{ runner.temp }}/stage-a/MODEL_VALIDATION_BUCKET_CONTRACT_V1.json" \
-              "${{ runner.temp }}/stage-a-repeat/MODEL_VALIDATION_BUCKET_CONTRACT_V1.json"
-          cmp "${{ runner.temp }}/stage-a/threshold_selection_evidence_v1.json" \
-              "${{ runner.temp }}/stage-a-repeat/threshold_selection_evidence_v1.json"
+          cmp "${{ runner.temp }}/stage-a/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv" "${{ runner.temp }}/stage-a-repeat/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv"
+          cmp "${{ runner.temp }}/stage-a/MODEL_VALIDATION_BUCKET_CONTRACT_V1.json" "${{ runner.temp }}/stage-a-repeat/MODEL_VALIDATION_BUCKET_CONTRACT_V1.json"
+          cmp "${{ runner.temp }}/stage-a/threshold_selection_evidence_v1.json" "${{ runner.temp }}/stage-a-repeat/threshold_selection_evidence_v1.json"
           python - <<'PY'
           import json, os
           from pathlib import Path
           a=json.loads(Path(os.environ["RUNNER_TEMP"]+"/stage-a/manifest.json").read_text())
           b=json.loads(Path(os.environ["RUNNER_TEMP"]+"/stage-a-repeat/manifest.json").read_text())
-          for key in ("assignment_logical_sha256","assignment_physical_sha256","contract_sha256","threshold_evidence_sha256"):
+          for key in ("assignment_logical_sha256","assignment_physical_sha256","contract_sha256","threshold_evidence_sha256","percentile_reference_sha256"):
               if a[key] != b[key]:
                   raise SystemExit(f"determinism failure: {key}")
           print("Stage-A deterministic regeneration verified")
