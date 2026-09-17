@@ -1,0 +1,100 @@
+{
+  "freeze_version": "1.0.0",
+  "status": "M1_REGULARIZED_SHARED_FEATURE_WINNER_MODEL_V1_CORRECTED_FROZEN",
+  "verdict": "CORRECTED_M1_ACCEPTED_AS_AUTHORITATIVE_FROZEN_BASELINE",
+  "scope": "Formal freeze of the corrected physical-profile rerun of the pre-existing M1 V1 methodology. This marker does not authorize M1B or alter M1 methodology.",
+  "source": {
+    "freeze_base_main": "3ccf11d4f804f66845a385c0ce7013634e616d97",
+    "corrected_rerun_pr": 65,
+    "corrected_rerun_merge_commit": "27b09a094bbe9ddb34326fc29f1b6be366e4de86",
+    "diagnostic_pr": 66,
+    "diagnostic_merge_commit": "8b20b34458777b74edb6e7925452faf35443bcf0",
+    "missingness_temporal_safety_audit_pr": 67,
+    "missingness_audit_merge_commit": "7a7b50c2e1cdd20af8c7996e0c8460a35a693296",
+    "permanent_validation_terrain_pr": 70,
+    "validation_terrain_merge_commit": "3ccf11d4f804f66845a385c0ce7013634e616d97"
+  },
+  "methodology": {
+    "model_contract_path": "models/m1/model_contract_v1.json",
+    "model_contract_version": "1.0.0",
+    "feature_surface_path": "models/m1/feature_surface_v1.json",
+    "projected_dimensions": 197,
+    "model_family": "L2 / elastic-net logistic regression",
+    "outer_validation_years": "2015-2026 chronological",
+    "selection_objective": "chronological inner-fold log loss only",
+    "candidate_grid_size": 13,
+    "random_seed": 17,
+    "fit_intercept": false,
+    "market_blind": true,
+    "methodology_changed_by_corrected_rerun": false
+  },
+  "corrected_f02": {
+    "predictor_logical_sha256": "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0",
+    "table_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580"
+  },
+  "corrected_m1": {
+    "oof_rows": 5626,
+    "oof_sha256": "5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78",
+    "aggregate": {
+      "log_loss": 0.649120128,
+      "brier": 0.229025402,
+      "accuracy": 0.621045,
+      "roc_auc": 0.665905862
+    },
+    "partial_2026": {
+      "rows": 329,
+      "log_loss": 0.630602667,
+      "brier": 0.220613882,
+      "accuracy": 0.6322,
+      "roc_auc": 0.695153533
+    }
+  },
+  "calibration": {
+    "expected_calibration_error": 0.013465679622867755,
+    "calibration_intercept": -0.020275341242389507,
+    "calibration_slope": 1.0592667127753208,
+    "mean_pick_confidence": 0.6106936464973923,
+    "governed_report_sha256": "1fcf0898321fc30d57cc5e5743231cbbf82b323567e30c7ec75177dfb6d35ccb",
+    "interpretation": "Corrected M1 confidence is broadly well calibrated overall; high-confidence tails and environment-specific cells remain sample-governed."
+  },
+  "permanent_validation_terrain_v1": {
+    "contract_path": "governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_CONTRACT_V1.json",
+    "assignment_path": "governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz",
+    "percentile_reference_path": "governance/model_validation_bucket_v1/MODEL_VALIDATION_PERCENTILE_REFERENCE_V1.json",
+    "assignment_logical_sha256": "a23b138ea103a751ae988cce5f90369b265547bfeec1c0e708484b4428015665",
+    "assignment_physical_sha256": "8b59c09e103997e4c6d6311608620e7178962aac0cdf807dfa9d1740c7aa6d97",
+    "contract_sha256": "23bb56aa33116b126c73054396ad3a08c16d04481226985e246224d21b3f1aac",
+    "percentile_reference_sha256": "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa",
+    "rule": "Same historical terrain, different model. V1 assignments and percentile reference are immutable; changed thresholds or sources require V2."
+  },
+  "known_findings": {
+    "original_m1_status": "HISTORICAL_TEMPORALLY_CONTAMINATED",
+    "confirmed_original_leakage_surface": "pair::ctx__physical_size_profile__reach_cm::missing_diff",
+    "reach_value_itself_was_defective": false,
+    "corrected_missingness_audit_result": "No additional confirmed temporal-leakage surfaces among the audited corrected M1 missingness/availability surface.",
+    "diagnostic_watchpoints": [
+      "GRAPPLE_TWO_SIDED is a weaker corrected-M1 discrimination environment and should remain a named stress-test, not a model-selection target.",
+      "High-missingness fights are harder for corrected M1 than low-missingness fights.",
+      "Thin confidence-within-environment cells remain governed by frozen sample-size rules and must not drive conclusions."
+    ]
+  },
+  "sample_size_governance": {
+    "normal_n_min": 100,
+    "moderate_uncertainty_n_min": 50,
+    "thin_exploratory_n_min": 25,
+    "insufficient_below": 25,
+    "rule": "N<25 is N-only with substantive performance interpretation suppressed."
+  },
+  "guardrails": {
+    "data_semantics_changed": false,
+    "f00_semantics_changed": false,
+    "f01_materialization_semantics_changed": false,
+    "m1_methodology_changed": false,
+    "m1_retrained_after_corrected_controlled_rerun": false,
+    "market_data_used_for_training_or_selection": false,
+    "roi_used_for_training_or_selection": false,
+    "m1b_started": false
+  },
+  "future_model_comparison_rule": "Future winner and MOV models must be compared against this corrected-M1 frozen baseline on the permanent V1 validation terrain without redefining V1 from model performance.",
+  "supersession_policy": "This freeze preserves corrected M1 V1 as an immutable historical baseline. Future models may supersede it operationally, but must not rewrite this record."
+}
