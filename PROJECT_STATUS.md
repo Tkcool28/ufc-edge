@@ -1,8 +1,8 @@
 # UFC EDGE — Project Status
 
-Status: **AUTHORITATIVE**  
-Snapshot date: **2026-09-17**  
-Authoritative main before this freeze branch: `3ccf11d4f804f66845a385c0ce7013634e616d97`  
+Status: **AUTHORITATIVE**
+Snapshot date: **2026-09-17**
+Authoritative main before this freeze branch: `3ccf11d4f804f66845a385c0ce7013634e616d97`
 Current phase: **corrected M1 foundation freeze before next model-development phase**
 
 > Fresh sessions: read this file first, then `PROJECT_MAP.md`, `docs/MASTER_MILESTONES.md`, `docs/DECISIONS.md`, and `docs/MODELING_RESET_CHECKLIST.md`. Always verify current `main` before changing anything.
@@ -12,6 +12,8 @@ Current phase: **corrected M1 foundation freeze before next model-development ph
 Repository: `Tkcool28/ufc-edge`
 
 PR #70 is merged and establishes the permanent model-independent Validation Terrain V1. Old draft PRs and old branches are historical evidence, not authority.
+
+Historical/parallel draft PRs #34, #60, #61, and #62 predate the current authoritative corrected foundation and must not be reused as current authority without deliberate review.
 
 ## Authoritative DATA
 
@@ -29,14 +31,14 @@ The committed canonical tree remains rooted at `data/canonical/v0/`; the correct
 
 ### F00 — feature contract/governance
 
-Purpose: feature definitions, semantics, versioning, provenance and safety rules.  
-Methodology: **frozen unless an explicit feature-contract migration is authorized**.  
+Purpose: feature definitions, semantics, versioning, provenance and safety rules.
+Methodology: **frozen unless an explicit feature-contract migration is authorized**.
 Entry points: `features/FEATURE_CONTRACT.md`, `features/FEATURE_GOVERNANCE.md`, `features/README.md`.
 
 ### F01 — point-in-time fighter state
 
-Purpose: materialize fighter state as known strictly before a target fight.  
-Methodology: **frozen for the corrected physical-profile foundation**.  
+Purpose: materialize fighter state as known strictly before a target fight.
+Methodology: **frozen for the corrected physical-profile foundation**.
 Entry points: `features/F01_MATERIALIZER.md`, F01 tests/builders referenced by `features/README.md`.
 
 ### F02 — historical predictor replay
@@ -99,9 +101,13 @@ Formal freeze marker:
 
 `models/m1/M1_REGULARIZED_SHARED_FEATURE_WINNER_MODEL_V1_CORRECTED_FROZEN.json`
 
-Corrected M1 OOF SHA256:
+Corrected M1 prediction artifact/content SHA256:
 
 `5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78`
+
+Formal corrected-M1 OOF logical SHA256:
+
+`7e6a08a6a4013630239986360654ad0963a1f242dae9acd7b172ee5a321384e6`
 
 Corrected aggregate metrics:
 
@@ -121,9 +127,10 @@ Corrected aggregate metrics:
 | Accuracy | `63.22%` |
 | ROC AUC | `0.695153533` |
 
-Calibration benchmark:
+Calibration benchmarks:
 
-- ECE: `0.013465680`
+- Validation Terrain V1 pick-confidence ECE (confidence-bin weighted absolute pick-calibration gap): `0.013465680`
+- corrected-rerun probability-bin ECE: `0.015328076`
 - calibration slope: `1.059266713`
 - calibration intercept: `-0.020275341`
 - governed calibration report SHA256: `1fcf0898321fc30d57cc5e5743231cbbf82b323567e30c7ec75177dfb6d35ccb`
