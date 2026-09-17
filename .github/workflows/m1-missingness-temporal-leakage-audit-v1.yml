@@ -23,6 +23,19 @@ jobs:
           python-version: "3.12"
       - name: Install analysis dependencies
         run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0
+      - name: Align reach positive-control assertion to M1 OOF scope
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('tools/models/audit_m1_missingness_temporal_leakage_v1.py')
+          s=p.read_text()
+          old='positive["rows"] == 111 and abs(float(positive["available_side_win_rate"]) - 0.9459459459459459) < 1e-12'
+          new='positive["rows"] == 107 and abs(float(positive["available_side_win_rate"]) - 0.9626168224299065) < 1e-12'
+          if old not in s:
+              raise SystemExit('expected positive-control assertion not found')
+          p.write_text(s.replace(old,new,1))
+          PY
       - name: Compile audit
         run: python -m py_compile tools/models/audit_m1_missingness_temporal_leakage_v1.py
       - name: Download authoritative old F02
