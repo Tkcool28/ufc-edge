@@ -2,6 +2,14 @@ name: Model Validation Bucket Contract V1
 
 on:
   workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/model-validation-bucket-contract-v1.yml"
+      - "tools/validation/**"
+      - "tests/test_model_validation_bucket_contract_v1.py"
+      - "governance/MODEL_VALIDATION_BUCKET_CONTRACT_V1.md"
+      - "governance/model_validation_bucket_v1/**"
 
 permissions:
   contents: read
