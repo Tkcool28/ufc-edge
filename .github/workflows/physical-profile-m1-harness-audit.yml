@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/physical-profile-m1-harness-audit.yml"
-      - "tools/models/compare_physical_profile_corrected_m1_v1.py.gz"
+      - "tools/models/compare_physical_profile_corrected_m1_v1.py"
 
 permissions:
   contents: read
@@ -21,17 +21,17 @@ jobs:
           python-version: "3.12"
       - name: Install lightweight audit dependencies
         run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 ruff==0.13.2
-      - name: Decompress and audit comparison harness
+      - name: Audit plain-text comparison harness
         run: |
           set -euo pipefail
           mkdir -p "${{ runner.temp }}/harness-audit"
           python - <<'PY'
-          import ast, gzip, json, re
+          import ast, json, re
           from pathlib import Path
 
-          src = Path("tools/models/compare_physical_profile_corrected_m1_v1.py.gz")
+          src = Path("tools/models/compare_physical_profile_corrected_m1_v1.py")
           out = Path("${{ runner.temp }}/harness-audit/compare_physical_profile_corrected_m1_v1.py")
-          text = gzip.decompress(src.read_bytes()).decode("utf-8")
+          text = src.read_text(encoding="utf-8")
           out.write_text(text)
           tree = ast.parse(text)
           lines = text.splitlines()
