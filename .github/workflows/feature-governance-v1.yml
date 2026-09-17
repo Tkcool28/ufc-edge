@@ -90,13 +90,16 @@ jobs:
         run: |
           set -euo pipefail
           added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
-          allowed='^features/(FEATURE_REFERENCE\.md|feature_inventory\.json|repository_inventory\.json|FEATURE_REPOSITORY_INVENTORY\.md)$'
-          bad="$(printf '%s\n' "$added" | grep -E '(^|/)(runs?|output|artifacts|feature_store)/|\.(csv|parquet|feather)$' | grep -Ev "$allowed" || true)"
-          if [[ -n "$bad" ]]; then
-            printf '%s\n' "$bad"
-            echo 'Governance V1 must not add replay matrices, runtime artifacts, or feature stores.' >&2
+
+          # Preserve Feature Governance's existing explicit rejection of artifact directories.
+          if printf '%s\n' "$added" | grep -E '(^|/)artifacts/' | grep -v '^$'; then
+            echo 'Governance V1 must not add artifact directories.' >&2
             exit 1
           fi
+
+          # Shared fail-closed guard: only explicit governed namespaces may contain
+          # matrix-like files; generated/run/output/feature-store directories remain rejected.
+          printf '%s\n' "$added" | python tools/features/check_repo_artifact_hygiene.py
 
       - name: Verify checkout clean
         shell: bash
