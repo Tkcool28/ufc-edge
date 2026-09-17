@@ -1,0 +1,48 @@
+name: Physical Profile M1 Survivorship Probe V1
+
+on:
+  pull_request:
+    branches: [feat/physical-profile-corrected-m1-rerun-v1]
+    paths:
+      - "tools/models/probe_reach_missingness_survivorship_v1.py"
+      - ".github/workflows/physical-profile-m1-survivorship-probe-v1.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0
+      - name: Compile probe
+        run: python -m py_compile tools/models/probe_reach_missingness_survivorship_v1.py
+      - name: Download old F02
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02-old
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run survivorship probe
+        run: |
+          python tools/models/probe_reach_missingness_survivorship_v1.py \
+            --old-f02-dir "${{ runner.temp }}/f02-old" \
+            --output-dir "${{ runner.temp }}/survivorship"
+      - name: Publish summary
+        run: cat "${{ runner.temp }}/survivorship/survivorship_probe.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: physical-profile-m1-survivorship-probe-v1
+          path: ${{ runner.temp }}/survivorship
+          if-no-files-found: error
+          retention-days: 30
