@@ -6,8 +6,12 @@ on:
     paths:
       - "tools/models/compare_physical_profile_corrected_m1_v1.py"
       - ".github/workflows/physical-profile-corrected-m1-rerun-v1.yml"
-      - "models/m1/**"
+      - "models/m1/acceptance_gates_v1.json"
+      - "models/m1/feature_surface_v1.json"
+      - "models/m1/model_contract_v1.json"
+      - "models/m1/validation_plan_v1.json"
       - "src/ufc_edge/models/m1.py"
+      - "tests/models/test_m1.py"
       - "tools/models/run_m1.py"
       - "pipelines/build_physical_profile_canonical_reconciliation_v1.py"
       - "src/ufc_edge/data/physical_profile_reconciliation.py"
@@ -23,7 +27,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  change-scope:
+    runs-on: ubuntu-24.04
+    outputs:
+      semantic_changed: ${{ steps.scope.outputs.semantic_changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: scope
+        name: Detect semantic rerun inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="${{ github.event.pull_request.base.sha }}"
+          git diff --name-only "$base"...HEAD > "${{ runner.temp }}/changed-files.txt"
+          cat "${{ runner.temp }}/changed-files.txt"
+          if grep -Eq '^(tools/models/compare_physical_profile_corrected_m1_v1\.py|models/m1/(acceptance_gates_v1\.json|feature_surface_v1\.json|model_contract_v1\.json|validation_plan_v1\.json)|src/ufc_edge/models/m1\.py|tests/models/test_m1\.py|tools/models/run_m1\.py|pipelines/build_physical_profile_canonical_reconciliation_v1\.py|src/ufc_edge/data/physical_profile_reconciliation\.py|data/supplemental/physical_profile_recent_recovery_v1\.csv|data/raw/ufcstats_live_recovery/)' "${{ runner.temp }}/changed-files.txt"; then
+            echo "semantic_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "semantic_changed=false" >> "$GITHUB_OUTPUT"
+            echo "Documentation/governance-only change: expensive corrected-M1 rerun is not applicable."
+          fi
+
   harness-preflight:
+    needs: change-scope
+    if: needs.change-scope.outputs.semantic_changed == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
@@ -141,8 +170,10 @@ jobs:
           path: ${{ runner.temp }}/comparison-preflight
           if-no-files-found: error
           retention-days: 7
+
   controlled-rerun:
-    needs: harness-preflight
+    needs: [change-scope, harness-preflight]
+    if: needs.change-scope.outputs.semantic_changed == 'true' && needs.harness-preflight.result == 'success'
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
@@ -164,7 +195,6 @@ jobs:
         run: |
           set -euo pipefail
           git merge-base --is-ancestor b58a9f2d977cb054c8d0428af22c99c71c879423 HEAD
-          test "$(git rev-parse HEAD:models/m1/README.md)" = f3b4754b0f5353c0c39a3118511d34904b9ed4d1
           test "$(git rev-parse HEAD:models/m1/acceptance_gates_v1.json)" = f2f98d22fb65fb902c63aec0d284988710f86359
           test "$(git rev-parse HEAD:models/m1/feature_surface_v1.json)" = c1c558e751c06b4ded3f41ed1e29c8cc0f34da89
           test "$(git rev-parse HEAD:models/m1/model_contract_v1.json)" = 20ada391b2267a30b8c2ced874e543964791539f
@@ -172,7 +202,7 @@ jobs:
           test "$(git rev-parse HEAD:src/ufc_edge/models/m1.py)" = ea6de4ac1793d51443d662416e9570000c3df095
           test "$(git rev-parse HEAD:tests/models/test_m1.py)" = c970d46d9eb8f699c87318cc20ee1a739f175829
           test "$(git rev-parse HEAD:tools/models/run_m1.py)" = 69ec529ab63cd6257a5bd30f2632a6d135347dc5
-          echo "PR64 ancestry and exact frozen M1 implementation/config blobs verified"
+          echo "PR64 ancestry and exact frozen M1 semantic implementation/config blobs verified"
 
       - name: Run frozen feature/model contract tests
         run: |
