@@ -168,7 +168,8 @@ As of the corrected M1 freeze:
 - M0 remains the permanent small empirical baseline.
 - Original M1 is historical and contaminated by reach-availability leakage.
 - Corrected M1 V1 is the authoritative frozen broad winner baseline.
-- Corrected M1 OOF SHA256: `5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78`.
+- Corrected M1 prediction artifact/content SHA256: `5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78`.
+- Corrected M1 OOF logical SHA256: `7e6a08a6a4013630239986360654ad0963a1f242dae9acd7b172ee5a321384e6`.
 - Validation Terrain V1 is permanent for model comparison unless deliberately versioned to V2.
 - `GRAPPLE_TWO_SIDED` is a named corrected-M1 stress-test, **not** a cell to optimize in isolation.
 - High-missingness fights remain a harder population.
