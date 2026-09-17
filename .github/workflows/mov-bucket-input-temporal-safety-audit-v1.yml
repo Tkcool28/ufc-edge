@@ -7,6 +7,7 @@ on:
       - "tools/features/audit_mov_bucket_input_temporal_safety_v1.py"
       - "tools/features/finalize_mov_bucket_input_audit_v1.py"
       - "tests/test_mov_bucket_input_temporal_safety_v1.py"
+      - "tests/test_mov_bucket_input_temporal_safety_finalize_v1.py"
       - ".github/workflows/mov-bucket-input-temporal-safety-audit-v1.yml"
       - "governance/MOV_BUCKET_INPUT_TEMPORAL_SAFETY_AUDIT_V1_COMPLETE.json"
 
@@ -28,7 +29,7 @@ jobs:
       - name: Compile audit harness
         run: python -m py_compile tools/features/audit_mov_bucket_input_temporal_safety_v1.py tools/features/finalize_mov_bucket_input_audit_v1.py
       - name: Run focused harness tests
-        run: pytest -q tests/test_mov_bucket_input_temporal_safety_v1.py
+        run: pytest -q tests/test_mov_bucket_input_temporal_safety_v1.py tests/test_mov_bucket_input_temporal_safety_finalize_v1.py
       - name: Download authoritative original F02 positive-control artifact
         uses: actions/download-artifact@v4
         with:
@@ -70,7 +71,7 @@ jobs:
             --source-field-map schemas/source_field_map_v0.json \
             --canonical-root data/canonical/v0 \
             --output-dir "${{ runner.temp }}/mov-audit"
-      - name: Validate governed reach positive control
+      - name: Validate governed reach positive control and finalize report
         run: |
           python tools/features/finalize_mov_bucket_input_audit_v1.py \
             --output-dir "${{ runner.temp }}/mov-audit" \
