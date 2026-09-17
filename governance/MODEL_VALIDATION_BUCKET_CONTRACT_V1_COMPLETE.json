@@ -1,0 +1,77 @@
+{
+  "artifacts": {
+    "stage_a": {
+      "artifact_id": 10521336672,
+      "digest": "sha256:fbcf03a90cbc6ddced977bec202121506dd6acf2df484bc7a4e7108d7ea63cc8",
+      "name": "model-validation-bucket-contract-v1-stage-a"
+    },
+    "stage_b": {
+      "artifact_id": 10521027401,
+      "digest": "sha256:9ed9432429bef1c12643d3f5ade89303e4cc91c9fba6d0186a6422a55972d9a3",
+      "name": "model-validation-bucket-contract-v1-stage-b"
+    }
+  },
+  "assignment": {
+    "assignable": 4618,
+    "assignable_rate": 0.8060743585267935,
+    "compressed_sha256": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2",
+    "logical_sha256": "a23b138ea103a751ae988cce5f90369b265547bfeec1c0e708484b4428015665",
+    "physical_sha256": "8b59c09e103997e4c6d6311608620e7178962aac0cdf807dfa9d1740c7aa6d97",
+    "rows": 5729,
+    "unassignable": 1111
+  },
+  "authoritative_artifact_commit": "7aeecb983979a60f1d6095de2690462bbf219253",
+  "branch": "feat/model-validation-bucket-contract-v1",
+  "corrected_f02": {
+    "logical_sha256": "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0",
+    "table_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580"
+  },
+  "corrected_m1_oof_sha256": "5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78",
+  "deterministic_regeneration": "PASS",
+  "final_branch_head_before_completion_marker": "7aeecb983979a60f1d6095de2690462bbf219253",
+  "final_recommendation": "VALIDATION_TERRAIN_V1_READY_FOR_PERMANENT_USE",
+  "frozen_percentile_reference": {
+    "generation_method_identity": "POOLED_UFC_2015_2026_FIGHTER_SIDE_MIDRANK_RLE_V1",
+    "path": "governance/model_validation_bucket_v1/MODEL_VALIDATION_PERCENTILE_REFERENCE_V1.json",
+    "sha256": "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa",
+    "source_f02_logical_sha256": "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0",
+    "source_f02_table_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "version": "MODEL_VALIDATION_PERCENTILE_REFERENCE_V1"
+  },
+  "guardrails": {
+    "DATA_changed": "NO",
+    "F00_changed": "NO",
+    "F01_changed": "NO",
+    "F02_changed": "NO",
+    "M1_methodology_changed": "NO",
+    "M1_retrained": "NO",
+    "M1B_started": "NO",
+    "automatic_merge": "NO",
+    "market_data_used": "NO",
+    "ROI_analyzed": "NO",
+    "thresholds_optimized_on_performance": "NO"
+  },
+  "hashes": {
+    "calibration_report_sha256": "1fcf0898321fc30d57cc5e5743231cbbf82b323567e30c7ec75177dfb6d35ccb",
+    "canonical_fights_sha256": "b972ebb0c6b1fdfdd512c8d6004129f7e0620fe6759ca8acfa1d2f1184029e76",
+    "contract_sha256": "23bb56aa33116b126c73054396ad3a08c16d04481226985e246224d21b3f1aac",
+    "percentile_reference_sha256": "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa",
+    "stage_a_generator_sha256": "6696384b9bcee30792c241767dbb620f17c6e80d0af23f56eaeb68a76d3a68fe",
+    "stage_b_generator_sha256": "d6aaec3f02498d68c235d7eaca7f264f65d69175dabfbf62126fbf4430293470",
+    "threshold_evidence_sha256": "52b373bf87d0045c52de920396a7436f6ea8d4a9eb084b465f6f7834d685ff0f"
+  },
+  "jobs": {
+    "stage_a_job_id": 105391812556,
+    "stage_b_job_id": 105391981107
+  },
+  "pull_request": 70,
+  "starting_main": "aa57e8e2822f291f397bcfb6dd50929dbf40fb89",
+  "status": "MODEL_VALIDATION_BUCKET_CONTRACT_V1_COMPLETE",
+  "tests": "PASS",
+  "workflow": {
+    "conclusion": "success",
+    "name": "Model Validation Bucket Contract V1",
+    "run_id": 35277590067,
+    "source_head": "7aeecb983979a60f1d6095de2690462bbf219253"
+  }
+}
