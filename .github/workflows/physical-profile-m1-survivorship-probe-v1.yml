@@ -32,10 +32,19 @@ jobs:
           repository: Tkcool28/ufc-edge
           run-id: 34673108776
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download corrected F02
+        uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02-new
+          repository: Tkcool28/ufc-edge
+          run-id: 35177629733
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run survivorship probe
         run: |
           python tools/models/probe_reach_missingness_survivorship_v1.py \
             --old-f02-dir "${{ runner.temp }}/f02-old" \
+            --new-f02-dir "${{ runner.temp }}/f02-new" \
             --output-dir "${{ runner.temp }}/survivorship"
       - name: Publish summary
         run: cat "${{ runner.temp }}/survivorship/survivorship_probe.md" >> "$GITHUB_STEP_SUMMARY"
