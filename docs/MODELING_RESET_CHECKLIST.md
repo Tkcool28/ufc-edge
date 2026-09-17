@@ -189,3 +189,18 @@ Use this checklist:
 - whenever the team cannot clearly explain how the current work eventually helps make a better betting decision.
 
 If the answer to the last point is unclear, stop model proliferation and return to the project objective before proceeding.
+
+---
+
+## H. Review cadence
+
+This file is intentionally revisable.
+
+Revisit it when:
+
+- a major model milestone is frozen;
+- a new data source materially changes what can be modeled;
+- the project transitions from predictive modeling into market evaluation;
+- repeated experiments suggest the checklist itself no longer reflects the real decision problem.
+
+Changes to this checklist do **not** rewrite frozen historical model or validation records.
