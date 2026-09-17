@@ -1,16 +1,23 @@
+import json
 import math
 
 import numpy as np
 import pandas as pd
+import pytest
 
 from tools.validation.build_bucket_assignment_v1 import (
+    DEFAULT_REFERENCE_PATH,
     OUTCOME_RE,
+    REFERENCE_SHA256,
+    RICH,
     bucket_experience,
     bucket_layoff,
     classify,
     empirical_percentile,
+    load_frozen_references,
     logical_hash,
     pressure_score,
+    score_mov_environment_v1,
 )
 from tools.validation.run_m1_calibration_diagnostic_v1 import (
     confidence_bucket,
@@ -21,25 +28,13 @@ from tools.validation.run_m1_calibration_diagnostic_v1 import (
 
 def test_experience_boundaries_are_exact():
     assert [bucket_experience(x, x) for x in (0, 1, 2, 3, 5, 6, 10, 11)] == [
-        "0",
-        "1–2",
-        "1–2",
-        "3–5",
-        "3–5",
-        "6–10",
-        "6–10",
-        "11+",
+        "0", "1–2", "1–2", "3–5", "3–5", "6–10", "6–10", "11+",
     ]
 
 
 def test_layoff_boundaries_are_exact():
     assert [bucket_layoff(x, x) for x in (182, 183, 364, 365, 547, 548)] == [
-        "< 6 months",
-        "6–12 months",
-        "6–12 months",
-        "12–18 months",
-        "12–18 months",
-        "18+ months",
+        "< 6 months", "6–12 months", "6–12 months", "12–18 months", "12–18 months", "18+ months",
     ]
     assert bucket_layoff(float("nan"), 100) == "STRUCTURAL_NA_OR_UNKNOWN"
 
@@ -62,20 +57,13 @@ def test_environment_is_swap_invariant_and_direction_follows_fighter_identity():
     right = classify(0.2, 0.8, 0.5, "STRIKE", "b", "a")
     assert left[0] == right[0] == "STRIKE_ONE_SIDED"
     assert left[1] == right[1] == "a"
-    assert classify(0.8, 0.8, 0.5, "STRIKE", "a", "b") == (
-        "STRIKE_TWO_SIDED",
-        "BOTH",
-    )
-    assert classify(0.2, 0.2, 0.5, "STRIKE", "a", "b") == (
-        "STRIKE_LOW",
-        "NONE",
-    )
+    assert classify(0.8, 0.8, 0.5, "STRIKE", "a", "b") == ("STRIKE_TWO_SIDED", "BOTH")
+    assert classify(0.2, 0.2, 0.5, "STRIKE", "a", "b") == ("STRIKE_LOW", "NONE")
 
 
 def test_missing_rich_component_is_unassignable_not_low():
     assert classify(float("nan"), 0.1, 0.5, "GRAPPLE", "a", "b") == (
-        "UNASSIGNABLE_BY_CONTRACT",
-        "UNASSIGNABLE",
+        "UNASSIGNABLE_BY_CONTRACT", "UNASSIGNABLE",
     )
     refs = [np.asarray([1.0, 2.0, 3.0]), np.asarray([10.0, 20.0, 30.0])]
     assert math.isnan(pressure_score([1.0, float("nan")], refs))
@@ -90,15 +78,61 @@ def test_component_normalization_is_scale_invariant():
     assert score_a == score_b
 
 
+def test_frozen_reference_hash_and_population_independence():
+    refs = load_frozen_references(DEFAULT_REFERENCE_PATH)
+    assert REFERENCE_SHA256 == "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa"
+    f1 = {}
+    f2 = {}
+    for family, names in RICH.items():
+        for index, name in enumerate(names):
+            ref = refs[f"{family}:{name}"]
+            f1[name] = float(ref[len(ref) // (3 + index)])
+            f2[name] = float(ref[(2 * len(ref)) // (3 + index)])
+    before = score_mov_environment_v1(f1, f2)
+
+    # A candidate/live population may contain arbitrary future rows. It is deliberately
+    # separate because V1 has no API that can derive references from incoming rows.
+    candidate_population = pd.DataFrame([f1, f2])
+    extremes = pd.DataFrame([{name: -1e99 for names in RICH.values() for name in names},
+                             {name: 1e99 for names in RICH.values() for name in names}])
+    candidate_population = pd.concat([candidate_population, extremes], ignore_index=True)
+    assert len(candidate_population) == 4
+
+    after = score_mov_environment_v1(f1, f2)
+    assert before == after
+    assert before["component_percentiles"] == after["component_percentiles"]
+    assert before["strike_pressure"] == after["strike_pressure"]
+    assert before["grapple_pressure"] == after["grapple_pressure"]
+    assert before["joint_mov_environment"] == after["joint_mov_environment"]
+
+
+def test_frozen_reference_fail_closed_missing_hash_mismatch_and_malformed(tmp_path):
+    missing = tmp_path / "missing.json"
+    with pytest.raises(RuntimeError, match="missing"):
+        load_frozen_references(missing)
+
+    malformed = tmp_path / "malformed.json"
+    malformed.write_text("not-json\n")
+    with pytest.raises(RuntimeError, match="hash mismatch"):
+        load_frozen_references(malformed)
+    with pytest.raises(RuntimeError, match="malformed JSON"):
+        load_frozen_references(malformed, expected_sha256=_sha(malformed))
+
+    payload = json.loads(DEFAULT_REFERENCE_PATH.read_text())
+    payload["features"][next(iter(payload["features"]))]["observed"] += 1
+    mutated = tmp_path / "mutated.json"
+    mutated.write_text(json.dumps(payload, sort_keys=True, separators=(",", ":")) + "\n")
+    with pytest.raises(RuntimeError, match="hash mismatch"):
+        load_frozen_references(mutated)
+
+
+def _sha(path):
+    import hashlib
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def test_stage_a_prohibited_column_families_are_detected():
-    prohibited = [
-        "winner_id",
-        "finish_method",
-        "target",
-        "m1_probability",
-        "brier",
-        "calibration_gap",
-    ]
+    prohibited = ["winner_id", "finish_method", "target", "m1_probability", "brier", "calibration_gap"]
     assert all(OUTCOME_RE.search(name) for name in prohibited)
     assert not OUTCOME_RE.search("fs__knockdown_rate__created_per_15__career__shrunk")
 
@@ -121,12 +155,10 @@ def test_mov_method_categories_are_explicit():
 
 
 def test_logical_hash_is_stable_for_identical_canonical_rows():
-    df = pd.DataFrame(
-        [
-            {"event_date": "2026-01-01", "fight_id": "a", "bucket": "LOW"},
-            {"event_date": "2026-01-02", "fight_id": "b", "bucket": "HIGH"},
-        ]
-    )
+    df = pd.DataFrame([
+        {"event_date": "2026-01-01", "fight_id": "a", "bucket": "LOW"},
+        {"event_date": "2026-01-02", "fight_id": "b", "bucket": "HIGH"},
+    ])
     assert logical_hash(df) == logical_hash(df.copy())
 
 
