@@ -2,33 +2,39 @@
 from __future__ import annotations
 import argparse, json
 from pathlib import Path
-import numpy as np
 import pandas as pd
 
 
 def args():
     p=argparse.ArgumentParser()
     p.add_argument('--old-f02-dir',type=Path,required=True)
+    p.add_argument('--new-f02-dir',type=Path,required=True)
     p.add_argument('--output-dir',type=Path,required=True)
     return p.parse_args()
 
 
 def main():
     a=args(); a.output_dir.mkdir(parents=True,exist_ok=True)
-    df=pd.read_parquet(a.old_f02_dir/'winner_modeling_table.parquet').copy()
-    df['event_date']=pd.to_datetime(df['event_date'])
+    old=pd.read_parquet(a.old_f02_dir/'winner_modeling_table.parquet').copy()
+    new=pd.read_parquet(a.new_f02_dir/'winner_modeling_table.parquet').copy()
+    if old['fight_id'].tolist()!=new['fight_id'].tolist():
+        raise RuntimeError('F02 population/order changed')
+    old['event_date']=pd.to_datetime(old['event_date'])
+    new['event_date']=pd.to_datetime(new['event_date'])
     r1='f1__ctx__physical_size_profile__reach_cm'; r2='f2__ctx__physical_size_profile__reach_cm'
-    elig=df['binary_winner_eligible'].astype(bool)
-    early=df[elig & df.event_date.dt.year.between(2015,2018) & (df[r1].isna() ^ df[r2].isna())].copy()
-    allf=df[elig].copy()
+    elig=old['binary_winner_eligible'].astype(bool)
+    # Exact experiment subset: 2015-2018 rows where exactly one reach was missing before,
+    # and the corrected replay filled that missing side so both reaches are now known.
+    one_missing=(old[r1].isna() ^ old[r2].isna())
+    both_new=new[r1].notna() & new[r2].notna()
+    early=old[elig & old.event_date.dt.year.between(2015,2018) & one_missing & both_new].copy()
+    allf=old[elig].copy()
 
-    # pre-index all appearances by fighter for deterministic point-in-time queries
     fighter_rows={}
     for side in (1,2):
         fid=f'fighter_{side}_id'
-        for fighter, g in allf.groupby(fid, sort=False):
+        for fighter,g in allf.groupby(fid,sort=False):
             fighter_rows.setdefault(fighter,[]).append(g)
-    # same fight can only include fighter on one side, so concatenate safely
     fighter_hist={k:pd.concat(v,ignore_index=True).sort_values('event_date') for k,v in fighter_rows.items()}
 
     rows=[]
@@ -52,9 +58,11 @@ def main():
         out['delta_prior_fights']=out['known_prior_fights']-out['missing_prior_fights']
         rows.append(out)
     x=pd.DataFrame(rows)
-    def rate(col): return float((x[col]>0).mean()) if len(x) else None
+    if x.empty: raise RuntimeError('no correction-specific early rows')
+    def rate(col): return float((x[col]>0).mean())
     summary={
       'status':'REACH_MISSINGNESS_SURVIVORSHIP_PROBE_V1_COMPLETE',
+      'scope':'EXACT_2015_2018_ROWS_WHERE_CORRECTION_FILLED_THE_MISSING_REACH_SIDE',
       'n':int(len(x)),
       'known_side_win_rate':float(x.known_won.mean()),
       'known_more_future_fights_rate':rate('delta_future_fights'),
@@ -71,12 +79,10 @@ def main():
       'mean_missing_future_years':float(x.missing_future_years.mean()),
       'mean_known_prior_fights':float(x.known_prior_fights.mean()),
       'mean_missing_prior_fights':float(x.missing_prior_fights.mean()),
-      'corr_known_indicator_with_future_fight_advantage':None
     }
-    # paired permutation-style sign summaries are more interpretable than a pooled correlation.
     (a.output_dir/'survivorship_probe.json').write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n')
     x.to_csv(a.output_dir/'survivorship_rows.csv',index=False)
-    lines=['# Reach Missingness Survivorship Probe V1','',f"Rows: **{len(x)}**",'',
+    lines=['# Reach Missingness Survivorship Probe V1','',f"Scope: `{summary['scope']}`",f"Rows: **{len(x)}**",'',
       f"- Reach-known side win rate: **{100*summary['known_side_win_rate']:.1f}%**",
       f"- Reach-known side had more future UFC fights: **{100*summary['known_more_future_fights_rate']:.1f}%**",
       f"- Reach-known side had more future UFC wins: **{100*summary['known_more_future_wins_rate']:.1f}%**",
