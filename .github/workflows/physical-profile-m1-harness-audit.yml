@@ -1,0 +1,129 @@
+name: Physical Profile M1 Harness Audit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/physical-profile-m1-harness-audit.yml"
+      - "tools/models/compare_physical_profile_corrected_m1_v1.py"
+
+permissions:
+  contents: read
+
+jobs:
+  harness-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install lightweight audit dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 ruff==0.13.2
+      - name: Audit plain-text comparison harness
+        run: |
+          set -euo pipefail
+          mkdir -p "${{ runner.temp }}/harness-audit"
+          python - <<'PY'
+          import ast, json, re
+          from pathlib import Path
+
+          src = Path("tools/models/compare_physical_profile_corrected_m1_v1.py")
+          out = Path("${{ runner.temp }}/harness-audit/compare_physical_profile_corrected_m1_v1.py")
+          text = src.read_text(encoding="utf-8")
+          out.write_text(text)
+          tree = ast.parse(text)
+          lines = text.splitlines()
+
+          funcs = {}
+          raises = []
+          hash_refs = []
+          suspicious = []
+          equal_series_calls = []
+
+          for node in ast.walk(tree):
+              if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                  funcs[node.name] = node.lineno
+              if isinstance(node, ast.Raise):
+                  msg = None
+                  if isinstance(node.exc, ast.Call) and node.exc.args:
+                      try:
+                          msg = ast.literal_eval(node.exc.args[0])
+                      except Exception:
+                          msg = ast.unparse(node.exc.args[0])
+                  raises.append({"line": node.lineno, "message": msg, "source": lines[node.lineno-1].strip()})
+              if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "equal_series":
+                  parent_text = lines[node.lineno-1].strip()
+                  equal_series_calls.append({"line": node.lineno, "source": parent_text})
+
+          for i, line in enumerate(lines, 1):
+              low = line.lower()
+              if any(k in low for k in ("sha256", "logical_sha", "manifest_sha", "target hash", "hash differs", "f02_identity")):
+                  hash_refs.append({"line": i, "source": line.strip()})
+              if ".iloc" in line or ".to_numpy" in line or "np.isclose" in line or "np.array_equal" in line:
+                  suspicious.append({"line": i, "source": line.strip()})
+
+          report = {
+              "line_count": len(lines),
+              "functions": funcs,
+              "raises": raises,
+              "hash_references": hash_refs,
+              "equal_series_calls": equal_series_calls,
+              "suspicious_numpy_pandas_lines": suspicious,
+          }
+          Path("${{ runner.temp }}/harness-audit/audit.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+
+          md = ["# Comparison harness audit", "", f"Lines: {len(lines)}", "", "## Functions"]
+          md += [f"- `{name}` — line {line}" for name, line in sorted(funcs.items(), key=lambda x:x[1])]
+          md += ["", "## Fail-closed / raise sites"]
+          for r in raises:
+              lo=max(1,r['line']-2); hi=min(len(lines),r['line']+2)
+              snippet="\n".join(f"{n:04d}: {lines[n-1]}" for n in range(lo,hi+1))
+              md += [f"### line {r['line']}: `{r['message']}`", "```python", snippet, "```"]
+          md += ["", "## Hash / identity references"]
+          md += [f"- line {x['line']}: `{x['source']}`" for x in hash_refs]
+          md += ["", "## equal_series call sites"]
+          md += [f"- line {x['line']}: `{x['source']}`" for x in equal_series_calls]
+          md += ["", "## NumPy/pandas indexing/conversion sites"]
+          md += [f"- line {x['line']}: `{x['source']}`" for x in suspicious]
+          Path("${{ runner.temp }}/harness-audit/audit.md").write_text("\n".join(md) + "\n")
+          print("\n".join(md[:80]))
+          PY
+          python -m py_compile "${{ runner.temp }}/harness-audit/compare_physical_profile_corrected_m1_v1.py"
+          ruff check "${{ runner.temp }}/harness-audit/compare_physical_profile_corrected_m1_v1.py" --output-format=concise | tee "${{ runner.temp }}/harness-audit/ruff.txt" || true
+      - name: Targeted mechanical checks
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          p=Path("${{ runner.temp }}/harness-audit/compare_physical_profile_corrected_m1_v1.py")
+          text=p.read_text(); tree=ast.parse(text); lines=text.splitlines()
+          findings=[]
+          # Flag known invalid ndarray-style chaining from equal_series(...).iloc.
+          for i,line in enumerate(lines,1):
+              if "equal_series(" in line and ".iloc" in line:
+                  findings.append(f"ERROR line {i}: equal_series result chained with .iloc: {line.strip()}")
+          # Flag every STOP/guard that depends directly on target logical hash so it must be reviewed.
+          for i,line in enumerate(lines,1):
+              low=line.lower()
+              if "target" in low and ("sha" in low or "hash" in low) and ("if " in low or "raise " in low):
+                  findings.append(f"REVIEW line {i}: target hash guard: {line.strip()}")
+          # Flag hash equality guards involving old/new F02 identities; corrected predictor identity is expected to differ.
+          for i,line in enumerate(lines,1):
+              low=line.lower()
+              if ("old_f02" in low or "new_f02" in low or "old_summary" in low or "new_summary" in low) and ("sha" in low or "hash" in low) and "==" in line:
+                  findings.append(f"REVIEW line {i}: old/new F02 hash equality: {line.strip()}")
+          Path("${{ runner.temp }}/harness-audit/mechanical-findings.txt").write_text("\n".join(findings)+"\n")
+          print("\n".join(findings) if findings else "No targeted mechanical findings")
+          if any(x.startswith("ERROR") for x in findings):
+              raise SystemExit("mechanical harness error(s) found; do not rerun expensive experiment")
+          PY
+      - name: Upload harness audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: physical-profile-m1-harness-audit
+          path: ${{ runner.temp }}/harness-audit
+          if-no-files-found: error
+          retention-days: 7

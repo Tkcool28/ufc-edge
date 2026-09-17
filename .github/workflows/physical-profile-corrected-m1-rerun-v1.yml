@@ -1,0 +1,317 @@
+name: Physical Profile Corrected M1 Rerun V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/models/compare_physical_profile_corrected_m1_v1.py"
+      - ".github/workflows/physical-profile-corrected-m1-rerun-v1.yml"
+      - "models/m1/**"
+      - "src/ufc_edge/models/m1.py"
+      - "tools/models/run_m1.py"
+      - "pipelines/build_physical_profile_canonical_reconciliation_v1.py"
+      - "src/ufc_edge/data/physical_profile_reconciliation.py"
+      - "data/supplemental/physical_profile_recent_recovery_v1.csv"
+      - "data/raw/ufcstats_live_recovery/**"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: physical-profile-corrected-m1-rerun-v1-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  harness-preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install preflight dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2 ruff==0.13.2
+      - name: Compile and reject stale comparison-harness guards
+        run: |
+          set -euo pipefail
+          python -m py_compile tools/models/compare_physical_profile_corrected_m1_v1.py
+          ruff check tools/models/compare_physical_profile_corrected_m1_v1.py
+          python - <<'PY'
+          from pathlib import Path
+          text = Path("tools/models/compare_physical_profile_corrected_m1_v1.py").read_text()
+          stale = (
+              ".py.gz",
+              "equal_series(pd.Series([ro[c]]),pd.Series([rn[c]])).iloc",
+              "old-control OOF logical hash did not reproduce",
+              "corrected F02 labels/target identity changed unexpectedly",
+              "corrected F02 target hash differs",
+          )
+          found = [needle for needle in stale if needle in text]
+          if found:
+              raise SystemExit(f"stale harness guard/pattern(s): {found}")
+          if "--stub-new-m1-from" not in text:
+              raise SystemExit("missing no-training harness preflight stub")
+          print("plain-text harness and stale-guard audit passed")
+          PY
+      - name: Download authoritative old F02/M0/M1 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02-old
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: m0-empirical-winner-baseline-v1
+          path: ${{ runner.temp }}/m0
+          repository: Tkcool28/ufc-edge
+          run-id: 34676508116
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: m1-primary-validation-v1
+          path: ${{ runner.temp }}/m1-old
+          repository: Tkcool28/ufc-edge
+          run-id: 34786836606
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build corrected canonical provenance inputs
+        run: |
+          python pipelines/build_physical_profile_canonical_reconciliation_v1.py
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, shutil
+          v0, v1 = Path("data/canonical/v0"), Path("data/canonical/v1")
+          for src in v0.iterdir():
+              if src.is_file() and not (v1 / src.name).exists():
+                  shutil.copy2(src, v1 / src.name)
+          for name in ("events.csv", "fights.csv", "fighter_round_stats.csv", "source_identity_links.csv", "weigh_ins.csv"):
+              if hashlib.sha256((v0/name).read_bytes()).digest() != hashlib.sha256((v1/name).read_bytes()).digest():
+                  raise SystemExit(f"unexpected non-physical canonical change: {name}")
+          PY
+      - name: Build changed-cell smoke F02 fixture
+        run: |
+          cp -a "${{ runner.temp }}/f02-old" "${{ runner.temp }}/f02-smoke"
+          cp -a "${{ runner.temp }}/m1-old" "${{ runner.temp }}/m1-old-control"
+          python - <<'PY'
+          from pathlib import Path
+          import pandas as pd
+          f02 = Path("${{ runner.temp }}/f02-smoke/winner_modeling_table.parquet")
+          oof = pd.read_parquet(Path("${{ runner.temp }}/m1-old/m1_oof_predictions.parquet"))
+          table = pd.read_parquet(f02)
+          fight_id = oof.loc[pd.to_datetime(oof["event_date"]).dt.year.eq(2026), "fight_id"].iloc[0]
+          col = "f1__ctx__physical_size_profile__reach_cm"
+          row = table.index[table["fight_id"].eq(fight_id)][0]
+          value = table.at[row, col]
+          table.at[row, col] = 999.0 if pd.isna(value) else float(value) + 0.01
+          table.to_parquet(f02, index=False)
+          print(f"smoke changed {fight_id} {col}")
+          PY
+      - name: Execute complete no-training comparison preflight
+        run: |
+          python tools/models/compare_physical_profile_corrected_m1_v1.py \
+            --old-f02-dir "${{ runner.temp }}/f02-old" \
+            --new-f02-dir "${{ runner.temp }}/f02-smoke" \
+            --m0-oof "${{ runner.temp }}/m0/m0_oof_predictions.parquet" \
+            --old-m1-dir "${{ runner.temp }}/m1-old" \
+            --old-control-dir "${{ runner.temp }}/m1-old-control" \
+            --canonical-v0-dir data/canonical/v0 \
+            --canonical-v1-dir data/canonical/v1 \
+            --feature-surface models/m1/feature_surface_v1.json \
+            --model-contract models/m1/model_contract_v1.json \
+            --validation-plan models/m1/validation_plan_v1.json \
+            --acceptance-gates models/m1/acceptance_gates_v1.json \
+            --output-dir "${{ runner.temp }}/comparison-preflight" \
+            --stub-new-m1-from "${{ runner.temp }}/m1-old"
+          test -s "${{ runner.temp }}/comparison-preflight/comparison_report.json"
+          test -s "${{ runner.temp }}/comparison-preflight/comparison_report.md"
+          python -m json.tool "${{ runner.temp }}/comparison-preflight/comparison_report.json" >/dev/null
+      - name: Upload preflight evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: physical-profile-corrected-m1-harness-preflight
+          path: ${{ runner.temp }}/comparison-preflight
+          if-no-files-found: error
+          retention-days: 7
+  controlled-rerun:
+    needs: harness-preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install frozen M1/F02 dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+
+      - name: Verify authoritative corrected DATA ancestry and frozen M1 source blobs
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor b58a9f2d977cb054c8d0428af22c99c71c879423 HEAD
+          test "$(git rev-parse HEAD:models/m1/README.md)" = f3b4754b0f5353c0c39a3118511d34904b9ed4d1
+          test "$(git rev-parse HEAD:models/m1/acceptance_gates_v1.json)" = f2f98d22fb65fb902c63aec0d284988710f86359
+          test "$(git rev-parse HEAD:models/m1/feature_surface_v1.json)" = c1c558e751c06b4ded3f41ed1e29c8cc0f34da89
+          test "$(git rev-parse HEAD:models/m1/model_contract_v1.json)" = 20ada391b2267a30b8c2ced874e543964791539f
+          test "$(git rev-parse HEAD:models/m1/validation_plan_v1.json)" = efe2552672529291bbdff3a5d718e02db9bcb7ba
+          test "$(git rev-parse HEAD:src/ufc_edge/models/m1.py)" = ea6de4ac1793d51443d662416e9570000c3df095
+          test "$(git rev-parse HEAD:tests/models/test_m1.py)" = c970d46d9eb8f699c87318cc20ee1a739f175829
+          test "$(git rev-parse HEAD:tools/models/run_m1.py)" = 69ec529ab63cd6257a5bd30f2632a6d135347dc5
+          echo "PR64 ancestry and exact frozen M1 implementation/config blobs verified"
+
+      - name: Run frozen feature/model contract tests
+        run: |
+          python -m unittest discover -s tests/features -p 'test_v1*.py' -v
+          python -m unittest discover -s tests/features -p 'test_f02_replay.py' -v
+          python -m unittest discover -s tests/models -p 'test_m1.py' -v
+          python -m unittest discover -s tests -p 'test_physical_profile_reconciliation.py' -v
+
+      - name: Build authoritative corrected canonical DATA v1 offline
+        run: python pipelines/build_physical_profile_canonical_reconciliation_v1.py
+
+      - name: Complete canonical v1 runtime package with byte-identical unchanged tables
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, shutil
+          v0=Path("data/canonical/v0")
+          v1=Path("data/canonical/v1")
+          if not (v1/"fighters.csv").exists() or not (v1/"manifest.json").exists():
+              raise SystemExit("corrected canonical v1 build missing")
+          inherited={}
+          for src in sorted(v0.iterdir()):
+              if not src.is_file():
+                  continue
+              dst=v1/src.name
+              if not dst.exists():
+                  shutil.copy2(src,dst)
+                  inherited[src.name]=hashlib.sha256(src.read_bytes()).hexdigest()
+          required=("events.csv","fighters.csv","fights.csv","fighter_round_stats.csv","source_identity_links.csv","weigh_ins.csv","manifest.json")
+          missing=[x for x in required if not (v1/x).exists()]
+          if missing:
+              raise SystemExit(f"canonical v1 runtime package missing {missing}")
+          for name in ("events.csv","fights.csv","fighter_round_stats.csv","source_identity_links.csv","weigh_ins.csv"):
+              if hashlib.sha256((v0/name).read_bytes()).digest()!=hashlib.sha256((v1/name).read_bytes()).digest():
+                  raise SystemExit(f"unexpected non-physical canonical change in {name}")
+          meta={"inherited_unchanged_files":inherited,"required_files":list(required)}
+          Path("${{ runner.temp }}/canonical-v1-runtime-package.json").write_text(json.dumps(meta,indent=2,sort_keys=True)+"\n")
+          print(json.dumps(meta,indent=2,sort_keys=True))
+          PY
+
+      - name: Download authoritative frozen F02 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02-old
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download authoritative frozen M0 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: m0-empirical-winner-baseline-v1
+          path: ${{ runner.temp }}/m0
+          repository: Tkcool28/ufc-edge
+          run-id: 34676508116
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download authoritative old M1 primary artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: m1-primary-validation-v1
+          path: ${{ runner.temp }}/m1-old
+          repository: Tkcool28/ufc-edge
+          run-id: 34786836606
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Reproduce old M1 as determinism control
+        run: |
+          python tools/models/run_m1.py validate \
+            --f02-dir "${{ runner.temp }}/f02-old" \
+            --m0-oof "${{ runner.temp }}/m0/m0_oof_predictions.parquet" \
+            --feature-surface models/m1/feature_surface_v1.json \
+            --output-dir "${{ runner.temp }}/m1-old-control" \
+            --skip-ablations
+
+      - name: Prepare isolated corrected-DATA replay root
+        run: |
+          set -euo pipefail
+          mkdir -p "${{ runner.temp }}/corrected-root"
+          cp -a . "${{ runner.temp }}/corrected-root/repo"
+          rm -rf "${{ runner.temp }}/corrected-root/repo/data/canonical/v0"
+          cp -a data/canonical/v1 "${{ runner.temp }}/corrected-root/repo/data/canonical/v0"
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path("${{ runner.temp }}/corrected-root/repo/data/canonical/v0/manifest.json")
+          m=json.loads(p.read_text())
+          if m.get("build")!="physical_profile_canonical_reconciliation_v1":
+              raise SystemExit(f"scratch alias is not corrected canonical v1: {m.get('build')}")
+          print("isolated legacy read-path alias -> corrected DATA v1 verified")
+          PY
+
+      - name: Full corrected-DATA F02 replay
+        working-directory: ${{ runner.temp }}/corrected-root/repo
+        run: |
+          python tools/features/replay_f02.py full \
+            --output-dir "${{ runner.temp }}/f02-corrected" \
+            --attach-targets
+
+      - name: Compare F02 and rerun exact frozen M1
+        run: |
+          python tools/models/compare_physical_profile_corrected_m1_v1.py \
+            --old-f02-dir "${{ runner.temp }}/f02-old" \
+            --new-f02-dir "${{ runner.temp }}/f02-corrected" \
+            --m0-oof "${{ runner.temp }}/m0/m0_oof_predictions.parquet" \
+            --old-m1-dir "${{ runner.temp }}/m1-old" \
+            --old-control-dir "${{ runner.temp }}/m1-old-control" \
+            --canonical-v0-dir data/canonical/v0 \
+            --canonical-v1-dir data/canonical/v1 \
+            --feature-surface models/m1/feature_surface_v1.json \
+            --model-contract models/m1/model_contract_v1.json \
+            --validation-plan models/m1/validation_plan_v1.json \
+            --acceptance-gates models/m1/acceptance_gates_v1.json \
+            --output-dir "${{ runner.temp }}/comparison"
+
+      - name: Publish compact comparison to job summary
+        if: success()
+        run: cat "${{ runner.temp }}/comparison/comparison_report.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload corrected F02 artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02-corrected
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload controlled M1 comparison artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: physical-profile-corrected-m1-rerun-v1
+          path: |
+            ${{ runner.temp }}/comparison
+            ${{ runner.temp }}/canonical-v1-runtime-package.json
+            data/canonical/v1/manifest.json
+            data/canonical/v1/field_provenance.csv
+            provenance/audits/physical_profile_canonical_reconciliation_v1.json
+          if-no-files-found: error
+          retention-days: 30

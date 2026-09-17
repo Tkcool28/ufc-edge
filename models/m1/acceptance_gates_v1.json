@@ -1,0 +1,34 @@
+{
+  "calibration_metric": "expected_calibration_error",
+  "frozen_before_performance_evaluation": true,
+  "gates": {
+    "M1_CLEAR_IMPROVEMENT": {
+      "aggregate_brier_improvement_at_least": 0.0025,
+      "aggregate_log_loss_improvement_at_least": 0.005,
+      "both_metric_outer_fold_wins_at_least": 8,
+      "confirmation_combined_brier_improves": true,
+      "confirmation_combined_log_loss_improves": true,
+      "ece_deterioration_at_most": 0.01
+    },
+    "M1_MODEST_IMPROVEMENT": {
+      "aggregate_brier_improves": true,
+      "aggregate_log_loss_improves": true,
+      "confirmation_brier_regression_at_most": 0.00125,
+      "confirmation_log_loss_regression_at_most": 0.0025,
+      "ece_deterioration_at_most": 0.01,
+      "log_loss_outer_fold_wins_at_least": 7
+    },
+    "M1_NO_MEANINGFUL_IMPROVEMENT": "all remaining outcomes",
+    "M1_REGRESSION": {
+      "aggregate_log_loss_regression_at_least": 0.005,
+      "or_aggregate_brier_regression_at_least": 0.0025
+    }
+  },
+  "primary_metrics": [
+    "log_loss",
+    "brier"
+  ],
+  "selection_metric": "chronological_log_loss_only",
+  "status": "M1_ACCEPTANCE_GATES_FROZEN",
+  "version": "1.0.0"
+}
