@@ -6,8 +6,11 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/model-validation-bucket-contract-v1.yml"
+      - ".github/workflows/f01-v1-materializer.yml"
       - "tools/validation/**"
+      - "tools/features/check_repo_artifact_hygiene.py"
       - "tests/test_model_validation_bucket_contract_v1.py"
+      - "tests/features/test_v1_repo_artifact_hygiene.py"
       - "governance/MODEL_VALIDATION_BUCKET_CONTRACT_V1.md"
       - "governance/model_validation_bucket_v1/**"
 
