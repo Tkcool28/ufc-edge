@@ -27,7 +27,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  change-scope:
+    runs-on: ubuntu-24.04
+    outputs:
+      semantic_changed: ${{ steps.scope.outputs.semantic_changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: scope
+        name: Detect semantic rerun inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="${{ github.event.pull_request.base.sha }}"
+          git diff --name-only "$base"...HEAD > "${{ runner.temp }}/changed-files.txt"
+          cat "${{ runner.temp }}/changed-files.txt"
+          if grep -Eq '^(tools/models/compare_physical_profile_corrected_m1_v1\.py|models/m1/(acceptance_gates_v1\.json|feature_surface_v1\.json|model_contract_v1\.json|validation_plan_v1\.json)|src/ufc_edge/models/m1\.py|tests/models/test_m1\.py|tools/models/run_m1\.py|pipelines/build_physical_profile_canonical_reconciliation_v1\.py|src/ufc_edge/data/physical_profile_reconciliation\.py|data/supplemental/physical_profile_recent_recovery_v1\.csv|data/raw/ufcstats_live_recovery/)' "${{ runner.temp }}/changed-files.txt"; then
+            echo "semantic_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "semantic_changed=false" >> "$GITHUB_OUTPUT"
+            echo "Documentation/governance-only change: expensive corrected-M1 rerun is not applicable."
+          fi
+
   harness-preflight:
+    needs: change-scope
+    if: needs.change-scope.outputs.semantic_changed == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
@@ -145,8 +170,10 @@ jobs:
           path: ${{ runner.temp }}/comparison-preflight
           if-no-files-found: error
           retention-days: 7
+
   controlled-rerun:
-    needs: harness-preflight
+    needs: [change-scope, harness-preflight]
+    if: needs.change-scope.outputs.semantic_changed == 'true' && needs.harness-preflight.result == 'success'
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
