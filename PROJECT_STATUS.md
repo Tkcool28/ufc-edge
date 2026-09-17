@@ -1,17 +1,17 @@
 # UFC EDGE — Project Status
 
-Status: **AUTHORITATIVE**
-Snapshot date: **2026-09-17**
-Authoritative main at cleanup start: `7a7b50c2e1cdd20af8c7996e0c8460a35a693296`
-Current phase: **repository organization before next model-development phase**
+Status: **AUTHORITATIVE**  
+Snapshot date: **2026-09-17**  
+Authoritative main before this freeze branch: `3ccf11d4f804f66845a385c0ce7013634e616d97`  
+Current phase: **corrected M1 foundation freeze before next model-development phase**
 
-> Fresh sessions: read this file first, then `PROJECT_MAP.md`, `docs/MASTER_MILESTONES.md`, and `docs/DECISIONS.md`. Always verify current `main` before changing anything.
+> Fresh sessions: read this file first, then `PROJECT_MAP.md`, `docs/MASTER_MILESTONES.md`, `docs/DECISIONS.md`, and `docs/MODELING_RESET_CHECKLIST.md`. Always verify current `main` before changing anything.
 
 ## Repository identity
 
 Repository: `Tkcool28/ufc-edge`
 
-The merge at the authoritative snapshot is PR #67, M1 missingness temporal leakage audit V1. Old draft PRs and old branches are historical evidence, not authority.
+PR #70 is merged and establishes the permanent model-independent Validation Terrain V1. Old draft PRs and old branches are historical evidence, not authority.
 
 ## Authoritative DATA
 
@@ -29,14 +29,14 @@ The committed canonical tree remains rooted at `data/canonical/v0/`; the correct
 
 ### F00 — feature contract/governance
 
-Purpose: feature definitions, semantics, versioning, provenance and safety rules.
-Methodology: **frozen unless an explicit feature-contract migration is authorized**.
+Purpose: feature definitions, semantics, versioning, provenance and safety rules.  
+Methodology: **frozen unless an explicit feature-contract migration is authorized**.  
 Entry points: `features/FEATURE_CONTRACT.md`, `features/FEATURE_GOVERNANCE.md`, `features/README.md`.
 
 ### F01 — point-in-time fighter state
 
-Purpose: materialize fighter state as known strictly before a target fight.
-Methodology: **frozen for the corrected physical-profile experiment**.
+Purpose: materialize fighter state as known strictly before a target fight.  
+Methodology: **frozen for the corrected physical-profile foundation**.  
 Entry points: `features/F01_MATERIALIZER.md`, F01 tests/builders referenced by `features/README.md`.
 
 ### F02 — historical predictor replay
@@ -46,7 +46,32 @@ Purpose: deterministic historical replay of F01 across canonical fights:
 `canonical fight -> strict pre-fight cutoff -> F01 states -> deterministic matchup predictors -> predictor artifact -> labels attached afterward`
 
 F02 is **not a model**. It is the shared predictor surface consumed by models.
-Replay schema used by M0/M1: `1.0.1`.
+
+Corrected authoritative F02 identities for corrected M1:
+
+- predictor logical SHA256: `2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0`
+- table SHA256: `d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580`
+
+## Authoritative validation terrain
+
+Status: **PERMANENT MODEL-INDEPENDENT VALIDATION TERRAIN V1**.
+
+Rule:
+
+> Same historical terrain, different model.
+
+Entry point:
+
+`governance/model_validation_bucket_v1/`
+
+Key frozen identities:
+
+- assignment logical SHA256: `a23b138ea103a751ae988cce5f90369b265547bfeec1c0e708484b4428015665`
+- assignment physical SHA256: `8b59c09e103997e4c6d6311608620e7178962aac0cdf807dfa9d1740c7aa6d97`
+- contract SHA256: `23bb56aa33116b126c73054396ad3a08c16d04481226985e246224d21b3f1aac`
+- percentile-reference SHA256: `c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa`
+
+V1 assignments and percentile references are immutable. Changed thresholds or sources require a deliberate V2.
 
 ## Authoritative models
 
@@ -60,7 +85,7 @@ M0 uses a small governed five-concept subset of F02 and remains the comparison/r
 
 Status: **HISTORICAL — TEMPORALLY CONTAMINATED BY REACH-AVAILABILITY LEAKAGE**.
 
-The original M1 result must be preserved for audit history, but its performance is not the current authoritative performance estimate. The primary confirmed leakage surface was:
+The original M1 result is preserved for audit history, but its performance is not the authoritative performance estimate. The primary confirmed leakage surface was:
 
 `pair::ctx__physical_size_profile__reach_cm::missing_diff`
 
@@ -68,7 +93,15 @@ The reach value itself was not the defect. Historical present/missing availabili
 
 ### M1 — corrected physical-profile baseline
 
-Status: **AUTHORITATIVE M1 BASELINE — READY FOR FORMAL FREEZE**.
+Status: **AUTHORITATIVE FROZEN M1 V1 BASELINE**.
+
+Formal freeze marker:
+
+`models/m1/M1_REGULARIZED_SHARED_FEATURE_WINNER_MODEL_V1_CORRECTED_FROZEN.json`
+
+Corrected M1 OOF SHA256:
+
+`5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78`
 
 Corrected aggregate metrics:
 
@@ -88,9 +121,19 @@ Corrected aggregate metrics:
 | Accuracy | `63.22%` |
 | ROC AUC | `0.695153533` |
 
-The controlled corrected rerun is PR #65; diagnostic follow-up is PR #66; missingness temporal-safety audit/governance is PR #67.
+Calibration benchmark:
 
-**Formal-freeze distinction:** the cleanup inventory found no committed corrected-M1 completion/freeze marker equivalent to the existing frozen-model conventions. Therefore current cleanup status is `CORRECTED_M1_READY_FOR_FREEZE_MARKER`. Do not invent a freeze during repository organization.
+- ECE: `0.013465680`
+- calibration slope: `1.059266713`
+- calibration intercept: `-0.020275341`
+- governed calibration report SHA256: `1fcf0898321fc30d57cc5e5743231cbbf82b323567e30c7ec75177dfb6d35ccb`
+
+Provenance:
+
+- PR #65 — controlled corrected physical-profile rerun
+- PR #66 — correction diagnostic
+- PR #67 — missingness temporal-safety audit
+- PR #70 — permanent validation terrain and corrected-M1 calibration diagnostic
 
 ## Permanent major findings
 
@@ -98,25 +141,42 @@ The controlled corrected rerun is PR #65; diagnostic follow-up is PR #66; missin
 2. Missingness/data availability must be audited independently for point-in-time safety.
 3. `pair::ctx__physical_size_profile__reach_cm::missing_diff` was the primary confirmed original-M1 leakage surface.
 4. Invalidated historical evidence is preserved, labeled, and never silently deleted.
+5. Corrected M1 probabilities are broadly well calibrated overall.
+6. `GRAPPLE_TWO_SIDED` is a named corrected-M1 diagnostic stress-test, not an isolated model-selection target.
+7. High-missingness fights remain a harder population.
+8. Thin validation cells remain sample-governed and must not drive conclusions.
 
-Active rule: `governance/M1_MISSINGNESS_POINT_IN_TIME_SAFETY_V1.md`.
+Active missingness rule:
+
+`governance/M1_MISSINGNESS_POINT_IN_TIME_SAFETY_V1.md`
+
+## Modeling reset / project objective
+
+Living reference:
+
+`docs/MODELING_RESET_CHECKLIST.md`
+
+This document is intentionally revisable. It exists to prevent model proliferation from becoming the project objective.
+
+Long-term project objective:
+
+> Produce trustworthy, calibrated pre-fight probabilities that can eventually be compared honestly with sportsbook prices to make better UFC fight and method-of-victory betting decisions, including knowing when confidence should be reduced or a fight should be passed.
+
+Predictive model construction remains separated from market/ROI evaluation until an explicitly authorized market phase.
 
 ## Open/deferred work
 
-Not started/authorized in this cleanup:
+Not automatically authorized by this freeze:
 
 - M1B;
 - tree/boosted challengers;
 - opponent adjustment;
 - feature pruning/selection;
-- hyperparameter tuning;
-- betting simulation or market integration;
-- new feature families.
-
-## Open PR warning
-
-Open draft PRs may predate the current authoritative stack. In particular, PRs #34, #60, #61 and #62 are historical/parallel work based on older main states. Inspect current `main` and this status file before reusing any branch or performance statement.
+- new feature families;
+- betting simulation or market integration.
 
 ## Next approved action
 
-After this repository-organization PR is reviewed/merged: **return to MASTER/PM for next-model planning**. Do not begin the next model from this cleanup branch.
+Return to MASTER/PM for explicit next-model planning using corrected M1 and Validation Terrain V1 as the frozen foundation.
+
+Do not begin M1B or another challenger merely because the foundation is frozen. First define the exact question the next model is intended to answer and how success will be judged on the permanent terrain.
