@@ -1,36 +1,53 @@
-# Data Directory
+# UFC EDGE — DATA
 
-This directory contains source data and reproducible source-neutral data products. Feature definitions and model code live at the repository root, not inside `data/`.
+Status: **AUTHORITATIVE DATA NAVIGATION**
+
+This directory contains source evidence and reproducible source-neutral DATA products. Current overall authority is summarized in `../PROJECT_STATUS.md`.
 
 ## `raw/`
 
-Immutable source snapshots exactly as acquired. Each provider gets one namespace; each changing source gets a pinned revision or timestamped snapshot. Source-specific layout rules live in `raw/README.md`.
+Immutable/source-faithful snapshots and pinned acquisition evidence. Provider-specific names/formats are allowed here. Raw data are not automatically canonical, historically safe, or model-ready.
 
-Raw provider names and formats are allowed here. Nothing in `raw/` is assumed to be canonical, historically safe, or model-ready.
+Recent UFCStats physical-profile recovery evidence is pinned under `raw/ufcstats_live_recovery/` where applicable.
 
 ## `canonical/`
 
-Source-neutral UFC entities and histories that satisfy `schemas/canonical_data_contract_v0.*`.
+Source-neutral UFC entities/histories satisfying canonical contracts under `../schemas/`.
 
-A canonical field has one repository-wide meaning regardless of source. Provider adapters may map different source fields into that concept, but downstream consumers never redefine it.
+At the repository-organization snapshot the committed canonical package remains under `canonical/v0/`. The corrected physical-profile reconciliation workflow builds the corrected canonical package deterministically at runtime from governed/pinned inputs; do not infer that absence of a committed `v1/` directory means the correction is unauthoritative.
 
-Current data-phase rule: **do not promote a raw observation merely because it downloaded successfully.** Identity, units, null semantics, duplicates/conflicts, temporal meaning, and provenance must pass the canonicalization gates first.
+## `supplemental/`
+
+Governed recovery/enrichment evidence used to close gaps that cannot be justified from the existing canonical/source layer alone. Supplemental evidence must preserve source identity/provenance and does not bypass canonical semantics.
+
+Current recent physical-profile status: `RECENT_PHYSICAL_PROFILE_COMPLETE_FROM_GOVERNED_PRIMARY_SOURCES`.
+
+Recovery precedence:
+
+`existing canonical/governed source -> UFC Official null-fill -> pinned live UFCStats recovery -> governed supplemental recovery -> null`
 
 ## `derived/`
 
-Reserved for reproducible non-feature data products built from canonical data when they are useful for operations or QA—for example compact snapshots, crosswalk exports, or coverage tables.
+Reproducible non-feature DATA products useful for QA/operations. This must not become a hidden feature layer.
 
-`derived/` must not become a hidden feature layer. Predictive feature definitions/builders belong in top-level `features/` during the later feature phase.
+## Critical live-source rule
 
-## Navigation rule
+**Repository-local missingness does not prove live-source missingness.** For unresolved recent UFCStats physical-profile gaps, the controlled recovery architecture may query live UFCStats separately.
 
-Raw and canonical data live here; explanations generally do not.
+Network acquisition and canonical consumption are intentionally separated:
+
+- network state is mutable;
+- acquisition may use live sources;
+- acquired evidence is pinned/governed;
+- canonical builds consume pinned evidence offline/deterministically.
+
+Do not make canonical/model builds depend directly on an unpinned mutable website response.
+
+## Navigation
 
 - source locks/status/research conclusions -> `../provenance/`
-- data contracts and source-adapter rules -> `../schemas/`
-- acquisition/normalization/audit code -> `../pipelines/`
-- machine diagnostics -> `../provenance/runs/`
-- later feature code/definitions -> `../features/`
-- later model code -> `../models/`
-
-Do not create additional nested documentation trees under `data/`.
+- source/canonical contracts -> `../schemas/`
+- acquisition/normalization/reconciliation -> `../pipelines/`
+- feature definitions/replay -> `../features/`
+- model contracts/results -> `../models/`
+- current state -> `../PROJECT_STATUS.md`
