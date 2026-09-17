@@ -1,0 +1,88 @@
+name: MOV Bucket Input Temporal Safety Audit V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/features/audit_mov_bucket_input_temporal_safety_v1.py"
+      - "tools/features/finalize_mov_bucket_input_audit_v1.py"
+      - "tests/test_mov_bucket_input_temporal_safety_v1.py"
+      - "tests/test_mov_bucket_input_temporal_safety_finalize_v1.py"
+      - ".github/workflows/mov-bucket-input-temporal-safety-audit-v1.yml"
+      - "governance/MOV_BUCKET_INPUT_TEMPORAL_SAFETY_AUDIT_V1_COMPLETE.json"
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install audit dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 pytest==8.3.3 tabulate==0.9.0
+      - name: Compile audit harness
+        run: python -m py_compile tools/features/audit_mov_bucket_input_temporal_safety_v1.py tools/features/finalize_mov_bucket_input_audit_v1.py
+      - name: Run focused harness tests
+        run: pytest -q tests/test_mov_bucket_input_temporal_safety_v1.py tests/test_mov_bucket_input_temporal_safety_finalize_v1.py
+      - name: Download authoritative original F02 positive-control artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02-old
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download corrected authoritative F02 audit surface
+        uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02-current
+          repository: Tkcool28/ufc-edge
+          run-id: 35177629733
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify frozen artifact inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s "${{ runner.temp }}/f02-old/winner_modeling_table.parquet"
+          test -s "${{ runner.temp }}/f02-old/summary.json"
+          test -s "${{ runner.temp }}/f02-current/winner_modeling_table.parquet"
+          test -s "${{ runner.temp }}/f02-current/summary.json"
+          test -s data/canonical/v0/events.csv
+          test -s data/canonical/v0/fights.csv
+          test -s data/canonical/v0/fighter_round_stats.csv
+          test -s features/feature_catalog.yaml
+          test -s features/feature_inventory.json
+          test -s schemas/source_precedence_v0.json
+          test -s schemas/source_field_map_v0.json
+      - name: Run read-only MOV input audit
+        run: |
+          python tools/features/audit_mov_bucket_input_temporal_safety_v1.py \
+            --f02-dir "${{ runner.temp }}/f02-current" \
+            --catalog features/feature_catalog.yaml \
+            --inventory features/feature_inventory.json \
+            --source-precedence schemas/source_precedence_v0.json \
+            --source-field-map schemas/source_field_map_v0.json \
+            --canonical-root data/canonical/v0 \
+            --output-dir "${{ runner.temp }}/mov-audit"
+      - name: Validate governed reach positive control and finalize report
+        run: |
+          python tools/features/finalize_mov_bucket_input_audit_v1.py \
+            --output-dir "${{ runner.temp }}/mov-audit" \
+            --old-f02-dir "${{ runner.temp }}/f02-old" \
+            --new-f02-dir "${{ runner.temp }}/f02-current"
+      - name: Publish audit summary
+        run: cat "${{ runner.temp }}/mov-audit/audit_report.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload audit evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: mov-bucket-input-temporal-safety-audit-v1
+          path: ${{ runner.temp }}/mov-audit
+          if-no-files-found: error
+          retention-days: 90

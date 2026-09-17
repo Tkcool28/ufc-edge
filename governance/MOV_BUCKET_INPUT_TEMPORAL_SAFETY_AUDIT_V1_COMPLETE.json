@@ -1,0 +1,122 @@
+{
+  "status": "MOV_BUCKET_INPUT_TEMPORAL_SAFETY_AUDIT_V1_COMPLETE",
+  "starting_main_sha": "aa01d0e70418330e6dcda634a0c23ac75ae4f724",
+  "branch": "feat/mov-bucket-input-temporal-safety-audit-v1",
+  "pull_request": 69,
+  "authoritative_audit_head_sha": "c36adb64187faa8b30dd28563bb3c486489721d7",
+  "authoritative_workflow": {
+    "name": "MOV Bucket Input Temporal Safety Audit V1",
+    "run_id": 35250253892,
+    "job_id": 105300562113,
+    "conclusion": "success"
+  },
+  "artifact": {
+    "name": "mov-bucket-input-temporal-safety-audit-v1",
+    "artifact_id": 10509462329,
+    "zip_digest": "sha256:98a95be999092c2782f0ec6ec48eccfa78d7c939c23d0d6091cc8f9adc208f20",
+    "manifest_file_hashes": {
+      "audit_report.md": "658913bc4549781d4f9b966ed56cf6a4c96c3db53282252732844c3f5a483ff3",
+      "audit_summary.json": "1a5efa85f97f65595ab5075568157c82157d2ac2e150777ada112feb92e95235",
+      "availability_prior_vs_future.json": "0970f4c6b3378a5209ab36d117291e78463086e7c88f94d8573f5472f6b8ac1c",
+      "candidate_classification.csv": "a2a4fe586e2988ebbf938339d1cd8d0a2f33bb4f9048fb9139536ed3659adf3f",
+      "candidate_inventory.json": "4d57725ff49afc5b15d55d9dfa575b17f4f7402f654fd9263e6e42d7f5d004f7",
+      "coverage_by_era.csv": "b075023bfab2506118eb295ff581b042bff2ccd39732e6a8d1b558aaed683fcd",
+      "coverage_by_year.csv": "51de867119878f19397219bfc946d5d24717e8505e5b9fada6db99d3af75551c",
+      "deep_dives.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "era_distribution.csv": "4cf2081cd1b34f75bf0bfdc6c61eeffb1911576cbc787711da22c4a367672321",
+      "measurement_drift_summary.json": "d84366c7fadc3af55a50d9f21241137b481c8dac027607e967379fc752063945",
+      "positive_control_reach.json": "b564f32b4d9650bbdeabfe861345c6706117753c046aca09e18071068be24ead"
+    }
+  },
+  "governed_inputs": {
+    "corrected_f02_predictor_logical_sha256": "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0",
+    "corrected_f02_table_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "feature_catalog_sha256": "e08d2ffe34216f93aeeb23dc205ed498e57c691fbcf8dcfa56b9e1cf9399223a",
+    "feature_inventory_sha256": "02ffeee505503679166b26dcfa27859eadebebde032226cd6456b4fd83c47396",
+    "source_field_map_sha256": "2caa22d331259efa39f4999e31875fe9d202ae6e629357e4ea6d2d13f21b7780",
+    "source_precedence_sha256": "c946a8614e0f1631bf59badc178a5566cb909c210723696ea9dd0fd10878545f"
+  },
+  "candidate_inventory": {
+    "total_unique": 15,
+    "striking": 10,
+    "grappling": 7,
+    "shared_finish_history": 2
+  },
+  "availability_safety": {
+    "PIT_SAFE": 15,
+    "PIT_SAFE_WITH_LIMITATIONS": 0,
+    "POTENTIAL_TEMPORAL_LEAKAGE": 0,
+    "CONFIRMED_TEMPORAL_LEAKAGE": 0
+  },
+  "era_comparability": {
+    "ERA_COMPARABLE": 15,
+    "ERA_COMPARABLE_WITH_LIMITATIONS": 0,
+    "ERA_COMPARABILITY_UNCERTAIN": 0,
+    "ERA_NONCOMPARABLE": 0
+  },
+  "permanent_bucket_eligibility": {
+    "ELIGIBLE_FOR_PERMANENT_BUCKET_CONTRACT": 15,
+    "ELIGIBLE_WITH_EXPLICIT_ERA_LIMITATION": 0,
+    "NOT_ELIGIBLE_FOR_PERMANENT_BUCKET_CONTRACT": 0,
+    "NEEDS_FOLLOWUP": 0,
+    "eligible_features": [
+      "control_rate",
+      "early_finish_profile",
+      "finish_method_loss_profile",
+      "finish_method_win_profile",
+      "knockdown_creation_vs_vulnerability",
+      "knockdown_efficiency",
+      "knockdown_rate",
+      "reversal_rate",
+      "sig_environment_mix",
+      "sig_strike_efficiency",
+      "sig_strike_flow",
+      "sig_target_mix",
+      "submission_attempt_rate",
+      "takedown_conversion",
+      "takedown_pressure"
+    ]
+  },
+  "key_findings": {
+    "modeled_rows_2015_2026": 5626,
+    "representative_one_sided_availability_rows": 922,
+    "missing_side_zero_prior_ufc_fights_rate": 1.0,
+    "observed_side_more_prior_ufc_fights_rate": 0.9848156182212582,
+    "observed_side_more_future_ufc_fights_rate": 0.37418655097613884,
+    "future_minus_prior_more_fights_rate": -0.6106290672451193,
+    "observed_side_win_rate_diagnostic_only": 0.5488069414316703,
+    "joint_strike_grapple_rows": 4535,
+    "joint_strike_grapple_rate": 0.806078919303235
+  },
+  "controls": {
+    "positive_reach": {
+      "established_oof_rows": 107,
+      "established_oof_observed_side_win_rate": 0.9626168224299065,
+      "established_classification": "CONFIRMED_TEMPORAL_LEAKAGE",
+      "independent_full_f02_rows": 111,
+      "independent_full_f02_observed_side_win_rate": 0.9459459459459459,
+      "framework_recognized_known_failure": true
+    },
+    "negative_controls": [
+      "prior_fight_count",
+      "prior_observed_round_count",
+      "prior_sig_strike_attempt_support"
+    ]
+  },
+  "guardrails": {
+    "DATA_changed": "NO",
+    "F00_changed": "NO",
+    "F01_changed": "NO",
+    "F02_changed": "NO",
+    "M1_changed": "NO",
+    "M1_retrained": "NO",
+    "calibration_buckets_created": "NO",
+    "thresholds_optimized": "NO",
+    "M1B_started": "NO",
+    "market_or_odds_used": "NO",
+    "ROI_or_betting_analysis": "NO",
+    "automatic_merge": "NO"
+  },
+  "final_recommendation": "MOV_BUCKET_INPUTS_SAFE_FOR_BUCKET_CONTRACT_DESIGN",
+  "next_action": "Return to MASTER/PM. Do not begin validation-bucket construction until this audit is accepted."
+}
