@@ -12,9 +12,13 @@ Formal freeze marker:
 
 `models/m1/M1_REGULARIZED_SHARED_FEATURE_WINNER_MODEL_V1_CORRECTED_FROZEN.json`
 
-Corrected M1 OOF SHA256:
+Corrected M1 prediction artifact/content SHA256:
 
 `5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78`
+
+Formal corrected-M1 OOF logical SHA256:
+
+`7e6a08a6a4013630239986360654ad0963a1f242dae9acd7b172ee5a321384e6`
 
 Corrected aggregate metrics:
 
@@ -27,7 +31,7 @@ The permanent model-independent comparison surface is Validation Terrain V1 unde
 
 `governance/model_validation_bucket_v1/`
 
-Future challengers must use the same frozen V1 terrain unless a deliberate V2 is authorized.
+Future winner-model challengers must compare against corrected M1 on the same frozen V1 terrain where applicable. Future MOV models must use the same permanent V1 environments where applicable, but must be compared with an appropriate frozen MOV baseline once one exists; KO/TKO, submission, and decision probabilities are not directly benchmarked against M1 winner probabilities.
 
 For project-level model-development discipline and the long-term betting objective, see:
 
