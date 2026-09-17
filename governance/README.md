@@ -10,6 +10,7 @@ This directory contains cross-cutting rules that constrain how DATA, features, m
 |---|---|
 | `M1_MISSINGNESS_POINT_IN_TIME_SAFETY_V1.md` | Governs missingness/data-availability PIT safety after the original M1 reach-availability leakage finding. |
 | `MODEL_VALIDATION_BUCKET_CONTRACT_V1.md` | Governs immutable model-independent validation terrain and Stage-A blindness. |
+| `MODEL_VALIDATION_BUCKET_CONTRACT_V1_COMPLETE.json` | Pins the accepted V1 terrain, workflow artifacts, hashes, and corrected-M1 diagnostic evidence. |
 | `../features/FEATURE_GOVERNANCE.md` | Feature definitions, lifecycle, semantics, provenance and evolution rules. |
 | `../features/FEATURE_CONTRACT.md` | Current F00 feature contract. |
 | `../features/MISSINGNESS_POINT_IN_TIME_SAFETY.md` | Feature-layer companion documentation for PIT-safe missingness. |
