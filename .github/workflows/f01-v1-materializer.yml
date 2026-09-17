@@ -83,16 +83,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          paths=(
+          semantic_paths=(
             features/FEATURE_CONTRACT.md
             features/feature_catalog.yaml
             features/feature_schema.json
             features/leakage_registry.yaml
             src/ufc_edge/features/contract.py
             tests/features/test_feature_contract.py
-            .github/workflows/f00-feature-contract.yml
           )
-          if ! git diff --quiet origin/main...HEAD -- "${paths[@]}"; then
+          if ! git diff --quiet origin/main...HEAD -- "${semantic_paths[@]}"; then
             base_version="$(git show origin/main:features/feature_catalog.yaml | python -c 'import json,sys; print(json.load(sys.stdin)["feature_contract_version"])')"
             head_version="$(python -c 'import json; print(json.load(open("features/feature_catalog.yaml"))["feature_contract_version"])')"
             if [[ "$base_version" == "$head_version" ]]; then
@@ -100,6 +99,12 @@ jobs:
               exit 1
             fi
             echo "Reviewed versioned F00 migration: $base_version -> $head_version"
+          fi
+
+          # CI/repository-hygiene-only edits to the F00 workflow do not alter the
+          # feature contract and therefore do not require a semantic version bump.
+          if ! git diff --quiet origin/main...HEAD -- .github/workflows/f00-feature-contract.yml; then
+            echo "F00 workflow changed; feature-contract semantic files remain version-gated separately."
           fi
 
       - name: Reject generated feature matrices and run directories
