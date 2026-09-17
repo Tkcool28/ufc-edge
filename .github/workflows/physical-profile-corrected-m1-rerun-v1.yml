@@ -164,6 +164,7 @@ jobs:
           dst.write_bytes(gzip.decompress(src.read_bytes()))
           text=dst.read_text()
           lines=text.splitlines()
+
           marker='STOP: corrected F02 labels/target identity changed unexpectedly'
           hit=[i for i,line in enumerate(lines) if marker in line]
           if len(hit)!=1:
@@ -188,8 +189,38 @@ jobs:
               indent+"        raise RuntimeError(f'STOP: corrected F02 invariant changed unexpectedly: {_c}')",
           ]
           lines[if_i:raise_i+1]=block
+
+          marker='STOP: frozen M1 old-control OOF logical hash did not reproduce'
+          hit=[i for i,line in enumerate(lines) if marker in line]
+          if len(hit)!=1:
+              raise SystemExit(f'expected exactly one old-control hash guard, found {len(hit)}')
+          raise_i=hit[0]
+          if_i=raise_i-1
+          while if_i >= 0 and not lines[if_i].lstrip().startswith('if '):
+              if_i-=1
+          if if_i < 0 or raise_i-if_i > 3:
+              raise SystemExit('could not locate old-control hash guard')
+          indent=lines[if_i][:len(lines[if_i])-len(lines[if_i].lstrip())]
+          block=[
+              indent+"_old_oof = pd.read_parquet(Path(args.old_m1_dir) / 'm1_oof_predictions.parquet')",
+              indent+"_ctl_oof = pd.read_parquet(Path(args.old_control_dir) / 'm1_oof_predictions.parquet')",
+              indent+"_cols = ['fight_id','event_date','fold_id','target','m0_probability','m1_probability','chosen_spec']",
+              indent+"if list(_old_oof.columns) != list(_ctl_oof.columns) or len(_old_oof) != len(_ctl_oof):",
+              indent+"    raise RuntimeError('STOP: frozen M1 old-control OOF shape/schema did not reproduce')",
+              indent+"for _c in _cols:",
+              indent+"    _x, _y = _old_oof[_c], _ctl_oof[_c]",
+              indent+"    if _c in ('m0_probability','m1_probability'):",
+              indent+"        _eq = np.isclose(_x.to_numpy(dtype=float), _y.to_numpy(dtype=float), rtol=0.0, atol=1e-15, equal_nan=True)",
+              indent+"    else:",
+              indent+"        _eq = ((_x == _y) | (_x.isna() & _y.isna())).to_numpy()",
+              indent+"    if not bool(_eq.all()):",
+              indent+"        raise RuntimeError(f'STOP: frozen M1 old-control OOF values did not reproduce: {_c}')",
+          ]
+          lines[if_i:raise_i+1]=block
+
           dst.write_text('\n'.join(lines)+'\n')
-          print('patched old composite target-hash guard to direct identity/label comparison')
+          print('patched composite F02 target identity guard to direct label comparison')
+          print('patched old-control OOF hash guard to exact row/value determinism comparison')
           print(dst)
           PY
 
