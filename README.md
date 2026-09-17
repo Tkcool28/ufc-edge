@@ -1,82 +1,73 @@
 # UFC Edge
 
-One repository for the full UFC modeling system: source acquisition, canonical data, features, models, simulation, backtests, reports, and later sportsbook diagnostics.
+UFC EDGE is a governed, chronological UFC modeling system that turns source evidence into deterministic canonical DATA, point-in-time features, shared historical predictor replay, and versioned winner models.
 
-## Current project phase: data foundation
+**Start here:** [`PROJECT_STATUS.md`](PROJECT_STATUS.md) is the single authoritative current-state document. Use [`PROJECT_MAP.md`](PROJECT_MAP.md) to find implementation/evidence. Fresh ChatGPT sessions should then read [`docs/NEW_CHAT_BOOTSTRAP.md`](docs/NEW_CHAT_BOOTSTRAP.md).
 
-The **current work phase** is data acquisition, validation, identity resolution, source reconciliation, canonicalization, and data-contract design.
+## Architecture
 
-Do **not** freeze or engineer model features during this phase. Once the agreed data-source checklist is complete and the canonical data contracts are ready, this phase closes and feature work begins as a separate project/chat phase in the same repository.
+```text
+RAW / SOURCE DATA
+        ↓
+CANONICAL DATA
+        ↓
+F00 FEATURE CONTRACT / GOVERNANCE
+        ↓
+F01 POINT-IN-TIME FIGHTER STATE
+        ↓
+F02 HISTORICAL PREDICTOR REPLAY
+        ↓
+MODELS
+  ├── M0 permanent small baseline
+  └── M1 corrected clean baseline
+        ↓
+future model families (only when separately authorized)
+```
+
+F02 is shared predictor infrastructure, **not a model**.
+
+## Current snapshot
+
+At authoritative `main` snapshot `7a7b50c2e1cdd20af8c7996e0c8460a35a693296`:
+
+- recent physical-profile DATA gaps are complete through governed source recovery;
+- F00/F01/F02 methodology is preserved;
+- M0 remains the permanent frozen empirical baseline;
+- original M1 is **historical and not authoritative for performance** because reach-availability missingness carried temporal leakage;
+- corrected physical-profile M1 is the current clean baseline and is **ready for a formal freeze marker**;
+- repository organization is the current work phase; next-model selection returns to MASTER/PM afterward.
+
+The permanent governance lesson is simple: **a static attribute may be safely backfilled while its historical missingness/availability indicator is still unsafe. Missingness requires an independent point-in-time audit.**
 
 ## Repository map
 
-Keep the repository shallow and traceable:
+- `PROJECT_STATUS.md` — current authority: DATA/features/models/findings/next action.
+- `PROJECT_MAP.md` — where code, evidence, freezes and docs live.
+- `data/` — raw, canonical, supplemental and derived DATA.
+- `features/` — F00/F01/F02 semantic system and replay contracts.
+- `models/` — M0/M1 model contracts and model-specific evidence.
+- `governance/` — cross-cutting safety rules, especially missingness PIT safety.
+- `provenance/` — source locks, DATA freeze records, audits and durable source evidence.
+- `pipelines/` — deterministic acquisition/reconciliation/build logic.
+- `tools/` — model/audit/operational runners.
+- `tests/` — DATA/feature/model/regression checks.
+- `.github/workflows/` — reproducible CI, acquisition, replay and controlled experiment workflows.
+- `docs/` — durable milestones, decisions and zero-context chat bootstrap.
 
-- `data/README.md` — one-page map of data storage.
-- `data/raw/` — immutable, source-faithful snapshots. Never hand-edit.
-- `data/canonical/` — source-neutral UFC entities and histories that satisfy the canonical data contract.
-- `data/derived/` — later reproducible non-feature data products built from canonical data when needed.
-- `provenance/` — source locks, acquisition status, source notes, durable research conclusions, and source-selection evidence.
-- `provenance/audits/` — generated QA/audit outputs tied to specific snapshots.
-- `provenance/runs/` — machine run logs and terminal diagnostics.
-- `pipelines/` — deterministic acquisition, normalization, reconciliation, and audit code.
-- `schemas/` — canonical data contracts, source-adapter contracts, enums, units, and acquisition schemas.
-- `features/` — later feature definitions/builders. Reserved during the current data phase.
-- `models/` — later predictive/component models and simulator code.
-- `backtests/` — later chronological evaluation/replay code.
-- `reports/` — human-readable generated outputs and scorecards.
-- `tests/` — source, schema, canonical, leakage, and later model-quality gates.
-- `.github/workflows/` — reproducible runners for acquisition, audits, and later build stages.
+## Source/canonical boundary
 
-Avoid parallel documentation trees or deeply nested folders that repeat names such as `data/docs/data/...`. A durable conclusion should have one obvious home and be linked from the nearest top-level README or manifest.
+Provider-specific vocabulary stops at the adapter/canonical boundary. A new source may add evidence or coverage; it must not silently redefine an existing canonical concept.
 
-## Data architecture rule
+Live network acquisition is mutable. Canonical/model consumption must use governed pinned evidence and remain deterministic/offline where specified.
 
-Provider-specific vocabulary stops at the adapter boundary.
+## Historical evidence
 
-```text
-RAW SOURCE SNAPSHOT
-    ↓
-SOURCE ADAPTER
-    ↓
-CANONICAL DATA CONTRACT
-    ↓
-CANONICAL TABLES
-    ↓
-FEATURES / MODELS / SIMULATOR
-```
+Do not delete important invalidated/superseded results. Original M1, old predictor artifacts, physical-profile gaps, corrected-data comparisons, survivorship probes, leakage diagnostics and freeze hashes are valuable audit history. Their **status** determines whether they are current authority.
 
-UFC.com, UFCStats/Greco, ESPN, rankings, scorecards, weigh-ins, and external-MMA sources may all name or encode the same concept differently. Adapters must convert those observations into one canonical name, type, unit, null meaning, identity rule, and provenance model before downstream code can consume them.
+## Before changing anything
 
-A new source may add coverage or evidence. It must **not** create a new definition for an already-defined canonical concept merely because the provider uses a different field name.
-
-## Source truth hierarchy
-
-When numbers disagree:
-
-1. immutable raw source response/file;
-2. raw snapshot manifest/hash;
-3. generated audit tied to that snapshot;
-4. canonical reconciliation decision + field provenance;
-5. source/provenance summary;
-6. conversational notes.
-
-Do not overwrite a higher-trust source with a remembered or paraphrased value.
-
-## Non-negotiable leakage rule
-
-Any future training feature for a fight must be computable using only information available strictly before that fight. Current snapshots may contain post-fight or present-day fields; acquisition does not make them historically safe.
-
-## Historical backbone
-
-Greco1899's UFCStats scrape remains a pinned historical backbone while official UFC FightMetric and other additive sources are audited. The pinned Greco revision is `8e40eb945e1127bf0ef172ab211a34787948f312` under `data/raw/greco1899/8e40eb945e11/`.
-
-## Data-phase completion rule
-
-This phase ends only when every material data family identified in the acquisition plan is one of:
-
-- **INGESTED + AUDITED**;
-- **ACCESS-GATED / DEFERRED BY DECISION**; or
-- **REJECTED WITH A RECORDED REASON**.
-
-The canonical data contract and identity/provenance rules must also be stable enough that the next feature phase consumes data without redefining source semantics.
+1. read `PROJECT_STATUS.md`;
+2. verify current `main` SHA;
+3. inspect the task-specific contract/freeze/evidence;
+4. do not assume an old draft PR or branch is authoritative;
+5. preserve DATA/model methodology unless the task explicitly authorizes a migration.
