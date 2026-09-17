@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "snapshot_date": "2026-09-17",
+  "authoritative_main_sha": "7a7b50c2e1cdd20af8c7996e0c8460a35a693296",
+  "project_phase": "repository_organization_before_next_model_phase",
+  "data_status": "RECENT_PHYSICAL_PROFILE_COMPLETE_FROM_GOVERNED_PRIMARY_SOURCES",
+  "f00_status": "FROZEN_FEATURE_CONTRACT_GOVERNANCE",
+  "f01_status": "FROZEN_POINT_IN_TIME_FIGHTER_STATE_METHODOLOGY",
+  "f02_status": "FROZEN_DETERMINISTIC_HISTORICAL_PREDICTOR_REPLAY_SCHEMA_1.0.1",
+  "m0_status": "PERMANENT_FROZEN_EMPIRICAL_BASELINE",
+  "m1_status": "AUTHORITATIVE_CLEAN_BASELINE_READY_FOR_FORMAL_FREEZE",
+  "m1_freeze_status": "CORRECTED_M1_READY_FOR_FREEZE_MARKER",
+  "current_model_baseline": "m1_corrected_physical_profile",
+  "known_invalidated_baselines": [
+    "m1_original_reach_availability_missingness_contaminated"
+  ],
+  "permanent_governance": [
+    "missingness_and_data_availability_require_independent_point_in_time_safety_audit"
+  ],
+  "next_master_action": "model_planning_after_repository_cleanup"
+}
