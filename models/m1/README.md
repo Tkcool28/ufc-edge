@@ -1,60 +1,49 @@
 # M1 — Regularized Shared-Feature UFC Winner Model V1
 
-Status: **AUTHORITATIVE METHODOLOGY; CORRECTED BASELINE READY FOR FORMAL FREEZE**
+M1 is the first broad, serious winner-probability model over the frozen governed F02 predictor replay.
 
-M1 is the broad regularized winner-probability model over the governed F02 predictor replay. Current project authority is summarized in `../../PROJECT_STATUS.md`.
+## Boundary
 
-## Methodology boundary
+- M0 remains permanently frozen and is consumed only as the comparison benchmark.
+- F02 replay schema `1.0.1` is the sole predictor source.
+- The model is developed market-blind: no historical odds, sportsbook probabilities, market residuals, ROI, or betting thresholds enter feature selection, preprocessing, model selection, or acceptance.
+- This task contains only L2 and elastic-net logistic regression.
 
-- F02 replay schema `1.0.1` is the predictor source.
-- M1 is market-blind: no odds, sportsbook probabilities, ROI, Kelly or betting thresholds enter training/model selection.
-- Frozen surface projects the 200 F02 predictor columns into 197 governed numeric dimensions.
-- Fighter-side features are paired antisymmetrically; model has no intercept; fighter swap must satisfy `P(swapped) = 1 - P(original)` to numerical precision.
-- Outer validation is chronological 2015–2026 with chronological inner selection over the predeclared L2/elastic-net grid.
-- Feature surface, preprocessing, fold plan, grid, selection rule, seed/solver configuration were held fixed for the corrected physical-profile rerun.
+## Frozen feature surface
 
-Detailed contracts remain in `feature_surface_v1.json`, `model_contract_v1.json`, `validation_plan_v1.json`, and `acceptance_gates_v1.json`.
+`feature_surface_v1.json` is frozen before outcome evaluation.
 
-## Current authoritative clean baseline
+It discovers the 200 F02 predictors from schema metadata (`predictor == true`) and projects them as follows:
 
-The corrected physical-profile DATA rerun is the current clean M1 performance estimate.
+- 192 fighter-side columns -> 96 semantic pairs.
+- Each fighter pair emits an imputed signed value difference and a missingness difference.
+- Four directional knockdown matchup columns -> two signed pair differences plus two missingness differences.
+- `mx__reach_difference_cm` remains a signed antisymmetric value with zero imputation.
+- `scheduled_rounds`, `ctx__title_bout`, and `ctx__weight_class` are symmetric context and remain diagnostic-only.
 
-| Metric | Corrected M1 |
-|---|---:|
-| Log loss | `0.649120128` |
-| Brier | `0.229025402` |
-| Accuracy | `62.1045%` |
-| ROC AUC | `0.665905862` |
+Final M1 V1 dimension: **197**.
 
-2026 partial (`N=329`): log loss `0.630602667`, Brier `0.220613882`, accuracy `63.22%`, ROC AUC `0.695153533`.
+## Chronological selection
 
-Status: **AUTHORITATIVE M1 BASELINE — READY FOR FORMAL FREEZE**.
+For each outer year 2015–2026:
 
-The repository-organization inventory found no committed corrected-M1 completion/freeze marker equivalent to the established model-freeze convention. Do not silently manufacture one here. Current machine/status label: `CORRECTED_M1_READY_FOR_FREEZE_MARKER`.
+1. outer training contains only earlier fights;
+2. the two immediately preceding calendar years are used as chronological inner validation folds;
+3. only inner chronological log loss selects among the frozen L2 / elastic-net grid;
+4. preprocessing is fit inside each training period;
+5. the winning regularization specification is refit on all permitted outer history;
+6. the outer year is predicted once.
 
-## Historical original M1
+Development is 2015–2023. Confirmation is 2024, 2025, and 2026 partial. The procedure and numerical acceptance gates are frozen in committed JSON before confirmation is evaluated.
 
-Status: **HISTORICAL — TEMPORALLY CONTAMINATED BY REACH-AVAILABILITY LEAKAGE**.
+## Orientation contract
 
-The original validation remains important audit evidence, but is not authoritative for current M1 performance. The primary confirmed leakage surface was:
+All model inputs are antisymmetric and the logistic model has no intercept. Therefore fighter swap must satisfy, to numerical precision:
 
-`pair::ctx__physical_size_profile__reach_cm::missing_diff`
+`P(swapped) = 1 - P(original)`
 
-The reach measurement itself was not the defect. Historical present/missing availability encoded future UFC career persistence/profile completeness.
-
-Permanent rule: missingness/data availability must independently satisfy point-in-time safety even when a static attribute value can be safely backfilled.
-
-Evidence/governance:
-
-- PR #65 — corrected physical-profile F01/F02 rebuild + exact frozen M1 rerun;
-- PR #66 — physical-profile correction diagnostic;
-- PR #67 — full missingness temporal-leakage audit + governance;
-- `../../governance/M1_MISSINGNESS_POINT_IN_TIME_SAFETY_V1.md`.
+Focused tests enforce the projection and probability complement contracts.
 
 ## Runtime outputs
 
-Large OOF predictions, coefficients, ablations and comparison matrices remain GitHub Actions runtime artifacts rather than committed large files. Preserve historical artifacts; their status determines authority.
-
-## What is not M1 authority
-
-M1B, tree/boosted challengers, opponent-adjusted models, feature-pruned variants and market/betting models are separate future work and are not started or made authoritative by repository cleanup.
+Full OOF predictions, fold coefficients, ablations, and final validation results are GitHub Actions runtime artifacts and are not committed as large matrices/models.
