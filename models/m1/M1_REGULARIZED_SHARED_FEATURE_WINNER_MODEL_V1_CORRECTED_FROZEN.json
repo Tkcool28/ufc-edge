@@ -7,6 +7,18 @@
     "freeze_base_main": "3ccf11d4f804f66845a385c0ce7013634e616d97",
     "corrected_rerun_pr": 65,
     "corrected_rerun_merge_commit": "27b09a094bbe9ddb34326fc29f1b6be366e4de86",
+    "corrected_rerun_workflow": "Physical Profile Corrected M1 Rerun V1",
+    "corrected_rerun_run_id": 35182939981,
+    "corrected_m1_artifact": {
+      "artifact_id": 10481597892,
+      "name": "physical-profile-corrected-m1-rerun-v1",
+      "zip_digest_sha256": "6ca8c8279da6df9df46c7e2e6fc95091f7ea5bc739638ae3bf8dd5cf5c459c71"
+    },
+    "corrected_f02_artifact": {
+      "artifact_id": 10481269402,
+      "name": "physical-profile-corrected-f02-v1",
+      "zip_digest_sha256": "dee1ca73a2eac796f3a5268193e9006ab7cda44c68dd14217570e0f11d1ef18e"
+    },
     "diagnostic_pr": 66,
     "diagnostic_merge_commit": "8b20b34458777b74edb6e7925452faf35443bcf0",
     "missingness_temporal_safety_audit_pr": 67,
@@ -34,27 +46,35 @@
   },
   "corrected_m1": {
     "oof_rows": 5626,
-    "oof_sha256": "5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78",
+    "oof_logical_sha256": "7e6a08a6a4013630239986360654ad0963a1f242dae9acd7b172ee5a321384e6",
+    "oof_prediction_artifact_content_sha256": "5eaa09e82787cae0e3a198d31b0c19573557c94f0faf9302a582023c44a39b78",
     "aggregate": {
-      "log_loss": 0.649120128,
-      "brier": 0.229025402,
-      "accuracy": 0.621045,
-      "roc_auc": 0.665905862
+      "log_loss": 0.6491201277712054,
+      "brier": 0.22902540245311373,
+      "accuracy": 0.6210451475293282,
+      "roc_auc": 0.6659058623095355
     },
     "partial_2026": {
       "rows": 329,
-      "log_loss": 0.630602667,
-      "brier": 0.220613882,
-      "accuracy": 0.6322,
-      "roc_auc": 0.695153533
+      "log_loss": 0.6306026674720853,
+      "brier": 0.22061388240767046,
+      "accuracy": 0.6322188449848024,
+      "roc_auc": 0.6951535331113577
     }
   },
   "calibration": {
-    "expected_calibration_error": 0.013465679622867755,
-    "calibration_intercept": -0.020275341242389507,
-    "calibration_slope": 1.0592667127753208,
-    "mean_pick_confidence": 0.6106936464973923,
-    "governed_report_sha256": "1fcf0898321fc30d57cc5e5743231cbbf82b323567e30c7ec75177dfb6d35ccb",
+    "validation_terrain_v1_pick_confidence": {
+      "definition": "confidence-bin weighted absolute pick-calibration gap",
+      "ece": 0.013465679622867755,
+      "calibration_intercept": -0.020275341242389507,
+      "calibration_slope": 1.0592667127753208,
+      "mean_pick_confidence": 0.6106936464973923,
+      "governed_report_sha256": "1fcf0898321fc30d57cc5e5743231cbbf82b323567e30c7ec75177dfb6d35ccb"
+    },
+    "corrected_rerun_probability_bin": {
+      "definition": "original corrected-rerun probability-bin calibration procedure",
+      "ece": 0.015328075790913656
+    },
     "interpretation": "Corrected M1 confidence is broadly well calibrated overall; high-confidence tails and environment-specific cells remain sample-governed."
   },
   "permanent_validation_terrain_v1": {
@@ -95,6 +115,9 @@
     "roi_used_for_training_or_selection": false,
     "m1b_started": false
   },
-  "future_model_comparison_rule": "Future winner and MOV models must be compared against this corrected-M1 frozen baseline on the permanent V1 validation terrain without redefining V1 from model performance.",
+  "future_model_comparison_rule": {
+    "winner_models": "Future winner models must compare against corrected M1 on the same permanent Validation Terrain V1 where applicable, without redefining V1 from model performance.",
+    "mov_models": "Future MOV models must use the same permanent Validation Terrain V1 environments where applicable, but must be compared with an appropriate frozen MOV baseline once such a baseline exists. KO/TKO, submission, and decision probabilities are not directly benchmarked against M1 winner probabilities."
+  },
   "supersession_policy": "This freeze preserves corrected M1 V1 as an immutable historical baseline. Future models may supersede it operationally, but must not rewrite this record."
 }
