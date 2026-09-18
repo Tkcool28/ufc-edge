@@ -27,7 +27,7 @@
         "f1__fs__prior_fight_count__career__raw",
         "f2__fs__prior_fight_count__career__raw"
       ],
-      "note": "F02 has no UFC-only prior-fight-count predictor. The governed prior_fight_count column counts strict-prior canonical fights across supported canonical promotions and is intentionally used as the B1 experience proxy; Validation Terrain retains strict-prior UFC experience as a diagnostic only."
+      "note": "prior_fight_count is strict-prior canonical fight experience across supported canonical promotions; it is not UFC-only experience. Validation Terrain's separate strict-prior UFC-experience diagnostic remains unchanged."
     },
     "MOV0_MIN": {
       "concepts": [
@@ -225,7 +225,7 @@
     },
     {
       "concept": "prior_fight_count",
-      "mechanism": "Observed historical experience changes how much stable fighter-specific finish tendency is available and may itself proxy fight maturity.",
+      "mechanism": "Strict-prior canonical fight experience changes how much stable fighter-specific finish tendency is available and may itself proxy fight maturity.",
       "class": "indirect",
       "decision": "B1_CONTEXT",
       "exact_f02_columns": [
