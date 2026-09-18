@@ -17,7 +17,7 @@ permissions:
 
 concurrency:
   group: mov0-standard-finish-run-v1-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   implementation-tests:
@@ -44,6 +44,7 @@ jobs:
 
   frozen-run:
     needs: implementation-tests
+    if: github.event.pull_request.head.sha == 'dd4e7de7de4baa24090388fcf845c996564f2bf8'
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
