@@ -2,37 +2,189 @@
   "version": "1.0.0",
   "status": "MOV0_VALIDATION_PLAN_FROZEN_CANDIDATE",
   "chronology": {
-    "modeling_era_start": "2010-01-01",
-    "governed_oof_evaluation_years": [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
-    "outer_rule": "train on all eligible UFC STANDARD_FINISH rows dated before January 1 of the outer validation year; validate on that calendar year only",
-    "inner_rule": "within each outer-training set use the two immediately preceding calendar years as separate chronological validation folds; each inner model trains only on eligible rows earlier than its inner validation year",
+    "modeling_era_start": "2015-01-01",
+    "governed_oof_evaluation_years": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "outer_rule": "train on all eligible UFC STANDARD_FINISH rows dated on or after 2015-01-01 and before January 1 of the outer validation year; validate on that calendar year only",
+    "inner_rule": "within each outer-training set use the two immediately preceding calendar years as separate chronological validation folds; each inner model trains only on eligible rows dated on or after 2015-01-01 and earlier than its inner validation year",
     "random_cv": false,
     "shuffle": false,
     "folds": [
-      {"outer_year":2015,"outer_train_n":1745,"outer_validation_n":464,"inner_validation_years":[{"year":2013,"n":373},{"year":2014,"n":494}]},
-      {"outer_year":2016,"outer_train_n":2209,"outer_validation_n":486,"inner_validation_years":[{"year":2014,"n":494},{"year":2015,"n":464}]},
-      {"outer_year":2017,"outer_train_n":2695,"outer_validation_n":448,"inner_validation_years":[{"year":2015,"n":464},{"year":2016,"n":486}]},
-      {"outer_year":2018,"outer_train_n":3143,"outer_validation_n":470,"inner_validation_years":[{"year":2016,"n":486},{"year":2017,"n":448}]},
-      {"outer_year":2019,"outer_train_n":3613,"outer_validation_n":507,"inner_validation_years":[{"year":2017,"n":448},{"year":2018,"n":470}]},
-      {"outer_year":2020,"outer_train_n":4120,"outer_validation_n":443,"inner_validation_years":[{"year":2018,"n":470},{"year":2019,"n":507}]},
-      {"outer_year":2021,"outer_train_n":4563,"outer_validation_n":492,"inner_validation_years":[{"year":2019,"n":507},{"year":2020,"n":443}]},
-      {"outer_year":2022,"outer_train_n":5055,"outer_validation_n":505,"inner_validation_years":[{"year":2020,"n":443},{"year":2021,"n":492}]},
-      {"outer_year":2023,"outer_train_n":5560,"outer_validation_n":505,"inner_validation_years":[{"year":2021,"n":492},{"year":2022,"n":505}]},
-      {"outer_year":2024,"outer_train_n":6065,"outer_validation_n":502,"inner_validation_years":[{"year":2022,"n":505},{"year":2023,"n":505}]},
-      {"outer_year":2025,"outer_train_n":6567,"outer_validation_n":504,"inner_validation_years":[{"year":2023,"n":505},{"year":2024,"n":502}]},
-      {"outer_year":2026,"outer_train_n":7071,"outer_validation_n":332,"inner_validation_years":[{"year":2024,"n":502},{"year":2025,"n":504}]}
-    ]
+      {
+        "outer_year": 2018,
+        "outer_train_n": 1398,
+        "outer_validation_n": 470,
+        "inner_validation_years": [
+          {
+            "year": 2016,
+            "n": 486
+          },
+          {
+            "year": 2017,
+            "n": 448
+          }
+        ]
+      },
+      {
+        "outer_year": 2019,
+        "outer_train_n": 1868,
+        "outer_validation_n": 507,
+        "inner_validation_years": [
+          {
+            "year": 2017,
+            "n": 448
+          },
+          {
+            "year": 2018,
+            "n": 470
+          }
+        ]
+      },
+      {
+        "outer_year": 2020,
+        "outer_train_n": 2375,
+        "outer_validation_n": 443,
+        "inner_validation_years": [
+          {
+            "year": 2018,
+            "n": 470
+          },
+          {
+            "year": 2019,
+            "n": 507
+          }
+        ]
+      },
+      {
+        "outer_year": 2021,
+        "outer_train_n": 2818,
+        "outer_validation_n": 492,
+        "inner_validation_years": [
+          {
+            "year": 2019,
+            "n": 507
+          },
+          {
+            "year": 2020,
+            "n": 443
+          }
+        ]
+      },
+      {
+        "outer_year": 2022,
+        "outer_train_n": 3310,
+        "outer_validation_n": 505,
+        "inner_validation_years": [
+          {
+            "year": 2020,
+            "n": 443
+          },
+          {
+            "year": 2021,
+            "n": 492
+          }
+        ]
+      },
+      {
+        "outer_year": 2023,
+        "outer_train_n": 3815,
+        "outer_validation_n": 505,
+        "inner_validation_years": [
+          {
+            "year": 2021,
+            "n": 492
+          },
+          {
+            "year": 2022,
+            "n": 505
+          }
+        ]
+      },
+      {
+        "outer_year": 2024,
+        "outer_train_n": 4320,
+        "outer_validation_n": 502,
+        "inner_validation_years": [
+          {
+            "year": 2022,
+            "n": 505
+          },
+          {
+            "year": 2023,
+            "n": 505
+          }
+        ]
+      },
+      {
+        "outer_year": 2025,
+        "outer_train_n": 4822,
+        "outer_validation_n": 504,
+        "inner_validation_years": [
+          {
+            "year": 2023,
+            "n": 505
+          },
+          {
+            "year": 2024,
+            "n": 502
+          }
+        ]
+      },
+      {
+        "outer_year": 2026,
+        "outer_train_n": 5326,
+        "outer_validation_n": 332,
+        "inner_validation_years": [
+          {
+            "year": 2024,
+            "n": 502
+          },
+          {
+            "year": 2025,
+            "n": 504
+          }
+        ]
+      }
+    ],
+    "pre_2015_rows_allowed": false,
+    "earliest_defensible_outer_year": 2018,
+    "earliest_outer_year_rationale": "2017 would require inner validation on 2015, which has no earlier 2015+ training history. 2018 supports inner validation on 2016 and 2017; the 2016 inner model trains only on 2015."
   },
   "hyperparameter_selection": {
-    "applies_to": ["B1","MOV0_MIN","MOV0_FULL"],
+    "applies_to": [
+      "B1",
+      "MOV0_MIN",
+      "MOV0_FULL"
+    ],
     "objective": "concatenated per-fight inner-fold log loss",
     "tie_break": "first candidate in frozen C grid order",
     "outer_validation_in_selection": false
   },
   "primary_comparisons": [
-    {"candidate":"B1","baseline":"B0","question":"Does simple fight context explain finish probability beyond training-history prevalence?"},
-    {"candidate":"MOV0_MIN","baseline":"B1","question":"Do direct finish-pressure and vulnerability features add probability information beyond context?"},
-    {"candidate":"MOV0_FULL","baseline":"MOV0_MIN","question":"Do broader preregistered style features add information beyond the direct finish surface?"}
+    {
+      "candidate": "B1",
+      "baseline": "B0",
+      "question": "Does simple fight context explain finish probability beyond training-history prevalence?"
+    },
+    {
+      "candidate": "MOV0_MIN",
+      "baseline": "B1",
+      "question": "Do direct finish-pressure and vulnerability features add probability information beyond context?"
+    },
+    {
+      "candidate": "MOV0_FULL",
+      "baseline": "MOV0_MIN",
+      "question": "Do broader preregistered style features add information beyond the direct finish surface?"
+    }
   ],
   "metrics": {
     "primary": {
@@ -52,7 +204,15 @@
   },
   "chronological_persistence": {
     "delta_sign": "candidate_minus_baseline; negative log-loss delta is favorable",
-    "required": ["aggregate OOF difference","fold-by-fold difference","median fold difference","better/worse/tied fold count","strongest favorable fold","strongest unfavorable fold","percentage of total aggregate improvement contributed by single strongest favorable fold"],
+    "required": [
+      "aggregate OOF difference",
+      "fold-by-fold difference",
+      "median fold difference",
+      "better/worse/tied fold count",
+      "strongest favorable fold",
+      "strongest unfavorable fold",
+      "percentage of total aggregate improvement contributed by single strongest favorable fold"
+    ],
     "tie_tolerance": 1e-12,
     "dominance_calculation": "Use per-fold summed paired log-loss differences S_y. If total S=sum(S_y)<0, report 100*abs(min(S_y))/abs(S); may exceed 100 when unfavorable folds offset gains. If S>=0 report not_applicable."
   },
@@ -82,8 +242,24 @@
     "percentile_reference_sha256": "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa",
     "join_key": "fight_id",
     "regenerate": false,
-    "diagnostics": ["experience_bucket","layoff_bucket","scheduled_duration_bucket","title_status","weight_class","completeness_tier","striking_environment","grappling_environment","joint_mov_environment"],
-    "watchpoints": ["HIGH_MISSINGNESS","3_ROUND","5_ROUND","STRIKE_TWO_SIDED","GRAPPLE_TWO_SIDED"],
+    "diagnostics": [
+      "experience_bucket",
+      "layoff_bucket",
+      "scheduled_duration_bucket",
+      "title_status",
+      "weight_class",
+      "completeness_tier",
+      "striking_environment",
+      "grappling_environment",
+      "joint_mov_environment"
+    ],
+    "watchpoints": [
+      "HIGH_MISSINGNESS",
+      "3_ROUND",
+      "5_ROUND",
+      "STRIKE_TWO_SIDED",
+      "GRAPPLE_TWO_SIDED"
+    ],
     "sample_size_governance": {
       "NORMAL": "N>=100",
       "MODERATE_UNCERTAINTY": "50<=N<=99",
