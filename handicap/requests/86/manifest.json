@@ -1,0 +1,26 @@
+{
+  "cache_branch": "handicap-cache",
+  "cache_commit_sha": null,
+  "files": [
+    {
+      "bytes": 383255,
+      "path": "handicap/requests/86/matchup.json",
+      "sha256": "377f16f8fdba5bdce5b00edefeab1d4d512420f336fb57a67094d9652ff26487"
+    },
+    {
+      "bytes": 78093,
+      "path": "handicap/requests/86/matchup.md",
+      "sha256": "621fe5836c88f0b1785c3d52bd6ab10e82e8ce9a77e0ec7d6c32d4be5f131900"
+    }
+  ],
+  "generation_timestamp": "2026-09-18T18:22:27.035996Z",
+  "h00_generator_commit": "a796d594b1815b0313fcf795f5251554f42f531c",
+  "information_cutoff": "2026-09-18T18:12:00Z",
+  "issue_number": 86,
+  "kind": "matchup",
+  "packet_schema_version": "0.1.0",
+  "request_hash": "bd83b3c07d5bdfda78659e825f52dcdb9d40baea923b431a57619323a00ea6d6",
+  "schema": "h01-response-0.1",
+  "source_main_sha": "a796d594b1815b0313fcf795f5251554f42f531c",
+  "status": "complete"
+}
