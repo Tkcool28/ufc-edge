@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from hashlib import sha256
+import gzip
 import json
 from pathlib import Path
 from typing import Any, Iterable
@@ -24,6 +25,7 @@ EXPECTED_FIRST_TRAIN_N = 1398
 EXPECTED_F02_LOGICAL = "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0"
 EXPECTED_F02_TABLE = "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580"
 EXPECTED_TERRAIN_PHYSICAL = "8b59c09e103997e4c6d6311608620e7178962aac0cdf807dfa9d1740c7aa6d97"
+EXPECTED_TERRAIN_COMPRESSED = "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2"
 DIRECTIONAL = (
     "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
     "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw",
@@ -696,7 +698,20 @@ def sample_gate(n: int) -> str:
 
 
 def load_terrain_assignment(path: Path) -> pd.DataFrame:
-    if file_sha256(path) != EXPECTED_TERRAIN_PHYSICAL:
+    if path.suffix == ".gz":
+        compressed_sha = file_sha256(path)
+        if compressed_sha != EXPECTED_TERRAIN_COMPRESSED:
+            raise MOV0Error(
+                f"frozen terrain compressed hash mismatch: {compressed_sha}"
+            )
+        with gzip.open(path, "rb") as fh:
+            raw = fh.read()
+        physical_sha = sha256(raw).hexdigest()
+        if physical_sha != EXPECTED_TERRAIN_PHYSICAL:
+            raise MOV0Error(
+                f"frozen terrain decompressed physical hash mismatch: {physical_sha}"
+            )
+    elif file_sha256(path) != EXPECTED_TERRAIN_PHYSICAL:
         raise MOV0Error("frozen terrain physical hash mismatch")
     assignment = pd.read_csv(path)
     if assignment["fight_id"].duplicated().any():
