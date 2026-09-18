@@ -5,7 +5,12 @@
   "specification": {
     "penalty": "l2",
     "solver": "lbfgs",
-    "C_grid": [0.03, 0.1, 0.3, 1.0],
+    "C_grid": [
+      0.03,
+      0.1,
+      0.3,
+      1
+    ],
     "grid_order_tie_break": true,
     "max_iter": 3000,
     "tol": 0.0001,
@@ -13,7 +18,17 @@
     "class_weight": null,
     "random_seed": 17,
     "selection_objective": "concatenated inner chronological log loss only",
-    "prohibited": ["elastic_net", "trees", "boosting", "random_forests", "neural_networks", "stacking", "Optuna", "performance_based_feature_selection", "synthetic_resampling"]
+    "prohibited": [
+      "elastic_net",
+      "trees",
+      "boosting",
+      "random_forests",
+      "neural_networks",
+      "stacking",
+      "Optuna",
+      "performance_based_feature_selection",
+      "synthetic_resampling"
+    ]
   },
   "preprocessing": {
     "fit_scope": "Every imputer, pooled-side median, categorical encoder, and scaler is fit on the current training history only and then applied unchanged to validation rows.",
@@ -25,7 +40,8 @@
     "target_encoding": false,
     "global_preprocessing": false,
     "missingness_indicators": false,
-    "resampling": false
+    "resampling": false,
+    "modern_era_gate": "Every fit/transform/selection input row must have event_date >= 2015-01-01; pre-2015 rows are prohibited."
   },
   "B0": {
     "definition": "For each outer validation year, every fight receives the STANDARD_FINISH prevalence computed from all eligible outer-training history only.",
