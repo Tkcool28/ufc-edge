@@ -19,5 +19,24 @@
     "models/mov0/validation_plan_v1.json",
     "models/mov0/acceptance_framework_v1.json",
     "tests/models/test_mov0_contract.py"
-  ]
+  ],
+  "modern_era_min_event_date": "2015-01-01",
+  "pre_2015_rows_allowed": false,
+  "outer_oof_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "outer_oof_total_n": 4260,
+  "first_outer_fold": {
+    "year": 2018,
+    "training_n": 1398,
+    "validation_n": 470
+  }
 }
