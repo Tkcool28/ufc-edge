@@ -1,0 +1,42 @@
+{
+  "status": "MOV0_IMPLEMENTATION_CONTRACT_V1_COMPLETE",
+  "contract_version": "1.0.0",
+  "base_main": "df2692934565b905f3b53380ec86b01bd42408fc",
+  "branch": "feat/mov0-standard-finish-contract-v1",
+  "model_run_performed": false,
+  "performance_computed": false,
+  "market_data_used": false,
+  "roi_analyzed": false,
+  "mov1_started": false,
+  "simulator_started": false,
+  "merge_performed": false,
+  "recommendation": "MOV0_CONTRACT_READY_FOR_IMPLEMENTATION",
+  "artifacts": [
+    "models/mov0/README.md",
+    "models/mov0/target_contract_v1.json",
+    "models/mov0/feature_surface_v1.json",
+    "models/mov0/model_contract_v1.json",
+    "models/mov0/validation_plan_v1.json",
+    "models/mov0/acceptance_framework_v1.json",
+    "tests/models/test_mov0_contract.py"
+  ],
+  "modern_era_min_event_date": "2015-01-01",
+  "pre_2015_rows_allowed": false,
+  "outer_oof_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "outer_oof_total_n": 4260,
+  "first_outer_fold": {
+    "year": 2018,
+    "training_n": 1398,
+    "validation_n": 470
+  }
+}

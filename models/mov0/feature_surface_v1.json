@@ -1,0 +1,465 @@
+{
+  "version": "1.0.0",
+  "status": "MOV0_FEATURE_SURFACE_FROZEN_CANDIDATE",
+  "source": {
+    "f02_schema_version": "1.0.1",
+    "corrected_f02_predictor_logical_sha256": "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0",
+    "corrected_f02_table_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "horizon_rule": "career governed representation only; no last3, last5, EWMA or round-band variants in MOV0 V1"
+  },
+  "surfaces": {
+    "B0": {
+      "kind": "training_prevalence_only",
+      "literal_f02_columns": [],
+      "description": "Per outer fold, predict training-history STANDARD_FINISH prevalence for every validation fight."
+    },
+    "B1": {
+      "concepts": [
+        "scheduled_rounds",
+        "title_bout",
+        "weight_class",
+        "prior_fight_count"
+      ],
+      "literal_f02_columns": [
+        "scheduled_rounds",
+        "ctx__title_bout",
+        "ctx__weight_class",
+        "f1__fs__prior_fight_count__career__raw",
+        "f2__fs__prior_fight_count__career__raw"
+      ],
+      "note": "prior_fight_count is strict-prior canonical fight experience across supported canonical promotions; it is not UFC-only experience. Validation Terrain's separate strict-prior UFC-experience diagnostic remains unchanged."
+    },
+    "MOV0_MIN": {
+      "concepts": [
+        "early_finish_profile",
+        "finish_method_win_profile",
+        "finish_method_loss_profile",
+        "knockdown_rate",
+        "submission_attempt_rate",
+        "takedown_pressure",
+        "knockdown_creation_vs_vulnerability"
+      ],
+      "literal_f02_columns": [
+        "scheduled_rounds",
+        "ctx__title_bout",
+        "ctx__weight_class",
+        "f1__fs__prior_fight_count__career__raw",
+        "f2__fs__prior_fight_count__career__raw",
+        "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_win_profile__submission__career__shrunk",
+        "f2__fs__finish_method_win_profile__submission__career__shrunk",
+        "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f2__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+      ]
+    },
+    "MOV0_FULL": {
+      "concepts": [
+        "early_finish_profile",
+        "finish_method_win_profile",
+        "finish_method_loss_profile",
+        "knockdown_rate",
+        "submission_attempt_rate",
+        "takedown_pressure",
+        "knockdown_creation_vs_vulnerability",
+        "knockdown_efficiency",
+        "sig_strike_flow",
+        "sig_strike_efficiency",
+        "sig_environment_mix",
+        "sig_target_mix",
+        "takedown_conversion"
+      ],
+      "literal_f02_columns": [
+        "scheduled_rounds",
+        "ctx__title_bout",
+        "ctx__weight_class",
+        "f1__fs__prior_fight_count__career__raw",
+        "f2__fs__prior_fight_count__career__raw",
+        "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_win_profile__submission__career__shrunk",
+        "f2__fs__finish_method_win_profile__submission__career__shrunk",
+        "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f2__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw",
+        "f1__fs__knockdown_efficiency__creation__career__shrunk",
+        "f2__fs__knockdown_efficiency__creation__career__shrunk",
+        "f1__fs__knockdown_efficiency__vulnerability__career__shrunk",
+        "f2__fs__knockdown_efficiency__vulnerability__career__shrunk",
+        "f1__fs__sig_strike_flow__landed_per_min__career__shrunk",
+        "f2__fs__sig_strike_flow__landed_per_min__career__shrunk",
+        "f1__fs__sig_strike_flow__absorbed_per_min__career__shrunk",
+        "f2__fs__sig_strike_flow__absorbed_per_min__career__shrunk",
+        "f1__fs__sig_strike_efficiency__accuracy__career__shrunk",
+        "f2__fs__sig_strike_efficiency__accuracy__career__shrunk",
+        "f1__fs__sig_strike_efficiency__defense__career__shrunk",
+        "f2__fs__sig_strike_efficiency__defense__career__shrunk",
+        "f1__fs__sig_environment_mix__clinch_share__career__shrunk",
+        "f2__fs__sig_environment_mix__clinch_share__career__shrunk",
+        "f1__fs__sig_environment_mix__ground_share__career__shrunk",
+        "f2__fs__sig_environment_mix__ground_share__career__shrunk",
+        "f1__fs__sig_target_mix__head_share__career__shrunk",
+        "f2__fs__sig_target_mix__head_share__career__shrunk",
+        "f1__fs__sig_target_mix__body_share__career__shrunk",
+        "f2__fs__sig_target_mix__body_share__career__shrunk",
+        "f1__fs__takedown_conversion__success__career__shrunk",
+        "f2__fs__takedown_conversion__success__career__shrunk",
+        "f1__fs__takedown_conversion__defense__career__shrunk",
+        "f2__fs__takedown_conversion__defense__career__shrunk"
+      ]
+    }
+  },
+  "fighter_order_invariance": {
+    "rule": "No model-facing numeric feature may retain Fighter-1/Fighter-2 sign or side identity.",
+    "paired_numeric_source_preprocessing": "For each semantic f1/f2 pair, fit one median on pooled non-null values from both fighter-side training columns; impute both sides with that same training-only value before symmetric transformation.",
+    "paired_numeric_transformations": [
+      "mean(f1,f2)",
+      "abs(f1-f2)"
+    ],
+    "directional_matchup": {
+      "columns": [
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+      ],
+      "preprocessing": "fit one median on both directional columns pooled within training history",
+      "transformations": [
+        "mean(f1_vs_f2,f2_vs_f1)",
+        "abs(f1_vs_f2-f2_vs_f1)"
+      ]
+    },
+    "shared_context": [
+      "scheduled_rounds",
+      "ctx__title_bout",
+      "ctx__weight_class"
+    ],
+    "mandatory_future_test": "Swap Fighter 1 and Fighter 2, including every paired/directional source column, and require predicted STANDARD_FINISH probability to be equal within atol=1e-12, rtol=0."
+  },
+  "redundancy_rules": {
+    "one_horizon_only": "career",
+    "omitted_finish_profile_components": [
+      "fs__finish_method_win_profile__decision__career__shrunk",
+      "fs__finish_method_loss_profile__decision__career__shrunk"
+    ],
+    "omitted_sig_strike_flow_component": "fs__sig_strike_flow__attempted_per_min__career__shrunk",
+    "omitted_composition_remainders": [
+      "fs__sig_environment_mix__distance_share__career__shrunk",
+      "fs__sig_target_mix__leg_share__career__shrunk"
+    ],
+    "rationale": "Avoid deterministic/near-deterministic re-expression and multiple time horizons in the first signal-existence experiment."
+  },
+  "concept_review": [
+    {
+      "concept": "scheduled_rounds",
+      "mechanism": "More scheduled fight time creates more opportunity for a finish before the terminal decision.",
+      "class": "direct",
+      "decision": "B1_CONTEXT",
+      "exact_f02_columns": [
+        "scheduled_rounds"
+      ],
+      "orientation_rule": "shared fight context; unchanged by fighter swap",
+      "missingness_behavior": "native null; training-only numeric median; no indicator",
+      "surface": "B1"
+    },
+    {
+      "concept": "title_bout",
+      "mechanism": "Title-bout context changes scheduled duration and competitive setting beyond raw historical prevalence.",
+      "class": "indirect",
+      "decision": "B1_CONTEXT",
+      "exact_f02_columns": [
+        "ctx__title_bout"
+      ],
+      "orientation_rule": "shared fight context; unchanged by fighter swap",
+      "missingness_behavior": "native null; training-only most-frequent imputation; no indicator",
+      "surface": "B1"
+    },
+    {
+      "concept": "weight_class",
+      "mechanism": "Finish frequency can differ structurally by division because size and fight-style distributions differ.",
+      "class": "indirect",
+      "decision": "B1_CONTEXT",
+      "exact_f02_columns": [
+        "ctx__weight_class"
+      ],
+      "orientation_rule": "shared fight context; unchanged by fighter swap",
+      "missingness_behavior": "native null; training-only most-frequent imputation; no missing-category predictor",
+      "surface": "B1"
+    },
+    {
+      "concept": "prior_fight_count",
+      "mechanism": "Strict-prior canonical fight experience changes how much stable fighter-specific finish tendency is available and may itself proxy fight maturity.",
+      "class": "indirect",
+      "decision": "B1_CONTEXT",
+      "exact_f02_columns": [
+        "f1__fs__prior_fight_count__career__raw",
+        "f2__fs__prior_fight_count__career__raw"
+      ],
+      "orientation_rule": "pooled-side training median if needed, then mean + absolute difference",
+      "missingness_behavior": "normally observed including zero; no indicator",
+      "surface": "B1"
+    },
+    {
+      "concept": "early_finish_profile",
+      "mechanism": "Prior first-round finish wins and losses directly measure a fighter pair's history of early terminal outcomes.",
+      "class": "direct",
+      "decision": "MOV0_MIN",
+      "exact_f02_columns": [
+        "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_MIN"
+    },
+    {
+      "concept": "finish_method_win_profile",
+      "mechanism": "Prior KO/TKO and submission win rates directly measure demonstrated finish creation.",
+      "class": "direct",
+      "decision": "MOV0_MIN",
+      "exact_f02_columns": [
+        "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_win_profile__submission__career__shrunk",
+        "f2__fs__finish_method_win_profile__submission__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_MIN"
+    },
+    {
+      "concept": "finish_method_loss_profile",
+      "mechanism": "Prior KO/TKO and submission loss rates directly measure demonstrated finish vulnerability.",
+      "class": "direct",
+      "decision": "MOV0_MIN",
+      "exact_f02_columns": [
+        "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f2__fs__finish_method_loss_profile__submission__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_MIN"
+    },
+    {
+      "concept": "knockdown_creation_vs_vulnerability",
+      "mechanism": "Directional knockdown creation relative to opponent vulnerability directly represents a damage pathway that can produce a finish.",
+      "class": "direct",
+      "decision": "MOV0_MIN",
+      "exact_f02_columns": [
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+      ],
+      "orientation_rule": "directional pair exchanges under fighter swap; pooled-direction median then mean + absolute difference",
+      "missingness_behavior": "native null; pooled-direction training median; no indicator",
+      "surface": "MOV0_MIN"
+    },
+    {
+      "concept": "knockdown_rate",
+      "mechanism": "Knockdowns created and allowed per exposure measure severe striking events that precede many KO/TKO finishes.",
+      "class": "direct",
+      "decision": "MOV0_MIN",
+      "exact_f02_columns": [
+        "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__allowed_per_15__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_MIN"
+    },
+    {
+      "concept": "submission_attempt_rate",
+      "mechanism": "Submission attempts created and faced measure direct grappling threats and vulnerability on the submission finish pathway.",
+      "class": "direct",
+      "decision": "MOV0_MIN",
+      "exact_f02_columns": [
+        "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_MIN"
+    },
+    {
+      "concept": "takedown_pressure",
+      "mechanism": "Takedown attempts created and faced measure how often a fight is pushed toward grappling states where submissions and ground finishes can occur.",
+      "class": "direct",
+      "decision": "MOV0_MIN",
+      "exact_f02_columns": [
+        "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__faced_per_15__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_MIN"
+    },
+    {
+      "concept": "knockdown_efficiency",
+      "mechanism": "Knockdowns per landed/absorbed significant strike add strike-normalized power and durability level beyond time-based knockdown rate.",
+      "class": "direct",
+      "decision": "MOV0_FULL",
+      "exact_f02_columns": [
+        "f1__fs__knockdown_efficiency__creation__career__shrunk",
+        "f2__fs__knockdown_efficiency__creation__career__shrunk",
+        "f1__fs__knockdown_efficiency__vulnerability__career__shrunk",
+        "f2__fs__knockdown_efficiency__vulnerability__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_FULL"
+    },
+    {
+      "concept": "sig_strike_flow",
+      "mechanism": "Significant strikes landed and absorbed per minute represent sustained damage flow that can raise or suppress terminal striking opportunity.",
+      "class": "indirect",
+      "decision": "MOV0_FULL",
+      "exact_f02_columns": [
+        "f1__fs__sig_strike_flow__landed_per_min__career__shrunk",
+        "f2__fs__sig_strike_flow__landed_per_min__career__shrunk",
+        "f1__fs__sig_strike_flow__absorbed_per_min__career__shrunk",
+        "f2__fs__sig_strike_flow__absorbed_per_min__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_FULL"
+    },
+    {
+      "concept": "sig_strike_efficiency",
+      "mechanism": "Accuracy and defense describe how efficiently damaging exchanges are delivered and avoided.",
+      "class": "indirect",
+      "decision": "MOV0_FULL",
+      "exact_f02_columns": [
+        "f1__fs__sig_strike_efficiency__accuracy__career__shrunk",
+        "f2__fs__sig_strike_efficiency__accuracy__career__shrunk",
+        "f1__fs__sig_strike_efficiency__defense__career__shrunk",
+        "f2__fs__sig_strike_efficiency__defense__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_FULL"
+    },
+    {
+      "concept": "sig_environment_mix",
+      "mechanism": "Clinch and ground significant-strike shares distinguish environments with different finish pathways.",
+      "class": "indirect",
+      "decision": "MOV0_FULL",
+      "exact_f02_columns": [
+        "f1__fs__sig_environment_mix__clinch_share__career__shrunk",
+        "f2__fs__sig_environment_mix__clinch_share__career__shrunk",
+        "f1__fs__sig_environment_mix__ground_share__career__shrunk",
+        "f2__fs__sig_environment_mix__ground_share__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_FULL"
+    },
+    {
+      "concept": "sig_target_mix",
+      "mechanism": "Head and body target shares encode where damaging offense is directed.",
+      "class": "indirect",
+      "decision": "MOV0_FULL",
+      "exact_f02_columns": [
+        "f1__fs__sig_target_mix__head_share__career__shrunk",
+        "f2__fs__sig_target_mix__head_share__career__shrunk",
+        "f1__fs__sig_target_mix__body_share__career__shrunk",
+        "f2__fs__sig_target_mix__body_share__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_FULL"
+    },
+    {
+      "concept": "takedown_conversion",
+      "mechanism": "Takedown success and defense indicate whether grappling pressure becomes realized positional opportunity.",
+      "class": "indirect",
+      "decision": "MOV0_FULL",
+      "exact_f02_columns": [
+        "f1__fs__takedown_conversion__success__career__shrunk",
+        "f2__fs__takedown_conversion__success__career__shrunk",
+        "f1__fs__takedown_conversion__defense__career__shrunk",
+        "f2__fs__takedown_conversion__defense__career__shrunk"
+      ],
+      "orientation_rule": "componentwise mean + absolute difference",
+      "missingness_behavior": "native null; pooled-side training median; no indicator",
+      "surface": "MOV0_FULL"
+    },
+    {
+      "concept": "control_rate",
+      "mechanism": "Control can either create finish opportunity or suppress action and preserve a decision.",
+      "class": "ambiguous",
+      "decision": "DEFER",
+      "exact_f02_columns": [
+        "f1__fs__control_rate__created_share__career__shrunk",
+        "f2__fs__control_rate__created_share__career__shrunk",
+        "f1__fs__control_rate__allowed_share__career__shrunk",
+        "f2__fs__control_rate__allowed_share__career__shrunk"
+      ],
+      "orientation_rule": "would require symmetric pairing if promoted",
+      "missingness_behavior": "native null; no new indicator authorized",
+      "surface": "DEFER"
+    },
+    {
+      "concept": "reversal_rate",
+      "mechanism": "Reversals may represent either escape from danger or creation of danger.",
+      "class": "ambiguous",
+      "decision": "DEFER",
+      "exact_f02_columns": [
+        "f1__fs__reversal_rate__created_per_15__career__shrunk",
+        "f2__fs__reversal_rate__created_per_15__career__shrunk",
+        "f1__fs__reversal_rate__faced_per_15__career__shrunk",
+        "f2__fs__reversal_rate__faced_per_15__career__shrunk"
+      ],
+      "orientation_rule": "would require symmetric pairing if promoted",
+      "missingness_behavior": "native null; no new indicator authorized",
+      "surface": "DEFER"
+    }
+  ],
+  "unapproved_columns_policy": "hard_fail",
+  "new_missingness_predictors_allowed": false
+}

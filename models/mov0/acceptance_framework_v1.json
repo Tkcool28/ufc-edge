@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "status": "MOV0_ACCEPTANCE_FRAMEWORK_FROZEN_CANDIDATE",
+  "numeric_hard_thresholds": false,
+  "allowed_classifications": ["CLEAR_SUCCESS","INCONCLUSIVE","CURRENT_SPECIFICATION_NOT_SUPPORTED"],
+  "evidence_required": [
+    "MOV0_MIN versus B1 and MOV0_FULL versus MOV0_MIN aggregate/fold log-loss evidence",
+    "Brier score consistency check",
+    "calibration intercept/slope, ECE, and reliability evidence",
+    "chronological persistence and single-fold dominance evidence",
+    "fight-level paired bootstrap plus event-cluster bootstrap diagnostics",
+    "unchanged Validation Terrain V1 diagnostics under frozen sample-size governance"
+  ],
+  "classifications": {
+    "CLEAR_SUCCESS": [
+      "MOV0 meaningfully improves probability quality over B1",
+      "gain persists reasonably across chronological folds",
+      "calibration remains healthy",
+      "Brier does not contradict the log-loss improvement",
+      "gain is not dominated by one thin subgroup or single era"
+    ],
+    "INCONCLUSIVE": [
+      "signal appears real but small",
+      "fold behavior is mixed",
+      "calibration is reasonable",
+      "evidence is insufficient either to freeze the model or abandon the specification"
+    ],
+    "CURRENT_SPECIFICATION_NOT_SUPPORTED": [
+      "MOV0 does not improve meaningfully over B1",
+      "chronological persistence is poor",
+      "calibration materially deteriorates",
+      "gains come almost entirely from one subgroup/period",
+      "or the preregistered specification proves unstable"
+    ]
+  },
+  "forbidden_conclusion": "FINISH_MODELING_FAILED",
+  "interpretation_boundary": "The execution may conclude only whether this preregistered specification did or did not establish useful incremental STANDARD_FINISH probability signal."
+}

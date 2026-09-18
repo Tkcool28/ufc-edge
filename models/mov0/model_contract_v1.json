@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "status": "MOV0_MODEL_CONTRACT_FROZEN_CANDIDATE",
+  "family": "regularized_logistic_regression",
+  "specification": {
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "C_grid": [
+      0.03,
+      0.1,
+      0.3,
+      1
+    ],
+    "grid_order_tie_break": true,
+    "max_iter": 3000,
+    "tol": 0.0001,
+    "fit_intercept": true,
+    "class_weight": null,
+    "random_seed": 17,
+    "selection_objective": "concatenated inner chronological log loss only",
+    "prohibited": [
+      "elastic_net",
+      "trees",
+      "boosting",
+      "random_forests",
+      "neural_networks",
+      "stacking",
+      "Optuna",
+      "performance_based_feature_selection",
+      "synthetic_resampling"
+    ]
+  },
+  "preprocessing": {
+    "fit_scope": "Every imputer, pooled-side median, categorical encoder, and scaler is fit on the current training history only and then applied unchanged to validation rows.",
+    "numeric_pair_imputation": "pooled-side training median per semantic component before mean/absolute-difference transformation",
+    "singleton_numeric_imputation": "training median",
+    "numeric_scaling": "StandardScaler fitted on transformed training numeric features only",
+    "title_bout": "training most-frequent imputation, then boolean 0/1",
+    "weight_class": "training most-frequent imputation, then OneHotEncoder(handle_unknown='ignore', drop=None) fitted on training only",
+    "target_encoding": false,
+    "global_preprocessing": false,
+    "missingness_indicators": false,
+    "resampling": false,
+    "modern_era_gate": "Every fit/transform/selection input row must have event_date >= 2015-01-01; pre-2015 rows are prohibited."
+  },
+  "B0": {
+    "definition": "For each outer validation year, every fight receives the STANDARD_FINISH prevalence computed from all eligible outer-training history only.",
+    "formula": "sum(y_train)/n_train",
+    "global_future_prevalence_forbidden": true
+  }
+}
