@@ -17,9 +17,10 @@ def test_target_contract_and_draw_decision_handling():
     assert c["label"]["positive_when"]["method"] == ["KO_TKO", "SUBMISSION"]
     assert c["label"]["negative_when"]["method"] == ["DECISION"]
     assert "draw" in c["label"]["negative_when"]["result"]
-    n = c["governed_evaluation_population"]["exact_counts"]
-    assert (n["STANDARD_FINISH_1"], n["DECISION_0"], n["TOTAL"]) == (2822, 2836, 5658)
-    assert n["DECISION_DRAWS_INCLUDED_AS_0"] == 45
+    modern = c["governed_modern_label_population"]["exact_counts"]
+    assert (modern["STANDARD_FINISH_1"], modern["DECISION_0"], modern["TOTAL"]) == (2822, 2836, 5658)
+    assert modern["DECISION_DRAWS_INCLUDED_AS_0"] == 45
+    assert c["governed_evaluation_population"]["exact_counts"]["TOTAL"] == 4260
 
 
 def test_nc_dq_other_unknown_are_never_coerced():
@@ -85,11 +86,13 @@ def test_ridge_grid_and_b0_are_frozen():
 def test_chronological_fold_integrity_and_counts():
     v = load("validation_plan_v1.json")
     folds = v["chronology"]["folds"]
-    assert [f["outer_year"] for f in folds] == list(range(2015, 2027))
-    assert sum(f["outer_validation_n"] for f in folds) == 5658
+    assert [f["outer_year"] for f in folds] == list(range(2018, 2027))
+    assert sum(f["outer_validation_n"] for f in folds) == 4260
+    assert folds[0]["outer_train_n"] == 1398
+    assert folds[0]["outer_validation_n"] == 470
     for f in folds:
         assert len(f["inner_validation_years"]) == 2
-        assert all(inner["year"] < f["outer_year"] for inner in f["inner_validation_years"])
+        assert all(2015 <= inner["year"] < f["outer_year"] for inner in f["inner_validation_years"])
     assert v["chronology"]["random_cv"] is False
     assert v["chronology"]["shuffle"] is False
 
@@ -110,3 +113,16 @@ def test_acceptance_framework_uses_only_allowed_classifications():
         "CLEAR_SUCCESS", "INCONCLUSIVE", "CURRENT_SPECIFICATION_NOT_SUPPORTED"
     ]
     assert a["forbidden_conclusion"] == "FINISH_MODELING_FAILED"
+
+
+def test_mov0_never_uses_pre_2015_rows():
+    t = load("target_contract_v1.json")
+    v = load("validation_plan_v1.json")
+    done = load("MOV0_IMPLEMENTATION_CONTRACT_V1_COMPLETE.json")
+    assert t["modern_era_use_constraint"]["minimum_event_date"] == "2015-01-01"
+    assert t["modern_era_use_constraint"]["pre_2015_rows_allowed"] is False
+    assert v["chronology"]["modeling_era_start"] == "2015-01-01"
+    assert v["chronology"]["pre_2015_rows_allowed"] is False
+    assert v["chronology"]["earliest_defensible_outer_year"] == 2018
+    assert done["pre_2015_rows_allowed"] is False
+    assert done["outer_oof_total_n"] == 4260
