@@ -1,0 +1,163 @@
+name: M0 Bare-Bones Market Diagnostic V0
+
+on:
+  push:
+    branches: [feat/m0-market-diagnostic-v0]
+    paths:
+      - 'market_diagnostics/m0_v0/**'
+      - 'src/ufc_edge/market_diagnostics/**'
+      - 'tools/market_diagnostics/**'
+      - 'tests/market_diagnostics/**'
+      - '.github/workflows/m0-market-diagnostic-v0.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'market_diagnostics/m0_v0/**'
+      - 'src/ufc_edge/market_diagnostics/**'
+      - 'tools/market_diagnostics/**'
+      - 'tests/market_diagnostics/**'
+      - '.github/workflows/m0-market-diagnostic-v0.yml'
+  workflow_dispatch:
+    inputs:
+      full_diagnostic:
+        description: 'Run frozen M0 vs historical listed market diagnostic'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install diagnostic dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+      - name: Parse Python sources
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          for path in [
+              Path('src/ufc_edge/market_diagnostics/m0_v0.py'),
+              Path('tools/market_diagnostics/run_m0_market_diagnostic_v0.py'),
+              Path('tests/market_diagnostics/test_m0_market_diagnostic_v0.py'),
+          ]:
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+          print('market diagnostic Python sources parse')
+          PY
+      - name: Validate diagnostic JSON surfaces
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for path in [
+              Path('market_diagnostics/m0_v0/market_source_manifest.json'),
+              Path('market_diagnostics/m0_v0/diagnostic_contract_v0.json'),
+              Path('market_diagnostics/m0_v0/matching_report.json'),
+          ]:
+              json.loads(path.read_text(encoding='utf-8'))
+              print('valid', path)
+          PY
+      - name: Run focused market diagnostic tests
+        run: python -m unittest discover -s tests/market_diagnostics -p 'test_m0_market_diagnostic_v0.py' -v
+      - name: Verify merged M0 freeze identity
+        run: |
+          python - <<'PY'
+          import json
+          freeze=json.load(open('models/m0/M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE.json'))
+          assert freeze['freeze_version']=='1.0.0'
+          assert freeze['status']=='M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE'
+          assert freeze['verdict']=='M0_SIGNAL_CONFIRMED'
+          assert freeze['oof']['rows']==5626
+          assert freeze['oof']['logical_sha256']=='708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c'
+          assert freeze['f02']['predictor_logical_sha256']=='ac55fd6fc1f19be7afac2007fccceb43b5c3f98327554d0c58fbe6cb0b164383'
+          assert freeze['f02']['target_logical_sha256']=='02b735aabcb354fa16cd3800f72e5ccd504f5fb6dc9963510987c57438a44956'
+          print('merged M0 freeze identity exact')
+          PY
+      - name: Protect M0, F02, and canonical DATA
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- models/m0 src/ufc_edge/models tests/models tools/models
+          git diff --quiet origin/main...HEAD -- features/f02 src/ufc_edge/features tests/features tools/features
+          git diff --quiet origin/main...HEAD -- data/canonical/v0 schemas provenance/data_phase_freeze_v0.json
+      - name: Reject committed runtime market artifacts
+        run: |
+          set -euo pipefail
+          added="$(git diff --diff-filter=A --name-only origin/main...HEAD)"
+          bad="$(printf '%s\n' "$added" | grep -E '(^|/)(artifacts|runs?|output)/|\.(parquet|pkl|joblib|feather)$' || true)"
+          if [[ -n "$bad" ]]; then
+            printf '%s\n' "$bad"
+            echo 'Market/M0 runtime tables must not be committed.' >&2
+            exit 1
+          fi
+      - name: Check whitespace
+        run: git diff --check origin/main...HEAD
+
+  full-diagnostic:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && inputs.full_diagnostic) ||
+      (github.event_name == 'push' && contains(github.event.head_commit.message, '[market-full-diagnostic]'))
+    needs: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install diagnostic dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+      - name: Download authoritative frozen M0 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: m0-empirical-winner-baseline-v1
+          path: ${{ runner.temp }}/m0
+          repository: Tkcool28/ufc-edge
+          run-id: 34676508116
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download authoritative frozen F02 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: f02-predictor-replay-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 34673108776
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fetch pinned public historical listed odds
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --location --retry 3 \
+            'https://raw.githubusercontent.com/theGholland/ufc-data_with_random_forests/e22124fe43285f3a7018b5c2674e31441797ca9d/data/cleaned_odds.csv' \
+            --output "${{ runner.temp }}/cleaned_odds.csv"
+          sha256sum "${{ runner.temp }}/cleaned_odds.csv"
+      - name: Run M0-MD0 diagnostic
+        run: |
+          python tools/market_diagnostics/run_m0_market_diagnostic_v0.py \
+            --m0-oof "${{ runner.temp }}/m0/m0_oof_predictions.parquet" \
+            --m0-freeze models/m0/M0_EMPIRICAL_WINNER_BASELINE_V1_COMPLETE.json \
+            --f02-modeling "${{ runner.temp }}/f02/winner_modeling_table.parquet" \
+            --canonical-fighters data/canonical/v0/fighters.csv \
+            --market-csv "${{ runner.temp }}/cleaned_odds.csv" \
+            --output-dir "${{ runner.temp }}/m0-market-v0"
+      - name: Upload diagnostic runtime artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: m0-market-diagnostic-v0
+          path: ${{ runner.temp }}/m0-market-v0
+          if-no-files-found: error
+          retention-days: 30
