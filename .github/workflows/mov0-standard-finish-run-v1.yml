@@ -16,7 +16,7 @@ permissions:
   actions: read
 
 concurrency:
-  group: mov0-standard-finish-run-v1-\${{ github.event.pull_request.number || github.ref }}
+  group: mov0-standard-finish-run-v1-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -83,26 +83,26 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: physical-profile-corrected-f02-v1
-          path: \${{ runner.temp }}/corrected-f02
+          path: ${{ runner.temp }}/corrected-f02
           repository: Tkcool28/ufc-edge
           run-id: 35182939981
-          github-token: \${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Execute first frozen MOV0 run
         run: |
           rm -rf models/mov0/run_v1
           python tools/models/run_mov0.py \
-            --f02-dir "\${{ runner.temp }}/corrected-f02" \
+            --f02-dir "${{ runner.temp }}/corrected-f02" \
             --canonical-fights data/canonical/v0/fights.csv \
             --contract-dir models/mov0 \
             --terrain-assignment governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz \
-            --output-dir models/mov0/run_v1 | tee "\${{ runner.temp }}/mov0-console.log"
+            --output-dir models/mov0/run_v1 | tee "${{ runner.temp }}/mov0-console.log"
       - name: Publish frozen run summary
         if: success()
         run: |
           cat models/mov0/run_v1/report.md >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "Machine-readable console summary follows." >> "$GITHUB_STEP_SUMMARY"
-          tail -n +2 "\${{ runner.temp }}/mov0-console.log" >> "$GITHUB_STEP_SUMMARY"
+          tail -n +2 "${{ runner.temp }}/mov0-console.log" >> "$GITHUB_STEP_SUMMARY"
       - name: Upload complete frozen MOV0 evidence package
         if: always()
         uses: actions/upload-artifact@v4
@@ -110,6 +110,6 @@ jobs:
           name: mov0-standard-finish-probability-v1
           path: |
             models/mov0/run_v1
-            \${{ runner.temp }}/mov0-console.log
+            ${{ runner.temp }}/mov0-console.log
           if-no-files-found: error
           retention-days: 30
