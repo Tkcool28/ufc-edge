@@ -46,7 +46,7 @@ The canonical result schema currently has no `overturned` enum.
 
 ### Exact governed population
 
-Current UFC 2015–2026 OOF evaluation population:
+Current certified modern-era UFC label population (2015–2026):
 
 | State | N |
 |---|---:|
@@ -66,7 +66,7 @@ Current otherwise-in-era UFC exclusions total 71:
 | `no_contest | NO_CONTEST` | 32 |
 | `draw | NO_CONTEST` | 1 |
 
-2010–2014 contributes 1,745 eligible standard-method rows strictly as training warm-up for the 2015 outer fold. Those rows are not part of the governed 5,658-row OOF evaluation population.
+**MOV0 V1 never uses pre-2015 rows.** The 2015–2017 certified-modern rows are available only as earlier-history training and inner-validation data. The outer OOF evaluation begins in 2018 and contains exactly **4,260** fights across 2018–2026.
 
 ## Predictor/target separation
 
@@ -98,7 +98,7 @@ Exact F02 columns:
 - `f1__fs__prior_fight_count__career__raw`
 - `f2__fs__prior_fight_count__career__raw`
 
-Repository semantic note: F02 does **not** expose an UFC-only prior-fight-count predictor. The governed `prior_fight_count` counts strict-prior canonical fight history across supported canonical promotions. MOV0 uses it explicitly as the B1 experience proxy rather than inventing a non-governed feature. Validation Terrain continues to report strict-prior UFC experience diagnostically.
+Repository semantic note: `prior_fight_count` is **strict-prior canonical fight experience** across supported canonical promotions. It is not UFC-only experience. Validation Terrain's separate strict-prior UFC-experience diagnostic remains unchanged.
 
 ### MOV0-MIN — minimal direct finish surface
 
@@ -138,7 +138,7 @@ The complete literal allowlists are machine-readable in `feature_surface_v1.json
 | scheduled_rounds | More scheduled fight time creates more opportunity for a finish before the terminal decision. | direct | shared, side-free | training-only numeric imputation | B1 | B1_CONTEXT |
 | title_bout | Title context changes fight structure and competitive setting beyond raw prevalence. | indirect | shared, side-free | training-only categorical imputation | B1 | B1_CONTEXT |
 | weight_class | Finish frequency can differ structurally by division because size/style distributions differ. | indirect | shared, side-free | training-only categorical imputation | B1 | B1_CONTEXT |
-| prior_fight_count | Historical experience changes how much stable fighter-specific history exists and may proxy fight maturity. | indirect | pair mean + absolute difference | normally observed, no new indicator | B1 | B1_CONTEXT |
+| prior_fight_count | Strict-prior canonical fight experience changes how much stable fighter-specific history exists and may proxy fight maturity. | indirect | pair mean + absolute difference | normally observed, no new indicator | B1 | B1_CONTEXT |
 | early_finish_profile | Prior round-one finish wins/losses directly measure early terminal-outcome history. | direct | componentwise mean + absolute difference | pooled-side training median | MIN | MOV0_MIN |
 | finish_method_win_profile | Prior KO/TKO and submission win rates directly measure finish creation. | direct | componentwise mean + absolute difference | pooled-side training median | MIN | MOV0_MIN |
 | finish_method_loss_profile | Prior KO/TKO and submission loss rates directly measure finish vulnerability. | direct | componentwise mean + absolute difference | pooled-side training median | MIN | MOV0_MIN |
@@ -198,11 +198,13 @@ No elastic net, trees, boosting, random forests, neural networks, stacking, Optu
 
 ## Chronological validation
 
-Outer OOF years are 2015–2026.
+Outer OOF years are **2018–2026**.
 
-Each outer model trains on all eligible rows strictly earlier than the validation year. Hyperparameter selection uses only the two immediately preceding calendar years as inner chronological validation folds, and every inner model trains only on earlier history.
+MOV0 V1 may use only rows dated **2015-01-01 or later** for training, validation, preprocessing, imputation, scaling, and hyperparameter selection. Each outer model trains on eligible 2015+ rows strictly earlier than the validation year. Hyperparameter selection uses only the two immediately preceding calendar years as inner chronological validation folds, and every inner model trains only on 2015+ history earlier than its inner validation year.
 
-Exact outer validation Ns sum to 5,658 and are frozen in `validation_plan_v1.json`.
+2018 is the earliest defensible outer year: a 2017 outer fold would require a 2015 inner-validation fold with no earlier 2015+ training history. The 2018 fold instead uses 2016 and 2017 as inner validation years; the 2016 inner model trains only on 2015.
+
+Exact outer validation Ns sum to **4,260** and are frozen in `validation_plan_v1.json`. The first outer fold (2018) trains on exactly **1,398** eligible 2015–2017 fights.
 
 Required ladder:
 
