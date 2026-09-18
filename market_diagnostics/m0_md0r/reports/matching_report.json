@@ -1,0 +1,13 @@
+{
+  "ambiguous_duplicate_groups": 0,
+  "coverage_pct": 0.7602936482604532,
+  "duplicate_provider_rows": 0,
+  "eligible_m0_rows": 3133,
+  "eligible_ufc_events": 268,
+  "invalid_book_quotes": 0,
+  "matched_rows": 2382,
+  "non_target_provider_pairs": 9309,
+  "normalized_market_rows": 2382,
+  "normalized_rows": 2382,
+  "unresolved_provider_name_rows": 4553
+}

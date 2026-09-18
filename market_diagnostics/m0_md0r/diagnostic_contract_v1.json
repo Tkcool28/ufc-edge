@@ -1,0 +1,43 @@
+{
+  "contract_version": "1.0.0",
+  "diagnostic": "M0-MD0-R",
+  "provider": "The Odds API",
+  "frozen_m0": {
+    "oof_rows": 5626,
+    "oof_logical_sha256": "708c616f69f153a8d9df0f0835b61c5bada96d2c5d37c6c55a69cf658178c44c"
+  },
+  "eligible_population": {
+    "historical_start": "2020-06-06",
+    "oof_rows": 3133,
+    "ufc_events": 268
+  },
+  "query": {
+    "sport_key": "mma_mixed_martial_arts",
+    "market": "h2h",
+    "region": "us",
+    "requests": 268,
+    "credits_per_request": 10,
+    "expected_credits": 2680,
+    "hard_request_ceiling": 300,
+    "hard_credit_ceiling": 3000
+  },
+  "timing": {
+    "default": "00:00:00Z on canonical event date",
+    "provider_floor_exception": "2020-06-06T10:05:00Z"
+  },
+  "construction": {
+    "vig_removal": "proportional",
+    "bookmaker_aggregation": "median no-vig fighter_1 probability across valid US books",
+    "fixed_blend_weight": 0.5
+  },
+  "exclusions": [
+    "ROI",
+    "profit",
+    "units",
+    "Kelly",
+    "threshold optimization",
+    "blend-weight optimization",
+    "M0 retraining",
+    "feature reaction"
+  ]
+}
