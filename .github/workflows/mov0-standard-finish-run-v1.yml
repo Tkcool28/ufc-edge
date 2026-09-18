@@ -88,7 +88,9 @@ jobs:
           run-id: 35182939981
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Execute first frozen MOV0 run
+        shell: bash
         run: |
+          set -euo pipefail
           rm -rf models/mov0/run_v1
           python tools/models/run_mov0.py \
             --f02-dir "${{ runner.temp }}/corrected-f02" \
