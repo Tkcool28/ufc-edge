@@ -1,0 +1,58 @@
+{
+  "status": "MOV0_PROBABILITY_BUCKET_CALIBRATION_DIAGNOSTIC_V1_COMPLETE",
+  "source": {
+    "run_source_head": "dd4e7de7de4baa24090388fcf845c996564f2bf8",
+    "workflow_run_id": 35376956316,
+    "artifact_name": "mov0-standard-finish-probability-v1",
+    "artifact_id": 10561085362,
+    "artifact_sha256": "03e8651b2e34c656daadb2d789ba0cbf298d0dcad14ec3a08bd5d0d6ce64e866",
+    "mov0_min_oof_sha256": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57",
+    "mov0_full_oof_sha256": "9d543356b157fefaabe27f7f4d1b5663536e4cf659fdf11fedd8531c4b13faa0"
+  },
+  "predictions_regenerated": false,
+  "models_retrained": false,
+  "buckets": [
+    "< 0.30",
+    "0.30–<0.40",
+    "0.40–<0.50",
+    "0.50–<0.60",
+    "0.60–<0.70",
+    ">= 0.70"
+  ],
+  "interval_method": "Wilson 95% binomial interval",
+  "sample_size_governance": {
+    "normal": "N >= 100",
+    "moderate_uncertainty": "50-99",
+    "thin_exploratory": "25-49",
+    "insufficient": "<25"
+  },
+  "findings": {
+    "MIN": {
+      "monotonic": true,
+      "all_buckets_normal": true,
+      "all_buckets_all_9_oof_years": true,
+      "top_bucket_N": 212,
+      "top_bucket_mean_prediction": 0.754787546775,
+      "top_bucket_observed_finish_rate": 0.679245283019,
+      "top_bucket_calibration_gap": -0.075542263756
+    },
+    "FULL": {
+      "monotonic": true,
+      "all_buckets_normal": true,
+      "all_buckets_all_9_oof_years": true,
+      "top_bucket_N": 314,
+      "top_bucket_mean_prediction": 0.758395481536,
+      "top_bucket_observed_finish_rate": 0.684713375796,
+      "top_bucket_calibration_gap": -0.07368210574
+    }
+  },
+  "interpretation": "Both models show fully monotonic confidence ordering across the fixed bins. FULL allocates more fights to >=0.70 without materially increasing observed finish rate. Both are overconfident in the highest bin.",
+  "guardrails": {
+    "thresholds_optimized": false,
+    "sportsbook_data_used": false,
+    "roi_ev_analyzed": false,
+    "recalibration_performed": false,
+    "mov1_started": false,
+    "automatic_merge": false
+  }
+}
