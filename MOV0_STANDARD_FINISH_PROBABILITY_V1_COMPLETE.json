@@ -1,0 +1,143 @@
+{
+  "status": "MOV0_STANDARD_FINISH_PROBABILITY_V1_COMPLETE",
+  "classification": "CLEAR_SUCCESS",
+  "branch": "feat/mov0-standard-finish-run-v1",
+  "base_sha": "a796d594b1815b0313fcf795f5251554f42f531c",
+  "successful_run_source_head": "dd4e7de7de4baa24090388fcf845c996564f2bf8",
+  "pull_request": 73,
+  "workflow_run_id": 35376956316,
+  "workflow_conclusion": "success",
+  "tests": {
+    "passed": 21,
+    "warnings": 13
+  },
+  "oof_n": 4260,
+  "class_balance": {
+    "STANDARD_FINISH_1": 2115,
+    "DECISION_0": 2145,
+    "prevalence": 0.4964788732394366
+  },
+  "aggregate": {
+    "B0": {
+      "log_loss": 0.693459671796132,
+      "brier": 0.25015623689523747,
+      "roc_auc": 0.47779375864482243,
+      "ece": 0.021380827148617672
+    },
+    "B1": {
+      "log_loss": 0.6835610099911356,
+      "brier": 0.24522295536770497,
+      "roc_auc": 0.5805647307774966,
+      "ece": 0.008041241603634591
+    },
+    "MOV0_MIN": {
+      "log_loss": 0.6702383070746238,
+      "brier": 0.238630440072824,
+      "roc_auc": 0.6274559010729224,
+      "ece": 0.032871607824184294
+    },
+    "MOV0_FULL": {
+      "log_loss": 0.6694776864568812,
+      "brier": 0.23823063811647763,
+      "roc_auc": 0.6275926752522498,
+      "ece": 0.022844387845553153
+    }
+  },
+  "primary_comparisons": {
+    "B1_vs_B0": {
+      "log_loss_delta": -0.009898661804996295,
+      "better_worse_tied": [
+        8,
+        1,
+        0
+      ]
+    },
+    "MOV0_MIN_vs_B1": {
+      "log_loss_delta": -0.013322702916511745,
+      "better_worse_tied": [
+        9,
+        0,
+        0
+      ],
+      "fight_bootstrap_ci95": [
+        -0.01902881245132797,
+        -0.0076111081179726075
+      ],
+      "event_cluster_bootstrap_ci95": [
+        -0.019575917783156857,
+        -0.006903322322460019
+      ]
+    },
+    "MOV0_FULL_vs_MOV0_MIN": {
+      "log_loss_delta": -0.0007606206177427179,
+      "better_worse_tied": [
+        6,
+        3,
+        0
+      ],
+      "fight_bootstrap_ci95": [
+        -0.0033579969482571284,
+        0.002058465031952798
+      ],
+      "event_cluster_bootstrap_ci95": [
+        -0.0033658943797284205,
+        0.0017019846998080758
+      ]
+    }
+  },
+  "selected_C": {
+    "B1": {
+      "2018": 1,
+      "2019": 0.3,
+      "2020": 0.1,
+      "2021": 0.3,
+      "2022": 0.03,
+      "2023": 0.03,
+      "2024": 0.03,
+      "2025": 0.1,
+      "2026": 1
+    },
+    "MOV0_MIN": {
+      "2018": 0.03,
+      "2019": 0.03,
+      "2020": 0.03,
+      "2021": 0.03,
+      "2022": 0.03,
+      "2023": 0.03,
+      "2024": 0.03,
+      "2025": 0.03,
+      "2026": 0.03
+    },
+    "MOV0_FULL": {
+      "2018": 0.03,
+      "2019": 0.03,
+      "2020": 0.03,
+      "2021": 0.03,
+      "2022": 0.03,
+      "2023": 0.03,
+      "2024": 0.03,
+      "2025": 0.03,
+      "2026": 0.03
+    }
+  },
+  "fighter_order_invariance_max_abs_error": 0,
+  "artifact": {
+    "id": 10561085362,
+    "name": "mov0-standard-finish-probability-v1",
+    "digest": "sha256:03e8651b2e34c656daadb2d789ba0cbf298d0dcad14ec3a08bd5d0d6ce64e866",
+    "manifest_sha256": "8e85abedab41b094157452a2c5f5da4324bf4395fded6ffa3db2085c28ac459a"
+  },
+  "guardrails": {
+    "market_data_used": false,
+    "roi_ev_analyzed": false,
+    "mov1_started": false,
+    "post_hoc_tuning": false,
+    "feature_changes": false,
+    "fold_changes": false,
+    "model_family_changes": false,
+    "terrain_regenerated": false,
+    "merge_performed": false
+  },
+  "caveat": "MOV0-FULL does not establish meaningful incremental value beyond MOV0-MIN; its bootstrap intervals cross zero. The CLEAR_SUCCESS classification is established by MOV0-MIN's robust incremental signal beyond B1.",
+  "recommendation": "MASTER_PM_REVIEW_AND_FREEZE_MOV0_V1_CLEAR_SUCCESS_DO_NOT_MERGE_YET"
+}

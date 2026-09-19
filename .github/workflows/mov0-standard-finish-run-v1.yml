@@ -1,0 +1,118 @@
+name: MOV0 Standard Finish Frozen Run V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/mov0-standard-finish-run-v1.yml"
+      - "src/ufc_edge/models/mov0.py"
+      - "tools/models/run_mov0.py"
+      - "tests/models/test_mov0.py"
+      - "tests/models/test_mov0_contract.py"
+      - "models/mov0/**"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: mov0-standard-finish-run-v1-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  implementation-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install frozen MOV0 dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2 pytest==8.3.5
+      - name: Verify exact approved base ancestry
+        run: git merge-base --is-ancestor a796d594b1815b0313fcf795f5251554f42f531c HEAD
+      - name: Run frozen contract and implementation tests
+        run: python -m pytest -q tests/models/test_mov0_contract.py tests/models/test_mov0.py
+      - name: Compile implementation and CLI
+        run: python -m py_compile src/ufc_edge/models/mov0.py tools/models/run_mov0.py
+
+  frozen-run:
+    needs: implementation-tests
+    if: github.event.pull_request.head.sha == 'dd4e7de7de4baa24090388fcf845c996564f2bf8'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install frozen MOV0 dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+      - name: Verify frozen MOV0 contract invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor a796d594b1815b0313fcf795f5251554f42f531c HEAD
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("models/mov0")
+          target=json.loads((root/"target_contract_v1.json").read_text())
+          feature=json.loads((root/"feature_surface_v1.json").read_text())
+          model=json.loads((root/"model_contract_v1.json").read_text())
+          validation=json.loads((root/"validation_plan_v1.json").read_text())
+          assert target["governed_evaluation_population"]["exact_counts"]["TOTAL"] == 4260
+          assert feature["source"]["corrected_f02_predictor_logical_sha256"] == "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0"
+          assert feature["source"]["corrected_f02_table_sha256"] == "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580"
+          assert model["specification"]["C_grid"] == [0.03,0.1,0.3,1]
+          assert validation["chronology"]["modeling_era_start"] == "2015-01-01"
+          assert validation["chronology"]["governed_oof_evaluation_years"] == list(range(2018,2027))
+          print("frozen MOV0 contract invariants verified")
+          PY
+      - name: Download pinned corrected F02 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/corrected-f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Execute first frozen MOV0 run
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf models/mov0/run_v1
+          python tools/models/run_mov0.py \
+            --f02-dir "${{ runner.temp }}/corrected-f02" \
+            --canonical-fights data/canonical/v0/fights.csv \
+            --contract-dir models/mov0 \
+            --terrain-assignment governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz \
+            --output-dir models/mov0/run_v1 | tee "${{ runner.temp }}/mov0-console.log"
+      - name: Publish frozen run summary
+        if: success()
+        run: |
+          cat models/mov0/run_v1/report.md >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Machine-readable console summary follows." >> "$GITHUB_STEP_SUMMARY"
+          tail -n +2 "${{ runner.temp }}/mov0-console.log" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload complete frozen MOV0 evidence package
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mov0-standard-finish-probability-v1
+          path: |
+            models/mov0/run_v1
+            ${{ runner.temp }}/mov0-console.log
+          if-no-files-found: error
+          retention-days: 30
