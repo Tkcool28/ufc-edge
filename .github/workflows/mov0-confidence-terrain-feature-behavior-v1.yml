@@ -15,6 +15,7 @@ permissions:
 
 jobs:
   diagnostic:
+    if: github.event.pull_request.head.sha == '8e25545a78acf05e361f6260360ffcf3efb97820'
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
