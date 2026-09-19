@@ -1,0 +1,388 @@
+{
+  "N": 4260,
+  "effectively_unchanged_at_1e_12": 0,
+  "fixed_groups": [
+    {
+      "N": 168,
+      "group": "-0.10 < delta_p <= -0.05",
+      "mean_delta_p": -0.06663933372928631,
+      "median_delta_p": -0.06437522540200462,
+      "observed_finish_rate": 0.5,
+      "terrain_counts": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": 20,
+          "LOW_MISSINGNESS": 148
+        },
+        "experience_bucket": {
+          "0": 20,
+          "11+": 9,
+          "1\u20132": 56,
+          "3\u20135": 49,
+          "6\u201310": 34
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": 112,
+          "GRAPPLE_ONE_SIDED": 29,
+          "GRAPPLE_TWO_SIDED": 7,
+          "UNASSIGNABLE_BY_CONTRACT": 20
+        },
+        "joint_mov_environment": {
+          "STRIKE_LOW__GRAPPLE_LOW": 79,
+          "STRIKE_LOW__GRAPPLE_ONE_SIDED": 25,
+          "STRIKE_LOW__GRAPPLE_TWO_SIDED": 6,
+          "STRIKE_ONE_SIDED__GRAPPLE_LOW": 30,
+          "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED": 4,
+          "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED": 1,
+          "STRIKE_TWO_SIDED__GRAPPLE_LOW": 3,
+          "UNASSIGNABLE_BY_CONTRACT": 20
+        },
+        "layoff_bucket": {
+          "12\u201318 months": 20,
+          "18+ months": 15,
+          "6\u201312 months": 74,
+          "< 6 months": 39,
+          "STRUCTURAL_NA_OR_UNKNOWN": 20
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": 160,
+          "5_ROUND": 8
+        },
+        "striking_environment": {
+          "STRIKE_LOW": 110,
+          "STRIKE_ONE_SIDED": 35,
+          "STRIKE_TWO_SIDED": 3,
+          "UNASSIGNABLE_BY_CONTRACT": 20
+        },
+        "title_status": {
+          "NON_TITLE_BOUT": 163,
+          "TITLE_BOUT": 5
+        },
+        "weight_class": {
+          "Bantamweight": 31,
+          "Catch Weight": 1,
+          "Featherweight": 17,
+          "Flyweight": 9,
+          "Heavyweight": 14,
+          "Interim Middleweight": 1,
+          "Light Heavyweight": 13,
+          "Lightweight": 17,
+          "Middleweight": 18,
+          "Welterweight": 23,
+          "Women's Bantamweight": 5,
+          "Women's Flyweight": 16,
+          "Women's Strawweight": 3
+        }
+      }
+    },
+    {
+      "N": 3240,
+      "group": "-0.05 < delta_p < +0.05",
+      "mean_delta_p": 0.009733818089710711,
+      "median_delta_p": 0.012496931401213496,
+      "observed_finish_rate": 0.4882716049382716,
+      "terrain_counts": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": 735,
+          "LOW_MISSINGNESS": 2505
+        },
+        "experience_bucket": {
+          "0": 735,
+          "11+": 287,
+          "1\u20132": 855,
+          "3\u20135": 712,
+          "6\u201310": 651
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": 1798,
+          "GRAPPLE_ONE_SIDED": 619,
+          "GRAPPLE_TWO_SIDED": 88,
+          "UNASSIGNABLE_BY_CONTRACT": 735
+        },
+        "joint_mov_environment": {
+          "STRIKE_LOW__GRAPPLE_LOW": 1162,
+          "STRIKE_LOW__GRAPPLE_ONE_SIDED": 504,
+          "STRIKE_LOW__GRAPPLE_TWO_SIDED": 80,
+          "STRIKE_ONE_SIDED__GRAPPLE_LOW": 520,
+          "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED": 102,
+          "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED": 8,
+          "STRIKE_TWO_SIDED__GRAPPLE_LOW": 116,
+          "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED": 13,
+          "UNASSIGNABLE_BY_CONTRACT": 735
+        },
+        "layoff_bucket": {
+          "12\u201318 months": 354,
+          "18+ months": 219,
+          "6\u201312 months": 1255,
+          "< 6 months": 677,
+          "STRUCTURAL_NA_OR_UNKNOWN": 735
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": 2929,
+          "5_ROUND": 311
+        },
+        "striking_environment": {
+          "STRIKE_LOW": 1746,
+          "STRIKE_ONE_SIDED": 630,
+          "STRIKE_TWO_SIDED": 129,
+          "UNASSIGNABLE_BY_CONTRACT": 735
+        },
+        "title_status": {
+          "NON_TITLE_BOUT": 3117,
+          "TITLE_BOUT": 123
+        },
+        "weight_class": {
+          "Bantamweight": 373,
+          "Catch Weight": 44,
+          "Featherweight": 376,
+          "Flyweight": 197,
+          "Heavyweight": 228,
+          "Interim Bantamweight": 1,
+          "Interim Flyweight": 1,
+          "Interim Heavyweight": 3,
+          "Interim Lightweight": 1,
+          "Interim Welterweight": 1,
+          "Light Heavyweight": 251,
+          "Lightweight": 433,
+          "Middleweight": 363,
+          "Road To UFC 1 Bantamweight Tournament": 1,
+          "Road To UFC 1 Featherweight Tournament": 1,
+          "Road To UFC 1 Lightweight Tournament": 1,
+          "Road to UFC 1 Flyweight Tournament": 1,
+          "Road to UFC 3 Bantamweight Tournament TitleBout": 1,
+          "Road to UFC 3 Flyweight Tournament TitleBout": 1,
+          "Road to UFC 3 Women's Strawweight Tournament TitleBout": 1,
+          "Ultimate Fighter 27 Featherweight Tournament": 1,
+          "Ultimate Fighter 27 Lightweight Tournament": 1,
+          "Ultimate Fighter 28 Heavyweight Tournament": 1,
+          "Ultimate Fighter 28 Women's Featherweight Tournament": 1,
+          "Ultimate Fighter 32 Featherweight Tournament": 1,
+          "Ultimate Fighter 32 Middleweight Tournament": 1,
+          "Ultimate Fighter 33 Flyweight Tournament": 1,
+          "Ultimate Fighter 33 Welterweight Tournament": 1,
+          "Welterweight": 405,
+          "Women's Bantamweight": 119,
+          "Women's Featherweight": 20,
+          "Women's Flyweight": 199,
+          "Women's Strawweight": 210
+        }
+      }
+    },
+    {
+      "N": 768,
+      "group": "+0.05 <= delta_p < +0.10",
+      "mean_delta_p": 0.06770547544398038,
+      "median_delta_p": 0.06508771711183668,
+      "observed_finish_rate": 0.5182291666666666,
+      "terrain_counts": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": 66,
+          "LOW_MISSINGNESS": 702
+        },
+        "experience_bucket": {
+          "0": 66,
+          "11+": 85,
+          "1\u20132": 219,
+          "3\u20135": 207,
+          "6\u201310": 191
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": 483,
+          "GRAPPLE_ONE_SIDED": 199,
+          "GRAPPLE_TWO_SIDED": 20,
+          "UNASSIGNABLE_BY_CONTRACT": 66
+        },
+        "joint_mov_environment": {
+          "STRIKE_LOW__GRAPPLE_LOW": 280,
+          "STRIKE_LOW__GRAPPLE_ONE_SIDED": 132,
+          "STRIKE_LOW__GRAPPLE_TWO_SIDED": 18,
+          "STRIKE_ONE_SIDED__GRAPPLE_LOW": 174,
+          "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED": 64,
+          "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED": 2,
+          "STRIKE_TWO_SIDED__GRAPPLE_LOW": 29,
+          "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED": 3,
+          "UNASSIGNABLE_BY_CONTRACT": 66
+        },
+        "layoff_bucket": {
+          "12\u201318 months": 90,
+          "18+ months": 52,
+          "6\u201312 months": 350,
+          "< 6 months": 210,
+          "STRUCTURAL_NA_OR_UNKNOWN": 66
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": 674,
+          "5_ROUND": 94
+        },
+        "striking_environment": {
+          "STRIKE_LOW": 430,
+          "STRIKE_ONE_SIDED": 240,
+          "STRIKE_TWO_SIDED": 32,
+          "UNASSIGNABLE_BY_CONTRACT": 66
+        },
+        "title_status": {
+          "NON_TITLE_BOUT": 732,
+          "TITLE_BOUT": 36
+        },
+        "weight_class": {
+          "Bantamweight": 71,
+          "Catch Weight": 12,
+          "Featherweight": 93,
+          "Flyweight": 36,
+          "Heavyweight": 66,
+          "Interim Featherweight": 1,
+          "Interim Heavyweight": 1,
+          "Interim Lightweight": 2,
+          "Light Heavyweight": 48,
+          "Lightweight": 109,
+          "Middleweight": 83,
+          "Welterweight": 103,
+          "Women's Bantamweight": 30,
+          "Women's Featherweight": 6,
+          "Women's Flyweight": 47,
+          "Women's Strawweight": 60
+        }
+      }
+    },
+    {
+      "N": 17,
+      "group": "delta_p <= -0.10",
+      "mean_delta_p": -0.11458069751493855,
+      "median_delta_p": -0.10850647203774527,
+      "observed_finish_rate": 0.47058823529411764,
+      "terrain_counts": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": 17
+        },
+        "experience_bucket": {
+          "11+": 1,
+          "1\u20132": 6,
+          "3\u20135": 5,
+          "6\u201310": 5
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": 10,
+          "GRAPPLE_ONE_SIDED": 4,
+          "GRAPPLE_TWO_SIDED": 3
+        },
+        "joint_mov_environment": {
+          "STRIKE_LOW__GRAPPLE_LOW": 9,
+          "STRIKE_LOW__GRAPPLE_ONE_SIDED": 2,
+          "STRIKE_LOW__GRAPPLE_TWO_SIDED": 2,
+          "STRIKE_ONE_SIDED__GRAPPLE_LOW": 1,
+          "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED": 2,
+          "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED": 1
+        },
+        "layoff_bucket": {
+          "12\u201318 months": 3,
+          "18+ months": 1,
+          "6\u201312 months": 5,
+          "< 6 months": 8
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": 13,
+          "5_ROUND": 4
+        },
+        "striking_environment": {
+          "STRIKE_LOW": 13,
+          "STRIKE_ONE_SIDED": 4
+        },
+        "title_status": {
+          "NON_TITLE_BOUT": 14,
+          "TITLE_BOUT": 3
+        },
+        "weight_class": {
+          "Bantamweight": 2,
+          "Featherweight": 5,
+          "Flyweight": 1,
+          "Lightweight": 2,
+          "Middleweight": 1,
+          "Welterweight": 4,
+          "Women's Bantamweight": 1,
+          "Women's Flyweight": 1
+        }
+      }
+    },
+    {
+      "N": 67,
+      "group": "delta_p >= +0.10",
+      "mean_delta_p": 0.11361641170042092,
+      "median_delta_p": 0.10801579465682881,
+      "observed_finish_rate": 0.6417910447761194,
+      "terrain_counts": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": 67
+        },
+        "experience_bucket": {
+          "11+": 10,
+          "1\u20132": 33,
+          "3\u20135": 16,
+          "6\u201310": 8
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": 41,
+          "GRAPPLE_ONE_SIDED": 22,
+          "GRAPPLE_TWO_SIDED": 4
+        },
+        "joint_mov_environment": {
+          "STRIKE_LOW__GRAPPLE_LOW": 16,
+          "STRIKE_LOW__GRAPPLE_ONE_SIDED": 13,
+          "STRIKE_LOW__GRAPPLE_TWO_SIDED": 4,
+          "STRIKE_ONE_SIDED__GRAPPLE_LOW": 22,
+          "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED": 8,
+          "STRIKE_TWO_SIDED__GRAPPLE_LOW": 3,
+          "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED": 1
+        },
+        "layoff_bucket": {
+          "12\u201318 months": 6,
+          "18+ months": 6,
+          "6\u201312 months": 28,
+          "< 6 months": 27
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": 61,
+          "5_ROUND": 6
+        },
+        "striking_environment": {
+          "STRIKE_LOW": 33,
+          "STRIKE_ONE_SIDED": 30,
+          "STRIKE_TWO_SIDED": 4
+        },
+        "title_status": {
+          "NON_TITLE_BOUT": 62,
+          "TITLE_BOUT": 5
+        },
+        "weight_class": {
+          "Bantamweight": 8,
+          "Catch Weight": 2,
+          "Featherweight": 7,
+          "Flyweight": 5,
+          "Heavyweight": 3,
+          "Light Heavyweight": 7,
+          "Lightweight": 10,
+          "Middleweight": 9,
+          "Welterweight": 9,
+          "Women's Bantamweight": 3,
+          "Women's Flyweight": 3,
+          "Women's Strawweight": 1
+        }
+      }
+    }
+  ],
+  "mean_delta_p": 0.01831089094161826,
+  "median_delta_p": 0.01970241310485832,
+  "moved_down": 1278,
+  "moved_up": 2982,
+  "quantiles": {
+    "0.0": -0.1499973640713388,
+    "0.01": -0.0812883521912517,
+    "0.05": -0.047162940988483316,
+    "0.1": -0.03054584371046487,
+    "0.25": -0.006065519460372287,
+    "0.5": 0.01970241310485832,
+    "0.75": 0.043886638589226465,
+    "0.9": 0.0663707888014721,
+    "0.95": 0.08041722288168565,
+    "0.99": 0.10642725907048799,
+    "1.0": 0.16378335788703152
+  }
+}

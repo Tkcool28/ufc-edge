@@ -1,0 +1,29 @@
+{
+  "authoritative_source": {
+    "artifact": "mov0-standard-finish-probability-v1",
+    "artifact_id": 10561085362,
+    "f02_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "oof_sha256": {
+      "B1": "6f2f082e276f69a7cac8e527d7a9697f8e5d4b83931717aefc3e8c84e2f127a6",
+      "MOV0_FULL": "9d543356b157fefaabe27f7f4d1b5663536e4cf659fdf11fedd8531c4b13faa0",
+      "MOV0_MIN": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57"
+    },
+    "run_source_head": "dd4e7de7de4baa24090388fcf845c996564f2bf8",
+    "terrain_compressed_sha256": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2",
+    "workflow_run": 35376956316
+  },
+  "coefficient_recovery_label": "COEFFICIENT_RECOVERY_REFIT_ONLY",
+  "coefficient_recovery_status": "COEFFICIENT_RECOVERY_VALIDATED",
+  "modeling_methodology_changed": false,
+  "models_refit_only_for_coefficients": true,
+  "mov1_started": false,
+  "original_frozen_oof_remains_authoritative": true,
+  "predictions_regenerated": false,
+  "recalibrated": false,
+  "roi_ev_analyzed": false,
+  "simulator_code_built": false,
+  "specialized_models_built": false,
+  "sportsbook_data_used": false,
+  "status": "MOV0_CONFIDENCE_TERRAIN_FEATURE_BEHAVIOR_DIAGNOSTIC_V1_COMPLETE",
+  "thresholds_optimized": false
+}
