@@ -1,0 +1,77 @@
+name: M0 MD0R Odds API Replication V1 CI
+
+on:
+  push:
+    branches: [feat/m0-market-diagnostic-odds-api-replication-v1]
+    paths:
+      - 'src/ufc_edge/market_diagnostics/**'
+      - 'tools/market_diagnostics/**'
+      - 'tests/market_diagnostics/**'
+      - 'market_diagnostics/m0_md0r/**'
+      - '.github/workflows/m0-md0r-odds-api-replication-v1.yml'
+      - '.github/workflows/m0-md0r-odds-api-ci-v1.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/ufc_edge/market_diagnostics/**'
+      - 'tools/market_diagnostics/**'
+      - 'tests/market_diagnostics/**'
+      - 'market_diagnostics/m0_md0r/**'
+      - '.github/workflows/m0-md0r-odds-api-replication-v1.yml'
+      - '.github/workflows/m0-md0r-odds-api-ci-v1.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2 requests==2.32.3
+      - name: Parse replication sources
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          for path in [
+              Path('src/ufc_edge/market_diagnostics/core.py'),
+              Path('src/ufc_edge/market_diagnostics/analysis.py'),
+              Path('src/ufc_edge/market_diagnostics/odds_api_v1.py'),
+              Path('tools/market_diagnostics/run_m0_md0r_odds_api_v1.py'),
+              Path('tests/market_diagnostics/test_odds_api_replication_v1.py'),
+          ]:
+              ast.parse(path.read_text(), filename=str(path))
+          print('replication sources parse')
+          PY
+      - name: Run zero-credit tests
+        run: python -m unittest discover -s tests/market_diagnostics -p 'test_odds_api_replication_v1.py' -v
+      - name: Static secret and authorization-trigger audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q "workflow_dispatch:" .github/workflows/m0-md0r-odds-api-replication-v1.yml
+          grep -q "^  push:" .github/workflows/m0-md0r-odds-api-replication-v1.yml
+          ! grep -Eq '^  (pull_request|schedule):' .github/workflows/m0-md0r-odds-api-replication-v1.yml
+          grep -q "\[AUTHORIZED_ODDS_API_PULL\]" .github/workflows/m0-md0r-odds-api-replication-v1.yml
+          grep -q "refs/heads/feat/m0-market-diagnostic-odds-api-replication-v1" .github/workflows/m0-md0r-odds-api-replication-v1.yml
+          grep -q "approved_credit_ceiling == '3000'" .github/workflows/m0-md0r-odds-api-replication-v1.yml
+          grep -q 'secrets.THE_ODDS_API_KEY' .github/workflows/m0-md0r-odds-api-replication-v1.yml
+          ! grep -R --exclude='*.yml' --exclude='*.yaml' 'THE_ODDS_API_KEY' market_diagnostics src tools tests || true
+          ! grep -R -Ei '\b(ROI|Kelly|profit|units|edge[_ -]?threshold)\b' src/ufc_edge/market_diagnostics/odds_api_v1.py tools/market_diagnostics/run_m0_md0r_odds_api_v1.py
+      - name: Verify M0 and feature layers unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --quiet origin/main...HEAD -- models/m0 features/f02 src/ufc_edge/features tests/features tools/features data/canonical/v0
+      - name: Check whitespace
+        run: git diff --check origin/main...HEAD

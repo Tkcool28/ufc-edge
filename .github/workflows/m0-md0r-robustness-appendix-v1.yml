@@ -1,0 +1,80 @@
+name: M0 MD0R Robustness Appendix V1
+
+on:
+  push:
+    branches: [feat/m0-market-diagnostic-odds-api-replication-v1]
+    paths:
+      - 'tools/market_diagnostics/run_m0_md0r_robustness_appendix_v1.py'
+      - '.github/workflows/m0-md0r-robustness-appendix-v1.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  robustness:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install diagnostic dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scikit-learn==1.5.2
+
+      - name: Download completed M0-MD0-R artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: m0-md0r-odds-api-replication-v1
+          path: ${{ runner.temp }}/m0-md0r
+          repository: Tkcool28/ufc-edge
+          run-id: 34709098720
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run fixed-scope diagnostic robustness appendix
+        run: |
+          set -euo pipefail
+          python tools/market_diagnostics/run_m0_md0r_robustness_appendix_v1.py \
+            --matched-parquet "${{ runner.temp }}/m0-md0r/normalized/matched_rows.parquet" \
+            --output "${{ runner.temp }}/robustness_appendix_v1.json"
+
+      - name: Verify appendix guardrails
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=Path(os.environ["RUNNER_TEMP"])/"robustness_appendix_v1.json"
+          d=json.loads(p.read_text())
+          s=d["scope"]
+          assert s["new_bucket_boundaries_introduced"] is False
+          assert s["verdict_changed"] is False
+          assert s["roi_performed"] is False
+          assert s["thresholds_optimized"] is False
+          assert s["new_market_requests"] == 0
+          assert s["predeclared_disagreement_buckets"] == ["<0.05","0.05-0.10","0.10-0.15",">=0.15"]
+          print("robustness appendix guardrails pass")
+          PY
+
+      - name: Commit compact appendix
+        run: |
+          set -euo pipefail
+          mkdir -p market_diagnostics/m0_md0r/reports
+          cp "${RUNNER_TEMP}/robustness_appendix_v1.json" market_diagnostics/m0_md0r/reports/
+          git add market_diagnostics/m0_md0r/reports/robustness_appendix_v1.json
+          if git diff --cached --quiet; then
+            echo "No appendix changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "market diagnostic: add M0 MD0R robustness appendix"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
