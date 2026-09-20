@@ -53,5 +53,19 @@
   "source_artifact_digest": "sha256:ee425b7456c91a0fa713fb9d072afc33a28966fe9fec8c02be590877874a1f85",
   "source_artifact_id": 10592955918,
   "source_head": "8e25545a78acf05e361f6260360ffcf3efb97820",
-  "source_workflow_run": 35469722253
+  "source_workflow_run": 35469722253,
+  "closeout_complete": true,
+  "narrative_files": {
+    "MOV0_CONFIDENCE_TERRAIN_FEATURE_BEHAVIOR_DIAGNOSTIC_V1_REPORT.md": {
+      "role": "human_readable_final_report"
+    },
+    "FUTURE_SPECIALIZATION_HYPOTHESES.md": {
+      "role": "future_hypotheses_only"
+    },
+    "IMPLICATIONS_FOR_HIERARCHICAL_MOV_AND_FUTURE_SIMULATOR.md": {
+      "role": "architecture_implications_only"
+    }
+  },
+  "completion_marker": "MOV0_CONFIDENCE_TERRAIN_FEATURE_BEHAVIOR_DIAGNOSTIC_V1_COMPLETE.json",
+  "note": "Machine-readable evidence copied from validated artifact only; narrative closeout added afterward without refit or methodology change."
 }
