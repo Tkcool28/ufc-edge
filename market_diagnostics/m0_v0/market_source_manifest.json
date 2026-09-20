@@ -1,0 +1,54 @@
+{
+  "canonical_data_status": "DIAGNOSTIC_ONLY_NOT_CANONICAL_DATA",
+  "manifest_version": "0.1.0",
+  "retrieval_date": "2026-09-12",
+  "runtime_validation": {
+    "artifact_archive_sha256": "65107d3d9e6a9aceabf038fdc022da2bf81e706ce13b4c057668494ca27f26c4",
+    "artifact_id": 10293394863,
+    "diagnostic_table_logical_sha256": "a9fe9c4d68876fff2b38b1d3ce99b9f4379797fb86477cf9253de966607b8a0e",
+    "github_actions_run_id": 34681219952,
+    "matched_pct": 0.5977603981514398,
+    "matched_rows": 3363
+  },
+  "selected_fallback": {
+    "commit": "e22124fe43285f3a7018b5c2674e31441797ca9d",
+    "documented_upstream_market_source": "betmma.tips",
+    "earliest_date_observed": "2014-11-07",
+    "git_blob_sha": "dc41f6a4d585ec40e48bd422d751eb28faa9e74c",
+    "latest_date_observed": "2023-12-16",
+    "license_note": "No license file was observed at the pinned repository root. Use is restricted here to a reproducible diagnostic reference; the market rows are not ingested into UFC Edge canonical DATA.",
+    "odds_format": "decimal",
+    "outcome_field_policy": "The external source outcome column is ignored. UFC Edge frozen M0/F02 target is the only outcome used.",
+    "path": "data/cleaned_odds.csv",
+    "production_status": "NOT_CANONICAL_OR_PRODUCTION_QUALITY",
+    "repository": "theGholland/ufc-data_with_random_forests",
+    "rows_observed": 4452,
+    "source_extract_timestamp_field": "timestamp",
+    "source_file_sha256": "064d0b7bd94dd894d675180e4ebf8860f1925ac0193f7bbd4c30041db92489bf",
+    "technical_status": "TECHNICALLY_USABLE_FOR_DIAGNOSTIC",
+    "timing_note": "The extraction timestamp is not treated as the historical line observation time. V0 does not label these prices opening or closing.",
+    "timing_quality": "UNSPECIFIED_HISTORICAL_LISTED_ODDS",
+    "unique_events_observed": 375
+  },
+  "the_odds_api_first": {
+    "bounded_cost_estimate": {
+      "estimated_credits": 2680,
+      "policy": "one US-region h2h historical sport snapshot per UFC event",
+      "ufc_events_2020_06_06_through_2026_08_15": 268
+    },
+    "credential_observation": "No Odds API credential convention exists in this repository and the GitHub connector cannot read external/VPS secrets. No key was printed, copied, or requested.",
+    "credit_cost": "10 credits per region per market per historical request",
+    "documentation": [
+      "https://the-odds-api.com/sports-odds-data/ufc-odds.html",
+      "https://the-odds-api.com/liveapi/guides/v4/",
+      "https://the-odds-api.com/#pricing"
+    ],
+    "historical_access": "paid plans",
+    "historical_endpoint": "/v4/historical/sports/{sport}/odds",
+    "historical_start": "2020-06-06",
+    "market": "h2h",
+    "snapshot_frequency": "10 minutes historically; 5 minutes from September 2022 per provider documentation",
+    "sport_key": "mma_mixed_martial_arts",
+    "status": "CAPABILITY_CONFIRMED_AUTHENTICATED_PROBE_UNAVAILABLE_IN_CURRENT_CONNECTOR_CONTEXT"
+  }
+}
