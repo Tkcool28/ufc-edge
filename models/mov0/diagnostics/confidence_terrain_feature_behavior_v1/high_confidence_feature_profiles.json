@@ -1,0 +1,2104 @@
+{
+  "rows": [
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.5412502780136148,
+      "median": 0.390308968097278,
+      "predictor": "fs__prior_fight_count__career__raw::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.434790765416061,
+      "median": 0.19171126434104713,
+      "predictor": "fs__prior_fight_count__career__raw::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 1.6438732559749383,
+      "median": 1.62887204690339,
+      "predictor": "fs__early_finish_profile__r1_finish_win__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.5562911905354139,
+      "median": 0.28129108181411855,
+      "predictor": "fs__early_finish_profile__r1_finish_win__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.8361094660376868,
+      "median": 0.5761776071204109,
+      "predictor": "fs__early_finish_profile__r1_finish_loss__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.4588132966505651,
+      "median": 0.1755216813857459,
+      "predictor": "fs__early_finish_profile__r1_finish_loss__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 1.2964606370114788,
+      "median": 1.271460160172313,
+      "predictor": "fs__finish_method_win_profile__ko_tko__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.2718475966343723,
+      "median": 0.10908965158513124,
+      "predictor": "fs__finish_method_win_profile__ko_tko__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.5733007193674774,
+      "median": 0.38035337445192,
+      "predictor": "fs__finish_method_win_profile__submission__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.3826061760895178,
+      "median": 0.11770946844038263,
+      "predictor": "fs__finish_method_win_profile__submission__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.793595804030726,
+      "median": 0.6425559982486331,
+      "predictor": "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.32735204169231036,
+      "median": 0.032715458333585586,
+      "predictor": "fs__finish_method_loss_profile__ko_tko__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.06305859647710506,
+      "median": -0.2519191060451316,
+      "predictor": "fs__finish_method_loss_profile__submission__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.19889786671819532,
+      "median": -0.14116234080432907,
+      "predictor": "fs__finish_method_loss_profile__submission__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 1.3899332964741413,
+      "median": 1.2690757333064475,
+      "predictor": "fs__knockdown_rate__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.8712774636807753,
+      "median": 0.47247702258667923,
+      "predictor": "fs__knockdown_rate__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.7687757349751457,
+      "median": 0.2194722806265088,
+      "predictor": "fs__knockdown_rate__allowed_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.3651503826886863,
+      "median": -0.1298946835705334,
+      "predictor": "fs__knockdown_rate__allowed_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.5977272884656472,
+      "median": 0.3174216370401397,
+      "predictor": "fs__submission_attempt_rate__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.6401852988213244,
+      "median": 0.35957596023061783,
+      "predictor": "fs__submission_attempt_rate__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0905287706697579,
+      "median": -0.056250655611404896,
+      "predictor": "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.10636352667630435,
+      "median": -0.16391976870121916,
+      "predictor": "fs__submission_attempt_rate__faced_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.15951778452720566,
+      "median": -0.37804813524054787,
+      "predictor": "fs__takedown_pressure__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.06445076316650361,
+      "median": -0.16027781857623358,
+      "predictor": "fs__takedown_pressure__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.10053689475483289,
+      "median": -0.1033414677338531,
+      "predictor": "fs__takedown_pressure__faced_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.09178551313237468,
+      "median": -0.3329379468744225,
+      "predictor": "fs__takedown_pressure__faced_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 1.0135655469928548,
+      "median": 0.7970666697642314,
+      "predictor": "fs__knockdown_efficiency__creation__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.5958755718983557,
+      "median": 0.3032646549683713,
+      "predictor": "fs__knockdown_efficiency__creation__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.5382065031459712,
+      "median": 0.13570497771511497,
+      "predictor": "fs__knockdown_efficiency__vulnerability__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.2524096277000301,
+      "median": -0.1631694448481955,
+      "predictor": "fs__knockdown_efficiency__vulnerability__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.714540175845946,
+      "median": 0.5702043266184698,
+      "predictor": "fs__sig_strike_flow__landed_per_min__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.2815346308838491,
+      "median": 0.11664359466451041,
+      "predictor": "fs__sig_strike_flow__landed_per_min__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.2823450034976194,
+      "median": 0.16625490777245616,
+      "predictor": "fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.09323345595627204,
+      "median": -0.11566708721805807,
+      "predictor": "fs__sig_strike_flow__absorbed_per_min__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 1.0421807415505864,
+      "median": 0.9650521284894646,
+      "predictor": "fs__sig_strike_efficiency__accuracy__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.13939332164382223,
+      "median": -0.06598674954249642,
+      "predictor": "fs__sig_strike_efficiency__accuracy__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.8485724652826194,
+      "median": -0.9214039930571285,
+      "predictor": "fs__sig_strike_efficiency__defense__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.09949284121394372,
+      "median": -0.08244326967878879,
+      "predictor": "fs__sig_strike_efficiency__defense__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.11134292957540008,
+      "median": -0.20732283139327917,
+      "predictor": "fs__sig_environment_mix__clinch_share__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.05223354648034803,
+      "median": -0.22277487892684536,
+      "predictor": "fs__sig_environment_mix__clinch_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.6448011987325087,
+      "median": 0.389664171564019,
+      "predictor": "fs__sig_environment_mix__ground_share__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.37181379723065744,
+      "median": -0.00615513393093143,
+      "predictor": "fs__sig_environment_mix__ground_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.015384287887998028,
+      "median": 0.13985527064036468,
+      "predictor": "fs__sig_target_mix__head_share__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.2951699064297944,
+      "median": 0.06368271821230756,
+      "predictor": "fs__sig_target_mix__head_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.003447542929499247,
+      "median": -0.057433173500667,
+      "predictor": "fs__sig_target_mix__body_share__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.1754738765228794,
+      "median": 0.005797365162888407,
+      "predictor": "fs__sig_target_mix__body_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.011805476467744696,
+      "median": -0.12464026565613787,
+      "predictor": "fs__takedown_conversion__success__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.13824011897933755,
+      "median": -0.4553448122946687,
+      "predictor": "fs__takedown_conversion__success__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.22540152833052512,
+      "median": -0.24837245774703093,
+      "predictor": "fs__takedown_conversion__defense__career__shrunk::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": -0.016142676206473694,
+      "median": -0.18645782225136165,
+      "predictor": "fs__takedown_conversion__defense__career__shrunk::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.5128583450122217,
+      "median": 0.45436001136743476,
+      "predictor": "directional_knockdown_matchup::mean"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.3201904404495107,
+      "median": -0.04014097429328657,
+      "predictor": "directional_knockdown_matchup::absdiff"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 1.1782382961148707,
+      "median": -0.3219076502911708,
+      "predictor": "scheduled_rounds"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.11855670103092783,
+      "median": 0.0,
+      "predictor": "ctx__title_bout"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.020618556701030927,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Bantamweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.02577319587628866,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Catch Weight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.015463917525773196,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Featherweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.02577319587628866,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Flyweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.20618556701030927,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Heavyweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Featherweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Light Heavyweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.010309278350515464,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Lightweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Middleweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.30927835051546393,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Light Heavyweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.1134020618556701,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Lightweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.20618556701030927,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Middleweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 21 Welterweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 22 Lightweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 23 Light Heavyweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 23 Women's Strawweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 25 Welterweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Brazil 4 Bantamweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Brazil 4 Lightweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 2 Lightweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 2 Welterweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 3 Lightweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.041237113402061855,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Welterweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Bantamweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.015463917525773196,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Featherweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Flyweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Strawweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Welterweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 27 Featherweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 27 Lightweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 28 Heavyweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 28 Women's Featherweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Bantamweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.022222222222222223,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Heavyweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Flyweight"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Bantamweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Featherweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Lightweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 1 Flyweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Bantamweight Tournament TitleBout"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Flyweight Tournament TitleBout"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Women's Strawweight Tournament TitleBout"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 32 Featherweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 32 Middleweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 33 Flyweight Tournament"
+    },
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 33 Welterweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.4825082124786609,
+      "median": 0.19703941116850585,
+      "predictor": "fs__prior_fight_count__career__raw::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.42514365020681005,
+      "median": 0.05959101974628161,
+      "predictor": "fs__prior_fight_count__career__raw::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.8420802408299001,
+      "median": 0.8941831388913043,
+      "predictor": "fs__early_finish_profile__r1_finish_win__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.7751296847167509,
+      "median": 0.5740330892383044,
+      "predictor": "fs__early_finish_profile__r1_finish_win__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.5525732717941142,
+      "median": 0.43402904024964345,
+      "predictor": "fs__early_finish_profile__r1_finish_loss__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.4664592237121632,
+      "median": 0.13994809582150136,
+      "predictor": "fs__early_finish_profile__r1_finish_loss__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.7133892034861479,
+      "median": 0.5614402645768337,
+      "predictor": "fs__finish_method_win_profile__ko_tko__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.44209741952540976,
+      "median": 0.4378806877480045,
+      "predictor": "fs__finish_method_win_profile__ko_tko__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.34659813580759924,
+      "median": 0.1628239109721154,
+      "predictor": "fs__finish_method_win_profile__submission__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.31979427987021947,
+      "median": -0.0008887464128321289,
+      "predictor": "fs__finish_method_win_profile__submission__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.6799970225318674,
+      "median": 0.5318925625149707,
+      "predictor": "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.4959612361750477,
+      "median": 0.22356312809944373,
+      "predictor": "fs__finish_method_loss_profile__ko_tko__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.00687321272065442,
+      "median": -0.2504539600154413,
+      "predictor": "fs__finish_method_loss_profile__submission__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.20100016761156453,
+      "median": -0.22340525088296834,
+      "predictor": "fs__finish_method_loss_profile__submission__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.6777858087884551,
+      "median": 0.5361241779175834,
+      "predictor": "fs__knockdown_rate__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.48348509063345707,
+      "median": 0.12051532519622457,
+      "predictor": "fs__knockdown_rate__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.6445602173608946,
+      "median": 0.30891177381467316,
+      "predictor": "fs__knockdown_rate__allowed_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.3827520078744679,
+      "median": -0.10648045416057945,
+      "predictor": "fs__knockdown_rate__allowed_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.43503691798002264,
+      "median": 0.26702664247053337,
+      "predictor": "fs__submission_attempt_rate__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.6180291287796525,
+      "median": 0.23481295323034296,
+      "predictor": "fs__submission_attempt_rate__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.1452913175526915,
+      "median": 0.14209553011213039,
+      "predictor": "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.16778433281874752,
+      "median": -0.2299562063464604,
+      "predictor": "fs__submission_attempt_rate__faced_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.02417146791899891,
+      "median": -0.06770851284290974,
+      "predictor": "fs__takedown_pressure__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.24462678540506486,
+      "median": -0.045817860144672345,
+      "predictor": "fs__takedown_pressure__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.19349542203282388,
+      "median": 0.05900036329414919,
+      "predictor": "fs__takedown_pressure__faced_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.33045645971732657,
+      "median": 0.13468928668648292,
+      "predictor": "fs__takedown_pressure__faced_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.3954321913901952,
+      "median": 0.1711748607742362,
+      "predictor": "fs__knockdown_efficiency__creation__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.1364317266443688,
+      "median": -0.14608931307375692,
+      "predictor": "fs__knockdown_efficiency__creation__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.36083293511029463,
+      "median": 0.013028481232397443,
+      "predictor": "fs__knockdown_efficiency__vulnerability__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.2127560241786811,
+      "median": -0.1378743437181189,
+      "predictor": "fs__knockdown_efficiency__vulnerability__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.5581709059248641,
+      "median": 0.44256182951735246,
+      "predictor": "fs__sig_strike_flow__landed_per_min__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.3117868258735886,
+      "median": 0.09317575980291529,
+      "predictor": "fs__sig_strike_flow__landed_per_min__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.586754485477398,
+      "median": 0.41523225640264383,
+      "predictor": "fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.040751463695775446,
+      "median": -0.44703461334962336,
+      "predictor": "fs__sig_strike_flow__absorbed_per_min__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.8113496206808472,
+      "median": 0.8793229547345869,
+      "predictor": "fs__sig_strike_efficiency__accuracy__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.36258758783039224,
+      "median": -0.458099818195268,
+      "predictor": "fs__sig_strike_efficiency__accuracy__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -1.21394137621888,
+      "median": -1.2886684351818785,
+      "predictor": "fs__sig_strike_efficiency__defense__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.25439323467882985,
+      "median": -0.03751648910375652,
+      "predictor": "fs__sig_strike_efficiency__defense__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.15384122887760399,
+      "median": -0.30363259698383926,
+      "predictor": "fs__sig_environment_mix__clinch_share__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.04016450846839294,
+      "median": -0.25483680554716204,
+      "predictor": "fs__sig_environment_mix__clinch_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.24570243577185083,
+      "median": -0.017154811972567664,
+      "predictor": "fs__sig_environment_mix__ground_share__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.1453159588461633,
+      "median": -0.06426047719869474,
+      "predictor": "fs__sig_environment_mix__ground_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0763061348629581,
+      "median": 0.1790492618028661,
+      "predictor": "fs__sig_target_mix__head_share__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.004435288544439701,
+      "median": -0.18816678506774956,
+      "predictor": "fs__sig_target_mix__head_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.10097910847658771,
+      "median": 0.022744258799114583,
+      "predictor": "fs__sig_target_mix__body_share__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.18435093537970929,
+      "median": -0.38058638687947893,
+      "predictor": "fs__sig_target_mix__body_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.10622610524274535,
+      "median": -0.144453858418767,
+      "predictor": "fs__takedown_conversion__success__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.20567240089075647,
+      "median": -0.41858891374997076,
+      "predictor": "fs__takedown_conversion__success__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.09674331778353662,
+      "median": -0.1559986509801719,
+      "predictor": "fs__takedown_conversion__defense__career__shrunk::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": -0.23335434464853932,
+      "median": -0.3926317439071021,
+      "predictor": "fs__takedown_conversion__defense__career__shrunk::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.11581358990609956,
+      "median": 0.056597417892270394,
+      "predictor": "directional_knockdown_matchup::mean"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.2420370028569875,
+      "median": -0.08580697227236418,
+      "predictor": "directional_knockdown_matchup::absdiff"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.4075929700771853,
+      "median": -0.32770989790209676,
+      "predictor": "scheduled_rounds"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.08333333333333333,
+      "median": 0.0,
+      "predictor": "ctx__title_bout"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.041666666666666664,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Bantamweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.025,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Catch Weight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.025,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Featherweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.03333333333333333,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Flyweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.11666666666666667,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Heavyweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Featherweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Light Heavyweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.008333333333333333,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Lightweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Middleweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.18333333333333332,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Light Heavyweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.20833333333333334,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Lightweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.25,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Middleweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 21 Welterweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 22 Lightweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 23 Light Heavyweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 23 Women's Strawweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 25 Welterweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Brazil 4 Bantamweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Brazil 4 Lightweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 2 Lightweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 2 Welterweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 3 Lightweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.09166666666666666,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Welterweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.008333333333333333,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Bantamweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.008333333333333333,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Featherweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Flyweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Strawweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Welterweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 27 Featherweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 27 Lightweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 28 Heavyweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 28 Women's Featherweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Bantamweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Heavyweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Flyweight"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Bantamweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Featherweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Lightweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 1 Flyweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Bantamweight Tournament TitleBout"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Flyweight Tournament TitleBout"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Women's Strawweight Tournament TitleBout"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 32 Featherweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 32 Middleweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 33 Flyweight Tournament"
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 33 Welterweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.20856356301446774,
+      "median": 0.16224386986111083,
+      "predictor": "fs__prior_fight_count__career__raw::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.11941027486901759,
+      "median": -0.5127951759631427,
+      "predictor": "fs__prior_fight_count__career__raw::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.9324134183879895,
+      "median": 0.8791034252435885,
+      "predictor": "fs__early_finish_profile__r1_finish_win__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.13680384394385373,
+      "median": -0.4316978239866528,
+      "predictor": "fs__early_finish_profile__r1_finish_win__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.4989777566150894,
+      "median": 0.4258837307593743,
+      "predictor": "fs__early_finish_profile__r1_finish_loss__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.5475873966916238,
+      "median": 0.43460781840022217,
+      "predictor": "fs__early_finish_profile__r1_finish_loss__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.7933469810927949,
+      "median": 0.9768468928888527,
+      "predictor": "fs__finish_method_win_profile__ko_tko__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.10854796461074959,
+      "median": -0.12796369137599306,
+      "predictor": "fs__finish_method_win_profile__ko_tko__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0007038160376751214,
+      "median": -0.005538094153550804,
+      "predictor": "fs__finish_method_win_profile__submission__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.05598541588307097,
+      "median": -0.5713741512034349,
+      "predictor": "fs__finish_method_win_profile__submission__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.7689037197939782,
+      "median": 0.734767965117837,
+      "predictor": "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.5180487457169681,
+      "median": 0.10435522322360813,
+      "predictor": "fs__finish_method_loss_profile__ko_tko__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.22366135491635816,
+      "median": -0.35275443175530835,
+      "predictor": "fs__finish_method_loss_profile__submission__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.4630793153093383,
+      "median": -0.021689376526925156,
+      "predictor": "fs__finish_method_loss_profile__submission__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.6940110643285107,
+      "median": 0.8647228480326655,
+      "predictor": "fs__knockdown_rate__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.18073056057561224,
+      "median": 0.2212666063175368,
+      "predictor": "fs__knockdown_rate__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 1.035020633639541,
+      "median": 0.5893525812254761,
+      "predictor": "fs__knockdown_rate__allowed_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 1.2377297897791584,
+      "median": 0.8715813494044707,
+      "predictor": "fs__knockdown_rate__allowed_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.2110813573358389,
+      "median": -0.36922380970593294,
+      "predictor": "fs__submission_attempt_rate__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.5549953485890466,
+      "median": -0.04153067154288961,
+      "predictor": "fs__submission_attempt_rate__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.10607524334978596,
+      "median": -0.5295431111914011,
+      "predictor": "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.1560757304637179,
+      "median": -0.42557065217702195,
+      "predictor": "fs__submission_attempt_rate__faced_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.013172346109715825,
+      "median": -0.2834130475684348,
+      "predictor": "fs__takedown_pressure__created_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.007749289195564686,
+      "median": -0.1443251226743516,
+      "predictor": "fs__takedown_pressure__created_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.28215733015730454,
+      "median": -0.5227433815046107,
+      "predictor": "fs__takedown_pressure__faced_per_15__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.207018694401706,
+      "median": -0.23649540501621025,
+      "predictor": "fs__takedown_pressure__faced_per_15__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.6815779839616883,
+      "median": 0.532693937897186,
+      "predictor": "fs__knockdown_efficiency__creation__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.3119713545293023,
+      "median": 0.03357885753858199,
+      "predictor": "fs__knockdown_efficiency__creation__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 1.058321073912624,
+      "median": 0.666429181296631,
+      "predictor": "fs__knockdown_efficiency__vulnerability__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 1.0557643354265283,
+      "median": 0.7098448351483808,
+      "predictor": "fs__knockdown_efficiency__vulnerability__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.11028265497348817,
+      "median": -0.15498745057041488,
+      "predictor": "fs__sig_strike_flow__landed_per_min__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.05134698480084231,
+      "median": -0.5587521070193284,
+      "predictor": "fs__sig_strike_flow__landed_per_min__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.12805865713507092,
+      "median": -0.10312365920214864,
+      "predictor": "fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.03888359152258666,
+      "median": -0.2861389512559966,
+      "predictor": "fs__sig_strike_flow__absorbed_per_min__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.5942337999754276,
+      "median": 0.42667614110221147,
+      "predictor": "fs__sig_strike_efficiency__accuracy__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.6967491788779233,
+      "median": 0.3948856551961428,
+      "predictor": "fs__sig_strike_efficiency__accuracy__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.26800129270102885,
+      "median": -0.3560330518105947,
+      "predictor": "fs__sig_strike_efficiency__defense__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.1462605287798836,
+      "median": -0.06734298249010118,
+      "predictor": "fs__sig_strike_efficiency__defense__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.04506457576226893,
+      "median": 0.012737298091622246,
+      "predictor": "fs__sig_environment_mix__clinch_share__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.03493280149673635,
+      "median": -0.08494496128489007,
+      "predictor": "fs__sig_environment_mix__clinch_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.3690662578481063,
+      "median": 0.09884099895890935,
+      "predictor": "fs__sig_environment_mix__ground_share__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.4638593171344571,
+      "median": -0.17297823721938155,
+      "predictor": "fs__sig_environment_mix__ground_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.3853162209552589,
+      "median": -0.49176160177413386,
+      "predictor": "fs__sig_target_mix__head_share__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.3563536338159799,
+      "median": 0.3474735734229454,
+      "predictor": "fs__sig_target_mix__head_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.6043029085278855,
+      "median": 0.6906392993197754,
+      "predictor": "fs__sig_target_mix__body_share__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.684456023423033,
+      "median": 0.39105687446052184,
+      "predictor": "fs__sig_target_mix__body_share__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.3543375125359697,
+      "median": -0.36084112834116233,
+      "predictor": "fs__takedown_conversion__success__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.317780050047895,
+      "median": 0.24949816937618963,
+      "predictor": "fs__takedown_conversion__success__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.21668206601722967,
+      "median": -0.08622472977345316,
+      "predictor": "fs__takedown_conversion__defense__career__shrunk::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.5963392196387381,
+      "median": 0.6590183586497835,
+      "predictor": "fs__takedown_conversion__defense__career__shrunk::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.31104261807520256,
+      "median": 0.2581442069877826,
+      "predictor": "directional_knockdown_matchup::mean"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": -0.017565428279333592,
+      "median": -0.46637681564721833,
+      "predictor": "directional_knockdown_matchup::absdiff"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.6243536367896004,
+      "median": -0.3245388170727516,
+      "predictor": "scheduled_rounds"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.05555555555555555,
+      "median": 0.0,
+      "predictor": "ctx__title_bout"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.05555555555555555,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Bantamweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Catch Weight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.1111111111111111,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Featherweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Flyweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.16666666666666666,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Heavyweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Featherweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Light Heavyweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Lightweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Middleweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.1111111111111111,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Light Heavyweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.1111111111111111,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Lightweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.3333333333333333,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Middleweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 21 Welterweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 22 Lightweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 23 Light Heavyweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 23 Women's Strawweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 25 Welterweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Brazil 4 Bantamweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Brazil 4 Lightweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 2 Lightweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 2 Welterweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter Latin America 3 Lightweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.1111111111111111,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Welterweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Bantamweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Featherweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Flyweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Women's Strawweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Welterweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 27 Featherweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 27 Lightweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 28 Heavyweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 28 Women's Featherweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Bantamweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Heavyweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Interim Flyweight"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Bantamweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Featherweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road To UFC 1 Lightweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 1 Flyweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Bantamweight Tournament TitleBout"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Flyweight Tournament TitleBout"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Road to UFC 3 Women's Strawweight Tournament TitleBout"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 32 Featherweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 32 Middleweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 33 Flyweight Tournament"
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean": 0.0,
+      "median": 0.0,
+      "predictor": "ctx__weight_class==Ultimate Fighter 33 Welterweight Tournament"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "rows": [
+    {
+      "N": 194,
+      "group": "BOTH_GE_0_70",
+      "mean_FULL_probability": 0.7800767492632092,
+      "mean_MIN_probability": 0.7584418227749634,
+      "mean_delta_p": 0.021634926488245693,
+      "observed_finish_rate": 0.6958762886597938,
+      "terrain_counts": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": 10,
+          "LOW_MISSINGNESS": 184
+        },
+        "experience_bucket": {
+          "0": 10,
+          "11+": 24,
+          "1\u20132": 47,
+          "3\u20135": 55,
+          "6\u201310": 58
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": 106,
+          "GRAPPLE_ONE_SIDED": 67,
+          "GRAPPLE_TWO_SIDED": 11,
+          "UNASSIGNABLE_BY_CONTRACT": 10
+        },
+        "joint_mov_environment": {
+          "STRIKE_LOW__GRAPPLE_LOW": 35,
+          "STRIKE_LOW__GRAPPLE_ONE_SIDED": 39,
+          "STRIKE_LOW__GRAPPLE_TWO_SIDED": 10,
+          "STRIKE_ONE_SIDED__GRAPPLE_LOW": 49,
+          "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED": 24,
+          "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED": 1,
+          "STRIKE_TWO_SIDED__GRAPPLE_LOW": 22,
+          "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED": 4,
+          "UNASSIGNABLE_BY_CONTRACT": 10
+        },
+        "layoff_bucket": {
+          "12\u201318 months": 26,
+          "18+ months": 10,
+          "6\u201312 months": 96,
+          "< 6 months": 52,
+          "STRUCTURAL_NA_OR_UNKNOWN": 10
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": 108,
+          "5_ROUND": 86
+        },
+        "striking_environment": {
+          "STRIKE_LOW": 84,
+          "STRIKE_ONE_SIDED": 74,
+          "STRIKE_TWO_SIDED": 26,
+          "UNASSIGNABLE_BY_CONTRACT": 10
+        },
+        "title_status": {
+          "NON_TITLE_BOUT": 171,
+          "TITLE_BOUT": 23
+        },
+        "weight_class": {
+          "Bantamweight": 4,
+          "Catch Weight": 5,
+          "Featherweight": 3,
+          "Flyweight": 5,
+          "Heavyweight": 40,
+          "Interim Heavyweight": 2,
+          "Interim Lightweight": 2,
+          "Light Heavyweight": 60,
+          "Lightweight": 22,
+          "Middleweight": 40,
+          "Welterweight": 8,
+          "Women's Featherweight": 3
+        }
+      }
+    },
+    {
+      "N": 120,
+      "group": "PROMOTED_BY_FULL",
+      "mean_FULL_probability": 0.7233440987111123,
+      "mean_MIN_probability": 0.6626179450987054,
+      "mean_delta_p": 0.060726153612406894,
+      "observed_finish_rate": 0.6666666666666666,
+      "terrain_counts": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": 8,
+          "LOW_MISSINGNESS": 112
+        },
+        "experience_bucket": {
+          "0": 8,
+          "11+": 23,
+          "1\u20132": 38,
+          "3\u20135": 26,
+          "6\u201310": 25
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": 64,
+          "GRAPPLE_ONE_SIDED": 43,
+          "GRAPPLE_TWO_SIDED": 5,
+          "UNASSIGNABLE_BY_CONTRACT": 8
+        },
+        "joint_mov_environment": {
+          "STRIKE_LOW__GRAPPLE_LOW": 26,
+          "STRIKE_LOW__GRAPPLE_ONE_SIDED": 26,
+          "STRIKE_LOW__GRAPPLE_TWO_SIDED": 4,
+          "STRIKE_ONE_SIDED__GRAPPLE_LOW": 27,
+          "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED": 14,
+          "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED": 1,
+          "STRIKE_TWO_SIDED__GRAPPLE_LOW": 11,
+          "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED": 3,
+          "UNASSIGNABLE_BY_CONTRACT": 8
+        },
+        "layoff_bucket": {
+          "12\u201318 months": 11,
+          "18+ months": 7,
+          "6\u201312 months": 48,
+          "< 6 months": 46,
+          "STRUCTURAL_NA_OR_UNKNOWN": 8
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": 94,
+          "5_ROUND": 26
+        },
+        "striking_environment": {
+          "STRIKE_LOW": 56,
+          "STRIKE_ONE_SIDED": 42,
+          "STRIKE_TWO_SIDED": 14,
+          "UNASSIGNABLE_BY_CONTRACT": 8
+        },
+        "title_status": {
+          "NON_TITLE_BOUT": 110,
+          "TITLE_BOUT": 10
+        },
+        "weight_class": {
+          "Bantamweight": 5,
+          "Catch Weight": 3,
+          "Featherweight": 3,
+          "Flyweight": 4,
+          "Heavyweight": 14,
+          "Interim Lightweight": 1,
+          "Light Heavyweight": 22,
+          "Lightweight": 25,
+          "Middleweight": 30,
+          "Welterweight": 11,
+          "Women's Bantamweight": 1,
+          "Women's Featherweight": 1
+        }
+      }
+    },
+    {
+      "N": 18,
+      "group": "DEMOTED_BY_FULL",
+      "mean_FULL_probability": 0.6821731910205533,
+      "mean_MIN_probability": 0.7154025721041983,
+      "mean_delta_p": -0.033229381083645086,
+      "observed_finish_rate": 0.5,
+      "terrain_counts": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": 3,
+          "LOW_MISSINGNESS": 15
+        },
+        "experience_bucket": {
+          "0": 3,
+          "11+": 2,
+          "1\u20132": 1,
+          "3\u20135": 8,
+          "6\u201310": 4
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": 10,
+          "GRAPPLE_ONE_SIDED": 5,
+          "UNASSIGNABLE_BY_CONTRACT": 3
+        },
+        "joint_mov_environment": {
+          "STRIKE_LOW__GRAPPLE_LOW": 5,
+          "STRIKE_LOW__GRAPPLE_ONE_SIDED": 4,
+          "STRIKE_ONE_SIDED__GRAPPLE_LOW": 4,
+          "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED": 1,
+          "STRIKE_TWO_SIDED__GRAPPLE_LOW": 1,
+          "UNASSIGNABLE_BY_CONTRACT": 3
+        },
+        "layoff_bucket": {
+          "12\u201318 months": 3,
+          "18+ months": 1,
+          "6\u201312 months": 5,
+          "< 6 months": 6,
+          "STRUCTURAL_NA_OR_UNKNOWN": 3
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": 13,
+          "5_ROUND": 5
+        },
+        "striking_environment": {
+          "STRIKE_LOW": 9,
+          "STRIKE_ONE_SIDED": 5,
+          "STRIKE_TWO_SIDED": 1,
+          "UNASSIGNABLE_BY_CONTRACT": 3
+        },
+        "title_status": {
+          "NON_TITLE_BOUT": 17,
+          "TITLE_BOUT": 1
+        },
+        "weight_class": {
+          "Bantamweight": 1,
+          "Featherweight": 2,
+          "Heavyweight": 3,
+          "Light Heavyweight": 2,
+          "Lightweight": 2,
+          "Middleweight": 6,
+          "Welterweight": 2
+        }
+      }
+    }
+  ]
+}

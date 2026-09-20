@@ -1,0 +1,65 @@
+name: Publish MOV0 Confidence Terrain Diagnostic Evidence
+
+on:
+  push:
+    branches:
+      - diag/mov0-confidence-terrain-feature-behavior-v1
+    paths:
+      - ".github/workflows/publish-mov0-confidence-terrain-feature-behavior-v1.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: diag/mov0-confidence-terrain-feature-behavior-v1
+          fetch-depth: 0
+
+      - name: Download already-validated diagnostic artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mov0-confidence-terrain-feature-behavior-v1
+          path: ${{ runner.temp }}/diagnostic
+          repository: Tkcool28/ufc-edge
+          run-id: 35469722253
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Persist machine-readable evidence without rerunning models
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest="models/mov0/diagnostics/confidence_terrain_feature_behavior_v1"
+          mkdir -p "$dest"
+          cp "${{ runner.temp }}/diagnostic/"*.json "$dest/"
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          dest=Path("models/mov0/diagnostics/confidence_terrain_feature_behavior_v1")
+          files={}
+          for p in sorted(dest.glob("*.json")):
+              h=hashlib.sha256(p.read_bytes()).hexdigest()
+              files[p.name]={"sha256":h,"bytes":p.stat().st_size}
+          manifest={
+            "source_workflow_run":35469722253,
+            "source_head":"8e25545a78acf05e361f6260360ffcf3efb97820",
+            "source_artifact_id":10592955918,
+            "source_artifact_digest":"sha256:ee425b7456c91a0fa713fb9d072afc33a28966fe9fec8c02be590877874a1f85",
+            "publication_mode":"COPY_VALIDATED_ARTIFACT_ONLY_NO_REFIT",
+            "files":files,
+          }
+          (dest/"EVIDENCE_MANIFEST.json").write_text(json.dumps(manifest,indent=2,sort_keys=True)+"\n")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$dest"
+          if git diff --cached --quiet; then
+            echo "No evidence changes to commit."
+            exit 0
+          fi
+          git commit -m "Persist MOV0 confidence terrain diagnostic evidence"
+          git push origin HEAD:diag/mov0-confidence-terrain-feature-behavior-v1

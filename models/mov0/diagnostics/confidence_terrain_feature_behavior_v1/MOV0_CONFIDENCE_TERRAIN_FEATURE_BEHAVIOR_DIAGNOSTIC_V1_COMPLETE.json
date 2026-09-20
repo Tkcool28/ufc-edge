@@ -1,0 +1,44 @@
+{
+  "status": "MOV0_CONFIDENCE_TERRAIN_FEATURE_BEHAVIOR_DIAGNOSTIC_V1_COMPLETE",
+  "closeout_complete": true,
+  "coefficient_recovery_label": "COEFFICIENT_RECOVERY_REFIT_ONLY",
+  "coefficient_recovery_status": "COEFFICIENT_RECOVERY_VALIDATED",
+  "coefficient_recovery_max_abs_probability_difference": 2.5368596112684827e-13,
+  "coefficient_recovery_tolerance": 1e-12,
+  "authoritative_source": {
+    "run_source_head": "dd4e7de7de4baa24090388fcf845c996564f2bf8",
+    "workflow_run": 35376956316,
+    "artifact": "mov0-standard-finish-probability-v1",
+    "artifact_id": 10561085362,
+    "oof_sha256": {
+      "B1": "6f2f082e276f69a7cac8e527d7a9697f8e5d4b83931717aefc3e8c84e2f127a6",
+      "MOV0_MIN": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57",
+      "MOV0_FULL": "9d543356b157fefaabe27f7f4d1b5663536e4cf659fdf11fedd8531c4b13faa0"
+    },
+    "f02_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "terrain_compressed_sha256": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2"
+  },
+  "diagnostic_evidence": {
+    "workflow_run": 35469722253,
+    "artifact_id": 10592955918,
+    "artifact_digest": "sha256:ee425b7456c91a0fa713fb9d072afc33a28966fe9fec8c02be590877874a1f85",
+    "validated_source_head": "8e25545a78acf05e361f6260360ffcf3efb97820"
+  },
+  "permanent_reports": [
+    "MOV0_CONFIDENCE_TERRAIN_FEATURE_BEHAVIOR_DIAGNOSTIC_V1_REPORT.md",
+    "FUTURE_SPECIALIZATION_HYPOTHESES.md",
+    "IMPLICATIONS_FOR_HIERARCHICAL_MOV_AND_FUTURE_SIMULATOR.md"
+  ],
+  "original_frozen_oof_remains_authoritative": true,
+  "predictions_regenerated": false,
+  "models_refit_only_for_coefficients": true,
+  "modeling_methodology_changed": false,
+  "recalibrated": false,
+  "thresholds_optimized": false,
+  "sportsbook_data_used": false,
+  "roi_ev_analyzed": false,
+  "mov1_started": false,
+  "specialized_models_built": false,
+  "simulator_code_built": false,
+  "merge_performed": false
+}

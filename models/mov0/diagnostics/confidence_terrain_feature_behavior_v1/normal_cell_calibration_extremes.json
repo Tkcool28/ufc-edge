@@ -1,0 +1,686 @@
+{
+  "most_overpredicting": [
+    {
+      "N": 144,
+      "calibration_gap": -0.11353570351737008,
+      "decision": 67,
+      "mean_predicted_finish_probability": 0.6482579257395923,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.5347222222222222,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 77,
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket",
+      "wilson_95": [
+        0.45341232301081896,
+        0.6142277021875813
+      ]
+    },
+    {
+      "N": 184,
+      "calibration_gap": -0.0998223304160652,
+      "decision": 119,
+      "mean_predicted_finish_probability": 0.4530831999812826,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.3532608695652174,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 65,
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class",
+      "wilson_95": [
+        0.2878418018254274,
+        0.4246817255203317
+      ]
+    },
+    {
+      "N": 140,
+      "calibration_gap": -0.09896199224968327,
+      "decision": 48,
+      "mean_predicted_finish_probability": 0.7561048493925404,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.6571428571428571,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 92,
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment",
+      "wilson_95": [
+        0.5752629486648756,
+        0.7306293883618803
+      ]
+    },
+    {
+      "N": 121,
+      "calibration_gap": -0.097941153600963,
+      "decision": 43,
+      "mean_predicted_finish_probability": 0.7425692527745167,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.6446280991735537,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 78,
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket",
+      "wilson_95": [
+        0.5561013965854266,
+        0.7242541866529061
+      ]
+    },
+    {
+      "N": 202,
+      "calibration_gap": -0.08225305009462724,
+      "decision": 68,
+      "mean_predicted_finish_probability": 0.7456193867282906,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.6633663366336634,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 134,
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket",
+      "wilson_95": [
+        0.5956895258979005,
+        0.7249455899729591
+      ]
+    },
+    {
+      "N": 116,
+      "calibration_gap": -0.08059669798148417,
+      "decision": 38,
+      "mean_predicted_finish_probability": 0.7530104910849325,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.6724137931034483,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 78,
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment",
+      "wilson_95": [
+        0.5826772878714725,
+        0.7510970202321003
+      ]
+    },
+    {
+      "N": 188,
+      "calibration_gap": -0.07805573154786316,
+      "decision": 61,
+      "mean_predicted_finish_probability": 0.7535876464414801,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.675531914893617,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 127,
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status",
+      "wilson_95": [
+        0.6056738805276713,
+        0.7383602005605427
+      ]
+    },
+    {
+      "N": 126,
+      "calibration_gap": -0.07677664342289914,
+      "decision": 55,
+      "mean_predicted_finish_probability": 0.6402687069149626,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5634920634920635,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 71,
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class",
+      "wilson_95": [
+        0.47628657044780054,
+        0.6469406340623964
+      ]
+    },
+    {
+      "N": 120,
+      "calibration_gap": -0.07596118834593568,
+      "decision": 52,
+      "mean_predicted_finish_probability": 0.6426278550126023,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5666666666666667,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 68,
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket",
+      "wilson_95": [
+        0.47729920885539046,
+        0.6518982356221157
+      ]
+    },
+    {
+      "N": 152,
+      "calibration_gap": -0.07502879048263666,
+      "decision": 66,
+      "mean_predicted_finish_probability": 0.6408182641668472,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.5657894736842105,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 86,
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment",
+      "wilson_95": [
+        0.486332141502749,
+        0.6420034127929235
+      ]
+    },
+    {
+      "N": 281,
+      "calibration_gap": -0.06936573380939393,
+      "decision": 88,
+      "mean_predicted_finish_probability": 0.7561984740229171,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.6868327402135231,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 193,
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status",
+      "wilson_95": [
+        0.6303949176433693,
+        0.7382311961067952
+      ]
+    },
+    {
+      "N": 199,
+      "calibration_gap": -0.06800002177993258,
+      "decision": 62,
+      "mean_predicted_finish_probability": 0.756442232835209,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.6884422110552764,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 137,
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier",
+      "wilson_95": [
+        0.6210393758892107,
+        0.7487075211999973
+      ]
+    },
+    {
+      "N": 144,
+      "calibration_gap": -0.06468895471659453,
+      "decision": 44,
+      "mean_predicted_finish_probability": 0.759133399161039,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.6944444444444444,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 100,
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket",
+      "wilson_95": [
+        0.6149674124527436,
+        0.7638167286582977
+      ]
+    },
+    {
+      "N": 110,
+      "calibration_gap": -0.06344949468318795,
+      "decision": 33,
+      "mean_predicted_finish_probability": 0.7634494946831879,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.7,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 77,
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment",
+      "wilson_95": [
+        0.6088013903272275,
+        0.7777010355535067
+      ]
+    },
+    {
+      "N": 101,
+      "calibration_gap": -0.06118105496744919,
+      "decision": 42,
+      "mean_predicted_finish_probability": 0.6453394708090333,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5841584158415841,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 59,
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment",
+      "wilson_95": [
+        0.48668116469928946,
+        0.6754684294710318
+      ]
+    },
+    {
+      "N": 296,
+      "calibration_gap": -0.06075633724646756,
+      "decision": 89,
+      "mean_predicted_finish_probability": 0.7600806615707919,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.6993243243243243,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 207,
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier",
+      "wilson_95": [
+        0.644805079217356,
+        0.748736229126412
+      ]
+    },
+    {
+      "N": 361,
+      "calibration_gap": -0.05999526181647452,
+      "decision": 151,
+      "mean_predicted_finish_probability": 0.6417127133400202,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.5817174515235457,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 210,
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment",
+      "wilson_95": [
+        0.5302338315877935,
+        0.6314802460576319
+      ]
+    },
+    {
+      "N": 113,
+      "calibration_gap": -0.059903759148035696,
+      "decision": 47,
+      "mean_predicted_finish_probability": 0.6439745556082127,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.584070796460177,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 66,
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket",
+      "wilson_95": [
+        0.49189396125761925,
+        0.6707195510330615
+      ]
+    },
+    {
+      "N": 199,
+      "calibration_gap": -0.05909591421984428,
+      "decision": 83,
+      "mean_predicted_finish_probability": 0.6420104870841659,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.5829145728643216,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 116,
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment",
+      "wilson_95": [
+        0.5134707075981797,
+        0.6492179271210716
+      ]
+    },
+    {
+      "N": 112,
+      "calibration_gap": -0.058223795386440846,
+      "decision": 31,
+      "mean_predicted_finish_probability": 0.7814380811007265,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.7232142857142857,
+      "probability_bucket": ">=0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 81,
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket",
+      "wilson_95": [
+        0.6340021985730062,
+        0.7976222000578224
+      ]
+    }
+  ],
+  "most_underpredicting": [
+    {
+      "N": 104,
+      "calibration_gap": 0.16957988418117775,
+      "decision": 49,
+      "mean_predicted_finish_probability": 0.3592662696649761,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5288461538461539,
+      "probability_bucket": "0.30\u2013<0.40",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 55,
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket",
+      "wilson_95": [
+        0.4336020882040901,
+        0.6220351413513454
+      ]
+    },
+    {
+      "N": 101,
+      "calibration_gap": 0.12461129492897305,
+      "decision": 52,
+      "mean_predicted_finish_probability": 0.3605372199225121,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.48514851485148514,
+      "probability_bucket": "0.30\u2013<0.40",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 49,
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class",
+      "wilson_95": [
+        0.39002463169250473,
+        0.5813607340421444
+      ]
+    },
+    {
+      "N": 156,
+      "calibration_gap": 0.11991227165667839,
+      "decision": 51,
+      "mean_predicted_finish_probability": 0.5531646514202447,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.6730769230769231,
+      "probability_bucket": "0.50\u2013<0.60",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 105,
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class",
+      "wilson_95": [
+        0.5960777363410698,
+        0.7417570181613636
+      ]
+    },
+    {
+      "N": 104,
+      "calibration_gap": 0.10302382465563936,
+      "decision": 67,
+      "mean_predicted_finish_probability": 0.2527454061135914,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.3557692307692308,
+      "probability_bucket": "<0.30",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 37,
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket",
+      "wilson_95": [
+        0.2704043252909598,
+        0.45140952693186287
+      ]
+    },
+    {
+      "N": 138,
+      "calibration_gap": 0.09033940185122713,
+      "decision": 50,
+      "mean_predicted_finish_probability": 0.5473417575690627,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.6376811594202898,
+      "probability_bucket": "0.50\u2013<0.60",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 88,
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class",
+      "wilson_95": [
+        0.5547613929154616,
+        0.7131433531012645
+      ]
+    },
+    {
+      "N": 200,
+      "calibration_gap": 0.08891350169975454,
+      "decision": 111,
+      "mean_predicted_finish_probability": 0.35608649830024547,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.445,
+      "probability_bucket": "0.30\u2013<0.40",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 89,
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket",
+      "wilson_95": [
+        0.3778060100295335,
+        0.5142669758719658
+      ]
+    },
+    {
+      "N": 176,
+      "calibration_gap": 0.08195450031223805,
+      "decision": 82,
+      "mean_predicted_finish_probability": 0.452136408778671,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.5340909090909091,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 94,
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment",
+      "wilson_95": [
+        0.46045340169232507,
+        0.6062720356939689
+      ]
+    },
+    {
+      "N": 177,
+      "calibration_gap": 0.0819412635034395,
+      "decision": 99,
+      "mean_predicted_finish_probability": 0.3587367025982554,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.4406779661016949,
+      "probability_bucket": "0.30\u2013<0.40",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 78,
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment",
+      "wilson_95": [
+        0.36956842662316114,
+        0.5143077589763939
+      ]
+    },
+    {
+      "N": 169,
+      "calibration_gap": 0.0760602098038421,
+      "decision": 79,
+      "mean_predicted_finish_probability": 0.4564841688943828,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.5325443786982249,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 90,
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class",
+      "wilson_95": [
+        0.45743480329711916,
+        0.6062073348510635
+      ]
+    },
+    {
+      "N": 216,
+      "calibration_gap": 0.07569108157653681,
+      "decision": 102,
+      "mean_predicted_finish_probability": 0.452086696201241,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.5277777777777778,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 114,
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment",
+      "wilson_95": [
+        0.4612984944873333,
+        0.5932862961357466
+      ]
+    },
+    {
+      "N": 386,
+      "calibration_gap": 0.073674825739099,
+      "decision": 185,
+      "mean_predicted_finish_probability": 0.44705056286193723,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5207253886010362,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 201,
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket",
+      "wilson_95": [
+        0.4709299931993157,
+        0.5701123321818827
+      ]
+    },
+    {
+      "N": 386,
+      "calibration_gap": 0.073674825739099,
+      "decision": 185,
+      "mean_predicted_finish_probability": 0.44705056286193723,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5207253886010362,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 201,
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket",
+      "wilson_95": [
+        0.4709299931993157,
+        0.5701123321818827
+      ]
+    },
+    {
+      "N": 386,
+      "calibration_gap": 0.073674825739099,
+      "decision": 185,
+      "mean_predicted_finish_probability": 0.44705056286193723,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5207253886010362,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 201,
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier",
+      "wilson_95": [
+        0.4709299931993157,
+        0.5701123321818827
+      ]
+    },
+    {
+      "N": 386,
+      "calibration_gap": 0.073674825739099,
+      "decision": 185,
+      "mean_predicted_finish_probability": 0.44705056286193723,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5207253886010362,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 201,
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment",
+      "wilson_95": [
+        0.4709299931993157,
+        0.5701123321818827
+      ]
+    },
+    {
+      "N": 386,
+      "calibration_gap": 0.073674825739099,
+      "decision": 185,
+      "mean_predicted_finish_probability": 0.44705056286193723,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5207253886010362,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 201,
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment",
+      "wilson_95": [
+        0.4709299931993157,
+        0.5701123321818827
+      ]
+    },
+    {
+      "N": 386,
+      "calibration_gap": 0.073674825739099,
+      "decision": 185,
+      "mean_predicted_finish_probability": 0.44705056286193723,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.5207253886010362,
+      "probability_bucket": "0.40\u2013<0.50",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 201,
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment",
+      "wilson_95": [
+        0.4709299931993157,
+        0.5701123321818827
+      ]
+    },
+    {
+      "N": 170,
+      "calibration_gap": 0.07250135379351397,
+      "decision": 96,
+      "mean_predicted_finish_probability": 0.36279276385354486,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.43529411764705883,
+      "probability_bucket": "0.30\u2013<0.40",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 74,
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment",
+      "wilson_95": [
+        0.363008986826011,
+        0.5104389228426972
+      ]
+    },
+    {
+      "N": 150,
+      "calibration_gap": 0.06971119166936435,
+      "decision": 86,
+      "mean_predicted_finish_probability": 0.35695547499730235,
+      "model": "MOV0_MIN",
+      "observed_finish_rate": 0.4266666666666667,
+      "probability_bucket": "0.30\u2013<0.40",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 64,
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment",
+      "wilson_95": [
+        0.3503209045656491,
+        0.5066747312750022
+      ]
+    },
+    {
+      "N": 103,
+      "calibration_gap": 0.06897930551719522,
+      "decision": 30,
+      "mean_predicted_finish_probability": 0.6397585585604747,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.7087378640776699,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 73,
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket",
+      "wilson_95": [
+        0.6147549222003607,
+        0.7877105670828252
+      ]
+    },
+    {
+      "N": 103,
+      "calibration_gap": 0.06897930551719522,
+      "decision": 30,
+      "mean_predicted_finish_probability": 0.6397585585604747,
+      "model": "MOV0_FULL",
+      "observed_finish_rate": 0.7087378640776699,
+      "probability_bucket": "0.60\u2013<0.70",
+      "sample_size_governance": "NORMAL",
+      "standard_finish": 73,
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket",
+      "wilson_95": [
+        0.6147549222003607,
+        0.7877105670828252
+      ]
+    }
+  ]
+}

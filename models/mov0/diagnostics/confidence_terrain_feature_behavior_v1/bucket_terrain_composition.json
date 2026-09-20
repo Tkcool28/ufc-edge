@@ -1,0 +1,5233 @@
+{
+  "rows": [
+    {
+      "N": 16,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04177545691906005,
+      "percent_of_terrain_category_in_probability_bucket": 0.0194884287454324,
+      "probability_bucket": "<0.30",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 30,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0783289817232376,
+      "percent_of_terrain_category_in_probability_bucket": 0.07653061224489796,
+      "probability_bucket": "<0.30",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 104,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.27154046997389036,
+      "percent_of_terrain_category_in_probability_bucket": 0.08896492728828058,
+      "probability_bucket": "<0.30",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 126,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.3289817232375979,
+      "percent_of_terrain_category_in_probability_bucket": 0.12740141557128412,
+      "probability_bucket": "<0.30",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 107,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2793733681462141,
+      "percent_of_terrain_category_in_probability_bucket": 0.1203599550056243,
+      "probability_bucket": "<0.30",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 45,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1174934725848564,
+      "percent_of_terrain_category_in_probability_bucket": 0.09513742071881606,
+      "probability_bucket": "<0.30",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 36,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.09399477806788512,
+      "percent_of_terrain_category_in_probability_bucket": 0.12286689419795221,
+      "probability_bucket": "<0.30",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 198,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.5169712793733682,
+      "percent_of_terrain_category_in_probability_bucket": 0.11565420560747663,
+      "probability_bucket": "<0.30",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 88,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2297650130548303,
+      "percent_of_terrain_category_in_probability_bucket": 0.09157127991675339,
+      "probability_bucket": "<0.30",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 16,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04177545691906005,
+      "percent_of_terrain_category_in_probability_bucket": 0.0194884287454324,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 382,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9973890339425587,
+      "percent_of_terrain_category_in_probability_bucket": 0.09955694553036226,
+      "probability_bucket": "<0.30",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0026109660574412533,
+      "percent_of_terrain_category_in_probability_bucket": 0.002364066193853428,
+      "probability_bucket": "<0.30",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 382,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9973890339425587,
+      "percent_of_terrain_category_in_probability_bucket": 0.09344422700587084,
+      "probability_bucket": "<0.30",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0026109660574412533,
+      "percent_of_terrain_category_in_probability_bucket": 0.005813953488372093,
+      "probability_bucket": "<0.30",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 15,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0391644908616188,
+      "percent_of_terrain_category_in_probability_bucket": 0.030927835051546393,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 31,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.08093994778067885,
+      "percent_of_terrain_category_in_probability_bucket": 0.06224899598393574,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 12,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.031331592689295036,
+      "percent_of_terrain_category_in_probability_bucket": 0.04838709677419355,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 15,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0391644908616188,
+      "percent_of_terrain_category_in_probability_bucket": 0.02626970227670753,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.005221932114882507,
+      "percent_of_terrain_category_in_probability_bucket": 0.004219409282700422,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 8,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.020887728459530026,
+      "percent_of_terrain_category_in_probability_bucket": 0.014705882352941176,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 69,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1801566579634465,
+      "percent_of_terrain_category_in_probability_bucket": 0.43670886075949367,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 78,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.20365535248041775,
+      "percent_of_terrain_category_in_probability_bucket": 0.2932330827067669,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 153,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.39947780678851175,
+      "percent_of_terrain_category_in_probability_bucket": 0.5583941605839416,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 16,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04177545691906005,
+      "percent_of_terrain_category_in_probability_bucket": 0.0194884287454324,
+      "probability_bucket": "<0.30",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 367,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.95822454308094,
+      "percent_of_terrain_category_in_probability_bucket": 0.10671706891538238,
+      "probability_bucket": "<0.30",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 333,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.8694516971279374,
+      "percent_of_terrain_category_in_probability_bucket": 0.1427958833619211,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 31,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.08093994778067885,
+      "percent_of_terrain_category_in_probability_bucket": 0.03301384451544196,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.007832898172323759,
+      "percent_of_terrain_category_in_probability_bucket": 0.017857142857142856,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 16,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04177545691906005,
+      "percent_of_terrain_category_in_probability_bucket": 0.0194884287454324,
+      "probability_bucket": "<0.30",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 295,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.7702349869451697,
+      "percent_of_terrain_category_in_probability_bucket": 0.1207037643207856,
+      "probability_bucket": "<0.30",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 63,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.16449086161879894,
+      "percent_of_terrain_category_in_probability_bucket": 0.07216494845360824,
+      "probability_bucket": "<0.30",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 9,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.02349869451697128,
+      "percent_of_terrain_category_in_probability_bucket": 0.07377049180327869,
+      "probability_bucket": "<0.30",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 16,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04177545691906005,
+      "percent_of_terrain_category_in_probability_bucket": 0.0194884287454324,
+      "probability_bucket": "<0.30",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 265,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.6919060052219321,
+      "percent_of_terrain_category_in_probability_bucket": 0.17141009055627426,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 59,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.15404699738903394,
+      "percent_of_terrain_category_in_probability_bucket": 0.08727810650887574,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 9,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.02349869451697128,
+      "percent_of_terrain_category_in_probability_bucket": 0.08181818181818182,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 27,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.07049608355091384,
+      "percent_of_terrain_category_in_probability_bucket": 0.03614457831325301,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.010443864229765013,
+      "percent_of_terrain_category_in_probability_bucket": 0.022222222222222223,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.007832898172323759,
+      "percent_of_terrain_category_in_probability_bucket": 0.019867549668874173,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 16,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04177545691906005,
+      "percent_of_terrain_category_in_probability_bucket": 0.0194884287454324,
+      "probability_bucket": "<0.30",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 122,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14104046242774568,
+      "percent_of_terrain_category_in_probability_bucket": 0.14859926918392205,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 95,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.10982658959537572,
+      "percent_of_terrain_category_in_probability_bucket": 0.2423469387755102,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 244,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.28208092485549136,
+      "percent_of_terrain_category_in_probability_bucket": 0.20872540633019676,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 204,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.23583815028901733,
+      "percent_of_terrain_category_in_probability_bucket": 0.20626895854398383,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 200,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.23121387283236994,
+      "percent_of_terrain_category_in_probability_bucket": 0.2249718785151856,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 104,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.12023121387283237,
+      "percent_of_terrain_category_in_probability_bucket": 0.21987315010570824,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 65,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.07514450867052024,
+      "percent_of_terrain_category_in_probability_bucket": 0.22184300341296928,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 384,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.4439306358381503,
+      "percent_of_terrain_category_in_probability_bucket": 0.22429906542056074,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 190,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.21965317919075145,
+      "percent_of_terrain_category_in_probability_bucket": 0.19771071800208118,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 122,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14104046242774568,
+      "percent_of_terrain_category_in_probability_bucket": 0.14859926918392205,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 833,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9630057803468208,
+      "percent_of_terrain_category_in_probability_bucket": 0.21709669012249153,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 32,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.03699421965317919,
+      "percent_of_terrain_category_in_probability_bucket": 0.07565011820330969,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 847,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9791907514450867,
+      "percent_of_terrain_category_in_probability_bucket": 0.2071917808219178,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.020809248554913295,
+      "percent_of_terrain_category_in_probability_bucket": 0.10465116279069768,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 134,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.15491329479768787,
+      "percent_of_terrain_category_in_probability_bucket": 0.27628865979381445,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 11,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.012716763005780347,
+      "percent_of_terrain_category_in_probability_bucket": 0.1864406779661017,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 156,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.18034682080924855,
+      "percent_of_terrain_category_in_probability_bucket": 0.3132530120481928,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 73,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.08439306358381503,
+      "percent_of_terrain_category_in_probability_bucket": 0.29435483870967744,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 11,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.012716763005780347,
+      "percent_of_terrain_category_in_probability_bucket": 0.03536977491961415,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.005780346820809248,
+      "percent_of_terrain_category_in_probability_bucket": 0.01567398119122257,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 101,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.11676300578034682,
+      "percent_of_terrain_category_in_probability_bucket": 0.17688266199649738,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 24,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.027745664739884393,
+      "percent_of_terrain_category_in_probability_bucket": 0.05063291139240506,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 97,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.11213872832369942,
+      "percent_of_terrain_category_in_probability_bucket": 0.17830882352941177,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 60,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06936416184971098,
+      "percent_of_terrain_category_in_probability_bucket": 0.379746835443038,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 6,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.006936416184971098,
+      "percent_of_terrain_category_in_probability_bucket": 0.23076923076923078,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 98,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.11329479768786127,
+      "percent_of_terrain_category_in_probability_bucket": 0.3684210526315789,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.10289017341040463,
+      "percent_of_terrain_category_in_probability_bucket": 0.3248175182481752,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 122,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14104046242774568,
+      "percent_of_terrain_category_in_probability_bucket": 0.14859926918392205,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 743,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.8589595375722543,
+      "percent_of_terrain_category_in_probability_bucket": 0.21605117766792672,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 549,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.6346820809248555,
+      "percent_of_terrain_category_in_probability_bucket": 0.23542024013722126,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 177,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2046242774566474,
+      "percent_of_terrain_category_in_probability_bucket": 0.18849840255591055,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.019653179190751446,
+      "percent_of_terrain_category_in_probability_bucket": 0.10119047619047619,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 122,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14104046242774568,
+      "percent_of_terrain_category_in_probability_bucket": 0.14859926918392205,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 556,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.6427745664739885,
+      "percent_of_terrain_category_in_probability_bucket": 0.22749590834697217,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 170,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.19653179190751446,
+      "percent_of_terrain_category_in_probability_bucket": 0.19473081328751432,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.019653179190751446,
+      "percent_of_terrain_category_in_probability_bucket": 0.13934426229508196,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 122,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14104046242774568,
+      "percent_of_terrain_category_in_probability_bucket": 0.14859926918392205,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 389,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.44971098265895953,
+      "percent_of_terrain_category_in_probability_bucket": 0.2516170763260026,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 145,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1676300578034682,
+      "percent_of_terrain_category_in_probability_bucket": 0.21449704142011836,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 15,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.017341040462427744,
+      "percent_of_terrain_category_in_probability_bucket": 0.13636363636363635,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 150,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.17341040462427745,
+      "percent_of_terrain_category_in_probability_bucket": 0.20080321285140562,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 25,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.028901734104046242,
+      "percent_of_terrain_category_in_probability_bucket": 0.1388888888888889,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0023121387283236996,
+      "percent_of_terrain_category_in_probability_bucket": 0.16666666666666666,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.019653179190751446,
+      "percent_of_terrain_category_in_probability_bucket": 0.11258278145695365,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 122,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14104046242774568,
+      "percent_of_terrain_category_in_probability_bucket": 0.14859926918392205,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 386,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2922028766086298,
+      "percent_of_terrain_category_in_probability_bucket": 0.4701583434835566,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 95,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.07191521574564724,
+      "percent_of_terrain_category_in_probability_bucket": 0.2423469387755102,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 357,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2702498107494323,
+      "percent_of_terrain_category_in_probability_bucket": 0.30538922155688625,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 259,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.19606358819076458,
+      "percent_of_terrain_category_in_probability_bucket": 0.26188068756319516,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 224,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.16956850870552612,
+      "percent_of_terrain_category_in_probability_bucket": 0.25196850393700787,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 138,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.10446631339894019,
+      "percent_of_terrain_category_in_probability_bucket": 0.2917547568710359,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 87,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06585919757759273,
+      "percent_of_terrain_category_in_probability_bucket": 0.29692832764505117,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 465,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.35200605601816803,
+      "percent_of_terrain_category_in_probability_bucket": 0.2716121495327103,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 245,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1854655563966692,
+      "percent_of_terrain_category_in_probability_bucket": 0.25494276795005205,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 386,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2922028766086298,
+      "percent_of_terrain_category_in_probability_bucket": 0.4701583434835566,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 1238,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9371688115064345,
+      "percent_of_terrain_category_in_probability_bucket": 0.3226479020067761,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 83,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06283118849356548,
+      "percent_of_terrain_category_in_probability_bucket": 0.19621749408983452,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 1275,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9651778955336866,
+      "percent_of_terrain_category_in_probability_bucket": 0.3118884540117417,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 46,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0348221044663134,
+      "percent_of_terrain_category_in_probability_bucket": 0.26744186046511625,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 211,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.15972747918243754,
+      "percent_of_terrain_category_in_probability_bucket": 0.4350515463917526,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 23,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0174110522331567,
+      "percent_of_terrain_category_in_probability_bucket": 0.3898305084745763,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 199,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1506434519303558,
+      "percent_of_terrain_category_in_probability_bucket": 0.39959839357429716,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 101,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.07645722937168811,
+      "percent_of_terrain_category_in_probability_bucket": 0.40725806451612906,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06737320211960636,
+      "percent_of_terrain_category_in_probability_bucket": 0.2861736334405145,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Interim Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 0.25,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Interim Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 39,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.029523088569265707,
+      "percent_of_terrain_category_in_probability_bucket": 0.12225705329153605,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 216,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1635124905374716,
+      "percent_of_terrain_category_in_probability_bucket": 0.37828371278458844,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 120,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.09084027252081757,
+      "percent_of_terrain_category_in_probability_bucket": 0.25316455696202533,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road To UFC 1 Bantamweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road To UFC 1 Featherweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road To UFC 1 Lightweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road to UFC 1 Flyweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road to UFC 3 Bantamweight Tournament TitleBout",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road to UFC 3 Flyweight Tournament TitleBout",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road to UFC 3 Women's Strawweight Tournament TitleBout",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 27 Featherweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 27 Lightweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 28 Women's Featherweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 32 Featherweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 32 Middleweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.000757002271006813,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 33 Welterweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 194,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1468584405753217,
+      "percent_of_terrain_category_in_probability_bucket": 0.35661764705882354,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 20,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.01514004542013626,
+      "percent_of_terrain_category_in_probability_bucket": 0.12658227848101267,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 8,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.006056018168054504,
+      "percent_of_terrain_category_in_probability_bucket": 0.3076923076923077,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 62,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.046934140802422405,
+      "percent_of_terrain_category_in_probability_bucket": 0.23308270676691728,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 24,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.018168054504163512,
+      "percent_of_terrain_category_in_probability_bucket": 0.08759124087591241,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 386,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2922028766086298,
+      "percent_of_terrain_category_in_probability_bucket": 0.4701583434835566,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 935,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.7077971233913701,
+      "percent_of_terrain_category_in_probability_bucket": 0.27188136086071535,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 655,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.4958364875094625,
+      "percent_of_terrain_category_in_probability_bucket": 0.2808747855917667,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 243,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.18395155185465556,
+      "percent_of_terrain_category_in_probability_bucket": 0.25878594249201275,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 37,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.028009084027252083,
+      "percent_of_terrain_category_in_probability_bucket": 0.22023809523809523,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 386,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2922028766086298,
+      "percent_of_terrain_category_in_probability_bucket": 0.4701583434835566,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 675,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.5109765329295988,
+      "percent_of_terrain_category_in_probability_bucket": 0.27618657937806873,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 226,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.17108251324753973,
+      "percent_of_terrain_category_in_probability_bucket": 0.2588774341351661,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 34,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.025738077214231644,
+      "percent_of_terrain_category_in_probability_bucket": 0.2786885245901639,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 386,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2922028766086298,
+      "percent_of_terrain_category_in_probability_bucket": 0.4701583434835566,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 439,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.33232399697199094,
+      "percent_of_terrain_category_in_probability_bucket": 0.28395860284605434,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 185,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1400454201362604,
+      "percent_of_terrain_category_in_probability_bucket": 0.27366863905325445,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 31,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.023467070401211203,
+      "percent_of_terrain_category_in_probability_bucket": 0.2818181818181818,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 201,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.15215745647236942,
+      "percent_of_terrain_category_in_probability_bucket": 0.26907630522088355,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 39,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.029523088569265707,
+      "percent_of_terrain_category_in_probability_bucket": 0.21666666666666667,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.002271006813020439,
+      "percent_of_terrain_category_in_probability_bucket": 0.25,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 35,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.026495079485238455,
+      "percent_of_terrain_category_in_probability_bucket": 0.23178807947019867,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.001514004542013626,
+      "percent_of_terrain_category_in_probability_bucket": 0.11764705882352941,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 386,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2922028766086298,
+      "percent_of_terrain_category_in_probability_bucket": 0.4701583434835566,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 195,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.20397489539748953,
+      "percent_of_terrain_category_in_probability_bucket": 0.23751522533495736,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.09309623430962342,
+      "percent_of_terrain_category_in_probability_bucket": 0.22704081632653061,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 268,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2803347280334728,
+      "percent_of_terrain_category_in_probability_bucket": 0.2292557741659538,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 228,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2384937238493724,
+      "percent_of_terrain_category_in_probability_bucket": 0.23053589484327602,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 176,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.18410041841004185,
+      "percent_of_terrain_category_in_probability_bucket": 0.19797525309336333,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 102,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.10669456066945607,
+      "percent_of_terrain_category_in_probability_bucket": 0.2156448202959831,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 59,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06171548117154812,
+      "percent_of_terrain_category_in_probability_bucket": 0.20136518771331058,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 387,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.40481171548117156,
+      "percent_of_terrain_category_in_probability_bucket": 0.22605140186915887,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 213,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.22280334728033474,
+      "percent_of_terrain_category_in_probability_bucket": 0.22164412070759626,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 195,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.20397489539748953,
+      "percent_of_terrain_category_in_probability_bucket": 0.23751522533495736,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 853,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.8922594142259415,
+      "percent_of_terrain_category_in_probability_bucket": 0.2223090956476414,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 103,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.10774058577405858,
+      "percent_of_terrain_category_in_probability_bucket": 0.24349881796690306,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 915,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9571129707112971,
+      "percent_of_terrain_category_in_probability_bucket": 0.22382583170254403,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 41,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04288702928870293,
+      "percent_of_terrain_category_in_probability_bucket": 0.23837209302325582,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 95,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.09937238493723849,
+      "percent_of_terrain_category_in_probability_bucket": 0.1958762886597938,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 13,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.013598326359832637,
+      "percent_of_terrain_category_in_probability_bucket": 0.22033898305084745,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 87,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.09100418410041841,
+      "percent_of_terrain_category_in_probability_bucket": 0.1746987951807229,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 38,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0397489539748954,
+      "percent_of_terrain_category_in_probability_bucket": 0.1532258064516129,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 99,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.10355648535564854,
+      "percent_of_terrain_category_in_probability_bucket": 0.3183279742765273,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0010460251046025104,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Interim Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0010460251046025104,
+      "percent_of_terrain_category_in_probability_bucket": 0.25,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Interim Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0010460251046025104,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Interim Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 114,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1192468619246862,
+      "percent_of_terrain_category_in_probability_bucket": 0.3573667711598746,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 141,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14748953974895398,
+      "percent_of_terrain_category_in_probability_bucket": 0.2469352014010508,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 156,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.16317991631799164,
+      "percent_of_terrain_category_in_probability_bucket": 0.3291139240506329,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0010460251046025104,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Ultimate Fighter 28 Heavyweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 169,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.17677824267782427,
+      "percent_of_terrain_category_in_probability_bucket": 0.31066176470588236,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0041841004184100415,
+      "percent_of_terrain_category_in_probability_bucket": 0.02531645569620253,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 6,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.006276150627615063,
+      "percent_of_terrain_category_in_probability_bucket": 0.23076923076923078,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 23,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.02405857740585774,
+      "percent_of_terrain_category_in_probability_bucket": 0.08646616541353383,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 7,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.007322175732217573,
+      "percent_of_terrain_category_in_probability_bucket": 0.025547445255474453,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 195,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.20397489539748953,
+      "percent_of_terrain_category_in_probability_bucket": 0.23751522533495736,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 761,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.7960251046025104,
+      "percent_of_terrain_category_in_probability_bucket": 0.22128525734225066,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 467,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.4884937238493724,
+      "percent_of_terrain_category_in_probability_bucket": 0.20025728987993138,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 251,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2625523012552301,
+      "percent_of_terrain_category_in_probability_bucket": 0.2673056443024494,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 43,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04497907949790795,
+      "percent_of_terrain_category_in_probability_bucket": 0.25595238095238093,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 195,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.20397489539748953,
+      "percent_of_terrain_category_in_probability_bucket": 0.23751522533495736,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 529,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.553347280334728,
+      "percent_of_terrain_category_in_probability_bucket": 0.21644844517184944,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 197,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.20606694560669456,
+      "percent_of_terrain_category_in_probability_bucket": 0.2256586483390607,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 35,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.036610878661087864,
+      "percent_of_terrain_category_in_probability_bucket": 0.28688524590163933,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 195,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.20397489539748953,
+      "percent_of_terrain_category_in_probability_bucket": 0.23751522533495736,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 291,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.3043933054393305,
+      "percent_of_terrain_category_in_probability_bucket": 0.18822768434670117,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 143,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14958158995815898,
+      "percent_of_terrain_category_in_probability_bucket": 0.21153846153846154,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 33,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.034518828451882845,
+      "percent_of_terrain_category_in_probability_bucket": 0.3,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 201,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2102510460251046,
+      "percent_of_terrain_category_in_probability_bucket": 0.26907630522088355,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 48,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0502092050209205,
+      "percent_of_terrain_category_in_probability_bucket": 0.26666666666666666,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0020920502092050207,
+      "percent_of_terrain_category_in_probability_bucket": 0.16666666666666666,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 37,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.038702928870292884,
+      "percent_of_terrain_category_in_probability_bucket": 0.24503311258278146,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 6,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.006276150627615063,
+      "percent_of_terrain_category_in_probability_bucket": 0.35294117647058826,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 195,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.20397489539748953,
+      "percent_of_terrain_category_in_probability_bucket": 0.23751522533495736,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1701720841300191,
+      "percent_of_terrain_category_in_probability_bucket": 0.10840438489646773,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 57,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1089866156787763,
+      "percent_of_terrain_category_in_probability_bucket": 0.14540816326530612,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 148,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2829827915869981,
+      "percent_of_terrain_category_in_probability_bucket": 0.12660393498716851,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 109,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2084130019120459,
+      "percent_of_terrain_category_in_probability_bucket": 0.1102123356926188,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 120,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2294455066921606,
+      "percent_of_terrain_category_in_probability_bucket": 0.13498312710911137,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 55,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.10516252390057361,
+      "percent_of_terrain_category_in_probability_bucket": 0.11627906976744186,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 35,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06692160611854685,
+      "percent_of_terrain_category_in_probability_bucket": 0.11945392491467577,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 177,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.3384321223709369,
+      "percent_of_terrain_category_in_probability_bucket": 0.10338785046728972,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 167,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.3193116634799235,
+      "percent_of_terrain_category_in_probability_bucket": 0.17377731529656607,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1701720841300191,
+      "percent_of_terrain_category_in_probability_bucket": 0.10840438489646773,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 410,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.7839388145315488,
+      "percent_of_terrain_category_in_probability_bucket": 0.10685431326557206,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 113,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.21606118546845124,
+      "percent_of_terrain_category_in_probability_bucket": 0.26713947990543735,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 481,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9196940726577438,
+      "percent_of_terrain_category_in_probability_bucket": 0.1176614481409002,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 42,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.08030592734225621,
+      "percent_of_terrain_category_in_probability_bucket": 0.2441860465116279,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 25,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04780114722753346,
+      "percent_of_terrain_category_in_probability_bucket": 0.05154639175257732,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 7,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.01338432122370937,
+      "percent_of_terrain_category_in_probability_bucket": 0.11864406779661017,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 20,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.03824091778202677,
+      "percent_of_terrain_category_in_probability_bucket": 0.040160642570281124,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 19,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.036328871892925434,
+      "percent_of_terrain_category_in_probability_bucket": 0.07661290322580645,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 69,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.13193116634799235,
+      "percent_of_terrain_category_in_probability_bucket": 0.22186495176848875,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0019120458891013384,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Interim Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0019120458891013384,
+      "percent_of_terrain_category_in_probability_bucket": 0.3333333333333333,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Interim Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0019120458891013384,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Interim Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 99,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.18929254302103252,
+      "percent_of_terrain_category_in_probability_bucket": 0.3103448275862069,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 74,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.14149139579349904,
+      "percent_of_terrain_category_in_probability_bucket": 0.1295971978984238,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 126,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.24091778202676864,
+      "percent_of_terrain_category_in_probability_bucket": 0.26582278481012656,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0019120458891013384,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Ultimate Fighter 33 Flyweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 66,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.12619502868068833,
+      "percent_of_terrain_category_in_probability_bucket": 0.1213235294117647,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.009560229445506692,
+      "percent_of_terrain_category_in_probability_bucket": 0.03164556962025317,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0057361376673040155,
+      "percent_of_terrain_category_in_probability_bucket": 0.11538461538461539,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.009560229445506692,
+      "percent_of_terrain_category_in_probability_bucket": 0.018796992481203006,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0019120458891013384,
+      "percent_of_terrain_category_in_probability_bucket": 0.0036496350364963502,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1701720841300191,
+      "percent_of_terrain_category_in_probability_bucket": 0.10840438489646773,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 434,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.8298279158699808,
+      "percent_of_terrain_category_in_probability_bucket": 0.12619947659203257,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 235,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.44933078393881454,
+      "percent_of_terrain_category_in_probability_bucket": 0.10077186963979416,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 158,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.30210325047801145,
+      "percent_of_terrain_category_in_probability_bucket": 0.16826411075612355,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 41,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.07839388145315487,
+      "percent_of_terrain_category_in_probability_bucket": 0.24404761904761904,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1701720841300191,
+      "percent_of_terrain_category_in_probability_bucket": 0.10840438489646773,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 273,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.5219885277246654,
+      "percent_of_terrain_category_in_probability_bucket": 0.11170212765957446,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 145,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.27724665391969405,
+      "percent_of_terrain_category_in_probability_bucket": 0.1660939289805269,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 16,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.030592734225621414,
+      "percent_of_terrain_category_in_probability_bucket": 0.13114754098360656,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1701720841300191,
+      "percent_of_terrain_category_in_probability_bucket": 0.10840438489646773,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 122,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2332695984703633,
+      "percent_of_terrain_category_in_probability_bucket": 0.07891332470892626,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 101,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1931166347992352,
+      "percent_of_terrain_category_in_probability_bucket": 0.14940828402366865,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 12,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.022944550669216062,
+      "percent_of_terrain_category_in_probability_bucket": 0.10909090909090909,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 115,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2198852772466539,
+      "percent_of_terrain_category_in_probability_bucket": 0.1539491298527443,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 39,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0745697896749522,
+      "percent_of_terrain_category_in_probability_bucket": 0.21666666666666667,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0076481835564053535,
+      "percent_of_terrain_category_in_probability_bucket": 0.3333333333333333,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 36,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06883365200764818,
+      "percent_of_terrain_category_in_probability_bucket": 0.23841059602649006,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.009560229445506692,
+      "percent_of_terrain_category_in_probability_bucket": 0.29411764705882354,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 89,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1701720841300191,
+      "percent_of_terrain_category_in_probability_bucket": 0.10840438489646773,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 13,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06132075471698113,
+      "percent_of_terrain_category_in_probability_bucket": 0.015834348355663823,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 26,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.12264150943396226,
+      "percent_of_terrain_category_in_probability_bucket": 0.0663265306122449,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 48,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.22641509433962265,
+      "percent_of_terrain_category_in_probability_bucket": 0.041060735671514116,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 63,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2971698113207547,
+      "percent_of_terrain_category_in_probability_bucket": 0.06370070778564206,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 62,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.29245283018867924,
+      "percent_of_terrain_category_in_probability_bucket": 0.06974128233970754,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 29,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.13679245283018868,
+      "percent_of_terrain_category_in_probability_bucket": 0.0613107822410148,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 11,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.05188679245283019,
+      "percent_of_terrain_category_in_probability_bucket": 0.03754266211604096,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 101,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.47641509433962265,
+      "percent_of_terrain_category_in_probability_bucket": 0.05899532710280374,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 58,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.27358490566037735,
+      "percent_of_terrain_category_in_probability_bucket": 0.060353798126951096,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 13,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06132075471698113,
+      "percent_of_terrain_category_in_probability_bucket": 0.015834348355663823,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 121,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.5707547169811321,
+      "percent_of_terrain_category_in_probability_bucket": 0.03153505342715663,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 91,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.42924528301886794,
+      "percent_of_terrain_category_in_probability_bucket": 0.21513002364066194,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 188,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.8867924528301887,
+      "percent_of_terrain_category_in_probability_bucket": 0.04598825831702544,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 24,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.11320754716981132,
+      "percent_of_terrain_category_in_probability_bucket": 0.13953488372093023,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.02358490566037736,
+      "percent_of_terrain_category_in_probability_bucket": 0.010309278350515464,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.02358490566037736,
+      "percent_of_terrain_category_in_probability_bucket": 0.0847457627118644,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.02358490566037736,
+      "percent_of_terrain_category_in_probability_bucket": 0.010040160642570281,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.02358490566037736,
+      "percent_of_terrain_category_in_probability_bucket": 0.020161290322580645,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 43,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2028301886792453,
+      "percent_of_terrain_category_in_probability_bucket": 0.1382636655948553,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.009433962264150943,
+      "percent_of_terrain_category_in_probability_bucket": 0.5,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Interim Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.009433962264150943,
+      "percent_of_terrain_category_in_probability_bucket": 0.6666666666666666,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Interim Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 62,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.29245283018867924,
+      "percent_of_terrain_category_in_probability_bucket": 0.19435736677115986,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 24,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.11320754716981132,
+      "percent_of_terrain_category_in_probability_bucket": 0.04203152364273205,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 46,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2169811320754717,
+      "percent_of_terrain_category_in_probability_bucket": 0.0970464135021097,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 10,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04716981132075472,
+      "percent_of_terrain_category_in_probability_bucket": 0.01838235294117647,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.014150943396226415,
+      "percent_of_terrain_category_in_probability_bucket": 0.11538461538461539,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 13,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06132075471698113,
+      "percent_of_terrain_category_in_probability_bucket": 0.015834348355663823,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 199,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.9386792452830188,
+      "percent_of_terrain_category_in_probability_bucket": 0.05786565862169235,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 93,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.4386792452830189,
+      "percent_of_terrain_category_in_probability_bucket": 0.03987993138936535,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 79,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.37264150943396224,
+      "percent_of_terrain_category_in_probability_bucket": 0.08413205537806177,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 27,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.12735849056603774,
+      "percent_of_terrain_category_in_probability_bucket": 0.16071428571428573,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 13,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06132075471698113,
+      "percent_of_terrain_category_in_probability_bucket": 0.015834348355663823,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 116,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.5471698113207547,
+      "percent_of_terrain_category_in_probability_bucket": 0.04746317512274959,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 72,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.33962264150943394,
+      "percent_of_terrain_category_in_probability_bucket": 0.08247422680412371,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 11,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.05188679245283019,
+      "percent_of_terrain_category_in_probability_bucket": 0.09016393442622951,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 13,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06132075471698113,
+      "percent_of_terrain_category_in_probability_bucket": 0.015834348355663823,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 40,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.18867924528301888,
+      "percent_of_terrain_category_in_probability_bucket": 0.0258732212160414,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 43,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.2028301886792453,
+      "percent_of_terrain_category_in_probability_bucket": 0.06360946745562131,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 10,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.04716981132075472,
+      "percent_of_terrain_category_in_probability_bucket": 0.09090909090909091,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 53,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.25,
+      "percent_of_terrain_category_in_probability_bucket": 0.07095046854082998,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 25,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.1179245283018868,
+      "percent_of_terrain_category_in_probability_bucket": 0.1388888888888889,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.0047169811320754715,
+      "percent_of_terrain_category_in_probability_bucket": 0.08333333333333333,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 23,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.10849056603773585,
+      "percent_of_terrain_category_in_probability_bucket": 0.152317880794702,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.018867924528301886,
+      "percent_of_terrain_category_in_probability_bucket": 0.23529411764705882,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 13,
+      "model": "MOV0_MIN",
+      "percent_of_probability_bucket": 0.06132075471698113,
+      "percent_of_terrain_category_in_probability_bucket": 0.015834348355663823,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04788732394366197,
+      "percent_of_terrain_category_in_probability_bucket": 0.020706455542021926,
+      "probability_bucket": "<0.30",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 26,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.07323943661971831,
+      "percent_of_terrain_category_in_probability_bucket": 0.0663265306122449,
+      "probability_bucket": "<0.30",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 83,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.23380281690140844,
+      "percent_of_terrain_category_in_probability_bucket": 0.07100085543199315,
+      "probability_bucket": "<0.30",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 123,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.3464788732394366,
+      "percent_of_terrain_category_in_probability_bucket": 0.1243680485338726,
+      "probability_bucket": "<0.30",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 106,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.29859154929577464,
+      "percent_of_terrain_category_in_probability_bucket": 0.11923509561304838,
+      "probability_bucket": "<0.30",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 37,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.10422535211267606,
+      "percent_of_terrain_category_in_probability_bucket": 0.07822410147991543,
+      "probability_bucket": "<0.30",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 35,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.09859154929577464,
+      "percent_of_terrain_category_in_probability_bucket": 0.11945392491467577,
+      "probability_bucket": "<0.30",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 186,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.523943661971831,
+      "percent_of_terrain_category_in_probability_bucket": 0.10864485981308411,
+      "probability_bucket": "<0.30",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 80,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.22535211267605634,
+      "percent_of_terrain_category_in_probability_bucket": 0.08324661810613944,
+      "probability_bucket": "<0.30",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04788732394366197,
+      "percent_of_terrain_category_in_probability_bucket": 0.020706455542021926,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 351,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9887323943661972,
+      "percent_of_terrain_category_in_probability_bucket": 0.09147771696637999,
+      "probability_bucket": "<0.30",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.011267605633802818,
+      "percent_of_terrain_category_in_probability_bucket": 0.009456264775413711,
+      "probability_bucket": "<0.30",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 352,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9915492957746479,
+      "percent_of_terrain_category_in_probability_bucket": 0.08610567514677103,
+      "probability_bucket": "<0.30",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.008450704225352112,
+      "percent_of_terrain_category_in_probability_bucket": 0.01744186046511628,
+      "probability_bucket": "<0.30",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 25,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.07042253521126761,
+      "percent_of_terrain_category_in_probability_bucket": 0.05154639175257732,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 25,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.07042253521126761,
+      "percent_of_terrain_category_in_probability_bucket": 0.050200803212851405,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 9,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.02535211267605634,
+      "percent_of_terrain_category_in_probability_bucket": 0.036290322580645164,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 15,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04225352112676056,
+      "percent_of_terrain_category_in_probability_bucket": 0.02626970227670753,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.008450704225352112,
+      "percent_of_terrain_category_in_probability_bucket": 0.006329113924050633,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 15,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04225352112676056,
+      "percent_of_terrain_category_in_probability_bucket": 0.027573529411764705,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 63,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.17746478873239438,
+      "percent_of_terrain_category_in_probability_bucket": 0.3987341772151899,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 66,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.18591549295774648,
+      "percent_of_terrain_category_in_probability_bucket": 0.24812030075187969,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 134,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.37746478873239436,
+      "percent_of_terrain_category_in_probability_bucket": 0.48905109489051096,
+      "probability_bucket": "<0.30",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04788732394366197,
+      "percent_of_terrain_category_in_probability_bucket": 0.020706455542021926,
+      "probability_bucket": "<0.30",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 338,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.952112676056338,
+      "percent_of_terrain_category_in_probability_bucket": 0.09828438499563827,
+      "probability_bucket": "<0.30",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 314,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.8845070422535212,
+      "percent_of_terrain_category_in_probability_bucket": 0.1346483704974271,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 22,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.061971830985915494,
+      "percent_of_terrain_category_in_probability_bucket": 0.023429179978700747,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.005633802816901409,
+      "percent_of_terrain_category_in_probability_bucket": 0.011904761904761904,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04788732394366197,
+      "percent_of_terrain_category_in_probability_bucket": 0.020706455542021926,
+      "probability_bucket": "<0.30",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 272,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.7661971830985915,
+      "percent_of_terrain_category_in_probability_bucket": 0.11129296235679215,
+      "probability_bucket": "<0.30",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 55,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.15492957746478872,
+      "percent_of_terrain_category_in_probability_bucket": 0.06300114547537228,
+      "probability_bucket": "<0.30",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 11,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.030985915492957747,
+      "percent_of_terrain_category_in_probability_bucket": 0.09016393442622951,
+      "probability_bucket": "<0.30",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04788732394366197,
+      "percent_of_terrain_category_in_probability_bucket": 0.020706455542021926,
+      "probability_bucket": "<0.30",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 252,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.7098591549295775,
+      "percent_of_terrain_category_in_probability_bucket": 0.1630012936610608,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 51,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.14366197183098592,
+      "percent_of_terrain_category_in_probability_bucket": 0.07544378698224852,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 11,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.030985915492957747,
+      "percent_of_terrain_category_in_probability_bucket": 0.1,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05070422535211268,
+      "percent_of_terrain_category_in_probability_bucket": 0.024096385542168676,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.011267605633802818,
+      "percent_of_terrain_category_in_probability_bucket": 0.022222222222222223,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.005633802816901409,
+      "percent_of_terrain_category_in_probability_bucket": 0.013245033112582781,
+      "probability_bucket": "<0.30",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04788732394366197,
+      "percent_of_terrain_category_in_probability_bucket": 0.020706455542021926,
+      "probability_bucket": "<0.30",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 109,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1422976501305483,
+      "percent_of_terrain_category_in_probability_bucket": 0.13276492082825822,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 85,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.11096605744125326,
+      "percent_of_terrain_category_in_probability_bucket": 0.21683673469387754,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 217,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.283289817232376,
+      "percent_of_terrain_category_in_probability_bucket": 0.18562874251497005,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 177,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2310704960835509,
+      "percent_of_terrain_category_in_probability_bucket": 0.1789686552072801,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 178,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.23237597911227154,
+      "percent_of_terrain_category_in_probability_bucket": 0.20022497187851518,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 90,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1174934725848564,
+      "percent_of_terrain_category_in_probability_bucket": 0.19027484143763213,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 52,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.06788511749347259,
+      "percent_of_terrain_category_in_probability_bucket": 0.17747440273037543,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 345,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.45039164490861616,
+      "percent_of_terrain_category_in_probability_bucket": 0.20151869158878505,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 170,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.22193211488250653,
+      "percent_of_terrain_category_in_probability_bucket": 0.1768990634755463,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 109,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1422976501305483,
+      "percent_of_terrain_category_in_probability_bucket": 0.13276492082825822,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 744,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9712793733681462,
+      "percent_of_terrain_category_in_probability_bucket": 0.19390148553557468,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 22,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.028720626631853787,
+      "percent_of_terrain_category_in_probability_bucket": 0.05200945626477541,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 753,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9830287206266318,
+      "percent_of_terrain_category_in_probability_bucket": 0.1841976516634051,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 13,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.016971279373368148,
+      "percent_of_terrain_category_in_probability_bucket": 0.0755813953488372,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 109,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1422976501305483,
+      "percent_of_terrain_category_in_probability_bucket": 0.22474226804123712,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 8,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.010443864229765013,
+      "percent_of_terrain_category_in_probability_bucket": 0.13559322033898305,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 130,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.16971279373368145,
+      "percent_of_terrain_category_in_probability_bucket": 0.26104417670682734,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 64,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0835509138381201,
+      "percent_of_terrain_category_in_probability_bucket": 0.25806451612903225,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.02349869451697128,
+      "percent_of_terrain_category_in_probability_bucket": 0.05787781350482315,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.005221932114882507,
+      "percent_of_terrain_category_in_probability_bucket": 0.012539184952978056,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 95,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.12402088772845953,
+      "percent_of_terrain_category_in_probability_bucket": 0.16637478108581435,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 21,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.02741514360313316,
+      "percent_of_terrain_category_in_probability_bucket": 0.04430379746835443,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 82,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.10704960835509138,
+      "percent_of_terrain_category_in_probability_bucket": 0.15073529411764705,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 52,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.06788511749347259,
+      "percent_of_terrain_category_in_probability_bucket": 0.3291139240506329,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 7,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.009138381201044387,
+      "percent_of_terrain_category_in_probability_bucket": 0.2692307692307692,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 90,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1174934725848564,
+      "percent_of_terrain_category_in_probability_bucket": 0.3383458646616541,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 86,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1122715404699739,
+      "percent_of_terrain_category_in_probability_bucket": 0.31386861313868614,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 109,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1422976501305483,
+      "percent_of_terrain_category_in_probability_bucket": 0.13276492082825822,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 657,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.8577023498694517,
+      "percent_of_terrain_category_in_probability_bucket": 0.19104390811282349,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 494,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.6449086161879896,
+      "percent_of_terrain_category_in_probability_bucket": 0.2118353344768439,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 146,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1906005221932115,
+      "percent_of_terrain_category_in_probability_bucket": 0.1554845580404686,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.022193211488250653,
+      "percent_of_terrain_category_in_probability_bucket": 0.10119047619047619,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 109,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1422976501305483,
+      "percent_of_terrain_category_in_probability_bucket": 0.13276492082825822,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 496,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.6475195822454308,
+      "percent_of_terrain_category_in_probability_bucket": 0.20294599018003273,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 144,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.18798955613577023,
+      "percent_of_terrain_category_in_probability_bucket": 0.16494845360824742,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.022193211488250653,
+      "percent_of_terrain_category_in_probability_bucket": 0.13934426229508196,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 109,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1422976501305483,
+      "percent_of_terrain_category_in_probability_bucket": 0.13276492082825822,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 350,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.45691906005221933,
+      "percent_of_terrain_category_in_probability_bucket": 0.22639068564036222,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 130,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.16971279373368145,
+      "percent_of_terrain_category_in_probability_bucket": 0.19230769230769232,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 14,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.018276762402088774,
+      "percent_of_terrain_category_in_probability_bucket": 0.12727272727272726,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 129,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.16840731070496084,
+      "percent_of_terrain_category_in_probability_bucket": 0.17269076305220885,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 14,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.018276762402088774,
+      "percent_of_terrain_category_in_probability_bucket": 0.07777777777777778,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0039164490861618795,
+      "percent_of_terrain_category_in_probability_bucket": 0.25,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.022193211488250653,
+      "percent_of_terrain_category_in_probability_bucket": 0.11258278145695365,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 109,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1422976501305483,
+      "percent_of_terrain_category_in_probability_bucket": 0.13276492082825822,
+      "probability_bucket": "0.30\u2013<0.40",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 345,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.28512396694214875,
+      "percent_of_terrain_category_in_probability_bucket": 0.42021924482338613,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 88,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.07272727272727272,
+      "percent_of_terrain_category_in_probability_bucket": 0.22448979591836735,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 341,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2818181818181818,
+      "percent_of_terrain_category_in_probability_bucket": 0.2917023096663815,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 233,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1925619834710744,
+      "percent_of_terrain_category_in_probability_bucket": 0.23559150657229525,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 203,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.16776859504132233,
+      "percent_of_terrain_category_in_probability_bucket": 0.2283464566929134,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 134,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.11074380165289256,
+      "percent_of_terrain_category_in_probability_bucket": 0.2832980972515856,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 84,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.06942148760330578,
+      "percent_of_terrain_category_in_probability_bucket": 0.28668941979522183,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 432,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.35702479338842974,
+      "percent_of_terrain_category_in_probability_bucket": 0.2523364485981308,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 215,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.17768595041322313,
+      "percent_of_terrain_category_in_probability_bucket": 0.22372528616024975,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 345,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.28512396694214875,
+      "percent_of_terrain_category_in_probability_bucket": 0.42021924482338613,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 1145,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9462809917355371,
+      "percent_of_terrain_category_in_probability_bucket": 0.2984102163148293,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 65,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05371900826446281,
+      "percent_of_terrain_category_in_probability_bucket": 0.1536643026004728,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 1168,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9652892561983472,
+      "percent_of_terrain_category_in_probability_bucket": 0.2857142857142857,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 42,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.03471074380165289,
+      "percent_of_terrain_category_in_probability_bucket": 0.2441860465116279,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 184,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.15206611570247933,
+      "percent_of_terrain_category_in_probability_bucket": 0.37938144329896906,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 24,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.019834710743801654,
+      "percent_of_terrain_category_in_probability_bucket": 0.4067796610169492,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 196,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.16198347107438016,
+      "percent_of_terrain_category_in_probability_bucket": 0.39357429718875503,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 91,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.07520661157024794,
+      "percent_of_terrain_category_in_probability_bucket": 0.36693548387096775,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 67,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05537190082644628,
+      "percent_of_terrain_category_in_probability_bucket": 0.21543408360128619,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 45,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0371900826446281,
+      "percent_of_terrain_category_in_probability_bucket": 0.14106583072100312,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 185,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.15289256198347106,
+      "percent_of_terrain_category_in_probability_bucket": 0.3239929947460595,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 95,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.07851239669421488,
+      "percent_of_terrain_category_in_probability_bucket": 0.20042194092827004,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road To UFC 1 Bantamweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road To UFC 1 Featherweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road To UFC 1 Lightweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road to UFC 1 Flyweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road to UFC 3 Bantamweight Tournament TitleBout",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road to UFC 3 Flyweight Tournament TitleBout",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Road to UFC 3 Women's Strawweight Tournament TitleBout",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 27 Featherweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 27 Lightweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 28 Women's Featherweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 32 Featherweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 32 Middleweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Ultimate Fighter 33 Welterweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 169,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1396694214876033,
+      "percent_of_terrain_category_in_probability_bucket": 0.31066176470588236,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 28,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.023140495867768594,
+      "percent_of_terrain_category_in_probability_bucket": 0.17721518987341772,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 6,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0049586776859504135,
+      "percent_of_terrain_category_in_probability_bucket": 0.23076923076923078,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 70,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05785123966942149,
+      "percent_of_terrain_category_in_probability_bucket": 0.2631578947368421,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 37,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.030578512396694214,
+      "percent_of_terrain_category_in_probability_bucket": 0.13503649635036497,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 345,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.28512396694214875,
+      "percent_of_terrain_category_in_probability_bucket": 0.42021924482338613,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 865,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.7148760330578512,
+      "percent_of_terrain_category_in_probability_bucket": 0.2515266065716778,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 617,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.5099173553719009,
+      "percent_of_terrain_category_in_probability_bucket": 0.2645797598627787,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 216,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.17851239669421487,
+      "percent_of_terrain_category_in_probability_bucket": 0.23003194888178913,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 32,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.026446280991735537,
+      "percent_of_terrain_category_in_probability_bucket": 0.19047619047619047,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 345,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.28512396694214875,
+      "percent_of_terrain_category_in_probability_bucket": 0.42021924482338613,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 632,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.5223140495867769,
+      "percent_of_terrain_category_in_probability_bucket": 0.25859247135842883,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 206,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.17024793388429751,
+      "percent_of_terrain_category_in_probability_bucket": 0.23596792668957617,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 27,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.02231404958677686,
+      "percent_of_terrain_category_in_probability_bucket": 0.22131147540983606,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 345,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.28512396694214875,
+      "percent_of_terrain_category_in_probability_bucket": 0.42021924482338613,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 425,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.3512396694214876,
+      "percent_of_terrain_category_in_probability_bucket": 0.27490297542043984,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 167,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.13801652892561983,
+      "percent_of_terrain_category_in_probability_bucket": 0.2470414201183432,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 25,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.02066115702479339,
+      "percent_of_terrain_category_in_probability_bucket": 0.22727272727272727,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 176,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.14545454545454545,
+      "percent_of_terrain_category_in_probability_bucket": 0.23560910307898258,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 38,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.03140495867768595,
+      "percent_of_terrain_category_in_probability_bucket": 0.2111111111111111,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.001652892561983471,
+      "percent_of_terrain_category_in_probability_bucket": 0.16666666666666666,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 31,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0256198347107438,
+      "percent_of_terrain_category_in_probability_bucket": 0.2052980132450331,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0008264462809917355,
+      "percent_of_terrain_category_in_probability_bucket": 0.058823529411764705,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 345,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.28512396694214875,
+      "percent_of_terrain_category_in_probability_bucket": 0.42021924482338613,
+      "probability_bucket": "0.40\u2013<0.50",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 229,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.23487179487179488,
+      "percent_of_terrain_category_in_probability_bucket": 0.2789281364190012,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 88,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.09025641025641026,
+      "percent_of_terrain_category_in_probability_bucket": 0.22448979591836735,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 268,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.27487179487179486,
+      "percent_of_terrain_category_in_probability_bucket": 0.2292557741659538,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 215,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2205128205128205,
+      "percent_of_terrain_category_in_probability_bucket": 0.21739130434782608,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 175,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1794871794871795,
+      "percent_of_terrain_category_in_probability_bucket": 0.1968503937007874,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 107,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.10974358974358975,
+      "percent_of_terrain_category_in_probability_bucket": 0.226215644820296,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 68,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.06974358974358974,
+      "percent_of_terrain_category_in_probability_bucket": 0.23208191126279865,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 359,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.3682051282051282,
+      "percent_of_terrain_category_in_probability_bucket": 0.20969626168224298,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 212,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.21743589743589745,
+      "percent_of_terrain_category_in_probability_bucket": 0.2206035379812695,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 229,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.23487179487179488,
+      "percent_of_terrain_category_in_probability_bucket": 0.2789281364190012,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 871,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.8933333333333333,
+      "percent_of_terrain_category_in_probability_bucket": 0.22700026062027626,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 104,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.10666666666666667,
+      "percent_of_terrain_category_in_probability_bucket": 0.2458628841607565,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 931,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9548717948717949,
+      "percent_of_terrain_category_in_probability_bucket": 0.22773972602739725,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 44,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04512820512820513,
+      "percent_of_terrain_category_in_probability_bucket": 0.2558139534883721,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 124,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.12717948717948718,
+      "percent_of_terrain_category_in_probability_bucket": 0.2556701030927835,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 12,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.012307692307692308,
+      "percent_of_terrain_category_in_probability_bucket": 0.2033898305084746,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 104,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.10666666666666667,
+      "percent_of_terrain_category_in_probability_bucket": 0.20883534136546184,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 48,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.04923076923076923,
+      "percent_of_terrain_category_in_probability_bucket": 0.1935483870967742,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 91,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.09333333333333334,
+      "percent_of_terrain_category_in_probability_bucket": 0.29260450160771706,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0010256410256410256,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Interim Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0010256410256410256,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Interim Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0020512820512820513,
+      "percent_of_terrain_category_in_probability_bucket": 0.5,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Interim Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0010256410256410256,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Interim Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0010256410256410256,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Interim Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 83,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.08512820512820513,
+      "percent_of_terrain_category_in_probability_bucket": 0.2601880877742947,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 145,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.14871794871794872,
+      "percent_of_terrain_category_in_probability_bucket": 0.2539404553415061,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 138,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.14153846153846153,
+      "percent_of_terrain_category_in_probability_bucket": 0.2911392405063291,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0010256410256410256,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Ultimate Fighter 28 Heavyweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0010256410256410256,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Ultimate Fighter 33 Flyweight Tournament",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 166,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.17025641025641025,
+      "percent_of_terrain_category_in_probability_bucket": 0.30514705882352944,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 10,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.010256410256410256,
+      "percent_of_terrain_category_in_probability_bucket": 0.06329113924050633,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 6,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.006153846153846154,
+      "percent_of_terrain_category_in_probability_bucket": 0.23076923076923078,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 28,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.028717948717948718,
+      "percent_of_terrain_category_in_probability_bucket": 0.10526315789473684,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 12,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.012307692307692308,
+      "percent_of_terrain_category_in_probability_bucket": 0.043795620437956206,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 229,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.23487179487179488,
+      "percent_of_terrain_category_in_probability_bucket": 0.2789281364190012,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 746,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.7651282051282051,
+      "percent_of_terrain_category_in_probability_bucket": 0.21692352428031406,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 470,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.48205128205128206,
+      "percent_of_terrain_category_in_probability_bucket": 0.20154373927958832,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 240,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.24615384615384617,
+      "percent_of_terrain_category_in_probability_bucket": 0.25559105431309903,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 36,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.036923076923076927,
+      "percent_of_terrain_category_in_probability_bucket": 0.21428571428571427,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 229,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.23487179487179488,
+      "percent_of_terrain_category_in_probability_bucket": 0.2789281364190012,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 513,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.5261538461538462,
+      "percent_of_terrain_category_in_probability_bucket": 0.20990180032733224,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 201,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.20615384615384616,
+      "percent_of_terrain_category_in_probability_bucket": 0.23024054982817868,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 32,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.03282051282051282,
+      "percent_of_terrain_category_in_probability_bucket": 0.26229508196721313,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 229,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.23487179487179488,
+      "percent_of_terrain_category_in_probability_bucket": 0.2789281364190012,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 285,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2923076923076923,
+      "percent_of_terrain_category_in_probability_bucket": 0.18434670116429497,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 155,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.15897435897435896,
+      "percent_of_terrain_category_in_probability_bucket": 0.22928994082840237,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 30,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.03076923076923077,
+      "percent_of_terrain_category_in_probability_bucket": 0.2727272727272727,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 196,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.20102564102564102,
+      "percent_of_terrain_category_in_probability_bucket": 0.26238286479250333,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 42,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.043076923076923075,
+      "percent_of_terrain_category_in_probability_bucket": 0.23333333333333334,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0020512820512820513,
+      "percent_of_terrain_category_in_probability_bucket": 0.16666666666666666,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 32,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.03282051282051282,
+      "percent_of_terrain_category_in_probability_bucket": 0.2119205298013245,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0041025641025641026,
+      "percent_of_terrain_category_in_probability_bucket": 0.23529411764705882,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 229,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.23487179487179488,
+      "percent_of_terrain_category_in_probability_bucket": 0.2789281364190012,
+      "probability_bucket": "0.50\u2013<0.60",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 103,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1609375,
+      "percent_of_terrain_category_in_probability_bucket": 0.12545676004872108,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 58,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.090625,
+      "percent_of_terrain_category_in_probability_bucket": 0.14795918367346939,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 175,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2734375,
+      "percent_of_terrain_category_in_probability_bucket": 0.1497005988023952,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 160,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.25,
+      "percent_of_terrain_category_in_probability_bucket": 0.16177957532861476,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 144,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.225,
+      "percent_of_terrain_category_in_probability_bucket": 0.16197975253093364,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 68,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.10625,
+      "percent_of_terrain_category_in_probability_bucket": 0.14376321353065538,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 37,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0578125,
+      "percent_of_terrain_category_in_probability_bucket": 0.12627986348122866,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 246,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.384375,
+      "percent_of_terrain_category_in_probability_bucket": 0.14369158878504673,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 186,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.290625,
+      "percent_of_terrain_category_in_probability_bucket": 0.1935483870967742,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 103,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1609375,
+      "percent_of_terrain_category_in_probability_bucket": 0.12545676004872108,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 524,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.81875,
+      "percent_of_terrain_category_in_probability_bucket": 0.13656502475892623,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 116,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.18125,
+      "percent_of_terrain_category_in_probability_bucket": 0.27423167848699764,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 603,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9421875,
+      "percent_of_terrain_category_in_probability_bucket": 0.14750489236790607,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 37,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0578125,
+      "percent_of_terrain_category_in_probability_bucket": 0.21511627906976744,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 34,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.053125,
+      "percent_of_terrain_category_in_probability_bucket": 0.07010309278350516,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 7,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0109375,
+      "percent_of_terrain_category_in_probability_bucket": 0.11864406779661017,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 37,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0578125,
+      "percent_of_terrain_category_in_probability_bucket": 0.07429718875502007,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 27,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0421875,
+      "percent_of_terrain_category_in_probability_bucket": 0.10887096774193548,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 81,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1265625,
+      "percent_of_terrain_category_in_probability_bucket": 0.2604501607717042,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0015625,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Interim Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 105,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1640625,
+      "percent_of_terrain_category_in_probability_bucket": 0.329153605015674,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 84,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.13125,
+      "percent_of_terrain_category_in_probability_bucket": 0.14711033274956217,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 147,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2296875,
+      "percent_of_terrain_category_in_probability_bucket": 0.310126582278481,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 93,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1453125,
+      "percent_of_terrain_category_in_probability_bucket": 0.17095588235294118,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.00625,
+      "percent_of_terrain_category_in_probability_bucket": 0.02531645569620253,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0046875,
+      "percent_of_terrain_category_in_probability_bucket": 0.11538461538461539,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 12,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.01875,
+      "percent_of_terrain_category_in_probability_bucket": 0.045112781954887216,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Women's Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0078125,
+      "percent_of_terrain_category_in_probability_bucket": 0.01824817518248175,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "Women's Strawweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 103,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1609375,
+      "percent_of_terrain_category_in_probability_bucket": 0.12545676004872108,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 537,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.8390625,
+      "percent_of_terrain_category_in_probability_bucket": 0.15615004361733062,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 297,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.4640625,
+      "percent_of_terrain_category_in_probability_bucket": 0.12735849056603774,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 199,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.3109375,
+      "percent_of_terrain_category_in_probability_bucket": 0.21192758253461128,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 41,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0640625,
+      "percent_of_terrain_category_in_probability_bucket": 0.24404761904761904,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 103,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1609375,
+      "percent_of_terrain_category_in_probability_bucket": 0.12545676004872108,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 361,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.5640625,
+      "percent_of_terrain_category_in_probability_bucket": 0.14770867430441897,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 157,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2453125,
+      "percent_of_terrain_category_in_probability_bucket": 0.17983963344788087,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 19,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0296875,
+      "percent_of_terrain_category_in_probability_bucket": 0.1557377049180328,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 103,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1609375,
+      "percent_of_terrain_category_in_probability_bucket": 0.12545676004872108,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 173,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2703125,
+      "percent_of_terrain_category_in_probability_bucket": 0.11190168175937905,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 108,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.16875,
+      "percent_of_terrain_category_in_probability_bucket": 0.15976331360946747,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 16,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.025,
+      "percent_of_terrain_category_in_probability_bucket": 0.14545454545454545,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 152,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2375,
+      "percent_of_terrain_category_in_probability_bucket": 0.2034805890227577,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 44,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.06875,
+      "percent_of_terrain_category_in_probability_bucket": 0.24444444444444444,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0046875,
+      "percent_of_terrain_category_in_probability_bucket": 0.25,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 36,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05625,
+      "percent_of_terrain_category_in_probability_bucket": 0.23841059602649006,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 5,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0078125,
+      "percent_of_terrain_category_in_probability_bucket": 0.29411764705882354,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 103,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1609375,
+      "percent_of_terrain_category_in_probability_bucket": 0.12545676004872108,
+      "probability_bucket": "0.60\u2013<0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05732484076433121,
+      "percent_of_terrain_category_in_probability_bucket": 0.02192448233861145,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "0",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 47,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.14968152866242038,
+      "percent_of_terrain_category_in_probability_bucket": 0.11989795918367346,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "11+",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 85,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.27070063694267515,
+      "percent_of_terrain_category_in_probability_bucket": 0.07271171941830624,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "1\u20132",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 81,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.25796178343949044,
+      "percent_of_terrain_category_in_probability_bucket": 0.08190091001011122,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "3\u20135",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 83,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2643312101910828,
+      "percent_of_terrain_category_in_probability_bucket": 0.09336332958380203,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "6\u201310",
+      "terrain_dimension": "experience_bucket"
+    },
+    {
+      "N": 37,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1178343949044586,
+      "percent_of_terrain_category_in_probability_bucket": 0.07822410147991543,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "12\u201318 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 17,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.054140127388535034,
+      "percent_of_terrain_category_in_probability_bucket": 0.05802047781569966,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "18+ months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 144,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.4585987261146497,
+      "percent_of_terrain_category_in_probability_bucket": 0.08411214953271028,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "6\u201312 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 98,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.31210191082802546,
+      "percent_of_terrain_category_in_probability_bucket": 0.10197710718002082,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "< 6 months",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05732484076433121,
+      "percent_of_terrain_category_in_probability_bucket": 0.02192448233861145,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRUCTURAL_NA_OR_UNKNOWN",
+      "terrain_dimension": "layoff_bucket"
+    },
+    {
+      "N": 202,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.643312101910828,
+      "percent_of_terrain_category_in_probability_bucket": 0.05264529580401355,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "3_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 112,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.35668789808917195,
+      "percent_of_terrain_category_in_probability_bucket": 0.2647754137115839,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "5_ROUND",
+      "terrain_dimension": "scheduled_duration_bucket"
+    },
+    {
+      "N": 281,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.8949044585987261,
+      "percent_of_terrain_category_in_probability_bucket": 0.06873776908023484,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "NON_TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 33,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.10509554140127389,
+      "percent_of_terrain_category_in_probability_bucket": 0.19186046511627908,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "TITLE_BOUT",
+      "terrain_dimension": "title_status"
+    },
+    {
+      "N": 9,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.028662420382165606,
+      "percent_of_terrain_category_in_probability_bucket": 0.018556701030927835,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 8,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.025477707006369428,
+      "percent_of_terrain_category_in_probability_bucket": 0.13559322033898305,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Catch Weight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 6,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.01910828025477707,
+      "percent_of_terrain_category_in_probability_bucket": 0.012048192771084338,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 9,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.028662420382165606,
+      "percent_of_terrain_category_in_probability_bucket": 0.036290322580645164,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Flyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 54,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.17197452229299362,
+      "percent_of_terrain_category_in_probability_bucket": 0.17363344051446947,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.006369426751592357,
+      "percent_of_terrain_category_in_probability_bucket": 0.5,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Interim Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 3,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.009554140127388535,
+      "percent_of_terrain_category_in_probability_bucket": 1.0,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Interim Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 82,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2611464968152866,
+      "percent_of_terrain_category_in_probability_bucket": 0.25705329153605017,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Light Heavyweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 47,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.14968152866242038,
+      "percent_of_terrain_category_in_probability_bucket": 0.08231173380035026,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Lightweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 70,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2229299363057325,
+      "percent_of_terrain_category_in_probability_bucket": 0.14767932489451477,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Middleweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 19,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.06050955414012739,
+      "percent_of_terrain_category_in_probability_bucket": 0.034926470588235295,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Welterweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 1,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.0031847133757961785,
+      "percent_of_terrain_category_in_probability_bucket": 0.006329113924050633,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Women's Bantamweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 4,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.012738853503184714,
+      "percent_of_terrain_category_in_probability_bucket": 0.15384615384615385,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "Women's Featherweight",
+      "terrain_dimension": "weight_class"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05732484076433121,
+      "percent_of_terrain_category_in_probability_bucket": 0.02192448233861145,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "HIGH_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 296,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.9426751592356688,
+      "percent_of_terrain_category_in_probability_bucket": 0.08607153242221575,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "LOW_MISSINGNESS",
+      "terrain_dimension": "completeness_tier"
+    },
+    {
+      "N": 140,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.445859872611465,
+      "percent_of_terrain_category_in_probability_bucket": 0.060034305317324184,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_LOW",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 116,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.36942675159235666,
+      "percent_of_terrain_category_in_probability_bucket": 0.1235356762513312,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_ONE_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 40,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.12738853503184713,
+      "percent_of_terrain_category_in_probability_bucket": 0.23809523809523808,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_TWO_SIDED",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05732484076433121,
+      "percent_of_terrain_category_in_probability_bucket": 0.02192448233861145,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "striking_environment"
+    },
+    {
+      "N": 170,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.5414012738853503,
+      "percent_of_terrain_category_in_probability_bucket": 0.06955810147299508,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "GRAPPLE_LOW",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 110,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.3503184713375796,
+      "percent_of_terrain_category_in_probability_bucket": 0.12600229095074456,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 16,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.050955414012738856,
+      "percent_of_terrain_category_in_probability_bucket": 0.13114754098360656,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05732484076433121,
+      "percent_of_terrain_category_in_probability_bucket": 0.02192448233861145,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "grappling_environment"
+    },
+    {
+      "N": 61,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.1942675159235669,
+      "percent_of_terrain_category_in_probability_bucket": 0.03945666235446313,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 65,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.2070063694267516,
+      "percent_of_terrain_category_in_probability_bucket": 0.09615384615384616,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 14,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.044585987261146494,
+      "percent_of_terrain_category_in_probability_bucket": 0.12727272727272726,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_LOW__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 76,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.24203821656050956,
+      "percent_of_terrain_category_in_probability_bucket": 0.10174029451137885,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 38,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.12101910828025478,
+      "percent_of_terrain_category_in_probability_bucket": 0.2111111111111111,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 2,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.006369426751592357,
+      "percent_of_terrain_category_in_probability_bucket": 0.16666666666666666,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_ONE_SIDED__GRAPPLE_TWO_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 33,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.10509554140127389,
+      "percent_of_terrain_category_in_probability_bucket": 0.2185430463576159,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_LOW",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 7,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.022292993630573247,
+      "percent_of_terrain_category_in_probability_bucket": 0.4117647058823529,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "STRIKE_TWO_SIDED__GRAPPLE_ONE_SIDED",
+      "terrain_dimension": "joint_mov_environment"
+    },
+    {
+      "N": 18,
+      "model": "MOV0_FULL",
+      "percent_of_probability_bucket": 0.05732484076433121,
+      "percent_of_terrain_category_in_probability_bucket": 0.02192448233861145,
+      "probability_bucket": ">=0.70",
+      "terrain_category": "UNASSIGNABLE_BY_CONTRACT",
+      "terrain_dimension": "joint_mov_environment"
+    }
+  ]
+}

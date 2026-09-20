@@ -1,0 +1,71 @@
+{
+  "files": {
+    "MOV0_CONFIDENCE_TERRAIN_FEATURE_BEHAVIOR_DIAGNOSTIC_V1_COMPLETE.json": {
+      "bytes": 1291,
+      "sha256": "aecadf030dfa0ff23c04223c21feddf8b69884a6d71d6df473964e043531f5d9"
+    },
+    "bucket_terrain_composition.json": {
+      "bytes": 192760,
+      "sha256": "86adef57c51c89b66ca2d99fbad1da292d01d4c342b91c9a6775e2726c414b33"
+    },
+    "bucket_terrain_performance.json": {
+      "bytes": 309270,
+      "sha256": "7a9a972e6030e6116588f9272a019be50b947e79464b6991a7214b8f7431bd5c"
+    },
+    "coefficient_recovery_validation.json": {
+      "bytes": 7495,
+      "sha256": "914699e2da27d0585e935d53fbfddbc4935e8b19aee8dc6983ff36160427738b"
+    },
+    "coefficient_stability.json": {
+      "bytes": 207735,
+      "sha256": "324bab452ba32df29e1dcb0ff21a06fc41405d2ff74341ab8ddd28892ba59e5e"
+    },
+    "coefficients_by_year.json": {
+      "bytes": 463237,
+      "sha256": "a7af4f0abb17983096c97e05ae415cfb277f33034eb070172ebe2257d034b315"
+    },
+    "feature_by_bucket_profiles.json": {
+      "bytes": 302436,
+      "sha256": "ecbedcdd8adba219352e609e211c8aebce410dc924aa952f8f14c77d67b082ee"
+    },
+    "high_confidence_feature_profiles.json": {
+      "bytes": 58997,
+      "sha256": "88e39263fc2ec2b12f098fde3628cfe8b0988427fd1aab18a635e19cbaa138f4"
+    },
+    "high_confidence_migration.json": {
+      "bytes": 6254,
+      "sha256": "2ce464efd54b91b9406900e8625666f27e54122c6acec9e1f8491b46b00197c9"
+    },
+    "min_to_full_migration.json": {
+      "bytes": 11899,
+      "sha256": "c600bf0ff5147a896c07a21e01bfb2c1c209f722fa5f276842b7139f6c93f64a"
+    },
+    "normal_cell_calibration_extremes.json": {
+      "bytes": 21293,
+      "sha256": "5b8c2fc8d9efc58ec0744023ba72882d4541155a6cb209c21c0c5c65e886bf41"
+    },
+    "weight_class_diagnostic.json": {
+      "bytes": 11851,
+      "sha256": "bb9912070c5a6bdaac9c07cedab94875a2e3cbea91a79c8b82280003e2c0d3e2"
+    }
+  },
+  "publication_mode": "COPY_VALIDATED_ARTIFACT_ONLY_NO_REFIT",
+  "source_artifact_digest": "sha256:ee425b7456c91a0fa713fb9d072afc33a28966fe9fec8c02be590877874a1f85",
+  "source_artifact_id": 10592955918,
+  "source_head": "8e25545a78acf05e361f6260360ffcf3efb97820",
+  "source_workflow_run": 35469722253,
+  "closeout_complete": true,
+  "narrative_files": {
+    "MOV0_CONFIDENCE_TERRAIN_FEATURE_BEHAVIOR_DIAGNOSTIC_V1_REPORT.md": {
+      "role": "human_readable_final_report"
+    },
+    "FUTURE_SPECIALIZATION_HYPOTHESES.md": {
+      "role": "future_hypotheses_only"
+    },
+    "IMPLICATIONS_FOR_HIERARCHICAL_MOV_AND_FUTURE_SIMULATOR.md": {
+      "role": "architecture_implications_only"
+    }
+  },
+  "completion_marker": "MOV0_CONFIDENCE_TERRAIN_FEATURE_BEHAVIOR_DIAGNOSTIC_V1_COMPLETE.json",
+  "note": "Machine-readable evidence copied from validated artifact only; narrative closeout added afterward without refit or methodology change."
+}
