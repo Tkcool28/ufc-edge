@@ -1,0 +1,3677 @@
+{
+  "archetypes": [
+    {
+      "N": 763,
+      "decisions": 306,
+      "definition": "A side has HIGH KD creation and opponent LOW strike defense.",
+      "dominant_mov0_confidence_bucket": "0.60\u2013<0.70",
+      "family": "striking",
+      "finish_prevalence": 0.598951507208388,
+      "finishes": 457,
+      "fraction_full_moved_downward": 0.1874180865006553,
+      "fraction_full_moved_upward": 0.8125819134993447,
+      "full_calibration_gap_observed_minus_predicted": 0.008273974234058512,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 42,
+          "proportion": 0.05504587155963303
+        },
+        "0.40\u2013<0.50": {
+          "N": 150,
+          "proportion": 0.1965923984272608
+        },
+        "0.50\u2013<0.60": {
+          "N": 192,
+          "proportion": 0.2516382699868938
+        },
+        "0.60\u2013<0.70": {
+          "N": 221,
+          "proportion": 0.28964613368283093
+        },
+        "<0.30": {
+          "N": 4,
+          "proportion": 0.005242463958060288
+        },
+        ">=0.70": {
+          "N": 154,
+          "proportion": 0.2018348623853211
+        }
+      },
+      "mean_delta_full_minus_min": 0.03392875401797835,
+      "mean_mov0_full_probability": 0.5906775329743295,
+      "mean_mov0_min_probability": 0.556748778956351,
+      "median_delta_full_minus_min": 0.03492952624740764,
+      "min_calibration_gap_observed_minus_predicted": 0.04220272825203697,
+      "name": "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE",
+      "observed_finish_rate": 0.598951507208388,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 85,
+          "proportion": 0.11140235910878113
+        },
+        "ONE_SIDE": {
+          "N": 678,
+          "proportion": 0.8885976408912188
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 763,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 78,
+            "proportion": 0.10222804718217562
+          },
+          "1\u20132": {
+            "N": 277,
+            "proportion": 0.36304062909567497
+          },
+          "3\u20135": {
+            "N": 229,
+            "proportion": 0.30013106159895153
+          },
+          "6\u201310": {
+            "N": 179,
+            "proportion": 0.2346002621231979
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 554,
+            "proportion": 0.7260812581913499
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 191,
+            "proportion": 0.2503276539973788
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 18,
+            "proportion": 0.023591087811271297
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 104,
+            "proportion": 0.1363040629095675
+          },
+          "18+ months": {
+            "N": 50,
+            "proportion": 0.0655307994757536
+          },
+          "6\u201312 months": {
+            "N": 371,
+            "proportion": 0.48623853211009177
+          },
+          "< 6 months": {
+            "N": 238,
+            "proportion": 0.3119266055045872
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 675,
+            "proportion": 0.8846657929226737
+          },
+          "5_ROUND": {
+            "N": 88,
+            "proportion": 0.11533420707732635
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 339,
+            "proportion": 0.4442988204456094
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 345,
+            "proportion": 0.4521625163826999
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 79,
+            "proportion": 0.10353866317169069
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 56,
+            "proportion": 0.07339449541284404
+          },
+          "Catch Weight": {
+            "N": 10,
+            "proportion": 0.01310615989515072
+          },
+          "Featherweight": {
+            "N": 68,
+            "proportion": 0.0891218872870249
+          },
+          "Flyweight": {
+            "N": 35,
+            "proportion": 0.045871559633027525
+          },
+          "Heavyweight": {
+            "N": 89,
+            "proportion": 0.11664482306684142
+          },
+          "Interim Lightweight": {
+            "N": 1,
+            "proportion": 0.001310615989515072
+          },
+          "Light Heavyweight": {
+            "N": 147,
+            "proportion": 0.1926605504587156
+          },
+          "Lightweight": {
+            "N": 109,
+            "proportion": 0.14285714285714285
+          },
+          "Middleweight": {
+            "N": 104,
+            "proportion": 0.1363040629095675
+          },
+          "Welterweight": {
+            "N": 115,
+            "proportion": 0.15072083879423329
+          },
+          "Women's Bantamweight": {
+            "N": 8,
+            "proportion": 0.010484927916120577
+          },
+          "Women's Featherweight": {
+            "N": 4,
+            "proportion": 0.005242463958060288
+          },
+          "Women's Flyweight": {
+            "N": 9,
+            "proportion": 0.011795543905635648
+          },
+          "Women's Strawweight": {
+            "N": 8,
+            "proportion": 0.010484927916120577
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 35,
+          "actual_finish_rate": 0.6857142857142857,
+          "mean_full_probability": 0.5408080183938403,
+          "mean_min_probability": 0.5117689172528723,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        },
+        "Heavyweight": {
+          "N": 89,
+          "actual_finish_rate": 0.5730337078651685,
+          "mean_full_probability": 0.6449714266813922,
+          "mean_min_probability": 0.6154706881935023,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Light Heavyweight": {
+          "N": 147,
+          "actual_finish_rate": 0.7142857142857143,
+          "mean_full_probability": 0.6577666078639338,
+          "mean_min_probability": 0.6345315951039365,
+          "sample_size_governance": "NORMAL"
+        }
+      },
+      "wilson_95": [
+        0.563763448708226,
+        0.633148179194912
+      ]
+    },
+    {
+      "N": 143,
+      "decisions": 64,
+      "definition": "Both fighters have HIGH KD creation and HIGH significant-strike flow.",
+      "dominant_mov0_confidence_bucket": ">=0.70",
+      "family": "striking",
+      "finish_prevalence": 0.5524475524475524,
+      "finishes": 79,
+      "fraction_full_moved_downward": 0.32167832167832167,
+      "fraction_full_moved_upward": 0.6783216783216783,
+      "full_calibration_gap_observed_minus_predicted": -0.021094535282641935,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 17,
+          "proportion": 0.11888111888111888
+        },
+        "0.40\u2013<0.50": {
+          "N": 33,
+          "proportion": 0.23076923076923078
+        },
+        "0.50\u2013<0.60": {
+          "N": 27,
+          "proportion": 0.1888111888111888
+        },
+        "0.60\u2013<0.70": {
+          "N": 29,
+          "proportion": 0.20279720279720279
+        },
+        "<0.30": {
+          "N": 2,
+          "proportion": 0.013986013986013986
+        },
+        ">=0.70": {
+          "N": 35,
+          "proportion": 0.24475524475524477
+        }
+      },
+      "mean_delta_full_minus_min": 0.023710618835526172,
+      "mean_mov0_full_probability": 0.5735420877301943,
+      "mean_mov0_min_probability": 0.5498314688946683,
+      "median_delta_full_minus_min": 0.023358081378394235,
+      "min_calibration_gap_observed_minus_predicted": 0.0026160835528841186,
+      "name": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "observed_finish_rate": 0.5524475524475524,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 143,
+          "proportion": 1.0
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 143,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 33,
+            "proportion": 0.23076923076923078
+          },
+          "1\u20132": {
+            "N": 20,
+            "proportion": 0.13986013986013987
+          },
+          "3\u20135": {
+            "N": 42,
+            "proportion": 0.2937062937062937
+          },
+          "6\u201310": {
+            "N": 48,
+            "proportion": 0.3356643356643357
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 127,
+            "proportion": 0.8881118881118881
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 16,
+            "proportion": 0.11188811188811189
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 24,
+            "proportion": 0.16783216783216784
+          },
+          "18+ months": {
+            "N": 11,
+            "proportion": 0.07692307692307693
+          },
+          "6\u201312 months": {
+            "N": 80,
+            "proportion": 0.5594405594405595
+          },
+          "< 6 months": {
+            "N": 28,
+            "proportion": 0.1958041958041958
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 105,
+            "proportion": 0.7342657342657343
+          },
+          "5_ROUND": {
+            "N": 38,
+            "proportion": 0.26573426573426573
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 3,
+            "proportion": 0.02097902097902098
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 28,
+            "proportion": 0.1958041958041958
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 112,
+            "proportion": 0.7832167832167832
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 27,
+            "proportion": 0.1888111888111888
+          },
+          "Catch Weight": {
+            "N": 2,
+            "proportion": 0.013986013986013986
+          },
+          "Featherweight": {
+            "N": 16,
+            "proportion": 0.11188811188811189
+          },
+          "Heavyweight": {
+            "N": 3,
+            "proportion": 0.02097902097902098
+          },
+          "Interim Bantamweight": {
+            "N": 1,
+            "proportion": 0.006993006993006993
+          },
+          "Interim Heavyweight": {
+            "N": 1,
+            "proportion": 0.006993006993006993
+          },
+          "Interim Lightweight": {
+            "N": 2,
+            "proportion": 0.013986013986013986
+          },
+          "Light Heavyweight": {
+            "N": 16,
+            "proportion": 0.11188811188811189
+          },
+          "Lightweight": {
+            "N": 30,
+            "proportion": 0.2097902097902098
+          },
+          "Middleweight": {
+            "N": 14,
+            "proportion": 0.0979020979020979
+          },
+          "Welterweight": {
+            "N": 31,
+            "proportion": 0.21678321678321677
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Heavyweight": {
+          "N": 3,
+          "actual_finish_rate": 1.0,
+          "mean_full_probability": 0.6516254965509188,
+          "mean_min_probability": 0.680500666624155,
+          "sample_size_governance": "INSUFFICIENT"
+        },
+        "Light Heavyweight": {
+          "N": 16,
+          "actual_finish_rate": 0.75,
+          "mean_full_probability": 0.6498112328405414,
+          "mean_min_probability": 0.6273398205854501,
+          "sample_size_governance": "INSUFFICIENT"
+        }
+      },
+      "wilson_95": [
+        0.47063875904872415,
+        0.6315122282846029
+      ]
+    },
+    {
+      "N": 973,
+      "decisions": 506,
+      "definition": "A side has HIGH striking accuracy and opponent HIGH significant-strike absorption.",
+      "dominant_mov0_confidence_bucket": "0.50\u2013<0.60",
+      "family": "striking",
+      "finish_prevalence": 0.4799588900308325,
+      "finishes": 467,
+      "fraction_full_moved_downward": 0.24871531346351491,
+      "fraction_full_moved_upward": 0.7512846865364851,
+      "full_calibration_gap_observed_minus_predicted": -0.02564427355622967,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 151,
+          "proportion": 0.1551901336073998
+        },
+        "0.40\u2013<0.50": {
+          "N": 220,
+          "proportion": 0.2261048304213772
+        },
+        "0.50\u2013<0.60": {
+          "N": 229,
+          "proportion": 0.23535457348406988
+        },
+        "0.60\u2013<0.70": {
+          "N": 173,
+          "proportion": 0.1778006166495375
+        },
+        "<0.30": {
+          "N": 99,
+          "proportion": 0.10174717368961973
+        },
+        ">=0.70": {
+          "N": 101,
+          "proportion": 0.10380267214799589
+        }
+      },
+      "mean_delta_full_minus_min": 0.02628400023606636,
+      "mean_mov0_full_probability": 0.5056031635870621,
+      "mean_mov0_min_probability": 0.4793191633509958,
+      "median_delta_full_minus_min": 0.026638370831739144,
+      "min_calibration_gap_observed_minus_predicted": 0.0006397266798366941,
+      "name": "A3_ACCURACY_VS_ABSORPTION",
+      "observed_finish_rate": 0.4799588900308325,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 63,
+          "proportion": 0.06474820143884892
+        },
+        "ONE_SIDE": {
+          "N": 910,
+          "proportion": 0.935251798561151
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 973,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 98,
+            "proportion": 0.10071942446043165
+          },
+          "1\u20132": {
+            "N": 349,
+            "proportion": 0.35868448098663924
+          },
+          "3\u20135": {
+            "N": 289,
+            "proportion": 0.2970195272353546
+          },
+          "6\u201310": {
+            "N": 237,
+            "proportion": 0.24357656731757452
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 732,
+            "proportion": 0.7523124357656732
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 227,
+            "proportion": 0.23329907502569372
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 14,
+            "proportion": 0.014388489208633094
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 121,
+            "proportion": 0.12435765673175746
+          },
+          "18+ months": {
+            "N": 64,
+            "proportion": 0.065775950668037
+          },
+          "6\u201312 months": {
+            "N": 480,
+            "proportion": 0.4933196300102775
+          },
+          "< 6 months": {
+            "N": 308,
+            "proportion": 0.31654676258992803
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 859,
+            "proportion": 0.8828365878725591
+          },
+          "5_ROUND": {
+            "N": 114,
+            "proportion": 0.1171634121274409
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 523,
+            "proportion": 0.5375128468653648
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 340,
+            "proportion": 0.3494347379239466
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 110,
+            "proportion": 0.1130524152106886
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 92,
+            "proportion": 0.09455292908530319
+          },
+          "Catch Weight": {
+            "N": 13,
+            "proportion": 0.013360739979445015
+          },
+          "Featherweight": {
+            "N": 111,
+            "proportion": 0.11408016443987667
+          },
+          "Flyweight": {
+            "N": 39,
+            "proportion": 0.040082219938335044
+          },
+          "Heavyweight": {
+            "N": 70,
+            "proportion": 0.07194244604316546
+          },
+          "Interim Bantamweight": {
+            "N": 1,
+            "proportion": 0.0010277492291880781
+          },
+          "Interim Heavyweight": {
+            "N": 1,
+            "proportion": 0.0010277492291880781
+          },
+          "Interim Lightweight": {
+            "N": 3,
+            "proportion": 0.003083247687564234
+          },
+          "Light Heavyweight": {
+            "N": 94,
+            "proportion": 0.09660842754367935
+          },
+          "Lightweight": {
+            "N": 134,
+            "proportion": 0.13771839671120248
+          },
+          "Middleweight": {
+            "N": 114,
+            "proportion": 0.1171634121274409
+          },
+          "Welterweight": {
+            "N": 99,
+            "proportion": 0.10174717368961973
+          },
+          "Women's Bantamweight": {
+            "N": 44,
+            "proportion": 0.045220966084275435
+          },
+          "Women's Featherweight": {
+            "N": 6,
+            "proportion": 0.006166495375128468
+          },
+          "Women's Flyweight": {
+            "N": 78,
+            "proportion": 0.08016443987667009
+          },
+          "Women's Strawweight": {
+            "N": 74,
+            "proportion": 0.07605344295991778
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 39,
+          "actual_finish_rate": 0.5384615384615384,
+          "mean_full_probability": 0.48373265060899484,
+          "mean_min_probability": 0.4454498900268574,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        },
+        "Heavyweight": {
+          "N": 70,
+          "actual_finish_rate": 0.5,
+          "mean_full_probability": 0.5916525626556692,
+          "mean_min_probability": 0.5642866394611751,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Light Heavyweight": {
+          "N": 94,
+          "actual_finish_rate": 0.6063829787234043,
+          "mean_full_probability": 0.6279621990660669,
+          "mean_min_probability": 0.6132252362083166,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        }
+      },
+      "wilson_95": [
+        0.448707854742882,
+        0.5113675498707968
+      ]
+    },
+    {
+      "N": 789,
+      "decisions": 305,
+      "definition": "A side has HIGH KO/TKO win history and opponent HIGH KO/TKO loss history.",
+      "dominant_mov0_confidence_bucket": "0.60\u2013<0.70",
+      "family": "striking",
+      "finish_prevalence": 0.6134347275031685,
+      "finishes": 484,
+      "fraction_full_moved_downward": 0.29404309252217997,
+      "fraction_full_moved_upward": 0.70595690747782,
+      "full_calibration_gap_observed_minus_predicted": 0.015366330267759687,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 48,
+          "proportion": 0.060836501901140684
+        },
+        "0.40\u2013<0.50": {
+          "N": 128,
+          "proportion": 0.16223067173637515
+        },
+        "0.50\u2013<0.60": {
+          "N": 209,
+          "proportion": 0.26489226869455007
+        },
+        "0.60\u2013<0.70": {
+          "N": 230,
+          "proportion": 0.2915082382762991
+        },
+        "<0.30": {
+          "N": 2,
+          "proportion": 0.0025348542458808617
+        },
+        ">=0.70": {
+          "N": 172,
+          "proportion": 0.21799746514575413
+        }
+      },
+      "mean_delta_full_minus_min": 0.02082334772453974,
+      "mean_mov0_full_probability": 0.5980683972354088,
+      "mean_mov0_min_probability": 0.5772450495108691,
+      "median_delta_full_minus_min": 0.022606111082712488,
+      "min_calibration_gap_observed_minus_predicted": 0.03618967799229944,
+      "name": "A4_KO_HISTORY_VS_KO_VULNERABILITY",
+      "observed_finish_rate": 0.6134347275031685,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 188,
+          "proportion": 0.23827629911280102
+        },
+        "ONE_SIDE": {
+          "N": 601,
+          "proportion": 0.761723700887199
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 789,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 98,
+            "proportion": 0.12420785804816223
+          },
+          "1\u20132": {
+            "N": 262,
+            "proportion": 0.3320659062103929
+          },
+          "3\u20135": {
+            "N": 223,
+            "proportion": 0.2826362484157161
+          },
+          "6\u201310": {
+            "N": 206,
+            "proportion": 0.26108998732572875
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 618,
+            "proportion": 0.7832699619771863
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 156,
+            "proportion": 0.19771863117870722
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 15,
+            "proportion": 0.019011406844106463
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 96,
+            "proportion": 0.12167300380228137
+          },
+          "18+ months": {
+            "N": 56,
+            "proportion": 0.07097591888466413
+          },
+          "6\u201312 months": {
+            "N": 372,
+            "proportion": 0.4714828897338403
+          },
+          "< 6 months": {
+            "N": 265,
+            "proportion": 0.3358681875792142
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 686,
+            "proportion": 0.8694550063371356
+          },
+          "5_ROUND": {
+            "N": 103,
+            "proportion": 0.13054499366286437
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 406,
+            "proportion": 0.514575411913815
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 317,
+            "proportion": 0.4017743979721166
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 66,
+            "proportion": 0.08365019011406843
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 24,
+            "proportion": 0.030418250950570342
+          },
+          "Catch Weight": {
+            "N": 6,
+            "proportion": 0.0076045627376425855
+          },
+          "Featherweight": {
+            "N": 40,
+            "proportion": 0.050697084917617236
+          },
+          "Flyweight": {
+            "N": 5,
+            "proportion": 0.0063371356147021544
+          },
+          "Heavyweight": {
+            "N": 216,
+            "proportion": 0.2737642585551331
+          },
+          "Interim Heavyweight": {
+            "N": 2,
+            "proportion": 0.0025348542458808617
+          },
+          "Interim Lightweight": {
+            "N": 2,
+            "proportion": 0.0025348542458808617
+          },
+          "Light Heavyweight": {
+            "N": 172,
+            "proportion": 0.21799746514575413
+          },
+          "Lightweight": {
+            "N": 81,
+            "proportion": 0.10266159695817491
+          },
+          "Middleweight": {
+            "N": 140,
+            "proportion": 0.17743979721166034
+          },
+          "Welterweight": {
+            "N": 88,
+            "proportion": 0.11153358681875793
+          },
+          "Women's Bantamweight": {
+            "N": 6,
+            "proportion": 0.0076045627376425855
+          },
+          "Women's Featherweight": {
+            "N": 4,
+            "proportion": 0.005069708491761723
+          },
+          "Women's Flyweight": {
+            "N": 3,
+            "proportion": 0.0038022813688212928
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 5,
+          "actual_finish_rate": 0.2,
+          "mean_full_probability": 0.5069740588954407,
+          "mean_min_probability": 0.5243265040317437,
+          "sample_size_governance": "INSUFFICIENT"
+        },
+        "Heavyweight": {
+          "N": 216,
+          "actual_finish_rate": 0.5879629629629629,
+          "mean_full_probability": 0.5991438590296508,
+          "mean_min_probability": 0.5787963138152556,
+          "sample_size_governance": "NORMAL"
+        },
+        "Light Heavyweight": {
+          "N": 172,
+          "actual_finish_rate": 0.6395348837209303,
+          "mean_full_probability": 0.6433449519314456,
+          "mean_min_probability": 0.6239867909393028,
+          "sample_size_governance": "NORMAL"
+        }
+      },
+      "wilson_95": [
+        0.5789844994904257,
+        0.6467857323870193
+      ]
+    },
+    {
+      "N": 662,
+      "decisions": 310,
+      "definition": "A side has HIGH takedown pressure and opponent LOW takedown defense.",
+      "dominant_mov0_confidence_bucket": "0.40\u2013<0.50",
+      "family": "grappling",
+      "finish_prevalence": 0.5317220543806647,
+      "finishes": 352,
+      "fraction_full_moved_downward": 0.2794561933534743,
+      "fraction_full_moved_upward": 0.7205438066465257,
+      "full_calibration_gap_observed_minus_predicted": 0.024360715607925965,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 118,
+          "proportion": 0.1782477341389728
+        },
+        "0.40\u2013<0.50": {
+          "N": 163,
+          "proportion": 0.24622356495468278
+        },
+        "0.50\u2013<0.60": {
+          "N": 159,
+          "proportion": 0.24018126888217523
+        },
+        "0.60\u2013<0.70": {
+          "N": 104,
+          "proportion": 0.15709969788519637
+        },
+        "<0.30": {
+          "N": 46,
+          "proportion": 0.06948640483383686
+        },
+        ">=0.70": {
+          "N": 72,
+          "proportion": 0.10876132930513595
+        }
+      },
+      "mean_delta_full_minus_min": 0.023690580001771887,
+      "mean_mov0_full_probability": 0.5073613387727387,
+      "mean_mov0_min_probability": 0.4836707587709669,
+      "median_delta_full_minus_min": 0.02542095567919017,
+      "min_calibration_gap_observed_minus_predicted": 0.048051295609697786,
+      "name": "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE",
+      "observed_finish_rate": 0.5317220543806647,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 56,
+          "proportion": 0.08459214501510574
+        },
+        "ONE_SIDE": {
+          "N": 606,
+          "proportion": 0.9154078549848943
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 662,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 69,
+            "proportion": 0.1042296072507553
+          },
+          "1\u20132": {
+            "N": 236,
+            "proportion": 0.3564954682779456
+          },
+          "3\u20135": {
+            "N": 203,
+            "proportion": 0.3066465256797583
+          },
+          "6\u201310": {
+            "N": 154,
+            "proportion": 0.2326283987915408
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 275,
+            "proportion": 0.41540785498489424
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 306,
+            "proportion": 0.4622356495468278
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 81,
+            "proportion": 0.12235649546827794
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 87,
+            "proportion": 0.13141993957703926
+          },
+          "18+ months": {
+            "N": 65,
+            "proportion": 0.09818731117824774
+          },
+          "6\u201312 months": {
+            "N": 317,
+            "proportion": 0.4788519637462236
+          },
+          "< 6 months": {
+            "N": 193,
+            "proportion": 0.29154078549848944
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 610,
+            "proportion": 0.9214501510574018
+          },
+          "5_ROUND": {
+            "N": 52,
+            "proportion": 0.07854984894259819
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 556,
+            "proportion": 0.8398791540785498
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 97,
+            "proportion": 0.14652567975830816
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 9,
+            "proportion": 0.013595166163141994
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 65,
+            "proportion": 0.09818731117824774
+          },
+          "Catch Weight": {
+            "N": 11,
+            "proportion": 0.01661631419939577
+          },
+          "Featherweight": {
+            "N": 100,
+            "proportion": 0.1510574018126888
+          },
+          "Flyweight": {
+            "N": 55,
+            "proportion": 0.08308157099697885
+          },
+          "Heavyweight": {
+            "N": 29,
+            "proportion": 0.04380664652567976
+          },
+          "Light Heavyweight": {
+            "N": 39,
+            "proportion": 0.05891238670694864
+          },
+          "Lightweight": {
+            "N": 106,
+            "proportion": 0.16012084592145015
+          },
+          "Middleweight": {
+            "N": 68,
+            "proportion": 0.1027190332326284
+          },
+          "Welterweight": {
+            "N": 87,
+            "proportion": 0.13141993957703926
+          },
+          "Women's Bantamweight": {
+            "N": 17,
+            "proportion": 0.0256797583081571
+          },
+          "Women's Featherweight": {
+            "N": 3,
+            "proportion": 0.004531722054380665
+          },
+          "Women's Flyweight": {
+            "N": 41,
+            "proportion": 0.061933534743202415
+          },
+          "Women's Strawweight": {
+            "N": 41,
+            "proportion": 0.061933534743202415
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 55,
+          "actual_finish_rate": 0.4727272727272727,
+          "mean_full_probability": 0.488378798276522,
+          "mean_min_probability": 0.4597331446298549,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Heavyweight": {
+          "N": 29,
+          "actual_finish_rate": 0.5517241379310345,
+          "mean_full_probability": 0.6381542058340026,
+          "mean_min_probability": 0.6111600350872253,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        },
+        "Light Heavyweight": {
+          "N": 39,
+          "actual_finish_rate": 0.7692307692307693,
+          "mean_full_probability": 0.6481819565038075,
+          "mean_min_probability": 0.623677419324921,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        }
+      },
+      "wilson_95": [
+        0.49363705690110704,
+        0.5694410218871804
+      ]
+    },
+    {
+      "N": 698,
+      "decisions": 357,
+      "definition": "A side has HIGH takedown conversion and opponent LOW takedown defense.",
+      "dominant_mov0_confidence_bucket": "0.30\u2013<0.40",
+      "family": "grappling",
+      "finish_prevalence": 0.4885386819484241,
+      "finishes": 341,
+      "fraction_full_moved_downward": 0.3223495702005731,
+      "fraction_full_moved_upward": 0.6776504297994269,
+      "full_calibration_gap_observed_minus_predicted": -0.002648528610250722,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 156,
+          "proportion": 0.22349570200573066
+        },
+        "0.40\u2013<0.50": {
+          "N": 139,
+          "proportion": 0.1991404011461318
+        },
+        "0.50\u2013<0.60": {
+          "N": 152,
+          "proportion": 0.2177650429799427
+        },
+        "0.60\u2013<0.70": {
+          "N": 118,
+          "proportion": 0.16905444126074498
+        },
+        "<0.30": {
+          "N": 70,
+          "proportion": 0.10028653295128939
+        },
+        ">=0.70": {
+          "N": 63,
+          "proportion": 0.09025787965616046
+        }
+      },
+      "mean_delta_full_minus_min": 0.017942854714207233,
+      "mean_mov0_full_probability": 0.4911872105586748,
+      "mean_mov0_min_probability": 0.47324435584446756,
+      "median_delta_full_minus_min": 0.021367346585947605,
+      "min_calibration_gap_observed_minus_predicted": 0.015294326103956535,
+      "name": "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE",
+      "observed_finish_rate": 0.4885386819484241,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 44,
+          "proportion": 0.06303724928366762
+        },
+        "ONE_SIDE": {
+          "N": 654,
+          "proportion": 0.9369627507163324
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 698,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 84,
+            "proportion": 0.12034383954154727
+          },
+          "1\u20132": {
+            "N": 193,
+            "proportion": 0.27650429799426934
+          },
+          "3\u20135": {
+            "N": 210,
+            "proportion": 0.3008595988538682
+          },
+          "6\u201310": {
+            "N": 211,
+            "proportion": 0.3022922636103152
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 433,
+            "proportion": 0.6203438395415473
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 222,
+            "proportion": 0.31805157593123207
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 43,
+            "proportion": 0.06160458452722063
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 97,
+            "proportion": 0.13896848137535817
+          },
+          "18+ months": {
+            "N": 53,
+            "proportion": 0.07593123209169055
+          },
+          "6\u201312 months": {
+            "N": 354,
+            "proportion": 0.5071633237822349
+          },
+          "< 6 months": {
+            "N": 194,
+            "proportion": 0.27793696275071633
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 620,
+            "proportion": 0.8882521489971347
+          },
+          "5_ROUND": {
+            "N": 78,
+            "proportion": 0.11174785100286533
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 544,
+            "proportion": 0.7793696275071633
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 131,
+            "proportion": 0.1876790830945559
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 23,
+            "proportion": 0.0329512893982808
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 40,
+            "proportion": 0.05730659025787966
+          },
+          "Catch Weight": {
+            "N": 12,
+            "proportion": 0.017191977077363897
+          },
+          "Featherweight": {
+            "N": 78,
+            "proportion": 0.11174785100286533
+          },
+          "Flyweight": {
+            "N": 50,
+            "proportion": 0.07163323782234957
+          },
+          "Heavyweight": {
+            "N": 65,
+            "proportion": 0.09312320916905444
+          },
+          "Interim Heavyweight": {
+            "N": 1,
+            "proportion": 0.0014326647564469914
+          },
+          "Light Heavyweight": {
+            "N": 52,
+            "proportion": 0.07449856733524356
+          },
+          "Lightweight": {
+            "N": 62,
+            "proportion": 0.08882521489971347
+          },
+          "Middleweight": {
+            "N": 66,
+            "proportion": 0.09455587392550144
+          },
+          "Welterweight": {
+            "N": 103,
+            "proportion": 0.14756446991404013
+          },
+          "Women's Bantamweight": {
+            "N": 24,
+            "proportion": 0.034383954154727794
+          },
+          "Women's Featherweight": {
+            "N": 3,
+            "proportion": 0.004297994269340974
+          },
+          "Women's Flyweight": {
+            "N": 102,
+            "proportion": 0.14613180515759314
+          },
+          "Women's Strawweight": {
+            "N": 40,
+            "proportion": 0.05730659025787966
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 50,
+          "actual_finish_rate": 0.44,
+          "mean_full_probability": 0.47976498453834354,
+          "mean_min_probability": 0.45580032562283196,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Heavyweight": {
+          "N": 65,
+          "actual_finish_rate": 0.6307692307692307,
+          "mean_full_probability": 0.6080842391022536,
+          "mean_min_probability": 0.5818506851615817,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Light Heavyweight": {
+          "N": 52,
+          "actual_finish_rate": 0.7692307692307693,
+          "mean_full_probability": 0.6195047220498839,
+          "mean_min_probability": 0.6011432477889332,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        }
+      },
+      "wilson_95": [
+        0.45161986674480403,
+        0.5255829619013053
+      ]
+    },
+    {
+      "N": 412,
+      "decisions": 188,
+      "definition": "A side has HIGH takedown pressure, HIGH takedown conversion, and HIGH submission pressure.",
+      "dominant_mov0_confidence_bucket": "0.50\u2013<0.60",
+      "family": "grappling",
+      "finish_prevalence": 0.5436893203883495,
+      "finishes": 224,
+      "fraction_full_moved_downward": 0.2524271844660194,
+      "fraction_full_moved_upward": 0.7475728155339806,
+      "full_calibration_gap_observed_minus_predicted": 0.007867620585361057,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 53,
+          "proportion": 0.12864077669902912
+        },
+        "0.40\u2013<0.50": {
+          "N": 91,
+          "proportion": 0.220873786407767
+        },
+        "0.50\u2013<0.60": {
+          "N": 95,
+          "proportion": 0.23058252427184467
+        },
+        "0.60\u2013<0.70": {
+          "N": 86,
+          "proportion": 0.2087378640776699
+        },
+        "<0.30": {
+          "N": 29,
+          "proportion": 0.0703883495145631
+        },
+        ">=0.70": {
+          "N": 58,
+          "proportion": 0.1407766990291262
+        }
+      },
+      "mean_delta_full_minus_min": 0.02238647366730398,
+      "mean_mov0_full_probability": 0.5358216998029884,
+      "mean_mov0_min_probability": 0.5134352261356845,
+      "median_delta_full_minus_min": 0.023875770572435562,
+      "min_calibration_gap_observed_minus_predicted": 0.03025409425266501,
+      "name": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "observed_finish_rate": 0.5436893203883495,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 18,
+          "proportion": 0.043689320388349516
+        },
+        "ONE_SIDE": {
+          "N": 394,
+          "proportion": 0.9563106796116505
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": {
+            "N": 27,
+            "proportion": 0.06553398058252427
+          },
+          "LOW_MISSINGNESS": {
+            "N": 385,
+            "proportion": 0.9344660194174758
+          }
+        },
+        "experience_bucket": {
+          "0": {
+            "N": 27,
+            "proportion": 0.06553398058252427
+          },
+          "11+": {
+            "N": 46,
+            "proportion": 0.11165048543689321
+          },
+          "1\u20132": {
+            "N": 106,
+            "proportion": 0.25728155339805825
+          },
+          "3\u20135": {
+            "N": 132,
+            "proportion": 0.32038834951456313
+          },
+          "6\u201310": {
+            "N": 101,
+            "proportion": 0.24514563106796117
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 24,
+            "proportion": 0.05825242718446602
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 296,
+            "proportion": 0.7184466019417476
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 65,
+            "proportion": 0.15776699029126215
+          },
+          "UNASSIGNABLE_BY_CONTRACT": {
+            "N": 27,
+            "proportion": 0.06553398058252427
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 52,
+            "proportion": 0.1262135922330097
+          },
+          "18+ months": {
+            "N": 27,
+            "proportion": 0.06553398058252427
+          },
+          "6\u201312 months": {
+            "N": 190,
+            "proportion": 0.46116504854368934
+          },
+          "< 6 months": {
+            "N": 116,
+            "proportion": 0.2815533980582524
+          },
+          "STRUCTURAL_NA_OR_UNKNOWN": {
+            "N": 27,
+            "proportion": 0.06553398058252427
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 353,
+            "proportion": 0.8567961165048543
+          },
+          "5_ROUND": {
+            "N": 59,
+            "proportion": 0.14320388349514562
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 312,
+            "proportion": 0.7572815533980582
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 67,
+            "proportion": 0.16262135922330098
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 6,
+            "proportion": 0.014563106796116505
+          },
+          "UNASSIGNABLE_BY_CONTRACT": {
+            "N": 27,
+            "proportion": 0.06553398058252427
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 22,
+            "proportion": 0.05339805825242718
+          },
+          "Catch Weight": {
+            "N": 8,
+            "proportion": 0.019417475728155338
+          },
+          "Featherweight": {
+            "N": 50,
+            "proportion": 0.12135922330097088
+          },
+          "Flyweight": {
+            "N": 51,
+            "proportion": 0.12378640776699029
+          },
+          "Heavyweight": {
+            "N": 28,
+            "proportion": 0.06796116504854369
+          },
+          "Light Heavyweight": {
+            "N": 32,
+            "proportion": 0.07766990291262135
+          },
+          "Lightweight": {
+            "N": 51,
+            "proportion": 0.12378640776699029
+          },
+          "Middleweight": {
+            "N": 71,
+            "proportion": 0.17233009708737865
+          },
+          "Welterweight": {
+            "N": 40,
+            "proportion": 0.0970873786407767
+          },
+          "Women's Bantamweight": {
+            "N": 4,
+            "proportion": 0.009708737864077669
+          },
+          "Women's Featherweight": {
+            "N": 2,
+            "proportion": 0.0048543689320388345
+          },
+          "Women's Flyweight": {
+            "N": 26,
+            "proportion": 0.06310679611650485
+          },
+          "Women's Strawweight": {
+            "N": 27,
+            "proportion": 0.06553398058252427
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 51,
+          "actual_finish_rate": 0.5098039215686274,
+          "mean_full_probability": 0.4751506680518692,
+          "mean_min_probability": 0.4561638508158816,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Heavyweight": {
+          "N": 28,
+          "actual_finish_rate": 0.6071428571428571,
+          "mean_full_probability": 0.6763444236178378,
+          "mean_min_probability": 0.6444249738746911,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        },
+        "Light Heavyweight": {
+          "N": 32,
+          "actual_finish_rate": 0.65625,
+          "mean_full_probability": 0.6832863754442517,
+          "mean_min_probability": 0.6640316644219746,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        }
+      },
+      "wilson_95": [
+        0.4954111063438879,
+        0.5911603483208159
+      ]
+    },
+    {
+      "N": 1628,
+      "decisions": 767,
+      "definition": "A side has HIGH submission pressure but not HIGH takedown access (pressure and conversion are not both HIGH).",
+      "dominant_mov0_confidence_bucket": "0.40\u2013<0.50",
+      "family": "grappling",
+      "finish_prevalence": 0.5288697788697788,
+      "finishes": 861,
+      "fraction_full_moved_downward": 0.2985257985257985,
+      "fraction_full_moved_upward": 0.7014742014742015,
+      "full_calibration_gap_observed_minus_predicted": 0.01033950347231849,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 238,
+          "proportion": 0.14619164619164618
+        },
+        "0.40\u2013<0.50": {
+          "N": 413,
+          "proportion": 0.2536855036855037
+        },
+        "0.50\u2013<0.60": {
+          "N": 413,
+          "proportion": 0.2536855036855037
+        },
+        "0.60\u2013<0.70": {
+          "N": 293,
+          "proportion": 0.17997542997542998
+        },
+        "<0.30": {
+          "N": 97,
+          "proportion": 0.05958230958230958
+        },
+        ">=0.70": {
+          "N": 174,
+          "proportion": 0.10687960687960688
+        }
+      },
+      "mean_delta_full_minus_min": 0.019312290154177614,
+      "mean_mov0_full_probability": 0.5185302753974603,
+      "mean_mov0_min_probability": 0.4992179852432827,
+      "median_delta_full_minus_min": 0.02026963949166169,
+      "min_calibration_gap_observed_minus_predicted": 0.029651793626496115,
+      "name": "B4_SUB_PRESSURE_POOR_TD_ACCESS",
+      "observed_finish_rate": 0.5288697788697788,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 253,
+          "proportion": 0.1554054054054054
+        },
+        "ONE_SIDE": {
+          "N": 1375,
+          "proportion": 0.8445945945945946
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": {
+            "N": 167,
+            "proportion": 0.10257985257985258
+          },
+          "LOW_MISSINGNESS": {
+            "N": 1461,
+            "proportion": 0.8974201474201474
+          }
+        },
+        "experience_bucket": {
+          "0": {
+            "N": 167,
+            "proportion": 0.10257985257985258
+          },
+          "11+": {
+            "N": 184,
+            "proportion": 0.11302211302211303
+          },
+          "1\u20132": {
+            "N": 455,
+            "proportion": 0.2794840294840295
+          },
+          "3\u20135": {
+            "N": 429,
+            "proportion": 0.2635135135135135
+          },
+          "6\u201310": {
+            "N": 393,
+            "proportion": 0.2414004914004914
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 778,
+            "proportion": 0.47788697788697787
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 588,
+            "proportion": 0.36117936117936117
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 95,
+            "proportion": 0.05835380835380835
+          },
+          "UNASSIGNABLE_BY_CONTRACT": {
+            "N": 167,
+            "proportion": 0.10257985257985258
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 206,
+            "proportion": 0.12653562653562653
+          },
+          "18+ months": {
+            "N": 131,
+            "proportion": 0.08046683046683047
+          },
+          "6\u201312 months": {
+            "N": 733,
+            "proportion": 0.45024570024570026
+          },
+          "< 6 months": {
+            "N": 391,
+            "proportion": 0.24017199017199017
+          },
+          "STRUCTURAL_NA_OR_UNKNOWN": {
+            "N": 167,
+            "proportion": 0.10257985257985258
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 1454,
+            "proportion": 0.8931203931203932
+          },
+          "5_ROUND": {
+            "N": 174,
+            "proportion": 0.10687960687960688
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 1064,
+            "proportion": 0.6535626535626535
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 345,
+            "proportion": 0.2119164619164619
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 52,
+            "proportion": 0.03194103194103194
+          },
+          "UNASSIGNABLE_BY_CONTRACT": {
+            "N": 167,
+            "proportion": 0.10257985257985258
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 201,
+            "proportion": 0.12346437346437346
+          },
+          "Catch Weight": {
+            "N": 23,
+            "proportion": 0.014127764127764128
+          },
+          "Featherweight": {
+            "N": 226,
+            "proportion": 0.13882063882063883
+          },
+          "Flyweight": {
+            "N": 120,
+            "proportion": 0.07371007371007371
+          },
+          "Heavyweight": {
+            "N": 39,
+            "proportion": 0.023955773955773956
+          },
+          "Interim Featherweight": {
+            "N": 1,
+            "proportion": 0.0006142506142506142
+          },
+          "Interim Flyweight": {
+            "N": 1,
+            "proportion": 0.0006142506142506142
+          },
+          "Interim Heavyweight": {
+            "N": 2,
+            "proportion": 0.0012285012285012285
+          },
+          "Interim Lightweight": {
+            "N": 3,
+            "proportion": 0.0018427518427518428
+          },
+          "Interim Welterweight": {
+            "N": 1,
+            "proportion": 0.0006142506142506142
+          },
+          "Light Heavyweight": {
+            "N": 77,
+            "proportion": 0.0472972972972973
+          },
+          "Lightweight": {
+            "N": 256,
+            "proportion": 0.15724815724815724
+          },
+          "Middleweight": {
+            "N": 197,
+            "proportion": 0.12100737100737101
+          },
+          "Ultimate Fighter 33 Flyweight Tournament": {
+            "N": 1,
+            "proportion": 0.0006142506142506142
+          },
+          "Welterweight": {
+            "N": 197,
+            "proportion": 0.12100737100737101
+          },
+          "Women's Bantamweight": {
+            "N": 65,
+            "proportion": 0.03992628992628992
+          },
+          "Women's Featherweight": {
+            "N": 6,
+            "proportion": 0.0036855036855036856
+          },
+          "Women's Flyweight": {
+            "N": 108,
+            "proportion": 0.06633906633906633
+          },
+          "Women's Strawweight": {
+            "N": 104,
+            "proportion": 0.06388206388206388
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 120,
+          "actual_finish_rate": 0.5333333333333333,
+          "mean_full_probability": 0.5012857278098982,
+          "mean_min_probability": 0.48406191611455796,
+          "sample_size_governance": "NORMAL"
+        },
+        "Heavyweight": {
+          "N": 39,
+          "actual_finish_rate": 0.6666666666666666,
+          "mean_full_probability": 0.6630275008643328,
+          "mean_min_probability": 0.6451870001278196,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        },
+        "Light Heavyweight": {
+          "N": 77,
+          "actual_finish_rate": 0.6753246753246753,
+          "mean_full_probability": 0.6804581975450199,
+          "mean_min_probability": 0.6635889260507383,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        }
+      },
+      "wilson_95": [
+        0.5045828471533309,
+        0.5530207879865265
+      ]
+    },
+    {
+      "N": 591,
+      "decisions": 236,
+      "definition": "A side has HIGH submission pressure and opponent HIGH submission attempts faced.",
+      "dominant_mov0_confidence_bucket": "0.50\u2013<0.60",
+      "family": "grappling",
+      "finish_prevalence": 0.6006768189509306,
+      "finishes": 355,
+      "fraction_full_moved_downward": 0.2859560067681895,
+      "fraction_full_moved_upward": 0.7140439932318104,
+      "full_calibration_gap_observed_minus_predicted": 0.0446655373532987,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 61,
+          "proportion": 0.10321489001692047
+        },
+        "0.40\u2013<0.50": {
+          "N": 142,
+          "proportion": 0.24027072758037224
+        },
+        "0.50\u2013<0.60": {
+          "N": 160,
+          "proportion": 0.2707275803722504
+        },
+        "0.60\u2013<0.70": {
+          "N": 127,
+          "proportion": 0.21489001692047377
+        },
+        "<0.30": {
+          "N": 12,
+          "proportion": 0.02030456852791878
+        },
+        ">=0.70": {
+          "N": 89,
+          "proportion": 0.1505922165820643
+        }
+      },
+      "mean_delta_full_minus_min": 0.021058344753526144,
+      "mean_mov0_full_probability": 0.5560112815976319,
+      "mean_mov0_min_probability": 0.5349529368441059,
+      "median_delta_full_minus_min": 0.020638127676083196,
+      "min_calibration_gap_observed_minus_predicted": 0.06572388210682467,
+      "name": "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY",
+      "observed_finish_rate": 0.6006768189509306,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 56,
+          "proportion": 0.09475465313028765
+        },
+        "ONE_SIDE": {
+          "N": 535,
+          "proportion": 0.9052453468697124
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 591,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 65,
+            "proportion": 0.10998307952622674
+          },
+          "1\u20132": {
+            "N": 212,
+            "proportion": 0.3587140439932318
+          },
+          "3\u20135": {
+            "N": 181,
+            "proportion": 0.3062605752961083
+          },
+          "6\u201310": {
+            "N": 133,
+            "proportion": 0.22504230118443316
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 236,
+            "proportion": 0.3993231810490694
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 292,
+            "proportion": 0.494077834179357
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 63,
+            "proportion": 0.1065989847715736
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 91,
+            "proportion": 0.15397631133671744
+          },
+          "18+ months": {
+            "N": 59,
+            "proportion": 0.09983079526226735
+          },
+          "6\u201312 months": {
+            "N": 279,
+            "proportion": 0.4720812182741117
+          },
+          "< 6 months": {
+            "N": 162,
+            "proportion": 0.27411167512690354
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 547,
+            "proportion": 0.9255499153976311
+          },
+          "5_ROUND": {
+            "N": 44,
+            "proportion": 0.07445008460236886
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 466,
+            "proportion": 0.7884940778341794
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 108,
+            "proportion": 0.18274111675126903
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 17,
+            "proportion": 0.028764805414551606
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 67,
+            "proportion": 0.11336717428087986
+          },
+          "Catch Weight": {
+            "N": 6,
+            "proportion": 0.01015228426395939
+          },
+          "Featherweight": {
+            "N": 90,
+            "proportion": 0.15228426395939088
+          },
+          "Flyweight": {
+            "N": 66,
+            "proportion": 0.1116751269035533
+          },
+          "Heavyweight": {
+            "N": 4,
+            "proportion": 0.00676818950930626
+          },
+          "Interim Flyweight": {
+            "N": 1,
+            "proportion": 0.001692047377326565
+          },
+          "Interim Welterweight": {
+            "N": 1,
+            "proportion": 0.001692047377326565
+          },
+          "Light Heavyweight": {
+            "N": 26,
+            "proportion": 0.043993231810490696
+          },
+          "Lightweight": {
+            "N": 105,
+            "proportion": 0.17766497461928935
+          },
+          "Middleweight": {
+            "N": 76,
+            "proportion": 0.12859560067681894
+          },
+          "Welterweight": {
+            "N": 71,
+            "proportion": 0.12013536379018612
+          },
+          "Women's Bantamweight": {
+            "N": 20,
+            "proportion": 0.0338409475465313
+          },
+          "Women's Featherweight": {
+            "N": 3,
+            "proportion": 0.005076142131979695
+          },
+          "Women's Flyweight": {
+            "N": 31,
+            "proportion": 0.05245346869712352
+          },
+          "Women's Strawweight": {
+            "N": 24,
+            "proportion": 0.04060913705583756
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 66,
+          "actual_finish_rate": 0.5454545454545454,
+          "mean_full_probability": 0.509594599227655,
+          "mean_min_probability": 0.4879649746223907,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Heavyweight": {
+          "N": 4,
+          "actual_finish_rate": 0.5,
+          "mean_full_probability": 0.7209441735092583,
+          "mean_min_probability": 0.7110275291289632,
+          "sample_size_governance": "INSUFFICIENT"
+        },
+        "Light Heavyweight": {
+          "N": 26,
+          "actual_finish_rate": 0.7307692307692307,
+          "mean_full_probability": 0.7184392551624703,
+          "mean_min_probability": 0.6977230333543105,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        }
+      },
+      "wilson_95": [
+        0.5606635409891302,
+        0.639389764367097
+      ]
+    },
+    {
+      "N": 29,
+      "decisions": 10,
+      "definition": "A side has HIGH damaging-exchange creation and HIGH takedown access plus HIGH submission pressure.",
+      "dominant_mov0_confidence_bucket": "0.60\u2013<0.70",
+      "family": "mixed",
+      "finish_prevalence": 0.6551724137931034,
+      "finishes": 19,
+      "fraction_full_moved_downward": 0.20689655172413793,
+      "fraction_full_moved_upward": 0.7931034482758621,
+      "full_calibration_gap_observed_minus_predicted": 0.013501685044756795,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 1,
+          "proportion": 0.034482758620689655
+        },
+        "0.40\u2013<0.50": {
+          "N": 3,
+          "proportion": 0.10344827586206896
+        },
+        "0.50\u2013<0.60": {
+          "N": 6,
+          "proportion": 0.20689655172413793
+        },
+        "0.60\u2013<0.70": {
+          "N": 10,
+          "proportion": 0.3448275862068966
+        },
+        ">=0.70": {
+          "N": 9,
+          "proportion": 0.3103448275862069
+        }
+      },
+      "mean_delta_full_minus_min": 0.023738653348713244,
+      "mean_mov0_full_probability": 0.6416707287483466,
+      "mean_mov0_min_probability": 0.6179320753996334,
+      "median_delta_full_minus_min": 0.025444902329466168,
+      "min_calibration_gap_observed_minus_predicted": 0.037240338393470074,
+      "name": "C1_DAMAGE_PLUS_SUBMISSION_ACCESS",
+      "observed_finish_rate": 0.6551724137931034,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 1,
+          "proportion": 0.034482758620689655
+        },
+        "ONE_SIDE": {
+          "N": 28,
+          "proportion": 0.9655172413793104
+        }
+      },
+      "sample_size_governance": "THIN_EXPLORATORY",
+      "terrain_composition": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          },
+          "LOW_MISSINGNESS": {
+            "N": 27,
+            "proportion": 0.9310344827586207
+          }
+        },
+        "experience_bucket": {
+          "0": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          },
+          "1\u20132": {
+            "N": 4,
+            "proportion": 0.13793103448275862
+          },
+          "3\u20135": {
+            "N": 12,
+            "proportion": 0.41379310344827586
+          },
+          "6\u201310": {
+            "N": 11,
+            "proportion": 0.3793103448275862
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 22,
+            "proportion": 0.7586206896551724
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 3,
+            "proportion": 0.10344827586206896
+          },
+          "UNASSIGNABLE_BY_CONTRACT": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 6,
+            "proportion": 0.20689655172413793
+          },
+          "18+ months": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          },
+          "6\u201312 months": {
+            "N": 13,
+            "proportion": 0.4482758620689655
+          },
+          "< 6 months": {
+            "N": 6,
+            "proportion": 0.20689655172413793
+          },
+          "STRUCTURAL_NA_OR_UNKNOWN": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 18,
+            "proportion": 0.6206896551724138
+          },
+          "5_ROUND": {
+            "N": 11,
+            "proportion": 0.3793103448275862
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 7,
+            "proportion": 0.2413793103448276
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 14,
+            "proportion": 0.4827586206896552
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 6,
+            "proportion": 0.20689655172413793
+          },
+          "UNASSIGNABLE_BY_CONTRACT": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          },
+          "Catch Weight": {
+            "N": 1,
+            "proportion": 0.034482758620689655
+          },
+          "Featherweight": {
+            "N": 1,
+            "proportion": 0.034482758620689655
+          },
+          "Flyweight": {
+            "N": 5,
+            "proportion": 0.1724137931034483
+          },
+          "Lightweight": {
+            "N": 5,
+            "proportion": 0.1724137931034483
+          },
+          "Middleweight": {
+            "N": 10,
+            "proportion": 0.3448275862068966
+          },
+          "Welterweight": {
+            "N": 3,
+            "proportion": 0.10344827586206896
+          },
+          "Women's Featherweight": {
+            "N": 2,
+            "proportion": 0.06896551724137931
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 5,
+          "actual_finish_rate": 0.8,
+          "mean_full_probability": 0.5925065905005849,
+          "mean_min_probability": 0.5694148166956536,
+          "sample_size_governance": "INSUFFICIENT"
+        }
+      },
+      "wilson_95": [
+        0.47345104090476137,
+        0.80059281473325
+      ]
+    },
+    {
+      "N": 1483,
+      "decisions": 657,
+      "definition": "Both fighters have HIGH finish history: HIGH KO/TKO or submission win history or HIGH early-finish history.",
+      "dominant_mov0_confidence_bucket": "0.50\u2013<0.60",
+      "family": "mixed",
+      "finish_prevalence": 0.5569790964261632,
+      "finishes": 826,
+      "fraction_full_moved_downward": 0.2980445043830074,
+      "fraction_full_moved_upward": 0.7019554956169926,
+      "full_calibration_gap_observed_minus_predicted": -0.0024317421782656945,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 171,
+          "proportion": 0.1153068105192178
+        },
+        "0.40\u2013<0.50": {
+          "N": 298,
+          "proportion": 0.200944032366824
+        },
+        "0.50\u2013<0.60": {
+          "N": 390,
+          "proportion": 0.26298044504383006
+        },
+        "0.60\u2013<0.70": {
+          "N": 349,
+          "proportion": 0.23533378287255563
+        },
+        "<0.30": {
+          "N": 35,
+          "proportion": 0.023600809170600135
+        },
+        ">=0.70": {
+          "N": 240,
+          "proportion": 0.16183412002697237
+        }
+      },
+      "mean_delta_full_minus_min": 0.01972635759238866,
+      "mean_mov0_full_probability": 0.5594108386044289,
+      "mean_mov0_min_probability": 0.5396844810120401,
+      "median_delta_full_minus_min": 0.0206391662757604,
+      "min_calibration_gap_observed_minus_predicted": 0.017294615414123027,
+      "name": "C2_BOTH_HIGH_FINISH_HISTORY",
+      "observed_finish_rate": 0.5569790964261632,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 1483,
+          "proportion": 1.0
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 1483,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 249,
+            "proportion": 0.16790289952798382
+          },
+          "1\u20132": {
+            "N": 278,
+            "proportion": 0.18745785569790965
+          },
+          "3\u20135": {
+            "N": 454,
+            "proportion": 0.306136210384356
+          },
+          "6\u201310": {
+            "N": 502,
+            "proportion": 0.3385030343897505
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 955,
+            "proportion": 0.6439649359406608
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 444,
+            "proportion": 0.2993931220498989
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 84,
+            "proportion": 0.056641942009440324
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 204,
+            "proportion": 0.1375590020229265
+          },
+          "18+ months": {
+            "N": 96,
+            "proportion": 0.06473364801078894
+          },
+          "6\u201312 months": {
+            "N": 733,
+            "proportion": 0.4942683749157114
+          },
+          "< 6 months": {
+            "N": 450,
+            "proportion": 0.30343897505057316
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 1170,
+            "proportion": 0.7889413351314902
+          },
+          "5_ROUND": {
+            "N": 313,
+            "proportion": 0.21105866486850977
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 803,
+            "proportion": 0.5414699932569117
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 543,
+            "proportion": 0.366149696561025
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 137,
+            "proportion": 0.09238031018206339
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 126,
+            "proportion": 0.08496291301416048
+          },
+          "Catch Weight": {
+            "N": 17,
+            "proportion": 0.011463250168577209
+          },
+          "Featherweight": {
+            "N": 139,
+            "proportion": 0.09372892784895483
+          },
+          "Flyweight": {
+            "N": 55,
+            "proportion": 0.037086985839514496
+          },
+          "Heavyweight": {
+            "N": 184,
+            "proportion": 0.12407282535401214
+          },
+          "Interim Bantamweight": {
+            "N": 1,
+            "proportion": 0.0006743088334457181
+          },
+          "Interim Featherweight": {
+            "N": 1,
+            "proportion": 0.0006743088334457181
+          },
+          "Interim Flyweight": {
+            "N": 1,
+            "proportion": 0.0006743088334457181
+          },
+          "Interim Heavyweight": {
+            "N": 4,
+            "proportion": 0.0026972353337828725
+          },
+          "Interim Lightweight": {
+            "N": 3,
+            "proportion": 0.0020229265003371545
+          },
+          "Interim Middleweight": {
+            "N": 1,
+            "proportion": 0.0006743088334457181
+          },
+          "Interim Welterweight": {
+            "N": 1,
+            "proportion": 0.0006743088334457181
+          },
+          "Light Heavyweight": {
+            "N": 180,
+            "proportion": 0.12137559002022927
+          },
+          "Lightweight": {
+            "N": 198,
+            "proportion": 0.1335131490222522
+          },
+          "Middleweight": {
+            "N": 208,
+            "proportion": 0.14025623735670936
+          },
+          "Welterweight": {
+            "N": 224,
+            "proportion": 0.15104517869184086
+          },
+          "Women's Bantamweight": {
+            "N": 29,
+            "proportion": 0.019554956169925825
+          },
+          "Women's Featherweight": {
+            "N": 5,
+            "proportion": 0.0033715441672285905
+          },
+          "Women's Flyweight": {
+            "N": 57,
+            "proportion": 0.03843560350640594
+          },
+          "Women's Strawweight": {
+            "N": 49,
+            "proportion": 0.033041132838840186
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 55,
+          "actual_finish_rate": 0.5454545454545454,
+          "mean_full_probability": 0.5424035973739106,
+          "mean_min_probability": 0.5279738649292655,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Heavyweight": {
+          "N": 184,
+          "actual_finish_rate": 0.5978260869565217,
+          "mean_full_probability": 0.6130476150368779,
+          "mean_min_probability": 0.5926935067120267,
+          "sample_size_governance": "NORMAL"
+        },
+        "Light Heavyweight": {
+          "N": 180,
+          "actual_finish_rate": 0.6722222222222223,
+          "mean_full_probability": 0.6533096110041593,
+          "mean_min_probability": 0.635760597087624,
+          "sample_size_governance": "NORMAL"
+        }
+      },
+      "wilson_95": [
+        0.5315822717043404,
+        0.5820814945280355
+      ]
+    },
+    {
+      "N": 417,
+      "decisions": 185,
+      "definition": "At least one side has HIGH finish history and the bout is scheduled for five rounds.",
+      "dominant_mov0_confidence_bucket": "0.60\u2013<0.70",
+      "family": "mixed",
+      "finish_prevalence": 0.5563549160671463,
+      "finishes": 232,
+      "fraction_full_moved_downward": 0.2517985611510791,
+      "fraction_full_moved_upward": 0.7482014388489209,
+      "full_calibration_gap_observed_minus_predicted": -0.059626594492566354,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 19,
+          "proportion": 0.045563549160671464
+        },
+        "0.40\u2013<0.50": {
+          "N": 64,
+          "proportion": 0.15347721822541965
+        },
+        "0.50\u2013<0.60": {
+          "N": 104,
+          "proportion": 0.24940047961630696
+        },
+        "0.60\u2013<0.70": {
+          "N": 116,
+          "proportion": 0.27817745803357313
+        },
+        "<0.30": {
+          "N": 2,
+          "proportion": 0.004796163069544364
+        },
+        ">=0.70": {
+          "N": 112,
+          "proportion": 0.2685851318944844
+        }
+      },
+      "mean_delta_full_minus_min": 0.022459923946961245,
+      "mean_mov0_full_probability": 0.6159815105597126,
+      "mean_mov0_min_probability": 0.5935215866127515,
+      "median_delta_full_minus_min": 0.022243952652359122,
+      "min_calibration_gap_observed_minus_predicted": -0.037166670545605185,
+      "name": "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS",
+      "observed_finish_rate": 0.5563549160671463,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 313,
+          "proportion": 0.750599520383693
+        },
+        "ONE_SIDE": {
+          "N": 104,
+          "proportion": 0.24940047961630696
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "HIGH_MISSINGNESS": {
+            "N": 2,
+            "proportion": 0.004796163069544364
+          },
+          "LOW_MISSINGNESS": {
+            "N": 415,
+            "proportion": 0.9952038369304557
+          }
+        },
+        "experience_bucket": {
+          "0": {
+            "N": 2,
+            "proportion": 0.004796163069544364
+          },
+          "11+": {
+            "N": 132,
+            "proportion": 0.31654676258992803
+          },
+          "1\u20132": {
+            "N": 12,
+            "proportion": 0.02877697841726619
+          },
+          "3\u20135": {
+            "N": 68,
+            "proportion": 0.1630695443645084
+          },
+          "6\u201310": {
+            "N": 203,
+            "proportion": 0.486810551558753
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 308,
+            "proportion": 0.7386091127098321
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 98,
+            "proportion": 0.23501199040767387
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 9,
+            "proportion": 0.02158273381294964
+          },
+          "UNASSIGNABLE_BY_CONTRACT": {
+            "N": 2,
+            "proportion": 0.004796163069544364
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 58,
+            "proportion": 0.13908872901678657
+          },
+          "18+ months": {
+            "N": 25,
+            "proportion": 0.05995203836930456
+          },
+          "6\u201312 months": {
+            "N": 221,
+            "proportion": 0.5299760191846523
+          },
+          "< 6 months": {
+            "N": 111,
+            "proportion": 0.26618705035971224
+          },
+          "STRUCTURAL_NA_OR_UNKNOWN": {
+            "N": 2,
+            "proportion": 0.004796163069544364
+          }
+        },
+        "scheduled_duration_bucket": {
+          "5_ROUND": {
+            "N": 417,
+            "proportion": 1.0
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 195,
+            "proportion": 0.4676258992805755
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 166,
+            "proportion": 0.3980815347721823
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 54,
+            "proportion": 0.12949640287769784
+          },
+          "UNASSIGNABLE_BY_CONTRACT": {
+            "N": 2,
+            "proportion": 0.004796163069544364
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 34,
+            "proportion": 0.0815347721822542
+          },
+          "Catch Weight": {
+            "N": 5,
+            "proportion": 0.011990407673860911
+          },
+          "Featherweight": {
+            "N": 39,
+            "proportion": 0.09352517985611511
+          },
+          "Flyweight": {
+            "N": 28,
+            "proportion": 0.0671462829736211
+          },
+          "Heavyweight": {
+            "N": 46,
+            "proportion": 0.11031175059952038
+          },
+          "Interim Bantamweight": {
+            "N": 1,
+            "proportion": 0.002398081534772182
+          },
+          "Interim Featherweight": {
+            "N": 1,
+            "proportion": 0.002398081534772182
+          },
+          "Interim Flyweight": {
+            "N": 1,
+            "proportion": 0.002398081534772182
+          },
+          "Interim Heavyweight": {
+            "N": 4,
+            "proportion": 0.009592326139088728
+          },
+          "Interim Lightweight": {
+            "N": 3,
+            "proportion": 0.007194244604316547
+          },
+          "Interim Middleweight": {
+            "N": 1,
+            "proportion": 0.002398081534772182
+          },
+          "Interim Welterweight": {
+            "N": 1,
+            "proportion": 0.002398081534772182
+          },
+          "Light Heavyweight": {
+            "N": 43,
+            "proportion": 0.10311750599520383
+          },
+          "Lightweight": {
+            "N": 47,
+            "proportion": 0.11270983213429256
+          },
+          "Middleweight": {
+            "N": 55,
+            "proportion": 0.13189448441247004
+          },
+          "Welterweight": {
+            "N": 52,
+            "proportion": 0.12470023980815348
+          },
+          "Women's Bantamweight": {
+            "N": 10,
+            "proportion": 0.023980815347721823
+          },
+          "Women's Featherweight": {
+            "N": 5,
+            "proportion": 0.011990407673860911
+          },
+          "Women's Flyweight": {
+            "N": 19,
+            "proportion": 0.045563549160671464
+          },
+          "Women's Strawweight": {
+            "N": 22,
+            "proportion": 0.05275779376498801
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 28,
+          "actual_finish_rate": 0.5714285714285714,
+          "mean_full_probability": 0.6058760234870485,
+          "mean_min_probability": 0.5795784832994878,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        },
+        "Heavyweight": {
+          "N": 46,
+          "actual_finish_rate": 0.8260869565217391,
+          "mean_full_probability": 0.7093995107033472,
+          "mean_min_probability": 0.6939103390358121,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        },
+        "Light Heavyweight": {
+          "N": 43,
+          "actual_finish_rate": 0.6976744186046512,
+          "mean_full_probability": 0.7241181332955344,
+          "mean_min_probability": 0.7015026644974542,
+          "sample_size_governance": "THIN_EXPLORATORY"
+        }
+      },
+      "wilson_95": [
+        0.5083717187197628,
+        0.6033092932501748
+      ]
+    },
+    {
+      "N": 74,
+      "decisions": 54,
+      "definition": "Both fighters are LOW KD creation and HIGH striking defense.",
+      "dominant_mov0_confidence_bucket": "<0.30",
+      "family": "survival",
+      "finish_prevalence": 0.2702702702702703,
+      "finishes": 20,
+      "fraction_full_moved_downward": 0.6621621621621622,
+      "fraction_full_moved_upward": 0.33783783783783783,
+      "full_calibration_gap_observed_minus_predicted": -0.023605519602044378,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 22,
+          "proportion": 0.2972972972972973
+        },
+        "0.40\u2013<0.50": {
+          "N": 7,
+          "proportion": 0.0945945945945946
+        },
+        "0.50\u2013<0.60": {
+          "N": 2,
+          "proportion": 0.02702702702702703
+        },
+        "0.60\u2013<0.70": {
+          "N": 1,
+          "proportion": 0.013513513513513514
+        },
+        "<0.30": {
+          "N": 42,
+          "proportion": 0.5675675675675675
+        }
+      },
+      "mean_delta_full_minus_min": -0.017910665521329815,
+      "mean_mov0_full_probability": 0.29387578987231466,
+      "mean_mov0_min_probability": 0.31178645539364447,
+      "median_delta_full_minus_min": -0.009226225240194938,
+      "min_calibration_gap_observed_minus_predicted": -0.04151618512337418,
+      "name": "D1_LOW_DAMAGE_STRONG_DEFENSE",
+      "observed_finish_rate": 0.2702702702702703,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 74,
+          "proportion": 1.0
+        }
+      },
+      "sample_size_governance": "MODERATE_UNCERTAINTY",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 74,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 5,
+            "proportion": 0.06756756756756757
+          },
+          "1\u20132": {
+            "N": 27,
+            "proportion": 0.36486486486486486
+          },
+          "3\u20135": {
+            "N": 21,
+            "proportion": 0.28378378378378377
+          },
+          "6\u201310": {
+            "N": 21,
+            "proportion": 0.28378378378378377
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 56,
+            "proportion": 0.7567567567567568
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 16,
+            "proportion": 0.21621621621621623
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 2,
+            "proportion": 0.02702702702702703
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 10,
+            "proportion": 0.13513513513513514
+          },
+          "18+ months": {
+            "N": 4,
+            "proportion": 0.05405405405405406
+          },
+          "6\u201312 months": {
+            "N": 31,
+            "proportion": 0.4189189189189189
+          },
+          "< 6 months": {
+            "N": 29,
+            "proportion": 0.3918918918918919
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 65,
+            "proportion": 0.8783783783783784
+          },
+          "5_ROUND": {
+            "N": 9,
+            "proportion": 0.12162162162162163
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 74,
+            "proportion": 1.0
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 6,
+            "proportion": 0.08108108108108109
+          },
+          "Featherweight": {
+            "N": 5,
+            "proportion": 0.06756756756756757
+          },
+          "Flyweight": {
+            "N": 3,
+            "proportion": 0.04054054054054054
+          },
+          "Lightweight": {
+            "N": 6,
+            "proportion": 0.08108108108108109
+          },
+          "Welterweight": {
+            "N": 3,
+            "proportion": 0.04054054054054054
+          },
+          "Women's Bantamweight": {
+            "N": 3,
+            "proportion": 0.04054054054054054
+          },
+          "Women's Flyweight": {
+            "N": 29,
+            "proportion": 0.3918918918918919
+          },
+          "Women's Strawweight": {
+            "N": 19,
+            "proportion": 0.25675675675675674
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 3,
+          "actual_finish_rate": 0.3333333333333333,
+          "mean_full_probability": 0.3845940059765325,
+          "mean_min_probability": 0.4335131955707809,
+          "sample_size_governance": "INSUFFICIENT"
+        }
+      },
+      "wilson_95": [
+        0.1823022792207824,
+        0.3809124842856652
+      ]
+    },
+    {
+      "N": 499,
+      "decisions": 277,
+      "definition": "Both fighters lack HIGH takedown access and are LOW submission pressure.",
+      "dominant_mov0_confidence_bucket": "0.40\u2013<0.50",
+      "family": "survival",
+      "finish_prevalence": 0.44488977955911824,
+      "finishes": 222,
+      "fraction_full_moved_downward": 0.3046092184368738,
+      "fraction_full_moved_upward": 0.6953907815631263,
+      "full_calibration_gap_observed_minus_predicted": -0.0035261488914844485,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 105,
+          "proportion": 0.21042084168336672
+        },
+        "0.40\u2013<0.50": {
+          "N": 133,
+          "proportion": 0.2665330661322645
+        },
+        "0.50\u2013<0.60": {
+          "N": 93,
+          "proportion": 0.18637274549098196
+        },
+        "0.60\u2013<0.70": {
+          "N": 59,
+          "proportion": 0.11823647294589178
+        },
+        "<0.30": {
+          "N": 87,
+          "proportion": 0.1743486973947896
+        },
+        ">=0.70": {
+          "N": 22,
+          "proportion": 0.04408817635270541
+        }
+      },
+      "mean_delta_full_minus_min": 0.018902563780263667,
+      "mean_mov0_full_probability": 0.4484159284506027,
+      "mean_mov0_min_probability": 0.42951336467033896,
+      "median_delta_full_minus_min": 0.019344369372757575,
+      "min_calibration_gap_observed_minus_predicted": 0.015376414888779277,
+      "name": "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE",
+      "observed_finish_rate": 0.44488977955911824,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 499,
+          "proportion": 1.0
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 499,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 39,
+            "proportion": 0.0781563126252505
+          },
+          "1\u20132": {
+            "N": 169,
+            "proportion": 0.33867735470941884
+          },
+          "3\u20135": {
+            "N": 149,
+            "proportion": 0.2985971943887776
+          },
+          "6\u201310": {
+            "N": 142,
+            "proportion": 0.2845691382765531
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 499,
+            "proportion": 1.0
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 60,
+            "proportion": 0.12024048096192384
+          },
+          "18+ months": {
+            "N": 39,
+            "proportion": 0.0781563126252505
+          },
+          "6\u201312 months": {
+            "N": 249,
+            "proportion": 0.49899799599198397
+          },
+          "< 6 months": {
+            "N": 151,
+            "proportion": 0.3026052104208417
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 455,
+            "proportion": 0.9118236472945892
+          },
+          "5_ROUND": {
+            "N": 44,
+            "proportion": 0.08817635270541083
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 276,
+            "proportion": 0.5531062124248497
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 178,
+            "proportion": 0.35671342685370744
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 45,
+            "proportion": 0.09018036072144289
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 54,
+            "proportion": 0.10821643286573146
+          },
+          "Catch Weight": {
+            "N": 4,
+            "proportion": 0.008016032064128256
+          },
+          "Featherweight": {
+            "N": 36,
+            "proportion": 0.07214428857715431
+          },
+          "Flyweight": {
+            "N": 6,
+            "proportion": 0.012024048096192385
+          },
+          "Heavyweight": {
+            "N": 89,
+            "proportion": 0.17835671342685372
+          },
+          "Light Heavyweight": {
+            "N": 66,
+            "proportion": 0.13226452905811623
+          },
+          "Lightweight": {
+            "N": 43,
+            "proportion": 0.08617234468937876
+          },
+          "Middleweight": {
+            "N": 53,
+            "proportion": 0.1062124248496994
+          },
+          "Welterweight": {
+            "N": 43,
+            "proportion": 0.08617234468937876
+          },
+          "Women's Bantamweight": {
+            "N": 29,
+            "proportion": 0.05811623246492986
+          },
+          "Women's Featherweight": {
+            "N": 2,
+            "proportion": 0.004008016032064128
+          },
+          "Women's Flyweight": {
+            "N": 21,
+            "proportion": 0.04208416833667335
+          },
+          "Women's Strawweight": {
+            "N": 53,
+            "proportion": 0.1062124248496994
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 6,
+          "actual_finish_rate": 0.5,
+          "mean_full_probability": 0.4096708872080605,
+          "mean_min_probability": 0.40113522971954924,
+          "sample_size_governance": "INSUFFICIENT"
+        },
+        "Heavyweight": {
+          "N": 89,
+          "actual_finish_rate": 0.5617977528089888,
+          "mean_full_probability": 0.5384042239723815,
+          "mean_min_probability": 0.5129591105878472,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        },
+        "Light Heavyweight": {
+          "N": 66,
+          "actual_finish_rate": 0.5303030303030303,
+          "mean_full_probability": 0.5774314567731187,
+          "mean_min_probability": 0.5645731819588976,
+          "sample_size_governance": "MODERATE_UNCERTAINTY"
+        }
+      },
+      "wilson_95": [
+        0.4018728985316915,
+        0.4887486899725846
+      ]
+    },
+    {
+      "N": 124,
+      "decisions": 85,
+      "definition": "Both fighters are HIGH prior-fight experience and HIGH striking defense.",
+      "dominant_mov0_confidence_bucket": "0.30\u2013<0.40",
+      "family": "survival",
+      "finish_prevalence": 0.31451612903225806,
+      "finishes": 39,
+      "fraction_full_moved_downward": 0.5645161290322581,
+      "fraction_full_moved_upward": 0.43548387096774194,
+      "full_calibration_gap_observed_minus_predicted": -0.1107376619663879,
+      "full_probability_bucket_distribution": {
+        "0.30\u2013<0.40": {
+          "N": 40,
+          "proportion": 0.3225806451612903
+        },
+        "0.40\u2013<0.50": {
+          "N": 28,
+          "proportion": 0.22580645161290322
+        },
+        "0.50\u2013<0.60": {
+          "N": 19,
+          "proportion": 0.1532258064516129
+        },
+        "0.60\u2013<0.70": {
+          "N": 10,
+          "proportion": 0.08064516129032258
+        },
+        "<0.30": {
+          "N": 23,
+          "proportion": 0.18548387096774194
+        },
+        ">=0.70": {
+          "N": 4,
+          "proportion": 0.03225806451612903
+        }
+      },
+      "mean_delta_full_minus_min": -0.004712547769053331,
+      "mean_mov0_full_probability": 0.42525379099864596,
+      "mean_mov0_min_probability": 0.42996633876769924,
+      "median_delta_full_minus_min": -0.003177356846007673,
+      "min_calibration_gap_observed_minus_predicted": -0.11545020973544118,
+      "name": "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE",
+      "observed_finish_rate": 0.31451612903225806,
+      "oof_year_coverage": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "qualification_distribution": {
+        "BOTH_SIDES": {
+          "N": 124,
+          "proportion": 1.0
+        }
+      },
+      "sample_size_governance": "NORMAL",
+      "terrain_composition": {
+        "completeness_tier": {
+          "LOW_MISSINGNESS": {
+            "N": 124,
+            "proportion": 1.0
+          }
+        },
+        "experience_bucket": {
+          "11+": {
+            "N": 48,
+            "proportion": 0.3870967741935484
+          },
+          "6\u201310": {
+            "N": 76,
+            "proportion": 0.6129032258064516
+          }
+        },
+        "grappling_environment": {
+          "GRAPPLE_LOW": {
+            "N": 91,
+            "proportion": 0.7338709677419355
+          },
+          "GRAPPLE_ONE_SIDED": {
+            "N": 29,
+            "proportion": 0.23387096774193547
+          },
+          "GRAPPLE_TWO_SIDED": {
+            "N": 4,
+            "proportion": 0.03225806451612903
+          }
+        },
+        "layoff_bucket": {
+          "12\u201318 months": {
+            "N": 21,
+            "proportion": 0.1693548387096774
+          },
+          "18+ months": {
+            "N": 10,
+            "proportion": 0.08064516129032258
+          },
+          "6\u201312 months": {
+            "N": 63,
+            "proportion": 0.5080645161290323
+          },
+          "< 6 months": {
+            "N": 30,
+            "proportion": 0.24193548387096775
+          }
+        },
+        "scheduled_duration_bucket": {
+          "3_ROUND": {
+            "N": 72,
+            "proportion": 0.5806451612903226
+          },
+          "5_ROUND": {
+            "N": 52,
+            "proportion": 0.41935483870967744
+          }
+        },
+        "striking_environment": {
+          "STRIKE_LOW": {
+            "N": 73,
+            "proportion": 0.5887096774193549
+          },
+          "STRIKE_ONE_SIDED": {
+            "N": 41,
+            "proportion": 0.33064516129032256
+          },
+          "STRIKE_TWO_SIDED": {
+            "N": 10,
+            "proportion": 0.08064516129032258
+          }
+        },
+        "weight_class": {
+          "Bantamweight": {
+            "N": 24,
+            "proportion": 0.1935483870967742
+          },
+          "Catch Weight": {
+            "N": 2,
+            "proportion": 0.016129032258064516
+          },
+          "Featherweight": {
+            "N": 15,
+            "proportion": 0.12096774193548387
+          },
+          "Flyweight": {
+            "N": 6,
+            "proportion": 0.04838709677419355
+          },
+          "Heavyweight": {
+            "N": 1,
+            "proportion": 0.008064516129032258
+          },
+          "Interim Bantamweight": {
+            "N": 1,
+            "proportion": 0.008064516129032258
+          },
+          "Interim Heavyweight": {
+            "N": 1,
+            "proportion": 0.008064516129032258
+          },
+          "Interim Welterweight": {
+            "N": 1,
+            "proportion": 0.008064516129032258
+          },
+          "Light Heavyweight": {
+            "N": 1,
+            "proportion": 0.008064516129032258
+          },
+          "Lightweight": {
+            "N": 22,
+            "proportion": 0.1774193548387097
+          },
+          "Middleweight": {
+            "N": 14,
+            "proportion": 0.11290322580645161
+          },
+          "Welterweight": {
+            "N": 19,
+            "proportion": 0.1532258064516129
+          },
+          "Women's Bantamweight": {
+            "N": 3,
+            "proportion": 0.024193548387096774
+          },
+          "Women's Flyweight": {
+            "N": 11,
+            "proportion": 0.08870967741935484
+          },
+          "Women's Strawweight": {
+            "N": 3,
+            "proportion": 0.024193548387096774
+          }
+        }
+      },
+      "weight_class_interactions": {
+        "Flyweight": {
+          "N": 6,
+          "actual_finish_rate": 0.5,
+          "mean_full_probability": 0.36572093495785163,
+          "mean_min_probability": 0.366603875901707,
+          "sample_size_governance": "INSUFFICIENT"
+        },
+        "Heavyweight": {
+          "N": 1,
+          "actual_finish_rate": 1.0,
+          "mean_full_probability": 0.4645032164150726,
+          "mean_min_probability": 0.5418660201006548,
+          "sample_size_governance": "INSUFFICIENT"
+        },
+        "Light Heavyweight": {
+          "N": 1,
+          "actual_finish_rate": 0.0,
+          "mean_full_probability": 0.6761142900157693,
+          "mean_min_probability": 0.6637550006810822,
+          "sample_size_governance": "INSUFFICIENT"
+        }
+      },
+      "wilson_95": [
+        0.2394087010515654,
+        0.40077062399416985
+      ]
+    }
+  ],
+  "bucket_to_archetype_mapping": {
+    "0.30\u2013<0.40": {
+      "N": 766,
+      "archetype_match_proportion": {
+        "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": 0.05483028720626632,
+        "A2_BOTH_HIGH_DAMAGE_EXCHANGE": 0.022193211488250653,
+        "A3_ACCURACY_VS_ABSORPTION": 0.19712793733681463,
+        "A4_KO_HISTORY_VS_KO_VULNERABILITY": 0.06266318537859007,
+        "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE": 0.15404699738903394,
+        "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE": 0.20365535248041775,
+        "B3_TD_ACCESS_PLUS_SUB_PRESSURE": 0.06919060052219321,
+        "B4_SUB_PRESSURE_POOR_TD_ACCESS": 0.31070496083550914,
+        "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": 0.07963446475195822,
+        "C1_DAMAGE_PLUS_SUBMISSION_ACCESS": 0.0013054830287206266,
+        "C2_BOTH_HIGH_FINISH_HISTORY": 0.22323759791122716,
+        "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS": 0.024804177545691905,
+        "D1_LOW_DAMAGE_STRONG_DEFENSE": 0.028720626631853787,
+        "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE": 0.1370757180156658,
+        "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE": 0.05221932114882506
+      },
+      "family_match_proportion": {
+        "grappling": 0.49738903394255873,
+        "mixed": 0.24151436031331594,
+        "striking": 0.2845953002610966,
+        "survival": 0.19973890339425587
+      }
+    },
+    "0.40\u2013<0.50": {
+      "N": 1210,
+      "archetype_match_proportion": {
+        "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": 0.12396694214876033,
+        "A2_BOTH_HIGH_DAMAGE_EXCHANGE": 0.02727272727272727,
+        "A3_ACCURACY_VS_ABSORPTION": 0.18181818181818182,
+        "A4_KO_HISTORY_VS_KO_VULNERABILITY": 0.10578512396694215,
+        "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE": 0.1347107438016529,
+        "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE": 0.11487603305785124,
+        "B3_TD_ACCESS_PLUS_SUB_PRESSURE": 0.07520661157024794,
+        "B4_SUB_PRESSURE_POOR_TD_ACCESS": 0.3413223140495868,
+        "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": 0.11735537190082644,
+        "C1_DAMAGE_PLUS_SUBMISSION_ACCESS": 0.0024793388429752068,
+        "C2_BOTH_HIGH_FINISH_HISTORY": 0.2462809917355372,
+        "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS": 0.05289256198347107,
+        "D1_LOW_DAMAGE_STRONG_DEFENSE": 0.005785123966942148,
+        "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE": 0.10991735537190082,
+        "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE": 0.023140495867768594
+      },
+      "family_match_proportion": {
+        "grappling": 0.4809917355371901,
+        "mixed": 0.2727272727272727,
+        "striking": 0.31074380165289256,
+        "survival": 0.13388429752066117
+      }
+    },
+    "0.50\u2013<0.60": {
+      "N": 975,
+      "archetype_match_proportion": {
+        "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": 0.19692307692307692,
+        "A2_BOTH_HIGH_DAMAGE_EXCHANGE": 0.027692307692307693,
+        "A3_ACCURACY_VS_ABSORPTION": 0.23487179487179488,
+        "A4_KO_HISTORY_VS_KO_VULNERABILITY": 0.21435897435897436,
+        "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE": 0.16307692307692306,
+        "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE": 0.1558974358974359,
+        "B3_TD_ACCESS_PLUS_SUB_PRESSURE": 0.09743589743589744,
+        "B4_SUB_PRESSURE_POOR_TD_ACCESS": 0.4235897435897436,
+        "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": 0.1641025641025641,
+        "C1_DAMAGE_PLUS_SUBMISSION_ACCESS": 0.006153846153846154,
+        "C2_BOTH_HIGH_FINISH_HISTORY": 0.4,
+        "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS": 0.10666666666666667,
+        "D1_LOW_DAMAGE_STRONG_DEFENSE": 0.0020512820512820513,
+        "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE": 0.09538461538461539,
+        "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE": 0.019487179487179488
+      },
+      "family_match_proportion": {
+        "grappling": 0.5784615384615385,
+        "mixed": 0.4379487179487179,
+        "striking": 0.4441025641025641,
+        "survival": 0.1117948717948718
+      }
+    },
+    "0.60\u2013<0.70": {
+      "N": 640,
+      "archetype_match_proportion": {
+        "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": 0.3453125,
+        "A2_BOTH_HIGH_DAMAGE_EXCHANGE": 0.0453125,
+        "A3_ACCURACY_VS_ABSORPTION": 0.2703125,
+        "A4_KO_HISTORY_VS_KO_VULNERABILITY": 0.359375,
+        "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE": 0.1625,
+        "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE": 0.184375,
+        "B3_TD_ACCESS_PLUS_SUB_PRESSURE": 0.134375,
+        "B4_SUB_PRESSURE_POOR_TD_ACCESS": 0.4578125,
+        "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": 0.1984375,
+        "C1_DAMAGE_PLUS_SUBMISSION_ACCESS": 0.015625,
+        "C2_BOTH_HIGH_FINISH_HISTORY": 0.5453125,
+        "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS": 0.18125,
+        "D1_LOW_DAMAGE_STRONG_DEFENSE": 0.0015625,
+        "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE": 0.0921875,
+        "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE": 0.015625
+      },
+      "family_match_proportion": {
+        "grappling": 0.6265625,
+        "mixed": 0.578125,
+        "striking": 0.6,
+        "survival": 0.1046875
+      }
+    },
+    "<0.30": {
+      "N": 355,
+      "archetype_match_proportion": {
+        "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": 0.011267605633802818,
+        "A2_BOTH_HIGH_DAMAGE_EXCHANGE": 0.005633802816901409,
+        "A3_ACCURACY_VS_ABSORPTION": 0.27887323943661974,
+        "A4_KO_HISTORY_VS_KO_VULNERABILITY": 0.005633802816901409,
+        "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE": 0.1295774647887324,
+        "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE": 0.19718309859154928,
+        "B3_TD_ACCESS_PLUS_SUB_PRESSURE": 0.08169014084507042,
+        "B4_SUB_PRESSURE_POOR_TD_ACCESS": 0.27323943661971833,
+        "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": 0.03380281690140845,
+        "C1_DAMAGE_PLUS_SUBMISSION_ACCESS": 0.0,
+        "C2_BOTH_HIGH_FINISH_HISTORY": 0.09859154929577464,
+        "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS": 0.005633802816901409,
+        "D1_LOW_DAMAGE_STRONG_DEFENSE": 0.11830985915492957,
+        "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE": 0.24507042253521127,
+        "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE": 0.0647887323943662
+      },
+      "family_match_proportion": {
+        "grappling": 0.49295774647887325,
+        "mixed": 0.10422535211267606,
+        "striking": 0.29014084507042254,
+        "survival": 0.35492957746478876
+      }
+    },
+    ">=0.70": {
+      "N": 314,
+      "archetype_match_proportion": {
+        "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": 0.49044585987261147,
+        "A2_BOTH_HIGH_DAMAGE_EXCHANGE": 0.11146496815286625,
+        "A3_ACCURACY_VS_ABSORPTION": 0.321656050955414,
+        "A4_KO_HISTORY_VS_KO_VULNERABILITY": 0.5477707006369427,
+        "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE": 0.22929936305732485,
+        "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE": 0.20063694267515925,
+        "B3_TD_ACCESS_PLUS_SUB_PRESSURE": 0.18471337579617833,
+        "B4_SUB_PRESSURE_POOR_TD_ACCESS": 0.554140127388535,
+        "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": 0.28343949044585987,
+        "C1_DAMAGE_PLUS_SUBMISSION_ACCESS": 0.028662420382165606,
+        "C2_BOTH_HIGH_FINISH_HISTORY": 0.7643312101910829,
+        "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS": 0.35668789808917195,
+        "D1_LOW_DAMAGE_STRONG_DEFENSE": 0.0,
+        "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE": 0.07006369426751592,
+        "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE": 0.012738853503184714
+      },
+      "family_match_proportion": {
+        "grappling": 0.7133757961783439,
+        "mixed": 0.7802547770700637,
+        "striking": 0.7547770700636943,
+        "survival": 0.08280254777070063
+      }
+    }
+  },
+  "sources": {
+    "MOV0_FULL_OOF_SHA256": "9d543356b157fefaabe27f7f4d1b5663536e4cf659fdf11fedd8531c4b13faa0",
+    "MOV0_MIN_OOF_SHA256": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57",
+    "artifact_id": 10561085362,
+    "artifact_name": "mov0-standard-finish-probability-v1",
+    "corrected_F02_SHA256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "frozen_MOV0_source_HEAD": "dd4e7de7de4baa24090388fcf845c996564f2bf8",
+    "proof_predictions_not_regenerated": "program imports no MOV0 training/prediction code; only reads and SHA-verifies frozen OOF CSVs",
+    "terrain_SHA256": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2",
+    "workflow_run": 35376956316
+  },
+  "status": "MOV0_CONDITIONAL_FEATURE_INTERACTION_ARCHETYPE_DIAGNOSTIC_V1_COMPLETE"
+}

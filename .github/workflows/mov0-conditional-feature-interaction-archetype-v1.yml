@@ -1,0 +1,64 @@
+name: MOV0 Conditional Feature Interaction Archetype Diagnostic V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/mov0-conditional-feature-interaction-archetype-v1.yml"
+      - "tools/diagnostics/run_mov0_conditional_feature_interaction_archetype_v1.py"
+      - "tests/diagnostics/test_mov0_conditional_feature_interaction_archetype_v1_contract.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install frozen diagnostic dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 pytest==8.3.3
+      - name: Verify immutable MOV0 source ancestry
+        run: git merge-base --is-ancestor dd4e7de7de4baa24090388fcf845c996564f2bf8 HEAD
+      - name: Verify diagnostic contract
+        run: python -m pytest -q tests/diagnostics/test_mov0_conditional_feature_interaction_archetype_v1_contract.py
+      - name: Download authoritative frozen MOV0 OOF artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mov0-standard-finish-probability-v1
+          path: ${{ runner.temp }}/mov0
+          repository: Tkcool28/ufc-edge
+          run-id: 35376956316
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download frozen corrected F02 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Produce descriptive read-only diagnostic
+        run: |
+          python tools/diagnostics/run_mov0_conditional_feature_interaction_archetype_v1.py \
+            --f02-table "${{ runner.temp }}/f02/winner_modeling_table.parquet" \
+            --mov0-run-dir "${{ runner.temp }}/mov0/ufc-edge/ufc-edge/models/mov0/run_v1" \
+            --terrain-assignment governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz \
+            --output-dir "${{ runner.temp }}/diagnostic"
+      - name: Upload complete diagnostic evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: mov0-conditional-feature-interaction-archetype-v1
+          path: ${{ runner.temp }}/diagnostic
+          if-no-files-found: error
+          retention-days: 30

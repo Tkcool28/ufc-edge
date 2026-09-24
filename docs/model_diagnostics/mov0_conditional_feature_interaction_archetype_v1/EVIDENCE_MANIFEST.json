@@ -1,0 +1,26 @@
+{
+  "files": {
+    "MOV0_CONDITIONAL_FEATURE_INTERACTION_ARCHETYPE_DIAGNOSTIC_V1_COMPLETE.json": {
+      "bytes": 107420,
+      "sha256": "58cead1a175c205e48d499a3a12abd4ea6f300203b4aa6761e3bbc7842ef5ec5"
+    },
+    "MOV0_CONDITIONAL_FEATURE_INTERACTION_ARCHETYPE_DIAGNOSTIC_V1_REPORT.md": {
+      "bytes": 8822,
+      "sha256": "8051583e8bd55e01ac0071221b1a52261861bef9e36168a6b7619e46de3d492e"
+    },
+    "archetype_results.json": {
+      "bytes": 92174,
+      "sha256": "fdecd881fc4741ba825573ba71dee6a69844ae7ef28aca0b4788744769c07a95"
+    },
+    "bucket_to_archetype_mapping.json": {
+      "bytes": 7051,
+      "sha256": "143e252d8c2eff25678df54f781f5c72f67d426743834a0186677b3b11302b0c"
+    },
+    "feature_state_thresholds.json": {
+      "bytes": 5111,
+      "sha256": "066d525e3660fbbee9accba47ea3b56468179e6eff6d78d4aebabe7e45c8daad"
+    }
+  },
+  "publication_mode": "FROZEN_OOF_READ_ONLY_DIAGNOSTIC",
+  "status": "MOV0_CONDITIONAL_FEATURE_INTERACTION_ARCHETYPE_DIAGNOSTIC_V1_COMPLETE"
+}
