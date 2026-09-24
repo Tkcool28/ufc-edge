@@ -31,7 +31,7 @@ jobs:
       - name: Verify immutable MOV0 source ancestry
         run: git merge-base --is-ancestor dd4e7de7de4baa24090388fcf845c996564f2bf8 HEAD
       - name: Verify diagnostic contract
-        run: python -m pytest -q tests/models/test_mov0_conditional_feature_interaction_archetype_v1_contract.py
+        run: python -m pytest -q tests/diagnostics/test_mov0_conditional_feature_interaction_archetype_v1_contract.py
       - name: Download authoritative frozen MOV0 OOF artifact
         uses: actions/download-artifact@v4
         with:
