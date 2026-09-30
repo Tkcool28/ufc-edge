@@ -1,0 +1,80 @@
+{
+  "archive": "MOV0_HIERARCHICAL_V1_1_POSTERIORS_AND_INPUTS.zip",
+  "bytes": 203662301,
+  "contents": "18 retained raw posterior traces, frozen F02 and MOV0 run inputs, execution log and verification scripts",
+  "sha256": "0891ee6b083c5ebe23fcdcb9bc3ae4532e62c85ca6f3197e1382936c4ff79392",
+  "traces": {
+    "posterior_H1_2018.nc": {
+      "bytes": 4156763,
+      "sha256": "4d7e3d2470eda964d55706b04dd30823363b1579c80afb94393b2f894d8ee126"
+    },
+    "posterior_H1_2019.nc": {
+      "bytes": 4154584,
+      "sha256": "dd3cb19e2bb35ade6088e297223b38ed9a4d06a38a012d794a8c06634659f196"
+    },
+    "posterior_H1_2020.nc": {
+      "bytes": 4157463,
+      "sha256": "ea3589d8488f5e324dda1d5e4ca05c21589e5b15d6e70d1fcb2d70acff60b6f6"
+    },
+    "posterior_H1_2021.nc": {
+      "bytes": 4157369,
+      "sha256": "a79274d2e9a175e37ef013db4861dc3e15d720da4a3e3ed81fe46fb3770ea31e"
+    },
+    "posterior_H1_2022.nc": {
+      "bytes": 4155903,
+      "sha256": "f55d4767254dcb6a3e75c302ad2bda7045ea00db4e3c50ead182126d9ca2108c"
+    },
+    "posterior_H1_2023.nc": {
+      "bytes": 4157710,
+      "sha256": "4a328f707d8da2c5f786e255c7a62050ec99285a6d005d3adbd6445873eb9063"
+    },
+    "posterior_H1_2024.nc": {
+      "bytes": 4159468,
+      "sha256": "4d491c2b217d2eb7dd110976ff7a75d48d921809da918519bf8957840dd2014e"
+    },
+    "posterior_H1_2025.nc": {
+      "bytes": 4161213,
+      "sha256": "2257165d3d3dc74d1a764b4cbc8caa714e9f7506eda7cdcc40b24cb7b5716e0d"
+    },
+    "posterior_H1_2026.nc": {
+      "bytes": 4163980,
+      "sha256": "280a3157cfc31b8d0c9d99c2f3ea227fde40e9b4bbcc9c1a772f5c7568987b9b"
+    },
+    "posterior_H2_2018.nc": {
+      "bytes": 15893531,
+      "sha256": "77c3fd3cdefb72734c014c59fb505ee399116665a7e98964b1f09f97eeda7718"
+    },
+    "posterior_H2_2019.nc": {
+      "bytes": 15896054,
+      "sha256": "2c4e5f9adbd25b41589916c380cec53dad5141771d7b2b9f189b0b807e5c21e9"
+    },
+    "posterior_H2_2020.nc": {
+      "bytes": 15896214,
+      "sha256": "b2fb8c0c3ddbe3a713472e7e558f86caaec2621ce7cd6cd11fed60244d3ffd7b"
+    },
+    "posterior_H2_2021.nc": {
+      "bytes": 15895715,
+      "sha256": "ad50c2c02f37ea27a3dbcca4a62a3a19632d32cbbc7d986e41791d8fd14005a0"
+    },
+    "posterior_H2_2022.nc": {
+      "bytes": 15897058,
+      "sha256": "96c9d2d5772d78ba3bb23b1c248a578180357e67f666fb9c4071b5bbff2bb497"
+    },
+    "posterior_H2_2023.nc": {
+      "bytes": 15899379,
+      "sha256": "1af7bbb30d55499b6734f93ae6a56de490c468c0d66ad5533f00e9bacf603af3"
+    },
+    "posterior_H2_2024.nc": {
+      "bytes": 15901071,
+      "sha256": "7c76c35d9e0ef4066e06e219d71f8a6001543fad188041b5bacbf34d1c1f860f"
+    },
+    "posterior_H2_2025.nc": {
+      "bytes": 15900271,
+      "sha256": "d3b91dbf1f347fbb1e1c78a0aea9cef1da1dbcd7d7ed88b7bb5d3d34a394309a"
+    },
+    "posterior_H2_2026.nc": {
+      "bytes": 15899798,
+      "sha256": "18922f8783d01699f7d64bf7eee9df9e2d28bdb42e527f8874b98262610b5ec5"
+    }
+  }
+}

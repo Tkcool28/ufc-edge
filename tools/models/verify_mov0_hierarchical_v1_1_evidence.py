@@ -18,7 +18,9 @@ def main():
         assert not ds[-1]['passed'] and all(d['passed'] for d in ds[:-1])
         assert not (out/'COMPLETE.json').exists()
         print('V1_1_BLOCKED_EVIDENCE_VERIFIED');return
-    assert len(ds)==18 and all(d['passed'] for d in ds)
+    assert {(d['surface'],d['year']) for d in ds}=={(s,y) for s in ['H1','H2'] for y in range(2018,2027)}
+    assert all(d['passed'] and d['min_bulk_ess']>=400 and d['min_tail_ess']>=400 and d['max_rhat']<=1.01 and d['divergences']==0 and min(d['bfmi_by_chain'])>=.3 and d['max_tree_depth_hits']==0 for d in ds)
+    swaps=read(out/'fighter_order_invariance.json');assert len(swaps)==18 and all(r['passed'] and r['swap_max_abs_delta']<=1e-12 for r in swaps)
     assert read(out/'FIT_COMPLETE.json')['status']=='V1_1_CONVERGENCE_VALIDATED'
     repro=read(out/'reproducibility.json');assert repro['posterior_arrays_identical'] and repro['predictions_identical']
     assert read(out/'COMPLETE.json')['status']=='MOV0_HIERARCHICAL_PARTIAL_POOLING_CHALLENGER_V1_1_COMPLETE'

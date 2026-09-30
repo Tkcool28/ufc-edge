@@ -28,3 +28,9 @@ PYTHONPATH=src OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python tools/models/eval
 ```
 
 Convergence alone establishes no superiority. The original chronological comparisons, uncertainty, terrain, six bands, archetypes, sample-size governance, and scientific interpretation rules remain fixed. No odds, ROI/EV, new features, MOV1, or simulator implementation is authorized.
+
+## Completed evidence
+
+All 18 fits passed the unchanged gates: V1_1_CONVERGENCE_VALIDATED. The identical-environment H1 repeat and all-fold fighter-order invariance passed. Evaluation is complete: CURRENT_SPECIFICATION_NOT_SUPPORTED for H1/H2 versus frozen MIN; H2 versus H1 is INCONCLUSIVE. PR #115 is unchanged and remains the blocked V1 record.
+
+See [V1.1 final report](run_v1_1/V1_1_FINAL_REPORT.md), [full frozen evaluation panels](run_v1_1/REPORT.md), [varying effects](run_v1_1/VARYING_EFFECTS_AND_SHRINKAGE.md), [tradeoffs](run_v1_1/HELPED_HURT_UNCHANGED.md), [MOV1 implications](run_v1_1/IMPLICATIONS_FOR_MOV1.md) and [simulator implications](run_v1_1/IMPLICATIONS_FOR_HYBRID_SIMULATOR.md). The evidence manifest hashes every persisted compact artifact. Large JSON/CSV files use lossless deterministic gzip. POSTERIOR_ARCHIVE.json hashes each raw trace and the separately preserved posterior/input ZIP. No merge or deployment is authorized by this result.

@@ -1,0 +1,290 @@
+{
+  "H1_vs_H0": {
+    "aggregate_log_loss_delta": 0.0023494003056486953,
+    "better_years": 2,
+    "event_bootstrap": {
+      "ci95": [
+        0.001321490958812046,
+        0.0034431726599451567
+      ],
+      "kind": "event_cluster_paired",
+      "point_estimate": 0.0023494003056486953,
+      "replicates": 2000,
+      "seed": 17
+    },
+    "fight_bootstrap": {
+      "ci95": [
+        0.0012648673722293106,
+        0.0034461238789861054
+      ],
+      "kind": "fight_level_paired",
+      "point_estimate": 0.0023494003056486953,
+      "replicates": 2000,
+      "seed": 17
+    },
+    "median_yearly_delta": 0.0018396322191731255,
+    "per_year": [
+      {
+        "N": 470,
+        "log_loss_delta": 0.010289134784229926,
+        "summed_loss_delta": 4.8358933485880655,
+        "year": 2018
+      },
+      {
+        "N": 507,
+        "log_loss_delta": 0.0025783018815686547,
+        "summed_loss_delta": 1.307199053955308,
+        "year": 2019
+      },
+      {
+        "N": 443,
+        "log_loss_delta": 0.0021894446641713377,
+        "summed_loss_delta": 0.9699239862279025,
+        "year": 2020
+      },
+      {
+        "N": 492,
+        "log_loss_delta": 0.0042559900893696994,
+        "summed_loss_delta": 2.093947123969892,
+        "year": 2021
+      },
+      {
+        "N": 505,
+        "log_loss_delta": 0.0018396322191731255,
+        "summed_loss_delta": 0.9290142706824284,
+        "year": 2022
+      },
+      {
+        "N": 505,
+        "log_loss_delta": 0.0008545013392285807,
+        "summed_loss_delta": 0.43152317631043324,
+        "year": 2023
+      },
+      {
+        "N": 502,
+        "log_loss_delta": -0.0004571116085720225,
+        "summed_loss_delta": -0.2294700275031553,
+        "year": 2024
+      },
+      {
+        "N": 504,
+        "log_loss_delta": -0.0008437689012163646,
+        "summed_loss_delta": -0.42525952621304774,
+        "year": 2025
+      },
+      {
+        "N": 332,
+        "log_loss_delta": 0.00028817438567956205,
+        "summed_loss_delta": 0.0956738960456146,
+        "year": 2026
+      }
+    ],
+    "single_strongest_favorable_year_percent_of_aggregate_gain": null,
+    "strongest_favorable_year": {
+      "N": 504,
+      "log_loss_delta": -0.0008437689012163646,
+      "summed_loss_delta": -0.42525952621304774,
+      "year": 2025
+    },
+    "strongest_unfavorable_year": {
+      "N": 470,
+      "log_loss_delta": 0.010289134784229926,
+      "summed_loss_delta": 4.8358933485880655,
+      "year": 2018
+    },
+    "tied_years": 0,
+    "worse_years": 7
+  },
+  "H2_vs_H0": {
+    "aggregate_log_loss_delta": 0.002345834241389315,
+    "better_years": 3,
+    "event_bootstrap": {
+      "ci95": [
+        0.0008206719105691663,
+        0.003984688914001882
+      ],
+      "kind": "event_cluster_paired",
+      "point_estimate": 0.002345834241389315,
+      "replicates": 2000,
+      "seed": 17
+    },
+    "fight_bootstrap": {
+      "ci95": [
+        0.0007057101486299672,
+        0.0039651214229155535
+      ],
+      "kind": "fight_level_paired",
+      "point_estimate": 0.002345834241389315,
+      "replicates": 2000,
+      "seed": 17
+    },
+    "median_yearly_delta": 0.0015197253032764823,
+    "per_year": [
+      {
+        "N": 470,
+        "log_loss_delta": 0.008111722639146834,
+        "summed_loss_delta": 3.8125096403990124,
+        "year": 2018
+      },
+      {
+        "N": 507,
+        "log_loss_delta": 0.0015197253032764823,
+        "summed_loss_delta": 0.7705007287611765,
+        "year": 2019
+      },
+      {
+        "N": 443,
+        "log_loss_delta": 0.005518922922197204,
+        "summed_loss_delta": 2.444882854533361,
+        "year": 2020
+      },
+      {
+        "N": 492,
+        "log_loss_delta": 0.006860703559631296,
+        "summed_loss_delta": 3.375466151338598,
+        "year": 2021
+      },
+      {
+        "N": 505,
+        "log_loss_delta": 0.0024072852257439365,
+        "summed_loss_delta": 1.215679039000688,
+        "year": 2022
+      },
+      {
+        "N": 505,
+        "log_loss_delta": 0.0006948962745474478,
+        "summed_loss_delta": 0.3509226186464611,
+        "year": 2023
+      },
+      {
+        "N": 502,
+        "log_loss_delta": -0.00017122975581628048,
+        "summed_loss_delta": -0.0859573374197728,
+        "year": 2024
+      },
+      {
+        "N": 504,
+        "log_loss_delta": -0.0022600074101007217,
+        "summed_loss_delta": -1.1390437346907638,
+        "year": 2025
+      },
+      {
+        "N": 332,
+        "log_loss_delta": -0.0022641749766574722,
+        "summed_loss_delta": -0.7517060922502807,
+        "year": 2026
+      }
+    ],
+    "single_strongest_favorable_year_percent_of_aggregate_gain": null,
+    "strongest_favorable_year": {
+      "N": 332,
+      "log_loss_delta": -0.0022641749766574722,
+      "summed_loss_delta": -0.7517060922502807,
+      "year": 2026
+    },
+    "strongest_unfavorable_year": {
+      "N": 470,
+      "log_loss_delta": 0.008111722639146834,
+      "summed_loss_delta": 3.8125096403990124,
+      "year": 2018
+    },
+    "tied_years": 0,
+    "worse_years": 6
+  },
+  "H2_vs_H1": {
+    "aggregate_log_loss_delta": -3.566064259380624e-06,
+    "better_years": 5,
+    "event_bootstrap": {
+      "ci95": [
+        -0.0012422546194738125,
+        0.0013158572212992518
+      ],
+      "kind": "event_cluster_paired",
+      "point_estimate": -3.566064259380624e-06,
+      "replicates": 2000,
+      "seed": 17
+    },
+    "fight_bootstrap": {
+      "ci95": [
+        -0.0012083769594823425,
+        0.0012126245908498485
+      ],
+      "kind": "fight_level_paired",
+      "point_estimate": -3.566064259380624e-06,
+      "replicates": 2000,
+      "seed": 17
+    },
+    "median_yearly_delta": -0.0001596050646811329,
+    "per_year": [
+      {
+        "N": 470,
+        "log_loss_delta": -0.0021774121450830906,
+        "summed_loss_delta": -1.0233837081890527,
+        "year": 2018
+      },
+      {
+        "N": 507,
+        "log_loss_delta": -0.0010585765782921727,
+        "summed_loss_delta": -0.5366983251941315,
+        "year": 2019
+      },
+      {
+        "N": 443,
+        "log_loss_delta": 0.003329478258025866,
+        "summed_loss_delta": 1.4749588683054586,
+        "year": 2020
+      },
+      {
+        "N": 492,
+        "log_loss_delta": 0.0026047134702615973,
+        "summed_loss_delta": 1.2815190273687058,
+        "year": 2021
+      },
+      {
+        "N": 505,
+        "log_loss_delta": 0.0005676530065708114,
+        "summed_loss_delta": 0.28666476831825977,
+        "year": 2022
+      },
+      {
+        "N": 505,
+        "log_loss_delta": -0.0001596050646811329,
+        "summed_loss_delta": -0.08060055766397212,
+        "year": 2023
+      },
+      {
+        "N": 502,
+        "log_loss_delta": 0.00028588185275574214,
+        "summed_loss_delta": 0.14351269008338255,
+        "year": 2024
+      },
+      {
+        "N": 504,
+        "log_loss_delta": -0.001416238508884357,
+        "summed_loss_delta": -0.713784208477716,
+        "year": 2025
+      },
+      {
+        "N": 332,
+        "log_loss_delta": -0.0025523493623370343,
+        "summed_loss_delta": -0.8473799882958953,
+        "year": 2026
+      }
+    ],
+    "single_strongest_favorable_year_percent_of_aggregate_gain": 6736.584086597345,
+    "strongest_favorable_year": {
+      "N": 332,
+      "log_loss_delta": -0.0025523493623370343,
+      "summed_loss_delta": -0.8473799882958953,
+      "year": 2026
+    },
+    "strongest_unfavorable_year": {
+      "N": 443,
+      "log_loss_delta": 0.003329478258025866,
+      "summed_loss_delta": 1.4749588683054586,
+      "year": 2020
+    },
+    "tied_years": 0,
+    "worse_years": 4
+  }
+}

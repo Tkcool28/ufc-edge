@@ -1,0 +1,3 @@
+# Implications for MOV1
+
+Keep frozen MOV0 authoritative. This experiment supplies no basis to prefer the tested hierarchical intercept or seven-slope specification for eventual MOV1: both regress against MIN, and H2's aggregate improvement over H1 is effectively zero with uncertainty spanning zero. A global coefficient architecture remains the supported reference. Evidence is insufficient to decide whether another preregistered hierarchy would help. No class-specific slope is stably distinguishable from its global relationship here. Computational feasibility is established for this larger budget and pinned environment, not automatic predictive superiority. MOV1 has not been started.

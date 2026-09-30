@@ -1,0 +1,8 @@
+{
+  "CLEAR_SUCCESS": "requires documented panel/generalization review; never solely a significant aggregate delta",
+  "automatic_conservative_classification": {
+    "H1_vs_H0": "CURRENT_SPECIFICATION_NOT_SUPPORTED",
+    "H2_vs_H0": "CURRENT_SPECIFICATION_NOT_SUPPORTED",
+    "H2_vs_H1": "INCONCLUSIVE"
+  }
+}

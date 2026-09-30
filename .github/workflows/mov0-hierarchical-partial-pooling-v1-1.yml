@@ -29,3 +29,4 @@ jobs:
       - run: git merge-base --is-ancestor 30b14dc5b355e9356dbdd80c793ab6d6feedf861 HEAD
       - run: python -m pytest -q tests/models/test_mov0_hierarchical_v1_1.py tests/models/test_mov0.py tests/models/test_mov0_contract.py
       - run: git diff origin/main...HEAD --check
+      - run: python tools/models/verify_mov0_hierarchical_v1_1_evidence.py --evidence-dir models/challengers/mov0_hierarchical_v1_1/run_v1_1
