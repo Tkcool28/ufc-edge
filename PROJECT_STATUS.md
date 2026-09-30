@@ -1,8 +1,8 @@
 # UFC EDGE — Project Status
 
-Status: **AUTHORITATIVE**  
-Snapshot date: **2026-09-30**  
-Authoritative main at audit start: `0618a21e21002be9999d34f6997be659ca8ff224`  
+Status: **AUTHORITATIVE**
+Snapshot date: **2026-09-30**
+Authoritative main at audit start: `0618a21e21002be9999d34f6997be659ca8ff224`
 Current phase: **repository continuity refresh before next model-type authorization**
 
 > Fresh sessions: read this file first, then `PROJECT_MAP.md`, `docs/MASTER_MILESTONES.md`, `docs/DECISIONS.md`, and `docs/MODELING_RESET_CHECKLIST.md`. Always verify current `main` before changing anything.
@@ -86,8 +86,8 @@ Purpose:
 
 `P(STANDARD_FINISH)`, where STANDARD_FINISH = KO/TKO or submission rather than decision.
 
-Contract: PR #72 / `models/mov0/`.  
-Implementation + first frozen run: PR #73.  
+Contract: PR #72 / `models/mov0/`.
+Implementation + first frozen run: PR #73.
 Closeout: `MOV0_STANDARD_FINISH_PROBABILITY_V1_REPORT.md` and `MOV0_STANDARD_FINISH_PROBABILITY_V1_COMPLETE.json`.
 
 OOF population: 4,260 fights, 2018–2026.
