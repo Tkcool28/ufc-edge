@@ -1,16 +1,27 @@
-# MOV0 — STANDARD_FINISH Probability V1 Implementation Contract
+# MOV0 — STANDARD_FINISH Probability V1
 
-Status: **CONTRACT COMPLETE ON FEATURE BRANCH — NO MODEL RUN**
+Status: **FROZEN FIRST RUN COMPLETE — CLEAR_SUCCESS**
 
 MOV0 answers:
 
 > **What is P(STANDARD_FINISH) before the fight, where STANDARD_FINISH means KO/TKO or submission rather than decision?**
 
-This directory freezes the first UFC EDGE method-of-victory experiment so implementation requires no discretionary modeling choices. It does **not** contain trained MOV0 results.
+This directory contains the frozen MOV0 V1 contract and model-local configuration. The accepted first frozen execution is merged in PR #73; its durable closeout lives at repository root in `MOV0_STANDARD_FINISH_PROBABILITY_V1_REPORT.md` and `MOV0_STANDARD_FINISH_PROBABILITY_V1_COMPLETE.json`.
+
+### Current accepted result
+
+- OOF N: **4,260** fights across 2018–2026.
+- Classification: **CLEAR_SUCCESS**.
+- MOV0-MIN vs B1 log-loss delta: **-0.013322703**, favorable in **9/9** outer years; both preregistered bootstrap intervals are favorable.
+- MOV0-FULL vs MOV0-MIN log-loss delta: **-0.000760621**; incremental value beyond MIN is **not established** because both bootstrap intervals cross zero.
+- No post-hoc tuning, feature changes, sportsbook data, ROI/EV analysis, MOV1 or simulator work was part of the frozen run.
+
+Post-freeze diagnostics are indexed in `diagnostics/` and `../../docs/model_diagnostics/README.md`. They are explanatory evidence and do not redefine this frozen model.
 
 ## Authority and boundary
 
-- Base main: `df2692934565b905f3b53380ec86b01bd42408fc`
+- Contract base main: `df2692934565b905f3b53380ec86b01bd42408fc`
+- Contract merged in PR #72; first frozen implementation/run merged in PR #73.
 - Corrected F02 logical SHA256: `2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0`
 - Corrected F02 table SHA256: `d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580`
 - Validation Terrain V1 is immutable and joined by `fight_id`; it is never rebuilt from MOV0 predictions.
