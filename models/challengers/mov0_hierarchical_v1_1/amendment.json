@@ -1,0 +1,60 @@
+{
+  "V1_PR": 115,
+  "V1_blocked_head": "454ae18ea28ad8086aed1024941b831295d67d91",
+  "V1_specification_freeze": "bc5f9df5436402915915aa34da304bbfa46cbccb",
+  "V1_status": "BLOCKED_CONVERGENCE",
+  "amendment": "INFERENCE_BUDGET_AMENDMENT_ONLY",
+  "authorized_changes": {
+    "draws": {
+      "V1": 1000,
+      "V1_1": 2000
+    },
+    "tune": {
+      "V1": 1000,
+      "V1_1": 2000
+    }
+  },
+  "convergence_success": "V1_1_CONVERGENCE_VALIDATED before any full performance interpretation",
+  "hard_stop": "V1_1_BLOCKED_CONVERGENCE on any failed gate; no retry or further budget change",
+  "identity": "MOV0_HIERARCHICAL_PARTIAL_POOLING_CHALLENGER_V1_1",
+  "immutable_sources": {
+    "docs/model_diagnostics/mov0_conditional_feature_interaction_archetype_v1/feature_state_thresholds.json": "066d525e3660fbbee9accba47ea3b56468179e6eff6d78d4aebabe7e45c8daad",
+    "governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2",
+    "models/mov0/feature_surface_v1.json": "5cad139d1ef956c7fec6ea2c8d9b86a117195bf8be221cfd757740275e4edb2b",
+    "models/mov0/model_contract_v1.json": "6a28238798563d6f7c538eac30048e46c9f4bc3a05d23c30381462ae0655a8e0",
+    "models/mov0/validation_plan_v1.json": "962229624ccb95ad47f7846aae38735aebe88b0d404692a1bc9789a94589db35",
+    "src/ufc_edge/models/mov0.py": "15cd6d669b61c7e9e8fea456a9e944ad561d02ff5e376e5b3ca95dfd3564362b",
+    "tools/diagnostics/run_mov0_conditional_feature_interaction_archetype_v1.py": "8e517481e34f402d6457968f4a6838351ba799a4b756115196ccfd6d07f2be50"
+  },
+  "prior_failure": {
+    "bulk_ess": 397.521795,
+    "surface": "H2",
+    "tail_ess": 351.557475,
+    "year": 2021
+  },
+  "repeat": "H1 2018, identical amended budget and environment; require posterior arrays and predictions equality as in V1; cross-platform identity not claimed",
+  "required_fits": 18,
+  "scientific_specification_hashes": {
+    "models/challengers/mov0_hierarchical_v1/contract.json": "89636e1eeb20a18c714cb9187c669892ce152afd6020c01f5c5cc81cc4e7157c",
+    "models/challengers/mov0_hierarchical_v1/requirements.lock": "d29de53a770b14314adf3617c665465441440eb826cbc4004168e6ab166451d2",
+    "models/challengers/mov0_hierarchical_v1/varying_effect_map.json": "c4547a5e19f08f2b210203afe782fa72a86c556bb9339b6abf34d249c0fc6e6d",
+    "models/challengers/mov0_hierarchical_v1/weight_class_map.json": "9ad4d7f701dcab2453b3ed8fe4aa500a07aabe027d7f0e951b823a8a6f7fb92e"
+  },
+  "source_snapshots": {
+    "models/challengers/mov0_hierarchical_v1_1/v1_source/evaluate_mov0_hierarchical_v1.py": "9423492472dd1f33aaa32b800c571a753d5a01c7ead76d05663f8137fecbe850",
+    "models/challengers/mov0_hierarchical_v1_1/v1_source/run_mov0_hierarchical_v1.py": "82e94c24342a328a0873e71e7d0c79fe3ac3a1a2245173d6ca6ac1d5d80eb1d4"
+  },
+  "starting_main": "378ba0576426cd01bd73cbaff774b782c8fb2f6b",
+  "unchanged": "all scientific specification, software lock, model functions, preprocessing, chronology, seeds, four chains, init, target_accept .95, max_treedepth 12, all convergence gates, fixed comparison panels and evaluation",
+  "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "families": {
+    "striking": [
+      "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+      "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+      "directional_knockdown_matchup::mean"
+    ],
+    "submission": [
+      "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+      "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean"
+    ],
+    "survival": [
+      "fs__prior_fight_count__career__raw::mean"
+    ],
+    "takedown": [
+      "fs__takedown_pressure__created_per_15__career__shrunk::mean"
+    ]
+  },
+  "other_MIN_columns": "all remain global; title remains 0/1; categorical weight dummies replaced by hierarchical intercept",
+  "rationale": {
+    "striking": "knockdown production, vulnerability, and existing directional pressure summarize the striking finish pathway",
+    "submission": "created and faced attempts separate submission pressure and vulnerability",
+    "survival": "prior canonical experience proxies fight maturity, not UFC-only experience; no new defense variables",
+    "takedown": "created attempts represent entry pressure; FULL conversion/defense excluded"
+  },
+  "selection": "semantic preregistration only; no challenger fit/results read"
+}
