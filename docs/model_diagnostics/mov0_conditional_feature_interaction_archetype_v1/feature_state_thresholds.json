@@ -1,0 +1,121 @@
+{
+  "early_finish": {
+    "N": 10676,
+    "f02_suffix": "fs__early_finish_profile__r1_finish_win__career__shrunk",
+    "high_p67": 0.17923024152532346,
+    "low_p33": 0.10084033613445377,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "experience": {
+    "N": 12044,
+    "f02_suffix": "fs__prior_fight_count__career__raw",
+    "high_p67": 8.0,
+    "low_p33": 3.0,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "ground_share": {
+    "N": 10676,
+    "f02_suffix": "fs__sig_environment_mix__ground_share__career__shrunk",
+    "high_p67": 0.11522967648733282,
+    "low_p33": 0.052347874835394353,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "kd_creation": {
+    "N": 10676,
+    "f02_suffix": "fs__knockdown_rate__created_per_15__career__shrunk",
+    "high_p67": 0.4193070900955473,
+    "low_p33": 0.1663555354910269,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "kd_vulnerability": {
+    "N": 10676,
+    "f02_suffix": "fs__knockdown_rate__allowed_per_15__career__shrunk",
+    "high_p67": 0.2979740557841215,
+    "low_p33": 0.11978991816087235,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "ko_loss_history": {
+    "N": 10676,
+    "f02_suffix": "fs__finish_method_loss_profile__ko_tko__career__shrunk",
+    "high_p67": 0.14588611573944052,
+    "low_p33": 0.09198639642924458,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "ko_win_history": {
+    "N": 10676,
+    "f02_suffix": "fs__finish_method_win_profile__ko_tko__career__shrunk",
+    "high_p67": 0.2169091964840459,
+    "low_p33": 0.11914027441977752,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "strike_absorbed": {
+    "N": 10676,
+    "f02_suffix": "fs__sig_strike_flow__absorbed_per_min__career__shrunk",
+    "high_p67": 3.655545064914649,
+    "low_p33": 2.902569857671939,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "strike_accuracy": {
+    "N": 10676,
+    "f02_suffix": "fs__sig_strike_efficiency__accuracy__career__shrunk",
+    "high_p67": 0.49228899442291235,
+    "low_p33": 0.42563562688701734,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "strike_defense": {
+    "N": 10676,
+    "f02_suffix": "fs__sig_strike_efficiency__defense__career__shrunk",
+    "high_p67": 0.5884541774903176,
+    "low_p33": 0.5275338475019666,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "strike_flow": {
+    "N": 10676,
+    "f02_suffix": "fs__sig_strike_flow__landed_per_min__career__shrunk",
+    "high_p67": 3.9667375975382657,
+    "low_p33": 3.115386172337362,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "sub_pressure": {
+    "N": 10676,
+    "f02_suffix": "fs__submission_attempt_rate__created_per_15__career__shrunk",
+    "high_p67": 0.6524993763614148,
+    "low_p33": 0.2830841538376847,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "sub_vulnerability": {
+    "N": 10676,
+    "f02_suffix": "fs__submission_attempt_rate__faced_per_15__career__shrunk",
+    "high_p67": 0.5567846283575951,
+    "low_p33": 0.2523675166506672,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "sub_win_history": {
+    "N": 10676,
+    "f02_suffix": "fs__finish_method_win_profile__submission__career__shrunk",
+    "high_p67": 0.11622752247752245,
+    "low_p33": 0.06514909284693457,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "td_conversion": {
+    "N": 10676,
+    "f02_suffix": "fs__takedown_conversion__success__career__shrunk",
+    "high_p67": 0.40602494482282236,
+    "low_p33": 0.3640909090909091,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "td_defense": {
+    "N": 10676,
+    "f02_suffix": "fs__takedown_conversion__defense__career__shrunk",
+    "high_p67": 0.6579990221539168,
+    "low_p33": 0.6064317318932175,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  },
+  "td_pressure": {
+    "N": 10676,
+    "f02_suffix": "fs__takedown_pressure__created_per_15__career__shrunk",
+    "high_p67": 4.507627160856393,
+    "low_p33": 2.7661687617067297,
+    "reference_population": "pooled fighter states, all corrected F02 rows dated 2015+; target unavailable/unread"
+  }
+}
