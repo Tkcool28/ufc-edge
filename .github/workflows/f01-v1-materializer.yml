@@ -5,6 +5,18 @@ on:
     branches: [feat/v1-pit-fighter-state-f01]
   pull_request:
     branches: [main]
+    paths:
+      - ".github/workflows/f01-v1-materializer.yml"
+      - "features/**"
+      - "src/ufc_edge/features/**"
+      - "tools/features/**"
+      - "tests/features/**"
+      - "data/canonical/v0/**"
+      - "schemas/canonical_data_contract_v0.json"
+      - "schemas/canonical_data_contract_v0.md"
+      - "schemas/source_field_map_v0.json"
+      - "schemas/source_precedence_v0.json"
+      - "provenance/data_phase_freeze_v0.json"
 
 permissions:
   contents: read
