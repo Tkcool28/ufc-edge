@@ -30,3 +30,23 @@ def test_exact_seven_columns_are_min_only():
     assert len(cols)==7 and len(set(cols))==7
     assert not any('sig_strike' in c or 'takedown_conversion' in c for c in cols)
     assert set(spec['families'])=={'striking','submission','takedown','survival'}
+
+def test_deviations_really_use_learned_family_scale():
+    import pymc as pm
+    X=np.ones((6,3));y=np.array([0,1,0,1,0,1]);g=np.array([0,0,0,1,1,1])
+    model=h.build_model(X,y,g,2,[0,2],[0,3])
+    with model:prior=pm.sample_prior_predictive(samples=5,random_seed=17)
+    tau=prior.prior['tau_family'].values
+    z=prior.prior['z_slope'].values
+    ds=prior.prior['slope_deviation'].values
+    np.testing.assert_allclose(ds,z*tau[:,:,None,[0,3]])
+    np.testing.assert_allclose(prior.prior['intercept_deviation'].values,prior.prior['z_intercept'].values*prior.prior['tau_intercept'].values[:,:,None])
+
+def test_evaluation_governance_and_paired_bucket_directions():
+    sp=importlib.util.spec_from_file_location('evaluation',ROOT/'tools/models/evaluate_mov0_hierarchical_v1.py');e=importlib.util.module_from_spec(sp);sp.loader.exec_module(e)
+    f=pd.DataFrame({'year':[2018]*24,'target':[0,1]*12,'probability':[.5]*24})
+    assert set(e.cell(f))=={'N','governance','years'}
+    assert e.sign(-.001)=='HELPED' and e.sign(.001)=='HURT' and e.sign(0)=='UNCHANGED'
+    f=pd.concat([f,f.iloc[:1]],ignore_index=True)
+    assert e.cell(f)['governance']=='THIN_EXPLORATORY'
+    assert len(e.arch.ARCHETYPES)==15
