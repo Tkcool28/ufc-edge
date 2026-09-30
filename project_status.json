@@ -1,21 +1,35 @@
 {
   "schema_version": "1",
-  "snapshot_date": "2026-09-17",
-  "authoritative_main_sha": "7a7b50c2e1cdd20af8c7996e0c8460a35a693296",
-  "project_phase": "repository_organization_before_next_model_phase",
+  "snapshot_date": "2026-09-30",
+  "authoritative_main_sha": "0618a21e21002be9999d34f6997be659ca8ff224",
+  "project_phase": "repository_continuity_refresh_before_next_model_type_authorization",
   "data_status": "RECENT_PHYSICAL_PROFILE_COMPLETE_FROM_GOVERNED_PRIMARY_SOURCES",
   "f00_status": "FROZEN_FEATURE_CONTRACT_GOVERNANCE",
   "f01_status": "FROZEN_POINT_IN_TIME_FIGHTER_STATE_METHODOLOGY",
   "f02_status": "FROZEN_DETERMINISTIC_HISTORICAL_PREDICTOR_REPLAY_SCHEMA_1.0.1",
-  "m0_status": "PERMANENT_FROZEN_EMPIRICAL_BASELINE",
-  "m1_status": "AUTHORITATIVE_CLEAN_BASELINE_READY_FOR_FORMAL_FREEZE",
-  "m1_freeze_status": "CORRECTED_M1_READY_FOR_FREEZE_MARKER",
-  "current_model_baseline": "m1_corrected_physical_profile",
+  "validation_terrain_status": "PERMANENT_FROZEN_MODEL_INDEPENDENT_V1",
+  "m0_status": "PERMANENT_FROZEN_EMPIRICAL_WINNER_BASELINE",
+  "m1_status": "AUTHORITATIVE_FROZEN_CORRECTED_M1_V1_WINNER_BASELINE",
+  "m1_freeze_status": "FROZEN",
+  "mov0_status": "FROZEN_FIRST_RUN_COMPLETE_CLEAR_SUCCESS",
+  "mov0_post_freeze_diagnostics": [
+    "probability_bucket_calibration_v1",
+    "confidence_terrain_feature_behavior_v1",
+    "conditional_feature_interaction_archetype_v1"
+  ],
+  "current_winner_baseline": "m1_corrected_physical_profile",
+  "current_method_of_victory_foundation": "mov0_standard_finish_probability_v1",
   "known_invalidated_baselines": [
     "m1_original_reach_availability_missingness_contaminated"
   ],
+  "open_stale_prs": {
+    "paused_market_diagnostics": [34, 60],
+    "superseded_original_m1_drafts": [61, 62]
+  },
   "permanent_governance": [
-    "missingness_and_data_availability_require_independent_point_in_time_safety_audit"
+    "missingness_and_data_availability_require_independent_point_in_time_safety_audit",
+    "validation_terrain_v1_is_model_independent_and_immutable",
+    "post_freeze_diagnostics_do_not_redefine_frozen_models"
   ],
-  "next_master_action": "model_planning_after_repository_cleanup"
+  "next_master_action": "review_repository_continuity_refresh_then_define_next_model_question"
 }

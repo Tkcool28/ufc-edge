@@ -1,6 +1,8 @@
 # UFC EDGE — Repository Organization V1 Report
 
-Status: **CLEANUP AUDIT / REVIEW ARTIFACT**
+Status: **HISTORICAL CLEANUP AUDIT / REVIEW ARTIFACT**
+
+> Historical snapshot from the 2026-09-17 organization pass. Current continuity authority is `PROJECT_STATUS.md`; the follow-up audit is `docs/REPOSITORY_CONTINUITY_AUDIT_2026-09-30.md`. Statements below such as corrected M1 being "ready for freeze" describe this report's original snapshot and are superseded by later merged work.
 
 Starting main: `7a7b50c2e1cdd20af8c7996e0c8460a35a693296`
 Cleanup branch: `chore/repository-organization-v1`
