@@ -4,34 +4,52 @@ Status: **AUTHORITATIVE MODEL NAVIGATION**
 
 Models consume the governed F02 historical predictor replay. F02 is shared predictor infrastructure, **not** a model.
 
-## M0
+## M0 — winner baseline
 
 Path: `models/m0/`
 
-Purpose: permanent small empirical baseline/reference model.
+Status: **PERMANENT FROZEN SMALL EMPIRICAL BASELINE**.
 
-Status: **FROZEN BASELINE**.
+Use as the compact winner-probability reference model. Start with `models/m0/README.md`.
 
-Start with `models/m0/README.md`. Its committed completion/freeze and validation records are retained under the same directory; large runtime OOF/model outputs remain Actions artifacts.
-
-## M1
+## M1 — winner model
 
 Path: `models/m1/`
 
-Purpose: regularized shared-feature UFC winner-probability model over the broader governed F02 surface.
+Status: **AUTHORITATIVE FROZEN CORRECTED M1 V1 BASELINE**.
 
-There are two performance states that must not be confused:
+Do not confuse:
 
-1. **Original M1** — `HISTORICAL — TEMPORALLY CONTAMINATED BY REACH-AVAILABILITY LEAKAGE`. Preserve its methodology/results as audit history, but do not quote its validation performance as the current clean estimate.
-2. **Corrected physical-profile M1** — current clean M1 baseline. Status at repository-organization snapshot: `AUTHORITATIVE M1 BASELINE — READY FOR FORMAL FREEZE`.
+1. **Original M1** — historical performance is invalidated as current evidence by reach-availability temporal leakage.
+2. **Corrected physical-profile M1** — authoritative frozen clean winner baseline, pinned by `M1_REGULARIZED_SHARED_FEATURE_WINNER_MODEL_V1_CORRECTED_FROZEN.json`.
 
 Start with `models/m1/README.md` and `PROJECT_STATUS.md`.
 
-## Not authoritative / not started
+## MOV0 — STANDARD_FINISH probability
 
-- M1B is not an authoritative model and has not been started by this cleanup.
-- Tree/boosted challengers are not current authority.
-- Opponent-adjusted models are not current authority.
-- Betting/market models are outside the current model baseline.
+Path: `models/mov0/`
 
-Any future challenger must be a separately authorized project phase and must not silently rewrite M0/M1 history.
+Status: **FROZEN FIRST RUN COMPLETE — CLEAR_SUCCESS**.
+
+Target: `P(STANDARD_FINISH)` where KO/TKO or submission = 1 and governed decision outcomes = 0.
+
+- Contract: PR #72.
+- First frozen implementation/run: PR #73.
+- Closeout: root `MOV0_STANDARD_FINISH_PROBABILITY_V1_REPORT.md` and completion JSON.
+- Probability-bucket and confidence/terrain/feature-behavior diagnostics: `models/mov0/diagnostics/`.
+- Conditional interaction/archetype evidence: `docs/model_diagnostics/mov0_conditional_feature_interaction_archetype_v1/`.
+
+MOV0-MIN is the surface that clearly established incremental signal beyond B1. MOV0-FULL remained better than B1 overall but did not establish meaningful incremental value beyond MIN.
+
+## Not automatically authorized
+
+- M1B
+- MOV1
+- tree/boosted challengers
+- opponent-adjusted models
+- feature-selection/pruning experiments
+- post-hoc recalibration
+- simulator models
+- sportsbook/ROI/EV model selection
+
+Any future challenger requires a separately defined question, frozen evaluation plan and explicit authorization. It must not silently rewrite M0/M1/MOV0 history.
