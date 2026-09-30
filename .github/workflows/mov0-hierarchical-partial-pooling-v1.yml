@@ -36,6 +36,11 @@ jobs:
       - run: git merge-base --is-ancestor bc5f9df5436402915915aa34da304bbfa46cbccb HEAD
       - run: python -m pytest -q tests/models/test_mov0_hierarchical_v1.py tests/models/test_mov0.py tests/models/test_mov0_contract.py
       - run: git diff origin/main...HEAD --check
+      - name: Verify durable partial evidence when published
+        run: |
+          if [ -f models/challengers/mov0_hierarchical_v1/partial_evidence/MANIFEST.json ]; then
+            python tools/models/verify_mov0_hierarchical_evidence_v1.py --evidence-dir models/challengers/mov0_hierarchical_v1/partial_evidence
+          fi
   challenger:
     needs: tests
     if: github.event_name == 'workflow_dispatch' && inputs.execute_challenger

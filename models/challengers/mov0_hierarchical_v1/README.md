@@ -24,3 +24,7 @@ The workflow performs implementation tests on PRs. Its optional manual execution
 Posterior group effects are conditional associations in standardized predictor units. Reported pooling weights are a preregistered local-information approximation, not a ratio against an independent class model. Smaller N does not automatically mean more shrinkage: predictor information and finish prevalence also matter.
 
 H0-to-H1 comparisons also change global regularization/inference and normalize semantic label wrappers. H2-to-H1 is the more direct test of varying slopes. One fixed specification cannot resolve the whole hierarchical model family.
+
+## Current execution status
+
+**BLOCKED_CONVERGENCE** at H2 / 2021: bulk ESS 397.52 and tail ESS 351.56 for the shared intercept scale failed the preregistered minima of 400. Seven fits passed; no full experiment performance is interpreted. See [partial execution report](partial_evidence/BLOCKER_REPORT.md). No completion marker or model promotion is present.
