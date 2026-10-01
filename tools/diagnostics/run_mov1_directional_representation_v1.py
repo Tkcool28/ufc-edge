@@ -44,6 +44,6 @@ if __name__=='__main__':
  e=audit(a.f02)
  if a.output:
   dest=pathlib.Path(a.output);dest.mkdir(parents=True,exist_ok=True)
-  (dest/'F02_TRAINING_COMPLETENESS_AND_ALIGNMENT.json').write_text(json.dumps(e,sort_keys=True,indent=2,allow_nan=False)+'\\n')
+  (dest/'F02_TRAINING_COMPLETENESS_AND_ALIGNMENT.json').write_text(json.dumps(e,sort_keys=True,indent=2,allow_nan=False)+chr(10))
  print(json.dumps(e,sort_keys=True,allow_nan=False))
  print('PR123_F02_EMPIRICAL_EVIDENCE_END')
