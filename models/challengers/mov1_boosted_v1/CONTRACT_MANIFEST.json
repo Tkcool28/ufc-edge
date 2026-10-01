@@ -1,0 +1,136 @@
+{
+  "contract": "MOV1_BOOSTED_TREE_CHALLENGER_IMPLEMENTATION_CONTRACT_V1",
+  "files": {
+    ".github/workflows/mov1-boosted-contract-v1.yml": {
+      "bytes": 1505,
+      "sha256": "c7cb3831c826f31200e695185292fab66fed4ab6e325e04eec95e65d5859af10"
+    },
+    "models/challengers/mov1_boosted_v1/ENVIRONMENT_LOCK.json": {
+      "bytes": 5964,
+      "sha256": "d29198c0118730ef645effbd4dff39347cc8d9e22dd36a978e09f3e161ccf059"
+    },
+    "models/challengers/mov1_boosted_v1/MOV1_BOOSTED_TREE_CHALLENGER_V1_CONTRACT.md": {
+      "bytes": 15768,
+      "sha256": "43b298bb78eac05e067305b2c9a92e36a6017eadd640be11201e5f93c9f7c595"
+    },
+    "models/challengers/mov1_boosted_v1/README.md": {
+      "bytes": 250,
+      "sha256": "4f42736ae8f78e3f47dd11cb38b39679e405bff5fb2c3247bbc3cbbeaa198739"
+    },
+    "models/challengers/mov1_boosted_v1/VALIDATION_EVIDENCE.json": {
+      "bytes": 19363,
+      "sha256": "34d8773e65e93c274357c76566cc5f4889d111178952d0ab0ef9e7c3a9e5a29a"
+    },
+    "models/challengers/mov1_boosted_v1/authoritative_baseline_identity.json": {
+      "bytes": 1496,
+      "sha256": "2e084ba8b787e44f3bc8f4b603f463c097078dfc2232bc206c53ec7fb8e7d860"
+    },
+    "models/challengers/mov1_boosted_v1/cat_candidates.json": {
+      "bytes": 14382,
+      "sha256": "5171c0b3a3dd2fd047a2f5d8321a7a475b900e734641a7af1aa5febcf70bc008"
+    },
+    "models/challengers/mov1_boosted_v1/chronological_fold_plan.json": {
+      "bytes": 17595,
+      "sha256": "cf85f2879ad5aa029d7c41e27c0d9c5798a440f9c6a83295b61bfbfdac58fb08"
+    },
+    "models/challengers/mov1_boosted_v1/common_input_representation.json": {
+      "bytes": 10409,
+      "sha256": "cf10b9eb9bb838c1c0863406b958e3cf30a12e05a198070bcee7060c86803790"
+    },
+    "models/challengers/mov1_boosted_v1/comparison_plan.json": {
+      "bytes": 1865,
+      "sha256": "785890677153d02cc3ac1d2ad0f3d31d373b6f97fd80b8af51475176c5201585"
+    },
+    "models/challengers/mov1_boosted_v1/conditional_metrics.json": {
+      "bytes": 1281,
+      "sha256": "0e37473037c3b617c8f9ae1ed9ed30502bd694f9e37b4c3f6c32fe074058c217"
+    },
+    "models/challengers/mov1_boosted_v1/conditional_probability_buckets.json": {
+      "bytes": 887,
+      "sha256": "1bf340700ad6eda2f2a2a15bc21502c5b09d76e8788dcd07eac75d52181fd579"
+    },
+    "models/challengers/mov1_boosted_v1/early_stopping.json": {
+      "bytes": 1351,
+      "sha256": "a7d877818ef4fbe09ce2150fcf9fe1b64fc909e9cfa23226916fdd0d05826e6a"
+    },
+    "models/challengers/mov1_boosted_v1/environment_specification.json": {
+      "bytes": 717,
+      "sha256": "f39c76a6a6fbcc4e9b20e127f6cf5ebb1a53e084a5c1d80e44ece9829d475375"
+    },
+    "models/challengers/mov1_boosted_v1/evaluation_panels.json": {
+      "bytes": 1061,
+      "sha256": "e76064d1daf09fce959291d2fd329d4b0dc39da44936403dea8996b15a665ae8"
+    },
+    "models/challengers/mov1_boosted_v1/future_run_artifact_specification.json": {
+      "bytes": 1458,
+      "sha256": "74885df98346055b85dd0c1e3f1173af7442e4959f3d7a475348225b38179da2"
+    },
+    "models/challengers/mov1_boosted_v1/interpretability.json": {
+      "bytes": 863,
+      "sha256": "4cb915e40054e5f8177385cd95ba5b92fae179fe31ff74589141aa219d79b47d"
+    },
+    "models/challengers/mov1_boosted_v1/interpretation_rules.json": {
+      "bytes": 1602,
+      "sha256": "ca9ba0096e206f052f37e5c940709d12d903e32f1659f1c9ed1c11c37f5a47ce"
+    },
+    "models/challengers/mov1_boosted_v1/lgbm_candidates.json": {
+      "bytes": 17673,
+      "sha256": "044198d1aebaf1f3cffb8ce4b54d43174ae569937868905a967d6a52f7bd2451"
+    },
+    "models/challengers/mov1_boosted_v1/model_family_registry.json": {
+      "bytes": 1160,
+      "sha256": "f185b2567810b645b241da0cdad95c6690ff3d95cc3df991df4eba1ae264f3e4"
+    },
+    "models/challengers/mov1_boosted_v1/mov1_min_allowlist.json": {
+      "bytes": 2302,
+      "sha256": "f0eb5338ccdd00b8b18da9337751139a79ae7865b47d6e5c87fb68aa3f509fc0"
+    },
+    "models/challengers/mov1_boosted_v1/nested_family_selection.json": {
+      "bytes": 1431,
+      "sha256": "e9da1665d29493ceffc25414f0dabba9c8de14877d31af82c9556cc1e9099129"
+    },
+    "models/challengers/mov1_boosted_v1/reproduction.json": {
+      "bytes": 949,
+      "sha256": "082bf1919f961b0e375f2733c30da07b75c140e5499a746bfcb1eb36c7475beb"
+    },
+    "models/challengers/mov1_boosted_v1/requirements-lock.txt": {
+      "bytes": 454,
+      "sha256": "f67db0321424a228ad50a77dd5f3accd87a85abde1e4c516ead4a9df168de772"
+    },
+    "models/challengers/mov1_boosted_v1/requirements.in": {
+      "bytes": 125,
+      "sha256": "3fdf5b22eb89e27842bd5b59a1f951d96d310c9cf72589a4ae0887c0e7d69135"
+    },
+    "models/challengers/mov1_boosted_v1/search_budget.json": {
+      "bytes": 791,
+      "sha256": "dc46f2fdd53856bb77ab72a8ec7fe16e121b88ba4cec95536bf8cce0ad638642"
+    },
+    "models/challengers/mov1_boosted_v1/source_identities.json": {
+      "bytes": 18312,
+      "sha256": "df6f2e92371a53808bd66b783537c834babba7622f4405dce494de6d33a7ac9e"
+    },
+    "models/challengers/mov1_boosted_v1/target_population.json": {
+      "bytes": 2053,
+      "sha256": "402ab25522df726360e7e4d85658bc136e224ae9f569acc8fd8a76f7ab8f975b"
+    },
+    "models/challengers/mov1_boosted_v1/terrain_archetype_evaluation.json": {
+      "bytes": 4904,
+      "sha256": "73f2429c2cecdf98b2ff36f28ee436e66097d75d91e37d2429ab7a543f0a7c6f"
+    },
+    "models/challengers/mov1_boosted_v1/uncertainty_persistence.json": {
+      "bytes": 1362,
+      "sha256": "a75f69912a8b1f27f5a1e33b7a833ced41e8e3bb76df95c873cdc00361bb6ef5"
+    },
+    "models/challengers/mov1_boosted_v1/xgb_candidates.json": {
+      "bytes": 14721,
+      "sha256": "853cd274c929dc3c6a5dc9f4e0a43c8b8465d9b961f863299533f5c129063761"
+    },
+    "tools/contracts/validate_mov1_boosted_contract_v1.py": {
+      "bytes": 9788,
+      "sha256": "26656e45b7a18307945a98089f0f411520d69bfa681e8223975a698d750df20c"
+    }
+  },
+  "model_fits": 0,
+  "self_excluded": true,
+  "starting_main_sha": "dbac7e2da5a1e2fde018ba6c87709b2e84ec10ac"
+}

@@ -1,0 +1,27 @@
+{
+  "correction": {
+    "additional": [
+      "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE",
+      "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE",
+      "Women's Strawweight",
+      "Women's Flyweight"
+    ],
+    "primary": [
+      "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY"
+    ]
+  },
+  "preservation": {
+    "archetypes": [
+      "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE",
+      "A4_KO_HISTORY_VS_KO_VULNERABILITY",
+      "A2_BOTH_HIGH_DAMAGE_EXCHANGE"
+    ],
+    "divisions": [
+      "Heavyweight",
+      "Light Heavyweight",
+      "Flyweight"
+    ]
+  },
+  "report": "For each exact pinned cell report MIN and SELECT mean K on all rows and finishes, actual conditional KO frequency, gap, Wilson95, conditional loss/Brier/calibration/ECE, annual coverage, composed probabilities/observed rates and paired differences. Separate all-bout and finish sample gates; A2 moderate sample caveat. Panels evaluation-only, not fitting criteria or historical-rate targets. All15 archetypes/statuses, all divisions and immutable terrain remain reported."
+}

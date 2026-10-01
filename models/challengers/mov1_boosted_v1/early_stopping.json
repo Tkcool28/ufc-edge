@@ -1,0 +1,8 @@
+{
+  "implementation": "Common stopping callback reads the native inner-validation log-loss metric after each completed round: XGB eval_metric=logloss, LGBM metric=binary_logloss, CAT eval_metric=Logloss. Only that validation dataset and metric are monitored. Improvement must exceed 1e-12; equal losses retain earliest round. Stop after 100 completed rounds without such improvement. Persist full native metric trace and best iteration; score/rank candidates using the frozen eps1e-15 clipped per-row loss at the best prefix. Native metric implementations may differ at floating-point extremes; no extra metric or outer data is used. CAT use_best_model=False and no native overfitting detector, XGB/LGB no separate native stopping callback; same patience/tie policy implemented through library callbacks. At ceiling retain earliest best round and report cap-hit; no budget extension. Invalid probability/fit error halts, no skipping.",
+  "maximum_rounds": 2000,
+  "metric": "unweighted binary log loss on the one chronological inner validation year",
+  "minimum_rounds": 1,
+  "outer_round_count": "For each selected family/config, validation-N weighted mean of its two inner best round counts, round half up via floor(mean+0.5), clamp [1,2000]. Refit on full outer finish history for exactly this count; no outer early stopping.",
+  "patience": 100
+}

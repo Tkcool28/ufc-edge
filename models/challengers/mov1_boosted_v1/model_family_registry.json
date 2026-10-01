@@ -1,0 +1,34 @@
+{
+  "calibration_wrapper": false,
+  "class_weights": false,
+  "complexity_note": "Depth 2-4 and at most 4/8/16 leaves. XGB depthwise, LGBM leafwise with depth cap, CAT oblivious symmetric trees are approximately bounded, not capacity-equivalent. XGB Hessian floor and LGBM count+Hessian floors differ; CAT SymmetricTree does not support the same minimum-leaf-count gate. Conservative depth/L2/stopping controls are used rather than claiming exact equivalence.",
+  "extra_families_forbidden": true,
+  "ordered_families": [
+    {
+      "candidate_file": "xgb_candidates.json",
+      "count": 18,
+      "family": "XGB",
+      "metric": "logloss",
+      "objective": "binary:logistic",
+      "version": "2.1.4"
+    },
+    {
+      "candidate_file": "lgbm_candidates.json",
+      "count": 18,
+      "family": "LGBM",
+      "metric": "binary_logloss",
+      "objective": "binary",
+      "version": "4.6.0"
+    },
+    {
+      "candidate_file": "cat_candidates.json",
+      "count": 18,
+      "family": "CAT",
+      "metric": "Logloss",
+      "objective": "Logloss",
+      "version": "1.2.8"
+    }
+  ],
+  "primary_surface": "MOV1-BOOST-SELECT",
+  "resampling": false
+}

@@ -1,0 +1,5 @@
+{
+  "SHAP": "Deferred in V1 to avoid optional dependency/runtime decisions; explicitly report not computed. No outcome-selected interaction search. Discuss preregistered submission pressure x TD access, submission pressure x vulnerability, KD creation x vulnerability only with validation caveats.",
+  "permutation": "Future run diagnostic only: seed17, five permutations of each transformed column on the selected model's already scored outer finish rows, increase in clipped binary LL; keep outer models fixed, no selection use. All column rows retained. This is held-out descriptive importance, not causal or a selection statistic. No extra fits.",
+  "required": "Native split/gain counts where library supports comparable definitions, clearly named and not equated across libraries; CAT PredictionValuesChange is not XGB gain. No feature removal or refit."
+}

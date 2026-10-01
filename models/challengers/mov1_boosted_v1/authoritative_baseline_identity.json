@@ -1,0 +1,35 @@
+{
+  "PR118": {
+    "head_sha": "6e14713f1f01835164e2425702b75fc81144f9e1",
+    "merge_sha": "b6a644d9ef8d267f7d7da97f21e691f2bae99226"
+  },
+  "PR119": {
+    "evidence_head": "83822191168a94f4a0eef2b9f26295c0b9492b5b",
+    "implementation_freeze": "31008e323d0ac579c8b93d810918c23ff15df5a1",
+    "merge_sha": "dbac7e2da5a1e2fde018ba6c87709b2e84ec10ac",
+    "merged": true
+  },
+  "baseline_metrics_reference_only": {
+    "AUC": 0.663563,
+    "Brier": 0.213614,
+    "ECE": 0.031387,
+    "composed_Brier": 0.586206,
+    "composed_log_loss": 0.975754,
+    "conditional_log_loss": 0.615366,
+    "slope": 0.830658
+  },
+  "baseline_surface": "MOV1_MIN",
+  "baseline_system": "S2",
+  "contract_manifest_sha256": "9034e647bebaa7099f5358ed7a5db0e1bc515df1894db912274e5dae629cb714",
+  "corrected_F02": {
+    "artifact_id": 10481269402,
+    "physical_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "predictor_logical_sha256": "2d1a367416e105ed6fe546eb8590ae7b555dd044304ad0ba40c7945420599ba0",
+    "run_id": 35182939981
+  },
+  "evidence_manifest_sha256": "cb21ff773489f23f4583a6487942e3edb05c817493aa04eff71a470f7b1086c6",
+  "fold_plan_sha256": "cf85f2879ad5aa029d7c41e27c0d9c5798a440f9c6a83295b61bfbfdac58fb08",
+  "frozen_MOV0_MIN_OOF_sha256": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57",
+  "min_allowlist_sha256": "f0eb5338ccdd00b8b18da9337751139a79ae7865b47d6e5c87fb68aa3f509fc0",
+  "starting_main_sha": "dbac7e2da5a1e2fde018ba6c87709b2e84ec10ac"
+}

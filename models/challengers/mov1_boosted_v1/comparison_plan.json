@@ -1,0 +1,35 @@
+{
+  "bucket_reporting": "Exact copied seven MOV1 buckets for SELECT/MIN and shadows, empty bins retained. N, mean probability, actual KO, gap, Wilson95, year coverage and composition; all-eligible bucket distribution separately, decisions never negative conditional labels.",
+  "composed": {
+    "N": 4260,
+    "challenger": "SB frozen MOV0-MIN + MOV1-BOOST-SELECT",
+    "champion": "S2 frozen MOV0-MIN + linear MOV1-MIN",
+    "checks": "F unchanged, decision probabilities identical, bounds/sum1 atol1e-12, no renormalization; sum-row products, not product of group means. Loss differences on decisions zero; conditional/composed LL gains algebraically linked, not independent replications.",
+    "formulas": {
+      "DEC": "1-F",
+      "KO": "F*K",
+      "SUB": "F*(1-K)"
+    },
+    "primary": "multiclass log loss",
+    "secondary": [
+      "summed three-class Brier",
+      "classwise calibration intercept/slope",
+      "classwise ECE/reliability",
+      "annual performance",
+      "pathway error decomposition"
+    ]
+  },
+  "conditional": {
+    "annual": "all nine annual deltas, favorable/unfavorable/tied (abs delta<=1e-12), median, best/worst and strongest-year share",
+    "primary": "MOV1-BOOST-SELECT minus frozen MOV1-MIN on identical 2115 outer finishes",
+    "primary_metric": "binary log loss, clip only for logs eps1e-15",
+    "secondary": [
+      "Brier",
+      "calibration intercept/slope",
+      "ECE fixed 10 equal-width bins",
+      "ROC AUC"
+    ],
+    "uncertainty": "2000 seed17 paired fight and event-cluster bootstrap percentile95, no model refits; frozen MOV1 evaluation_v1.py definitions. Repeat-fighter/overlapping histories remain dependence limitations."
+  },
+  "undefined": "Use frozen metric routines/statuses for empty, one-class, constant, singular/separation/nonconvergence; retain N/status not fabricated numeric metrics."
+}

@@ -1,0 +1,29 @@
+{
+  "failure": "Write validation-failed marker and no scientific interpretation; never drop rows or skip failed candidates.",
+  "freeze_before_fit": "All implementation/test/workflow hashes and pushed commit recorded before historical boosted fitting. This task supplies no training runner.",
+  "required": [
+    "RUN_MANIFEST.json",
+    "INPUT_VALIDATION.json",
+    "ENVIRONMENT_LOCK.json",
+    "FOLD_IDENTITIES.json",
+    "all inner candidate/stopping trace tables",
+    "selected family/config/rounds table",
+    "native fitted models and preprocessing records",
+    "conditional_oof_all_eligible.csv (4260 per surface)",
+    "conditional_oof_finishes.csv (2115 per surface)",
+    "composed_oof_all_eligible.csv (4260 per system)",
+    "conditional/composed annual and aggregate metrics",
+    "fight/event uncertainty comparisons",
+    "fixed buckets with coverage",
+    "terrain/division/all15 archetype and weight x archetype tables",
+    "preservation/correction panels",
+    "pathway decomposition",
+    "importance diagnostics",
+    "saved/repeated/swap/label-blind validation records",
+    "FINAL_REPORT.md",
+    "INTERPRETATION.json",
+    "EVIDENCE_MANIFEST.json",
+    "completion marker"
+  ],
+  "schema": "fight_id,event_id,event_date,outer_year,surface,selected_family,candidate_id,rounds,P_KO_given_finish,P_SUB_given_finish; composed adds system,F,P_KO_TKO,P_SUBMISSION,P_DECISION. Outcome/membership joins only after complete scores saved."
+}
