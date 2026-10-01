@@ -39,7 +39,11 @@ def audit(f02):
  assert out['training'][0]['finish_N']==707
  return out
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--f02',required=True);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--f02',required=True);p.add_argument('--output');a=p.parse_args()
  print('PR123_F02_EMPIRICAL_EVIDENCE_BEGIN')
- print(json.dumps(audit(a.f02),sort_keys=True,allow_nan=False))
+ e=audit(a.f02)
+ if a.output:
+  dest=pathlib.Path(a.output);dest.mkdir(parents=True,exist_ok=True)
+  (dest/'F02_TRAINING_COMPLETENESS_AND_ALIGNMENT.json').write_text(json.dumps(e,sort_keys=True,indent=2,allow_nan=False)+'\\n')
+ print(json.dumps(e,sort_keys=True,allow_nan=False))
  print('PR123_F02_EMPIRICAL_EVIDENCE_END')
