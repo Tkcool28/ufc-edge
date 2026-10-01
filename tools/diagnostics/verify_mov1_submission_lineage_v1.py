@@ -92,7 +92,20 @@ def run(path):
       err=abs(float(actual)-float(expected));maxerr=max(maxerr,err)
       assert math.isclose(float(actual),float(expected),rel_tol=1e-10,abs_tol=1e-10),(fid,column,actual,expected,err)
      checks.append({'target_fight_id':fid,'target_date':date,'fighter_side':side,'feature':column,'prior_fighter_fights':len(history),'prior_population_fights':len(pop),'prior_scope':'global' if scope is None else 'division','prior_population_denominator':float(pri[1]),'personal_denominator':float(own[1]),'F02_value':None if pd.isna(actual) else float(actual),'independent_value':expected,'null_semantics_match':pd.isna(actual)==(expected is None)})
- return {'status':'PASS','F02_sha256':hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest(),'independent_reconstructions':len(checks),'target_fights':len(chosen),'max_absolute_numeric_error':maxerr,'strict_prior_no_same_date':True,'zero_history_prior_withheld':True,'sources':'canonical fighter_round_stats + canonical fight dates + frozen elapsed registry; manual sums and shrinkage','rows':checks}
+ # Independently inspect four real zero-canonical-history fighter sides, with no inferred debut status.
+ zero_history=[]
+ for _,row in f[(f.event_date>='2015-01-01')&(f.event_date<='2026-08-15')].sort_values(['event_date','fight_id']).iterrows():
+  before=fights[fights.event_date<row.event_date]
+  for side,who in [('f1',row.fighter_1_id),('f2',row.fighter_2_id)]:
+   previous=before[(before.fighter_a_id==who)|(before.fighter_b_id==who)]
+   if len(previous):continue
+   relevant=[f'{side}__fs__{family}__{component}__career__shrunk' for family,cs in TARGETS.items() for component,*_ in cs]
+   assert all(pd.isna(row[column]) for column in relevant),(row.fight_id,side,'zero history incorrectly filled')
+   zero_history.append({'fight_id':row.fight_id,'event_date':row.event_date,'side':side,'tested_null_columns':len(relevant)})
+   if len(zero_history)==4:break
+  if len(zero_history)==4:break
+ assert len(zero_history)==4,'No real zero-history fixtures'
+ return {'status':'PASS','F02_sha256':hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest(),'independent_reconstructions':len(checks),'target_fights':len(chosen),'max_absolute_numeric_error':maxerr,'strict_prior_no_same_date':True,'zero_history_null_fixtures':zero_history,'sources':'canonical fighter_round_stats + canonical fight dates + frozen elapsed registry; manual sums and shrinkage','rows':checks}
 if __name__=='__main__':
  a=argparse.ArgumentParser();a.add_argument('--f02',required=True);a.add_argument('--output');q=a.parse_args();print('PR123_LINEAGE_BEGIN');e=run(q.f02);print(json.dumps(e,sort_keys=True,allow_nan=False));print('PR123_LINEAGE_END')
  if q.output:
