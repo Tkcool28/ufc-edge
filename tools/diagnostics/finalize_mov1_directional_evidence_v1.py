@@ -44,7 +44,11 @@ def run(out):
  result={'audit':'MOV1_DIRECTIONAL_FEATURE_REPRESENTATION_AUDIT_V1','base_main':'6f92ce406af77758bacd2ce1f91fbbce0b4fc64b','FROZEN_IDENTITIES':FROZEN,'source_SHA256':src,'generated_evidence':outputs,'prediction_training_fits':0,'post_boundary_outcome_inspection':False,'calibrator_applied':False,'source_artifact_retrieval_run':35182939981}
  dest=out/'EVIDENCE_MANIFEST.json';dest.write_text(json.dumps(result,sort_keys=True,indent=2)+'\n')
  committed=R/'docs/model_diagnostics/mov1_directional_representation_v1/EVIDENCE_MANIFEST.json'
- if committed.exists():assert sha(committed)==sha(dest),'Committed evidence manifest differs from CI regeneration'
+ if committed.exists():
+  old=json.loads(committed.read_text())
+  differences={'source':{k:{'committed':old.get('source_SHA256',{}).get(k),'regenerated':v} for k,v in src.items() if old.get('source_SHA256',{}).get(k)!=v},'evidence':{k:{'committed':old.get('generated_evidence',{}).get(k),'regenerated':v} for k,v in outputs.items() if old.get('generated_evidence',{}).get(k)!=v}}
+  if sha(committed)!=sha(dest):
+   raise AssertionError('Committed evidence manifest differs: '+json.dumps({'committed_sha':sha(committed),'regenerated_sha':sha(dest),'semantic_equal':old==result,'differences':differences},sort_keys=True))
  print('PR123_MANIFEST_BEGIN')
  print(json.dumps({'sha256':sha(dest),'content':result},sort_keys=True))
  print('PR123_MANIFEST_END')
