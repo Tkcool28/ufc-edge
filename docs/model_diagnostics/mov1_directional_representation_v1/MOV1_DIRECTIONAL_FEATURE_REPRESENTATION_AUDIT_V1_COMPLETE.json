@@ -1,0 +1,32 @@
+{
+  "status": "MOV1_DIRECTIONAL_FEATURE_REPRESENTATION_AUDIT_V1_COMPLETE",
+  "starting_main": "6f92ce406af77758bacd2ce1f91fbbce0b4fc64b",
+  "draft_pr": 123,
+  "corrected_F02_SHA256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+  "evidence_manifest_SHA256": "e04409314831753ab00a218bc07f04273c73f19d28507581099f4e1adc5f6488",
+  "verified_source_lineage": {
+    "numeric_reconstructions": 48,
+    "max_absolute_difference": 4.440892098500626e-16,
+    "zero_history_null_fixtures": 4
+  },
+  "early_fold": {
+    "finish_N": 707,
+    "complete_N": 561,
+    "complete_KO_N": 361,
+    "complete_SUB_N": 200
+  },
+  "real_alignment": {
+    "complete_N": 4561,
+    "contrasting_bins": 59,
+    "contrasting_fights": 171,
+    "outcome_blind": true
+  },
+  "b3_b5_saved_predictions_only": true,
+  "model_fits": 0,
+  "model_changes": 0,
+  "calibrator_applied": false,
+  "post_boundary_outcome_inspection": false,
+  "automatic_merge": false,
+  "recommended_next": "Separate contract-only preregistration of one symmetric SUB-created × opponent-SUB-faced cross-fighter interaction in frozen linear MOV1-MIN",
+  "research_limit": "Architecture/sample feasibility is not demonstrated predictive improvement; original outer OOF has been inspected."
+}
