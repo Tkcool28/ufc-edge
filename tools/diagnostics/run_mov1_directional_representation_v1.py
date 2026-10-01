@@ -21,12 +21,13 @@ def audit(f02):
  kd=[f'mx__knockdown_creation_vs_vulnerability__{side}__career__raw' for side in ('f1_vs_f2','f2_vs_f1')]
  allcols=c+td+kd
  assert set(allcols).issubset(f.columns)
- z=pop[['fight_id','event_date','method']].merge(f[['fight_id']+allcols],on='fight_id',validate='one_to_one')
+ z=pop[['fight_id','event_date','method']].merge(f[['fight_id','ctx__weight_class']+allcols],on='fight_id',validate='one_to_one')
  z['year']=z.event_date.str[:4].astype(int)
  out={'f02_physical_sha256':h(f02),'modern_N':len(z),'training':[],'collision_rule':{'scope':'all eligible complete F02 fights, no labels consulted','bin':'floor(each submission marginal mean and absolute difference / 0.10), four bins total','contrast':'max(directional_sum)-min(directional_sum) >= 0.20 raw product units within same bin; no selection of thresholds based on outcomes'},'collision':{}}
  for year in range(2018,2027):
   tr=z[(z.event_date>= '2015-01-01')&(z.event_date<f'{year}-01-01')&z.method.isin(['KO_TKO','SUBMISSION'])]
   rec={'outer_year':year,'finish_N':len(tr),'KO_N':int(tr.method.eq('KO_TKO').sum()),'SUB_N':int(tr.method.eq('SUBMISSION').sum()),'each_literal_nonnull':{k:int(tr[k].notna().sum()) for k in allcols},'submission_four_complete_N':int(tr[c].notna().all(axis=1).sum()),'submission_plus_takedown_complete_N':int(tr[c+td].notna().all(axis=1).sum()),'all_candidates_including_KD_complete_N':int(tr[allcols].notna().all(axis=1).sum())}
+  rec['raw_division_support']=[{'raw_division':str(w),'finish_N':len(q),'KO_N':int(q.method.eq('KO_TKO').sum()),'SUB_N':int(q.method.eq('SUBMISSION').sum()),'submission_four_complete_N':int(q[c].notna().all(axis=1).sum()),'gate':gate(len(q))} for w,q in tr.groupby('ctx__weight_class',dropna=False,sort=True)]
   out['training'].append(rec)
  q=z.dropna(subset=c).copy()
  p1,p2,v1,v2=(q[k].to_numpy(float) for k in [c[0],c[2],c[1],c[3]])
