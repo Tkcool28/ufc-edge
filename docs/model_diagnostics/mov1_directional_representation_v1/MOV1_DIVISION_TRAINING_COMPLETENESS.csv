@@ -1,0 +1,225 @@
+outer_year,raw_division,finish_N,KO_N,SUB_N,submission_four_complete_N,sample_gate
+2018,"Bantamweight",56,30,26,48,MODERATE_UNCERTAINTY
+2018,"Catch Weight",7,6,1,3,INSUFFICIENT
+2018,"Featherweight",65,40,25,56,MODERATE_UNCERTAINTY
+2018,"Flyweight",31,14,17,25,THIN_EXPLORATORY
+2018,"Heavyweight",69,55,14,52,MODERATE_UNCERTAINTY
+2018,"Interim Featherweight",2,2,0,2,INSUFFICIENT
+2018,"Interim Lightweight",1,0,1,1,INSUFFICIENT
+2018,"Light Heavyweight",65,46,19,49,MODERATE_UNCERTAINTY
+2018,"Lightweight",119,72,47,94,NORMAL
+2018,"Middleweight",100,76,24,85,NORMAL
+2018,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2018,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2018,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2018,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2018,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2018,"Welterweight",128,85,43,104,NORMAL
+2018,"Women's Bantamweight",26,14,12,19,THIN_EXPLORATORY
+2018,"Women's Featherweight",1,1,0,0,INSUFFICIENT
+2018,"Women's Flyweight",6,2,4,1,INSUFFICIENT
+2018,"Women's Strawweight",26,7,19,21,THIN_EXPLORATORY
+2019,"Bantamweight",81,42,39,67,MODERATE_UNCERTAINTY
+2019,"Catch Weight",7,6,1,3,INSUFFICIENT
+2019,"Featherweight",91,59,32,77,MODERATE_UNCERTAINTY
+2019,"Flyweight",42,20,22,34,THIN_EXPLORATORY
+2019,"Heavyweight",88,68,20,66,MODERATE_UNCERTAINTY
+2019,"Interim Featherweight",2,2,0,2,INSUFFICIENT
+2019,"Interim Lightweight",1,0,1,1,INSUFFICIENT
+2019,"Light Heavyweight",90,63,27,69,MODERATE_UNCERTAINTY
+2019,"Lightweight",157,96,61,124,NORMAL
+2019,"Middleweight",127,95,32,106,NORMAL
+2019,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2019,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2019,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2019,"Ultimate Fighter 28 Heavyweight Tournament",1,0,1,0,INSUFFICIENT
+2019,"Ultimate Fighter 28 Women's Featherweight Tournament",1,0,1,0,INSUFFICIENT
+2019,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2019,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2019,"Welterweight",173,116,57,144,NORMAL
+2019,"Women's Bantamweight",29,16,13,22,THIN_EXPLORATORY
+2019,"Women's Featherweight",4,4,0,2,INSUFFICIENT
+2019,"Women's Flyweight",13,3,10,5,INSUFFICIENT
+2019,"Women's Strawweight",36,11,25,28,THIN_EXPLORATORY
+2020,"Bantamweight",105,57,48,84,NORMAL
+2020,"Catch Weight",7,6,1,3,INSUFFICIENT
+2020,"Featherweight",118,75,43,99,NORMAL
+2020,"Flyweight",49,25,24,40,THIN_EXPLORATORY
+2020,"Heavyweight",113,89,24,86,NORMAL
+2020,"Interim Featherweight",2,2,0,2,INSUFFICIENT
+2020,"Interim Lightweight",1,0,1,1,INSUFFICIENT
+2020,"Light Heavyweight",120,83,37,95,NORMAL
+2020,"Lightweight",190,121,69,148,NORMAL
+2020,"Middleweight",144,103,41,117,NORMAL
+2020,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2020,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2020,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2020,"Ultimate Fighter 28 Heavyweight Tournament",1,0,1,0,INSUFFICIENT
+2020,"Ultimate Fighter 28 Women's Featherweight Tournament",1,0,1,0,INSUFFICIENT
+2020,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2020,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2020,"Welterweight",210,141,69,175,NORMAL
+2020,"Women's Bantamweight",39,24,15,29,THIN_EXPLORATORY
+2020,"Women's Featherweight",6,4,2,2,INSUFFICIENT
+2020,"Women's Flyweight",24,9,15,16,INSUFFICIENT
+2020,"Women's Strawweight",44,14,30,33,THIN_EXPLORATORY
+2021,"Bantamweight",134,78,56,104,NORMAL
+2021,"Catch Weight",13,7,6,9,INSUFFICIENT
+2021,"Featherweight",141,88,53,113,NORMAL
+2021,"Flyweight",60,30,30,50,MODERATE_UNCERTAINTY
+2021,"Heavyweight",140,109,31,107,NORMAL
+2021,"Interim Featherweight",2,2,0,2,INSUFFICIENT
+2021,"Interim Lightweight",2,1,1,2,INSUFFICIENT
+2021,"Light Heavyweight",142,100,42,113,NORMAL
+2021,"Lightweight",214,135,79,167,NORMAL
+2021,"Middleweight",170,121,49,138,NORMAL
+2021,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2021,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2021,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2021,"Ultimate Fighter 28 Heavyweight Tournament",1,0,1,0,INSUFFICIENT
+2021,"Ultimate Fighter 28 Women's Featherweight Tournament",1,0,1,0,INSUFFICIENT
+2021,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2021,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2021,"Welterweight",231,156,75,189,NORMAL
+2021,"Women's Bantamweight",42,26,16,31,THIN_EXPLORATORY
+2021,"Women's Featherweight",8,6,2,3,INSUFFICIENT
+2021,"Women's Flyweight",41,16,25,30,THIN_EXPLORATORY
+2021,"Women's Strawweight",52,16,36,39,MODERATE_UNCERTAINTY
+2022,"Bantamweight",165,103,62,129,NORMAL
+2022,"Catch Weight",15,8,7,11,INSUFFICIENT
+2022,"Featherweight",160,103,57,130,NORMAL
+2022,"Flyweight",69,35,34,57,MODERATE_UNCERTAINTY
+2022,"Heavyweight",162,129,33,126,NORMAL
+2022,"Interim Featherweight",2,2,0,2,INSUFFICIENT
+2022,"Interim Heavyweight",1,1,0,1,INSUFFICIENT
+2022,"Interim Lightweight",2,1,1,2,INSUFFICIENT
+2022,"Light Heavyweight",161,115,46,130,NORMAL
+2022,"Lightweight",250,159,91,197,NORMAL
+2022,"Middleweight",202,139,63,166,NORMAL
+2022,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2022,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2022,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2022,"Ultimate Fighter 28 Heavyweight Tournament",1,0,1,0,INSUFFICIENT
+2022,"Ultimate Fighter 28 Women's Featherweight Tournament",1,0,1,0,INSUFFICIENT
+2022,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2022,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2022,"Welterweight",257,172,85,209,NORMAL
+2022,"Women's Bantamweight",49,30,19,37,THIN_EXPLORATORY
+2022,"Women's Featherweight",11,7,4,6,INSUFFICIENT
+2022,"Women's Flyweight",60,29,31,44,MODERATE_UNCERTAINTY
+2022,"Women's Strawweight",65,24,41,49,MODERATE_UNCERTAINTY
+2023,"Bantamweight",193,120,73,152,NORMAL
+2023,"Catch Weight",25,14,11,18,THIN_EXPLORATORY
+2023,"Featherweight",188,122,66,152,NORMAL
+2023,"Flyweight",86,42,44,71,MODERATE_UNCERTAINTY
+2023,"Heavyweight",184,145,39,147,NORMAL
+2023,"Interim Featherweight",2,2,0,2,INSUFFICIENT
+2023,"Interim Flyweight",1,1,0,1,INSUFFICIENT
+2023,"Interim Heavyweight",1,1,0,1,INSUFFICIENT
+2023,"Interim Lightweight",2,1,1,2,INSUFFICIENT
+2023,"Light Heavyweight",186,135,51,151,NORMAL
+2023,"Lightweight",289,181,108,230,NORMAL
+2023,"Middleweight",236,163,73,197,NORMAL
+2023,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2023,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2023,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2023,"Ultimate Fighter 28 Heavyweight Tournament",1,0,1,0,INSUFFICIENT
+2023,"Ultimate Fighter 28 Women's Featherweight Tournament",1,0,1,0,INSUFFICIENT
+2023,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2023,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2023,"Welterweight",290,197,93,235,NORMAL
+2023,"Women's Bantamweight",55,33,22,42,MODERATE_UNCERTAINTY
+2023,"Women's Featherweight",12,7,5,6,INSUFFICIENT
+2023,"Women's Flyweight",72,34,38,53,MODERATE_UNCERTAINTY
+2023,"Women's Strawweight",77,30,47,61,MODERATE_UNCERTAINTY
+2024,"Bantamweight",217,135,82,172,NORMAL
+2024,"Catch Weight",28,15,13,19,THIN_EXPLORATORY
+2024,"Featherweight",216,139,77,175,NORMAL
+2024,"Flyweight",105,53,52,84,NORMAL
+2024,"Heavyweight",202,158,44,163,NORMAL
+2024,"Interim Featherweight",3,2,1,3,INSUFFICIENT
+2024,"Interim Flyweight",1,1,0,1,INSUFFICIENT
+2024,"Interim Heavyweight",2,2,0,2,INSUFFICIENT
+2024,"Interim Lightweight",2,1,1,2,INSUFFICIENT
+2024,"Light Heavyweight",204,148,56,167,NORMAL
+2024,"Lightweight",333,215,118,263,NORMAL
+2024,"Middleweight",270,187,83,222,NORMAL
+2024,"Road To UFC 1 Bantamweight Tournament",1,1,0,0,INSUFFICIENT
+2024,"Road To UFC 1 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2024,"Road to UFC 1 Flyweight Tournament",1,0,1,0,INSUFFICIENT
+2024,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2024,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2024,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2024,"Ultimate Fighter 28 Heavyweight Tournament",1,0,1,0,INSUFFICIENT
+2024,"Ultimate Fighter 28 Women's Featherweight Tournament",1,0,1,0,INSUFFICIENT
+2024,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2024,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2024,"Welterweight",324,211,113,261,NORMAL
+2024,"Women's Bantamweight",59,33,26,44,MODERATE_UNCERTAINTY
+2024,"Women's Featherweight",12,7,5,6,INSUFFICIENT
+2024,"Women's Flyweight",84,38,46,63,MODERATE_UNCERTAINTY
+2024,"Women's Strawweight",92,39,53,73,MODERATE_UNCERTAINTY
+2025,"Bantamweight",235,143,92,188,NORMAL
+2025,"Catch Weight",29,16,13,20,THIN_EXPLORATORY
+2025,"Featherweight",250,160,90,204,NORMAL
+2025,"Flyweight",120,61,59,93,NORMAL
+2025,"Heavyweight",218,170,48,176,NORMAL
+2025,"Interim Featherweight",3,2,1,3,INSUFFICIENT
+2025,"Interim Flyweight",1,1,0,1,INSUFFICIENT
+2025,"Interim Heavyweight",3,3,0,3,INSUFFICIENT
+2025,"Interim Lightweight",2,1,1,2,INSUFFICIENT
+2025,"Light Heavyweight",224,164,60,183,NORMAL
+2025,"Lightweight",363,236,127,287,NORMAL
+2025,"Middleweight",302,206,96,250,NORMAL
+2025,"Road To UFC 1 Bantamweight Tournament",1,1,0,0,INSUFFICIENT
+2025,"Road To UFC 1 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2025,"Road to UFC 1 Flyweight Tournament",1,0,1,0,INSUFFICIENT
+2025,"Road to UFC 3 Flyweight Tournament TitleBout",1,1,0,0,INSUFFICIENT
+2025,"Road to UFC 3 Women's Strawweight Tournament TitleBout",1,1,0,0,INSUFFICIENT
+2025,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2025,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2025,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2025,"Ultimate Fighter 28 Heavyweight Tournament",1,0,1,0,INSUFFICIENT
+2025,"Ultimate Fighter 28 Women's Featherweight Tournament",1,0,1,0,INSUFFICIENT
+2025,"Ultimate Fighter 32 Featherweight Tournament",1,1,0,0,INSUFFICIENT
+2025,"Ultimate Fighter 32 Middleweight Tournament",1,1,0,0,INSUFFICIENT
+2025,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2025,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2025,"Welterweight",354,234,120,288,NORMAL
+2025,"Women's Bantamweight",68,37,31,51,MODERATE_UNCERTAINTY
+2025,"Women's Featherweight",12,7,5,6,INSUFFICIENT
+2025,"Women's Flyweight",90,40,50,68,MODERATE_UNCERTAINTY
+2025,"Women's Strawweight",99,40,59,80,MODERATE_UNCERTAINTY
+2026,"Bantamweight",253,154,99,202,NORMAL
+2026,"Catch Weight",34,18,16,23,THIN_EXPLORATORY
+2026,"Featherweight",276,179,97,222,NORMAL
+2026,"Flyweight",139,69,70,110,NORMAL
+2026,"Heavyweight",237,184,53,188,NORMAL
+2026,"Interim Featherweight",3,2,1,3,INSUFFICIENT
+2026,"Interim Flyweight",1,1,0,1,INSUFFICIENT
+2026,"Interim Heavyweight",3,3,0,3,INSUFFICIENT
+2026,"Interim Lightweight",2,1,1,2,INSUFFICIENT
+2026,"Light Heavyweight",248,179,69,202,NORMAL
+2026,"Lightweight",396,257,139,317,NORMAL
+2026,"Middleweight",344,238,106,281,NORMAL
+2026,"Road To UFC 1 Bantamweight Tournament",1,1,0,0,INSUFFICIENT
+2026,"Road To UFC 1 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2026,"Road to UFC 1 Flyweight Tournament",1,0,1,0,INSUFFICIENT
+2026,"Road to UFC 3 Flyweight Tournament TitleBout",1,1,0,0,INSUFFICIENT
+2026,"Road to UFC 3 Women's Strawweight Tournament TitleBout",1,1,0,0,INSUFFICIENT
+2026,"Ultimate Fighter 21 Welterweight Tournament",1,0,1,0,INSUFFICIENT
+2026,"Ultimate Fighter 23 Women's Strawweight Tournament",1,0,1,0,INSUFFICIENT
+2026,"Ultimate Fighter 25 Welterweight Tournament",1,0,1,1,INSUFFICIENT
+2026,"Ultimate Fighter 28 Heavyweight Tournament",1,0,1,0,INSUFFICIENT
+2026,"Ultimate Fighter 28 Women's Featherweight Tournament",1,0,1,0,INSUFFICIENT
+2026,"Ultimate Fighter 32 Featherweight Tournament",1,1,0,0,INSUFFICIENT
+2026,"Ultimate Fighter 32 Middleweight Tournament",1,1,0,0,INSUFFICIENT
+2026,"Ultimate Fighter 33 Flyweight Tournament",1,0,1,0,INSUFFICIENT
+2026,"Ultimate Fighter 33 Welterweight Tournament",1,1,0,0,INSUFFICIENT
+2026,"Ultimate Fighter Brazil 4 Lightweight Tournament",1,0,1,0,INSUFFICIENT
+2026,"Ultimate Fighter Latin America 3 Lightweight Tournament",1,1,0,0,INSUFFICIENT
+2026,"Welterweight",390,260,130,319,NORMAL
+2026,"Women's Bantamweight",76,41,35,57,MODERATE_UNCERTAINTY
+2026,"Women's Featherweight",12,7,5,6,INSUFFICIENT
+2026,"Women's Flyweight",97,44,53,74,MODERATE_UNCERTAINTY
+2026,"Women's Strawweight",112,46,66,92,NORMAL
