@@ -1,0 +1,158 @@
+{
+  "finish_node": {
+    "ECE": 0.032871607824184294,
+    "N": 4260,
+    "ROC_AUC": 0.6274559010729224,
+    "ROC_AUC_status": "DEFINED",
+    "actual_KO_frequency": 0.4964788732394366,
+    "brier": 0.238630440072824,
+    "calibration": {
+      "intercept": 0.08025875855638966,
+      "iterations": 5,
+      "slope": 0.8321088870110502,
+      "status": "CONVERGED"
+    },
+    "log_loss": 0.6702383070746238,
+    "mean_predicted_KO": 0.47324090728197554,
+    "reliability": [
+      {
+        "N": 0,
+        "Wilson95": [
+          null,
+          null
+        ],
+        "actual_frequency": null,
+        "bin": 0,
+        "gap": null,
+        "lower": 0.0,
+        "mean_prediction": null,
+        "upper": 0.1
+      },
+      {
+        "N": 40,
+        "Wilson95": [
+          0.05459500250945401,
+          0.261121198388511
+        ],
+        "actual_frequency": 0.125,
+        "bin": 1,
+        "gap": 0.059238156833607836,
+        "lower": 0.1,
+        "mean_prediction": 0.18423815683360784,
+        "upper": 0.2
+      },
+      {
+        "N": 343,
+        "Wilson95": [
+          0.25971890583616997,
+          0.35682059191528914
+        ],
+        "actual_frequency": 0.30612244897959184,
+        "bin": 2,
+        "gap": -0.04903278373046405,
+        "lower": 0.2,
+        "mean_prediction": 0.2570896652491278,
+        "upper": 0.3
+      },
+      {
+        "N": 865,
+        "Wilson95": [
+          0.38150172643846636,
+          0.44700553632240325
+        ],
+        "actual_frequency": 0.4138728323699422,
+        "bin": 3,
+        "gap": -0.055899537189014636,
+        "lower": 0.3,
+        "mean_prediction": 0.3579732951809276,
+        "upper": 0.4
+      },
+      {
+        "N": 1321,
+        "Wilson95": [
+          0.4380442845973879,
+          0.4917586368157268
+        ],
+        "actual_frequency": 0.4647993943981832,
+        "bin": 4,
+        "gap": -0.015499317734782081,
+        "lower": 0.4,
+        "mean_prediction": 0.4493000766634011,
+        "upper": 0.5
+      },
+      {
+        "N": 956,
+        "Wilson95": [
+          0.55005429411607,
+          0.612472546714153
+        ],
+        "actual_frequency": 0.5815899581589958,
+        "bin": 5,
+        "gap": -0.03542620181925815,
+        "lower": 0.5,
+        "mean_prediction": 0.5461637563397377,
+        "upper": 0.6
+      },
+      {
+        "N": 523,
+        "Wilson95": [
+          0.5946341865691152,
+          0.6767947179064318
+        ],
+        "actual_frequency": 0.6367112810707457,
+        "bin": 6,
+        "gap": 0.004082544907375918,
+        "lower": 0.6,
+        "mean_prediction": 0.6407938259781216,
+        "upper": 0.7
+      },
+      {
+        "N": 176,
+        "Wilson95": [
+          0.6097507635006083,
+          0.7461182358929597
+        ],
+        "actual_frequency": 0.6818181818181818,
+        "bin": 7,
+        "gap": 0.058179755860094606,
+        "lower": 0.7,
+        "mean_prediction": 0.7399979376782764,
+        "upper": 0.8
+      },
+      {
+        "N": 35,
+        "Wilson95": [
+          0.5202023638793081,
+          0.8144915532573418
+        ],
+        "actual_frequency": 0.6857142857142857,
+        "bin": 8,
+        "gap": 0.13928288450298665,
+        "lower": 0.8,
+        "mean_prediction": 0.8249971702172724,
+        "upper": 0.9
+      },
+      {
+        "N": 1,
+        "Wilson95": [
+          0.0,
+          0.7934506856227626
+        ],
+        "actual_frequency": 0.0,
+        "bin": 9,
+        "gap": 0.9004219272372869,
+        "lower": 0.9,
+        "mean_prediction": 0.9004219272372869,
+        "upper": 1.0
+      }
+    ]
+  },
+  "identity": "composed LL = finish-node LL + finish-fraction times conditional LL before log clipping; terms have different targets and entropy, not comparable reducible-error budgets",
+  "weighted_finish_node_log_loss": 0.6702383070746238,
+  "weighted_method_node_log_loss": {
+    "C0": 0.32350215219497364,
+    "C1": 0.3185431930742541,
+    "MOV1_FULL": 0.3076626089522684,
+    "MOV1_MIN": 0.30551601378445714
+  }
+}

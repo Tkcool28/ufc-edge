@@ -1,0 +1,21 @@
+{
+  "FULL_increment": "CURRENT_SPECIFICATION_NOT_SUPPORTED as an addition to MIN; FULL still beats context/prevalence, no predictors removed",
+  "calibration_conclusion": "INCONCLUSIVE as a claim of fully calibrated probabilities: useful ranking/resolution, overdispersion and subgroup/bucket gaps",
+  "composed": {
+    "S1_vs_S0": "CLEAR_SUCCESS",
+    "S2_vs_S0": "CLEAR_SUCCESS",
+    "S2_vs_S1": "CLEAR_SUCCESS",
+    "S3_vs_S0": "CLEAR_SUCCESS",
+    "S3_vs_S2": "CURRENT_SPECIFICATION_NOT_SUPPORTED"
+  },
+  "composed_primary_conclusion": "CLEAR_SUCCESS for S2 beyond S1/S0; submission reliability worsens versus context and decision-node errors remain",
+  "conditional": {
+    "C1_vs_C0": "CLEAR_SUCCESS",
+    "MOV1_FULL_vs_MOV1_MIN": "CURRENT_SPECIFICATION_NOT_SUPPORTED",
+    "MOV1_MIN_vs_C1": "CLEAR_SUCCESS"
+  },
+  "conditional_primary_conclusion": "CLEAR_SUCCESS for MIN beyond context; imperfect calibration and subgroup limitations remain",
+  "interpretation_rule_path": "models/mov1/contracts/ko_vs_submission_given_finish_v1/interpretation_rules.json",
+  "no_automatic_promotion_or_specification_change": true,
+  "no_future_model_decision_implemented": true
+}

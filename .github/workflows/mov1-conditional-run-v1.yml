@@ -1,0 +1,91 @@
+name: MOV1 Conditional Frozen Run V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'models/mov1/implementation_v1.py'
+      - 'models/mov1/evaluation_v1.py'
+      - 'models/mov1/run_v1/**'
+      - 'tools/experiments/*mov1*'
+      - 'tests/experiments/test_mov1_conditional_v1.py'
+      - '.github/workflows/mov1-conditional-run-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate-frozen-run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install contracted environment
+        run: python -m pip install numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scipy==1.14.1 scikit-learn==1.5.2 pytest==8.3.5
+      - name: Verify immutable experiment ancestry and code tests
+        run: |
+          git merge-base --is-ancestor b6a644d9ef8d267f7d7da97f21e691f2bae99226 HEAD
+          git diff b6a644d9ef8d267f7d7da97f21e691f2bae99226..HEAD --check
+          python -m pytest -q tests/experiments/test_mov1_conditional_v1.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: mov0-standard-finish-probability-v1
+          path: ${{ runner.temp }}/mov0
+          repository: Tkcool28/ufc-edge
+          run-id: 35376956316
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check identities before fitting any historical model
+        run: |
+          python tools/contracts/validate_mov1_contract_v1.py --f02-table '${{ runner.temp }}/f02/winner_modeling_table.parquet'
+          python - '${{ runner.temp }}/mov0' <<'PY'
+          import hashlib,sys
+          from pathlib import Path
+          files=list(Path(sys.argv[1]).rglob('oof_MOV0_MIN.csv'))
+          assert len(files)==1
+          assert hashlib.sha256(files[0].read_bytes()).hexdigest()=='786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57'
+          PY
+      - name: Reproduce complete frozen run and verify all persisted predictions
+        if: hashFiles('models/mov1/run_v1/EVIDENCE_MANIFEST.json') != ''
+        run: |
+          mov0_oof=$(find '${{ runner.temp }}/mov0' -name oof_MOV0_MIN.csv -type f)
+          python tools/experiments/verify_mov1_saved_run_v1.py --f02-table '${{ runner.temp }}/f02/winner_modeling_table.parquet' --mov0-min-oof "$mov0_oof" --run-dir models/mov1/run_v1
+          python tools/experiments/run_mov1_conditional_v1.py --f02-table '${{ runner.temp }}/f02/winner_modeling_table.parquet' --mov0-min-oof "$mov0_oof" --output-dir '${{ runner.temp }}/mov1-reproduced'
+          python - '${{ runner.temp }}/mov1-reproduced' <<'PY'
+          import sys
+          from pathlib import Path
+          import numpy as np,pandas as pd
+          for filename,columns in [('conditional_oof_all_eligible.csv',['P_KO_given_finish','P_SUB_given_finish']),('composed_oof_all_eligible.csv',['P_KO_TKO','P_SUBMISSION','P_DECISION'])]:
+              a=pd.read_csv(Path('models/mov1/run_v1')/filename,float_precision='round_trip')
+              b=pd.read_csv(Path(sys.argv[1])/filename,float_precision='round_trip')
+              assert len(a)==len(b)==17040
+              keys=['fight_id','outer_year','surface' if 'surface' in a else 'system']
+              assert a[keys].equals(b[keys])
+              np.testing.assert_allclose(a[columns],b[columns],atol=1e-12,rtol=0)
+          print('Both complete prediction tables reproduced within1e-12; no cross-platform bitwise claim')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('models/mov1/run_v1/EVIDENCE_MANIFEST.json') != ''
+        with:
+          name: mov1-conditional-frozen-run-v1-reproduced
+          path: ${{ runner.temp }}/mov1-reproduced
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,45 @@
+{
+  "cross_platform_bitwise_identity_claimed": false,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "prediction_regeneration_atol": 1e-12,
+  "rtol": 0,
+  "threadpools": [
+    {
+      "architecture": "Cooperlake",
+      "filepath": "/workspace/scratch/8088c427066a/mov1-venv/lib/python3.12/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "threading_layer": "pthreads",
+      "user_api": "blas",
+      "version": "0.3.23.dev"
+    },
+    {
+      "architecture": "Cooperlake",
+      "filepath": "/workspace/scratch/8088c427066a/mov1-venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-c128ec02.so",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "threading_layer": "pthreads",
+      "user_api": "blas",
+      "version": "0.3.27.dev"
+    },
+    {
+      "filepath": "/workspace/scratch/8088c427066a/mov1-venv/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "user_api": "openmp",
+      "version": null
+    }
+  ],
+  "threads": 1,
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "pyarrow": "17.0.0",
+    "python": "3.12.14",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.14.1"
+  }
+}

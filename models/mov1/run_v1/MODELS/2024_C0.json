@@ -1,0 +1,12 @@
+{
+  "P_KO_given_finish": 0.6409426987060998,
+  "fit_identity": {
+    "DECISION": 0,
+    "KO_TKO": 1387,
+    "N": 2164,
+    "SUBMISSION": 777,
+    "ordered_fight_id_sha256": "138ea421344e3fcdb444535b8e66a692a830ead8a5a915f7fcb43947ae018365"
+  },
+  "outer_year": 2024,
+  "surface": "C0"
+}

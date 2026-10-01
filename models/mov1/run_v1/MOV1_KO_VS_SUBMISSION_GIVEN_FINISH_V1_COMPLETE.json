@@ -1,0 +1,16 @@
+{
+  "FULL_increment": "CURRENT_SPECIFICATION_NOT_SUPPORTED",
+  "MOV0_retrained": false,
+  "all_implementation_gates_passed": true,
+  "composed_classification": "CLEAR_SUCCESS for S2 beyond S1/S0",
+  "conditional_classification": "CLEAR_SUCCESS for MIN beyond C1",
+  "contract_manifest_sha256": "9034e647bebaa7099f5358ed7a5db0e1bc515df1894db912274e5dae629cb714",
+  "evidence_manifest": "EVIDENCE_MANIFEST.json",
+  "implementation_freeze_commit": "31008e323d0ac579c8b93d810918c23ff15df5a1",
+  "main_report": "MOV1_KO_VS_SUBMISSION_GIVEN_FINISH_V1_REPORT.md",
+  "manifest_digest_external_to_avoid_self_reference": true,
+  "merged": false,
+  "models_trained_exact_contract": true,
+  "starting_main_sha": "b6a644d9ef8d267f7d7da97f21e691f2bae99226",
+  "status": "MOV1_KO_VS_SUBMISSION_GIVEN_FINISH_V1_COMPLETE"
+}

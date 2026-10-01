@@ -1,0 +1,169 @@
+{
+  "F02_columns": 211,
+  "F02_physical_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+  "F02_rows": 9252,
+  "checks": [
+    "foundation hashes",
+    "canonical labels",
+    "literal corrected F02 schema",
+    "existing PIT-governed career families",
+    "symmetric pair closure",
+    "categorical mapping",
+    "outer and inner exact counts and ID digests",
+    "finish-only training, complete scoring coverage",
+    "finite training support",
+    "illustrative composition and symmetry algebra"
+  ],
+  "conditional_finish_N": 2822,
+  "future_runtime_checks": [
+    "fitted probability swap invariance1e-12",
+    "fitted preprocessing train-only behavior",
+    "convergence",
+    "conditional and complete-system metrics",
+    "immutable MOV0 OOF join hashes"
+  ],
+  "modern_all_eligible_N": 5658,
+  "no_model_fit_no_predictions_no_performance_evaluation": true,
+  "outer_all_scoring_N": 4260,
+  "outer_conditional_N": 2115,
+  "predictors_checked": 55,
+  "starting_main_sha": "4d641e259d4420fd77290603cabcce33c90bf6c8",
+  "status": "CONTRACT_INPUT_VALIDATION_PASSED",
+  "training_support": [
+    {
+      "finish_training_N": 707,
+      "history": "outer_2018",
+      "minimum_finite_pooled_pair_values": 1122
+    },
+    {
+      "finish_training_N": 243,
+      "history": "outer_2018_inner_2016",
+      "minimum_finite_pooled_pair_values": 400
+    },
+    {
+      "finish_training_N": 482,
+      "history": "outer_2018_inner_2017",
+      "minimum_finite_pooled_pair_values": 766
+    },
+    {
+      "finish_training_N": 948,
+      "history": "outer_2019",
+      "minimum_finite_pooled_pair_values": 1502
+    },
+    {
+      "finish_training_N": 482,
+      "history": "outer_2019_inner_2017",
+      "minimum_finite_pooled_pair_values": 766
+    },
+    {
+      "finish_training_N": 707,
+      "history": "outer_2019_inner_2018",
+      "minimum_finite_pooled_pair_values": 1122
+    },
+    {
+      "finish_training_N": 1179,
+      "history": "outer_2020",
+      "minimum_finite_pooled_pair_values": 1862
+    },
+    {
+      "finish_training_N": 707,
+      "history": "outer_2020_inner_2018",
+      "minimum_finite_pooled_pair_values": 1122
+    },
+    {
+      "finish_training_N": 948,
+      "history": "outer_2020_inner_2019",
+      "minimum_finite_pooled_pair_values": 1502
+    },
+    {
+      "finish_training_N": 1399,
+      "history": "outer_2021",
+      "minimum_finite_pooled_pair_values": 2196
+    },
+    {
+      "finish_training_N": 948,
+      "history": "outer_2021_inner_2019",
+      "minimum_finite_pooled_pair_values": 1502
+    },
+    {
+      "finish_training_N": 1179,
+      "history": "outer_2021_inner_2020",
+      "minimum_finite_pooled_pair_values": 1862
+    },
+    {
+      "finish_training_N": 1638,
+      "history": "outer_2022",
+      "minimum_finite_pooled_pair_values": 2594
+    },
+    {
+      "finish_training_N": 1179,
+      "history": "outer_2022_inner_2020",
+      "minimum_finite_pooled_pair_values": 1862
+    },
+    {
+      "finish_training_N": 1399,
+      "history": "outer_2022_inner_2021",
+      "minimum_finite_pooled_pair_values": 2196
+    },
+    {
+      "finish_training_N": 1906,
+      "history": "outer_2023",
+      "minimum_finite_pooled_pair_values": 3044
+    },
+    {
+      "finish_training_N": 1399,
+      "history": "outer_2023_inner_2021",
+      "minimum_finite_pooled_pair_values": 2196
+    },
+    {
+      "finish_training_N": 1638,
+      "history": "outer_2023_inner_2022",
+      "minimum_finite_pooled_pair_values": 2594
+    },
+    {
+      "finish_training_N": 2164,
+      "history": "outer_2024",
+      "minimum_finite_pooled_pair_values": 3442
+    },
+    {
+      "finish_training_N": 1638,
+      "history": "outer_2024_inner_2022",
+      "minimum_finite_pooled_pair_values": 2594
+    },
+    {
+      "finish_training_N": 1906,
+      "history": "outer_2024_inner_2023",
+      "minimum_finite_pooled_pair_values": 3044
+    },
+    {
+      "finish_training_N": 2387,
+      "history": "outer_2025",
+      "minimum_finite_pooled_pair_values": 3808
+    },
+    {
+      "finish_training_N": 1906,
+      "history": "outer_2025_inner_2023",
+      "minimum_finite_pooled_pair_values": 3044
+    },
+    {
+      "finish_training_N": 2164,
+      "history": "outer_2025_inner_2024",
+      "minimum_finite_pooled_pair_values": 3442
+    },
+    {
+      "finish_training_N": 2639,
+      "history": "outer_2026",
+      "minimum_finite_pooled_pair_values": 4206
+    },
+    {
+      "finish_training_N": 2164,
+      "history": "outer_2026_inner_2024",
+      "minimum_finite_pooled_pair_values": 3442
+    },
+    {
+      "finish_training_N": 2387,
+      "history": "outer_2026_inner_2025",
+      "minimum_finite_pooled_pair_values": 3808
+    }
+  ]
+}
