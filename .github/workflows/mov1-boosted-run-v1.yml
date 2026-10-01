@@ -1,0 +1,58 @@
+name: MOV1 Boosted Frozen Run V1
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'models/challengers/mov1_boosted_v1/implementation_v1.py'
+      - 'models/challengers/mov1_boosted_v1/run_v1/**'
+      - 'tools/experiments/*mov1_boosted*'
+      - 'tests/experiments/test_mov1_boosted_v1.py'
+      - '.github/workflows/mov1-boosted-run-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify-frozen-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Install frozen dependencies and test-only pytest
+        run: python -m pip install -r models/challengers/mov1_boosted_v1/requirements-lock.txt pytest==8.3.5
+      - name: Verify authority and outcome-free engineering tests
+        run: |
+          git merge-base --is-ancestor 4ec01227a4a35872eed51ce7ce67c45b02e46ebd HEAD
+          git diff 4ec01227a4a35872eed51ce7ce67c45b02e46ebd..HEAD --check
+          python -m pytest -q tests/experiments/test_mov1_boosted_v1.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: mov0-standard-finish-probability-v1
+          path: ${{ runner.temp }}/mov0
+          repository: Tkcool28/ufc-edge
+          run-id: 35376956316
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Validate inputs without any model fits
+        run: python tools/contracts/validate_mov1_boosted_contract_v1.py --f02-table '${{ runner.temp }}/f02/winner_modeling_table.parquet'
+      - name: Regenerate all saved prefixes and outer scores (zero extra fits)
+        if: hashFiles('models/challengers/mov1_boosted_v1/run_v1/EVIDENCE_MANIFEST.json') != ''
+        run: |
+          mov0_oof=$(find '${{ runner.temp }}/mov0' -name oof_MOV0_MIN.csv -type f)
+          python tools/experiments/verify_mov1_boosted_saved_v1.py --f02-table '${{ runner.temp }}/f02/winner_modeling_table.parquet' --mov0-min-oof "$mov0_oof" --run-dir models/challengers/mov1_boosted_v1/run_v1
