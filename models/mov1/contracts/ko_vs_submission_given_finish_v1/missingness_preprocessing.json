@@ -1,0 +1,23 @@
+{
+  "availability_derived_features": false,
+  "category_context": "title/main-event wrappers normalized with pre-existing literal_map; no historical rates encoded",
+  "fit_rows": "current inner/outer finish-only training history; never score/evaluation rows",
+  "future_availability": false,
+  "indicators": false,
+  "no_reach_or_physical_availability_predictors": true,
+  "numeric": "float64; null stays null until fitted imputation; inf or nonnumeric is a hard failure",
+  "pairs": "pooled finite values from both columns; numpy median; fail closed if all missing; no zero fallback",
+  "scaling": "StandardScaler(with_mean=True,with_std=True) on transformed training numeric features only, population variance ddof=0; zero-variance scale=1; title and one-hot unscaled",
+  "scheduled_rounds": "training numeric median; fail closed if all missing",
+  "source_semantics": "do not re-estimate governed F02 career shrinkage; consume frozen PIT states; training-only refers to MOV1 imputation/encoding/scaling",
+  "title_bout": "strict boolean 0/1, null training mode; ties False before True; fail all missing",
+  "weight_class": {
+    "encoding": "OneHotEncoder(handle_unknown=ignore,drop=None,sparse_output=False,dtype=float64), categories learned in lexical order on training only",
+    "literal_map_path": "models/challengers/mov0_hierarchical_v1/weight_class_map.json",
+    "literal_map_sha256": "9ad4d7f701dcab2453b3ed8fe4aa500a07aabe027d7f0e951b823a8a6f7fb92e",
+    "mode": "training normalized class mode; lexical tie break; fail all missing",
+    "normalization": "use existing literal_map before training-mode imputation; retain raw label for immutable terrain; unknown nonnull raw label fails",
+    "ordinal": false,
+    "unseen_known_division": "all-zero one-hot vector; report N; no future encoder/category fitting"
+  }
+}

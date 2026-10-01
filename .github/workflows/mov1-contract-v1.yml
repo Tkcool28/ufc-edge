@@ -1,0 +1,52 @@
+name: MOV1 Conditional Contract V1 Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'models/mov1/contracts/ko_vs_submission_given_finish_v1/**'
+      - 'tools/contracts/validate_mov1_contract_v1.py'
+      - '.github/workflows/mov1-contract-v1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate-contract-only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install validation-only dependencies
+        run: python -m pip install numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0
+      - name: Check frozen foundation ancestry and formatting
+        run: |
+          git merge-base --is-ancestor 4d641e259d4420fd77290603cabcce33c90bf6c8 HEAD
+          git diff 4d641e259d4420fd77290603cabcce33c90bf6c8..HEAD --check
+      - name: Download authoritative corrected F02
+        uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify contract and exact input support without model fitting
+        run: |
+          python tools/contracts/validate_mov1_contract_v1.py \
+            --f02-table '${{ runner.temp }}/f02/winner_modeling_table.parquet' \
+            --write-evidence '${{ runner.temp }}/contract-validation.json'
+          cmp '${{ runner.temp }}/contract-validation.json' models/mov1/contracts/ko_vs_submission_given_finish_v1/VALIDATION_EVIDENCE.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mov1-contract-v1-validation
+          path: ${{ runner.temp }}/contract-validation.json
+          if-no-files-found: error
+          retention-days: 30

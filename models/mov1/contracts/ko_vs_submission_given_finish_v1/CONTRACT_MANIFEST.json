@@ -1,0 +1,111 @@
+{
+  "files": {
+    ".github/workflows/mov1-contract-v1.yml": {
+      "bytes": 1950,
+      "sha256": "a1388782148c2d2461ac0cc6f5c4cb0f5c9041254b61e678307cb20ed252e6e8"
+    },
+    "models/mov1/README.md": {
+      "bytes": 385,
+      "sha256": "202074da516d8469b49ae61368ddb5245295ecb083d56af3bbcaafa8671949ff"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/IMPLICATIONS_FOR_HYBRID_SIMULATOR.md": {
+      "bytes": 1316,
+      "sha256": "e13ca54fff7ae0a3709b7d7fd00cdba568ff93c488bf17bb000e67b5bab2068a"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/MOV1_KO_VS_SUBMISSION_GIVEN_FINISH_V1_CONTRACT.md": {
+      "bytes": 10428,
+      "sha256": "2ef3046b670f1f1629f60a8767668d74558bbc6a4bffb266ec06e673f394be1e"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/README.md": {
+      "bytes": 662,
+      "sha256": "d6c58954c82a7a4ba0a763c81d14f5378006c49bd011ce0821b64df727e81853"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/VALIDATION_EVIDENCE.json": {
+      "bytes": 4689,
+      "sha256": "2755a0955538ef3359b077227a98872fa9575db8f3cffc8e1675a86ca24c7b82"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/c0_allowlist.json": {
+      "bytes": 155,
+      "sha256": "2ad8742c7eefdc22ae54c3676981ef245e41e13e58430c2aeda50337329b364b"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/c1_allowlist.json": {
+      "bytes": 321,
+      "sha256": "f663b36c78a0acafa6cefa07d2be46dcb40cf1bb8311d1c5adc7c58d61fff609"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/chronological_fold_plan.json": {
+      "bytes": 17595,
+      "sha256": "cf85f2879ad5aa029d7c41e27c0d9c5798a440f9c6a83295b61bfbfdac58fb08"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/conditional_metrics.json": {
+      "bytes": 1281,
+      "sha256": "0e37473037c3b617c8f9ae1ed9ed30502bd694f9e37b4c3f6c32fe074058c217"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/conditional_probability_buckets.json": {
+      "bytes": 887,
+      "sha256": "1bf340700ad6eda2f2a2a15bc21502c5b09d76e8788dcd07eac75d52181fd579"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/expected_fold_counts.csv": {
+      "bytes": 467,
+      "sha256": "259a12ae4c30200c2523353fb21015d88bdc4dfdf5fcea25e4076f3fb2fa55df"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/feature_rationale.csv": {
+      "bytes": 34547,
+      "sha256": "49c90e7e8d698744230328175c65c7377592faea5b4271967936e0c739ce3171"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/fighter_order_transformation.json": {
+      "bytes": 10246,
+      "sha256": "30d52e7f315bc897cafe746544907e03c1121061547b2b2a479e76a205ba0ccc"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/foundation_manifest.json": {
+      "bytes": 8303,
+      "sha256": "df687f4420ac6fabc8c4d459a864843744d6bfdd10b155ff818554ee22592ede"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/future_run_artifact_specification.json": {
+      "bytes": 4416,
+      "sha256": "5d33069f8da92cbd1649e936efbbf39589a8fda079eeedc95d317ec2684531e9"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/interpretation_rules.json": {
+      "bytes": 1789,
+      "sha256": "8221e21a98290a05d390b81a3992f1fa9c6b9d4e7566197374cc8142f57c404d"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/missingness_preprocessing.json": {
+      "bytes": 1831,
+      "sha256": "e06b9b9e640deddc331471ead65b1f83f60931d714e0fe80a7c606070377dd21"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/model_regularization.json": {
+      "bytes": 1330,
+      "sha256": "0bd68f27888ca0d76bb0e9fdfe4caf68f25e3a962f6d283f86c43996b7ddc21f"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/mov1_full_allowlist.json": {
+      "bytes": 3559,
+      "sha256": "60ab3f9e5d53544edfa9665f8597ecac8c421df10c0a0957484a11a0de877e7d"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/mov1_min_allowlist.json": {
+      "bytes": 2302,
+      "sha256": "f0eb5338ccdd00b8b18da9337751139a79ae7865b47d6e5c87fb68aa3f509fc0"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/target_population.json": {
+      "bytes": 2053,
+      "sha256": "402ab25522df726360e7e4d85658bc136e224ae9f569acc8fd8a76f7ab8f975b"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/terrain_archetype_evaluation.json": {
+      "bytes": 4904,
+      "sha256": "73f2429c2cecdf98b2ff36f28ee436e66097d75d91e37d2429ab7a543f0a7c6f"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/three_way_composition.json": {
+      "bytes": 2038,
+      "sha256": "cc06e3c847efb1d182ef0ab3eb8aa5b96b3b27e1bd43aabc9b1ae29820b36f7a"
+    },
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/uncertainty_persistence.json": {
+      "bytes": 1362,
+      "sha256": "a75f69912a8b1f27f5a1e33b7a833ced41e8e3bb76df95c873cdc00361bb6ef5"
+    },
+    "tools/contracts/validate_mov1_contract_v1.py": {
+      "bytes": 13203,
+      "sha256": "f3b6a9ba236036443518b0e3b45c2b4339ba6794efa9c030de3dddf08be9545a"
+    }
+  },
+  "manifest_excludes_self": "SHA256 for this file is recorded in the draft PR/final handoff, preventing self-reference",
+  "starting_main_sha": "4d641e259d4420fd77290603cabcce33c90bf6c8",
+  "status": "MOV1_KO_VS_SUBMISSION_GIVEN_FINISH_IMPLEMENTATION_CONTRACT_V1_COMPLETE"
+}

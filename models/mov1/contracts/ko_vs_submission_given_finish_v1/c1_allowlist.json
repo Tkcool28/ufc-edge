@@ -1,0 +1,13 @@
+{
+  "literal_f02_columns": [
+    "scheduled_rounds",
+    "ctx__title_bout",
+    "ctx__weight_class",
+    "f1__fs__prior_fight_count__career__raw",
+    "f2__fs__prior_fight_count__career__raw"
+  ],
+  "no_performance_based_selection": true,
+  "raw_column_count": 5,
+  "surface": "C1",
+  "unapproved_columns": "hard_fail"
+}
