@@ -1,0 +1,3 @@
+# MOV1 three-family finish-pathway comparative audit V1
+
+Start with `FINAL_AUDIT_REPORT.md` and `THREE_FAMILY_FINISH_PATHWAY_COMPARISON.md`. This is post-run explanatory evidence, not a new experiment or production selection. Reproduce with `python tools/diagnostics/run_mov1_three_family_finish_pathways_v1.py`. Accepts `--f02-table /path/to/winner_modeling_table.parquet --mov0-min-oof /path/to/oof_MOV0_MIN.csv`; defaults to the verified workspace attachment paths; uses archived predictions, no boosted estimator dependencies. All large native evidence remains solely in PR121. The audit PR is stacked on its unmerged evidence branch.

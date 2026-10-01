@@ -1,0 +1,31 @@
+{
+  "113": {
+    "head": "88f7e820706fb5df8ccd89c0c2f86675b870a90e",
+    "merged": true
+  },
+  "117": {
+    "head": "4d019cc6accc4c9057053774b889613e926ff672",
+    "merged": true
+  },
+  "118": {
+    "head": "6e14713f1f01835164e2425702b75fc81144f9e1",
+    "merged": true
+  },
+  "119": {
+    "head": "83822191168a94f4a0eef2b9f26295c0b9492b5b",
+    "merged": true
+  },
+  "120": {
+    "head": "532ea013b3d8765348a6ba71779e34e894d6a2d5",
+    "merged": true
+  },
+  "121": {
+    "draft": true,
+    "head": "859be9fad8a1a95cf35f3e5bb99107205734ddce",
+    "merged": false,
+    "state": "open"
+  },
+  "continuity_note": "PROJECT_STATUS/PROJECT_MAP are pre-MOV1 navigation snapshots; merged PR118-120 and exact PR121 evidence govern this audit.",
+  "main": "4ec01227a4a35872eed51ce7ce67c45b02e46ebd",
+  "snapshot": "audit start 2026-10-01; verified through GitHub connector"
+}

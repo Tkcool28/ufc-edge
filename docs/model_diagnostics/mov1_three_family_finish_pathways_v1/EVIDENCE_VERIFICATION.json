@@ -1,0 +1,789 @@
+{
+  "all_source_files": [
+    {
+      "path": "models/mov1/run_v1/ARCHETYPE_CONDITIONAL_REPORT.md",
+      "sha256": "e351fd031ab1102b72b71ba99b45a0038ad975e7ca84a8e33e8b282f44296fbc"
+    },
+    {
+      "path": "models/mov1/run_v1/COEFFICIENT_STABILITY_REPORT.md",
+      "sha256": "a94b49d9a1a34a6d1e3632a7bda831882856227250851f854747a7f4ba045e1a"
+    },
+    {
+      "path": "models/mov1/run_v1/CONDITIONAL_PROBABILITY_BUCKET_REPORT.md",
+      "sha256": "b25daf35d6d849f7fab2a10b988dfa13e8e9665ad6d3a3dd687fe53e9124727a"
+    },
+    {
+      "path": "models/mov1/run_v1/ENVIRONMENT_LOCK.json",
+      "sha256": "d949f513c0f44678c7553aae903cb3bde58687d943d5b739e519eaf008303e65"
+    },
+    {
+      "path": "models/mov1/run_v1/FOLD_IDENTITIES.json",
+      "sha256": "cf85f2879ad5aa029d7c41e27c0d9c5798a440f9c6a83295b61bfbfdac58fb08"
+    },
+    {
+      "path": "models/mov1/run_v1/IMPLEMENTATION_IDENTITY.json",
+      "sha256": "393fd8a85a0851183cb90004216db97366ae593091b71cee3b6a439f7b796cff"
+    },
+    {
+      "path": "models/mov1/run_v1/IMPLICATIONS_FOR_HYBRID_SIMULATOR.md",
+      "sha256": "e4f91b79e799e8667fa532256ecc6441f360b7f18ae06e7db0a1706d0c7ec1e7"
+    },
+    {
+      "path": "models/mov1/run_v1/INPUT_VALIDATION.json",
+      "sha256": "2755a0955538ef3359b077227a98872fa9575db8f3cffc8e1675a86ca24c7b82"
+    },
+    {
+      "path": "models/mov1/run_v1/INTERPRETATION.json",
+      "sha256": "65e91fcfa36c28c70dfa1094879a8dcf8ee84c069323c7e71b8027ab8ddd0821"
+    },
+    {
+      "path": "models/mov1/run_v1/INTERPRETATION.md",
+      "sha256": "14a2bd3853a955716552ad21c2ef690d9e1e03a5b10978b3e8bfcbc513eb9938"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2018_C0.json",
+      "sha256": "3163328f9c78ae8419893a498536761ffccf642cabf4e8b5a74f9313bd3e328f"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2018_C1.json",
+      "sha256": "c9608a2edc8d678e41dd167bf5b3a5adcddfc6c49a4be8ed59415b371390c552"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2018_MOV1_FULL.json",
+      "sha256": "911516fd0b2eed092e551547f3e150d71f9a2119771ab28315c3ef5e2a0605e2"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2018_MOV1_MIN.json",
+      "sha256": "933cac766e5487190f5bbfc14f89592ec856761bc3789168d2263730c7f77de7"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2019_C0.json",
+      "sha256": "d3c83053f2d17a89954f2ef1752012f318b2150792703f4a03ebf929405afc38"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2019_C1.json",
+      "sha256": "f5f4d17bc6dc17dbfc70808a1d08bb7bfea807298608c87d6798db18f9a82220"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2019_MOV1_FULL.json",
+      "sha256": "031e19d10ae85778ca0954ab8a2db9334711788ba74c265985c28bf0c4439f7c"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2019_MOV1_MIN.json",
+      "sha256": "06505581a997cbeae08f83d602dadf0e959a8dace83791e9f455ec0c3b697280"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2020_C0.json",
+      "sha256": "c5298f1ab246709997a39e3fb7a7a9b232fc739c553768a64f71f7dc2d612dd0"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2020_C1.json",
+      "sha256": "79d5b977d7c1c3dc96fb6bcc3d041deb638cba65572a6626111266aa45dce4a8"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2020_MOV1_FULL.json",
+      "sha256": "b75ceffd3c1f72c2afeba331834d20912945c38bdd1d7c266ca8eed3e2f2a8dc"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2020_MOV1_MIN.json",
+      "sha256": "7f7129fc4814a0bb1950e8939f603455fb571b0ed66114d9f5e4f18cb30c2171"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2021_C0.json",
+      "sha256": "b8403e45e477dcf45c8ca64849de7c244e992ff236946e0dabad6ecb95e0d932"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2021_C1.json",
+      "sha256": "0cf7ff65684a0fad7f836c581719869c9df09e8589b6d1fafc956c054dd42b13"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2021_MOV1_FULL.json",
+      "sha256": "049ca0e9c1d5df586a11f1c9164b6648fd13d4cd4c59b40dc6669597f8153e90"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2021_MOV1_MIN.json",
+      "sha256": "aa5dffc512e9d36cd1c63f8287d33119fa57fdb9167178eacfd16aff055c4a3f"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2022_C0.json",
+      "sha256": "ffc086f804108124062f175fa9b4f77b9023b547e6ec91650ed19a083588782b"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2022_C1.json",
+      "sha256": "5d4d792ced54083e65e4381b888cb3970b32d40527f780db73ef9383dac81163"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2022_MOV1_FULL.json",
+      "sha256": "a64bd7a2b535e61306ffb660312432cd49d0d48b6b2c010d1c803203e16992ac"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2022_MOV1_MIN.json",
+      "sha256": "185d13ee658b736cfea93be89ce952832b69fdc849ec3903313ce24035ecbc86"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2023_C0.json",
+      "sha256": "b0ff27b33f55458e217985679f2250ed1a09d142e069414809636f5f4ad222ef"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2023_C1.json",
+      "sha256": "2f1e38ed0df064f90cdfdaa863fcee3a8a02460b1bbb6d2d91d6db16d5d3a456"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2023_MOV1_FULL.json",
+      "sha256": "dd548a3834c30e2199f52539d2085e950a18ed29b44c188998b8b56283a3bd2c"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2023_MOV1_MIN.json",
+      "sha256": "10090e34a3507ca60aaf791ec5e3bade89093e0bbf84ebd07c9dff5460890140"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2024_C0.json",
+      "sha256": "8dfb35bcd461363d630cb18f4561013d1926f5946ec4aded36426fcaea0bc076"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2024_C1.json",
+      "sha256": "4a9121ec3c6f819d5343f853f822da779db57950e2309be47d392922665d6752"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2024_MOV1_FULL.json",
+      "sha256": "645de11544a63715f33060ca893ebfbd0bd4ce9d820968bd3f4fc12a9343cb83"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2024_MOV1_MIN.json",
+      "sha256": "334745587369968b5370b18c49ec83a40a0fc270e46a8424b0821d4d55c72490"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2025_C0.json",
+      "sha256": "88d3b50b1ce974efbd3a831ec5ba0bbc6cf3bfed4cf505b5be1bfc89e47ff54f"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2025_C1.json",
+      "sha256": "5a67bd3e0b745a1bce2c047d58a0701bc6775883de05e4483975f4355d8d5327"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2025_MOV1_FULL.json",
+      "sha256": "47519f9efd0d8716ea4d60f13ff25b1ba8dc959c4dfe84e70e1cdef6eef9bfce"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2025_MOV1_MIN.json",
+      "sha256": "b5d13608a1ae4f1b3202960c19cffd6c2eef0bd05d53f83cf991bcf23abf7223"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2026_C0.json",
+      "sha256": "d38a4705341356fc63569ad5ffee366a7161e004d3f9eb891d20e8852497e722"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2026_C1.json",
+      "sha256": "4d73815a407f74e1e12083ad26f744779c6d77025bbbb2efe6635bd4eebc755e"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2026_MOV1_FULL.json",
+      "sha256": "ff0d95640f9c40e4f45cfd1e94232547f08cc721a83a9cebbb10958ec5931359"
+    },
+    {
+      "path": "models/mov1/run_v1/MODELS/2026_MOV1_MIN.json",
+      "sha256": "33263007b9186d6bc4272e2334c5e796be70e46a0d3010d1ccec39c3636599e9"
+    },
+    {
+      "path": "models/mov1/run_v1/MOV1_KO_VS_SUBMISSION_GIVEN_FINISH_V1_COMPLETE.json",
+      "sha256": "300d85015259bdd3e07b93263bb97f768dc1751f9437e2aff8436ac666c1f760"
+    },
+    {
+      "path": "models/mov1/run_v1/MOV1_KO_VS_SUBMISSION_GIVEN_FINISH_V1_REPORT.md",
+      "sha256": "cf450914c73a84c2b5287f87c4a65ab8becbfcbfd0082869ecab388aaf8d8d00"
+    },
+    {
+      "path": "models/mov1/run_v1/PATHWAY_DECOMPOSITION_REPORT.md",
+      "sha256": "165997948c9366f3e14404c1462d3459bfab9a4a4e746bd5fd0f436f450e3e9d"
+    },
+    {
+      "path": "models/mov1/run_v1/README.md",
+      "sha256": "fd9c7cd46c9bdfa056664960bc488a381b060a73d93a2215760a06297b058560"
+    },
+    {
+      "path": "models/mov1/run_v1/RUNTIME_VALIDATION.json",
+      "sha256": "7a48851ceb19b9886f252dd1f243a929a7a2dec2e60d7a6f09f3337b38116f40"
+    },
+    {
+      "path": "models/mov1/run_v1/RUN_MANIFEST.json",
+      "sha256": "e870d1ca13a63b520b846d07c2fb654d227b7fb553f18198a10d66df789ca200"
+    },
+    {
+      "path": "models/mov1/run_v1/SOURCE_HASHES.json",
+      "sha256": "8e1f71abee6bf58961ce92432f3683336013b7735c43b11d48cd2574d0c73d8a"
+    },
+    {
+      "path": "models/mov1/run_v1/TRAINING_AUDIT.json",
+      "sha256": "4735d57426622a964c8de364e4bc2020841a87b8a973f672d7317e79133e5920"
+    },
+    {
+      "path": "models/mov1/run_v1/WEIGHT_CLASS_CONDITIONAL_REPORT.md",
+      "sha256": "8a5e21578f754e23a4efd5b46bf0fdb7d19dec3e3d8c6234e3deb08fadb54b13"
+    },
+    {
+      "path": "models/mov1/run_v1/annual_comparisons.csv",
+      "sha256": "2952062b63c3b69399a1cdb5bcc446bff8a42c2fd7e893ece75069a22659d657"
+    },
+    {
+      "path": "models/mov1/run_v1/archetype_composition.csv",
+      "sha256": "4b9cb2d963de6202e61ac00478e663421e396fad493abb5658e6fc21dafa6d86"
+    },
+    {
+      "path": "models/mov1/run_v1/bootstrap_comparisons.json",
+      "sha256": "10fc5737e980df664d22d8881976a0bb63fdfa9d91a80add328d4080e96de7ce"
+    },
+    {
+      "path": "models/mov1/run_v1/coefficient_by_year.csv",
+      "sha256": "5c2b839ff2d1abbbfeece66adf0622537c7906d35c98c4f0f1a15c9152f364ef"
+    },
+    {
+      "path": "models/mov1/run_v1/coefficient_stability.csv",
+      "sha256": "5eb047cb4f5dd0cac70cff84a09d9c59c4a6395e1ad5daa4ebc61b7020161cf5"
+    },
+    {
+      "path": "models/mov1/run_v1/composed_oof_all_eligible.csv",
+      "sha256": "f824adf5a435ceacd185278a752c64303899284954c85f98e470d2b00325b973"
+    },
+    {
+      "path": "models/mov1/run_v1/conditional_annual_metrics.csv",
+      "sha256": "39bbd3c1e6b189bf13d5a85f222ccdc0ed29e659713355b065588018d6083566"
+    },
+    {
+      "path": "models/mov1/run_v1/conditional_metrics.json",
+      "sha256": "3014d19c9d94cefdb0e6239123d2e2bfd9906c32cf5f3a201e37a041a8c83468"
+    },
+    {
+      "path": "models/mov1/run_v1/conditional_oof_all_eligible.csv",
+      "sha256": "c85988fe5fcf64b5d1b4ad773d71a0816c5ad3b52fe859361f93feed173c2e8e"
+    },
+    {
+      "path": "models/mov1/run_v1/conditional_probability_buckets.csv",
+      "sha256": "6c41112f0c21997d2bf09504033d444109625309c0985a201ac561b160d7c31e"
+    },
+    {
+      "path": "models/mov1/run_v1/convergence_records.csv",
+      "sha256": "e1ebfd5e0df3400680492a68acc02b666868a1ecee860a8ae036d032898c4a59"
+    },
+    {
+      "path": "models/mov1/run_v1/environment-requirements.txt",
+      "sha256": "cec8e56ca5dced4c1e4195637e580505e7c7c817fcbcb00229855794218fb64c"
+    },
+    {
+      "path": "models/mov1/run_v1/missingness_and_unknown_category_coverage.csv",
+      "sha256": "0bec0e2c34f4318f0d0c4503575d6634dabc45cab5bb9fcb21be2db78ee7b633"
+    },
+    {
+      "path": "models/mov1/run_v1/multiclass_annual_metrics.csv",
+      "sha256": "80e21d67a32ed7bb3261743ab0e8b45be1e1e7abdb1fb4cf9c85ace1019217d0"
+    },
+    {
+      "path": "models/mov1/run_v1/node_error_decomposition.json",
+      "sha256": "e144b401810bbac656616085d19403edaf5ca715f730285e31c925be9a5ce94a"
+    },
+    {
+      "path": "models/mov1/run_v1/oof_C0.csv",
+      "sha256": "2849b15bf2e92a813c358189f12d0d2cfb9cd9d760a32c178a02177026080fb8"
+    },
+    {
+      "path": "models/mov1/run_v1/oof_C1.csv",
+      "sha256": "f88456ea4f92f30bb141a6bcdb999199d7f69a40dd4f170214b01d592b6cf80f"
+    },
+    {
+      "path": "models/mov1/run_v1/oof_MOV1_FULL.csv",
+      "sha256": "09c67341350136cb00e8b502c38a9995b6c45e09d79396add753c076e75b3380"
+    },
+    {
+      "path": "models/mov1/run_v1/oof_MOV1_MIN.csv",
+      "sha256": "f8841d5007d0dec1000ed3c93a1d397428b2e5668cfdeedca6d3afc7fe4f2b3a"
+    },
+    {
+      "path": "models/mov1/run_v1/oof_S0_composed.csv",
+      "sha256": "57c63f47da496cd414db5b4f0cdb7662cdfacf029659b518dfe5f14a1834849d"
+    },
+    {
+      "path": "models/mov1/run_v1/oof_S1_composed.csv",
+      "sha256": "a65be038c40ba23ae4dee4b966ac1d0d17ca7cc3d864b061f3c4c5d96cf40666"
+    },
+    {
+      "path": "models/mov1/run_v1/oof_S2_composed.csv",
+      "sha256": "1e306436e0f2b877d79a5784f27fa9a127f70787c64684a646503271973c0780"
+    },
+    {
+      "path": "models/mov1/run_v1/oof_S3_composed.csv",
+      "sha256": "9ac522022da0745b753ae82aabdabfc5b7f2723230c57fa07dfafcfbeea3b1fe"
+    },
+    {
+      "path": "models/mov1/run_v1/selected_C_by_surface_year.csv",
+      "sha256": "2a2fce63b38ee6cb27b5cdcc14ee40adc44499c865e68ac3838f9e5a1f374f25"
+    },
+    {
+      "path": "models/mov1/run_v1/swap_invariance_records.csv",
+      "sha256": "31ecb1af4cd82df5240e9c2f8a49b1dea1493b77f8b3095edbb4f09cbed34925"
+    },
+    {
+      "path": "models/mov1/run_v1/terrain_comparisons.csv",
+      "sha256": "86ef4a9306523eb59f63fb8e55c342d3841aec530b321990b439afaeb60424d1"
+    },
+    {
+      "path": "models/mov1/run_v1/terrain_performance.csv",
+      "sha256": "ad2f203770f1d941df7419658894ceed4f40e11051666eaeb53d8494a8e22644"
+    },
+    {
+      "path": "models/mov1/run_v1/three_way_metrics.json",
+      "sha256": "704c2c1dcbc675bf0c370055011cc80c88bc4fbfcfdce5fc6953d94ce3d0c2dd"
+    },
+    {
+      "path": "models/mov1/run_v1/weight_class_archetype_composition.csv",
+      "sha256": "fce88a488dacad15affc07d253e0db633e95740fec0048f7ab83b15d1c6f978c"
+    },
+    {
+      "path": "models/mov1/run_v1/weight_class_method_composition.csv",
+      "sha256": "7e673a5f211d42d24cb2b4ced9f82f9422089ea44036e708d42eaa4d05446bb1"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/CONTRACT_INPUT_CHECKS.json",
+      "sha256": "34d8773e65e93c274357c76566cc5f4889d111178952d0ab0ef9e7c3a9e5a29a"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/ENVIRONMENT_LOCK.json",
+      "sha256": "83331903684def33b357f9adbceda0144fac2c1169a9328bd02653756002b672"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/EVALUATION_TABLES.tar.xz",
+      "sha256": "076256a6fa973766ab7f987f99837a791f741fb6339ab6ca9e496924f8a3db5b"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/EVALUATION_TABLE_MANIFEST.json",
+      "sha256": "2b1cd3e788d0eb798ead1fff9f01b3a740bee5a0c6a9f0942d2803761a35ced7"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/EXECUTION_COMPLETE.json",
+      "sha256": "1b29c00bd3c3de2e1073e95308172c28d3d72aa941e4c1ed706bd390016f13a6"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/FAMILY_SELECTION_REPORT.json",
+      "sha256": "e27087d9e78a89085b2fd3b11c4f771514caae3683e7923e0bc46b3da6983a6c"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/FINAL_REPORT.md",
+      "sha256": "79bd9d4cf5a33e73007062eea1d32fd13b37038cbb7fd694fee96e4763a8115a"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/FIT_BUDGET.json",
+      "sha256": "c046d925faa48154d47cdc92835264b0367dd5ddcedde40353fb8414aaffb327"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/FIT_LEDGER.json",
+      "sha256": "f9acfe177be40a1a1f876a7e6bc22355388d9fb7a3e01320d6e97d6a611905e8"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/FOLD_IDENTITIES.json",
+      "sha256": "cf85f2879ad5aa029d7c41e27c0d9c5798a440f9c6a83295b61bfbfdac58fb08"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/HYPOTHESIS_SPLIT_CO_USE.json",
+      "sha256": "c32592043dc72781b34f6d05ce3ab6b86b30ffee697cc1f2c633bfabfee852d0"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/IMPORTANCE.json",
+      "sha256": "3530501b12916386577ae4b82a77c89f4509c723bdf993ad10229cc4a9933829"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/INNER_CANDIDATES.json",
+      "sha256": "27a10f437e92cc08b9bec44cc450a9f5f9a32109f928540420ca315cf80a7ef0"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/INPUT_VALIDATION.json",
+      "sha256": "9f858b2a6bfd591979704b9ed06b66a5558057aefb5fbbf8c3125d35249162ee"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/INTERPRETATION.json",
+      "sha256": "9118bf75227f09440e8a0ee6a0580f260192d4b23680199bfe08aa9976dad182"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/MOV1_BOOSTED_TREE_CHALLENGER_V1_COMPLETE.json",
+      "sha256": "6fc4c8052f811eb0bab805c29420713648f91a5a7c11771addb3a3078b57f9d7"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/NATIVE_MODELS.tar.xz.part000",
+      "sha256": "a517ecb0a082df1b46580f8528c98d52422b8c2644a9031ddfbd9f38f6a3b72f"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/NATIVE_MODELS.tar.xz.part001",
+      "sha256": "a1e7d30f6661df3cc2c336f347440fadfb5756fdbbd2b27dffe34f85608c8686"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/NATIVE_MODELS.tar.xz.part002",
+      "sha256": "99d79a95ab4d11e54cf29c2b7131a62052a54c0087435cf09b914b672057656a"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/NATIVE_MODELS.tar.xz.part003",
+      "sha256": "51109f845a487a882f0ca24ef612e1bd727710e50d174814c38eb630a3dc72c5"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/NATIVE_MODEL_MANIFEST.json",
+      "sha256": "069cbf1348a6bb9453be2f3eeb65fa4cad103760e54dab88acfef2584fe3cac2"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/PACKAGED_RUN_VERIFICATION.json",
+      "sha256": "bf7d4587909f658b8697d7e3890d43c33afd025515c5bfadd57252f308959682"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/PREPROCESSING.json",
+      "sha256": "2f04a91d5b268538f335f0d8e4568003dd1eb1c38205cce878af64b6506afbc9"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/REPRODUCIBILITY.json",
+      "sha256": "32f9cbf6b521df2b4842ada19bdacb4e23b53a9fd2817a4e209b028f6339b172"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/RUNTIME_VALIDATION.json",
+      "sha256": "fab427b4a84ec4fa18fb976237f2b2f3b9617bcb4c3488e057d1d900b0a2868e"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/RUN_MANIFEST.json",
+      "sha256": "422a4c3d149de1bdb1fdd06fce4901540e278ab3ed75a4d6e7787e186a96b4e7"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/SAVED_RUN_VERIFICATION.json",
+      "sha256": "bf7d4587909f658b8697d7e3890d43c33afd025515c5bfadd57252f308959682"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/SELECTED_BY_YEAR.json",
+      "sha256": "992790404463809162718abbfe452ea4c3c612144e078050468c62a385c7a09f"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/SHADOW_FAMILY_REPORT.json",
+      "sha256": "b01fcab4d926093745da494152027352a7838fee82078c1e985d3480b806896e"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/composed_metrics.json",
+      "sha256": "e9736e903a1faeacfaf4a01d677ce00b91a3edf85c7e724348b0fa5329b58bc0"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/conditional_metrics.json",
+      "sha256": "d60263a02389423e0f3dbbe9783782e54e86a5d1555e2496e3e1d4b791d6d9e8"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/paired_uncertainty.json",
+      "sha256": "c15623a96ed78f6e1da419f4944a08fef30b773abd3cea094289b2a410d8690a"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/panel_uncertainty.json",
+      "sha256": "19303564f485c4d47db01b374e29ba68e1f8afa2b108f6552b928baa73a9fbc5"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/run_v1/pathway_decomposition.json",
+      "sha256": "9b735140dcf67175f4e7774e2a07b67dc9908013d4cd6852b2f20480425e8fd1"
+    },
+    {
+      "path": ".github/workflows/mov1-boosted-contract-v1.yml",
+      "sha256": "c7cb3831c826f31200e695185292fab66fed4ab6e325e04eec95e65d5859af10"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/ENVIRONMENT_LOCK.json",
+      "sha256": "d29198c0118730ef645effbd4dff39347cc8d9e22dd36a978e09f3e161ccf059"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/MOV1_BOOSTED_TREE_CHALLENGER_V1_CONTRACT.md",
+      "sha256": "43b298bb78eac05e067305b2c9a92e36a6017eadd640be11201e5f93c9f7c595"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/README.md",
+      "sha256": "4f42736ae8f78e3f47dd11cb38b39679e405bff5fb2c3247bbc3cbbeaa198739"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/VALIDATION_EVIDENCE.json",
+      "sha256": "34d8773e65e93c274357c76566cc5f4889d111178952d0ab0ef9e7c3a9e5a29a"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/authoritative_baseline_identity.json",
+      "sha256": "2e084ba8b787e44f3bc8f4b603f463c097078dfc2232bc206c53ec7fb8e7d860"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/cat_candidates.json",
+      "sha256": "5171c0b3a3dd2fd047a2f5d8321a7a475b900e734641a7af1aa5febcf70bc008"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/chronological_fold_plan.json",
+      "sha256": "cf85f2879ad5aa029d7c41e27c0d9c5798a440f9c6a83295b61bfbfdac58fb08"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/common_input_representation.json",
+      "sha256": "cf10b9eb9bb838c1c0863406b958e3cf30a12e05a198070bcee7060c86803790"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/comparison_plan.json",
+      "sha256": "785890677153d02cc3ac1d2ad0f3d31d373b6f97fd80b8af51475176c5201585"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/conditional_metrics.json",
+      "sha256": "0e37473037c3b617c8f9ae1ed9ed30502bd694f9e37b4c3f6c32fe074058c217"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/conditional_probability_buckets.json",
+      "sha256": "1bf340700ad6eda2f2a2a15bc21502c5b09d76e8788dcd07eac75d52181fd579"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/early_stopping.json",
+      "sha256": "a7d877818ef4fbe09ce2150fcf9fe1b64fc909e9cfa23226916fdd0d05826e6a"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/environment_specification.json",
+      "sha256": "f39c76a6a6fbcc4e9b20e127f6cf5ebb1a53e084a5c1d80e44ece9829d475375"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/evaluation_panels.json",
+      "sha256": "e76064d1daf09fce959291d2fd329d4b0dc39da44936403dea8996b15a665ae8"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/future_run_artifact_specification.json",
+      "sha256": "74885df98346055b85dd0c1e3f1173af7442e4959f3d7a475348225b38179da2"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/interpretability.json",
+      "sha256": "4cb915e40054e5f8177385cd95ba5b92fae179fe31ff74589141aa219d79b47d"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/interpretation_rules.json",
+      "sha256": "ca9ba0096e206f052f37e5c940709d12d903e32f1659f1c9ed1c11c37f5a47ce"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/lgbm_candidates.json",
+      "sha256": "044198d1aebaf1f3cffb8ce4b54d43174ae569937868905a967d6a52f7bd2451"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/model_family_registry.json",
+      "sha256": "f185b2567810b645b241da0cdad95c6690ff3d95cc3df991df4eba1ae264f3e4"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/mov1_min_allowlist.json",
+      "sha256": "f0eb5338ccdd00b8b18da9337751139a79ae7865b47d6e5c87fb68aa3f509fc0"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/nested_family_selection.json",
+      "sha256": "e9da1665d29493ceffc25414f0dabba9c8de14877d31af82c9556cc1e9099129"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/reproduction.json",
+      "sha256": "082bf1919f961b0e375f2733c30da07b75c140e5499a746bfcb1eb36c7475beb"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/requirements-lock.txt",
+      "sha256": "f67db0321424a228ad50a77dd5f3accd87a85abde1e4c516ead4a9df168de772"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/requirements.in",
+      "sha256": "3fdf5b22eb89e27842bd5b59a1f951d96d310c9cf72589a4ae0887c0e7d69135"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/search_budget.json",
+      "sha256": "dc46f2fdd53856bb77ab72a8ec7fe16e121b88ba4cec95536bf8cce0ad638642"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/source_identities.json",
+      "sha256": "df6f2e92371a53808bd66b783537c834babba7622f4405dce494de6d33a7ac9e"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/target_population.json",
+      "sha256": "402ab25522df726360e7e4d85658bc136e224ae9f569acc8fd8a76f7ab8f975b"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/terrain_archetype_evaluation.json",
+      "sha256": "73f2429c2cecdf98b2ff36f28ee436e66097d75d91e37d2429ab7a543f0a7c6f"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/uncertainty_persistence.json",
+      "sha256": "a75f69912a8b1f27f5a1e33b7a833ced41e8e3bb76df95c873cdc00361bb6ef5"
+    },
+    {
+      "path": "models/challengers/mov1_boosted_v1/xgb_candidates.json",
+      "sha256": "853cd274c929dc3c6a5dc9f4e0a43c8b8465d9b961f863299533f5c129063761"
+    },
+    {
+      "path": "tools/contracts/validate_mov1_boosted_contract_v1.py",
+      "sha256": "26656e45b7a18307945a98089f0f411520d69bfa681e8223975a698d750df20c"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/AUDIT_CONTRACT_V1.json",
+      "sha256": "352d73c0e9a2f9d3b3ad5970f9b5e11ece393c4d1da90f1d839d856a914d6064"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/FINISH_METHOD_TARGET_STRUCTURE_AUDIT_V1_REPORT.md",
+      "sha256": "a8b87bd8874bfa01fd07f9994d0fddc1969f347b17b94d94aa86ba4d8d0a7df8"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/IMPLICATIONS_FOR_HYBRID_SIMULATOR.md",
+      "sha256": "620cf40faff26908e2ee6a79ed131cf4b1ed841d8fc3f792e70613a7aebf971e"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/IMPLICATIONS_FOR_MOV1_V1.md",
+      "sha256": "bdb8e5f5b58c7f05cde0b219e401bcf3ccc08bbfe293519d010da20fce8391ff"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/IMPLICATIONS_FOR_PARTIAL_POOLING.md",
+      "sha256": "4b18fabe6f113ae4def7b9b53ac22f94b21859375d70298ccbb38bf4406994b2"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/POPULATION_AND_EXECUTION.json",
+      "sha256": "5fb7ebb3602ad6d4d6c439f9b82e2503ec2e21dee88e1cee0b264afb6d03f4f3"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/README.md",
+      "sha256": "9e9ef57df39dae2a4f9c8129f315db2e8be24a8cfa7c257990553ecbb33731ff"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/SAMPLE_GOVERNANCE_METADATA.json",
+      "sha256": "4caceb8f18bcecb45027d7480d3fe5f50743d323948501b0e13956cb28542d64"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/archetype_era.csv",
+      "sha256": "a3614da77b55542af9d0994e6677fef57196f268ee3aab89491d63c31a993c34"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/archetype_rounds.csv",
+      "sha256": "59ff1e30e72862e4da1122548615762f5cfbf63ecd0ecd6164fee995497ca961"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/canonical_weight_class.csv",
+      "sha256": "2b4a534af9d827d7172ac0ea3922310b8036adf9144ff81f3d0b2ac3c1d7c61a"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/excluded_fights.csv",
+      "sha256": "12ca0ca6843538cd58812ab3113d0466fac1b7f1326507404fadb207b9cff03d"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/grappling_pathway.csv",
+      "sha256": "004dd65ffbb2bcbae7a1a8fb62525af4494f8c8c3efe6ab98e8ba62d1892b0a7"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/mixed_survival_pathway.csv",
+      "sha256": "24e3ad06edb24c4c453c87b0212a402a33230d009d439f70648bb4d75ba6f3a7"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/pathway_standardization_strata.csv.gz",
+      "sha256": "0f1e3014159b47d71b4273763fa45258f29c6de1a622e97eda67fb22e5d76324"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/pathway_standardized_contrasts.csv",
+      "sha256": "25c80ec598093ec6c3b212c3e434bb739a1ec6a9344c728f1c07046546e4c40e"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/pathway_standardized_era.csv",
+      "sha256": "3f1fa06a3a86c8b835895952b69d14d9ea1b9d3fc4c608496b08cc8c0afd09dd"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/pathway_standardized_rounds.csv",
+      "sha256": "27a9202e120942e0959c5ff88a1c5781d8cd8c2b27ddbf448d1e0152a1e19610"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/pathway_weight_composition.csv.gz",
+      "sha256": "cd1c4d9627066307dd1e87be6217241c6af187b417cb25c1cb79b2a40245d292"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/population_manifest.csv.gz",
+      "sha256": "49cccb856e53893b16c9d542f9e91ff34b87561fffda2ead5c36a650792d92e0"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/state_era.csv.gz",
+      "sha256": "34fad23771897a264b345f2b93873e36390f1f44a1cf48e4cbeaa8d779bc3e58"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/state_pathways.csv",
+      "sha256": "e77b2facab60963e0ae90783a6a0b70e298de4a2230f9c67048abcc86857e929"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/state_rounds.csv.gz",
+      "sha256": "2cecfd6dd6de3f52ff0a134334e375873a1afbf7387acda8382e8f226aed4329"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/striking_pathway.csv",
+      "sha256": "1a02609682d307d6717c30c7183b132c0d8bbeb32b4e787ff73c001471f147c7"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/terrain_pathways.csv",
+      "sha256": "467a58bed53344365faa4f845566572596c174f70852d8be64a15f661f7cfef6"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/weight_class_archetype.csv.gz",
+      "sha256": "b098082b05a731e03871ebf2be6469381ca15d22de6716b6355d8224c9b908b6"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/weight_class_era.csv",
+      "sha256": "8525eeb5f2e95a4e329fcd79ed08e03f5096475e29415fe62d4038ca29c5aaaa"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/weight_class_era_rounds.csv",
+      "sha256": "9d3487456a7b2fe0ceafc0f77f3db95d2c9edf54ebb503c19327150d89eca7ce"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/weight_class_finish_method.csv",
+      "sha256": "e90d22818275ca2cfdb733cc1120ade07c45e1035e9f2c2f34c89878669bb9bd"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/weight_class_rounds.csv",
+      "sha256": "5c893f98f74f2695e968e4cdfd4063f9b0dfb5d5aa338848adfb4b0122c95133"
+    },
+    {
+      "path": "governance/finish_method_target_structure_v1/weight_class_terrain.csv.gz",
+      "sha256": "7c8fd9dc57c2444ab3370f855294dee6dd94c54536d3c8af32515ce034a2dc00"
+    },
+    {
+      "path": "data/canonical/v0/events.csv",
+      "sha256": "7bd9d33111fab3fd2506eb651a7870b9de2ee38d3db739fe58ac0ee0ad26261e"
+    },
+    {
+      "path": "data/canonical/v0/fights.csv",
+      "sha256": "b972ebb0c6b1fdfdd512c8d6004129f7e0620fe6759ca8acfa1d2f1184029e76"
+    },
+    {
+      "path": "docs/model_diagnostics/mov0_conditional_feature_interaction_archetype_v1/feature_state_thresholds.json",
+      "sha256": "066d525e3660fbbee9accba47ea3b56468179e6eff6d78d4aebabe7e45c8daad"
+    },
+    {
+      "path": "governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz",
+      "sha256": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2"
+    },
+    {
+      "path": "models/challengers/mov0_hierarchical_v1/weight_class_map.json",
+      "sha256": "9ad4d7f701dcab2453b3ed8fe4aa500a07aabe027d7f0e951b823a8a6f7fb92e"
+    },
+    {
+      "path": "models/mov0/target_contract_v1.json",
+      "sha256": "3e30bef2eb9b766de82c338c88f8b64a258ec0508907a6d9dd176df571250adc"
+    },
+    {
+      "path": "tools/diagnostics/run_mov0_conditional_feature_interaction_archetype_v1.py",
+      "sha256": "8e517481e34f402d6457968f4a6838351ba799a4b756115196ccfd6d07f2be50"
+    }
+  ],
+  "corrected_F02_and_MOV0_verified": true,
+  "decision_probabilities_identical": true,
+  "evaluation_archive_members_checked": 16,
+  "exact_fight_and_metadata_alignment": true,
+  "finish_population_N": 2822,
+  "immutable_terrain_and_archetype_membership": true,
+  "main": "4ec01227a4a35872eed51ce7ce67c45b02e46ebd",
+  "metric_runtime": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "python": "3.12.14"
+  },
+  "native_archive_members_checked": 3987,
+  "new_predictions_generated": false,
+  "outer_N_per_model": 4260,
+  "outer_finish_N_per_model": 2115,
+  "population_N": 5658,
+  "predictive_fits": 0,
+  "recorded_aggregate_metrics_reproduced": true,
+  "required_manifests": {
+    "models/challengers/mov1_boosted_v1/CONTRACT_MANIFEST.json": "4593dc0056455356ea9e28191acd2fda109124ca9e18ccb07c09319e99a2849b",
+    "models/challengers/mov1_boosted_v1/run_v1/EVIDENCE_MANIFEST.json": "2b6c223e31000a0ff2c4c35c8c82006c92767b49e42fd080ef012459602fe410",
+    "models/mov1/run_v1/EVIDENCE_MANIFEST.json": "cb21ff773489f23f4583a6487942e3edb05c817493aa04eff71a470f7b1086c6"
+  },
+  "source_head": "859be9fad8a1a95cf35f3e5bb99107205734ddce",
+  "source_members_checked": 189,
+  "source_pr": 121,
+  "source_state": "open draft; unchanged at audit start",
+  "status": "SOURCE_AND_EVIDENCE_IDENTITIES_PASSED"
+}

@@ -1,0 +1,10 @@
+family,kind,covered_outer_years
+CAT,CAT_PredictionValuesChange,"2021,2023,2024"
+CAT,held_out_permutation_log_loss,"2021,2023,2024"
+LGBM,LGBM_gain,"2020,2022,2025,2026"
+LGBM,LGBM_split,"2020,2022,2025,2026"
+LGBM,held_out_permutation_log_loss,"2020,2022,2025,2026"
+XGB,XGB_gain,"2018,2019"
+XGB,XGB_total_gain,"2018,2019"
+XGB,XGB_weight,"2018,2019"
+XGB,held_out_permutation_log_loss,"2018,2019"

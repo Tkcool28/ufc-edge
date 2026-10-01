@@ -1,0 +1,13 @@
+pathway,family,years_with_reportable_loss,LL_favorable_years,Brier_favorable_years,other_years_retained_below_gate
+A1,XGB,9,5,5,0
+A1,LGBM,9,5,5,0
+A1,CAT,9,5,5,0
+A4,XGB,9,7,7,0
+A4,LGBM,9,7,7,0
+A4,CAT,9,3,4,0
+B3,XGB,6,3,3,3
+B3,LGBM,6,4,4,3
+B3,CAT,6,4,4,3
+B5,XGB,8,6,4,1
+B5,LGBM,8,5,4,1
+B5,CAT,8,5,5,1
