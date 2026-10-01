@@ -1,0 +1,37 @@
+name: MOV1 PR123 Directional Audit (zero fits)
+on:
+  pull_request:
+    paths:
+      - 'docs/model_diagnostics/mov1_directional_representation_v1/**'
+      - 'tests/diagnostics/test_mov1_directional_collision_v1.py'
+      - 'tools/diagnostics/run_mov1_directional_representation_v1.py'
+      - '.github/workflows/mov1-directional-audit-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 pytest==8.3.5
+      - name: Outcome-free synthetic collision regression
+        run: python -m pytest -q tests/diagnostics/test_mov1_directional_collision_v1.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify corrected F02 SHA and run outcome-blind empirical gates
+        run: python tools/diagnostics/run_mov1_directional_representation_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet'
+      - name: Whitespace check
+        run: git diff HEAD^ HEAD --check
