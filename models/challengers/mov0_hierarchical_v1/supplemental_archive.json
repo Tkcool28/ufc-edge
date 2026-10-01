@@ -1,0 +1,7 @@
+{
+  "filename": "MOV0_HIERARCHICAL_V1_PARTIAL_POSTERIORS_AND_INPUTS.zip",
+  "sha256": "07a8099179e561ac970bad03db0486bde510462335ad9f7d037d457f246bf63b",
+  "bytes": 53685072,
+  "contents": "partial posterior draws, fit diagnostics/predictions, pinned corrected F02 table/summary, frozen MIN OOF, specification and blocker report",
+  "status": "BLOCKED_CONVERGENCE; not complete scientific evidence"
+}
