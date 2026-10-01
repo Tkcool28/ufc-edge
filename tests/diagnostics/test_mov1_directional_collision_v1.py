@@ -7,7 +7,7 @@ def symmetric(x):
 def directional(p,v):
     return p[0]*v[1]+p[1]*v[0]
 
-def run():
+def test_directional_collision():
     pressure=(.9,.1)
     vuln_A=(.1,.9)
     vuln_B=(.9,.1)
@@ -22,4 +22,4 @@ def run():
         assert isclose(directional(p,v),directional(p[::-1],v[::-1]))
     return 'PASS: same marginal mean/absolute gaps, different cross-fighter SUB alignment (0.82 vs 0.18)'
 
-if __name__=='__main__': print(run())
+if __name__=='__main__': print(test_directional_collision())
