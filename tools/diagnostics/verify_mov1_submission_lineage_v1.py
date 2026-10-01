@@ -40,12 +40,14 @@ def run(path):
   if fid not in fights.index:continue
   bout=fights.loc[fid]; payload={k:bout.get(k) for k in ['fight_id','promotion','method','finish_round','finish_time_sec','scheduled_rounds']}
   elapsed=infer_round_exposure(payload,bout.event_date,rnd,registry)
-  if elapsed is None or elapsed<=0:continue
-  minutes=elapsed/60.
+  # Attempt-ratio defense uses observed compatible rounds even if elapsed exposure is unavailable.
+  # Only per-15 rate families require governed positive elapsed minutes.
+  minutes=elapsed/60. if elapsed is not None and elapsed>0 else None
   a,b=bout.fighter_a_id,bout.fighter_b_id
   opp=b if who==a else a if who==b else None
   other=fighters.get((fid,opp,rnd)) if opp else None
   for family,cs in TARGETS.items():
+   if family!='takedown_conversion' and minutes is None:continue
    for component,field,side,mult in cs:
     source=row if side=='self' else other
     if source is None:continue
