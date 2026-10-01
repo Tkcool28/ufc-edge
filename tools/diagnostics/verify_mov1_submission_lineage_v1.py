@@ -95,4 +95,5 @@ def run(path):
  return {'status':'PASS','F02_sha256':hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest(),'independent_reconstructions':len(checks),'target_fights':len(chosen),'max_absolute_numeric_error':maxerr,'strict_prior_no_same_date':True,'zero_history_prior_withheld':True,'sources':'canonical fighter_round_stats + canonical fight dates + frozen elapsed registry; manual sums and shrinkage','rows':checks}
 if __name__=='__main__':
  a=argparse.ArgumentParser();a.add_argument('--f02',required=True);a.add_argument('--output');q=a.parse_args();print('PR123_LINEAGE_BEGIN');e=run(q.f02);print(json.dumps(e,sort_keys=True,allow_nan=False));print('PR123_LINEAGE_END')
- if q.output:\n  dest=pathlib.Path(q.output);dest.mkdir(parents=True,exist_ok=True);(dest/'SUBMISSION_TAKEDOWN_INDEPENDENT_LINEAGE.json').write_text(json.dumps(e,sort_keys=True,indent=2,allow_nan=False)+'\n')
+ if q.output:
+  dest=pathlib.Path(q.output);dest.mkdir(parents=True,exist_ok=True);(dest/'SUBMISSION_TAKEDOWN_INDEPENDENT_LINEAGE.json').write_text(json.dumps(e,sort_keys=True,indent=2,allow_nan=False)+chr(10))
