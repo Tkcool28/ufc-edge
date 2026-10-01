@@ -1,0 +1,465 @@
+{
+  "additional_fits": 0,
+  "rows": [
+    {
+      "family": "XGB",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2018,
+      "tree_count": 42,
+      "trees_with_both_on_a_path_or_oblivious_tree": 1
+    },
+    {
+      "family": "XGB",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2018,
+      "tree_count": 42,
+      "trees_with_both_on_a_path_or_oblivious_tree": 3
+    },
+    {
+      "family": "XGB",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2018,
+      "tree_count": 42,
+      "trees_with_both_on_a_path_or_oblivious_tree": 0
+    },
+    {
+      "family": "XGB",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2019,
+      "tree_count": 57,
+      "trees_with_both_on_a_path_or_oblivious_tree": 1
+    },
+    {
+      "family": "XGB",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2019,
+      "tree_count": 57,
+      "trees_with_both_on_a_path_or_oblivious_tree": 3
+    },
+    {
+      "family": "XGB",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2019,
+      "tree_count": 57,
+      "trees_with_both_on_a_path_or_oblivious_tree": 2
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2020,
+      "tree_count": 56,
+      "trees_with_both_on_a_path_or_oblivious_tree": 0
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2020,
+      "tree_count": 56,
+      "trees_with_both_on_a_path_or_oblivious_tree": 4
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2020,
+      "tree_count": 56,
+      "trees_with_both_on_a_path_or_oblivious_tree": 1
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2021,
+      "tree_count": 152,
+      "trees_with_both_on_a_path_or_oblivious_tree": 3
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2021,
+      "tree_count": 152,
+      "trees_with_both_on_a_path_or_oblivious_tree": 10
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2021,
+      "tree_count": 152,
+      "trees_with_both_on_a_path_or_oblivious_tree": 1
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2022,
+      "tree_count": 36,
+      "trees_with_both_on_a_path_or_oblivious_tree": 4
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2022,
+      "tree_count": 36,
+      "trees_with_both_on_a_path_or_oblivious_tree": 8
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2022,
+      "tree_count": 36,
+      "trees_with_both_on_a_path_or_oblivious_tree": 0
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2023,
+      "tree_count": 33,
+      "trees_with_both_on_a_path_or_oblivious_tree": 4
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2023,
+      "tree_count": 33,
+      "trees_with_both_on_a_path_or_oblivious_tree": 13
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2023,
+      "tree_count": 33,
+      "trees_with_both_on_a_path_or_oblivious_tree": 4
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2024,
+      "tree_count": 101,
+      "trees_with_both_on_a_path_or_oblivious_tree": 4
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2024,
+      "tree_count": 101,
+      "trees_with_both_on_a_path_or_oblivious_tree": 7
+    },
+    {
+      "family": "CAT",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2024,
+      "tree_count": 101,
+      "trees_with_both_on_a_path_or_oblivious_tree": 5
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2025,
+      "tree_count": 40,
+      "trees_with_both_on_a_path_or_oblivious_tree": 1
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2025,
+      "tree_count": 40,
+      "trees_with_both_on_a_path_or_oblivious_tree": 4
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2025,
+      "tree_count": 40,
+      "trees_with_both_on_a_path_or_oblivious_tree": 1
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+        "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+        "fs__takedown_conversion__success__career__shrunk::mean",
+        "fs__takedown_conversion__success__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_TD_access",
+      "outer_year": 2026,
+      "tree_count": 52,
+      "trees_with_both_on_a_path_or_oblivious_tree": 5
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+        "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+        "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "submission_pressure_x_vulnerability",
+      "outer_year": 2026,
+      "tree_count": 52,
+      "trees_with_both_on_a_path_or_oblivious_tree": 11
+    },
+    {
+      "family": "LGBM",
+      "group_A": [
+        "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference"
+      ],
+      "group_B": [
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+        "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+        "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference"
+      ],
+      "hypothesis": "KD_creation_x_vulnerability",
+      "outer_year": 2026,
+      "tree_count": 52,
+      "trees_with_both_on_a_path_or_oblivious_tree": 4
+    }
+  ],
+  "scope": "Only preregistered hypotheses; native selected outer models. XGB/LGBM root-to-leaf paths, CAT oblivious-tree split sets. Co-use is descriptive structure, not causal evidence or a measured interaction effect. No outcome-selected search, pruning or refitting."
+}

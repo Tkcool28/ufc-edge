@@ -1,0 +1,12 @@
+{
+  "composed_classification": "INCONCLUSIVE",
+  "conditional_classification": "INCONCLUSIVE",
+  "fit_count": 1008,
+  "implementation_freeze": "68d1c73a82ec9ae7e7374251b882b9e17179b1c4",
+  "implementation_gates": "PASSED",
+  "input_identities": "PASSED",
+  "no_auto_merge": true,
+  "no_auto_promotion": true,
+  "saved_model_verification": "PASSED",
+  "status": "MOV1_BOOSTED_TREE_CHALLENGER_V1_COMPLETE"
+}

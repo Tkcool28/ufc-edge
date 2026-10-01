@@ -1,0 +1,157 @@
+{
+  "archive_member_manifests": [
+    "NATIVE_MODEL_MANIFEST.json",
+    "EVALUATION_TABLE_MANIFEST.json"
+  ],
+  "code_files": {
+    ".github/workflows/mov1-boosted-run-v1.yml": "df0dba587b72a6cfc2467082bd10d036c014cca994bad4956fd3aa38be3c3607",
+    "models/challengers/mov1_boosted_v1/implementation_v1.py": "a2764614263edd0f92f54f20f48dcbf619cc4cb3ee9d6082e2a9e55d97078f09",
+    "tests/experiments/test_mov1_boosted_v1.py": "054dbf645cd75a16a86a648cf26ce9ae314c0d9f59cfab0e032eb01f37939c2c",
+    "tools/diagnostics/mov1_boosted_split_hypotheses_v1.py": "e88e0073024c389f20f34da031ef46a52a836c8c0e794ad15eda87b1f2d24b8d",
+    "tools/experiments/run_mov1_boosted_v1.py": "8f9e90bcf90e9ee775c6766a925c620828b9ac9553f28eb25dc9e5c7c4c0b636",
+    "tools/experiments/verify_mov1_boosted_saved_v1.py": "597735e15beb7bfad577de8f8698d572e0829f5d80106f5cef291d2aa3fbeb04"
+  },
+  "contract_sha256": "4593dc0056455356ea9e28191acd2fda109124ca9e18ccb07c09319e99a2849b",
+  "files": {
+    "CONTRACT_INPUT_CHECKS.json": {
+      "bytes": 19363,
+      "sha256": "34d8773e65e93c274357c76566cc5f4889d111178952d0ab0ef9e7c3a9e5a29a"
+    },
+    "ENVIRONMENT_LOCK.json": {
+      "bytes": 2442,
+      "sha256": "83331903684def33b357f9adbceda0144fac2c1169a9328bd02653756002b672"
+    },
+    "EVALUATION_TABLES.tar.xz": {
+      "bytes": 1470776,
+      "sha256": "076256a6fa973766ab7f987f99837a791f741fb6339ab6ca9e496924f8a3db5b"
+    },
+    "EVALUATION_TABLE_MANIFEST.json": {
+      "bytes": 2357,
+      "sha256": "2b1cd3e788d0eb798ead1fff9f01b3a740bee5a0c6a9f0942d2803761a35ced7"
+    },
+    "EXECUTION_COMPLETE.json": {
+      "bytes": 85,
+      "sha256": "1b29c00bd3c3de2e1073e95308172c28d3d72aa941e4c1ed706bd390016f13a6"
+    },
+    "FAMILY_SELECTION_REPORT.json": {
+      "bytes": 12989,
+      "sha256": "e27087d9e78a89085b2fd3b11c4f771514caae3683e7923e0bc46b3da6983a6c"
+    },
+    "FINAL_REPORT.md": {
+      "bytes": 17908,
+      "sha256": "79bd9d4cf5a33e73007062eea1d32fd13b37038cbb7fd694fee96e4763a8115a"
+    },
+    "FIT_BUDGET.json": {
+      "bytes": 162,
+      "sha256": "c046d925faa48154d47cdc92835264b0367dd5ddcedde40353fb8414aaffb327"
+    },
+    "FIT_LEDGER.json": {
+      "bytes": 343114,
+      "sha256": "f9acfe177be40a1a1f876a7e6bc22355388d9fb7a3e01320d6e97d6a611905e8"
+    },
+    "FOLD_IDENTITIES.json": {
+      "bytes": 17595,
+      "sha256": "cf85f2879ad5aa029d7c41e27c0d9c5798a440f9c6a83295b61bfbfdac58fb08"
+    },
+    "HYPOTHESIS_SPLIT_CO_USE.json": {
+      "bytes": 20001,
+      "sha256": "c32592043dc72781b34f6d05ce3ab6b86b30ffee697cc1f2c633bfabfee852d0"
+    },
+    "IMPORTANCE.json": {
+      "bytes": 288542,
+      "sha256": "3530501b12916386577ae4b82a77c89f4509c723bdf993ad10229cc4a9933829"
+    },
+    "INNER_CANDIDATES.json": {
+      "bytes": 589404,
+      "sha256": "27a10f437e92cc08b9bec44cc450a9f5f9a32109f928540420ca315cf80a7ef0"
+    },
+    "INPUT_VALIDATION.json": {
+      "bytes": 1453,
+      "sha256": "9f858b2a6bfd591979704b9ed06b66a5558057aefb5fbbf8c3125d35249162ee"
+    },
+    "INTERPRETATION.json": {
+      "bytes": 403,
+      "sha256": "9118bf75227f09440e8a0ee6a0580f260192d4b23680199bfe08aa9976dad182"
+    },
+    "MOV1_BOOSTED_TREE_CHALLENGER_V1_COMPLETE.json": {
+      "bytes": 406,
+      "sha256": "6fc4c8052f811eb0bab805c29420713648f91a5a7c11771addb3a3078b57f9d7"
+    },
+    "NATIVE_MODELS.tar.xz.part000": {
+      "bytes": 3145728,
+      "sha256": "a517ecb0a082df1b46580f8528c98d52422b8c2644a9031ddfbd9f38f6a3b72f"
+    },
+    "NATIVE_MODELS.tar.xz.part001": {
+      "bytes": 3145728,
+      "sha256": "a1e7d30f6661df3cc2c336f347440fadfb5756fdbbd2b27dffe34f85608c8686"
+    },
+    "NATIVE_MODELS.tar.xz.part002": {
+      "bytes": 3145728,
+      "sha256": "99d79a95ab4d11e54cf29c2b7131a62052a54c0087435cf09b914b672057656a"
+    },
+    "NATIVE_MODELS.tar.xz.part003": {
+      "bytes": 1159788,
+      "sha256": "51109f845a487a882f0ca24ef612e1bd727710e50d174814c38eb630a3dc72c5"
+    },
+    "NATIVE_MODEL_MANIFEST.json": {
+      "bytes": 621993,
+      "sha256": "069cbf1348a6bb9453be2f3eeb65fa4cad103760e54dab88acfef2584fe3cac2"
+    },
+    "PACKAGED_RUN_VERIFICATION.json": {
+      "bytes": 261,
+      "sha256": "bf7d4587909f658b8697d7e3890d43c33afd025515c5bfadd57252f308959682"
+    },
+    "PREPROCESSING.json": {
+      "bytes": 207143,
+      "sha256": "2f04a91d5b268538f335f0d8e4568003dd1eb1c38205cce878af64b6506afbc9"
+    },
+    "REPRODUCIBILITY.json": {
+      "bytes": 209550,
+      "sha256": "32f9cbf6b521df2b4842ada19bdacb4e23b53a9fd2817a4e209b028f6339b172"
+    },
+    "RUNTIME_VALIDATION.json": {
+      "bytes": 633,
+      "sha256": "fab427b4a84ec4fa18fb976237f2b2f3b9617bcb4c3488e057d1d900b0a2868e"
+    },
+    "RUN_MANIFEST.json": {
+      "bytes": 385,
+      "sha256": "422a4c3d149de1bdb1fdd06fce4901540e278ab3ed75a4d6e7787e186a96b4e7"
+    },
+    "SAVED_RUN_VERIFICATION.json": {
+      "bytes": 261,
+      "sha256": "bf7d4587909f658b8697d7e3890d43c33afd025515c5bfadd57252f308959682"
+    },
+    "SELECTED_BY_YEAR.json": {
+      "bytes": 11858,
+      "sha256": "992790404463809162718abbfe452ea4c3c612144e078050468c62a385c7a09f"
+    },
+    "SHADOW_FAMILY_REPORT.json": {
+      "bytes": 128075,
+      "sha256": "b01fcab4d926093745da494152027352a7838fee82078c1e985d3480b806896e"
+    },
+    "composed_metrics.json": {
+      "bytes": 692500,
+      "sha256": "e9736e903a1faeacfaf4a01d677ce00b91a3edf85c7e724348b0fa5329b58bc0"
+    },
+    "conditional_metrics.json": {
+      "bytes": 199437,
+      "sha256": "d60263a02389423e0f3dbbe9783782e54e86a5d1555e2496e3e1d4b791d6d9e8"
+    },
+    "paired_uncertainty.json": {
+      "bytes": 4960,
+      "sha256": "c15623a96ed78f6e1da419f4944a08fef30b773abd3cea094289b2a410d8690a"
+    },
+    "panel_uncertainty.json": {
+      "bytes": 6585,
+      "sha256": "19303564f485c4d47db01b374e29ba68e1f8afa2b108f6552b928baa73a9fbc5"
+    },
+    "pathway_decomposition.json": {
+      "bytes": 4057,
+      "sha256": "9b735140dcf67175f4e7774e2a07b67dc9908013d4cd6852b2f20480425e8fd1"
+    }
+  },
+  "implementation_freeze_sha": "68d1c73a82ec9ae7e7374251b882b9e17179b1c4",
+  "postfit_changes": "Archive-aware zero-fit verification and preregistered-hypothesis split co-use diagnostic; fitted runner, features, grids and metrics unchanged.",
+  "scientific_change_after_fit": false,
+  "status": "MOV1_BOOSTED_TREE_CHALLENGER_V1_COMPLETE"
+}

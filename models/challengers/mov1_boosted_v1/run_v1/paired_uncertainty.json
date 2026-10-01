@@ -1,0 +1,196 @@
+{
+  "composed_SB_vs_S2": {
+    "aggregate_delta": -0.0002331439980609701,
+    "annual": [
+      {
+        "N": 470,
+        "delta": -0.008094425860463241,
+        "direction": "FAVORABLE",
+        "summed_delta": -3.8043801544177236,
+        "year": 2018
+      },
+      {
+        "N": 507,
+        "delta": -0.0032805927459434213,
+        "direction": "FAVORABLE",
+        "summed_delta": -1.6632605221933146,
+        "year": 2019
+      },
+      {
+        "N": 443,
+        "delta": -0.002434566451535088,
+        "direction": "FAVORABLE",
+        "summed_delta": -1.078512938030044,
+        "year": 2020
+      },
+      {
+        "N": 492,
+        "delta": -0.00047727016775162045,
+        "direction": "FAVORABLE",
+        "summed_delta": -0.23481692253379727,
+        "year": 2021
+      },
+      {
+        "N": 505,
+        "delta": -0.0001277253234712756,
+        "direction": "FAVORABLE",
+        "summed_delta": -0.06450128835299418,
+        "year": 2022
+      },
+      {
+        "N": 505,
+        "delta": 0.006404217099882497,
+        "direction": "UNFAVORABLE",
+        "summed_delta": 3.234129635440661,
+        "year": 2023
+      },
+      {
+        "N": 502,
+        "delta": -0.004228355237317761,
+        "direction": "FAVORABLE",
+        "summed_delta": -2.122634329133516,
+        "year": 2024
+      },
+      {
+        "N": 504,
+        "delta": -0.0016737352394484678,
+        "direction": "FAVORABLE",
+        "summed_delta": -0.8435625606820277,
+        "year": 2025
+      },
+      {
+        "N": 332,
+        "delta": 0.016820318217358503,
+        "direction": "UNFAVORABLE",
+        "summed_delta": 5.584345648163024,
+        "year": 2026
+      }
+    ],
+    "event_paired_95": [
+      -0.004544835490310947,
+      0.0038671187137851375
+    ],
+    "favorable_years": 7,
+    "fight_paired_95": [
+      -0.0043190330114718685,
+      0.0039715042944916635
+    ],
+    "median_annual_delta": -0.0016737352394484678,
+    "replicates": 2000,
+    "seed": 17,
+    "strongest_favorable_year": {
+      "N": 470,
+      "delta": -0.008094425860463241,
+      "direction": "FAVORABLE",
+      "summed_delta": -3.8043801544177236,
+      "year": 2018
+    },
+    "strongest_unfavorable_year": {
+      "N": 332,
+      "delta": 0.016820318217358503,
+      "direction": "UNFAVORABLE",
+      "summed_delta": 5.584345648163024,
+      "year": 2026
+    },
+    "strongest_year_share_of_net_improvement_percent": 383.0452390078497,
+    "tied_years": 0,
+    "unfavorable_years": 2
+  },
+  "conditional_SELECT_vs_MIN": {
+    "aggregate_delta": -0.00046959500318663016,
+    "annual": [
+      {
+        "N": 241,
+        "delta": -0.015785809769368143,
+        "direction": "FAVORABLE",
+        "summed_delta": -3.8043801544177227,
+        "year": 2018
+      },
+      {
+        "N": 231,
+        "delta": -0.007200262000836856,
+        "direction": "FAVORABLE",
+        "summed_delta": -1.6632605221933137,
+        "year": 2019
+      },
+      {
+        "N": 220,
+        "delta": -0.004902331536500191,
+        "direction": "FAVORABLE",
+        "summed_delta": -1.078512938030042,
+        "year": 2020
+      },
+      {
+        "N": 239,
+        "delta": -0.0009824975838234233,
+        "direction": "FAVORABLE",
+        "summed_delta": -0.23481692253379816,
+        "year": 2021
+      },
+      {
+        "N": 268,
+        "delta": -0.00024067644907832945,
+        "direction": "FAVORABLE",
+        "summed_delta": -0.06450128835299229,
+        "year": 2022
+      },
+      {
+        "N": 258,
+        "delta": 0.012535386183878538,
+        "direction": "UNFAVORABLE",
+        "summed_delta": 3.234129635440663,
+        "year": 2023
+      },
+      {
+        "N": 223,
+        "delta": -0.009518539592526958,
+        "direction": "FAVORABLE",
+        "summed_delta": -2.1226343291335117,
+        "year": 2024
+      },
+      {
+        "N": 252,
+        "delta": -0.0033474704788969334,
+        "direction": "FAVORABLE",
+        "summed_delta": -0.8435625606820272,
+        "year": 2025
+      },
+      {
+        "N": 183,
+        "delta": 0.030515549989961883,
+        "direction": "UNFAVORABLE",
+        "summed_delta": 5.5843456481630245,
+        "year": 2026
+      }
+    ],
+    "event_paired_95": [
+      -0.009092972064072554,
+      0.007826487081917483
+    ],
+    "favorable_years": 7,
+    "fight_paired_95": [
+      -0.008926885330868823,
+      0.0076463054761531195
+    ],
+    "median_annual_delta": -0.0033474704788969334,
+    "replicates": 2000,
+    "seed": 17,
+    "strongest_favorable_year": {
+      "N": 241,
+      "delta": -0.015785809769368143,
+      "direction": "FAVORABLE",
+      "summed_delta": -3.8043801544177227,
+      "year": 2018
+    },
+    "strongest_unfavorable_year": {
+      "N": 183,
+      "delta": 0.030515549989961883,
+      "direction": "UNFAVORABLE",
+      "summed_delta": 5.5843456481630245,
+      "year": 2026
+    },
+    "strongest_year_share_of_net_improvement_percent": 383.0452390078534,
+    "tied_years": 0,
+    "unfavorable_years": 2
+  }
+}

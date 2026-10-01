@@ -1,0 +1,10 @@
+{
+  "additional_estimator_fits": 0,
+  "atol": 1e-12,
+  "full_search_refitting_performed": false,
+  "max_error": 0.0,
+  "models_checked": 1008,
+  "rtol": 0,
+  "same_selected_configs_and_rounds_from_all_inner_evidence": true,
+  "status": "SAVED_RUN_REPRODUCED"
+}
