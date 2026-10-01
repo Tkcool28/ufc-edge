@@ -1,0 +1,9 @@
+# Future research and simulator implications
+
+Observed descriptive performance is separate from recurring behavior, future hypotheses and independently confirmed improvement. This audit answers how frozen families behave in finish-method environments; it does not authorize specialist routing.
+
+Supported hypotheses for later preregistration: test whether a specified fixed-family architecture retains grappling/submission loss advantages without sacrificing A1/A4, Flyweight and women’s divisions; test whether historical inner-selection rules generalize beyond the short two-year selector; investigate conditional calibration with a governed training-only chronology if independently authorized. Choose the confirmation specification using disclosed observed evidence, then evaluate on genuinely new/sealed future evidence rather than rebranding this audit as a fresh test.
+
+Before a family/specialist can be frozen: an explicit architecture/selection contract, temporally untouched confirmation data, stable conditional and complete-system losses, sufficient sample size by intended pathway, independent calibration checks, and a governed way to handle overlap, unknown state and uncertainty. A favorable cell/interval from this audit is insufficient. No routing thresholds, new features, calibration or estimators are implemented.
+
+The hybrid simulator can retain the MOV0→MOV1 probability decomposition. Keep frozen linear MOV1-MIN/S2 as the current reference. Family disagreement and pathway residuals identify research questions and potential uncertainty signals, not already validated abstention rules. Conditional finish probabilities do not identify who wins, finish-round hazards, positions, actions or causal state transitions. Such mechanics require separate data and chronology-governed validation. Frozen MOV0’s decision overprediction cannot be repaired by changing MOV1. Sportsbook comparison remains downstream; no prices, EV or ROI are used here.

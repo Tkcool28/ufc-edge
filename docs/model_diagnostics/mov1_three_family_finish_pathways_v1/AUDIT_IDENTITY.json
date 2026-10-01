@@ -1,0 +1,24 @@
+{
+  "BOOST_SELECT_classification": "INCONCLUSIVE",
+  "audit": "MOV1_THREE_FAMILY_FINISH_PATHWAY_COMPARATIVE_AUDIT_V1",
+  "branch": "audit/mov1-three-family-finish-pathways-v1",
+  "dependency": "PR121 remains unmerged; audit branch/PR depends on its exact frozen head",
+  "example_selection": "two extrema for each of four prediction-only pattern rules per primary archetype, stable fight-ID tie-break; outcomes not used to select examples",
+  "frozen_predictions_modified": false,
+  "governance": "MATCH/NO_MATCH/UNASSIGNABLE from PR117; no formula/threshold changes; separate total/finish gates; overlapping groups not independent",
+  "metric_functions_source": {
+    "path": "models/mov1/evaluation_v1.py",
+    "sha256": "d4165ff96f7bf80adbf649562976d5e979460703d69f060b893ecf1257654de1"
+  },
+  "prediction_models_fit": 0,
+  "purpose": "post-run explanatory P(KO|STANDARD_FINISH) audit",
+  "runner_sha256": "70f8cd892a758d04dcfb7d0ee8ca8ad460cb3ed3c94166dc0bc3ebe21e57af2a",
+  "source_manifest_hashes": {
+    "models/challengers/mov1_boosted_v1/CONTRACT_MANIFEST.json": "4593dc0056455356ea9e28191acd2fda109124ca9e18ccb07c09319e99a2849b",
+    "models/challengers/mov1_boosted_v1/run_v1/EVIDENCE_MANIFEST.json": "2b6c223e31000a0ff2c4c35c8c82006c92767b49e42fd080ef012459602fe410",
+    "models/mov1/run_v1/EVIDENCE_MANIFEST.json": "cb21ff773489f23f4583a6487942e3edb05c817493aa04eff71a470f7b1086c6"
+  },
+  "source_pr_121_head": "859be9fad8a1a95cf35f3e5bb99107205734ddce",
+  "starting_main": "4ec01227a4a35872eed51ce7ce67c45b02e46ebd",
+  "starting_repository_HEAD": "859be9fad8a1a95cf35f3e5bb99107205734ddce"
+}

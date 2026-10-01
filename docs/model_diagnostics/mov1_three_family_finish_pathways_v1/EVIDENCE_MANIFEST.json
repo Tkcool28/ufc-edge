@@ -1,0 +1,212 @@
+{
+  "audit": "MOV1_THREE_FAMILY_FINISH_PATHWAY_COMPARATIVE_AUDIT_V1",
+  "code_files": {
+    ".github/workflows/mov1-three-family-pathway-audit-v1.yml": "c2dd36f36bf0eb93d18013876d1dbdd88d822325f19f9ae36d6dc4e71103d812",
+    "tests/diagnostics/test_mov1_three_family_finish_pathways_v1.py": "1bcd86786011ac3ea3c9336181ca8e6978230709b8c9abdb6c043b3ecc3fec63",
+    "tools/diagnostics/verify_mov1_three_family_finish_pathways_v1.py": "a463c075b93c41cfe8d303b470e4849ce4bf8187f5927eb90e9e0b96c73a31bb"
+  },
+  "files": {
+    "AGGREGATE_CONDITIONAL_COMPARISON.csv": {
+      "bytes": 3362,
+      "sha256": "c55dae6cbe3620af2395099ac3badec17153e85af911b0cca202a5096e9edf37"
+    },
+    "ALL_15_ARCHETYPE_COMPARISON.csv": {
+      "bytes": 125003,
+      "sha256": "66b5857686d9d22947d08b292be94c0ab2f331ac8bcfbf0b92908297fd604513"
+    },
+    "ALL_15_ARCHETYPE_COMPARISON.md": {
+      "bytes": 6309,
+      "sha256": "48e368441df85414e59ba711e374c785aa1fd98b1d95cb64cbc1385cd7cc3c12"
+    },
+    "ALL_DIVISION_COMPARISON.csv": {
+      "bytes": 34360,
+      "sha256": "d0f91e4776002785cd858c87699f21bfbe496578f1a7953890facf430a07c6eb"
+    },
+    "ALL_DIVISION_CONDITIONAL_COMPARISON.md": {
+      "bytes": 7179,
+      "sha256": "c0efacf7e3298a4f2d1a8c0c02d07c6d041d6078c89fbb5c0067002804be968a"
+    },
+    "ALL_FAMILY_AGGREGATE_COMPARISON.md": {
+      "bytes": 1210,
+      "sha256": "05e439dcba8f881568227ced953ca28b1123d4279831da399c867a8cb8c1c6f6"
+    },
+    "ALL_FAMILY_ANNUAL_COMPARISON.md": {
+      "bytes": 5630,
+      "sha256": "08112370c9fb169a94253ed9e3b154f531c016cc58bf53a0f13cb0e09f13a97e"
+    },
+    "ANNUAL_CONDITIONAL_COMPARISON.csv": {
+      "bytes": 13782,
+      "sha256": "0f3cc142b568b8e2b721546dd38e7ede7e4188aa9ac5660cfe524177a15e6e1f"
+    },
+    "ANNUAL_WITH_FROZEN_CONFIGURATION.csv": {
+      "bytes": 14124,
+      "sha256": "bb92c912bd1f8e79a70ede10dd5b3d04abe6e33154b0b48e0d738c7cc37d61fc"
+    },
+    "ARCHETYPE_ANNUAL_COMPARISON.csv": {
+      "bytes": 668404,
+      "sha256": "45d910ba559ed23b21fc414d6b151cbb28df67b279a7ba70798d1ca9051fa85d"
+    },
+    "AUDIT_IDENTITY.json": {
+      "bytes": 1607,
+      "sha256": "60e32870c6393133d259f9f1e93b55b5695f0a4c34a477def3df6f37732cb3a6"
+    },
+    "B3_FOCUSED_DIAGNOSTIC.md": {
+      "bytes": 7881,
+      "sha256": "5aac40f1686548672dd446e55e3d94e68c42e9e3f4df9153f649f1a3b8369a48"
+    },
+    "B5_FOCUSED_DIAGNOSTIC.md": {
+      "bytes": 8109,
+      "sha256": "170cc008b5894c7a3cd65e532ba1e931268ca4b0ba11f44d61f643b7fe657dce"
+    },
+    "COMPLETE_SYSTEM_SECONDARY_COMPARISON.md": {
+      "bytes": 2732,
+      "sha256": "6b08f66d3617e4a3f57bfeece1bc152dee9758d485366bd85f8f4831619c2491"
+    },
+    "COMPOSED_ANNUAL_COMPARISON.csv": {
+      "bytes": 4204,
+      "sha256": "5e67f31effec35f64041096df100653724caffc729411b33609e37e1e630858f"
+    },
+    "COMPOSED_CLASSWISE_CALIBRATION.csv": {
+      "bytes": 1997,
+      "sha256": "5e6b55f9eaf78d500b1e1bafff663a7e911c8478583fd0a9f6f608e1ab8356a6"
+    },
+    "COMPOSED_SYSTEM_COMPARISON.csv": {
+      "bytes": 515,
+      "sha256": "2be70f35180378bea2f4472ab44a0865c7d730084941e62d43fd6492dbda57f7"
+    },
+    "DIVISION_ANNUAL_COMPARISON.csv": {
+      "bytes": 159859,
+      "sha256": "75fc6c6bd0381432fcd80a5561234e82f147fed03babd37d476e2e9620376ec1"
+    },
+    "EVIDENCE_VERIFICATION.json": {
+      "bytes": 33284,
+      "sha256": "5e1e660f21f1d6de3e005e211a347d4f1416c38f1f59c333a1fa2a89256b7ceb"
+    },
+    "EVIDENCE_VERIFICATION.md": {
+      "bytes": 765,
+      "sha256": "dc9d5f9274974abfcc76b9926d88e3667be43f58601ff9b20ced7fa2f9c6d280"
+    },
+    "EXISTING_IMPORTANCE_COVERAGE.csv": {
+      "bytes": 392,
+      "sha256": "51826c1ab4ed174527fdee51142e7029cb83b21593303507b269bb9610bf7440"
+    },
+    "EXISTING_NATIVE_IMPORTANCE_TOP_FEATURES.csv": {
+      "bytes": 6867,
+      "sha256": "f03c35b6693146990e6278259d7ca1be88e25d9ae88957e2da93d321e397b133"
+    },
+    "EXISTING_SPLIT_CO_USE.csv": {
+      "bytes": 13144,
+      "sha256": "c2ad830d9eadf7c7799e5091c71888998eda6dc6b1d4a480e586e1adaa8a90be"
+    },
+    "FAMILY_SELECTED_CONFIGURATIONS.csv": {
+      "bytes": 18875,
+      "sha256": "1d928fc2d71d89084ed202610922f9da02a801edd9c3437844a341af973bc4be"
+    },
+    "FINAL_AUDIT_REPORT.md": {
+      "bytes": 12682,
+      "sha256": "42f23007946da72d83a19275908cc3f4dc8e6e20ed3c2f43bcc097cba0504def"
+    },
+    "FROZEN_FIXED_PROBABILITY_BUCKETS.csv": {
+      "bytes": 131958,
+      "sha256": "720e1ca1b8a2e581994b2999ba6af681c53cd31a8e3dd112fca1d7696be3a3a5"
+    },
+    "FUTURE_RESEARCH_IMPLICATIONS.md": {
+      "bytes": 1972,
+      "sha256": "b6e3ca0801cdf8f03f7aefdb71d7ea28255dfb61e19298b2cb8317b387624ad9"
+    },
+    "GRAPPLING_SUBMISSION_CORRECTION_REPORT.md": {
+      "bytes": 3231,
+      "sha256": "e059d87d0d464df0e399452058ca455701b3854f0332eb84081d59d2208a9e56"
+    },
+    "INDIVIDUAL_FAMILY_BEHAVIOR.md": {
+      "bytes": 1846,
+      "sha256": "e65910ae9d05d34b66180202ddf4f891c80a475ef33e550020e4f56254a6b9ed"
+    },
+    "MOV1_THREE_FAMILY_FINISH_PATHWAY_COMPARATIVE_AUDIT_V1_COMPLETE.json": {
+      "bytes": 272,
+      "sha256": "f7c6bafec937ce76c9107517a2d135e9055e2334752fa731fbfa302a8f121baf"
+    },
+    "NONLINEAR_RELATIONSHIP_INTERPRETATION.md": {
+      "bytes": 11433,
+      "sha256": "7ee4a5f9938fd3d5020512740c104ec860224045163ce7807c07bc47429e2fc7"
+    },
+    "PAIRED_UNCERTAINTY.csv": {
+      "bytes": 13971,
+      "sha256": "9e5bf1befbf3d3043ccdf3837394f0a2fbec8a25de25ea15aaa879370e242799"
+    },
+    "PAIRED_UNCERTAINTY.json": {
+      "bytes": 32942,
+      "sha256": "90e125d94dba58681bae58216f2a0f3ebf0aa9a76a12a5967b5cae9b76f0f8f3"
+    },
+    "PAIRED_UNCERTAINTY_REPORT.md": {
+      "bytes": 14455,
+      "sha256": "26b194ed93a6de9ecb42540e239b31e15a8c075bae9d3bed5480905bbbaaae27"
+    },
+    "PRIMARY_PATHWAY_ANNUAL_PERSISTENCE.csv": {
+      "bytes": 299,
+      "sha256": "09392cc78ad4b183f646ccd8e2ebdc449bdc53385b861e323b0130a39cdb06bc"
+    },
+    "PRIMARY_PATHWAY_CHRONOLOGICAL_STABILITY.md": {
+      "bytes": 28600,
+      "sha256": "b82082415267b4085d0c614b7c9765dd69598f7095eb0870a05add63ede5d0ec"
+    },
+    "PRIMARY_PATHWAY_FIGHT_LEVEL_DIFFERENCES.csv": {
+      "bytes": 640460,
+      "sha256": "6597f8df2b0ef4a9ec61de65f0196c5efe6815774a59c0685aef2d17991730ab"
+    },
+    "README.md": {
+      "bytes": 639,
+      "sha256": "362b1be06df51a6bd4dcf06d90a0ee163758c6179ccb95c63cb53c926579978e"
+    },
+    "REPRESENTATIVE_FIGHT_DISAGREEMENTS.csv": {
+      "bytes": 12243,
+      "sha256": "cb71a501b14d326b4a981077e4836663d7131fbcef2cb285132407ccc485f26d"
+    },
+    "REPRESENTATIVE_FIGHT_DISAGREEMENTS.md": {
+      "bytes": 5975,
+      "sha256": "76cdf4e43945853ca6a39fe5ad286a6f416eebea5a1b3bb10946b39db9d3c17e"
+    },
+    "SELECT_VS_SHADOW_BY_YEAR.csv": {
+      "bytes": 3195,
+      "sha256": "57b52bc9638c06e3a03279e5813e672ff7dac26127673c4aaad6f5d08492de0f"
+    },
+    "SOURCE_MANIFEST.json": {
+      "bytes": 33284,
+      "sha256": "5e1e660f21f1d6de3e005e211a347d4f1416c38f1f59c333a1fa2a89256b7ceb"
+    },
+    "SOURCE_PR_STATUS.json": {
+      "bytes": 866,
+      "sha256": "b4b631330181044b8def071c4e531553197063714de36d393254800abbb71155"
+    },
+    "STRIKING_PRESERVATION_REPORT.md": {
+      "bytes": 2308,
+      "sha256": "797f160cc17e7fee265ff9921299cc6a974d2c84e3242e5053cf2b16cca476d1"
+    },
+    "TERRAIN_ANNUAL_COMPARISON.csv": {
+      "bytes": 848869,
+      "sha256": "87a2847f9989807297c27f3a4cbf6705cba42e65933f541b06d374febf4b6b05"
+    },
+    "THREE_FAMILY_FINISH_PATHWAY_COMPARISON.md": {
+      "bytes": 5719,
+      "sha256": "2d542639375f9cabb5cc2e10e1c632fb2b9cf8e1c68adb48f3f761a80e19958f"
+    },
+    "VALIDATION_TERRAIN_COMPARISON.csv": {
+      "bytes": 162404,
+      "sha256": "98ccfda05a2d544cbec5b3ca55035b2f866afb50e6c44ba4ff9927119d4ffe63"
+    },
+    "VALIDATION_TERRAIN_COMPARISON.md": {
+      "bytes": 6919,
+      "sha256": "8011f8f5e1ba2d18b8ac0a86c738d6a7cfa7b2fa2dfdbea5a2657cbf57151a02"
+    },
+    "WHY_SELECT_DIFFERS_FROM_SHADOWS.md": {
+      "bytes": 3992,
+      "sha256": "6d7013739630faafe10b0feb7bb9f72fc805beef0b67b15e69c6b3371680ba3a"
+    }
+  },
+  "runner": {
+    "path": "tools/diagnostics/run_mov1_three_family_finish_pathways_v1.py",
+    "sha256": "70f8cd892a758d04dcfb7d0ee8ca8ad460cb3ed3c94166dc0bc3ebe21e57af2a"
+  },
+  "self_excluded": true,
+  "source_head": "859be9fad8a1a95cf35f3e5bb99107205734ddce"
+}

@@ -1,0 +1,26 @@
+name: MOV1 Three-Family Pathway Audit V1 (zero fits)
+on:
+  pull_request:
+    paths:
+      - 'docs/model_diagnostics/mov1_three_family_finish_pathways_v1/**'
+      - 'tools/diagnostics/*mov1_three_family_finish_pathways_v1.py'
+      - 'tests/diagnostics/test_mov1_three_family_finish_pathways_v1.py'
+      - '.github/workflows/mov1-three-family-pathway-audit-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-frozen-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install evaluation-only dependencies
+        run: pip install numpy==1.26.4 pandas==2.2.3 pytest==8.3.3
+      - name: Independently verify source predictions and audit evidence
+        run: python -m pytest -q tests/diagnostics/test_mov1_three_family_finish_pathways_v1.py
+      - name: Whitespace validation
+        run: git diff --check HEAD^ HEAD
