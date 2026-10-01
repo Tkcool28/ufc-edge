@@ -1,0 +1,95 @@
+{
+  "allowed_crosstabs": [
+    "weight class x existing archetype status",
+    "weight class x each permanent terrain dimension",
+    "weight class x scheduled rounds",
+    "archetype x fixed era",
+    "archetype x scheduled rounds",
+    "state pair x fixed era",
+    "state pair x scheduled rounds"
+  ],
+  "archetypes": "All 15 exact #113 formulas, symmetric OR across fighters; overlapping membership",
+  "comparisons": "Absolute percentage-point differences from UFC-wide, era-matched, round-matched or within-division reference. Also compare MATCH vs NO_MATCH among assignable bouts with direct standardization to common weight-class x scheduled-round strata; report coverage, no extrapolation into empty strata.",
+  "conditional_governance": "KO/SUB shares use finish count as denominator and have a separate sample gate",
+  "eras": [
+    [
+      2015,
+      2017
+    ],
+    [
+      2018,
+      2020
+    ],
+    [
+      2021,
+      2023
+    ],
+    [
+      2024,
+      2026
+    ]
+  ],
+  "f02_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+  "future_use": "Immutable descriptive reference only; not automatically a feature table; later modeling must be preregistered and evaluated chronologically",
+  "guardrails": [
+    "No model import/fit/prediction",
+    "No threshold recalculation",
+    "No F02/MOV0 modification",
+    "No odds/ROI/EV",
+    "No MOV1/hierarchy/simulator implementation",
+    "No automatic merge"
+  ],
+  "intervals": "Wilson 95% for each binomial proportion; marginal, not simultaneous; no p-value battery; not causal or predictive performance",
+  "missingness": "Three-valued Boolean archetype logic. True OR unknown remains true; unresolved qualification is UNASSIGNABLE, never silently false or LOW. This preserves #113 known-state formulas and makes missingness explicit. Compare old flags separately to expose historical missing-negation differences.",
+  "population": "Frozen corrected F02 UFC 2015+ intersection with canonical MOV0 label policy; reconcile 5658 bouts, 1812 KO_TKO, 1010 SUBMISSION, 2836 DECISION including 45 decision draws",
+  "rounds": [
+    3,
+    5
+  ],
+  "sample_governance": {
+    "INSUFFICIENT": "<25",
+    "MODERATE_UNCERTAINTY": "50-99",
+    "NORMAL": ">=100",
+    "THIN_EXPLORATORY": "25-49"
+  },
+  "source_sha256": {
+    "data/canonical/v0/events.csv": "7bd9d33111fab3fd2506eb651a7870b9de2ee38d3db739fe58ac0ee0ad26261e",
+    "data/canonical/v0/fights.csv": "b972ebb0c6b1fdfdd512c8d6004129f7e0620fe6759ca8acfa1d2f1184029e76",
+    "docs/model_diagnostics/mov0_conditional_feature_interaction_archetype_v1/feature_state_thresholds.json": "066d525e3660fbbee9accba47ea3b56468179e6eff6d78d4aebabe7e45c8daad",
+    "governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2",
+    "models/challengers/mov0_hierarchical_v1/weight_class_map.json": "9ad4d7f701dcab2453b3ed8fe4aa500a07aabe027d7f0e951b823a8a6f7fb92e",
+    "models/mov0/target_contract_v1.json": "3e30bef2eb9b766de82c338c88f8b64a258ec0508907a6d9dd176df571250adc",
+    "tools/diagnostics/run_mov0_conditional_feature_interaction_archetype_v1.py": "8e517481e34f402d6457968f4a6838351ba799a4b756115196ccfd6d07f2be50"
+  },
+  "stability": "Display all four fixed eras and matched deltas; structural interpretation requires adequate denominators, coherent mechanism and repeated direction, reviewed narratively without outcome-tuned cutoffs",
+  "starting_main": "44aa8dc97b57192ae90e847767051a03f38acd3d",
+  "states": "All 17 exact #113 concepts, LOW <= frozen p33, HIGH >= frozen p67, MID strictly between; unordered fighter-pair state cells; MISSING retained",
+  "status": "FROZEN_BEFORE_OUTCOME_AGGREGATION",
+  "terrain_dimensions": [
+    "striking_environment",
+    "grappling_environment",
+    "joint_mov_environment",
+    "experience_bucket",
+    "layoff_bucket",
+    "completeness_tier",
+    "title_status",
+    "scheduled_duration_bucket"
+  ],
+  "version": "1.0.0",
+  "weight_classes": [
+    "Flyweight",
+    "Bantamweight",
+    "Featherweight",
+    "Lightweight",
+    "Welterweight",
+    "Middleweight",
+    "Light Heavyweight",
+    "Heavyweight",
+    "Women's Strawweight",
+    "Women's Flyweight",
+    "Women's Bantamweight",
+    "Women's Featherweight",
+    "Catch Weight"
+  ],
+  "weight_normalization": "Reuse existing literal_map; retain raw labels, fail on unmapped labels; Catch Weight retained as non-division reference"
+}
