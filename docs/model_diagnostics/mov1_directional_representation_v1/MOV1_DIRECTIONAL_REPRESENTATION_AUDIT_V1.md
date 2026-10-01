@@ -1,0 +1,49 @@
+# MOV1 directional feature representation + submission pathway feasibility audit V1
+
+Status: **PARTIAL — architecture-confirmed, empirical completeness and independent lineage verification pending. NOT COMPLETE / NO PROMOTION.**
+
+## Provenance and scope
+
+Authoritative main: `6f92ce406af77758bacd2ce1f91fbbce0b4fc64b` (merged #121/#122), verified unchanged at bootstrap. This audit branch adds documentation and outcome-free algebra only. No training, no new F02/MOV1/MOV0 features, no odds, no post-2026-08-15 results. Existing outer results are inspected, not sealed confirmation.
+
+Sources inspected: #113 frozen thresholds, #117 full method structure, #118 35/55-source contract and 17 states, #119 linear implementation and run, #120 boosted contract and `tools/contracts/validate_mov1_boosted_contract_v1.py::TreeInputRepresentation`, #121 boosted run, #122 saved B3/B5 and preservation reports, F02 replay README, frozen fold plan and missingness policy. The underlying F01 submission-family state builder has **not** yet received independently executed per-family reconstruction here.
+
+## 35-column inventory
+
+See `MOV1_EXACT_35_COLUMN_INVENTORY.csv`: 3 shared context, 15 fighter pairs (30 literals), 1 explicitly directional KD pair (2 literals). This is based on the literal allowlist, not inferred column names. Included: career KO/SUB wins/losses, created/allowed KD, created/faced submission attempts, created/faced takedown attempts, takedown conversion/defense, prior exposure and first-round finish history. The KD interaction is explicitly represented; the corresponding submission-pressure × opponent-vulnerability interaction is not explicitly included. Strict F02 event-date cutoff excludes target and all same-day fights. MOV1 uses training-only pooled-pair median imputation; F01 shrinkage is consumed unchanged. FULL adds striking flows/efficiencies, environment shares, target mix and KD efficiency, but #119 found the FULL increment unsupported; exclusion was preregistered rather than a claim those variables lack information.
+
+## All 17 frozen concepts
+
+See `MOV1_STATE_CONCEPT_TO_FEATURE_MAP.csv`. From literal PR113 concept suffixes: 12 direct MIN measurement pairs and 5 FULL-only pairs. Direct presence does NOT mean the cross-fighter alignment of two distinct concepts is recoverable. In particular, striking efficiency/flow and ground share are excluded from MIN but appear in FULL; #118's fixed nested surfaces and #119's observed FULL result cannot be rewritten retroactively.
+
+## Exact representation inspection and collision
+
+`models/mov1/implementation_v1.py::Preprocessor.unscaled` imputes each fighter pair with the pooled prior-training median, then emits `(f1+f2)/2` and `abs(f1-f2)`. Its numeric matrix is training-standardized, with title flag and one-hot division appended. `TreeInputRepresentation` inherits this SAME `unscaled` method and changes only scaling (raw-unit float64 numeric, same contextual encoding). Thus a tree cannot recover alignment that the input map has erased. The separately governed KD creation-vulnerability directional pair already preserves its own cross-side association, not cross-side submission association.
+
+The checked-in synthetic test holds all other pairs/context/KD interaction fixed. Submission pressure (f1=.9,f2=.1), submission vulnerability A (f1=.1,f2=.9) and vulnerability B (f1=.9,f2=.1) each produce identical per-concept mean .5 and gap .8. Yet the swap-invariant directional sum `pressure_f1*vulnerability_f2 + pressure_f2*vulnerability_f1` is .82 in A and .18 in B. **Representational collision is real as an algebraic property.** This does NOT establish its historical frequency, effect size, or predictive improvement. Simultaneous fighter swapping preserves the directional sum, not individual orientation.
+
+## Scientifically plausible candidate formulas (NOT implemented)
+
+Use governed literal f1/f2 columns only, with no outcome-dependent weights. For attacker concept X and defender concept V, define `d1=X_f1*V_f2`, `d2=X_f2*V_f1`, then compare preregistered symmetric sum `d1+d2`, maximum `max(d1,d2)`, minimum `min(d1,d2)`; choose on domain and redundancy grounds BEFORE fit, not on B3/B5 scores. Existing KD created/allowed already has an explicit F02 `mx__knockdown_creation_vs_vulnerability__*` pair and must be checked for exact semantic redundancy before any expansion. Submission candidate: `fs__submission_attempt_rate__created_per_15__career__shrunk` crossed with opponent `fs__submission_attempt_rate__faced_per_15__career__shrunk`. Grappling access: `fs__takedown_pressure__created_per_15__career__shrunk` crossed with opponent inverse `fs__takedown_conversion__defense__career__shrunk` (1-defense is a proposed arithmetic definition, not a source column). Combined access: same-side SUB pressure × own TD-pressure or TD-conversion; this is symmetric within-fighter combined capability, distinct from cross-fighter alignment. Missingness must be separately gated pre-imputation; null must not silently become a scientifically observed interaction.
+
+## Saved B3/B5 evidence, descriptive only
+
+#122 B3: 224 finishes; observed KO .459821. MIN mean .552106 (gap +.092285), XGB .574853 (+.115032), LGBM .571403 (+.111581), CAT .572499 (+.112678). Linear annual means exceed actual in 8/9 years; 2019 is opposite; 2019, 2020 and partial 2026 have fewer than 25 finishes. All boost families improve pooled B3 individual loss while increasing aggregate KO bias. B3 annual LL improvement among six reportable years: XGB 3, LGBM 4, CAT 4. All B3 paired 95% intervals include zero.
+
+#122 B5: 355 finishes; observed KO .450704. MIN .540514 (gap +.089810), XGB .532728 (+.082024), LGBM .530900 (+.080196), CAT .526043 (+.075339). Linear mean KO exceeds actual in each of nine years, including partial 2026 (N16, insufficient). B5 LL improvement among eight reportable years: XGB 6, LGBM 5, CAT 5. All B5 paired 95% intervals include zero. Existing reports include annually saved N, actual/mean and LL/Brier, without calibrator refitting. Calibration intercept/slope by year, division/missingness decomposition and raw distribution quantiles remain unverified and must not be inferred from mean gaps.
+
+## Preservation, sparsity, missingness
+
+#122 A1 has 457 finishes, observed KO .724; XGB/LGBM/CAT predicted .704/.708/.713. A4 has 484 finishes, observed KO .752; XGB/LGBM/CAT .748/.754/.761. These associations may be compositional; division × scheduled-round standardized #117 evidence must be carried into any future design, not interpreted as causal. First outer 2018 training history: 707 finishes (451 KO, 256 SUB); remaining folds in `MOV1_FOLD_SAMPLE_SUPPORT.csv`. The total 2,822 finish universe does NOT license claims of early-fold interaction completeness. Frozen #119 2018 scoring reports 96/470 MIN rows with any null (1,774 literal missing values), including 52 f1 and 61 f2 missing values for each family of governed historical rates, and 96 nulls in each KD matchup direction. Those are all-eligible scoring counts, not 2018 training completeness; exact per-year training and proposed interaction completeness remain pending. Partial 2026 ends 2026-08-15.
+
+## Point-in-time governance
+
+F02 README specifies cutoff at target date 00:00Z; strict `historical_date < target_date` excludes same-day observations and target fight, no invented same-day bout order. F01 StateBuilder/ExactReplayStateBuilder governs shrinkage, minimum support, missingness and prior-population index; F02 compares optimized versus reference complete rows and audit projections. Earlier A1/A4 strict-prior 48/48 check is a preserved distinct lineage claim, **not transferable as independent submission/grappling reconstruction**. Must verify source stat keys, prior denominator and same-day population membership for each newly proposed interaction, plus null semantics, against archived F02 SHA256 `d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580` before authorizing training.
+
+## Conditional next-stage design (not a frozen implementation contract)
+
+If complete source-lineage and training-completeness gates pass, preregister `MOV1_DIRECTIONAL_INTERACTION_CHALLENGER_V1`: retain frozen MIN context/pair surface and L2 logistic/chronological folds; add ONLY the explicit submission-pressure × opponent-submission-exposure symmetric interaction and TD-pressure × opponent weak TD-defense symmetric interaction (if redundancy inspection supports both). Preserve existing KD directional pair and natural class prevalence; compare unchanged MIN vs low-dimensional augmentation with inner-only regularization. A narrower representation-isolation alternative adds only the submission cross-fighter term as one fixed predictor. No selection using inspected outer B3/B5 results. No recalibration in that test; a separate prior-year-only wrapper could be preregistered later. Simple prior-year KO-given-finish reference: no fitting now; potential all-division shrinkage needs minimum count gates and strict time windows, not unstable division×pathway tiny cells. Freeze post-2026-08-15 forward eligibility, cutoff, versions, missingness, minimum N, metrics and staged evaluation BEFORE inspecting those outcomes. The existing outer years are research evidence, not untouched holdout.
+
+## Open blockers / completion honesty
+
+This branch is a documented **architecture feasibility finding, not the requested full empirical audit**. Outstanding: literal F01 builder source-by-source validation; historical F02 parquet download/hash check; training/interaction completeness and division support; B3/B5 annual per-family prediction quantiles and adequate-N calibration intercept/slope; missingness/experience stratification and standardized A1/A4 decomposition; executed artifact re-generation and SHA256 evidence-manifest digest. No new model or calibration was fitted, and no post-boundary outcomes were requested.
