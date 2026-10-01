@@ -1,0 +1,340 @@
+{
+  "coefficient_constraints": "none; no expected-sign constraints",
+  "formulas": {
+    "absolute_difference": "abs(imputed_a - imputed_b)",
+    "mean": "(imputed_a + imputed_b)/2"
+  },
+  "imputation": "one pooled training median per pair, then symmetric transforms; never separate side medians",
+  "mandatory_future_probability_test": {
+    "atol": 1e-12,
+    "rtol": 0,
+    "scope": "each fitted surface/C, every inner and outer validation/scoring row, including missing-side patterns and decisions"
+  },
+  "model_dimensions_before_one_hot": {
+    "C1": 4,
+    "MOV1_FULL": 54,
+    "MOV1_MIN": 34
+  },
+  "numeric_output_order": "pair transforms followed by scheduled_rounds; then unscaled title indicator; then lexicographically ordered categorical one-hot columns",
+  "pair_order": "filter this ordered FULL pair list to pairs present in selected allowlist; output mean then absolute_difference for each pair",
+  "pairs": [
+    {
+      "columns": [
+        "f1__fs__prior_fight_count__career__raw",
+        "f2__fs__prior_fight_count__career__raw"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__prior_fight_count__career__raw",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_win__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__early_finish_profile__r1_finish_win__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__early_finish_profile__r1_finish_loss__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_win_profile__ko_tko__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__finish_method_win_profile__ko_tko__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__finish_method_win_profile__submission__career__shrunk",
+        "f2__fs__finish_method_win_profile__submission__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__finish_method_win_profile__submission__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__finish_method_loss_profile__ko_tko__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f2__fs__finish_method_loss_profile__submission__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__finish_method_loss_profile__submission__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__created_per_15__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__knockdown_rate__created_per_15__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__allowed_per_15__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__knockdown_rate__allowed_per_15__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__created_per_15__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__submission_attempt_rate__created_per_15__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__submission_attempt_rate__faced_per_15__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__created_per_15__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__takedown_pressure__created_per_15__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__faced_per_15__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__takedown_pressure__faced_per_15__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+      ],
+      "kind": "directional_pair",
+      "name": "directional_knockdown_matchup",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__knockdown_efficiency__creation__career__shrunk",
+        "f2__fs__knockdown_efficiency__creation__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__knockdown_efficiency__creation__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__knockdown_efficiency__vulnerability__career__shrunk",
+        "f2__fs__knockdown_efficiency__vulnerability__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__knockdown_efficiency__vulnerability__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__sig_strike_flow__landed_per_min__career__shrunk",
+        "f2__fs__sig_strike_flow__landed_per_min__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__sig_strike_flow__landed_per_min__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__sig_strike_flow__absorbed_per_min__career__shrunk",
+        "f2__fs__sig_strike_flow__absorbed_per_min__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__sig_strike_flow__absorbed_per_min__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__sig_strike_efficiency__accuracy__career__shrunk",
+        "f2__fs__sig_strike_efficiency__accuracy__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__sig_strike_efficiency__accuracy__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__sig_strike_efficiency__defense__career__shrunk",
+        "f2__fs__sig_strike_efficiency__defense__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__sig_strike_efficiency__defense__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__sig_environment_mix__clinch_share__career__shrunk",
+        "f2__fs__sig_environment_mix__clinch_share__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__sig_environment_mix__clinch_share__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__sig_environment_mix__ground_share__career__shrunk",
+        "f2__fs__sig_environment_mix__ground_share__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__sig_environment_mix__ground_share__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__sig_target_mix__head_share__career__shrunk",
+        "f2__fs__sig_target_mix__head_share__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__sig_target_mix__head_share__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__sig_target_mix__body_share__career__shrunk",
+        "f2__fs__sig_target_mix__body_share__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__sig_target_mix__body_share__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__takedown_conversion__success__career__shrunk",
+        "f2__fs__takedown_conversion__success__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__takedown_conversion__success__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    },
+    {
+      "columns": [
+        "f1__fs__takedown_conversion__defense__career__shrunk",
+        "f2__fs__takedown_conversion__defense__career__shrunk"
+      ],
+      "kind": "fighter_pair",
+      "name": "fs__takedown_conversion__defense__career__shrunk",
+      "transforms": [
+        "mean",
+        "absolute_difference"
+      ]
+    }
+  ],
+  "shared_context": [
+    "scheduled_rounds",
+    "ctx__title_bout",
+    "ctx__weight_class"
+  ],
+  "swap_rule": "swap every fighter pair and both directional columns; shared context unchanged"
+}

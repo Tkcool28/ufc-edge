@@ -1,0 +1,53 @@
+{
+  "MOV0_MIN_OOF_sha256": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57",
+  "MOV0_artifact_id": 10561085362,
+  "MOV0_run_id": 35376956316,
+  "MOV0_source_head": "dd4e7de7de4baa24090388fcf845c996564f2bf8",
+  "class_order": [
+    "KO_TKO",
+    "SUBMISSION",
+    "DECISION"
+  ],
+  "comparisons": [
+    [
+      "S1",
+      "S0"
+    ],
+    [
+      "S2",
+      "S1"
+    ],
+    [
+      "S3",
+      "S2"
+    ]
+  ],
+  "diagnostic_identity": "with same F and before log safety clipping, paired multiclass log-loss difference equals conditional difference on finish rows and zero on decision rows; verify and report any clipping exceptions. This identity does not imply multiclass Brier/calibration improvement.",
+  "domains": "finite F,K in[0,1]; reject violations",
+  "formulas": {
+    "DECISION": "1-F",
+    "KO_TKO": "F*K",
+    "SUBMISSION": "F*(1-K)"
+  },
+  "primary_finish_node": "authoritative frozen MOV0_MIN OOF predictions; join exact fight_id and outer_year; never refit MOV0",
+  "primary_metric": "multiclass log loss mean(-log(probability of actual class)); clip selected class probability to [1e-15,1-1e-15] for logs only",
+  "scoring": "all4260 eligible 2018\u20132026 outer rows; score before outcome join; decisions never determine score eligibility",
+  "secondary": [
+    "multiclass Brier = mean(sum over3 classes (pclass-onehot_yclass)^2), no division by3",
+    "classwise one-vs-rest calibration intercept/slope, 10-bin ECE/reliability/Wilson actual rate",
+    "3x3 mean assigned probability by actual outcome",
+    "all metrics by outer year"
+  ],
+  "secondary_MOV0_FULL": "deferred from V1 primary run; separate authorization needed to replace primary MIN or add a sensitivity run",
+  "sum": "identically1 in real arithmetic; float64 assert abs(sum-1)<=1e-12, rtol0; no renormalization",
+  "systems": {
+    "S0": "F + C0",
+    "S1": "F + C1",
+    "S2": "F + MOV1_MIN",
+    "S3": "F + MOV1_FULL"
+  },
+  "variables": {
+    "F": "frozen P(STANDARD_FINISH)",
+    "K": "MOV1 P(KO_TKO | STANDARD_FINISH)"
+  }
+}

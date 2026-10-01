@@ -1,0 +1,107 @@
+{
+  "archetype_membership_reference": "governance/finish_method_target_structure_v1/population_manifest.csv.gz",
+  "archetypes": [
+    "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE",
+    "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+    "A3_ACCURACY_VS_ABSORPTION",
+    "A4_KO_HISTORY_VS_KO_VULNERABILITY",
+    "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE",
+    "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE",
+    "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+    "B4_SUB_PRESSURE_POOR_TD_ACCESS",
+    "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY",
+    "C1_DAMAGE_PLUS_SUBMISSION_ACCESS",
+    "C2_BOTH_HIGH_FINISH_HISTORY",
+    "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS",
+    "D1_LOW_DAMAGE_STRONG_DEFENSE",
+    "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE",
+    "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE"
+  ],
+  "definitions": "all exact #113 known-state formulas and frozen p33/p67 thresholds unchanged; use PR117 pinned manifest MATCH/NO_MATCH/UNASSIGNABLE memberships, retaining its explicit unknown treatment and historical flag discrepancy note, never reinterpret unknown as NO_MATCH",
+  "denominators": "separate all-bout N and finish-only N/status for every cell; AUC/calibration null when undefined even if sample gate passes",
+  "diagnostics": [
+    "all terrain dimensions from MOV0",
+    "normalized weight division",
+    "all15 archetype status",
+    "weight class x all15 archetype status",
+    "fixed 2015\u20132017/2018\u20132020/2021\u20132023/2024\u20132026 reference eras; predictive diagnostics limited to2018+",
+    "3 vs5 scheduled rounds"
+  ],
+  "forbidden": "no cell-specific refitting, category tuning, threshold adjustment, reference-as-predictor, unbounded interactions or selective reporting",
+  "normalized_weight_classes": [
+    "Flyweight",
+    "Bantamweight",
+    "Featherweight",
+    "Lightweight",
+    "Welterweight",
+    "Middleweight",
+    "Light Heavyweight",
+    "Heavyweight",
+    "Women's Strawweight",
+    "Women's Flyweight",
+    "Women's Bantamweight",
+    "Women's Featherweight",
+    "Catch Weight"
+  ],
+  "outputs": [
+    "F mean on all cell bouts and on finish subset separately",
+    "K mean on all cell bouts and on finish subset separately",
+    "mean composed KO/SUB/DEC on all cell bouts",
+    "actual KO/SUB/DEC rates on all cell bouts with Wilson95",
+    "actual conditional KO/SUB rates and conditional metrics on finishes only",
+    "S0\u2013S3 three-way performance and paired deltas where sample permits",
+    "N/year coverage/division composition/UNKNOWN status"
+  ],
+  "questions": [
+    "HW/LHW KO-heavy composition preserved?",
+    "Flyweight balanced split preserved?",
+    "Women Strawweight/Flyweight submission enrichment preserved?",
+    "KO damage archetypes increase K, not just F?",
+    "TD access/submission archetypes lower K and enrich composed SUB?",
+    "Could larger total F obscure wrong finish type?"
+  ],
+  "reference_rates": "PR117 structural tables unchanged; descriptive2015+ rates are context, not OOF predictive benchmark; report actual same OOF-cell outcomes alongside predictions",
+  "sample_governance": {
+    "INSUFFICIENT": "N<25; N and observed counts retained, model-performance interpretation suppressed",
+    "MODERATE_UNCERTAINTY": "50<=N<=99",
+    "NORMAL": "N>=100",
+    "THIN_EXPLORATORY": "25<=N<=49"
+  },
+  "source": "immutable Validation Terrain V1 assignments; verify all MOV0 hashes and committed compressed assignment SHA; one-to-one fight_id join, no rebuilding",
+  "terrain": {
+    "assignment_logical_sha256": "a23b138ea103a751ae988cce5f90369b265547bfeec1c0e708484b4428015665",
+    "assignment_physical_sha256": "8b59c09e103997e4c6d6311608620e7178962aac0cdf807dfa9d1740c7aa6d97",
+    "contract_sha256": "23bb56aa33116b126c73054396ad3a08c16d04481226985e246224d21b3f1aac",
+    "diagnostics": [
+      "experience_bucket",
+      "layoff_bucket",
+      "scheduled_duration_bucket",
+      "title_status",
+      "weight_class",
+      "completeness_tier",
+      "striking_environment",
+      "grappling_environment",
+      "joint_mov_environment"
+    ],
+    "immutable_version": "MODEL_VALIDATION_BUCKET_CONTRACT_V1",
+    "join_key": "fight_id",
+    "optimization_to_cells_forbidden": true,
+    "percentile_reference_sha256": "c5a54e23e61c5b59f6e7c44c4de2c19652bdd664733001b126cddd41d66f89aa",
+    "regenerate": false,
+    "sample_size_governance": {
+      "INSUFFICIENT_SAMPLE": "N<25; N-only, substantive performance interpretation suppressed",
+      "MODERATE_UNCERTAINTY": "50<=N<=99",
+      "NORMAL": "N>=100",
+      "THIN_EXPLORATORY": "25<=N<=49"
+    },
+    "watchpoints": [
+      "HIGH_MISSINGNESS",
+      "3_ROUND",
+      "5_ROUND",
+      "STRIKE_TWO_SIDED",
+      "GRAPPLE_TWO_SIDED"
+    ]
+  },
+  "threshold_reference": "docs/model_diagnostics/mov0_conditional_feature_interaction_archetype_v1/feature_state_thresholds.json",
+  "weight_context": "report normalized all12 divisions plus Catch Weight, also retain immutable terrain rawweight labels; no ordinal divisions"
+}

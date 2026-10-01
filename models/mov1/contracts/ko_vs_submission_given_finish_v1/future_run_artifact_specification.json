@@ -1,0 +1,95 @@
+{
+  "calibration_failure_definition": "use frozen MOV0 Newton procedure; null if no convergence within100 iterations, singular Hessian, nonfinite iterate or max absolute coefficient>30 (separation/numerical instability flag); diagnostic numerical rule is not model selection or success threshold",
+  "mandatory_runtime_tests": [
+    "all scoring fight IDs exactly match frozen scoring digests; unique rows; no scoring exclusion based on outcome",
+    "changing/removing all validation outcomes leaves scoring eligibility and predictions unchanged",
+    "decisions absent from every fit, imputer, encoder, scaler and C selection input",
+    "inner/outer preprocessing statistics derived solely from their finish-training ID sets",
+    "swapping every side/directional input gives identical probabilities atol1e-12 rtol0 on all scored rows, with explicit asymmetric-null fixtures",
+    "never fit a separate side median; test shared pooled imputation under side swap",
+    "complete-case and null-side tests; known unseen division produces documented all-zero one-hot without fitting validation categories",
+    "assert every binary probability finite/in[0,1], SUB complement; composition all3 bounded/sum1 atol1e-12 rtol0",
+    "verify frozen MOV0 MIN OOF bytes then exact one-to-one fight/year join; never refit",
+    "verify no target/terrain/archetype/audit-rate/odds columns can enter allowlist",
+    "logloss composition identity before log clipping; report clipping exception count"
+  ],
+  "missing_metrics": "null plus reason for one-class, constant predictor, failed calibration convergence, separation, N0; no silent zero or NaN JSON",
+  "no_posthoc_adaptation": "run failures stop with evidence; scientific or solver changes require a new preregistration/version before rerun",
+  "prediction_tables": {
+    "composed_oof_all_eligible.csv": {
+      "expected_rows": 17040,
+      "fields": [
+        "fight_id",
+        "event_id",
+        "event_date",
+        "outer_year",
+        "system",
+        "frozen_MOV0_MIN_F",
+        "MOV1_K",
+        "P_KO_TKO",
+        "P_SUBMISSION",
+        "P_DECISION",
+        "actual_method"
+      ],
+      "row_key": [
+        "fight_id",
+        "outer_year",
+        "system"
+      ],
+      "systems": [
+        "S0",
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    "conditional_oof_all_eligible.csv": {
+      "C0_selected_C": null,
+      "expected_rows": 17040,
+      "fields": [
+        "fight_id",
+        "event_id",
+        "event_date",
+        "outer_year",
+        "surface",
+        "P_KO_given_finish",
+        "P_SUB_given_finish",
+        "selected_C",
+        "train_finish_N"
+      ],
+      "label_policy": "first write scored rows without outcomes; then one-to-one label join for evaluation",
+      "row_key": [
+        "fight_id",
+        "outer_year",
+        "surface"
+      ],
+      "surfaces": [
+        "C0",
+        "C1",
+        "MOV1_MIN",
+        "MOV1_FULL"
+      ]
+    }
+  },
+  "required_run_artifacts": [
+    "RUN_MANIFEST.json with versions, input SHA256, feature/transform order, contract-manifest hash and artifact hashes",
+    "TRAINING_AUDIT.json with every inner/outer ID digest, pooled median/mode/category/scaler statistics, class counts and C-selection grid scores",
+    "MODELS with fitted preprocessing and coefficients per outer surface; C0 scalar stored separately",
+    "conditional_metrics.json (overall, eachyear, eachsurface)",
+    "three_way_metrics.json (overall, eachyear, S0\u2013S3)",
+    "annual_comparisons.csv",
+    "bootstrap_comparisons.json",
+    "conditional_probability_buckets.csv including empty buckets",
+    "terrain_performance.csv",
+    "weight_class_method_composition.csv",
+    "archetype_composition.csv with all15 statuses and both denominators",
+    "weight_class_archetype_composition.csv",
+    "coefficient_by_year.csv labeled conditional associations only",
+    "missingness_and_unknown_category_coverage.csv",
+    "INTERPRETATION.md with all predeclared comparisons and qualitative classifications",
+    "IMPLICATIONS_FOR_HYBRID_SIMULATOR.md with evidence and limitations, no transitions",
+    "RUNTIME_VALIDATION.json including all mandatory checks"
+  ],
+  "serialization": "UTF-8, JSON sorted keys indent2 final LF; CSV final LF floats17 significant digits; ID/event/year sort specified by fold plan then surface/system frozen order",
+  "status": "FUTURE_RUN_REQUIREMENTS_ONLY"
+}

@@ -1,0 +1,37 @@
+{
+  "boundary": "left inclusive, right exclusive, final includes1",
+  "cutoffs_frozen": true,
+  "edges": [
+    0,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    1
+  ],
+  "empty_bins": "retained N0 with undefined rates null",
+  "labels": [
+    "<0.30",
+    "0.30\u2013<0.40",
+    "0.40\u2013<0.50",
+    "0.50\u2013<0.60",
+    "0.60\u2013<0.70",
+    "0.70\u2013<0.80",
+    ">=0.80"
+  ],
+  "primary_population": "outer finish-only metric rows",
+  "required": [
+    "N",
+    "mean_predicted_KO",
+    "actual_KO_frequency",
+    "prediction-minus-observation gap",
+    "Wilson95",
+    "year N/coverage",
+    "division counts/shares",
+    "all15 archetype status counts/shares"
+  ],
+  "secondary_population": "all scoring rows report distribution/composition only, never actual conditional KO frequency treating decisions as negatives",
+  "variable": "P(KO_TKO | STANDARD_FINISH)"
+}
