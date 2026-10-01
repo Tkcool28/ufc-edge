@@ -1,0 +1,5929 @@
+{
+  "C0": {
+    "aggregate": {
+      "ECE": 0.003084615208769459,
+      "N": 2115,
+      "ROC_AUC": 0.4843820953932687,
+      "ROC_AUC_status": "DEFINED",
+      "actual_KO_frequency": 0.6434988179669031,
+      "brier": 0.22950687586471993,
+      "calibration": {
+        "intercept": 2.6260007292846206,
+        "iterations": 5,
+        "slope": -3.525771687472003,
+        "status": "CONVERGED"
+      },
+      "log_loss": 0.651592987399805,
+      "mean_predicted_KO": 0.6404142027581337,
+      "reliability": [
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 0,
+          "gap": null,
+          "lower": 0.0,
+          "mean_prediction": null,
+          "upper": 0.1
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 1,
+          "gap": null,
+          "lower": 0.1,
+          "mean_prediction": null,
+          "upper": 0.2
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 2,
+          "gap": null,
+          "lower": 0.2,
+          "mean_prediction": null,
+          "upper": 0.3
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 3,
+          "gap": null,
+          "lower": 0.3,
+          "mean_prediction": null,
+          "upper": 0.4
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 4,
+          "gap": null,
+          "lower": 0.4,
+          "mean_prediction": null,
+          "upper": 0.5
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 5,
+          "gap": null,
+          "lower": 0.5,
+          "mean_prediction": null,
+          "upper": 0.6
+        },
+        {
+          "N": 2115,
+          "Wilson95": [
+            0.6228429573157213,
+            0.6636343520049319
+          ],
+          "actual_frequency": 0.6434988179669031,
+          "bin": 6,
+          "gap": -0.003084615208769459,
+          "lower": 0.6,
+          "mean_prediction": 0.6404142027581337,
+          "upper": 0.7
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 7,
+          "gap": null,
+          "lower": 0.7,
+          "mean_prediction": null,
+          "upper": 0.8
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 8,
+          "gap": null,
+          "lower": 0.8,
+          "mean_prediction": null,
+          "upper": 0.9
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 9,
+          "gap": null,
+          "lower": 0.9,
+          "mean_prediction": null,
+          "upper": 1.0
+        }
+      ]
+    },
+    "annual": {
+      "2018": {
+        "ECE": 0.011350631210127693,
+        "N": 241,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6265560165975104,
+        "brier": 0.234112411491839,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6610408805519046,
+        "mean_predicted_KO": 0.6379066478076381,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 241,
+            "Wilson95": [
+              0.563948249739187,
+              0.6851925628250464
+            ],
+            "actual_frequency": 0.6265560165975104,
+            "bin": 6,
+            "gap": 0.011350631210127693,
+            "lower": 0.6,
+            "mean_prediction": 0.6379066478076381,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2019": {
+        "ECE": 0.022987560962244302,
+        "N": 231,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.658008658008658,
+        "brier": 0.22556169195329584,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6434982472052339,
+        "mean_predicted_KO": 0.6350210970464137,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 231,
+            "Wilson95": [
+              0.5946975685296276,
+              0.71615044087461
+            ],
+            "actual_frequency": 0.658008658008658,
+            "bin": 6,
+            "gap": -0.022987560962244302,
+            "lower": 0.6,
+            "mean_prediction": 0.6350210970464137,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2020": {
+        "ECE": 0.012252293931683034,
+        "N": 220,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6272727272727273,
+        "brier": 0.2339517715991504,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6607152703696431,
+        "mean_predicted_KO": 0.6395250212044103,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 220,
+            "Wilson95": [
+              0.5617074523339457,
+              0.6884696162709288
+            ],
+            "actual_frequency": 0.6272727272727273,
+            "bin": 6,
+            "gap": 0.012252293931683034,
+            "lower": 0.6,
+            "mean_prediction": 0.6395250212044103,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2021": {
+        "ECE": 0.05696238496714645,
+        "N": 239,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.694560669456067,
+        "brier": 0.21539085920195242,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6226063584711802,
+        "mean_predicted_KO": 0.6375982844889205,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 239,
+            "Wilson95": [
+              0.6334711596008739,
+              0.7494947493161371
+            ],
+            "actual_frequency": 0.694560669456067,
+            "bin": 6,
+            "gap": -0.05696238496714645,
+            "lower": 0.6,
+            "mean_prediction": 0.6375982844889205,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2022": {
+        "ECE": 0.007849944417108623,
+        "N": 268,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6380597014925373,
+        "brier": 0.2310011404511432,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6546606831930709,
+        "mean_predicted_KO": 0.645909645909646,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 268,
+            "Wilson95": [
+              0.5789487104962859,
+              0.6932687809821209
+            ],
+            "actual_frequency": 0.6380597014925373,
+            "bin": 6,
+            "gap": 0.007849944417108623,
+            "lower": 0.6,
+            "mean_prediction": 0.645909645909646,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2023": {
+        "ECE": 0.03240277540528891,
+        "N": 258,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6124031007751938,
+        "brier": 0.23841548279008729,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6699241283898799,
+        "mean_predicted_KO": 0.6448058761804827,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 258,
+            "Wilson95": [
+              0.551719360415051,
+              0.6697887241381966
+            ],
+            "actual_frequency": 0.6124031007751938,
+            "bin": 6,
+            "gap": 0.03240277540528891,
+            "lower": 0.6,
+            "mean_prediction": 0.6448058761804827,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2024": {
+        "ECE": 0.008655703190404651,
+        "N": 223,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6322869955156951,
+        "brier": 0.23257507201515093,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6578894875244963,
+        "mean_predicted_KO": 0.6409426987060998,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 223,
+            "Wilson95": [
+              0.5672589981607394,
+              0.6928345504644982
+            ],
+            "actual_frequency": 0.6322869955156951,
+            "bin": 6,
+            "gap": 0.008655703190404651,
+            "lower": 0.6,
+            "mean_prediction": 0.6409426987060998,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2025": {
+        "ECE": 0.006691337336498626,
+        "N": 252,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6468253968253969,
+        "brier": 0.2284870768424156,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6494871734737006,
+        "mean_predicted_KO": 0.6401340594888982,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 252,
+            "Wilson95": [
+              0.586012616907334,
+              0.7032290108613021
+            ],
+            "actual_frequency": 0.6468253968253969,
+            "bin": 6,
+            "gap": -0.006691337336498626,
+            "lower": 0.6,
+            "mean_prediction": 0.6401340594888982,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2026": {
+        "ECE": 0.020429165708984898,
+        "N": 183,
+        "ROC_AUC": 0.5,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6612021857923497,
+        "brier": 0.2244312061073339,
+        "calibration": {
+          "intercept": null,
+          "slope": null,
+          "status": "CONSTANT_PREDICTION"
+        },
+        "log_loss": 0.6411493454839821,
+        "mean_predicted_KO": 0.6407730200833648,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 4,
+            "gap": null,
+            "lower": 0.4,
+            "mean_prediction": null,
+            "upper": 0.5
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 5,
+            "gap": null,
+            "lower": 0.5,
+            "mean_prediction": null,
+            "upper": 0.6
+          },
+          {
+            "N": 183,
+            "Wilson95": [
+              0.5899415114612316,
+              0.7258342289573894
+            ],
+            "actual_frequency": 0.6612021857923497,
+            "bin": 6,
+            "gap": -0.020429165708984898,
+            "lower": 0.6,
+            "mean_prediction": 0.6407730200833648,
+            "upper": 0.7
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 7,
+            "gap": null,
+            "lower": 0.7,
+            "mean_prediction": null,
+            "upper": 0.8
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 8,
+            "gap": null,
+            "lower": 0.8,
+            "mean_prediction": null,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "C1": {
+    "aggregate": {
+      "ECE": 0.02360760713107843,
+      "N": 2115,
+      "ROC_AUC": 0.5830880905559768,
+      "ROC_AUC_status": "DEFINED",
+      "actual_KO_frequency": 0.6434988179669031,
+      "brier": 0.2248289907719931,
+      "calibration": {
+        "intercept": 0.1589820172098277,
+        "iterations": 5,
+        "slope": 0.7590187814654914,
+        "status": "CONVERGED"
+      },
+      "log_loss": 0.6416047293126821,
+      "mean_predicted_KO": 0.6374733221195013,
+      "reliability": [
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 0,
+          "gap": null,
+          "lower": 0.0,
+          "mean_prediction": null,
+          "upper": 0.1
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 1,
+          "gap": null,
+          "lower": 0.1,
+          "mean_prediction": null,
+          "upper": 0.2
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 2,
+          "gap": null,
+          "lower": 0.2,
+          "mean_prediction": null,
+          "upper": 0.3
+        },
+        {
+          "N": 22,
+          "Wilson95": [
+            0.2692029418081331,
+            0.6534020467926505
+          ],
+          "actual_frequency": 0.45454545454545453,
+          "bin": 3,
+          "gap": -0.1099151654022793,
+          "lower": 0.3,
+          "mean_prediction": 0.34463028914317523,
+          "upper": 0.4
+        },
+        {
+          "N": 133,
+          "Wilson95": [
+            0.40528512668555866,
+            0.5727916928262021
+          ],
+          "actual_frequency": 0.48872180451127817,
+          "bin": 4,
+          "gap": -0.03392496768893022,
+          "lower": 0.4,
+          "mean_prediction": 0.45479683682234795,
+          "upper": 0.5
+        },
+        {
+          "N": 408,
+          "Wilson95": [
+            0.5201505284170711,
+            0.6158241259082988
+          ],
+          "actual_frequency": 0.5686274509803921,
+          "bin": 5,
+          "gap": -0.014388776231817002,
+          "lower": 0.5,
+          "mean_prediction": 0.5542386747485751,
+          "upper": 0.6
+        },
+        {
+          "N": 1074,
+          "Wilson95": [
+            0.6341353296161937,
+            0.6905877519981912
+          ],
+          "actual_frequency": 0.6629422718808193,
+          "bin": 6,
+          "gap": -0.017259060852591768,
+          "lower": 0.6,
+          "mean_prediction": 0.6456832110282276,
+          "upper": 0.7
+        },
+        {
+          "N": 404,
+          "Wilson95": [
+            0.656669658953742,
+            0.7454473805307158
+          ],
+          "actual_frequency": 0.7029702970297029,
+          "bin": 7,
+          "gap": 0.0376913471579956,
+          "lower": 0.7,
+          "mean_prediction": 0.7406616441876985,
+          "upper": 0.8
+        },
+        {
+          "N": 74,
+          "Wilson95": [
+            0.6772627498746149,
+            0.8622954834409498
+          ],
+          "actual_frequency": 0.7837837837837838,
+          "bin": 8,
+          "gap": 0.045483492306187756,
+          "lower": 0.8,
+          "mean_prediction": 0.8292672760899715,
+          "upper": 0.9
+        },
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 9,
+          "gap": null,
+          "lower": 0.9,
+          "mean_prediction": null,
+          "upper": 1.0
+        }
+      ]
+    },
+    "annual": {
+      "2018": {
+        "ECE": 0.027491801375611132,
+        "N": 241,
+        "ROC_AUC": 0.6416482707873438,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6265560165975104,
+        "brier": 0.22180574323554872,
+        "calibration": {
+          "intercept": -0.28117397951567125,
+          "iterations": 5,
+          "slope": 1.3373413142834008,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6342607478767981,
+        "mean_predicted_KO": 0.6458521964755229,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 8,
+            "Wilson95": [
+              0.071479212752109,
+              0.5907245696898311
+            ],
+            "actual_frequency": 0.25,
+            "bin": 4,
+            "gap": 0.20027258169458872,
+            "lower": 0.4,
+            "mean_prediction": 0.4502725816945887,
+            "upper": 0.5
+          },
+          {
+            "N": 68,
+            "Wilson95": [
+              0.38438064984606757,
+              0.6156193501539324
+            ],
+            "actual_frequency": 0.5,
+            "bin": 5,
+            "gap": 0.059349574816249584,
+            "lower": 0.5,
+            "mean_prediction": 0.5593495748162496,
+            "upper": 0.6
+          },
+          {
+            "N": 98,
+            "Wilson95": [
+              0.5546614299076583,
+              0.7399140833203984
+            ],
+            "actual_frequency": 0.6530612244897959,
+            "bin": 6,
+            "gap": -0.004895055616694899,
+            "lower": 0.6,
+            "mean_prediction": 0.648166168873101,
+            "upper": 0.7
+          },
+          {
+            "N": 60,
+            "Wilson95": [
+              0.6276792992295218,
+              0.8422347746994333
+            ],
+            "actual_frequency": 0.75,
+            "bin": 7,
+            "gap": -0.004011393139720321,
+            "lower": 0.7,
+            "mean_prediction": 0.7459886068602797,
+            "upper": 0.8
+          },
+          {
+            "N": 7,
+            "Wilson95": [
+              0.4868721707256811,
+              0.9743203756552565
+            ],
+            "actual_frequency": 0.8571428571428571,
+            "bin": 8,
+            "gap": -0.03816762166304033,
+            "lower": 0.8,
+            "mean_prediction": 0.8189752354798168,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2019": {
+        "ECE": 0.07863166874313127,
+        "N": 231,
+        "ROC_AUC": 0.5437624916722186,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.658008658008658,
+        "brier": 0.22702492027396423,
+        "calibration": {
+          "intercept": 0.39541334101519543,
+          "iterations": 5,
+          "slope": 0.45359419629219333,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6464472786151714,
+        "mean_predicted_KO": 0.635350679651789,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 17,
+            "Wilson95": [
+              0.2161105679021481,
+              0.6399455735700021
+            ],
+            "actual_frequency": 0.4117647058823529,
+            "bin": 3,
+            "gap": -0.08237753994480379,
+            "lower": 0.3,
+            "mean_prediction": 0.32938716593754913,
+            "upper": 0.4
+          },
+          {
+            "N": 17,
+            "Wilson95": [
+              0.3600544264299978,
+              0.7838894320978518
+            ],
+            "actual_frequency": 0.5882352941176471,
+            "bin": 4,
+            "gap": -0.11055058129414069,
+            "lower": 0.4,
+            "mean_prediction": 0.4776847128235064,
+            "upper": 0.5
+          },
+          {
+            "N": 49,
+            "Wilson95": [
+              0.5973771102868921,
+              0.8378871786504258
+            ],
+            "actual_frequency": 0.7346938775510204,
+            "bin": 5,
+            "gap": -0.16634077391031277,
+            "lower": 0.5,
+            "mean_prediction": 0.5683531036407077,
+            "upper": 0.6
+          },
+          {
+            "N": 70,
+            "Wilson95": [
+              0.5403954969794421,
+              0.7575401119773312
+            ],
+            "actual_frequency": 0.6571428571428571,
+            "bin": 6,
+            "gap": -0.003835403676894722,
+            "lower": 0.6,
+            "mean_prediction": 0.6533074534659624,
+            "upper": 0.7
+          },
+          {
+            "N": 58,
+            "Wilson95": [
+              0.509275237048117,
+              0.7494508717002409
+            ],
+            "actual_frequency": 0.6379310344827587,
+            "bin": 7,
+            "gap": 0.09891305653679416,
+            "lower": 0.7,
+            "mean_prediction": 0.7368440910195528,
+            "upper": 0.8
+          },
+          {
+            "N": 20,
+            "Wilson95": [
+              0.5839825677481064,
+              0.919342337420202
+            ],
+            "actual_frequency": 0.8,
+            "bin": 8,
+            "gap": 0.03640019802396244,
+            "lower": 0.8,
+            "mean_prediction": 0.8364001980239625,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2020": {
+        "ECE": 0.05916633534880995,
+        "N": 220,
+        "ROC_AUC": 0.5785613290915518,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6272727272727273,
+        "brier": 0.22887922785411202,
+        "calibration": {
+          "intercept": 0.09082027022461378,
+          "iterations": 5,
+          "slope": 0.7629736842780188,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6501299848573917,
+        "mean_predicted_KO": 0.6355038686174584,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 11,
+            "Wilson95": [
+              0.15166471095367573,
+              0.6461988254921511
+            ],
+            "actual_frequency": 0.36363636363636365,
+            "bin": 4,
+            "gap": 0.10240573866260705,
+            "lower": 0.4,
+            "mean_prediction": 0.4660421022989707,
+            "upper": 0.5
+          },
+          {
+            "N": 68,
+            "Wilson95": [
+              0.48416055016632126,
+              0.7107129981971936
+            ],
+            "actual_frequency": 0.6029411764705882,
+            "bin": 5,
+            "gap": -0.04857082707422622,
+            "lower": 0.5,
+            "mean_prediction": 0.554370349396362,
+            "upper": 0.6
+          },
+          {
+            "N": 89,
+            "Wilson95": [
+              0.5597888036006071,
+              0.7525716479516251
+            ],
+            "actual_frequency": 0.6629213483146067,
+            "bin": 6,
+            "gap": -0.018465684943261285,
+            "lower": 0.6,
+            "mean_prediction": 0.6444556633713454,
+            "upper": 0.7
+          },
+          {
+            "N": 42,
+            "Wilson95": [
+              0.44494312750039344,
+              0.7295713885251867
+            ],
+            "actual_frequency": 0.5952380952380952,
+            "bin": 7,
+            "gap": 0.14969665026192447,
+            "lower": 0.7,
+            "mean_prediction": 0.7449347455000197,
+            "upper": 0.8
+          },
+          {
+            "N": 10,
+            "Wilson95": [
+              0.5958499732047615,
+              0.9821237869049271
+            ],
+            "actual_frequency": 0.9,
+            "bin": 8,
+            "gap": -0.06566091394510443,
+            "lower": 0.8,
+            "mean_prediction": 0.8343390860548956,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2021": {
+        "ECE": 0.11301184105562265,
+        "N": 239,
+        "ROC_AUC": 0.48506354183858724,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.694560669456067,
+        "brier": 0.22547919509570052,
+        "calibration": {
+          "intercept": 0.8049984967129798,
+          "iterations": 5,
+          "slope": 0.03080209334746957,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6438856866229905,
+        "mean_predicted_KO": 0.625809086600169,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 3,
+            "Wilson95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "actual_frequency": 0.6666666666666666,
+            "bin": 3,
+            "gap": -0.2705854116067134,
+            "lower": 0.3,
+            "mean_prediction": 0.39608125505995323,
+            "upper": 0.4
+          },
+          {
+            "N": 23,
+            "Wilson95": [
+              0.4078552239138171,
+              0.7784237720752205
+            ],
+            "actual_frequency": 0.6086956521739131,
+            "bin": 4,
+            "gap": -0.15000070230632145,
+            "lower": 0.4,
+            "mean_prediction": 0.45869494986759163,
+            "upper": 0.5
+          },
+          {
+            "N": 63,
+            "Wilson95": [
+              0.6097009078044822,
+              0.82416155587684
+            ],
+            "actual_frequency": 0.7301587301587301,
+            "bin": 5,
+            "gap": -0.165580079132444,
+            "lower": 0.5,
+            "mean_prediction": 0.5645786510262861,
+            "upper": 0.6
+          },
+          {
+            "N": 105,
+            "Wilson95": [
+              0.6215166413200128,
+              0.7919287542817972
+            ],
+            "actual_frequency": 0.7142857142857143,
+            "bin": 6,
+            "gap": -0.06692773127825902,
+            "lower": 0.6,
+            "mean_prediction": 0.6473579830074553,
+            "upper": 0.7
+          },
+          {
+            "N": 34,
+            "Wilson95": [
+              0.450410173444307,
+              0.7609981667549109
+            ],
+            "actual_frequency": 0.6176470588235294,
+            "bin": 7,
+            "gap": 0.12321167192496674,
+            "lower": 0.7,
+            "mean_prediction": 0.7408587307484962,
+            "upper": 0.8
+          },
+          {
+            "N": 11,
+            "Wilson95": [
+              0.43435469882387084,
+              0.902539407099751
+            ],
+            "actual_frequency": 0.7272727272727273,
+            "bin": 8,
+            "gap": 0.09999127358347615,
+            "lower": 0.8,
+            "mean_prediction": 0.8272640008562034,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2022": {
+        "ECE": 0.04986139646591265,
+        "N": 268,
+        "ROC_AUC": 0.6197624645806958,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6380597014925373,
+        "brier": 0.22458275029221478,
+        "calibration": {
+          "intercept": -0.0174212202654491,
+          "iterations": 5,
+          "slope": 1.0059702143931468,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6414823734914457,
+        "mean_predicted_KO": 0.6412167429694525,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 9,
+            "Wilson95": [
+              0.26665129349549305,
+              0.8112214789023355
+            ],
+            "actual_frequency": 0.5555555555555556,
+            "bin": 4,
+            "gap": -0.10352584252916952,
+            "lower": 0.4,
+            "mean_prediction": 0.45202971302638606,
+            "upper": 0.5
+          },
+          {
+            "N": 50,
+            "Wilson95": [
+              0.3296965219222435,
+              0.5960112860084253
+            ],
+            "actual_frequency": 0.46,
+            "bin": 5,
+            "gap": 0.09641894960250424,
+            "lower": 0.5,
+            "mean_prediction": 0.5564189496025043,
+            "upper": 0.6
+          },
+          {
+            "N": 161,
+            "Wilson95": [
+              0.601389802942504,
+              0.7443969937031238
+            ],
+            "actual_frequency": 0.6770186335403726,
+            "bin": 6,
+            "gap": -0.033084788731448045,
+            "lower": 0.6,
+            "mean_prediction": 0.6439338448089246,
+            "upper": 0.7
+          },
+          {
+            "N": 40,
+            "Wilson95": [
+              0.5456998118185507,
+              0.8192515477025347
+            ],
+            "actual_frequency": 0.7,
+            "bin": 7,
+            "gap": 0.04213018429894522,
+            "lower": 0.7,
+            "mean_prediction": 0.7421301842989452,
+            "upper": 0.8
+          },
+          {
+            "N": 8,
+            "Wilson95": [
+              0.40927543031016883,
+              0.9285207872478909
+            ],
+            "actual_frequency": 0.75,
+            "bin": 8,
+            "gap": 0.07478947903198851,
+            "lower": 0.8,
+            "mean_prediction": 0.8247894790319885,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2023": {
+        "ECE": 0.05662660813604512,
+        "N": 258,
+        "ROC_AUC": 0.5600316455696203,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6124031007751938,
+        "brier": 0.23608746259091673,
+        "calibration": {
+          "intercept": 0.1265360888089995,
+          "iterations": 5,
+          "slope": 0.603143484529654,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6654041128665121,
+        "mean_predicted_KO": 0.6320129975940275,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 16,
+            "Wilson95": [
+              0.331785563988119,
+              0.7690134759450765
+            ],
+            "actual_frequency": 0.5625,
+            "bin": 4,
+            "gap": -0.10492554170921886,
+            "lower": 0.4,
+            "mean_prediction": 0.45757445829078114,
+            "upper": 0.5
+          },
+          {
+            "N": 40,
+            "Wilson95": [
+              0.3749736210669248,
+              0.670645298873211
+            ],
+            "actual_frequency": 0.525,
+            "bin": 5,
+            "gap": 0.014686585727719637,
+            "lower": 0.5,
+            "mean_prediction": 0.5396865857277197,
+            "upper": 0.6
+          },
+          {
+            "N": 165,
+            "Wilson95": [
+              0.5237949467537109,
+              0.6716546793659335
+            ],
+            "actual_frequency": 0.6,
+            "bin": 6,
+            "gap": 0.04410911960302033,
+            "lower": 0.6,
+            "mean_prediction": 0.6441091196030203,
+            "upper": 0.7
+          },
+          {
+            "N": 31,
+            "Wilson95": [
+              0.6736564604120674,
+              0.9290737555663471
+            ],
+            "actual_frequency": 0.8387096774193549,
+            "bin": 7,
+            "gap": -0.09988216427654062,
+            "lower": 0.7,
+            "mean_prediction": 0.7388275131428143,
+            "upper": 0.8
+          },
+          {
+            "N": 6,
+            "Wilson95": [
+              0.1876163064826506,
+              0.8123836935173494
+            ],
+            "actual_frequency": 0.5,
+            "bin": 8,
+            "gap": 0.3281734959287067,
+            "lower": 0.8,
+            "mean_prediction": 0.8281734959287067,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2024": {
+        "ECE": 0.024539448152855248,
+        "N": 223,
+        "ROC_AUC": 0.6251081127832555,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6322869955156951,
+        "brier": 0.2232093295096612,
+        "calibration": {
+          "intercept": -0.11315460771339478,
+          "iterations": 5,
+          "slope": 1.1215786373411385,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.638536621890277,
+        "mean_predicted_KO": 0.642194659060167,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 3,
+            "gap": null,
+            "lower": 0.3,
+            "mean_prediction": null,
+            "upper": 0.4
+          },
+          {
+            "N": 13,
+            "Wilson95": [
+              0.12680703655710515,
+              0.5763065681945096
+            ],
+            "actual_frequency": 0.3076923076923077,
+            "bin": 4,
+            "gap": 0.14098032179600434,
+            "lower": 0.4,
+            "mean_prediction": 0.44867262948831205,
+            "upper": 0.5
+          },
+          {
+            "N": 26,
+            "Wilson95": [
+              0.3206059352575905,
+              0.6793940647424095
+            ],
+            "actual_frequency": 0.5,
+            "bin": 5,
+            "gap": 0.031781657851191025,
+            "lower": 0.5,
+            "mean_prediction": 0.531781657851191,
+            "upper": 0.6
+          },
+          {
+            "N": 136,
+            "Wilson95": [
+              0.5562057410632959,
+              0.7155305545993795
+            ],
+            "actual_frequency": 0.6397058823529411,
+            "bin": 6,
+            "gap": 0.0027005526007840563,
+            "lower": 0.6,
+            "mean_prediction": 0.6424064349537252,
+            "upper": 0.7
+          },
+          {
+            "N": 41,
+            "Wilson95": [
+              0.6329499401177383,
+              0.8799682522178243
+            ],
+            "actual_frequency": 0.7804878048780488,
+            "bin": 7,
+            "gap": -0.03979131667889546,
+            "lower": 0.7,
+            "mean_prediction": 0.7406964881991533,
+            "upper": 0.8
+          },
+          {
+            "N": 7,
+            "Wilson95": [
+              0.35893445183261935,
+              0.9177810759959433
+            ],
+            "actual_frequency": 0.7142857142857143,
+            "bin": 8,
+            "gap": 0.11635864472376456,
+            "lower": 0.8,
+            "mean_prediction": 0.8306443590094789,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2025": {
+        "ECE": 0.0954064660570779,
+        "N": 252,
+        "ROC_AUC": 0.5873026814641208,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6468253968253969,
+        "brier": 0.22234445076435938,
+        "calibration": {
+          "intercept": 0.10424322809523655,
+          "iterations": 5,
+          "slope": 0.9017521001705855,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6363957387090186,
+        "mean_predicted_KO": 0.6354110639237784,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 3,
+            "gap": -0.602495750889729,
+            "lower": 0.3,
+            "mean_prediction": 0.39750424911027105,
+            "upper": 0.4
+          },
+          {
+            "N": 19,
+            "Wilson95": [
+              0.2732980516117956,
+              0.6829219075488682
+            ],
+            "actual_frequency": 0.47368421052631576,
+            "bin": 4,
+            "gap": -0.03990032711058911,
+            "lower": 0.4,
+            "mean_prediction": 0.43378388341572666,
+            "upper": 0.5
+          },
+          {
+            "N": 32,
+            "Wilson95": [
+              0.22933887309454212,
+              0.5474559264692255
+            ],
+            "actual_frequency": 0.375,
+            "bin": 5,
+            "gap": 0.1623119882628823,
+            "lower": 0.5,
+            "mean_prediction": 0.5373119882628823,
+            "upper": 0.6
+          },
+          {
+            "N": 145,
+            "Wilson95": [
+              0.6463174620153654,
+              0.7903888193864045
+            ],
+            "actual_frequency": 0.7241379310344828,
+            "bin": 6,
+            "gap": -0.0798116106969291,
+            "lower": 0.6,
+            "mean_prediction": 0.6443263203375537,
+            "upper": 0.7
+          },
+          {
+            "N": 52,
+            "Wilson95": [
+              0.49871678132017094,
+              0.7519930012618661
+            ],
+            "actual_frequency": 0.6346153846153846,
+            "bin": 7,
+            "gap": 0.10363509909953206,
+            "lower": 0.7,
+            "mean_prediction": 0.7382504837149166,
+            "upper": 0.8
+          },
+          {
+            "N": 3,
+            "Wilson95": [
+              0.4385029682449546,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 8,
+            "gap": -0.1753783839166968,
+            "lower": 0.8,
+            "mean_prediction": 0.8246216160833032,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2026": {
+        "ECE": 0.02702017714165146,
+        "N": 183,
+        "ROC_AUC": 0.6631564916022393,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6612021857923497,
+        "brier": 0.21020323783547679,
+        "calibration": {
+          "intercept": -0.2177733402818396,
+          "iterations": 5,
+          "slope": 1.4967859831445005,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6094734157099279,
+        "mean_predicted_KO": 0.646022019480972,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 2,
+            "gap": null,
+            "lower": 0.2,
+            "mean_prediction": null,
+            "upper": 0.3
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "actual_frequency": 0.0,
+            "bin": 3,
+            "gap": 0.3965365259213898,
+            "lower": 0.3,
+            "mean_prediction": 0.3965365259213898,
+            "upper": 0.4
+          },
+          {
+            "N": 17,
+            "Wilson95": [
+              0.26165106442409436,
+              0.6903676493999558
+            ],
+            "actual_frequency": 0.47058823529411764,
+            "bin": 4,
+            "gap": -0.022081480268480003,
+            "lower": 0.4,
+            "mean_prediction": 0.44850675502563764,
+            "upper": 0.5
+          },
+          {
+            "N": 12,
+            "Wilson95": [
+              0.2537815976337061,
+              0.7462184023662939
+            ],
+            "actual_frequency": 0.5,
+            "bin": 5,
+            "gap": 0.04582914334443078,
+            "lower": 0.5,
+            "mean_prediction": 0.5458291433444308,
+            "upper": 0.6
+          },
+          {
+            "N": 105,
+            "Wilson95": [
+              0.5525114869310618,
+              0.7323064522612962
+            ],
+            "actual_frequency": 0.6476190476190476,
+            "bin": 6,
+            "gap": 0.0013035689991951482,
+            "lower": 0.6,
+            "mean_prediction": 0.6489226166182428,
+            "upper": 0.7
+          },
+          {
+            "N": 46,
+            "Wilson95": [
+              0.6682874107701539,
+              0.8934938986560147
+            ],
+            "actual_frequency": 0.8043478260869565,
+            "bin": 7,
+            "gap": -0.06721450095861559,
+            "lower": 0.7,
+            "mean_prediction": 0.737133325128341,
+            "upper": 0.8
+          },
+          {
+            "N": 2,
+            "Wilson95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 8,
+            "gap": -0.1970396086458449,
+            "lower": 0.8,
+            "mean_prediction": 0.8029603913541551,
+            "upper": 0.9
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 9,
+            "gap": null,
+            "lower": 0.9,
+            "mean_prediction": null,
+            "upper": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "MOV1_FULL": {
+    "aggregate": {
+      "ECE": 0.0355893988185595,
+      "N": 2115,
+      "ROC_AUC": 0.6578463721284669,
+      "ROC_AUC_status": "DEFINED",
+      "actual_KO_frequency": 0.6434988179669031,
+      "brier": 0.21509998830935656,
+      "calibration": {
+        "intercept": 0.06503100970357023,
+        "iterations": 5,
+        "slope": 0.758336352986557,
+        "status": "CONVERGED"
+      },
+      "log_loss": 0.6196892265421575,
+      "mean_predicted_KO": 0.6608314175403623,
+      "reliability": [
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 0,
+          "gap": null,
+          "lower": 0.0,
+          "mean_prediction": null,
+          "upper": 0.1
+        },
+        {
+          "N": 11,
+          "Wilson95": [
+            0.43435469882387084,
+            0.902539407099751
+          ],
+          "actual_frequency": 0.7272727272727273,
+          "bin": 1,
+          "gap": -0.5512353549905377,
+          "lower": 0.1,
+          "mean_prediction": 0.1760373722821896,
+          "upper": 0.2
+        },
+        {
+          "N": 31,
+          "Wilson95": [
+            0.18569426566359176,
+            0.49858990691914357
+          ],
+          "actual_frequency": 0.3225806451612903,
+          "bin": 2,
+          "gap": -0.061817879461184444,
+          "lower": 0.2,
+          "mean_prediction": 0.26076276570010587,
+          "upper": 0.3
+        },
+        {
+          "N": 93,
+          "Wilson95": [
+            0.274857021642714,
+            0.4669890812099031
+          ],
+          "actual_frequency": 0.3655913978494624,
+          "bin": 3,
+          "gap": -0.00374994040854143,
+          "lower": 0.3,
+          "mean_prediction": 0.36184145744092094,
+          "upper": 0.4
+        },
+        {
+          "N": 201,
+          "Wilson95": [
+            0.43885882701996726,
+            0.5757866457142707
+          ],
+          "actual_frequency": 0.5074626865671642,
+          "bin": 4,
+          "gap": -0.04921161974070987,
+          "lower": 0.4,
+          "mean_prediction": 0.45825106682645433,
+          "upper": 0.5
+        },
+        {
+          "N": 374,
+          "Wilson95": [
+            0.5054791127649773,
+            0.6056786202458176
+          ],
+          "actual_frequency": 0.5561497326203209,
+          "bin": 5,
+          "gap": -0.002775355397132584,
+          "lower": 0.5,
+          "mean_prediction": 0.5533743772231883,
+          "upper": 0.6
+        },
+        {
+          "N": 460,
+          "Wilson95": [
+            0.5655722986849954,
+            0.6543304246708095
+          ],
+          "actual_frequency": 0.6108695652173913,
+          "bin": 6,
+          "gap": 0.04050239816097301,
+          "lower": 0.6,
+          "mean_prediction": 0.6513719633783643,
+          "upper": 0.7
+        },
+        {
+          "N": 504,
+          "Wilson95": [
+            0.6692422776567176,
+            0.7482108394879617
+          ],
+          "actual_frequency": 0.7103174603174603,
+          "bin": 7,
+          "gap": 0.03873320157701721,
+          "lower": 0.7,
+          "mean_prediction": 0.7490506618944776,
+          "upper": 0.8
+        },
+        {
+          "N": 373,
+          "Wilson95": [
+            0.7524475252140612,
+            0.8340059947664846
+          ],
+          "actual_frequency": 0.7962466487935657,
+          "bin": 8,
+          "gap": 0.047754360725725475,
+          "lower": 0.8,
+          "mean_prediction": 0.8440010095192911,
+          "upper": 0.9
+        },
+        {
+          "N": 68,
+          "Wilson95": [
+            0.8391481160428227,
+            0.9681851557488821
+          ],
+          "actual_frequency": 0.9264705882352942,
+          "bin": 9,
+          "gap": -0.0007111630749446762,
+          "lower": 0.9,
+          "mean_prediction": 0.9257594251603495,
+          "upper": 1.0
+        }
+      ]
+    },
+    "annual": {
+      "2018": {
+        "ECE": 0.06257553172958748,
+        "N": 241,
+        "ROC_AUC": 0.7059602649006621,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6265560165975104,
+        "brier": 0.21136439781800603,
+        "calibration": {
+          "intercept": -0.07048683123895591,
+          "iterations": 6,
+          "slope": 0.823087698740666,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6138074278734561,
+        "mean_predicted_KO": 0.6630060545517009,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 2,
+            "Wilson95": [
+              0.34238022750665303,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 1,
+            "gap": -0.8335835640630196,
+            "lower": 0.1,
+            "mean_prediction": 0.16641643593698038,
+            "upper": 0.2
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.11762077423264783,
+              0.769275718723987
+            ],
+            "actual_frequency": 0.4,
+            "bin": 2,
+            "gap": -0.15610819715962013,
+            "lower": 0.2,
+            "mean_prediction": 0.2438918028403799,
+            "upper": 0.3
+          },
+          {
+            "N": 13,
+            "Wilson95": [
+              0.12680703655710515,
+              0.5763065681945096
+            ],
+            "actual_frequency": 0.3076923076923077,
+            "bin": 3,
+            "gap": 0.055586329618756536,
+            "lower": 0.3,
+            "mean_prediction": 0.36327863731106425,
+            "upper": 0.4
+          },
+          {
+            "N": 23,
+            "Wilson95": [
+              0.1881127593879773,
+              0.55109664622737
+            ],
+            "actual_frequency": 0.34782608695652173,
+            "bin": 4,
+            "gap": 0.09979695003702038,
+            "lower": 0.4,
+            "mean_prediction": 0.4476230369935421,
+            "upper": 0.5
+          },
+          {
+            "N": 38,
+            "Wilson95": [
+              0.34849928364395105,
+              0.6515007163560489
+            ],
+            "actual_frequency": 0.5,
+            "bin": 5,
+            "gap": 0.04270742630271196,
+            "lower": 0.5,
+            "mean_prediction": 0.542707426302712,
+            "upper": 0.6
+          },
+          {
+            "N": 40,
+            "Wilson95": [
+              0.42195068541991065,
+              0.7149060744004962
+            ],
+            "actual_frequency": 0.575,
+            "bin": 6,
+            "gap": 0.07612118227903464,
+            "lower": 0.6,
+            "mean_prediction": 0.6511211822790346,
+            "upper": 0.7
+          },
+          {
+            "N": 62,
+            "Wilson95": [
+              0.6384749248397259,
+              0.8475410379466626
+            ],
+            "actual_frequency": 0.7580645161290323,
+            "bin": 7,
+            "gap": -0.01129699816147045,
+            "lower": 0.7,
+            "mean_prediction": 0.7467675179675618,
+            "upper": 0.8
+          },
+          {
+            "N": 47,
+            "Wilson95": [
+              0.6509597329080159,
+              0.88010292001905
+            ],
+            "actual_frequency": 0.7872340425531915,
+            "bin": 8,
+            "gap": 0.06423918746735868,
+            "lower": 0.8,
+            "mean_prediction": 0.8514732300205502,
+            "upper": 0.9
+          },
+          {
+            "N": 11,
+            "Wilson95": [
+              0.523019438039156,
+              0.9486323102539149
+            ],
+            "actual_frequency": 0.8181818181818182,
+            "bin": 9,
+            "gap": 0.11160524630633373,
+            "lower": 0.9,
+            "mean_prediction": 0.929787064488152,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2019": {
+        "ECE": 0.06337650073439398,
+        "N": 231,
+        "ROC_AUC": 0.6362841439040641,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.658008658008658,
+        "brier": 0.2158461467374782,
+        "calibration": {
+          "intercept": 0.18637849039032484,
+          "iterations": 5,
+          "slope": 0.6508588695295952,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6216268566978725,
+        "mean_predicted_KO": 0.6651729396579921,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 1,
+            "gap": -0.8280774756828748,
+            "lower": 0.1,
+            "mean_prediction": 0.17192252431712512,
+            "upper": 0.2
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.11762077423264783,
+              0.769275718723987
+            ],
+            "actual_frequency": 0.4,
+            "bin": 2,
+            "gap": -0.1524113496224494,
+            "lower": 0.2,
+            "mean_prediction": 0.24758865037755062,
+            "upper": 0.3
+          },
+          {
+            "N": 8,
+            "Wilson95": [
+              0.071479212752109,
+              0.5907245696898311
+            ],
+            "actual_frequency": 0.25,
+            "bin": 3,
+            "gap": 0.12655165908018573,
+            "lower": 0.3,
+            "mean_prediction": 0.37655165908018573,
+            "upper": 0.4
+          },
+          {
+            "N": 18,
+            "Wilson95": [
+              0.29031021505169974,
+              0.7096897849483003
+            ],
+            "actual_frequency": 0.5,
+            "bin": 4,
+            "gap": -0.031046304921362233,
+            "lower": 0.4,
+            "mean_prediction": 0.46895369507863777,
+            "upper": 0.5
+          },
+          {
+            "N": 46,
+            "Wilson95": [
+              0.48600096423389705,
+              0.7547624540916037
+            ],
+            "actual_frequency": 0.6304347826086957,
+            "bin": 5,
+            "gap": -0.08125636565329708,
+            "lower": 0.5,
+            "mean_prediction": 0.5491784169553986,
+            "upper": 0.6
+          },
+          {
+            "N": 46,
+            "Wilson95": [
+              0.48600096423389705,
+              0.7547624540916037
+            ],
+            "actual_frequency": 0.6304347826086957,
+            "bin": 6,
+            "gap": 0.02677751261597272,
+            "lower": 0.6,
+            "mean_prediction": 0.6572122952246684,
+            "upper": 0.7
+          },
+          {
+            "N": 54,
+            "Wilson95": [
+              0.5525655517520491,
+              0.7932071933994709
+            ],
+            "actual_frequency": 0.6851851851851852,
+            "bin": 7,
+            "gap": 0.05619850019252337,
+            "lower": 0.7,
+            "mean_prediction": 0.7413836853777086,
+            "upper": 0.8
+          },
+          {
+            "N": 43,
+            "Wilson95": [
+              0.6225547970219101,
+              0.8684632152061551
+            ],
+            "actual_frequency": 0.7674418604651163,
+            "bin": 8,
+            "gap": 0.06671075585925801,
+            "lower": 0.8,
+            "mean_prediction": 0.8341526163243743,
+            "upper": 0.9
+          },
+          {
+            "N": 10,
+            "Wilson95": [
+              0.7224672001371107,
+              0.9999999999999999
+            ],
+            "actual_frequency": 1.0,
+            "bin": 9,
+            "gap": -0.060575077189311544,
+            "lower": 0.9,
+            "mean_prediction": 0.9394249228106885,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2020": {
+        "ECE": 0.09609192379539243,
+        "N": 220,
+        "ROC_AUC": 0.6254860374690704,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6272727272727273,
+        "brier": 0.2278491938225224,
+        "calibration": {
+          "intercept": 0.1048248606184257,
+          "iterations": 5,
+          "slope": 0.6098229074893808,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6465942686578985,
+        "mean_predicted_KO": 0.6549490127571928,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 1,
+            "gap": -0.8149632923804166,
+            "lower": 0.1,
+            "mean_prediction": 0.18503670761958335,
+            "upper": 0.2
+          },
+          {
+            "N": 3,
+            "Wilson95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "actual_frequency": 0.3333333333333333,
+            "bin": 2,
+            "gap": -0.06938155523161105,
+            "lower": 0.2,
+            "mean_prediction": 0.26395177810172227,
+            "upper": 0.3
+          },
+          {
+            "N": 12,
+            "Wilson95": [
+              0.2537815976337061,
+              0.7462184023662939
+            ],
+            "actual_frequency": 0.5,
+            "bin": 3,
+            "gap": -0.13652125012201655,
+            "lower": 0.3,
+            "mean_prediction": 0.36347874987798345,
+            "upper": 0.4
+          },
+          {
+            "N": 21,
+            "Wilson95": [
+              0.2446996892537596,
+              0.6345344563069328
+            ],
+            "actual_frequency": 0.42857142857142855,
+            "bin": 4,
+            "gap": 0.03338599078745985,
+            "lower": 0.4,
+            "mean_prediction": 0.4619574193588884,
+            "upper": 0.5
+          },
+          {
+            "N": 29,
+            "Wilson95": [
+              0.5076986576690685,
+              0.8272438325551679
+            ],
+            "actual_frequency": 0.6896551724137931,
+            "bin": 5,
+            "gap": -0.14796559632677964,
+            "lower": 0.5,
+            "mean_prediction": 0.5416895760870135,
+            "upper": 0.6
+          },
+          {
+            "N": 68,
+            "Wilson95": [
+              0.42656606428685023,
+              0.6569511707260847
+            ],
+            "actual_frequency": 0.5441176470588235,
+            "bin": 6,
+            "gap": 0.1097573067397698,
+            "lower": 0.6,
+            "mean_prediction": 0.6538749537985933,
+            "upper": 0.7
+          },
+          {
+            "N": 44,
+            "Wilson95": [
+              0.5344310393781777,
+              0.8000069228914657
+            ],
+            "actual_frequency": 0.6818181818181818,
+            "bin": 7,
+            "gap": 0.0642454728883548,
+            "lower": 0.7,
+            "mean_prediction": 0.7460636547065366,
+            "upper": 0.8
+          },
+          {
+            "N": 33,
+            "Wilson95": [
+              0.5897538017044264,
+              0.8716828662282499
+            ],
+            "actual_frequency": 0.7575757575757576,
+            "bin": 8,
+            "gap": 0.07948786511684125,
+            "lower": 0.8,
+            "mean_prediction": 0.8370636226925988,
+            "upper": 0.9
+          },
+          {
+            "N": 9,
+            "Wilson95": [
+              0.7008549515804559,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 9,
+            "gap": -0.0637061067984338,
+            "lower": 0.9,
+            "mean_prediction": 0.9362938932015662,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2021": {
+        "ECE": 0.1097982183214316,
+        "N": 239,
+        "ROC_AUC": 0.6042663805908567,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.694560669456067,
+        "brier": 0.2161846038964253,
+        "calibration": {
+          "intercept": 0.5473124101969417,
+          "iterations": 5,
+          "slope": 0.45259638391971097,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6268254385315087,
+        "mean_predicted_KO": 0.6401469382886744,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 3,
+            "Wilson95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "actual_frequency": 0.6666666666666666,
+            "bin": 1,
+            "gap": -0.4833290106298016,
+            "lower": 0.1,
+            "mean_prediction": 0.18333765603686503,
+            "upper": 0.2
+          },
+          {
+            "N": 4,
+            "Wilson95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "actual_frequency": 0.5,
+            "bin": 2,
+            "gap": -0.21125861348380987,
+            "lower": 0.2,
+            "mean_prediction": 0.28874138651619013,
+            "upper": 0.3
+          },
+          {
+            "N": 14,
+            "Wilson95": [
+              0.1634473175355414,
+              0.612355768960926
+            ],
+            "actual_frequency": 0.35714285714285715,
+            "bin": 3,
+            "gap": -0.0013937738863116778,
+            "lower": 0.3,
+            "mean_prediction": 0.3557490832565455,
+            "upper": 0.4
+          },
+          {
+            "N": 28,
+            "Wilson95": [
+              0.5294071156670428,
+              0.8474600394333092
+            ],
+            "actual_frequency": 0.7142857142857143,
+            "bin": 4,
+            "gap": -0.25747749126131697,
+            "lower": 0.4,
+            "mean_prediction": 0.45680822302439733,
+            "upper": 0.5
+          },
+          {
+            "N": 51,
+            "Wilson95": [
+              0.5098605845450523,
+              0.7636551154847915
+            ],
+            "actual_frequency": 0.6470588235294118,
+            "bin": 5,
+            "gap": -0.0942118121475155,
+            "lower": 0.5,
+            "mean_prediction": 0.5528470113818963,
+            "upper": 0.6
+          },
+          {
+            "N": 40,
+            "Wilson95": [
+              0.5716504419378943,
+              0.8389198375233267
+            ],
+            "actual_frequency": 0.725,
+            "bin": 6,
+            "gap": -0.07330755950777113,
+            "lower": 0.6,
+            "mean_prediction": 0.6516924404922289,
+            "upper": 0.7
+          },
+          {
+            "N": 53,
+            "Wilson95": [
+              0.6654225529835207,
+              0.8799540197358604
+            ],
+            "actual_frequency": 0.7924528301886793,
+            "bin": 7,
+            "gap": -0.04457205827415989,
+            "lower": 0.7,
+            "mean_prediction": 0.7478807719145194,
+            "upper": 0.8
+          },
+          {
+            "N": 38,
+            "Wilson95": [
+              0.5524286232424794,
+              0.8299672217151693
+            ],
+            "actual_frequency": 0.7105263157894737,
+            "bin": 8,
+            "gap": 0.13662663815267018,
+            "lower": 0.8,
+            "mean_prediction": 0.8471529539421438,
+            "upper": 0.9
+          },
+          {
+            "N": 8,
+            "Wilson95": [
+              0.40927543031016883,
+              0.9285207872478909
+            ],
+            "actual_frequency": 0.75,
+            "bin": 9,
+            "gap": 0.17832924563827446,
+            "lower": 0.9,
+            "mean_prediction": 0.9283292456382745,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2022": {
+        "ECE": 0.05600015680448175,
+        "N": 268,
+        "ROC_AUC": 0.6669078193766202,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6380597014925373,
+        "brier": 0.21653173046803664,
+        "calibration": {
+          "intercept": -0.08484798154440637,
+          "iterations": 5,
+          "slope": 0.8188104105082834,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6236130782174322,
+        "mean_predicted_KO": 0.6821657001516142,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 1,
+            "gap": -0.8212631204220086,
+            "lower": 0.1,
+            "mean_prediction": 0.17873687957799142,
+            "upper": 0.2
+          },
+          {
+            "N": 2,
+            "Wilson95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "actual_frequency": 0.5,
+            "bin": 2,
+            "gap": -0.20578243744831315,
+            "lower": 0.2,
+            "mean_prediction": 0.29421756255168685,
+            "upper": 0.3
+          },
+          {
+            "N": 9,
+            "Wilson95": [
+              0.06322510711784671,
+              0.5474110308930111
+            ],
+            "actual_frequency": 0.2222222222222222,
+            "bin": 3,
+            "gap": 0.1335797890818199,
+            "lower": 0.3,
+            "mean_prediction": 0.3558020113040421,
+            "upper": 0.4
+          },
+          {
+            "N": 24,
+            "Wilson95": [
+              0.2789133373121099,
+              0.6492513464108051
+            ],
+            "actual_frequency": 0.4583333333333333,
+            "bin": 4,
+            "gap": 0.00199504780889298,
+            "lower": 0.4,
+            "mean_prediction": 0.4603283811422263,
+            "upper": 0.5
+          },
+          {
+            "N": 33,
+            "Wilson95": [
+              0.3521837544891414,
+              0.674959578918663
+            ],
+            "actual_frequency": 0.5151515151515151,
+            "bin": 5,
+            "gap": 0.04000736422877682,
+            "lower": 0.5,
+            "mean_prediction": 0.555158879380292,
+            "upper": 0.6
+          },
+          {
+            "N": 68,
+            "Wilson95": [
+              0.45516782316555565,
+              0.6840275685226692
+            ],
+            "actual_frequency": 0.5735294117647058,
+            "bin": 6,
+            "gap": 0.08073419735827236,
+            "lower": 0.6,
+            "mean_prediction": 0.6542636091229782,
+            "upper": 0.7
+          },
+          {
+            "N": 67,
+            "Wilson95": [
+              0.6307080546049991,
+              0.8351208618142104
+            ],
+            "actual_frequency": 0.746268656716418,
+            "bin": 7,
+            "gap": 0.0048990998711455624,
+            "lower": 0.7,
+            "mean_prediction": 0.7511677565875635,
+            "upper": 0.8
+          },
+          {
+            "N": 59,
+            "Wilson95": [
+              0.6402510929359725,
+              0.853053814075376
+            ],
+            "actual_frequency": 0.7627118644067796,
+            "bin": 8,
+            "gap": 0.08518165172352787,
+            "lower": 0.8,
+            "mean_prediction": 0.8478935161303075,
+            "upper": 0.9
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.5655175352168251,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 9,
+            "gap": -0.07219783923312217,
+            "lower": 0.9,
+            "mean_prediction": 0.9278021607668778,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2023": {
+        "ECE": 0.057075541692584414,
+        "N": 258,
+        "ROC_AUC": 0.6684177215189874,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6124031007751938,
+        "brier": 0.2201751874461512,
+        "calibration": {
+          "intercept": -0.09946060565195106,
+          "iterations": 5,
+          "slope": 0.8395153886156728,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6306753686945518,
+        "mean_predicted_KO": 0.6532135001610168,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 1,
+            "gap": -0.8044816181921973,
+            "lower": 0.1,
+            "mean_prediction": 0.1955183818078027,
+            "upper": 0.2
+          },
+          {
+            "N": 3,
+            "Wilson95": [
+              5.551115123125783e-17,
+              0.5614970317550454
+            ],
+            "actual_frequency": 0.0,
+            "bin": 2,
+            "gap": 0.2734406877531634,
+            "lower": 0.2,
+            "mean_prediction": 0.2734406877531634,
+            "upper": 0.3
+          },
+          {
+            "N": 14,
+            "Wilson95": [
+              0.1634473175355414,
+              0.612355768960926
+            ],
+            "actual_frequency": 0.35714285714285715,
+            "bin": 3,
+            "gap": 0.011055343649778726,
+            "lower": 0.3,
+            "mean_prediction": 0.3681982007926359,
+            "upper": 0.4
+          },
+          {
+            "N": 28,
+            "Wilson95": [
+              0.26508547124123694,
+              0.6092921437253123
+            ],
+            "actual_frequency": 0.42857142857142855,
+            "bin": 4,
+            "gap": 0.031041214722034693,
+            "lower": 0.4,
+            "mean_prediction": 0.45961264329346324,
+            "upper": 0.5
+          },
+          {
+            "N": 51,
+            "Wilson95": [
+              0.43265302109302245,
+              0.6949876389209046
+            ],
+            "actual_frequency": 0.5686274509803921,
+            "bin": 5,
+            "gap": -0.017579827301217654,
+            "lower": 0.5,
+            "mean_prediction": 0.5510476236791745,
+            "upper": 0.6
+          },
+          {
+            "N": 45,
+            "Wilson95": [
+              0.4117613449352105,
+              0.6906106996500243
+            ],
+            "actual_frequency": 0.5555555555555556,
+            "bin": 6,
+            "gap": 0.08766324885318122,
+            "lower": 0.6,
+            "mean_prediction": 0.6432188044087368,
+            "upper": 0.7
+          },
+          {
+            "N": 61,
+            "Wilson95": [
+              0.5139190536533693,
+              0.748258884801255
+            ],
+            "actual_frequency": 0.639344262295082,
+            "bin": 7,
+            "gap": 0.11210146416636124,
+            "lower": 0.7,
+            "mean_prediction": 0.7514457264614433,
+            "upper": 0.8
+          },
+          {
+            "N": 50,
+            "Wilson95": [
+              0.7148578393696501,
+              0.916625793219666
+            ],
+            "actual_frequency": 0.84,
+            "bin": 8,
+            "gap": -0.00014283038287599137,
+            "lower": 0.8,
+            "mean_prediction": 0.839857169617124,
+            "upper": 0.9
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.5655175352168251,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 9,
+            "gap": -0.07800180557482539,
+            "lower": 0.9,
+            "mean_prediction": 0.9219981944251746,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2024": {
+        "ECE": 0.06896343864581614,
+        "N": 223,
+        "ROC_AUC": 0.6522660439370351,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6322869955156951,
+        "brier": 0.2187347338584856,
+        "calibration": {
+          "intercept": -0.026165876161470265,
+          "iterations": 5,
+          "slope": 0.7897999729522083,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6265060855962673,
+        "mean_predicted_KO": 0.6658527627897088,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "actual_frequency": 0.0,
+            "bin": 1,
+            "gap": 0.16840747830406158,
+            "lower": 0.1,
+            "mean_prediction": 0.16840747830406158,
+            "upper": 0.2
+          },
+          {
+            "N": 2,
+            "Wilson95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "actual_frequency": 0.5,
+            "bin": 2,
+            "gap": -0.23679781720952742,
+            "lower": 0.2,
+            "mean_prediction": 0.2632021827904726,
+            "upper": 0.3
+          },
+          {
+            "N": 10,
+            "Wilson95": [
+              0.16818032970623614,
+              0.6873262302663417
+            ],
+            "actual_frequency": 0.4,
+            "bin": 3,
+            "gap": -0.03961330800543994,
+            "lower": 0.3,
+            "mean_prediction": 0.3603866919945601,
+            "upper": 0.4
+          },
+          {
+            "N": 14,
+            "Wilson95": [
+              0.38764423103907397,
+              0.8365526824644587
+            ],
+            "actual_frequency": 0.6428571428571429,
+            "bin": 4,
+            "gap": -0.18003819420620326,
+            "lower": 0.4,
+            "mean_prediction": 0.46281894865093964,
+            "upper": 0.5
+          },
+          {
+            "N": 55,
+            "Wilson95": [
+              0.380762598469722,
+              0.6362322215099672
+            ],
+            "actual_frequency": 0.509090909090909,
+            "bin": 5,
+            "gap": 0.051431705726436294,
+            "lower": 0.5,
+            "mean_prediction": 0.5605226148173453,
+            "upper": 0.6
+          },
+          {
+            "N": 42,
+            "Wilson95": [
+              0.4220623987810458,
+              0.7088234882381393
+            ],
+            "actual_frequency": 0.5714285714285714,
+            "bin": 6,
+            "gap": 0.08336813392183462,
+            "lower": 0.6,
+            "mean_prediction": 0.654796705350406,
+            "upper": 0.7
+          },
+          {
+            "N": 53,
+            "Wilson95": [
+              0.6041933558938148,
+              0.8356264608153632
+            ],
+            "actual_frequency": 0.7358490566037735,
+            "bin": 7,
+            "gap": 0.017543608721991566,
+            "lower": 0.7,
+            "mean_prediction": 0.7533926653257651,
+            "upper": 0.8
+          },
+          {
+            "N": 39,
+            "Wilson95": [
+              0.5891834407831603,
+              0.8543121945900741
+            ],
+            "actual_frequency": 0.7435897435897436,
+            "bin": 8,
+            "gap": 0.10265595589282983,
+            "lower": 0.8,
+            "mean_prediction": 0.8462456994825734,
+            "upper": 0.9
+          },
+          {
+            "N": 7,
+            "Wilson95": [
+              0.6456695649333126,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 9,
+            "gap": -0.07951098922795297,
+            "lower": 0.9,
+            "mean_prediction": 0.920489010772047,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2025": {
+        "ECE": 0.062424681511822025,
+        "N": 252,
+        "ROC_AUC": 0.6600261942510512,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6468253968253969,
+        "brier": 0.2119089168693431,
+        "calibration": {
+          "intercept": 0.08636056265016735,
+          "iterations": 5,
+          "slope": 0.8669890035555735,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6101093207706402,
+        "mean_predicted_KO": 0.6439161632728614,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "actual_frequency": 0.0,
+            "bin": 1,
+            "gap": 0.15394328349296552,
+            "lower": 0.1,
+            "mean_prediction": 0.15394328349296552,
+            "upper": 0.2
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.03622410863243014,
+              0.6244653702374747
+            ],
+            "actual_frequency": 0.2,
+            "bin": 2,
+            "gap": 0.05363746525558627,
+            "lower": 0.2,
+            "mean_prediction": 0.2536374652555863,
+            "upper": 0.3
+          },
+          {
+            "N": 9,
+            "Wilson95": [
+              0.26665129349549305,
+              0.8112214789023355
+            ],
+            "actual_frequency": 0.5555555555555556,
+            "bin": 3,
+            "gap": -0.2029106185667121,
+            "lower": 0.3,
+            "mean_prediction": 0.35264493698884347,
+            "upper": 0.4
+          },
+          {
+            "N": 33,
+            "Wilson95": [
+              0.37985938536217456,
+              0.7015706148612388
+            ],
+            "actual_frequency": 0.5454545454545454,
+            "bin": 4,
+            "gap": -0.09235431083923401,
+            "lower": 0.4,
+            "mean_prediction": 0.4531002346153114,
+            "upper": 0.5
+          },
+          {
+            "N": 46,
+            "Wilson95": [
+              0.4018018105980127,
+              0.6784526621771542
+            ],
+            "actual_frequency": 0.5434782608695652,
+            "bin": 5,
+            "gap": 0.022280118123968795,
+            "lower": 0.5,
+            "mean_prediction": 0.565758378993534,
+            "upper": 0.6
+          },
+          {
+            "N": 57,
+            "Wilson95": [
+              0.519418953556502,
+              0.7599957799083991
+            ],
+            "actual_frequency": 0.6491228070175439,
+            "bin": 6,
+            "gap": -0.0012953763571083021,
+            "lower": 0.6,
+            "mean_prediction": 0.6478274306604356,
+            "upper": 0.7
+          },
+          {
+            "N": 63,
+            "Wilson95": [
+              0.5436724114497559,
+              0.7705038553539602
+            ],
+            "actual_frequency": 0.6666666666666666,
+            "bin": 7,
+            "gap": 0.08771466626455948,
+            "lower": 0.7,
+            "mean_prediction": 0.7543813329312261,
+            "upper": 0.8
+          },
+          {
+            "N": 33,
+            "Wilson95": [
+              0.8039375519135219,
+              0.9832191169128082
+            ],
+            "actual_frequency": 0.9393939393939394,
+            "bin": 8,
+            "gap": -0.09952572790784064,
+            "lower": 0.8,
+            "mean_prediction": 0.8398682114860988,
+            "upper": 0.9
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "actual_frequency": 0.8,
+            "bin": 9,
+            "gap": 0.10518128494587975,
+            "lower": 0.9,
+            "mean_prediction": 0.9051812849458798,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2026": {
+        "ECE": 0.08627876132779509,
+        "N": 183,
+        "ROC_AUC": 0.7245401226339643,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6612021857923497,
+        "brier": 0.1930473098553773,
+        "calibration": {
+          "intercept": -0.38118712963233903,
+          "iterations": 6,
+          "slope": 1.3893419599415713,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.5669745639374232,
+        "mean_predicted_KO": 0.6832437644988717,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 2,
+            "Wilson95": [
+              0.0,
+              0.6576197724933469
+            ],
+            "actual_frequency": 0.0,
+            "bin": 2,
+            "gap": 0.2380368550109811,
+            "lower": 0.2,
+            "mean_prediction": 0.2380368550109811,
+            "upper": 0.3
+          },
+          {
+            "N": 4,
+            "Wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ],
+            "actual_frequency": 0.25,
+            "bin": 3,
+            "gap": 0.10983088862860435,
+            "lower": 0.3,
+            "mean_prediction": 0.35983088862860435,
+            "upper": 0.4
+          },
+          {
+            "N": 12,
+            "Wilson95": [
+              0.2537815976337061,
+              0.7462184023662939
+            ],
+            "actual_frequency": 0.5,
+            "bin": 4,
+            "gap": -0.03904801370152061,
+            "lower": 0.4,
+            "mean_prediction": 0.4609519862984794,
+            "upper": 0.5
+          },
+          {
+            "N": 25,
+            "Wilson95": [
+              0.17205190306907978,
+              0.5158973072689775
+            ],
+            "actual_frequency": 0.32,
+            "bin": 5,
+            "gap": 0.235817253567072,
+            "lower": 0.5,
+            "mean_prediction": 0.555817253567072,
+            "upper": 0.6
+          },
+          {
+            "N": 54,
+            "Wilson95": [
+              0.5717242709884697,
+              0.8086257486782021
+            ],
+            "actual_frequency": 0.7037037037037037,
+            "bin": 6,
+            "gap": -0.05627964789925177,
+            "lower": 0.6,
+            "mean_prediction": 0.647424055804452,
+            "upper": 0.7
+          },
+          {
+            "N": 47,
+            "Wilson95": [
+              0.5383265689689715,
+              0.7960462125036255
+            ],
+            "actual_frequency": 0.6808510638297872,
+            "bin": 7,
+            "gap": 0.06596771296652848,
+            "lower": 0.7,
+            "mean_prediction": 0.7468187767963157,
+            "upper": 0.8
+          },
+          {
+            "N": 31,
+            "Wilson95": [
+              0.7510006155660716,
+              0.9665353558368026
+            ],
+            "actual_frequency": 0.9032258064516129,
+            "bin": 8,
+            "gap": -0.052520927492953895,
+            "lower": 0.8,
+            "mean_prediction": 0.850704878958659,
+            "upper": 0.9
+          },
+          {
+            "N": 8,
+            "Wilson95": [
+              0.6755924351161198,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 9,
+            "gap": -0.09273453832338396,
+            "lower": 0.9,
+            "mean_prediction": 0.907265461676616,
+            "upper": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "MOV1_MIN": {
+    "aggregate": {
+      "ECE": 0.031386558065840564,
+      "N": 2115,
+      "ROC_AUC": 0.6635626402025347,
+      "ROC_AUC_status": "DEFINED",
+      "actual_KO_frequency": 0.6434988179669031,
+      "brier": 0.213614214294888,
+      "calibration": {
+        "intercept": 0.010552103476516275,
+        "iterations": 6,
+        "slope": 0.8306575820589692,
+        "status": "CONVERGED"
+      },
+      "log_loss": 0.6153655880481265,
+      "mean_predicted_KO": 0.6631522896758844,
+      "reliability": [
+        {
+          "N": 0,
+          "Wilson95": [
+            null,
+            null
+          ],
+          "actual_frequency": null,
+          "bin": 0,
+          "gap": null,
+          "lower": 0.0,
+          "mean_prediction": null,
+          "upper": 0.1
+        },
+        {
+          "N": 2,
+          "Wilson95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ],
+          "actual_frequency": 0.5,
+          "bin": 1,
+          "gap": -0.335508006809101,
+          "lower": 0.1,
+          "mean_prediction": 0.164491993190899,
+          "upper": 0.2
+        },
+        {
+          "N": 30,
+          "Wilson95": [
+            0.33154125640533766,
+            0.6684587435946623
+          ],
+          "actual_frequency": 0.5,
+          "bin": 2,
+          "gap": -0.24327665655844738,
+          "lower": 0.2,
+          "mean_prediction": 0.2567233434415526,
+          "upper": 0.3
+        },
+        {
+          "N": 69,
+          "Wilson95": [
+            0.2335105070168671,
+            0.4507352457128168
+          ],
+          "actual_frequency": 0.3333333333333333,
+          "bin": 3,
+          "gap": 0.026156739768212922,
+          "lower": 0.3,
+          "mean_prediction": 0.35949007310154624,
+          "upper": 0.4
+        },
+        {
+          "N": 208,
+          "Wilson95": [
+            0.40914326914496396,
+            0.5436516178631351
+          ],
+          "actual_frequency": 0.47596153846153844,
+          "bin": 4,
+          "gap": -0.021338572653880006,
+          "lower": 0.4,
+          "mean_prediction": 0.45462296580765843,
+          "upper": 0.5
+        },
+        {
+          "N": 380,
+          "Wilson95": [
+            0.4813419457751135,
+            0.5811838691114206
+          ],
+          "actual_frequency": 0.531578947368421,
+          "bin": 5,
+          "gap": 0.023117920281259363,
+          "lower": 0.5,
+          "mean_prediction": 0.5546968676496804,
+          "upper": 0.6
+        },
+        {
+          "N": 495,
+          "Wilson95": [
+            0.5930867995415912,
+            0.6775402656569431
+          ],
+          "actual_frequency": 0.6363636363636364,
+          "bin": 6,
+          "gap": 0.015016605880293299,
+          "lower": 0.6,
+          "mean_prediction": 0.6513802422439297,
+          "upper": 0.7
+        },
+        {
+          "N": 518,
+          "Wilson95": [
+            0.6579897929071928,
+            0.736766117183849
+          ],
+          "actual_frequency": 0.6988416988416989,
+          "bin": 7,
+          "gap": 0.04944711736813456,
+          "lower": 0.7,
+          "mean_prediction": 0.7482888162098335,
+          "upper": 0.8
+        },
+        {
+          "N": 333,
+          "Wilson95": [
+            0.7749668963702986,
+            0.8573780671794026
+          ],
+          "actual_frequency": 0.8198198198198198,
+          "bin": 8,
+          "gap": 0.022936895144464953,
+          "lower": 0.8,
+          "mean_prediction": 0.8427567149642847,
+          "upper": 0.9
+        },
+        {
+          "N": 80,
+          "Wilson95": [
+            0.7998178190762713,
+            0.9396731305336952
+          ],
+          "actual_frequency": 0.8875,
+          "bin": 9,
+          "gap": 0.033754924318039614,
+          "lower": 0.9,
+          "mean_prediction": 0.9212549243180396,
+          "upper": 1.0
+        }
+      ]
+    },
+    "annual": {
+      "2018": {
+        "ECE": 0.0642427426764973,
+        "N": 241,
+        "ROC_AUC": 0.6947755702722591,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6265560165975104,
+        "brier": 0.21291932287294976,
+        "calibration": {
+          "intercept": -0.06050305547579123,
+          "iterations": 6,
+          "slope": 0.8336302781785732,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6155740345125874,
+        "mean_predicted_KO": 0.6595363359005587,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 1,
+            "gap": -0.8694829444653298,
+            "lower": 0.1,
+            "mean_prediction": 0.13051705553467025,
+            "upper": 0.2
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.2307242812760128,
+              0.882379225767352
+            ],
+            "actual_frequency": 0.6,
+            "bin": 2,
+            "gap": -0.3561931249762467,
+            "lower": 0.2,
+            "mean_prediction": 0.24380687502375326,
+            "upper": 0.3
+          },
+          {
+            "N": 10,
+            "Wilson95": [
+              0.05668215145437519,
+              0.5098375284633583
+            ],
+            "actual_frequency": 0.2,
+            "bin": 3,
+            "gap": 0.15696364749425934,
+            "lower": 0.3,
+            "mean_prediction": 0.35696364749425935,
+            "upper": 0.4
+          },
+          {
+            "N": 28,
+            "Wilson95": [
+              0.26508547124123694,
+              0.6092921437253123
+            ],
+            "actual_frequency": 0.42857142857142855,
+            "bin": 4,
+            "gap": 0.014198882620613973,
+            "lower": 0.4,
+            "mean_prediction": 0.4427703111920425,
+            "upper": 0.5
+          },
+          {
+            "N": 37,
+            "Wilson95": [
+              0.3103856980437303,
+              0.6161595310782052
+            ],
+            "actual_frequency": 0.4594594594594595,
+            "bin": 5,
+            "gap": 0.09012904006608674,
+            "lower": 0.5,
+            "mean_prediction": 0.5495884995255462,
+            "upper": 0.6
+          },
+          {
+            "N": 49,
+            "Wilson95": [
+              0.5337920531457014,
+              0.7879250299818812
+            ],
+            "actual_frequency": 0.673469387755102,
+            "bin": 6,
+            "gap": -0.022789254023551586,
+            "lower": 0.6,
+            "mean_prediction": 0.6506801337315504,
+            "upper": 0.7
+          },
+          {
+            "N": 54,
+            "Wilson95": [
+              0.5148483072023632,
+              0.7617698889188528
+            ],
+            "actual_frequency": 0.6481481481481481,
+            "bin": 7,
+            "gap": 0.09852511982443257,
+            "lower": 0.7,
+            "mean_prediction": 0.7466732679725807,
+            "upper": 0.8
+          },
+          {
+            "N": 44,
+            "Wilson95": [
+              0.7063379493775939,
+              0.9207332298779876
+            ],
+            "actual_frequency": 0.8409090909090909,
+            "bin": 8,
+            "gap": 0.0037789023290510926,
+            "lower": 0.8,
+            "mean_prediction": 0.844687993238142,
+            "upper": 0.9
+          },
+          {
+            "N": 13,
+            "Wilson95": [
+              0.5776536898051745,
+              0.9567418216419186
+            ],
+            "actual_frequency": 0.8461538461538461,
+            "bin": 9,
+            "gap": 0.07129008652097368,
+            "lower": 0.9,
+            "mean_prediction": 0.9174439326748198,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2019": {
+        "ECE": 0.045197638723756275,
+        "N": 231,
+        "ROC_AUC": 0.6495253164556962,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.658008658008658,
+        "brier": 0.21262973194497992,
+        "calibration": {
+          "intercept": 0.14218661449352285,
+          "iterations": 6,
+          "slope": 0.7543586875017149,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6131203831129565,
+        "mean_predicted_KO": 0.6593798322153009,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 7,
+            "Wilson95": [
+              0.15821985525146975,
+              0.7495416354723428
+            ],
+            "actual_frequency": 0.42857142857142855,
+            "bin": 2,
+            "gap": -0.165992089165661,
+            "lower": 0.2,
+            "mean_prediction": 0.26257933940576755,
+            "upper": 0.3
+          },
+          {
+            "N": 4,
+            "Wilson95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ],
+            "actual_frequency": 0.25,
+            "bin": 3,
+            "gap": 0.09623981148361593,
+            "lower": 0.3,
+            "mean_prediction": 0.34623981148361593,
+            "upper": 0.4
+          },
+          {
+            "N": 24,
+            "Wilson95": [
+              0.42709962442674276,
+              0.7884063244045122
+            ],
+            "actual_frequency": 0.625,
+            "bin": 4,
+            "gap": -0.16250050114862313,
+            "lower": 0.4,
+            "mean_prediction": 0.46249949885137687,
+            "upper": 0.5
+          },
+          {
+            "N": 41,
+            "Wilson95": [
+              0.38746471267669474,
+              0.6794376602366394
+            ],
+            "actual_frequency": 0.5365853658536586,
+            "bin": 5,
+            "gap": 0.022104382257005395,
+            "lower": 0.5,
+            "mean_prediction": 0.558689748110664,
+            "upper": 0.6
+          },
+          {
+            "N": 54,
+            "Wilson95": [
+              0.49627467352266663,
+              0.7457662480833973
+            ],
+            "actual_frequency": 0.6296296296296297,
+            "bin": 6,
+            "gap": 0.018396903516333274,
+            "lower": 0.6,
+            "mean_prediction": 0.6480265331459629,
+            "upper": 0.7
+          },
+          {
+            "N": 61,
+            "Wilson95": [
+              0.6156325821638563,
+              0.8316121363763852
+            ],
+            "actual_frequency": 0.7377049180327869,
+            "bin": 7,
+            "gap": 0.009599052194772417,
+            "lower": 0.7,
+            "mean_prediction": 0.7473039702275593,
+            "upper": 0.8
+          },
+          {
+            "N": 31,
+            "Wilson95": [
+              0.6018758161665794,
+              0.886048644387375
+            ],
+            "actual_frequency": 0.7741935483870968,
+            "bin": 8,
+            "gap": 0.06838470873691072,
+            "lower": 0.8,
+            "mean_prediction": 0.8425782571240075,
+            "upper": 0.9
+          },
+          {
+            "N": 9,
+            "Wilson95": [
+              0.5650002944233439,
+              0.9801091123614551
+            ],
+            "actual_frequency": 0.8888888888888888,
+            "bin": 9,
+            "gap": 0.04317311448689831,
+            "lower": 0.9,
+            "mean_prediction": 0.9320620033757872,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2020": {
+        "ECE": 0.07160124890890351,
+        "N": 220,
+        "ROC_AUC": 0.6458112407211029,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6272727272727273,
+        "brier": 0.223572057007389,
+        "calibration": {
+          "intercept": 0.04669346564163939,
+          "iterations": 5,
+          "slope": 0.7373394881365763,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6342465128167675,
+        "mean_predicted_KO": 0.6491009440294607,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 4,
+            "Wilson95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "actual_frequency": 0.75,
+            "bin": 2,
+            "gap": -0.4821646044396011,
+            "lower": 0.2,
+            "mean_prediction": 0.2678353955603989,
+            "upper": 0.3
+          },
+          {
+            "N": 6,
+            "Wilson95": [
+              0.09677141110578041,
+              0.700006684861608
+            ],
+            "actual_frequency": 0.3333333333333333,
+            "bin": 3,
+            "gap": 0.03164352561606987,
+            "lower": 0.3,
+            "mean_prediction": 0.3649768589494032,
+            "upper": 0.4
+          },
+          {
+            "N": 27,
+            "Wilson95": [
+              0.3731302451322448,
+              0.72414141822977
+            ],
+            "actual_frequency": 0.5555555555555556,
+            "bin": 4,
+            "gap": -0.10517442856865244,
+            "lower": 0.4,
+            "mean_prediction": 0.45038112698690314,
+            "upper": 0.5
+          },
+          {
+            "N": 40,
+            "Wilson95": [
+              0.329354701126789,
+              0.6250263789330753
+            ],
+            "actual_frequency": 0.475,
+            "bin": 5,
+            "gap": 0.07851849497134367,
+            "lower": 0.5,
+            "mean_prediction": 0.5535184949713436,
+            "upper": 0.6
+          },
+          {
+            "N": 64,
+            "Wilson95": [
+              0.4714520812860451,
+              0.7054309075028039
+            ],
+            "actual_frequency": 0.59375,
+            "bin": 6,
+            "gap": 0.06424006735214038,
+            "lower": 0.6,
+            "mean_prediction": 0.6579900673521404,
+            "upper": 0.7
+          },
+          {
+            "N": 44,
+            "Wilson95": [
+              0.5815112690754881,
+              0.8365361837615662
+            ],
+            "actual_frequency": 0.7272727272727273,
+            "bin": 7,
+            "gap": 0.01967846976173604,
+            "lower": 0.7,
+            "mean_prediction": 0.7469511970344633,
+            "upper": 0.8
+          },
+          {
+            "N": 25,
+            "Wilson95": [
+              0.5657031664457093,
+              0.8850368630659855
+            ],
+            "actual_frequency": 0.76,
+            "bin": 8,
+            "gap": 0.07877693162466104,
+            "lower": 0.8,
+            "mean_prediction": 0.838776931624661,
+            "upper": 0.9
+          },
+          {
+            "N": 10,
+            "Wilson95": [
+              0.7224672001371107,
+              0.9999999999999999
+            ],
+            "actual_frequency": 1.0,
+            "bin": 9,
+            "gap": -0.07066655476266914,
+            "lower": 0.9,
+            "mean_prediction": 0.9293334452373309,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2021": {
+        "ECE": 0.08184969216406274,
+        "N": 239,
+        "ROC_AUC": 0.6039362931176762,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.694560669456067,
+        "brier": 0.21450237200519195,
+        "calibration": {
+          "intercept": 0.5051069236285142,
+          "iterations": 5,
+          "slope": 0.4942904227387933,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.619447309809947,
+        "mean_predicted_KO": 0.6480200300901343,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.2307242812760128,
+              0.882379225767352
+            ],
+            "actual_frequency": 0.6,
+            "bin": 2,
+            "gap": -0.3478844187032646,
+            "lower": 0.2,
+            "mean_prediction": 0.2521155812967354,
+            "upper": 0.3
+          },
+          {
+            "N": 12,
+            "Wilson95": [
+              0.19326031365875665,
+              0.6804886874504503
+            ],
+            "actual_frequency": 0.4166666666666667,
+            "bin": 3,
+            "gap": -0.061402563000343136,
+            "lower": 0.3,
+            "mean_prediction": 0.35526410366632355,
+            "upper": 0.4
+          },
+          {
+            "N": 26,
+            "Wilson95": [
+              0.4253485008511553,
+              0.7757140556428721
+            ],
+            "actual_frequency": 0.6153846153846154,
+            "bin": 4,
+            "gap": -0.15812491834554487,
+            "lower": 0.4,
+            "mean_prediction": 0.45725969703907055,
+            "upper": 0.5
+          },
+          {
+            "N": 49,
+            "Wilson95": [
+              0.5337920531457014,
+              0.7879250299818812
+            ],
+            "actual_frequency": 0.673469387755102,
+            "bin": 5,
+            "gap": -0.11985775467082571,
+            "lower": 0.5,
+            "mean_prediction": 0.5536116330842763,
+            "upper": 0.6
+          },
+          {
+            "N": 48,
+            "Wilson95": [
+              0.5682074019042831,
+              0.8175842107348348
+            ],
+            "actual_frequency": 0.7083333333333334,
+            "bin": 6,
+            "gap": -0.06004403984290396,
+            "lower": 0.6,
+            "mean_prediction": 0.6482892934904294,
+            "upper": 0.7
+          },
+          {
+            "N": 56,
+            "Wilson95": [
+              0.5852474928448334,
+              0.8158122485614109
+            ],
+            "actual_frequency": 0.7142857142857143,
+            "bin": 7,
+            "gap": 0.033146322253747584,
+            "lower": 0.7,
+            "mean_prediction": 0.7474320365394619,
+            "upper": 0.8
+          },
+          {
+            "N": 33,
+            "Wilson95": [
+              0.6561176836533009,
+              0.9138923179105933
+            ],
+            "actual_frequency": 0.8181818181818182,
+            "bin": 8,
+            "gap": 0.03446091739605517,
+            "lower": 0.8,
+            "mean_prediction": 0.8526427355778734,
+            "upper": 0.9
+          },
+          {
+            "N": 10,
+            "Wilson95": [
+              0.49016247153664183,
+              0.9433178485456247
+            ],
+            "actual_frequency": 0.8,
+            "bin": 9,
+            "gap": 0.12260274890968514,
+            "lower": 0.9,
+            "mean_prediction": 0.9226027489096852,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2022": {
+        "ECE": 0.07364645337784094,
+        "N": 268,
+        "ROC_AUC": 0.6638934105022005,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6380597014925373,
+        "brier": 0.21625363992962204,
+        "calibration": {
+          "intercept": -0.076996850864723,
+          "iterations": 5,
+          "slope": 0.8441458298157241,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6229299099366713,
+        "mean_predicted_KO": 0.6762692683257158,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.20654931437723745,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 2,
+            "gap": -0.7986475121399264,
+            "lower": 0.2,
+            "mean_prediction": 0.2013524878600737,
+            "upper": 0.3
+          },
+          {
+            "N": 9,
+            "Wilson95": [
+              0.18877852109766452,
+              0.733348706504507
+            ],
+            "actual_frequency": 0.4444444444444444,
+            "bin": 3,
+            "gap": -0.08866978384286911,
+            "lower": 0.3,
+            "mean_prediction": 0.3557746606015753,
+            "upper": 0.4
+          },
+          {
+            "N": 27,
+            "Wilson95": [
+              0.18643261498715644,
+              0.5217523949267991
+            ],
+            "actual_frequency": 0.3333333333333333,
+            "bin": 4,
+            "gap": 0.13378474351406378,
+            "lower": 0.4,
+            "mean_prediction": 0.4671180768473971,
+            "upper": 0.5
+          },
+          {
+            "N": 39,
+            "Wilson95": [
+              0.33865175329862,
+              0.6380063711554202
+            ],
+            "actual_frequency": 0.48717948717948717,
+            "bin": 5,
+            "gap": 0.07096116338112629,
+            "lower": 0.5,
+            "mean_prediction": 0.5581406505606135,
+            "upper": 0.6
+          },
+          {
+            "N": 64,
+            "Wilson95": [
+              0.5822979889645707,
+              0.8009484867446022
+            ],
+            "actual_frequency": 0.703125,
+            "bin": 6,
+            "gap": -0.049247925472797105,
+            "lower": 0.6,
+            "mean_prediction": 0.6538770745272029,
+            "upper": 0.7
+          },
+          {
+            "N": 72,
+            "Wilson95": [
+              0.5660765126783435,
+              0.7767438972173802
+            ],
+            "actual_frequency": 0.6805555555555556,
+            "bin": 7,
+            "gap": 0.06776862125017591,
+            "lower": 0.7,
+            "mean_prediction": 0.7483241768057315,
+            "upper": 0.8
+          },
+          {
+            "N": 47,
+            "Wilson95": [
+              0.6277574244984441,
+              0.8639672541377281
+            ],
+            "actual_frequency": 0.7659574468085106,
+            "bin": 8,
+            "gap": 0.07301345291564054,
+            "lower": 0.8,
+            "mean_prediction": 0.8389708997241512,
+            "upper": 0.9
+          },
+          {
+            "N": 9,
+            "Wilson95": [
+              0.5650002944233439,
+              0.9801091123614551
+            ],
+            "actual_frequency": 0.8888888888888888,
+            "bin": 9,
+            "gap": 0.033117804942799034,
+            "lower": 0.9,
+            "mean_prediction": 0.9220066938316879,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2023": {
+        "ECE": 0.06774987027066026,
+        "N": 258,
+        "ROC_AUC": 0.6533544303797468,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6124031007751938,
+        "brier": 0.2230753930003087,
+        "calibration": {
+          "intercept": -0.0828597549664872,
+          "iterations": 5,
+          "slope": 0.7990691035570072,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6379621260612587,
+        "mean_predicted_KO": 0.6557841261460451,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 3,
+            "Wilson95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "actual_frequency": 0.3333333333333333,
+            "bin": 2,
+            "gap": -0.06696541256138677,
+            "lower": 0.2,
+            "mean_prediction": 0.26636792077194654,
+            "upper": 0.3
+          },
+          {
+            "N": 11,
+            "Wilson95": [
+              0.09746059290024889,
+              0.5656453011761291
+            ],
+            "actual_frequency": 0.2727272727272727,
+            "bin": 3,
+            "gap": 0.09188731261154359,
+            "lower": 0.3,
+            "mean_prediction": 0.3646145853388163,
+            "upper": 0.4
+          },
+          {
+            "N": 30,
+            "Wilson95": [
+              0.24590628116801852,
+              0.5767963974667752
+            ],
+            "actual_frequency": 0.4,
+            "bin": 4,
+            "gap": 0.05343833529420838,
+            "lower": 0.4,
+            "mean_prediction": 0.4534383352942084,
+            "upper": 0.5
+          },
+          {
+            "N": 49,
+            "Wilson95": [
+              0.4724599944352045,
+              0.7357098828826433
+            ],
+            "actual_frequency": 0.6122448979591837,
+            "bin": 5,
+            "gap": -0.06005479090594257,
+            "lower": 0.5,
+            "mean_prediction": 0.5521901070532411,
+            "upper": 0.6
+          },
+          {
+            "N": 51,
+            "Wilson95": [
+              0.41384708550368815,
+              0.6773248145062598
+            ],
+            "actual_frequency": 0.5490196078431373,
+            "bin": 6,
+            "gap": 0.10016247209404572,
+            "lower": 0.6,
+            "mean_prediction": 0.649182079937183,
+            "upper": 0.7
+          },
+          {
+            "N": 61,
+            "Wilson95": [
+              0.5640856563035855,
+              0.7906256721938473
+            ],
+            "actual_frequency": 0.6885245901639344,
+            "bin": 7,
+            "gap": 0.06540684959211196,
+            "lower": 0.7,
+            "mean_prediction": 0.7539314397560464,
+            "upper": 0.8
+          },
+          {
+            "N": 48,
+            "Wilson95": [
+              0.6574109872738206,
+              0.882697270420944
+            ],
+            "actual_frequency": 0.7916666666666666,
+            "bin": 8,
+            "gap": 0.04169204985356367,
+            "lower": 0.8,
+            "mean_prediction": 0.8333587165202303,
+            "upper": 0.9
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "actual_frequency": 0.8,
+            "bin": 9,
+            "gap": 0.12453054906311001,
+            "lower": 0.9,
+            "mean_prediction": 0.92453054906311,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2024": {
+        "ECE": 0.052336592629184685,
+        "N": 223,
+        "ROC_AUC": 0.6706019719771665,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6322869955156951,
+        "brier": 0.2161258594298357,
+        "calibration": {
+          "intercept": -0.1329466324058155,
+          "iterations": 5,
+          "slope": 0.8833380176832729,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.6221494494844464,
+        "mean_predicted_KO": 0.6762661787334958,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 2,
+            "Wilson95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "actual_frequency": 0.5,
+            "bin": 2,
+            "gap": -0.23242080186499292,
+            "lower": 0.2,
+            "mean_prediction": 0.2675791981350071,
+            "upper": 0.3
+          },
+          {
+            "N": 7,
+            "Wilson95": [
+              0.15821985525146975,
+              0.7495416354723428
+            ],
+            "actual_frequency": 0.42857142857142855,
+            "bin": 3,
+            "gap": -0.0667156493770465,
+            "lower": 0.3,
+            "mean_prediction": 0.36185577919438205,
+            "upper": 0.4
+          },
+          {
+            "N": 14,
+            "Wilson95": [
+              0.1634473175355414,
+              0.612355768960926
+            ],
+            "actual_frequency": 0.35714285714285715,
+            "bin": 4,
+            "gap": 0.09255318672902252,
+            "lower": 0.4,
+            "mean_prediction": 0.44969604387187967,
+            "upper": 0.5
+          },
+          {
+            "N": 46,
+            "Wilson95": [
+              0.3813741307280403,
+              0.6587531056595433
+            ],
+            "actual_frequency": 0.5217391304347826,
+            "bin": 5,
+            "gap": 0.038771388236381266,
+            "lower": 0.5,
+            "mean_prediction": 0.5605105186711639,
+            "upper": 0.6
+          },
+          {
+            "N": 49,
+            "Wilson95": [
+              0.4524731939184714,
+              0.7178476147961312
+            ],
+            "actual_frequency": 0.5918367346938775,
+            "bin": 6,
+            "gap": 0.05388899520229451,
+            "lower": 0.6,
+            "mean_prediction": 0.645725729896172,
+            "upper": 0.7
+          },
+          {
+            "N": 58,
+            "Wilson95": [
+              0.5619693557571829,
+              0.7937790437718092
+            ],
+            "actual_frequency": 0.6896551724137931,
+            "bin": 7,
+            "gap": 0.061796447625589224,
+            "lower": 0.7,
+            "mean_prediction": 0.7514516200393824,
+            "upper": 0.8
+          },
+          {
+            "N": 39,
+            "Wilson95": [
+              0.6733195433811838,
+              0.9102273452678089
+            ],
+            "actual_frequency": 0.8205128205128205,
+            "bin": 8,
+            "gap": 0.02855925122299874,
+            "lower": 0.8,
+            "mean_prediction": 0.8490720717358192,
+            "upper": 0.9
+          },
+          {
+            "N": 8,
+            "Wilson95": [
+              0.5291118177871464,
+              0.9775825085499433
+            ],
+            "actual_frequency": 0.875,
+            "bin": 9,
+            "gap": 0.04017687612068277,
+            "lower": 0.9,
+            "mean_prediction": 0.9151768761206828,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2025": {
+        "ECE": 0.033226903250282026,
+        "N": 252,
+        "ROC_AUC": 0.6813951885296754,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6468253968253969,
+        "brier": 0.20651851169843705,
+        "calibration": {
+          "intercept": -0.14344741345916318,
+          "iterations": 6,
+          "slope": 1.1213060510001418,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.5985667312043366,
+        "mean_predicted_KO": 0.6611283091636702,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "actual_frequency": 0.0,
+            "bin": 1,
+            "gap": 0.19846693084712774,
+            "lower": 0.1,
+            "mean_prediction": 0.19846693084712774,
+            "upper": 0.2
+          },
+          {
+            "N": 1,
+            "Wilson95": [
+              0.0,
+              0.7934506856227626
+            ],
+            "actual_frequency": 0.0,
+            "bin": 2,
+            "gap": 0.23561920146155563,
+            "lower": 0.2,
+            "mean_prediction": 0.23561920146155563,
+            "upper": 0.3
+          },
+          {
+            "N": 7,
+            "Wilson95": [
+              0.08221892400405678,
+              0.6410655481673808
+            ],
+            "actual_frequency": 0.2857142857142857,
+            "bin": 3,
+            "gap": 0.0873686532905969,
+            "lower": 0.3,
+            "mean_prediction": 0.3730829390048826,
+            "upper": 0.4
+          },
+          {
+            "N": 19,
+            "Wilson95": [
+              0.2732980516117956,
+              0.6829219075488682
+            ],
+            "actual_frequency": 0.47368421052631576,
+            "bin": 4,
+            "gap": -0.017455054278599447,
+            "lower": 0.4,
+            "mean_prediction": 0.4562291562477163,
+            "upper": 0.5
+          },
+          {
+            "N": 55,
+            "Wilson95": [
+              0.3979154435522611,
+              0.6530690163868067
+            ],
+            "actual_frequency": 0.5272727272727272,
+            "bin": 5,
+            "gap": 0.02964916553804131,
+            "lower": 0.5,
+            "mean_prediction": 0.5569218928107685,
+            "upper": 0.6
+          },
+          {
+            "N": 63,
+            "Wilson95": [
+              0.4955863038023086,
+              0.7288253153432028
+            ],
+            "actual_frequency": 0.6190476190476191,
+            "bin": 6,
+            "gap": 0.028338062337662562,
+            "lower": 0.6,
+            "mean_prediction": 0.6473856813852816,
+            "upper": 0.7
+          },
+          {
+            "N": 63,
+            "Wilson95": [
+              0.6097009078044822,
+              0.82416155587684
+            ],
+            "actual_frequency": 0.7301587301587301,
+            "bin": 7,
+            "gap": 0.01539081735178316,
+            "lower": 0.7,
+            "mean_prediction": 0.7455495475105133,
+            "upper": 0.8
+          },
+          {
+            "N": 38,
+            "Wilson95": [
+              0.7586947827711269,
+              0.9582974265244647
+            ],
+            "actual_frequency": 0.8947368421052632,
+            "bin": 8,
+            "gap": -0.054020442726834594,
+            "lower": 0.8,
+            "mean_prediction": 0.8407163993784286,
+            "upper": 0.9
+          },
+          {
+            "N": 5,
+            "Wilson95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "actual_frequency": 0.8,
+            "bin": 9,
+            "gap": 0.11149330675755065,
+            "lower": 0.9,
+            "mean_prediction": 0.9114933067575507,
+            "upper": 1.0
+          }
+        ]
+      },
+      "2026": {
+        "ECE": 0.06329636734492719,
+        "N": 183,
+        "ROC_AUC": 0.7298720341242335,
+        "ROC_AUC_status": "DEFINED",
+        "actual_KO_frequency": 0.6612021857923497,
+        "brier": 0.19214732456323771,
+        "calibration": {
+          "intercept": -0.4401594540842378,
+          "iterations": 6,
+          "slope": 1.4343397845859571,
+          "status": "CONVERGED"
+        },
+        "log_loss": 0.5618269953854522,
+        "mean_predicted_KO": 0.6873166085733168,
+        "reliability": [
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 0,
+            "gap": null,
+            "lower": 0.0,
+            "mean_prediction": null,
+            "upper": 0.1
+          },
+          {
+            "N": 0,
+            "Wilson95": [
+              null,
+              null
+            ],
+            "actual_frequency": null,
+            "bin": 1,
+            "gap": null,
+            "lower": 0.1,
+            "mean_prediction": null,
+            "upper": 0.2
+          },
+          {
+            "N": 2,
+            "Wilson95": [
+              0.0,
+              0.6576197724933469
+            ],
+            "actual_frequency": 0.0,
+            "bin": 2,
+            "gap": 0.270728607827342,
+            "lower": 0.2,
+            "mean_prediction": 0.270728607827342,
+            "upper": 0.3
+          },
+          {
+            "N": 3,
+            "Wilson95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "actual_frequency": 0.3333333333333333,
+            "bin": 3,
+            "gap": 0.013295171300440944,
+            "lower": 0.3,
+            "mean_prediction": 0.34662850463377426,
+            "upper": 0.4
+          },
+          {
+            "N": 13,
+            "Wilson95": [
+              0.23206067809538303,
+              0.7085620428549398
+            ],
+            "actual_frequency": 0.46153846153846156,
+            "bin": 4,
+            "gap": -0.012650697392184551,
+            "lower": 0.4,
+            "mean_prediction": 0.448887764146277,
+            "upper": 0.5
+          },
+          {
+            "N": 24,
+            "Wilson95": [
+              0.21159367559548778,
+              0.5729003755732572
+            ],
+            "actual_frequency": 0.375,
+            "bin": 5,
+            "gap": 0.16821071462392867,
+            "lower": 0.5,
+            "mean_prediction": 0.5432107146239287,
+            "upper": 0.6
+          },
+          {
+            "N": 53,
+            "Wilson95": [
+              0.5259478663754829,
+              0.7731296089867581
+            ],
+            "actual_frequency": 0.660377358490566,
+            "bin": 6,
+            "gap": -0.0010390069581667216,
+            "lower": 0.6,
+            "mean_prediction": 0.6593383515323993,
+            "upper": 0.7
+          },
+          {
+            "N": 49,
+            "Wilson95": [
+              0.5337920531457014,
+              0.7879250299818812
+            ],
+            "actual_frequency": 0.673469387755102,
+            "bin": 7,
+            "gap": 0.07270790644875569,
+            "lower": 0.7,
+            "mean_prediction": 0.7461772942038577,
+            "upper": 0.8
+          },
+          {
+            "N": 28,
+            "Wilson95": [
+              0.7735463743160095,
+              0.9801879358846942
+            ],
+            "actual_frequency": 0.9285714285714286,
+            "bin": 8,
+            "gap": -0.08031177889233676,
+            "lower": 0.8,
+            "mean_prediction": 0.8482596496790918,
+            "upper": 0.9
+          },
+          {
+            "N": 11,
+            "Wilson95": [
+              0.7411670330319684,
+              1.0
+            ],
+            "actual_frequency": 1.0,
+            "bin": 9,
+            "gap": -0.08489924397597148,
+            "lower": 0.9,
+            "mean_prediction": 0.9151007560240285,
+            "upper": 1.0
+          }
+        ]
+      }
+    }
+  }
+}

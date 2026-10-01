@@ -1,0 +1,1207 @@
+outer_year,surface,feature,coefficient,scale,sign
+2018,C1,fs__prior_fight_count__career__raw::mean,0.067944507880131247,standardized numeric; unscaled title/one-hot,1
+2018,C1,fs__prior_fight_count__career__raw::absolute_difference,0.15069096711063226,standardized numeric; unscaled title/one-hot,1
+2018,C1,scheduled_rounds,0.098547799560574995,standardized numeric; unscaled title/one-hot,1
+2018,C1,ctx__title_bout,-0.071087185488685478,standardized numeric; unscaled title/one-hot,-1
+2018,C1,division=Bantamweight,-0.17967065483062317,standardized numeric; unscaled title/one-hot,-1
+2018,C1,division=Catch Weight,0.14055766892244936,standardized numeric; unscaled title/one-hot,1
+2018,C1,division=Featherweight,-0.025015788203705661,standardized numeric; unscaled title/one-hot,-1
+2018,C1,division=Flyweight,-0.28327166182382424,standardized numeric; unscaled title/one-hot,-1
+2018,C1,division=Heavyweight,0.4541129448235357,standardized numeric; unscaled title/one-hot,1
+2018,C1,division=Light Heavyweight,0.23159601689387291,standardized numeric; unscaled title/one-hot,1
+2018,C1,division=Lightweight,-0.074988858124827334,standardized numeric; unscaled title/one-hot,-1
+2018,C1,division=Middleweight,0.40421583266544114,standardized numeric; unscaled title/one-hot,1
+2018,C1,division=Welterweight,0.096098817305059051,standardized numeric; unscaled title/one-hot,1
+2018,C1,division=Women's Bantamweight,-0.11700196619504825,standardized numeric; unscaled title/one-hot,-1
+2018,C1,division=Women's Featherweight,0.034895535552666612,standardized numeric; unscaled title/one-hot,1
+2018,C1,division=Women's Flyweight,-0.11917193292520716,standardized numeric; unscaled title/one-hot,-1
+2018,C1,division=Women's Strawweight,-0.54174937725547456,standardized numeric; unscaled title/one-hot,-1
+2018,C1,intercept,0.51641026823926495,intercept,1
+2018,MOV1_MIN,fs__prior_fight_count__career__raw::mean,0.14655045539586958,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,0.15174994899374222,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.042287120638161105,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.003223325135465179,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.11724585125919976,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.0015259784861337258,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.10498950043291823,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.0030455571458908042,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.041265674952613629,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.037700475528945281,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.10202891114852661,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.10720581433930193,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.20485677453413015,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.089684816052692254,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.13174891121618557,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,0.063379437424590943,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.25111062579775512,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.14544291400953602,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.17822940937422496,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.06251502752150076,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.19863533120135396,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.077510085992420902,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.055317598016528149,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.0019745347298356646,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.003822100555470556,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.048404897301124933,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,directional_knockdown_matchup::mean,-0.20625965848175312,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,directional_knockdown_matchup::absolute_difference,-0.045304939337942489,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.086776056173893876,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.068310031981910976,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.19038154933692542,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.091752475968769204,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,scheduled_rounds,0.069817178841077118,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,ctx__title_bout,-0.025593939011256926,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,division=Bantamweight,-0.031842638940870013,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,division=Catch Weight,0.038744845831167107,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,division=Featherweight,0.061282032870088786,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,division=Flyweight,-0.023769520715493708,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,division=Heavyweight,-0.040891983968140116,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,division=Light Heavyweight,0.035680530537282582,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,division=Lightweight,-0.015901438006484934,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,division=Middleweight,0.16032725444081797,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,division=Welterweight,0.055485240070273653,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,division=Women's Bantamweight,-0.014838502113404655,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,division=Women's Featherweight,0.0087284122974850241,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_MIN,division=Women's Flyweight,-0.043521902863565366,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,division=Women's Strawweight,-0.18859705942641783,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_MIN,intercept,0.62096205541518956,intercept,1
+2018,MOV1_FULL,fs__prior_fight_count__career__raw::mean,0.1426369222495118,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,0.15539239347239236,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.026065408901348747,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,-0.0081440593997323101,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.12713950396789628,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.010600282566999561,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.11601551996983285,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.012847403709494439,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.040164880541803241,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.037329335955817264,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.10769056327626671,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.092572650205842114,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.19589044157672722,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.082347898899320732,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.094293180806916566,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,0.010587535646423051,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.17168378121666836,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.16711024505739092,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.16071891223940463,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.079064031263358606,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.17336227896507381,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.098712527986761889,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.0017495061542489028,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.015970647726850095,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,0.025595197379260141,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.029610844326432368,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,directional_knockdown_matchup::mean,-0.19437479158694929,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.067012364023091478,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,0.036552965726775896,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.060266519241479598,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.1815981082849745,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,-0.059537074381599761,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.084589440350456152,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.01605834926570851,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.057054937064512992,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,0.045047824785195617,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.065800055477119673,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.044107391426990106,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.068331718348607698,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.099165955108630577,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,-0.081203565902815675,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.00091417971973027244,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.029765163934184984,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,0.077519750676656188,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,-0.11875351474617479,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,0.017277178236927575,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,-0.11474975681278252,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.05881191498302684,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.067996084201448967,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.085954301832976296,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.14954425676282371,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.084352055529331046,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,scheduled_rounds,0.066252764270361225,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,ctx__title_bout,-0.018681079315400858,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,division=Bantamweight,-0.06167633499132625,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,division=Catch Weight,0.031050211213099053,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,division=Featherweight,0.049295083033914402,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,division=Flyweight,-0.030730822682578179,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,division=Heavyweight,-0.024774488215133252,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,division=Light Heavyweight,0.046397260463070467,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,division=Lightweight,-0.017426621709684061,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,division=Middleweight,0.19293362146690929,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,division=Welterweight,0.070158522421292738,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,division=Women's Bantamweight,-0.030980645695500707,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,division=Women's Featherweight,0.0083020772959011072,standardized numeric; unscaled title/one-hot,1
+2018,MOV1_FULL,division=Women's Flyweight,-0.038505606648176934,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,division=Women's Strawweight,-0.18931872168364342,standardized numeric; unscaled title/one-hot,-1
+2018,MOV1_FULL,intercept,0.62668502563019091,intercept,1
+2019,C1,fs__prior_fight_count__career__raw::mean,0.028444129248639004,standardized numeric; unscaled title/one-hot,1
+2019,C1,fs__prior_fight_count__career__raw::absolute_difference,0.16954603457525938,standardized numeric; unscaled title/one-hot,1
+2019,C1,scheduled_rounds,0.20982788806666691,standardized numeric; unscaled title/one-hot,1
+2019,C1,ctx__title_bout,-0.39442371027093637,standardized numeric; unscaled title/one-hot,-1
+2019,C1,division=Bantamweight,-0.31222588284727393,standardized numeric; unscaled title/one-hot,-1
+2019,C1,division=Catch Weight,0.68996814288125541,standardized numeric; unscaled title/one-hot,1
+2019,C1,division=Featherweight,0.14950934180469841,standardized numeric; unscaled title/one-hot,1
+2019,C1,division=Flyweight,-0.44179025577210645,standardized numeric; unscaled title/one-hot,-1
+2019,C1,division=Heavyweight,0.64072864942198249,standardized numeric; unscaled title/one-hot,1
+2019,C1,division=Light Heavyweight,0.37497174259743915,standardized numeric; unscaled title/one-hot,1
+2019,C1,division=Lightweight,-0.0063037733471087935,standardized numeric; unscaled title/one-hot,-1
+2019,C1,division=Middleweight,0.60571800812065246,standardized numeric; unscaled title/one-hot,1
+2019,C1,division=Welterweight,0.23233734249099891,standardized numeric; unscaled title/one-hot,1
+2019,C1,division=Women's Bantamweight,-0.16949526331152071,standardized numeric; unscaled title/one-hot,-1
+2019,C1,division=Women's Featherweight,0.47771394499557829,standardized numeric; unscaled title/one-hot,1
+2019,C1,division=Women's Flyweight,-1.0356990371257402,standardized numeric; unscaled title/one-hot,-1
+2019,C1,division=Women's Strawweight,-1.0483274281744754,standardized numeric; unscaled title/one-hot,-1
+2019,C1,intercept,0.47626812731327456,intercept,1
+2019,MOV1_MIN,fs__prior_fight_count__career__raw::mean,0.16257780275384942,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,0.1478183824518387,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.032572787490921649,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.072800024929297283,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.12900385412510104,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.0055653693439084214,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.15829123671267201,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.0021964231819299501,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.084055194342064155,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.10995497339874596,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,-0.013134479608506873,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.13138205382843818,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.13621251786770744,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.098582001870380451,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.15515107652844493,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,0.057659483475272659,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.14643825145383385,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.013092760296006435,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.14741637565154789,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.019913534545209433,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.19918185445284206,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.06859504092999974,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.028638370663196383,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.03463248405629827,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,0.033091921332800076,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.054447287255997373,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,directional_knockdown_matchup::mean,-0.18738812567467122,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,directional_knockdown_matchup::absolute_difference,-0.045617807782766848,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.13036294948247068,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.033241817166941065,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.19787161390972197,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.028872621912188114,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,scheduled_rounds,0.082006351773671063,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,ctx__title_bout,-0.087624780976361186,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,division=Bantamweight,-0.097164422209208345,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,division=Catch Weight,0.038324765505410939,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,division=Featherweight,0.097759415487976398,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,division=Flyweight,0.024404175791423829,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,division=Heavyweight,-0.075974501904942801,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,division=Light Heavyweight,0.0098260891769201796,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,division=Lightweight,0.020818269521881334,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,division=Middleweight,0.17466235697186833,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,division=Welterweight,0.071464412607659414,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,division=Women's Bantamweight,-0.0027763127649574359,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,division=Women's Featherweight,0.023121590868912231,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_MIN,division=Women's Flyweight,-0.10062103247855293,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,division=Women's Strawweight,-0.17598794651639152,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_MIN,intercept,0.60920000340014646,intercept,1
+2019,MOV1_FULL,fs__prior_fight_count__career__raw::mean,0.16363874342027504,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,0.15126095382760921,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.01335901788788363,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.050331421969541143,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.14137978082107472,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.0206113596519297,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.17232283418624927,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-4.3383747954578455e-05,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.080690586946565335,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.12043987950192941,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.0081002146937905976,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.11628658705119393,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.12271256381789263,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.083423374919910601,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.096609588575898117,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.011226235351851495,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.083160408900120941,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.032197923472320915,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.12632628398793919,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.043173413892991161,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.16451375514784738,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.10060796941645628,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,0.020102185255703519,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.062440377282821487,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,0.076513175975681413,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.02891927969447726,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,directional_knockdown_matchup::mean,-0.18366081804771711,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.084627713522414799,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,0.088137212870849857,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.057468012193469885,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.10325365462969437,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,-0.0025301233061352361,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.079899039470971031,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.09222500026361663,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.070188486848178674,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,0.0081882741527327316,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.089265829015199735,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.071601195277378155,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.11892643236901869,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.10453326888950359,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,-0.022298562074676297,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.070943860273472312,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.010753086300703244,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,0.12329714558396726,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,-0.11457580434053588,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,-0.028784559206795311,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,-0.097241794094214712,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.064525788374964116,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.11637052995513343,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.052083709230734958,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.15892930732842994,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.018685075847579797,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,scheduled_rounds,0.066659803363832121,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,ctx__title_bout,-0.079346943048911836,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,division=Bantamweight,-0.12834746416329518,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,division=Catch Weight,0.030362887482374801,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,division=Featherweight,0.072386354856164806,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,division=Flyweight,0.015348533584255281,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,division=Heavyweight,-0.046678312188482028,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,division=Light Heavyweight,0.028327939501071448,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,division=Lightweight,0.020939848482434794,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,division=Middleweight,0.21696122609184101,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,division=Welterweight,0.082427032967976196,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,division=Women's Bantamweight,-0.028815749577458836,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,division=Women's Featherweight,0.021421271312370725,standardized numeric; unscaled title/one-hot,1
+2019,MOV1_FULL,division=Women's Flyweight,-0.099548519543781397,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,division=Women's Strawweight,-0.17744264014314795,standardized numeric; unscaled title/one-hot,-1
+2019,MOV1_FULL,intercept,0.61399045464220336,intercept,1
+2020,C1,fs__prior_fight_count__career__raw::mean,0.087415089702652438,standardized numeric; unscaled title/one-hot,1
+2020,C1,fs__prior_fight_count__career__raw::absolute_difference,0.1352438139599515,standardized numeric; unscaled title/one-hot,1
+2020,C1,scheduled_rounds,0.18299772120442206,standardized numeric; unscaled title/one-hot,1
+2020,C1,ctx__title_bout,-0.13216660099696625,standardized numeric; unscaled title/one-hot,-1
+2020,C1,division=Bantamweight,-0.19972213135596262,standardized numeric; unscaled title/one-hot,-1
+2020,C1,division=Catch Weight,0.14704746080202449,standardized numeric; unscaled title/one-hot,1
+2020,C1,division=Featherweight,0.050206928636111134,standardized numeric; unscaled title/one-hot,1
+2020,C1,division=Flyweight,-0.21773093181766673,standardized numeric; unscaled title/one-hot,-1
+2020,C1,division=Heavyweight,0.48710665936783087,standardized numeric; unscaled title/one-hot,1
+2020,C1,division=Light Heavyweight,0.21707996792021336,standardized numeric; unscaled title/one-hot,1
+2020,C1,division=Lightweight,0.018992607061888839,standardized numeric; unscaled title/one-hot,1
+2020,C1,division=Middleweight,0.30807886341791912,standardized numeric; unscaled title/one-hot,1
+2020,C1,division=Welterweight,0.14247883490186505,standardized numeric; unscaled title/one-hot,1
+2020,C1,division=Women's Bantamweight,0.0047094949658392825,standardized numeric; unscaled title/one-hot,1
+2020,C1,division=Women's Featherweight,-0.028102837041290869,standardized numeric; unscaled title/one-hot,-1
+2020,C1,division=Women's Flyweight,-0.30809769478015187,standardized numeric; unscaled title/one-hot,-1
+2020,C1,division=Women's Strawweight,-0.6095403446468588,standardized numeric; unscaled title/one-hot,-1
+2020,C1,intercept,0.51920066785362318,intercept,1
+2020,MOV1_MIN,fs__prior_fight_count__career__raw::mean,0.14752471637370509,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,0.098651569335014969,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.046813844345400903,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.062399961988391567,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.088058608963927573,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.0098023895892077554,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.15500966185669066,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,0.013876523612378301,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.076574050436665902,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.068783754560958282,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.03614938358954823,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.12316703362171814,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.070990736516015257,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.072436631725891015,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.16791359953260354,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,0.064732042537583578,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.13552560249319326,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.016912019758121677,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.20312563082475826,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,0.032453608407602155,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.1911994531447313,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.06818362385181212,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.043055814326130031,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.042901216772119888,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,0.0056182173616197437,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.058065827398185256,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,directional_knockdown_matchup::mean,-0.13581701826900366,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,directional_knockdown_matchup::absolute_difference,-0.023782183419237015,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.11081354239118869,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.0023161615462944803,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.18154880790215125,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.061368585296121318,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,scheduled_rounds,0.076026891342785841,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,ctx__title_bout,-0.050508204199406256,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,division=Bantamweight,-0.082397006079061308,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,division=Catch Weight,0.040136823607281408,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,division=Featherweight,0.061285330874448339,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,division=Flyweight,0.045625482173802551,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,division=Heavyweight,-0.056513136254839468,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,division=Light Heavyweight,-0.021755697013551734,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,division=Lightweight,0.075088414797162759,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,division=Middleweight,0.12793711833096713,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,division=Welterweight,0.047895031923515262,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,division=Women's Bantamweight,0.040210697347537024,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_MIN,division=Women's Featherweight,-0.0095864538288526844,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,division=Women's Flyweight,-0.061383544484741932,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,division=Women's Strawweight,-0.199449901152051,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_MIN,intercept,0.63371430812175089,intercept,1
+2020,MOV1_FULL,fs__prior_fight_count__career__raw::mean,0.14335034658373871,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,0.10003234647588501,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.029604839427469862,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.046418549754812008,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.097144210618264712,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.029615942953961711,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.16031350231612101,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,0.015090107114633402,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.07140063661405166,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.075651241442014378,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.059747697418461206,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.10531518166950474,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.060072054832796519,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.053023398822554149,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.10389216044045578,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.015190406264845727,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.0668414290084655,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.024727642431087236,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.18873548609586499,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,0.0086695753383660805,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.1583255335857181,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.097647953354938838,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,0.0014273715715862304,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.066512336710688888,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,0.047274527276970839,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.035750669166551508,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,directional_knockdown_matchup::mean,-0.13344779448186295,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.067830212891453745,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,0.086759603835416393,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.082225524514215317,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.090700560073654124,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,0.011129504109809242,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.10895205971804803,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.087285805743272452,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.065673921025777876,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,-0.031247518503585821,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.085254864458974344,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.061973225101143899,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.085610657765988724,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.051620075597864988,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,0.009260317518686733,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.086210566227182428,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.0013331734327690665,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,0.088169590672684706,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,-0.068448083613419822,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,0.010188094660114938,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,-0.089660091233688288,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.093550344566864022,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.098324802385225119,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.0091672524174402255,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.14926807939796974,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.056562295788965572,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,scheduled_rounds,0.061237203973268005,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,ctx__title_bout,-0.044865346743611353,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,division=Bantamweight,-0.10487020279286792,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,division=Catch Weight,0.035000129292167136,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,division=Featherweight,0.031018803467736875,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,division=Flyweight,0.035373738281319171,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,division=Heavyweight,-0.028088971616168513,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,division=Light Heavyweight,-0.0031156051633627556,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,division=Lightweight,0.068271704105033845,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,division=Middleweight,0.17322057543231786,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,division=Welterweight,0.063360407087322129,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,division=Women's Bantamweight,0.022575723605134077,standardized numeric; unscaled title/one-hot,1
+2020,MOV1_FULL,division=Women's Featherweight,-0.0087068995076362114,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,division=Women's Flyweight,-0.064851548067322157,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,division=Women's Strawweight,-0.21109089776155246,standardized numeric; unscaled title/one-hot,-1
+2020,MOV1_FULL,intercept,0.63775466529630209,intercept,1
+2021,C1,fs__prior_fight_count__career__raw::mean,0.068896622237430052,standardized numeric; unscaled title/one-hot,1
+2021,C1,fs__prior_fight_count__career__raw::absolute_difference,0.096115592110041531,standardized numeric; unscaled title/one-hot,1
+2021,C1,scheduled_rounds,0.19014148769237565,standardized numeric; unscaled title/one-hot,1
+2021,C1,ctx__title_bout,-0.14646860373172921,standardized numeric; unscaled title/one-hot,-1
+2021,C1,division=Bantamweight,-0.066134168917877739,standardized numeric; unscaled title/one-hot,-1
+2021,C1,division=Catch Weight,-0.081280969562102276,standardized numeric; unscaled title/one-hot,-1
+2021,C1,division=Featherweight,0.047623189561346917,standardized numeric; unscaled title/one-hot,1
+2021,C1,division=Flyweight,-0.25956569298854959,standardized numeric; unscaled title/one-hot,-1
+2021,C1,division=Heavyweight,0.51432355581758926,standardized numeric; unscaled title/one-hot,1
+2021,C1,division=Light Heavyweight,0.28863078441552353,standardized numeric; unscaled title/one-hot,1
+2021,C1,division=Lightweight,0.041121870146289007,standardized numeric; unscaled title/one-hot,1
+2021,C1,division=Middleweight,0.34337538962587427,standardized numeric; unscaled title/one-hot,1
+2021,C1,division=Welterweight,0.19535870048257356,standardized numeric; unscaled title/one-hot,1
+2021,C1,division=Women's Bantamweight,0.022081099259324652,standardized numeric; unscaled title/one-hot,1
+2021,C1,division=Women's Featherweight,0.04532892466586394,standardized numeric; unscaled title/one-hot,1
+2021,C1,division=Women's Flyweight,-0.39908268467435498,standardized numeric; unscaled title/one-hot,-1
+2021,C1,division=Women's Strawweight,-0.67627280395040312,standardized numeric; unscaled title/one-hot,-1
+2021,C1,intercept,0.48146561924074599,intercept,1
+2021,MOV1_MIN,fs__prior_fight_count__career__raw::mean,0.12347386579181678,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,0.061995957609511848,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.038865392469826031,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.068813687798290959,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.034072037744274843,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,0.01919081323052374,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.17613264788857769,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,0.010603411635346864,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.10081656274617891,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.01729705155374851,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.058250232330414445,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.11931398393571507,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.080844765643683508,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.08948261204558669,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.19157423891710043,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,0.020718599199810863,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.097130055364667983,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,0.0046053578711142415,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.16004094326035412,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.0028401920795833435,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.21931800209442118,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.021123652236040812,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.056683070218931528,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.07775455469533385,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.0066761210743496863,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.039911917666494511,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,directional_knockdown_matchup::mean,-0.13212858361600824,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,directional_knockdown_matchup::absolute_difference,-0.025398246651843297,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.11790944353553839,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,0.027933261885868796,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.18551457159578574,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.018559588833060154,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,scheduled_rounds,0.067029225970984777,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,ctx__title_bout,-0.074974094754205314,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,division=Bantamweight,-0.021592322198113273,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,division=Catch Weight,-0.035758184032933529,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,division=Featherweight,0.077119940945629212,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,division=Flyweight,0.023244129816514476,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,division=Heavyweight,-0.062768136404144095,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,division=Light Heavyweight,0.012542957855340828,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,division=Lightweight,0.088236280478582285,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,division=Middleweight,0.15352845624967718,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,division=Welterweight,0.077414090696142288,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,division=Women's Bantamweight,0.040454165118006029,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,division=Women's Featherweight,0.018783176950214427,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_MIN,division=Women's Flyweight,-0.11377144623234568,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,division=Women's Strawweight,-0.24416459295056617,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_MIN,intercept,0.60809500208283074,intercept,1
+2021,MOV1_FULL,fs__prior_fight_count__career__raw::mean,0.13325376351995896,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,0.061694003482653768,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.024037143766690933,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.052120674356191339,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.043204348288598482,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,0.0017721029435960704,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.19381880305362245,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,0.0098127862472994192,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.095448983610119484,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.021554778580117308,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.080708257038498502,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.10475452210350007,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.065741142607614045,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.073062839998435547,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.11647132695703662,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.054457315424292052,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.019251579769229026,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.0014998300715619913,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.15184905485211642,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.016975032243051413,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.18184632489955524,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.044947605063684469,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.01037485617384328,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.10022796800939283,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,0.022921079185622854,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.021262060694186329,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,directional_knockdown_matchup::mean,-0.12835749340998898,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.082929018482614414,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,0.098545540984131652,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.08524942318477019,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.11265300309667896,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,0.015626944538807214,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.06976976129533527,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.05457731589240522,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.048597165196366102,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,-0.03137831128499316,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.045842423475978444,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.082122545368137373,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.1148618705194577,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.079408000916529983,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,0.019018066774734652,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.059808257714327802,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.077170098331785342,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,0.10969771281120184,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,-0.026398425240434568,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,-0.021062521405412499,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,-0.030837615888086482,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.045290973778444626,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.11069513299449148,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,0.019185647414100972,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.15252562664254368,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.0067438115266552521,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,scheduled_rounds,0.05689765743638571,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,ctx__title_bout,-0.072673643683520792,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,division=Bantamweight,-0.042672303472826245,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,division=Catch Weight,-0.045818522551958125,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,division=Featherweight,0.061657727588290502,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,division=Flyweight,0.0044934920086868706,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,division=Heavyweight,-0.040933234713781214,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,division=Light Heavyweight,0.033187273325896063,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,division=Lightweight,0.08290147954208818,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,division=Middleweight,0.18470561194665602,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,division=Welterweight,0.082936166458331337,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,division=Women's Bantamweight,0.030758658105056774,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,division=Women's Featherweight,0.021756927453821125,standardized numeric; unscaled title/one-hot,1
+2021,MOV1_FULL,division=Women's Flyweight,-0.11732354107470672,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,division=Women's Strawweight,-0.24975110775657108,standardized numeric; unscaled title/one-hot,-1
+2021,MOV1_FULL,intercept,0.61129782835679902,intercept,1
+2022,C1,fs__prior_fight_count__career__raw::mean,0.067571072027851425,standardized numeric; unscaled title/one-hot,1
+2022,C1,fs__prior_fight_count__career__raw::absolute_difference,0.033321410569815677,standardized numeric; unscaled title/one-hot,1
+2022,C1,scheduled_rounds,0.16851037163237728,standardized numeric; unscaled title/one-hot,1
+2022,C1,ctx__title_bout,-0.19539504644684713,standardized numeric; unscaled title/one-hot,-1
+2022,C1,division=Bantamweight,0.032849617405435336,standardized numeric; unscaled title/one-hot,1
+2022,C1,division=Catch Weight,-0.099343920414889861,standardized numeric; unscaled title/one-hot,-1
+2022,C1,division=Featherweight,0.078386731158069767,standardized numeric; unscaled title/one-hot,1
+2022,C1,division=Flyweight,-0.28629797987269479,standardized numeric; unscaled title/one-hot,-1
+2022,C1,division=Heavyweight,0.57575299494187626,standardized numeric; unscaled title/one-hot,1
+2022,C1,division=Light Heavyweight,0.29996463173231885,standardized numeric; unscaled title/one-hot,1
+2022,C1,division=Lightweight,0.024589664806098047,standardized numeric; unscaled title/one-hot,1
+2022,C1,division=Middleweight,0.22982966430829938,standardized numeric; unscaled title/one-hot,1
+2022,C1,division=Welterweight,0.14056893019984654,standardized numeric; unscaled title/one-hot,1
+2022,C1,division=Women's Bantamweight,-0.024699250991207747,standardized numeric; unscaled title/one-hot,-1
+2022,C1,division=Women's Featherweight,-0.037995306496431347,standardized numeric; unscaled title/one-hot,-1
+2022,C1,division=Women's Flyweight,-0.30545809979773131,standardized numeric; unscaled title/one-hot,-1
+2022,C1,division=Women's Strawweight,-0.62389493991745981,standardized numeric; unscaled title/one-hot,-1
+2022,C1,intercept,0.52650598435169882,intercept,1
+2022,MOV1_MIN,fs__prior_fight_count__career__raw::mean,0.12599057867869973,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,0.011860050658472824,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.074424090643676555,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.06745083807708524,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.034875746174626826,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.0041785672841070541,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.15748710796036453,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.03180648875636146,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.12968552164072406,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,0.0032064123677324127,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.048806997883307751,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.11771509934228566,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.024279178234558781,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.058843496074183085,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.19256334639410136,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,0.068540597679330809,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.095737169607214581,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.0085178233898378277,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.15600966951905193,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.024351470238483604,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.20596266207085634,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.02438246832592264,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.077034481775658067,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.049240510728181891,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.012049740176238975,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.039016434081656608,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,directional_knockdown_matchup::mean,-0.11162390203019772,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,directional_knockdown_matchup::absolute_difference,-0.028899232596474297,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.08119234285464666,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,0.033840604167130112,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.12988489522494184,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.0086632259926964824,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,scheduled_rounds,0.055236644769512795,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,ctx__title_bout,-0.077385719398521832,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,division=Bantamweight,0.021425051927067326,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,division=Catch Weight,-0.051414328556058875,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,division=Featherweight,0.084841297621160675,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,division=Flyweight,-0.025378155856289192,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,division=Heavyweight,-0.012541821579755258,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,division=Light Heavyweight,0.025712702809901386,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,division=Lightweight,0.10251930771896191,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,division=Middleweight,0.10571549941580989,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,division=Welterweight,0.026923096990517131,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,division=Women's Bantamweight,0.025301833287415573,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_MIN,division=Women's Featherweight,-0.0071338438195939682,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,division=Women's Flyweight,-0.058627332919231445,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,division=Women's Strawweight,-0.2285912293824727,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_MIN,intercept,0.64400346157286559,intercept,1
+2022,MOV1_FULL,fs__prior_fight_count__career__raw::mean,0.12695198211771225,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,0.010669828483009139,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.048941969209692626,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.058770493043707697,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.04842620002502477,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.018938544004749633,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.18836952691670997,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.027372304762646741,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.12748145262886387,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.0018218347827001107,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.075299297380150162,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.10038146876606574,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,0.015658756509823027,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.042651383682625207,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.10547986880747269,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,0.010259380903686829,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.011201302843584966,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.02372845667092921,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.1370348403058084,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.034056288944584165,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.16964309454249737,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.045870102931536018,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.0047224224181191985,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.065096584549679509,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,0.018454780434272126,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.033981903066042631,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,directional_knockdown_matchup::mean,-0.092391969762991313,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.068876465946369661,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,0.072432424058357134,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.062506809829719345,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.11127392686638024,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,0.022951021930407465,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.099434299312551863,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.032344296152770353,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.065171892875554083,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,-0.028656695049345711,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.048750142563221313,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.083042714778790605,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.08740317798119536,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.053772101573565836,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,-0.025288316571623903,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.04818786319905289,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.088607439122254758,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,0.070657867865317803,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,-0.019386422455722221,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,-0.0045074316428150322,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,0.0071583293376439351,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.014930514531447742,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.060435797638425784,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,0.026826808934082586,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.092740915083823386,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.0044527713640752512,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,scheduled_rounds,0.048118477393825798,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,ctx__title_bout,-0.076332785803486528,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,division=Bantamweight,-0.0034267993235010843,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,division=Catch Weight,-0.058819443424450286,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,division=Featherweight,0.058369309504805345,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,division=Flyweight,-0.044266657658024622,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,division=Heavyweight,0.015685732729100461,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,division=Light Heavyweight,0.052409149028000757,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,division=Lightweight,0.08554639662881007,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,division=Middleweight,0.1581354979862114,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,division=Welterweight,0.036590612801439326,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,division=Women's Bantamweight,0.034239455632932743,standardized numeric; unscaled title/one-hot,1
+2022,MOV1_FULL,division=Women's Featherweight,-0.0043725953698683651,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,division=Women's Flyweight,-0.078129858344596806,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,division=Women's Strawweight,-0.24086165115445654,standardized numeric; unscaled title/one-hot,-1
+2022,MOV1_FULL,intercept,0.6446860226698935,intercept,1
+2023,C1,fs__prior_fight_count__career__raw::mean,0.034267488058912124,standardized numeric; unscaled title/one-hot,1
+2023,C1,fs__prior_fight_count__career__raw::absolute_difference,0.019234031246420896,standardized numeric; unscaled title/one-hot,1
+2023,C1,scheduled_rounds,0.17511280351522637,standardized numeric; unscaled title/one-hot,1
+2023,C1,ctx__title_bout,-0.20514043809717433,standardized numeric; unscaled title/one-hot,-1
+2023,C1,division=Bantamweight,0.033272148332556852,standardized numeric; unscaled title/one-hot,1
+2023,C1,division=Catch Weight,-0.097293561585087937,standardized numeric; unscaled title/one-hot,-1
+2023,C1,division=Featherweight,0.11550873521850531,standardized numeric; unscaled title/one-hot,1
+2023,C1,division=Flyweight,-0.32927149439509462,standardized numeric; unscaled title/one-hot,-1
+2023,C1,division=Heavyweight,0.57230949957187982,standardized numeric; unscaled title/one-hot,1
+2023,C1,division=Light Heavyweight,0.3673176128678266,standardized numeric; unscaled title/one-hot,1
+2023,C1,division=Lightweight,0.015192627932554902,standardized numeric; unscaled title/one-hot,1
+2023,C1,division=Middleweight,0.27141435426940896,standardized numeric; unscaled title/one-hot,1
+2023,C1,division=Welterweight,0.20845561383197309,standardized numeric; unscaled title/one-hot,1
+2023,C1,division=Women's Bantamweight,-0.049243677991224082,standardized numeric; unscaled title/one-hot,-1
+2023,C1,division=Women's Featherweight,-0.081726497161857523,standardized numeric; unscaled title/one-hot,-1
+2023,C1,division=Women's Flyweight,-0.35311704139797156,standardized numeric; unscaled title/one-hot,-1
+2023,C1,division=Women's Strawweight,-0.61892800367695222,standardized numeric; unscaled title/one-hot,-1
+2023,C1,intercept,0.5053754171839121,intercept,1
+2023,MOV1_MIN,fs__prior_fight_count__career__raw::mean,0.058924203091760559,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,0.0019559306689334597,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.077404489451386435,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.051801689752901392,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.032284278457161628,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,0.011766831268310364,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.18066957433688519,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.024826961161439832,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.17500773630042937,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,0.026090945005927062,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.0035163221280772572,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.14199459592040023,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,-0.025261581764851455,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,0.0032691310000410021,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.17826874768406117,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,0.017120626147300443,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.12939331571937907,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.010835235531419461,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.13113609127992945,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.011825939203515929,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.14164725894879523,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.051276409369350955,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.085039127802126649,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.057065197837457789,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.042594742444383077,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.049861737258102147,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,directional_knockdown_matchup::mean,-0.045494424673456456,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,directional_knockdown_matchup::absolute_difference,-0.0099206275601463664,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.11067479809957761,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,0.0027622731728467699,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.13471462008354895,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.038684533122561905,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,scheduled_rounds,0.076218748598703229,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,ctx__title_bout,-0.079047880856228492,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,division=Bantamweight,-0.0031467821101911352,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,division=Catch Weight,-0.0661001782650283,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,division=Featherweight,0.11142159254391772,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,division=Flyweight,-0.073512093505713555,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,division=Heavyweight,-0.022902528747908074,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,division=Light Heavyweight,0.071983203712267588,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,division=Lightweight,0.10557362388560779,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,division=Middleweight,0.12159276945546517,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,division=Welterweight,0.077309937998167225,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,division=Women's Bantamweight,0.017619482477474011,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_MIN,division=Women's Featherweight,-0.020715993393207111,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,division=Women's Flyweight,-0.072345634091492569,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,division=Women's Strawweight,-0.23514897818643204,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_MIN,intercept,0.62770745988272936,intercept,1
+2023,MOV1_FULL,fs__prior_fight_count__career__raw::mean,0.062066965887198386,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,-0.0034830607751112413,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.061143898096424051,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.054224646098709896,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.0471974974295266,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.0031777420655372678,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.23537488886287541,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.022296050588921167,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.1667485689213723,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,0.02315664033868169,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.027562130209436212,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.12773215888626563,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,-0.034517207490386843,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,0.011964257723577534,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.087349065170359855,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.031589203667709363,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.00099732850901103451,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.053973827411273795,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.11918104581470661,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.016518080687951228,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.10894710198135786,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.063034349491287806,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.02449119558661144,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.067476755341839972,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.026912045175561426,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.047492166833211315,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,directional_knockdown_matchup::mean,-0.036534060727359409,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.085868173996042102,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,0.083914997127973068,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.076447291768703532,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.15438562354797478,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,0.067495982378339314,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.05738333279752688,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.016768601985045255,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.051863410282124087,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,-0.032333987520395305,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.074590611436583562,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.10122498882314436,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.077286114827440036,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.056813887793826248,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,-0.03414160615408058,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.029309236027913556,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.10777075893494104,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,0.040316693187254657,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,0.017725605449600512,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,-0.019463072880970038,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,0.045614117437954349,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.031108149991480351,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.086897667937370554,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.00076393570776321174,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.10504088779230625,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.036003036174889584,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,scheduled_rounds,0.074413917267714638,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,ctx__title_bout,-0.07133249821136721,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,division=Bantamweight,-0.030354886758811726,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,division=Catch Weight,-0.068961946030347152,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,division=Featherweight,0.085687309289421532,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,division=Flyweight,-0.10125189359121958,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,division=Heavyweight,0.0092200930590036652,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,division=Light Heavyweight,0.10050535081796823,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,division=Lightweight,0.075538224022222669,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,division=Middleweight,0.16402170162476126,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,division=Welterweight,0.076873911997583311,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,division=Women's Bantamweight,0.031590115270179207,standardized numeric; unscaled title/one-hot,1
+2023,MOV1_FULL,division=Women's Featherweight,-0.018090384954295075,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,division=Women's Flyweight,-0.087999740221973904,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,division=Women's Strawweight,-0.22934393531996408,standardized numeric; unscaled title/one-hot,-1
+2023,MOV1_FULL,intercept,0.63267067763958396,intercept,1
+2024,C1,fs__prior_fight_count__career__raw::mean,0.013700835147702919,standardized numeric; unscaled title/one-hot,1
+2024,C1,fs__prior_fight_count__career__raw::absolute_difference,0.006467952431921044,standardized numeric; unscaled title/one-hot,1
+2024,C1,scheduled_rounds,0.18408927333799791,standardized numeric; unscaled title/one-hot,1
+2024,C1,ctx__title_bout,-0.23049923484376444,standardized numeric; unscaled title/one-hot,-1
+2024,C1,division=Bantamweight,0.097798920608291498,standardized numeric; unscaled title/one-hot,1
+2024,C1,division=Catch Weight,-0.20319202961937655,standardized numeric; unscaled title/one-hot,-1
+2024,C1,division=Featherweight,0.15235819690150945,standardized numeric; unscaled title/one-hot,1
+2024,C1,division=Flyweight,-0.34691657164608103,standardized numeric; unscaled title/one-hot,-1
+2024,C1,division=Heavyweight,0.71359203647840985,standardized numeric; unscaled title/one-hot,1
+2024,C1,division=Light Heavyweight,0.48538277651002865,standardized numeric; unscaled title/one-hot,1
+2024,C1,division=Lightweight,0.16555214221959172,standardized numeric; unscaled title/one-hot,1
+2024,C1,division=Middleweight,0.3682299524853575,standardized numeric; unscaled title/one-hot,1
+2024,C1,division=Welterweight,0.17868315187090017,standardized numeric; unscaled title/one-hot,1
+2024,C1,division=Women's Bantamweight,-0.17066689082256473,standardized numeric; unscaled title/one-hot,-1
+2024,C1,division=Women's Featherweight,-0.13872280857571917,standardized numeric; unscaled title/one-hot,-1
+2024,C1,division=Women's Flyweight,-0.50626172577034889,standardized numeric; unscaled title/one-hot,-1
+2024,C1,division=Women's Strawweight,-0.64816650221305938,standardized numeric; unscaled title/one-hot,-1
+2024,C1,intercept,0.44653567111265619,intercept,1
+2024,MOV1_MIN,fs__prior_fight_count__career__raw::mean,0.051469542710338427,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,-0.003308364520778863,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.078503297742973654,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.050561449692581223,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.049630672762220121,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.0014546936578366803,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.17187276308253507,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.046675703633327355,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.19086208265973709,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,0.016684352528224457,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.010121294141911345,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.13844640497995858,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,-0.035419350604189166,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.0099671316123915825,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.21123096562711544,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.0099744526795261003,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.11530766121036873,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,0.010841918576389605,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.088918041555862762,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,0.0017649966790060591,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.12910624819066119,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.042571301568071304,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.085143681753895195,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.044338157433563473,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.040437209288230754,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.045516049840058706,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,directional_knockdown_matchup::mean,-0.042538736985824853,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,directional_knockdown_matchup::absolute_difference,-0.0046150236994434834,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.12311160842015878,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.00089268098131590362,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.13508902008382151,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.054101130475014143,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,scheduled_rounds,0.085424073372394688,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,ctx__title_bout,-0.073966503668674244,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,division=Bantamweight,0.0077257008332003267,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,division=Catch Weight,-0.086902973663678995,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,division=Featherweight,0.093713702539206634,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,division=Flyweight,-0.059657223734899831,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,division=Heavyweight,-0.018153600882172306,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,division=Light Heavyweight,0.078043171559930527,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,division=Lightweight,0.17162818429587828,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,division=Middleweight,0.14973220946744681,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,division=Welterweight,0.010754567683419734,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_MIN,division=Women's Bantamweight,-0.022951398433559703,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,division=Women's Featherweight,-0.016301779546250637,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,division=Women's Flyweight,-0.096854240006959996,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,division=Women's Strawweight,-0.20203127584258759,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_MIN,intercept,0.6042768073987288,intercept,1
+2024,MOV1_FULL,fs__prior_fight_count__career__raw::mean,0.056245211444199118,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,-0.0093414229676739829,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.066039347784015157,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.054424392178359517,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.06512708800946039,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.014611298124355462,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.23674071699989743,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.04503874473534196,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.17559726277540325,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,0.015134963888330476,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.029873153327773915,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.12644801317266782,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,-0.045061613673243815,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.0013956390325218537,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.1259682914320597,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.061950735752584668,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,-0.014923652109968499,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.054131159158086653,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.083515849977829917,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,0.0022078449045732267,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.098247907051612349,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.05686973305464918,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.02524320267005364,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.053084235805881626,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.027705555992905813,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.046293656754164948,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,directional_knockdown_matchup::mean,-0.047160972813378665,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.095064765372980739,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,0.080496008876084407,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.096733708200546845,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.14030423558446542,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,0.10404364334275568,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.044647903153943069,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.0010629866437192308,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.074062559681677353,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,-0.029010205623533437,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.098732147577758222,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.10253032903779721,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.082602803471472391,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.069300199407116805,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,-0.0071385553223378608,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.041804168961018531,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.10219267302876373,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,0.043887208065128094,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,-0.0070095493827102562,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,-0.044900684202489403,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,0.031419698544313861,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.04229713453777232,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.093317676675365779,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.0041617290367386827,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.10588536968585192,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.0512603767782637,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,scheduled_rounds,0.08669518012303544,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,ctx__title_bout,-0.062533958253285948,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,division=Bantamweight,-0.019452822253533921,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,division=Catch Weight,-0.087237471292698224,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,division=Featherweight,0.07663293616935557,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,division=Flyweight,-0.088163529990222006,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,division=Heavyweight,0.016902520715740856,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,division=Light Heavyweight,0.11343571292596694,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,division=Lightweight,0.14462103812499161,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,division=Middleweight,0.19528918696806363,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,division=Welterweight,0.013898936769946534,standardized numeric; unscaled title/one-hot,1
+2024,MOV1_FULL,division=Women's Bantamweight,-0.011870888900622337,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,division=Women's Featherweight,-0.014753174467126368,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,division=Women's Flyweight,-0.1193499719762427,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,division=Women's Strawweight,-0.19862297169021167,standardized numeric; unscaled title/one-hot,-1
+2024,MOV1_FULL,intercept,0.60708738313097621,intercept,1
+2025,C1,fs__prior_fight_count__career__raw::mean,-0.038244578724068182,standardized numeric; unscaled title/one-hot,-1
+2025,C1,fs__prior_fight_count__career__raw::absolute_difference,0.027178027209585114,standardized numeric; unscaled title/one-hot,1
+2025,C1,scheduled_rounds,0.1860826910613515,standardized numeric; unscaled title/one-hot,1
+2025,C1,ctx__title_bout,-0.18070317774136538,standardized numeric; unscaled title/one-hot,-1
+2025,C1,division=Bantamweight,0.048876576216343198,standardized numeric; unscaled title/one-hot,1
+2025,C1,division=Catch Weight,-0.15204630066715635,standardized numeric; unscaled title/one-hot,-1
+2025,C1,division=Featherweight,0.1580589315532111,standardized numeric; unscaled title/one-hot,1
+2025,C1,division=Flyweight,-0.32768905656337138,standardized numeric; unscaled title/one-hot,-1
+2025,C1,division=Heavyweight,0.72601470139768143,standardized numeric; unscaled title/one-hot,1
+2025,C1,division=Light Heavyweight,0.53701580911395319,standardized numeric; unscaled title/one-hot,1
+2025,C1,division=Lightweight,0.20585963051890155,standardized numeric; unscaled title/one-hot,1
+2025,C1,division=Middleweight,0.33768163996890199,standardized numeric; unscaled title/one-hot,1
+2025,C1,division=Welterweight,0.24664776468506847,standardized numeric; unscaled title/one-hot,1
+2025,C1,division=Women's Bantamweight,-0.2248623945438224,standardized numeric; unscaled title/one-hot,-1
+2025,C1,division=Women's Featherweight,-0.14769971395904821,standardized numeric; unscaled title/one-hot,-1
+2025,C1,division=Women's Flyweight,-0.53937429952415461,standardized numeric; unscaled title/one-hot,-1
+2025,C1,division=Women's Strawweight,-0.70513495421605699,standardized numeric; unscaled title/one-hot,-1
+2025,C1,intercept,0.42977025880989012,intercept,1
+2025,MOV1_MIN,fs__prior_fight_count__career__raw::mean,-0.0011685940282880056,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,0.01419248884833914,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.083427677108765502,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.059935026144333527,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.05258303612419736,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.024903194372875248,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.22609511345012775,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.049189192279792536,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.12980689555723199,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,0.0027667881751801543,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,-0.0066469554292836065,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.12757263327716054,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,-0.027515261922245939,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.023337111863021232,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.19897128319150997,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.0088823396925341927,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.11478977371704467,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,0.0024423834497922028,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.10758514149354294,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.0057963658806730062,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.13462044061540057,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.034684896217504015,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.090118168963585044,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.03606102575346453,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.018823256055719641,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.0366846025904266,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,directional_knockdown_matchup::mean,-0.061797099431984456,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,directional_knockdown_matchup::absolute_difference,-0.00077930453519903622,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.11051318548181562,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.010840358608019081,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.13623294919706103,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.060712300930426566,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,scheduled_rounds,0.074366616721032203,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,ctx__title_bout,-0.072449893382502045,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,division=Bantamweight,-0.030748071557543426,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,division=Catch Weight,-0.079136054206904463,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,division=Featherweight,0.098928183058508409,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,division=Flyweight,-0.056596821151611389,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,division=Heavyweight,0.00031835656321320692,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,division=Light Heavyweight,0.092456826306446832,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,division=Lightweight,0.19312327690098041,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,division=Middleweight,0.14247098405974459,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,division=Welterweight,0.054853812000018189,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_MIN,division=Women's Bantamweight,-0.045275794332876144,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,division=Women's Featherweight,-0.019981599643630096,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,division=Women's Flyweight,-0.11722524961384596,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,division=Women's Strawweight,-0.22172003884055713,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_MIN,intercept,0.59124080062533713,intercept,1
+2025,MOV1_FULL,fs__prior_fight_count__career__raw::mean,-0.012892273468107783,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,0.0016590212903931413,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.10947145563076985,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.0759222325036778,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.071936115446381108,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.043236415997352548,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.30509578127722981,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.055056934827258458,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.10437495727020428,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,-0.0020683452509832707,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,-0.018339745124098712,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.1356984027557534,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,-0.037005770890980193,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.022457225770660678,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.19656733580947575,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.1061124298390103,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,-0.1143483006949466,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.10109666779885958,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.10496738956137713,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.00095965877381820911,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.1200940370268469,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.043252115597901576,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.053754886645271595,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.052377746131148373,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.01976877309518248,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.044018382588263696,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,directional_knockdown_matchup::mean,-0.015201873711251035,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.13343175206623423,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,-0.042675564253498548,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.16940179956945456,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.28523684119118931,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,0.15290070871313607,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.053598602307718006,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.0049286436213406811,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.083971963226596766,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,-0.0059054486472122549,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.13350797188745966,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.11157666893738238,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.080477951216732846,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.058395453268219655,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,0.021237348798377732,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.026956696863876167,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.055641601672454535,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,0.017679858727376537,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,-0.022017521971089506,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,-0.050383480469056711,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,0.030120739450135423,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.050006972754608685,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.088622855613284715,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.015777468245711201,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.1077647140996472,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.05903533836038051,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,scheduled_rounds,0.087608139841826291,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,ctx__title_bout,-0.12288036961109797,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,division=Bantamweight,-0.06676792380772946,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,division=Catch Weight,-0.18184015784489641,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,division=Featherweight,0.14945865847160753,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,division=Flyweight,-0.099687120674156512,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,division=Heavyweight,0.11302267817233512,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,division=Light Heavyweight,0.2456907416460454,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,division=Lightweight,0.25164042442810974,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,division=Middleweight,0.29822645145614179,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,division=Welterweight,0.11115220294503537,standardized numeric; unscaled title/one-hot,1
+2025,MOV1_FULL,division=Women's Bantamweight,-0.070936214797561112,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,division=Women's Featherweight,-0.037450493400421857,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,division=Women's Flyweight,-0.25394091347846642,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,division=Women's Strawweight,-0.39249060472751612,standardized numeric; unscaled title/one-hot,-1
+2025,MOV1_FULL,intercept,0.55772875682547252,intercept,1
+2026,C1,fs__prior_fight_count__career__raw::mean,-0.042032212319894589,standardized numeric; unscaled title/one-hot,-1
+2026,C1,fs__prior_fight_count__career__raw::absolute_difference,0.027137206269197876,standardized numeric; unscaled title/one-hot,1
+2026,C1,scheduled_rounds,0.17574014900476759,standardized numeric; unscaled title/one-hot,1
+2026,C1,ctx__title_bout,-0.2225965420397425,standardized numeric; unscaled title/one-hot,-1
+2026,C1,division=Bantamweight,0.080573949952180507,standardized numeric; unscaled title/one-hot,1
+2026,C1,division=Catch Weight,-0.26039717712738708,standardized numeric; unscaled title/one-hot,-1
+2026,C1,division=Featherweight,0.23212559208108874,standardized numeric; unscaled title/one-hot,1
+2026,C1,division=Flyweight,-0.39977298713894294,standardized numeric; unscaled title/one-hot,-1
+2026,C1,division=Heavyweight,0.78453711457368502,standardized numeric; unscaled title/one-hot,1
+2026,C1,division=Light Heavyweight,0.54095616439553917,standardized numeric; unscaled title/one-hot,1
+2026,C1,division=Lightweight,0.23248501713082348,standardized numeric; unscaled title/one-hot,1
+2026,C1,division=Middleweight,0.42560205049973843,standardized numeric; unscaled title/one-hot,1
+2026,C1,division=Welterweight,0.313035396883658,standardized numeric; unscaled title/one-hot,1
+2026,C1,division=Women's Bantamweight,-0.23511258347804218,standardized numeric; unscaled title/one-hot,-1
+2026,C1,division=Women's Featherweight,-0.18331977008340608,standardized numeric; unscaled title/one-hot,-1
+2026,C1,division=Women's Flyweight,-0.52810500917483072,standardized numeric; unscaled title/one-hot,-1
+2026,C1,division=Women's Strawweight,-0.71876072429655502,standardized numeric; unscaled title/one-hot,-1
+2026,C1,intercept,0.40127877502087306,intercept,1
+2026,MOV1_MIN,fs__prior_fight_count__career__raw::mean,-0.027479359904519888,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__prior_fight_count__career__raw::absolute_difference,0.014209140852376309,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.10145162667153254,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.042484229690268591,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.029655985332278385,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,0.0057515105268163271,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.26068814902045995,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.053940943464208808,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.13260255766939319,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,0.0094922505455509003,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,-0.036834512731469968,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.13999771083161042,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::mean,-0.054075062750107684,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.012350134990787746,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.20195888885057378,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.014512415669970233,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,0.079450971062474215,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.0057898810159481232,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.11281328994324241,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,0.0031379901717627275,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.14219752766615223,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.023032946458560521,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.093844402445791064,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.053674455224550582,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.024810978263957173,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.038508087354341483,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,directional_knockdown_matchup::mean,-0.070123388659918295,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,directional_knockdown_matchup::absolute_difference,0.028348450078138999,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::mean,-0.10761903902220243,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.01992538736089931,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::mean,0.16157397710963611,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.054923549535041263,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,scheduled_rounds,0.071086735779807633,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,ctx__title_bout,-0.18822583990004135,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,division=Bantamweight,-0.032722509722035262,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,division=Catch Weight,-0.20584196104701435,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,division=Featherweight,0.17228551027243147,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,division=Flyweight,-0.11467559525131316,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,division=Heavyweight,0.075538610526798958,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,division=Light Heavyweight,0.14121386848621878,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,division=Lightweight,0.26980847420768062,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,division=Middleweight,0.28030937771035458,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,division=Welterweight,0.12359561633901243,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_MIN,division=Women's Bantamweight,-0.076538796543600213,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,division=Women's Featherweight,-0.042390190321269346,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,division=Women's Flyweight,-0.17912985375218191,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,division=Women's Strawweight,-0.35559286314783206,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_MIN,intercept,0.55947444259325896,intercept,1
+2026,MOV1_FULL,fs__prior_fight_count__career__raw::mean,-0.0080023402388175163,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__prior_fight_count__career__raw::absolute_difference,0.010535752273195679,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::mean,-0.06630348406982825,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference,0.037780069945870971,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::mean,0.030820041937629453,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference,-0.0013957573507698835,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::mean,0.29602669988714564,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference,-0.047334662311666671,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::mean,-0.12036812918831015,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__finish_method_win_profile__submission__career__shrunk::absolute_difference,0.0075637903914841133,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::mean,0.015434952137001043,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference,0.10917407233614536,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::mean,-0.054245171010946398,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference,-0.010623312574462022,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::mean,0.11045027719678181,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference,-0.057623391622387485,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::mean,-0.054183867227518792,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference,-0.064168636047987823,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::mean,-0.10963047691100053,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference,-0.00099375239572552709,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::mean,-0.11713822107999217,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference,-0.035429277036799274,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::mean,-0.05231544636439886,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference,-0.053788548383869379,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::mean,-0.00040649321246624247,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference,0.032535803921256178,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,directional_knockdown_matchup::mean,-0.015599186759253826,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,directional_knockdown_matchup::absolute_difference,-0.063485742986289118,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::mean,0.027895667959326159,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__knockdown_efficiency__creation__career__shrunk::absolute_difference,0.096882865234547283,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::mean,0.16979496945851022,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__knockdown_efficiency__vulnerability__career__shrunk::absolute_difference,0.11776769891950999,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::mean,0.044440092650238357,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_strike_flow__landed_per_min__career__shrunk::absolute_difference,0.013216560268118927,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::mean,0.064223487377006991,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_strike_flow__absorbed_per_min__career__shrunk::absolute_difference,0.0013837600488533896,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::mean,-0.067648096754889392,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__sig_strike_efficiency__accuracy__career__shrunk::absolute_difference,0.096551458178923188,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::mean,0.069759231002882255,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_strike_efficiency__defense__career__shrunk::absolute_difference,0.033570315367924652,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::mean,0.0036402162244549801,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_environment_mix__clinch_share__career__shrunk::absolute_difference,-0.0075130140661192196,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::mean,-0.025620473629241403,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__sig_environment_mix__ground_share__career__shrunk::absolute_difference,-0.013619382512482951,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::mean,0.0096897553960503847,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_target_mix__head_share__career__shrunk::absolute_difference,-0.062661962082752626,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::mean,0.026975274838441119,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__sig_target_mix__body_share__career__shrunk::absolute_difference,0.048311651696998421,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::mean,-0.096864986373820655,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__takedown_conversion__success__career__shrunk::absolute_difference,-0.02509687835974668,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::mean,0.13390295531686963,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,fs__takedown_conversion__defense__career__shrunk::absolute_difference,0.045144022677943173,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,scheduled_rounds,0.054474276616945462,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,ctx__title_bout,-0.097041997476721695,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,division=Bantamweight,-0.049562015082662947,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,division=Catch Weight,-0.093279738447818283,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,division=Featherweight,0.10667659326786669,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,division=Flyweight,-0.096130361174004239,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,division=Heavyweight,0.041976935759779732,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,division=Light Heavyweight,0.094918637545362478,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,division=Lightweight,0.16530444784083201,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,division=Middleweight,0.20983922550686399,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,division=Welterweight,0.070971018514081649,standardized numeric; unscaled title/one-hot,1
+2026,MOV1_FULL,division=Women's Bantamweight,-0.041625007848906735,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,division=Women's Featherweight,-0.01847072915387446,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,division=Women's Flyweight,-0.1312582572573934,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,division=Women's Strawweight,-0.22751212556080147,standardized numeric; unscaled title/one-hot,-1
+2026,MOV1_FULL,intercept,0.5932175761730909,intercept,1

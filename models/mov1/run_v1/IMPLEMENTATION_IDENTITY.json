@@ -1,0 +1,16 @@
+{
+  "branch": "feat/mov1-ko-vs-submission-run-v1",
+  "contract_manifest_sha256": "9034e647bebaa7099f5358ed7a5db0e1bc515df1894db912274e5dae629cb714",
+  "draft_PR": "https://github.com/Tkcool28/ufc-edge/pull/119",
+  "implementation_freeze_commit": "31008e323d0ac579c8b93d810918c23ff15df5a1",
+  "implementation_sha256": {
+    ".github/workflows/mov1-conditional-run-v1.yml": "1a694955004bf5c6cc3c0e63202fc69834a3cacff370af5fa0dc128b242e1e21",
+    "models/mov1/evaluation_v1.py": "d4165ff96f7bf80adbf649562976d5e979460703d69f060b893ecf1257654de1",
+    "models/mov1/implementation_v1.py": "0949678d73a804abdf05877d120115c79c928c687f93cf987c6a7527fa75b1a6",
+    "tests/experiments/test_mov1_conditional_v1.py": "be0510e042db8c46476a2f79339a3f45e6bc73a116fc29d9e4f955aeafa88a00",
+    "tools/experiments/run_mov1_conditional_v1.py": "1c3b5f01419cbc9edcdbe7fcc359d69b76362b994db66fb4a728ddd7c6bfbbda",
+    "tools/experiments/verify_mov1_saved_run_v1.py": "3b28ae4c314621819a5e856601e729c162ca69b7f12d1d171512aee46cf7687a"
+  },
+  "scientific_changes_after_run": [],
+  "starting_main_sha": "b6a644d9ef8d267f7d7da97f21e691f2bae99226"
+}

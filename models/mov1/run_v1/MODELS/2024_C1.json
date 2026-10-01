@@ -1,0 +1,117 @@
+{
+  "C": 0.3,
+  "classes": [
+    0,
+    1
+  ],
+  "coef": [
+    [
+      0.013700835147702919,
+      0.006467952431921044,
+      0.1840892733379979,
+      -0.23049923484376444,
+      0.0977989206082915,
+      -0.20319202961937655,
+      0.15235819690150945,
+      -0.34691657164608103,
+      0.7135920364784099,
+      0.48538277651002865,
+      0.16555214221959172,
+      0.3682299524853575,
+      0.17868315187090017,
+      -0.17066689082256473,
+      -0.13872280857571917,
+      -0.5062617257703489,
+      -0.6481665022130594
+    ]
+  ],
+  "intercept": [
+    0.4465356711126562
+  ],
+  "outer_year": 2024,
+  "preprocessing": {
+    "division_categories": [
+      "Bantamweight",
+      "Catch Weight",
+      "Featherweight",
+      "Flyweight",
+      "Heavyweight",
+      "Light Heavyweight",
+      "Lightweight",
+      "Middleweight",
+      "Welterweight",
+      "Women's Bantamweight",
+      "Women's Featherweight",
+      "Women's Flyweight",
+      "Women's Strawweight"
+    ],
+    "division_mode": "Lightweight",
+    "feature_names": [
+      "fs__prior_fight_count__career__raw::mean",
+      "fs__prior_fight_count__career__raw::absolute_difference",
+      "scheduled_rounds",
+      "ctx__title_bout",
+      "division=Bantamweight",
+      "division=Catch Weight",
+      "division=Featherweight",
+      "division=Flyweight",
+      "division=Heavyweight",
+      "division=Light Heavyweight",
+      "division=Lightweight",
+      "division=Middleweight",
+      "division=Welterweight",
+      "division=Women's Bantamweight",
+      "division=Women's Featherweight",
+      "division=Women's Flyweight",
+      "division=Women's Strawweight"
+    ],
+    "fit_identity": {
+      "DECISION": 0,
+      "KO_TKO": 1387,
+      "N": 2164,
+      "SUBMISSION": 777,
+      "ordered_fight_id_sha256": "138ea421344e3fcdb444535b8e66a692a830ead8a5a915f7fcb43947ae018365"
+    },
+    "literal_columns": [
+      "scheduled_rounds",
+      "ctx__title_bout",
+      "ctx__weight_class",
+      "f1__fs__prior_fight_count__career__raw",
+      "f2__fs__prior_fight_count__career__raw"
+    ],
+    "numeric_names": [
+      "fs__prior_fight_count__career__raw::mean",
+      "fs__prior_fight_count__career__raw::absolute_difference",
+      "scheduled_rounds"
+    ],
+    "pooled_pair_medians": {
+      "fs__prior_fight_count__career__raw": 5.0
+    },
+    "rounds_median": 3.0,
+    "scaler_mean": [
+      6.462569316081331,
+      4.99445471349353,
+      3.231977818853974
+    ],
+    "scaler_n_samples": 2164,
+    "scaler_scale": [
+      5.265280908689803,
+      5.213905650598823,
+      0.6404232422919149
+    ],
+    "scaler_var": [
+      27.723183047413315,
+      27.18481213334634,
+      0.4101419292676888
+    ],
+    "surface": "C1",
+    "title_mode": false
+  },
+  "solver": {
+    "C": 0.3,
+    "converged": true,
+    "n_iter": 20,
+    "warnings": []
+  },
+  "surface": "C1"
+}
