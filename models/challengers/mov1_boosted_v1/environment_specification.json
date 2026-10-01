@@ -1,0 +1,11 @@
+{
+  "dependencies": "requirements.in exact direct pins; requirements-lock.txt exact installed transitive freeze, ENVIRONMENT_LOCK.json records verification environment",
+  "official_references": [
+    "https://github.com/dmlc/xgboost/blob/v2.1.4/doc/parameter.rst",
+    "https://lightgbm.readthedocs.io/en/v4.6.0/Parameters.html",
+    "https://github.com/catboost/catboost/tree/v1.2.8/catboost/docs/en/concepts"
+  ],
+  "platform": "Linux x86_64 CPU; future CI ubuntu-24.04",
+  "python": "3.12.14",
+  "upgrade_policy": "No implicit version changes; import/compatibility failures halt, amend before any fit. Pin runtime in later implementation CI. GPU dependencies present in XGB wheel do not authorize GPU fitting."
+}

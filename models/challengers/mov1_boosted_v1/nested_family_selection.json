@@ -1,0 +1,8 @@
+{
+  "outer_refit": "Fit selected configuration with frozen rounds rule and preprocessing refit using full historical 2015+ finishes before y. Score all eligible y fights from feature-only frame; persist complete ID table before attaching outcomes.",
+  "per_outer_year": "For y=2018..2026 use exact frozen inner years y-2,y-1 and their 2015+ finish histories; refit preprocessing once per inner history; evaluate each of 54 configurations on both inner folds. Rank by sum of per-row best-prefix binary losses / total validation N, not equal-year averaging. Family is part of this joint ranking.",
+  "prohibited": "No outer early stopping, family choice, grid growth, feature selection, recalibration, Bayes/Optuna/random search, subgroup optimization, odds or ROI. Freeze implementation commit before historical boosted fitting; failed validation stops before interpretation.",
+  "shadows": "Mandatory MOV1-XGB, MOV1-LGBM, MOV1-CAT: select within-family hyperparameters with same inner losses/tie rules; three outer fits per year, primary SELECT aliases the chosen family fit (no fourth fit). Shadows descriptive only; never promote an outer-OOF family winner. A later library freeze requires separate decision.",
+  "tie_rule": "Find global minimum loss; among candidates with loss <= minimum+1e-12 choose first in registry family order XGB,LGBM,CAT then candidate numeric ID order. No outer tie break.",
+  "tie_tolerance": 1e-12
+}

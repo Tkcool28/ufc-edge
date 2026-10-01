@@ -1,0 +1,42 @@
+name: MOV1 Boosted Contract V1 (no fitting)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'models/challengers/mov1_boosted_v1/**'
+      - 'tools/contracts/validate_mov1_boosted_contract_v1.py'
+      - '.github/workflows/mov1-boosted-contract-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  validate-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Install exact dependency lock
+        run: python -m pip install -r models/challengers/mov1_boosted_v1/requirements-lock.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify ancestry, whitespace and contract without estimator fitting
+        run: |
+          git merge-base --is-ancestor dbac7e2da5a1e2fde018ba6c87709b2e84ec10ac HEAD
+          git diff dbac7e2da5a1e2fde018ba6c87709b2e84ec10ac..HEAD --check
+          python tools/contracts/validate_mov1_boosted_contract_v1.py --f02-table '${{ runner.temp }}/f02/winner_modeling_table.parquet'

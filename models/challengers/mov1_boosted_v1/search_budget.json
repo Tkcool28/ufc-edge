@@ -1,0 +1,13 @@
+{
+  "candidates_per_family": 18,
+  "candidates_total": 54,
+  "contract_task_model_fits": 0,
+  "formula": "3 depths * 3 learning rates * 2 profiles = 18 per family; 3 families * 18 * 2 inner years * 9 outer years = 972 inner fits; 3 family refits * 9 = 27 outer fits (SELECT reuses one); 9 selected-family repeat refits = 9; total 1008.",
+  "inner_fits": 972,
+  "maximum_boosting_rounds_sum": 2016000,
+  "optional_extra_fits": 0,
+  "outer_unique_fits_with_shadows": 27,
+  "repeat_selected_outer_refits": 9,
+  "reuse": "Do not cache fits across outer selections in V1; counts are exact planned estimator invocations. Prediction-only saved regeneration adds zero fits. Failures halt; no unrecorded retries. A new execution attempt records its entire budget separately.",
+  "total_fits": 1008
+}
