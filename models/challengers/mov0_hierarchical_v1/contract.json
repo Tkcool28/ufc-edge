@@ -1,0 +1,97 @@
+{
+  "F02_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+  "chronology": {
+    "outer_years": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "sensitivity": false,
+    "training": "eligible certified UFC STANDARD_FINISH 2015+ strictly prior years",
+    "tuning": false
+  },
+  "convergence": {
+    "divergences": 0,
+    "max_rank_rhat": 1.01,
+    "max_tree_depth_hits": 0,
+    "min_bulk_ess": 400,
+    "min_chain_bfmi": 0.3,
+    "min_tail_ess": 400,
+    "scope": "all stochastic alpha,beta,tau,z; all folds must pass before aggregate interpretation"
+  },
+  "evaluation": {
+    "bootstrap": {
+      "event_cluster": "event_id",
+      "interval": "percentile 95%",
+      "paired_fight": true,
+      "replicates": 2000,
+      "seed": 17
+    },
+    "classification": "CLEAR_SUCCESS only concordant favorable bootstrap evidence, persistence, and no dominant generalization damage; INCONCLUSIVE mixed/uncertain; CURRENT_SPECIFICATION_NOT_SUPPORTED adverse evidence; no numeric success cutoff",
+    "comparisons": [
+      "H1-H0",
+      "H2-H0",
+      "H2-H1"
+    ],
+    "governance": "N>=100 NORMAL;50-99 MODERATE;25-49 THIN;<25 N-only",
+    "panels": "immutable terrain, #111 six bands, unchanged #113 archetypes/thresholds (evaluation only)",
+    "primary": "OOF log loss",
+    "secondary": [
+      "Brier",
+      "calibration intercept/slope",
+      "fixed ten-bin ECE/reliability",
+      "AUC",
+      "mean prediction",
+      "prevalence"
+    ],
+    "tradeoff": "negative paired log-loss delta HELPED; positive HURT; abs<=1e-12 UNCHANGED, descriptive only; probability buckets use paired baseline-MIN membership for quality deltas and own membership for reliability"
+  },
+  "frozen_MIN_OOF_sha256": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57",
+  "frozen_sources": {
+    "docs/model_diagnostics/mov0_conditional_feature_interaction_archetype_v1/feature_state_thresholds.json": "066d525e3660fbbee9accba47ea3b56468179e6eff6d78d4aebabe7e45c8daad",
+    "governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2",
+    "models/mov0/feature_surface_v1.json": "5cad139d1ef956c7fec6ea2c8d9b86a117195bf8be221cfd757740275e4edb2b",
+    "models/mov0/model_contract_v1.json": "6a28238798563d6f7c538eac30048e46c9f4bc3a05d23c30381462ae0655a8e0",
+    "models/mov0/validation_plan_v1.json": "962229624ccb95ad47f7846aae38735aebe88b0d404692a1bc9789a94589db35",
+    "src/ufc_edge/models/mov0.py": "15cd6d669b61c7e9e8fea456a9e944ad561d02ff5e376e5b3ca95dfd3564362b",
+    "tools/diagnostics/run_mov0_conditional_feature_interaction_archetype_v1.py": "8e517481e34f402d6457968f4a6838351ba799a4b756115196ccfd6d07f2be50"
+  },
+  "identity": "MOV0_HIERARCHICAL_PARTIAL_POOLING_CHALLENGER_V1",
+  "model": "Bayesian Bernoulli logistic, noncentered independent zero-mean Normal group deviations; learned shared scale per family",
+  "prediction": "mean sigmoid of posterior logits, 95% equal-tailed credible intervals; unseen training groups use independent standard-normal draws at learned scale with fixed prediction seed",
+  "preprocessing": "reuse unchanged SurfacePreprocessor MOV0_MIN; slice off weight one-hot columns, keep numeric and title; fit within outer training only",
+  "priors": {
+    "alpha": "Normal(0,1.5)",
+    "global_beta": "Normal(0,0.5) independently for all standardized numeric columns and title indicator",
+    "tau_family": "HalfNormal(0.5) independently for each of four families",
+    "tau_intercept": "HalfNormal(1.0)",
+    "z_group_effect": "Normal(0,1); deviation=tau*z; group effects not constrained to sum zero"
+  },
+  "reproducibility": "exact software lock; fixed seeds, sorted fights, BLAS threads=1; repeat first H1 fold and require identical prediction/draw hashes under same environment before accepting results; cross-platform bitwise equality not promised",
+  "sampling": {
+    "chains": 4,
+    "cores": 4,
+    "draws": 1000,
+    "init": "jitter+adapt_diag",
+    "library": "pymc==5.18.2",
+    "max_treedepth": 12,
+    "retry": "none; stop on convergence failure, do not tune after results",
+    "sampler": "pymc NUTS",
+    "seed_rule": "17 + outer_year*10 + surface_index (H1=1,H2=2)",
+    "target_accept": 0.95,
+    "tune": 1000
+  },
+  "shrinkage": "local information diagnostic lambda=1/(1+tau^2*I_group), I=sum(p*(1-p)*x_effect^2) training posterior mean, x=1 for intercept. Approximate conditional pooling weight, not observed ratio to unpooled fits; no independent class model",
+  "starting_main": "378ba0576426cd01bd73cbaff774b782c8fb2f6b",
+  "surfaces": [
+    "H0_FROZEN_MOV0_MIN",
+    "H1_INTERCEPT",
+    "H2_INTERCEPT_AND_SEVEN_SLOPES"
+  ]
+}

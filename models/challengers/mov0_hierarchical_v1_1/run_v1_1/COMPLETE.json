@@ -1,0 +1,23 @@
+{
+  "V1_PR": 115,
+  "V1_freeze": "bc5f9df5436402915915aa34da304bbfa46cbccb",
+  "accepted_fits": 18,
+  "amendment_commit": "30b14dc5b355e9356dbdd80c793ab6d6feedf861",
+  "classification": "CURRENT_SPECIFICATION_NOT_SUPPORTED",
+  "comparisons": {
+    "H1_vs_H0": "CURRENT_SPECIFICATION_NOT_SUPPORTED",
+    "H2_vs_H0": "CURRENT_SPECIFICATION_NOT_SUPPORTED",
+    "H2_vs_H1": "INCONCLUSIVE"
+  },
+  "draft_PR": 116,
+  "fighter_order_invariance_all_passed": true,
+  "inference_status": "V1_1_CONVERGENCE_VALIDATED",
+  "performance_evaluated_only_after_all_fits_passed": true,
+  "reproducibility": {
+    "max_abs_probability_delta": 0.0,
+    "posterior_arrays_identical": true,
+    "predictions_identical": true,
+    "scope": "first H1 fold exact same environment repeat"
+  },
+  "status": "MOV0_HIERARCHICAL_PARTIAL_POOLING_CHALLENGER_V1_1_COMPLETE"
+}

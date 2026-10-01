@@ -1,0 +1,29 @@
+{
+  "V1_1_preregistration": "30b14dc5b355e9356dbdd80c793ab6d6feedf861",
+  "V1_PR": 115,
+  "V1_scientific_freeze": "bc5f9df5436402915915aa34da304bbfa46cbccb",
+  "checks": "AST tests prove all model/group/prediction/convergence functions identical; evaluator byte-identical; sampler argument maps identical after only tune/draws removed",
+  "file_hashes": {
+    "models/challengers/mov0_hierarchical_v1/contract.json": "89636e1eeb20a18c714cb9187c669892ce152afd6020c01f5c5cc81cc4e7157c",
+    "models/challengers/mov0_hierarchical_v1/requirements.lock": "d29de53a770b14314adf3617c665465441440eb826cbc4004168e6ab166451d2",
+    "models/challengers/mov0_hierarchical_v1/varying_effect_map.json": "c4547a5e19f08f2b210203afe782fa72a86c556bb9339b6abf34d249c0fc6e6d",
+    "models/challengers/mov0_hierarchical_v1/weight_class_map.json": "9ad4d7f701dcab2453b3ed8fe4aa500a07aabe027d7f0e951b823a8a6f7fb92e"
+  },
+  "original_files_match_git_freeze": {
+    "models/challengers/mov0_hierarchical_v1/contract.json": true,
+    "models/challengers/mov0_hierarchical_v1/requirements.lock": true,
+    "models/challengers/mov0_hierarchical_v1/varying_effect_map.json": true,
+    "models/challengers/mov0_hierarchical_v1/weight_class_map.json": true
+  },
+  "sampling_budget": {
+    "draws": {
+      "V1": 1000,
+      "V1_1": 2000
+    },
+    "tune": {
+      "V1": 1000,
+      "V1_1": 2000
+    }
+  },
+  "status": "SCIENTIFIC_SPECIFICATION_UNCHANGED"
+}
