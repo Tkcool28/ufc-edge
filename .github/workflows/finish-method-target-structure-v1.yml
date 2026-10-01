@@ -1,0 +1,68 @@
+name: Finish Method Target Structure Audit V1
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/finish-method-target-structure-v1.yml'
+      - 'tools/diagnostics/run_finish_method_target_structure_v1.py'
+      - 'tests/diagnostics/test_finish_method_target_structure_v1.py'
+      - 'governance/finish_method_target_structure_v1/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned descriptive dependencies
+        run: python -m pip install numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 pytest==8.3.3
+      - name: Verify exact starting-main ancestry and pre-outcome freeze
+        run: |
+          git merge-base --is-ancestor 44aa8dc97b57192ae90e847767051a03f38acd3d HEAD
+          git merge-base --is-ancestor 6264fc89e9c493f0fd5a6d2cdbde87f98c9598f0 HEAD
+          git diff 44aa8dc97b57192ae90e847767051a03f38acd3d..HEAD --check
+      - name: Validate committed reference and bounded audit logic
+        run: python -m pytest -q tests/diagnostics/test_finish_method_target_structure_v1.py
+      - name: Download authoritative frozen corrected F02
+        uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Reproduce descriptive tables without model fitting
+        run: |
+          python tools/diagnostics/run_finish_method_target_structure_v1.py \
+            --f02-table '${{ runner.temp }}/f02/winner_modeling_table.parquet' \
+            --output-dir '${{ runner.temp }}/audit'
+          python - '${{ runner.temp }}/audit' <<'PY'
+          import hashlib, json, sys
+          from pathlib import Path
+          committed=Path('governance/finish_method_target_structure_v1')
+          produced=Path(sys.argv[1])
+          m=json.loads((committed/'POPULATION_AND_EXECUTION.json').read_text())
+          for name in list(m['tables'])+['SAMPLE_GOVERNANCE_METADATA.json','POPULATION_AND_EXECUTION.json']:
+              assert hashlib.sha256((committed/name).read_bytes()).digest()==hashlib.sha256((produced/name).read_bytes()).digest(),name
+          print('Every table and execution record reproduced byte-for-byte')
+          PY
+      - name: Upload reproduced descriptive evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: finish-method-target-structure-audit-v1
+          path: ${{ runner.temp }}/audit
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,47 @@
+raw_label,division,N,sample_status
+Bantamweight,Bantamweight,600,NORMAL
+Catch Weight,Catch Weight,70,MODERATE_UNCERTAINTY
+Featherweight,Featherweight,644,NORMAL
+Flyweight,Flyweight,334,NORMAL
+Heavyweight,Heavyweight,415,NORMAL
+Interim Bantamweight,Bantamweight,1,INSUFFICIENT
+Interim Featherweight,Featherweight,4,INSUFFICIENT
+Interim Flyweight,Flyweight,1,INSUFFICIENT
+Interim Heavyweight,Heavyweight,4,INSUFFICIENT
+Interim Light Heavyweight,Light Heavyweight,1,INSUFFICIENT
+Interim Lightweight,Lightweight,4,INSUFFICIENT
+Interim Middleweight,Middleweight,2,INSUFFICIENT
+Interim Welterweight,Welterweight,1,INSUFFICIENT
+Light Heavyweight,Light Heavyweight,419,NORMAL
+Lightweight,Lightweight,821,NORMAL
+Middleweight,Middleweight,638,NORMAL
+Road To UFC 1 Bantamweight Tournament,Bantamweight,1,INSUFFICIENT
+Road To UFC 1 Featherweight Tournament,Featherweight,1,INSUFFICIENT
+Road To UFC 1 Lightweight Tournament,Lightweight,1,INSUFFICIENT
+Road to UFC 1 Flyweight Tournament,Flyweight,1,INSUFFICIENT
+Road to UFC 3 Bantamweight Tournament TitleBout,Bantamweight,1,INSUFFICIENT
+Road to UFC 3 Flyweight Tournament TitleBout,Flyweight,1,INSUFFICIENT
+Road to UFC 3 Women's Strawweight Tournament TitleBout,Women's Strawweight,1,INSUFFICIENT
+Ultimate Fighter 21 Welterweight Tournament,Welterweight,1,INSUFFICIENT
+Ultimate Fighter 22 Lightweight Tournament,Lightweight,1,INSUFFICIENT
+Ultimate Fighter 23 Light Heavyweight Tournament,Light Heavyweight,1,INSUFFICIENT
+Ultimate Fighter 23 Women's Strawweight Tournament,Women's Strawweight,1,INSUFFICIENT
+Ultimate Fighter 25 Welterweight Tournament,Welterweight,1,INSUFFICIENT
+Ultimate Fighter 27 Featherweight Tournament,Featherweight,1,INSUFFICIENT
+Ultimate Fighter 27 Lightweight Tournament,Lightweight,1,INSUFFICIENT
+Ultimate Fighter 28 Heavyweight Tournament,Heavyweight,1,INSUFFICIENT
+Ultimate Fighter 28 Women's Featherweight Tournament,Women's Featherweight,1,INSUFFICIENT
+Ultimate Fighter 32 Featherweight Tournament,Featherweight,1,INSUFFICIENT
+Ultimate Fighter 32 Middleweight Tournament,Middleweight,1,INSUFFICIENT
+Ultimate Fighter 33 Flyweight Tournament,Flyweight,1,INSUFFICIENT
+Ultimate Fighter 33 Welterweight Tournament,Welterweight,1,INSUFFICIENT
+Ultimate Fighter Brazil 4 Bantamweight Tournament,Bantamweight,1,INSUFFICIENT
+Ultimate Fighter Brazil 4 Lightweight Tournament,Lightweight,1,INSUFFICIENT
+Ultimate Fighter Latin America 2 Lightweight Tournament,Lightweight,1,INSUFFICIENT
+Ultimate Fighter Latin America 2 Welterweight Tournament,Welterweight,1,INSUFFICIENT
+Ultimate Fighter Latin America 3 Lightweight Tournament,Lightweight,1,INSUFFICIENT
+Welterweight,Welterweight,794,NORMAL
+Women's Bantamweight,Women's Bantamweight,216,NORMAL
+Women's Featherweight,Women's Featherweight,29,THIN_EXPLORATORY
+Women's Flyweight,Women's Flyweight,277,NORMAL
+Women's Strawweight,Women's Strawweight,358,NORMAL

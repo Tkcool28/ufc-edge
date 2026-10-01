@@ -1,0 +1,15 @@
+{
+  "bout_N": {
+    "INSUFFICIENT": "<25",
+    "MODERATE_UNCERTAINTY": "50-99",
+    "NORMAL": ">=100",
+    "THIN_EXPLORATORY": "25-49"
+  },
+  "conditional_sample_gate_separate": true,
+  "conditional_share_denominator": "finish_N",
+  "insufficient_policy": "counts and intervals retained transparently; no substantive interpretation",
+  "missingness": "Three-valued Boolean archetype logic. True OR unknown remains true; unresolved qualification is UNASSIGNABLE, never silently false or LOW. This preserves #113 known-state formulas and makes missingness explicit. Compare old flags separately to expose historical missing-negation differences.",
+  "overlap": "archetypes and state panels overlap; not additive",
+  "wilson": "marginal binomial intervals; repeated fighters/events not independent; no causal/predictive interpretation",
+  "zero_denominator": "blank/JSON null; never zero rate"
+}

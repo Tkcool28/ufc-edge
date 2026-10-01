@@ -1,0 +1,170 @@
+{
+  "aggregate": {
+    "DECISION_N": 2836,
+    "DECISION_rate": 0.5012371862849063,
+    "DECISION_wilson_high": 0.5142601527628793,
+    "DECISION_wilson_low": 0.4882125409891135,
+    "FINISH_rate": 0.4987628137150937,
+    "FINISH_wilson_high": 0.5117874590108865,
+    "FINISH_wilson_low": 0.4857398472371207,
+    "KO_TKO_N": 1812,
+    "KO_TKO_rate": 0.32025450689289503,
+    "KO_TKO_wilson_high": 0.332530255748594,
+    "KO_TKO_wilson_low": 0.30822266628330236,
+    "KO_given_finish_rate": 0.6420978029766123,
+    "KO_given_finish_wilson_high": 0.659580590400508,
+    "KO_given_finish_wilson_low": 0.6242286790461572,
+    "N": 5658,
+    "SUBMISSION_N": 1010,
+    "SUBMISSION_rate": 0.17850830682219865,
+    "SUBMISSION_wilson_high": 0.1887035225140393,
+    "SUBMISSION_wilson_low": 0.1687493439323907,
+    "SUB_given_finish_rate": 0.35790219702338766,
+    "SUB_given_finish_wilson_high": 0.37577132095384275,
+    "SUB_given_finish_wilson_low": 0.34041940959949196,
+    "finish_N": 2822,
+    "finish_sample_status": "NORMAL",
+    "sample_status": "NORMAL"
+  },
+  "canonical_absent_from_F02_N": 0,
+  "canonical_modern_N": 5729,
+  "contract_sha256": "352d73c0e9a2f9d3b3ad5970f9b5e11ece393c4d1da90f1d839d856a914d6064",
+  "date_max": "2026-08-15",
+  "date_min": "2015-01-03",
+  "decision_draws_N": 45,
+  "exclusions": {
+    "('draw', 'NO_CONTEST')": 1,
+    "('no_contest', 'NO_CONTEST')": 32,
+    "('no_contest', 'OTHER')": 25,
+    "('win_loss', 'DQ')": 13
+  },
+  "freeze_commit": "6264fc89e9c493f0fd5a6d2cdbde87f98c9598f0",
+  "guardrails": [
+    "No model import/fit/prediction",
+    "No threshold recalculation",
+    "No F02/MOV0 modification",
+    "No odds/ROI/EV",
+    "No MOV1/hierarchy/simulator implementation",
+    "No automatic merge"
+  ],
+  "inputs": {
+    "F02": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "data/canonical/v0/events.csv": "7bd9d33111fab3fd2506eb651a7870b9de2ee38d3db739fe58ac0ee0ad26261e",
+    "data/canonical/v0/fights.csv": "b972ebb0c6b1fdfdd512c8d6004129f7e0620fe6759ca8acfa1d2f1184029e76",
+    "docs/model_diagnostics/mov0_conditional_feature_interaction_archetype_v1/feature_state_thresholds.json": "066d525e3660fbbee9accba47ea3b56468179e6eff6d78d4aebabe7e45c8daad",
+    "governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2",
+    "models/challengers/mov0_hierarchical_v1/weight_class_map.json": "9ad4d7f701dcab2453b3ed8fe4aa500a07aabe027d7f0e951b823a8a6f7fb92e",
+    "models/mov0/target_contract_v1.json": "3e30bef2eb9b766de82c338c88f8b64a258ec0508907a6d9dd176df571250adc",
+    "tools/diagnostics/run_mov0_conditional_feature_interaction_archetype_v1.py": "8e517481e34f402d6457968f4a6838351ba799a4b756115196ccfd6d07f2be50"
+  },
+  "membership_missingness_review": {
+    "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 731
+    },
+    "A2_BOTH_HIGH_DAMAGE_EXCHANGE": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 270
+    },
+    "A3_ACCURACY_VS_ABSORPTION": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 723
+    },
+    "A4_KO_HISTORY_VS_KO_VULNERABILITY": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 666
+    },
+    "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 707
+    },
+    "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 662
+    },
+    "B3_TD_ACCESS_PLUS_SUB_PRESSURE": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 1062
+    },
+    "B4_SUB_PRESSURE_POOR_TD_ACCESS": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 868
+    },
+    "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 644
+    },
+    "C1_DAMAGE_PLUS_SUBMISSION_ACCESS": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 1095
+    },
+    "C2_BOTH_HIGH_FINISH_HISTORY": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 619
+    },
+    "C3_HIGH_FINISH_PRESSURE_FIVE_ROUNDS": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 2
+    },
+    "D1_LOW_DAMAGE_STRONG_DEFENSE": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 274
+    },
+    "D2_LOW_TD_ACCESS_LOW_SUB_PRESSURE": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 487
+    },
+    "D3_EXPERIENCE_STRONG_DEFENSIVE_PROFILE": {
+      "known_matches_old_exactly": true,
+      "old_match_on_unassignable_N": 0,
+      "unassignable_N": 0
+    }
+  },
+  "modern_F02_candidates_N": 5729,
+  "population_N": 5658,
+  "software": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3"
+  },
+  "starting_main": "44aa8dc97b57192ae90e847767051a03f38acd3d",
+  "status": "FINISH_METHOD_TARGET_STRUCTURE_AUDIT_V1_COMPLETE",
+  "tables": {
+    "archetype_era.csv": 180,
+    "archetype_rounds.csv": 90,
+    "canonical_weight_class.csv": 46,
+    "excluded_fights.csv": 71,
+    "grappling_pathway.csv": 15,
+    "mixed_survival_pathway.csv": 18,
+    "pathway_standardization_strata.csv.gz": 1170,
+    "pathway_standardized_contrasts.csv": 15,
+    "pathway_standardized_era.csv": 60,
+    "pathway_standardized_rounds.csv": 30,
+    "pathway_weight_composition.csv.gz": 2795,
+    "population_manifest.csv.gz": 5658,
+    "state_era.csv.gz": 680,
+    "state_pathways.csv": 170,
+    "state_rounds.csv.gz": 340,
+    "striking_pathway.csv": 12,
+    "terrain_pathways.csv": 33,
+    "weight_class_archetype.csv.gz": 585,
+    "weight_class_era.csv": 56,
+    "weight_class_era_rounds.csv": 104,
+    "weight_class_finish_method.csv": 14,
+    "weight_class_rounds.csv": 28,
+    "weight_class_terrain.csv.gz": 429
+  }
+}
