@@ -1,0 +1,68 @@
+{
+  "files": {
+    "all_archetype_report.csv": {
+      "bytes": 238911,
+      "sha256": "f56022b19081cb43cf62cb26e6d70b8ad2e7caad36cfa89559d72b920addc486"
+    },
+    "composed_oof_all_eligible.csv": {
+      "bytes": 4345342,
+      "sha256": "417e7a3a03b390fe93d3c4c8dbd1c98f620f462b3f1eea946df24488ee3d7c1e"
+    },
+    "conditional_oof_all_eligible.csv": {
+      "bytes": 2662375,
+      "sha256": "d1899df12dc560e3633b37fee78c45a68246cfae16dcdb6de8627888bd423d02"
+    },
+    "conditional_oof_finishes.csv": {
+      "bytes": 1782257,
+      "sha256": "d26851950a9483dc5a27fc473bf8e5abc0142a34c89cd16fea4ff8571c15b84c"
+    },
+    "correction_panel.csv": {
+      "bytes": 30342,
+      "sha256": "be1bb03d179dc18deb1e48939c31c4b27eed646fc93e20f988888e1531bdc505"
+    },
+    "division_archetype_report.csv": {
+      "bytes": 2111141,
+      "sha256": "fad11a18ebdb416651665a788e06b1f22bd0c197931a77b7b978a40e13718156"
+    },
+    "division_report.csv": {
+      "bytes": 51702,
+      "sha256": "68177008c2f9cc6562c88325cecfb99d177165b0e50fa4492fa02597d323f2fa"
+    },
+    "fixed_probability_buckets.csv": {
+      "bytes": 131958,
+      "sha256": "720e1ca1b8a2e581994b2999ba6af681c53cd31a8e3dd112fca1d7696be3a3a5"
+    },
+    "matched_cell_differences.csv": {
+      "bytes": 145238,
+      "sha256": "b4450be5d5fe1b0a93fa1f2171d9e6b0447441843b26adae607ee1b69db3be9a"
+    },
+    "oof_MOV1-BOOST-SELECT.csv": {
+      "bytes": 693944,
+      "sha256": "49405f20b2d2a2ac92152c8c29163897cadd409369aeee779e61a1e63f5b53a5"
+    },
+    "oof_MOV1-CAT.csv": {
+      "bytes": 653274,
+      "sha256": "d895af549f73fd83829fdd7cb8857d55fb53f9cbf1d8ba4bab758df183b359d0"
+    },
+    "oof_MOV1-LGBM.csv": {
+      "bytes": 664244,
+      "sha256": "25e6ac702ea5b6c23ffcb178e915de5f39abfc8ea315e98ed4d447fabd9a9b51"
+    },
+    "oof_MOV1-XGB.csv": {
+      "bytes": 651276,
+      "sha256": "ec7e952403e980dba85c869962520c455440a2ac8f1f9dd6a6896d4128f9cb58"
+    },
+    "panel_annual.csv": {
+      "bytes": 416023,
+      "sha256": "eb55db0a51f0ef2729fe05e6b8dece7fd611bf32fce777b3ac7f3e2dde19a1fa"
+    },
+    "preservation_panel.csv": {
+      "bytes": 27770,
+      "sha256": "c6de16ee6e6a41ddf30176671a636c6e817d7050b0d3820e69f8b8df248873a6"
+    },
+    "terrain_report.csv": {
+      "bytes": 310547,
+      "sha256": "90576dc000f69fc6d77f5819d78330ab57822f17f2f1706cec45bd3bfdeaf5c0"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "F02_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+  "MOV0_sha256": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57",
+  "contract_sha256": "4593dc0056455356ea9e28191acd2fda109124ca9e18ccb07c09319e99a2849b",
+  "finish_N": 2822,
+  "outer_N": 4260,
+  "outer_finish_N": 2115,
+  "population_N": 5658,
+  "status": "INPUT_IDENTITIES_PASSED",
+  "validator_stdout": "{\n  \"status\": \"CONTRACT_INPUT_VALIDATION_PASSED\",\n  \"model_fits\": 0,\n  \"boosted_predictions_generated\": false,\n  \"versions\": {\n    \"numpy\": \"1.26.4\",\n    \"pandas\": \"2.2.3\",\n    \"pyarrow\": \"17.0.0\",\n    \"scipy\": \"1.14.1\",\n    \"scikit-learn\": \"1.5.2\",\n    \"xgboost\": \"2.1.4\",\n    \"lightgbm\": \"4.6.0\",\n    \"catboost\": \"1.2.8\"\n  },\n  \"python\": \"3.12.14\",\n  \"platform\": \"Linux-6.18.44-x86_64-with-glibc2.39\",\n  \"machine\": \"x86_64\",\n  \"candidate_counts\": [\n    18,\n    18,\n    18\n  ],\n  \"total_future_fit_budget\": 1008,\n  \"binary_objectives\": \"Pinned package imports and unfitted constructor/parameter checks passed; required objectives documented by libraries. No training smoke test permitted. Fitted runtime compatibility must pass before later performance interpretation.\",\n  \"outcome_blind_features\": true,\n  \"swap_and_asymmetric_null_matrix_checks\": true,\n  \"all_outer_scoring_rows_representable\": 4260,\n  \"outer_conditional_rows\": 2115\n}\n"
+}

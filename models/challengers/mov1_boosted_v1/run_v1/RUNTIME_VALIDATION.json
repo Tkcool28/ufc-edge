@@ -1,0 +1,21 @@
+{
+  "common_matrix_all_families": true,
+  "composition_max_sum_error": 1.1102230246251565e-16,
+  "conditional_N_per_surface": 2115,
+  "conditional_composed_loss_identity_max_error": 4.440892098500626e-16,
+  "decisions_in_fitting": 0,
+  "early_stopping_outer_rows": 0,
+  "fit_budget": {
+    "additional_exploratory_fits": 0,
+    "ceiling_hits": 0,
+    "completed_rounds": 203178,
+    "inner": 972,
+    "outer": 27,
+    "reproducibility": 9,
+    "total": 1008
+  },
+  "outer_scoring_N_per_surface": 4260,
+  "saved_models_and_repeated_refits_passed": true,
+  "status": "ALL_IMPLEMENTATION_GATES_PASSED",
+  "unexpected_dropped_rows": 0
+}

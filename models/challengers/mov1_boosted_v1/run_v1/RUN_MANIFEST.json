@@ -1,0 +1,9 @@
+{
+  "code_sha256": "a2764614263edd0f92f54f20f48dcbf619cc4cb3ee9d6082e2a9e55d97078f09",
+  "contract_sha256": "4593dc0056455356ea9e28191acd2fda109124ca9e18ccb07c09319e99a2849b",
+  "implementation_freeze_sha": "68d1c73a82ec9ae7e7374251b882b9e17179b1c4",
+  "runtime_seconds": 274.6283571340027,
+  "seed": 17,
+  "starting_main": "4ec01227a4a35872eed51ce7ce67c45b02e46ebd",
+  "threads": 1
+}

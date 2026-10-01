@@ -1,0 +1,686 @@
+{
+  "all_outer_scoring_rows_representable": 4260,
+  "binary_objectives": "Pinned package imports and unfitted constructor/parameter checks passed; required objectives documented by libraries. No training smoke test permitted. Fitted runtime compatibility must pass before later performance interpretation.",
+  "boosted_predictions_generated": false,
+  "candidate_counts": [
+    18,
+    18,
+    18
+  ],
+  "common_matrix_records": [
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 451,
+        "N": 707,
+        "SUBMISSION": 256,
+        "ordered_fight_id_sha256": "1b925a7a784a21409a95b1cbbbbac59c5e41b8097b79ecfed37e8d9bdbea9601"
+      },
+      "history": "outer",
+      "matrix_sha256": "15ebae66c3a2ec3886876bfbed0250bddf462ba52aae482d0c62a7e950950a12",
+      "matrix_shape": [
+        470,
+        47
+      ],
+      "outer_year": 2018,
+      "scoring_N": 470,
+      "validation_year": 2018
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 155,
+        "N": 243,
+        "SUBMISSION": 88,
+        "ordered_fight_id_sha256": "92e34f298ee20e4b34609f453c51c58a8aa5572ba62177aaa8627379add91222"
+      },
+      "history": "inner",
+      "matrix_sha256": "61919c81c6e1463c2f42c2e49b2e3ce3265b63819ca02bb9295a2d748d639297",
+      "matrix_shape": [
+        239,
+        45
+      ],
+      "outer_year": 2018,
+      "scoring_N": 239,
+      "validation_year": 2016
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 306,
+        "N": 482,
+        "SUBMISSION": 176,
+        "ordered_fight_id_sha256": "819253e0084f6c5ddb9cbf7a3164bfc1e118fe7f8fb1e33e79a0ccba1020ac2e"
+      },
+      "history": "inner",
+      "matrix_sha256": "180001565e3afa13354acb6fe44502a15cf65543402389b6845164ddd52b8bca",
+      "matrix_shape": [
+        225,
+        46
+      ],
+      "outer_year": 2018,
+      "scoring_N": 225,
+      "validation_year": 2017
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 602,
+        "N": 948,
+        "SUBMISSION": 346,
+        "ordered_fight_id_sha256": "06ef145b7e97f19197d7b2d03ea15f7f24f74e9605a4c2c4f624d351e487c10a"
+      },
+      "history": "outer",
+      "matrix_sha256": "a0b2dc62625f3f7eff504a47459329c59a969ad14e1dfaffa3641cef34a8f607",
+      "matrix_shape": [
+        507,
+        47
+      ],
+      "outer_year": 2019,
+      "scoring_N": 507,
+      "validation_year": 2019
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 306,
+        "N": 482,
+        "SUBMISSION": 176,
+        "ordered_fight_id_sha256": "819253e0084f6c5ddb9cbf7a3164bfc1e118fe7f8fb1e33e79a0ccba1020ac2e"
+      },
+      "history": "inner",
+      "matrix_sha256": "180001565e3afa13354acb6fe44502a15cf65543402389b6845164ddd52b8bca",
+      "matrix_shape": [
+        225,
+        46
+      ],
+      "outer_year": 2019,
+      "scoring_N": 225,
+      "validation_year": 2017
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 451,
+        "N": 707,
+        "SUBMISSION": 256,
+        "ordered_fight_id_sha256": "1b925a7a784a21409a95b1cbbbbac59c5e41b8097b79ecfed37e8d9bdbea9601"
+      },
+      "history": "inner",
+      "matrix_sha256": "d59b0ba2135378959cc2eda5a023224439ced7137af2315963fc9f6ebe772b6a",
+      "matrix_shape": [
+        241,
+        47
+      ],
+      "outer_year": 2019,
+      "scoring_N": 241,
+      "validation_year": 2018
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 754,
+        "N": 1179,
+        "SUBMISSION": 425,
+        "ordered_fight_id_sha256": "360ad37c63e631add2c23faf0fde959104756e7e92ea247bef94fc7d4af362c6"
+      },
+      "history": "outer",
+      "matrix_sha256": "207512bccbc19c3ba586387310c802ac575f6f059fd5e56cfd9632a87e6967ee",
+      "matrix_shape": [
+        443,
+        47
+      ],
+      "outer_year": 2020,
+      "scoring_N": 443,
+      "validation_year": 2020
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 451,
+        "N": 707,
+        "SUBMISSION": 256,
+        "ordered_fight_id_sha256": "1b925a7a784a21409a95b1cbbbbac59c5e41b8097b79ecfed37e8d9bdbea9601"
+      },
+      "history": "inner",
+      "matrix_sha256": "d59b0ba2135378959cc2eda5a023224439ced7137af2315963fc9f6ebe772b6a",
+      "matrix_shape": [
+        241,
+        47
+      ],
+      "outer_year": 2020,
+      "scoring_N": 241,
+      "validation_year": 2018
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 602,
+        "N": 948,
+        "SUBMISSION": 346,
+        "ordered_fight_id_sha256": "06ef145b7e97f19197d7b2d03ea15f7f24f74e9605a4c2c4f624d351e487c10a"
+      },
+      "history": "inner",
+      "matrix_sha256": "949af2e0747f785ab20e6c222cfe07fc328ca24108eb13232b1a557c6f31e234",
+      "matrix_shape": [
+        231,
+        47
+      ],
+      "outer_year": 2020,
+      "scoring_N": 231,
+      "validation_year": 2019
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 892,
+        "N": 1399,
+        "SUBMISSION": 507,
+        "ordered_fight_id_sha256": "15fb7462bb4e918b16774cb9d1d7a33b0efdd3897ce3d55fa3cbb0d03d1a66b4"
+      },
+      "history": "outer",
+      "matrix_sha256": "588c404e226ed8c1bf888fe759c05a028e5047bef5f035e7fb61090e1d38c5d9",
+      "matrix_shape": [
+        492,
+        47
+      ],
+      "outer_year": 2021,
+      "scoring_N": 492,
+      "validation_year": 2021
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 602,
+        "N": 948,
+        "SUBMISSION": 346,
+        "ordered_fight_id_sha256": "06ef145b7e97f19197d7b2d03ea15f7f24f74e9605a4c2c4f624d351e487c10a"
+      },
+      "history": "inner",
+      "matrix_sha256": "949af2e0747f785ab20e6c222cfe07fc328ca24108eb13232b1a557c6f31e234",
+      "matrix_shape": [
+        231,
+        47
+      ],
+      "outer_year": 2021,
+      "scoring_N": 231,
+      "validation_year": 2019
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 754,
+        "N": 1179,
+        "SUBMISSION": 425,
+        "ordered_fight_id_sha256": "360ad37c63e631add2c23faf0fde959104756e7e92ea247bef94fc7d4af362c6"
+      },
+      "history": "inner",
+      "matrix_sha256": "44eb0bc03ec9610ed19ad2a2fef1e00f3df52f137bc2b517eedde6b89bbb0578",
+      "matrix_shape": [
+        220,
+        47
+      ],
+      "outer_year": 2021,
+      "scoring_N": 220,
+      "validation_year": 2020
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1058,
+        "N": 1638,
+        "SUBMISSION": 580,
+        "ordered_fight_id_sha256": "e86a9a3ab60ee7fa218b8c7de43987d43a3f00783f1f4b4655a5251671cf4592"
+      },
+      "history": "outer",
+      "matrix_sha256": "5e8f1ec4e5b9f3afc1ea520d42b72e9271bd5cef5b85a14cf2677764aab78a41",
+      "matrix_shape": [
+        505,
+        47
+      ],
+      "outer_year": 2022,
+      "scoring_N": 505,
+      "validation_year": 2022
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 754,
+        "N": 1179,
+        "SUBMISSION": 425,
+        "ordered_fight_id_sha256": "360ad37c63e631add2c23faf0fde959104756e7e92ea247bef94fc7d4af362c6"
+      },
+      "history": "inner",
+      "matrix_sha256": "44eb0bc03ec9610ed19ad2a2fef1e00f3df52f137bc2b517eedde6b89bbb0578",
+      "matrix_shape": [
+        220,
+        47
+      ],
+      "outer_year": 2022,
+      "scoring_N": 220,
+      "validation_year": 2020
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 892,
+        "N": 1399,
+        "SUBMISSION": 507,
+        "ordered_fight_id_sha256": "15fb7462bb4e918b16774cb9d1d7a33b0efdd3897ce3d55fa3cbb0d03d1a66b4"
+      },
+      "history": "inner",
+      "matrix_sha256": "61f02af549e215f73fa3b32c390743a82ad648cf7fef53206df86e9a2eb0f874",
+      "matrix_shape": [
+        239,
+        47
+      ],
+      "outer_year": 2022,
+      "scoring_N": 239,
+      "validation_year": 2021
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1229,
+        "N": 1906,
+        "SUBMISSION": 677,
+        "ordered_fight_id_sha256": "78a56071e175b306d2c897e71ecda3ec02548c8a08a708ced8c2ca7bec9cb5cb"
+      },
+      "history": "outer",
+      "matrix_sha256": "34980101a1248c806b93c0e90c331c1a3b50693011690dd4f4d8b4baeb06c325",
+      "matrix_shape": [
+        505,
+        47
+      ],
+      "outer_year": 2023,
+      "scoring_N": 505,
+      "validation_year": 2023
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 892,
+        "N": 1399,
+        "SUBMISSION": 507,
+        "ordered_fight_id_sha256": "15fb7462bb4e918b16774cb9d1d7a33b0efdd3897ce3d55fa3cbb0d03d1a66b4"
+      },
+      "history": "inner",
+      "matrix_sha256": "61f02af549e215f73fa3b32c390743a82ad648cf7fef53206df86e9a2eb0f874",
+      "matrix_shape": [
+        239,
+        47
+      ],
+      "outer_year": 2023,
+      "scoring_N": 239,
+      "validation_year": 2021
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1058,
+        "N": 1638,
+        "SUBMISSION": 580,
+        "ordered_fight_id_sha256": "e86a9a3ab60ee7fa218b8c7de43987d43a3f00783f1f4b4655a5251671cf4592"
+      },
+      "history": "inner",
+      "matrix_sha256": "fa732a87dd2a5e17ab531e52bc013f908d6c553f0ce5076de70604fdea56cef1",
+      "matrix_shape": [
+        268,
+        47
+      ],
+      "outer_year": 2023,
+      "scoring_N": 268,
+      "validation_year": 2022
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1387,
+        "N": 2164,
+        "SUBMISSION": 777,
+        "ordered_fight_id_sha256": "138ea421344e3fcdb444535b8e66a692a830ead8a5a915f7fcb43947ae018365"
+      },
+      "history": "outer",
+      "matrix_sha256": "2bb6fdcc8cd5c247608059d284588359df169b859854c77e239415d426ace6f0",
+      "matrix_shape": [
+        502,
+        47
+      ],
+      "outer_year": 2024,
+      "scoring_N": 502,
+      "validation_year": 2024
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1058,
+        "N": 1638,
+        "SUBMISSION": 580,
+        "ordered_fight_id_sha256": "e86a9a3ab60ee7fa218b8c7de43987d43a3f00783f1f4b4655a5251671cf4592"
+      },
+      "history": "inner",
+      "matrix_sha256": "fa732a87dd2a5e17ab531e52bc013f908d6c553f0ce5076de70604fdea56cef1",
+      "matrix_shape": [
+        268,
+        47
+      ],
+      "outer_year": 2024,
+      "scoring_N": 268,
+      "validation_year": 2022
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1229,
+        "N": 1906,
+        "SUBMISSION": 677,
+        "ordered_fight_id_sha256": "78a56071e175b306d2c897e71ecda3ec02548c8a08a708ced8c2ca7bec9cb5cb"
+      },
+      "history": "inner",
+      "matrix_sha256": "9a969f0c81d3c80178a36aed52c5a322393730eff304ca943d6ea6033ed7fb86",
+      "matrix_shape": [
+        258,
+        47
+      ],
+      "outer_year": 2024,
+      "scoring_N": 258,
+      "validation_year": 2023
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1528,
+        "N": 2387,
+        "SUBMISSION": 859,
+        "ordered_fight_id_sha256": "0bc753a8784967ae86e099b8eca32029449b9175422367fd7f7573d142cf25ac"
+      },
+      "history": "outer",
+      "matrix_sha256": "6466762f38adbee401fa78232673faf93e3709394bcecfd96e00170eaa54a683",
+      "matrix_shape": [
+        504,
+        47
+      ],
+      "outer_year": 2025,
+      "scoring_N": 504,
+      "validation_year": 2025
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1229,
+        "N": 1906,
+        "SUBMISSION": 677,
+        "ordered_fight_id_sha256": "78a56071e175b306d2c897e71ecda3ec02548c8a08a708ced8c2ca7bec9cb5cb"
+      },
+      "history": "inner",
+      "matrix_sha256": "9a969f0c81d3c80178a36aed52c5a322393730eff304ca943d6ea6033ed7fb86",
+      "matrix_shape": [
+        258,
+        47
+      ],
+      "outer_year": 2025,
+      "scoring_N": 258,
+      "validation_year": 2023
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1387,
+        "N": 2164,
+        "SUBMISSION": 777,
+        "ordered_fight_id_sha256": "138ea421344e3fcdb444535b8e66a692a830ead8a5a915f7fcb43947ae018365"
+      },
+      "history": "inner",
+      "matrix_sha256": "b51fabf5233cec15853cd12828bb98b8341a20143fe4b7e2feb372d6ff28ad0a",
+      "matrix_shape": [
+        223,
+        47
+      ],
+      "outer_year": 2025,
+      "scoring_N": 223,
+      "validation_year": 2024
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1691,
+        "N": 2639,
+        "SUBMISSION": 948,
+        "ordered_fight_id_sha256": "7a809a6b3d6cd3a56c9308555c25cad15f2965606a740ac11166cc7888156b5d"
+      },
+      "history": "outer",
+      "matrix_sha256": "abb191276809fb6edbe400dd7d1e1f354c0f3a2d3731c18f640052bf219e14eb",
+      "matrix_shape": [
+        332,
+        47
+      ],
+      "outer_year": 2026,
+      "scoring_N": 332,
+      "validation_year": 2026
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1387,
+        "N": 2164,
+        "SUBMISSION": 777,
+        "ordered_fight_id_sha256": "138ea421344e3fcdb444535b8e66a692a830ead8a5a915f7fcb43947ae018365"
+      },
+      "history": "inner",
+      "matrix_sha256": "b51fabf5233cec15853cd12828bb98b8341a20143fe4b7e2feb372d6ff28ad0a",
+      "matrix_shape": [
+        223,
+        47
+      ],
+      "outer_year": 2026,
+      "scoring_N": 223,
+      "validation_year": 2024
+    },
+    {
+      "fit_identity": {
+        "DECISION": 0,
+        "KO_TKO": 1528,
+        "N": 2387,
+        "SUBMISSION": 859,
+        "ordered_fight_id_sha256": "0bc753a8784967ae86e099b8eca32029449b9175422367fd7f7573d142cf25ac"
+      },
+      "history": "inner",
+      "matrix_sha256": "ce1f308754bd24ced378304d797d2994accefbd872cff9e94eb8a1b792c4875f",
+      "matrix_shape": [
+        252,
+        47
+      ],
+      "outer_year": 2026,
+      "scoring_N": 252,
+      "validation_year": 2025
+    }
+  ],
+  "machine": "x86_64",
+  "model_fits": 0,
+  "outcome_blind_features": true,
+  "outer_conditional_rows": 2115,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "status": "CONTRACT_INPUT_VALIDATION_PASSED",
+  "swap_and_asymmetric_null_matrix_checks": true,
+  "total_future_fit_budget": 1008,
+  "upstream_validation": {
+    "F02_columns": 211,
+    "F02_physical_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "F02_rows": 9252,
+    "checks": [
+      "foundation hashes",
+      "canonical labels",
+      "literal corrected F02 schema",
+      "existing PIT-governed career families",
+      "symmetric pair closure",
+      "categorical mapping",
+      "outer and inner exact counts and ID digests",
+      "finish-only training, complete scoring coverage",
+      "finite training support",
+      "illustrative composition and symmetry algebra"
+    ],
+    "conditional_finish_N": 2822,
+    "future_runtime_checks": [
+      "fitted probability swap invariance1e-12",
+      "fitted preprocessing train-only behavior",
+      "convergence",
+      "conditional and complete-system metrics",
+      "immutable MOV0 OOF join hashes"
+    ],
+    "modern_all_eligible_N": 5658,
+    "no_model_fit_no_predictions_no_performance_evaluation": true,
+    "outer_all_scoring_N": 4260,
+    "outer_conditional_N": 2115,
+    "predictors_checked": 55,
+    "starting_main_sha": "4d641e259d4420fd77290603cabcce33c90bf6c8",
+    "status": "CONTRACT_INPUT_VALIDATION_PASSED",
+    "training_support": [
+      {
+        "finish_training_N": 707,
+        "history": "outer_2018",
+        "minimum_finite_pooled_pair_values": 1122
+      },
+      {
+        "finish_training_N": 243,
+        "history": "outer_2018_inner_2016",
+        "minimum_finite_pooled_pair_values": 400
+      },
+      {
+        "finish_training_N": 482,
+        "history": "outer_2018_inner_2017",
+        "minimum_finite_pooled_pair_values": 766
+      },
+      {
+        "finish_training_N": 948,
+        "history": "outer_2019",
+        "minimum_finite_pooled_pair_values": 1502
+      },
+      {
+        "finish_training_N": 482,
+        "history": "outer_2019_inner_2017",
+        "minimum_finite_pooled_pair_values": 766
+      },
+      {
+        "finish_training_N": 707,
+        "history": "outer_2019_inner_2018",
+        "minimum_finite_pooled_pair_values": 1122
+      },
+      {
+        "finish_training_N": 1179,
+        "history": "outer_2020",
+        "minimum_finite_pooled_pair_values": 1862
+      },
+      {
+        "finish_training_N": 707,
+        "history": "outer_2020_inner_2018",
+        "minimum_finite_pooled_pair_values": 1122
+      },
+      {
+        "finish_training_N": 948,
+        "history": "outer_2020_inner_2019",
+        "minimum_finite_pooled_pair_values": 1502
+      },
+      {
+        "finish_training_N": 1399,
+        "history": "outer_2021",
+        "minimum_finite_pooled_pair_values": 2196
+      },
+      {
+        "finish_training_N": 948,
+        "history": "outer_2021_inner_2019",
+        "minimum_finite_pooled_pair_values": 1502
+      },
+      {
+        "finish_training_N": 1179,
+        "history": "outer_2021_inner_2020",
+        "minimum_finite_pooled_pair_values": 1862
+      },
+      {
+        "finish_training_N": 1638,
+        "history": "outer_2022",
+        "minimum_finite_pooled_pair_values": 2594
+      },
+      {
+        "finish_training_N": 1179,
+        "history": "outer_2022_inner_2020",
+        "minimum_finite_pooled_pair_values": 1862
+      },
+      {
+        "finish_training_N": 1399,
+        "history": "outer_2022_inner_2021",
+        "minimum_finite_pooled_pair_values": 2196
+      },
+      {
+        "finish_training_N": 1906,
+        "history": "outer_2023",
+        "minimum_finite_pooled_pair_values": 3044
+      },
+      {
+        "finish_training_N": 1399,
+        "history": "outer_2023_inner_2021",
+        "minimum_finite_pooled_pair_values": 2196
+      },
+      {
+        "finish_training_N": 1638,
+        "history": "outer_2023_inner_2022",
+        "minimum_finite_pooled_pair_values": 2594
+      },
+      {
+        "finish_training_N": 2164,
+        "history": "outer_2024",
+        "minimum_finite_pooled_pair_values": 3442
+      },
+      {
+        "finish_training_N": 1638,
+        "history": "outer_2024_inner_2022",
+        "minimum_finite_pooled_pair_values": 2594
+      },
+      {
+        "finish_training_N": 1906,
+        "history": "outer_2024_inner_2023",
+        "minimum_finite_pooled_pair_values": 3044
+      },
+      {
+        "finish_training_N": 2387,
+        "history": "outer_2025",
+        "minimum_finite_pooled_pair_values": 3808
+      },
+      {
+        "finish_training_N": 1906,
+        "history": "outer_2025_inner_2023",
+        "minimum_finite_pooled_pair_values": 3044
+      },
+      {
+        "finish_training_N": 2164,
+        "history": "outer_2025_inner_2024",
+        "minimum_finite_pooled_pair_values": 3442
+      },
+      {
+        "finish_training_N": 2639,
+        "history": "outer_2026",
+        "minimum_finite_pooled_pair_values": 4206
+      },
+      {
+        "finish_training_N": 2164,
+        "history": "outer_2026_inner_2024",
+        "minimum_finite_pooled_pair_values": 3442
+      },
+      {
+        "finish_training_N": 2387,
+        "history": "outer_2026_inner_2025",
+        "minimum_finite_pooled_pair_values": 3808
+      }
+    ]
+  },
+  "versions": {
+    "catboost": "1.2.8",
+    "lightgbm": "4.6.0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "pyarrow": "17.0.0",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.14.1",
+    "xgboost": "2.1.4"
+  }
+}

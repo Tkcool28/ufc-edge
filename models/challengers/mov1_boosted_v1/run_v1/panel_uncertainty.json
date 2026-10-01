@@ -1,0 +1,302 @@
+{
+  "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": {
+    "N": 763,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.006659046206034166,
+        0.013680988221244857
+      ],
+      "fight_paired_95": [
+        -0.006558793694592525,
+        0.01322425562321936
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.011490407018413182,
+        0.0218160401137262
+      ],
+      "fight_paired_95": [
+        -0.01118000595472704,
+        0.022653115110628674
+      ]
+    },
+    "finish_N": 457,
+    "sample_status": "NORMAL"
+  },
+  "A2_BOTH_HIGH_DAMAGE_EXCHANGE": {
+    "N": 143,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.01146399845572011,
+        0.029968412577538347
+      ],
+      "fight_paired_95": [
+        -0.011242245086900278,
+        0.03108258919550576
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.02024049826727958,
+        0.05540173854410409
+      ],
+      "fight_paired_95": [
+        -0.022214588835572098,
+        0.055070586967788486
+      ]
+    },
+    "finish_N": 79,
+    "sample_status": "MODERATE_UNCERTAINTY"
+  },
+  "A4_KO_HISTORY_VS_KO_VULNERABILITY": {
+    "N": 789,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.011413280602005195,
+        0.010346813903803521
+      ],
+      "fight_paired_95": [
+        -0.01070942637944988,
+        0.009626908783770493
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.018703212060983996,
+        0.01629932371625995
+      ],
+      "fight_paired_95": [
+        -0.01784807577209681,
+        0.015483431289512753
+      ]
+    },
+    "finish_N": 484,
+    "sample_status": "NORMAL"
+  },
+  "B1_TD_PRESSURE_VS_WEAK_TD_DEFENSE": {
+    "N": 662,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.020238762845554148,
+        0.005704206781972102
+      ],
+      "fight_paired_95": [
+        -0.02023162929059005,
+        0.005382151989324257
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.03777357123025017,
+        0.010156156691890846
+      ],
+      "fight_paired_95": [
+        -0.03896354381931531,
+        0.010138936232122375
+      ]
+    },
+    "finish_N": 352,
+    "sample_status": "NORMAL"
+  },
+  "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE": {
+    "N": 698,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.017978740420507996,
+        0.0044160838469957915
+      ],
+      "fight_paired_95": [
+        -0.01773287598059082,
+        0.003906398544278026
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.03738269595966493,
+        0.008529539666475655
+      ],
+      "fight_paired_95": [
+        -0.03726406463821683,
+        0.00802542516632287
+      ]
+    },
+    "finish_N": 341,
+    "sample_status": "NORMAL"
+  },
+  "B3_TD_ACCESS_PLUS_SUB_PRESSURE": {
+    "N": 412,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.021680344738781297,
+        0.008311957546473719
+      ],
+      "fight_paired_95": [
+        -0.022584179687620762,
+        0.010069191243172602
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.03893281787572852,
+        0.014962033980407862
+      ],
+      "fight_paired_95": [
+        -0.04021611440378252,
+        0.016832671752127874
+      ]
+    },
+    "finish_N": 224,
+    "sample_status": "NORMAL"
+  },
+  "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": {
+    "N": 591,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.02308475287250407,
+        0.004760570670881523
+      ],
+      "fight_paired_95": [
+        -0.021643414864684563,
+        0.005590348747884317
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.03630329550478744,
+        0.00860881745232247
+      ],
+      "fight_paired_95": [
+        -0.03697745528388068,
+        0.009547782426058854
+      ]
+    },
+    "finish_N": 355,
+    "sample_status": "NORMAL"
+  },
+  "Flyweight": {
+    "N": 252,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.013320419347496948,
+        0.024644157766435658
+      ],
+      "fight_paired_95": [
+        -0.013794743660221136,
+        0.024925631663647835
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.026663562052961408,
+        0.05044801385218257
+      ],
+      "fight_paired_95": [
+        -0.02870287042817139,
+        0.052580433943618284
+      ]
+    },
+    "finish_N": 121,
+    "sample_status": "NORMAL"
+  },
+  "Heavyweight": {
+    "N": 316,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.02727793484997146,
+        0.0027188916820744106
+      ],
+      "fight_paired_95": [
+        -0.02721533050635858,
+        0.0034301444735390977
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.04473600909253238,
+        0.004989206846991459
+      ],
+      "fight_paired_95": [
+        -0.04545416678821325,
+        0.0051077562603361335
+      ]
+    },
+    "finish_N": 187,
+    "sample_status": "NORMAL"
+  },
+  "Light Heavyweight": {
+    "N": 319,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.012210575168582153,
+        0.017999311350855016
+      ],
+      "fight_paired_95": [
+        -0.012606514221793874,
+        0.01865619144780259
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.01864596472978301,
+        0.029828978842702643
+      ],
+      "fight_paired_95": [
+        -0.019133958292966137,
+        0.029992041411789162
+      ]
+    },
+    "finish_N": 205,
+    "sample_status": "NORMAL"
+  },
+  "Women's Flyweight": {
+    "N": 266,
+    "composed_loss": {
+      "event_paired_95": [
+        0.0032955414682547665,
+        0.03141096321811377
+      ],
+      "fight_paired_95": [
+        0.003414619023636516,
+        0.03066320514252275
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        0.006963051867880329,
+        0.08479502097335571
+      ],
+      "fight_paired_95": [
+        0.009136084524548335,
+        0.08514489121502866
+      ]
+    },
+    "finish_N": 95,
+    "sample_status": "MODERATE_UNCERTAINTY"
+  },
+  "Women's Strawweight": {
+    "N": 275,
+    "composed_loss": {
+      "event_paired_95": [
+        -0.006339658357369549,
+        0.021880651406670157
+      ],
+      "fight_paired_95": [
+        -0.0062006632353461995,
+        0.021916143110505756
+      ]
+    },
+    "conditional_loss": {
+      "event_paired_95": [
+        -0.020640689263711185,
+        0.0643138263739939
+      ],
+      "fight_paired_95": [
+        -0.02003003324868442,
+        0.06384915666434798
+      ]
+    },
+    "finish_N": 94,
+    "sample_status": "MODERATE_UNCERTAINTY"
+  }
+}
