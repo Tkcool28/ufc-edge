@@ -27,7 +27,10 @@ def audit(f02):
  for year in range(2018,2027):
   tr=z[(z.event_date>= '2015-01-01')&(z.event_date<f'{year}-01-01')&z.method.isin(['KO_TKO','SUBMISSION'])]
   rec={'outer_year':year,'finish_N':len(tr),'KO_N':int(tr.method.eq('KO_TKO').sum()),'SUB_N':int(tr.method.eq('SUBMISSION').sum()),'each_literal_nonnull':{k:int(tr[k].notna().sum()) for k in allcols},'submission_four_complete_N':int(tr[c].notna().all(axis=1).sum()),'submission_plus_takedown_complete_N':int(tr[c+td].notna().all(axis=1).sum()),'all_candidates_including_KD_complete_N':int(tr[allcols].notna().all(axis=1).sum())}
-  rec['raw_division_support']=[{'raw_division':str(w),'finish_N':len(q),'KO_N':int(q.method.eq('KO_TKO').sum()),'SUB_N':int(q.method.eq('SUBMISSION').sum()),'submission_four_complete_N':int(q[c].notna().all(axis=1).sum()),'gate':gate(len(q))} for w,q in tr.groupby('ctx__weight_class',dropna=False,sort=True)]
+  complete=tr[c].notna().all(axis=1)
+  rec['submission_four_complete_KO_N']=int(tr.loc[complete,'method'].eq('KO_TKO').sum())
+  rec['submission_four_complete_SUB_N']=int(tr.loc[complete,'method'].eq('SUBMISSION').sum())
+  rec['raw_division_support']=[{'raw_division':str(w),'finish_N':len(q),'KO_N':int(q.method.eq('KO_TKO').sum()),'SUB_N':int(q.method.eq('SUBMISSION').sum()),'submission_four_complete_N':int(q[c].notna().all(axis=1).sum()),'complete_KO_N':int(q.loc[q[c].notna().all(axis=1),'method'].eq('KO_TKO').sum()),'complete_SUB_N':int(q.loc[q[c].notna().all(axis=1),'method'].eq('SUBMISSION').sum()),'gate':gate(len(q))} for w,q in tr.groupby('ctx__weight_class',dropna=False,sort=True)]
   out['training'].append(rec)
  q=z.dropna(subset=c).copy()
  p1,p2,v1,v2=(q[k].to_numpy(float) for k in [c[0],c[2],c[1],c[3]])
