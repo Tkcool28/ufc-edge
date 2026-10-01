@@ -6,6 +6,7 @@ on:
       - 'tests/diagnostics/test_mov1_directional_collision_v1.py'
       - 'tools/diagnostics/run_mov1_directional_representation_v1.py'
       - 'tools/diagnostics/run_mov1_b3_b5_supplement_v1.py'
+      - 'tools/diagnostics/verify_mov1_submission_lineage_v1.py'
       - '.github/workflows/mov1-directional-audit-v1.yml'
   workflow_dispatch:
 permissions:
@@ -34,6 +35,8 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Verify corrected F02 SHA and run outcome-blind empirical gates
         run: python tools/diagnostics/run_mov1_directional_representation_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet'
+      - name: Independent submission and takedown F01 source-lineage reconstruction
+        run: PYTHONPATH=src python tools/diagnostics/verify_mov1_submission_lineage_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet'
       - name: Saved-only B3/B5 chronology, division, experience and missingness
         run: python tools/diagnostics/run_mov1_b3_b5_supplement_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet' --output '${{ runner.temp }}/pr123-diagnostics'
       - name: Upload PR123 diagnostic tables
