@@ -1,0 +1,1305 @@
+{
+  "descriptive_summary": {
+    "last_3_fights": [
+      {
+        "event_date": "2026-02-21",
+        "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+        "finish_round": 1,
+        "finish_time_sec": 181,
+        "method": "KO_TKO",
+        "opponent_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+        "opponent_name": "Josiah Harrell",
+        "promotion": "UFC",
+        "result": "win"
+      },
+      {
+        "event_date": "2025-06-28",
+        "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+        "finish_round": 2,
+        "finish_time_sec": 243,
+        "method": "SUBMISSION",
+        "opponent_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+        "opponent_name": "Niko Price",
+        "promotion": "UFC",
+        "result": "win"
+      },
+      {
+        "event_date": "2025-01-11",
+        "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+        "finish_round": 1,
+        "finish_time_sec": 73,
+        "method": "KO_TKO",
+        "opponent_id": "2e3e5a74-942a-576c-b317-c624c81c785f",
+        "opponent_name": "Preston Parsons",
+        "promotion": "UFC",
+        "result": "win"
+      }
+    ],
+    "last_5_fights": [
+      {
+        "event_date": "2026-02-21",
+        "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+        "finish_round": 1,
+        "finish_time_sec": 181,
+        "method": "KO_TKO",
+        "opponent_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+        "opponent_name": "Josiah Harrell",
+        "promotion": "UFC",
+        "result": "win"
+      },
+      {
+        "event_date": "2025-06-28",
+        "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+        "finish_round": 2,
+        "finish_time_sec": 243,
+        "method": "SUBMISSION",
+        "opponent_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+        "opponent_name": "Niko Price",
+        "promotion": "UFC",
+        "result": "win"
+      },
+      {
+        "event_date": "2025-01-11",
+        "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+        "finish_round": 1,
+        "finish_time_sec": 73,
+        "method": "KO_TKO",
+        "opponent_id": "2e3e5a74-942a-576c-b317-c624c81c785f",
+        "opponent_name": "Preston Parsons",
+        "promotion": "UFC",
+        "result": "win"
+      }
+    ],
+    "method_results": {
+      "losses": {},
+      "wins": {
+        "ko_tko": 2,
+        "submission": 1
+      }
+    },
+    "most_recent_fight": {
+      "event_date": "2026-02-21",
+      "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+      "finish_round": 1,
+      "finish_time_sec": 181,
+      "method": "KO_TKO",
+      "opponent_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+      "opponent_name": "Josiah Harrell",
+      "promotion": "UFC",
+      "result": "win"
+    },
+    "observed_external_fights": 0,
+    "observed_total_fights": 3,
+    "observed_ufc_fights": 3,
+    "results": {
+      "win": 3
+    },
+    "round_stat_totals": {
+      "control_sec": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 375,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 1,
+          "total_rounds": 4
+        }
+      },
+      "knockdowns": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 1,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 0,
+          "total_rounds": 4
+        }
+      },
+      "reversals": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 0,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 0,
+          "total_rounds": 4
+        }
+      },
+      "sig_body_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 18,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 13,
+          "total_rounds": 4
+        }
+      },
+      "sig_body_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 15,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 8,
+          "total_rounds": 4
+        }
+      },
+      "sig_clinch_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 2,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 5,
+          "total_rounds": 4
+        }
+      },
+      "sig_clinch_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 2,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 4,
+          "total_rounds": 4
+        }
+      },
+      "sig_distance_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 99,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 76,
+          "total_rounds": 4
+        }
+      },
+      "sig_distance_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 56,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 40,
+          "total_rounds": 4
+        }
+      },
+      "sig_ground_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 43,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 8,
+          "total_rounds": 4
+        }
+      },
+      "sig_ground_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 33,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 4,
+          "total_rounds": 4
+        }
+      },
+      "sig_head_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 112,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 61,
+          "total_rounds": 4
+        }
+      },
+      "sig_head_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 65,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 26,
+          "total_rounds": 4
+        }
+      },
+      "sig_leg_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 14,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 15,
+          "total_rounds": 4
+        }
+      },
+      "sig_leg_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 11,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 14,
+          "total_rounds": 4
+        }
+      },
+      "sig_strikes_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 144,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 89,
+          "total_rounds": 4
+        }
+      },
+      "sig_strikes_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 91,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 48,
+          "total_rounds": 4
+        }
+      },
+      "submission_attempts": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 1,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 0,
+          "total_rounds": 4
+        }
+      },
+      "takedowns_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 4,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 4,
+          "total_rounds": 4
+        }
+      },
+      "takedowns_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 4,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 0,
+          "total_rounds": 4
+        }
+      },
+      "total_strikes_attempted": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 175,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 105,
+          "total_rounds": 4
+        }
+      },
+      "total_strikes_landed": {
+        "created": {
+          "observed_rounds": 4,
+          "sum": 122,
+          "total_rounds": 4
+        },
+        "suffered": {
+          "observed_rounds": 4,
+          "sum": 61,
+          "total_rounds": 4
+        }
+      }
+    },
+    "total_observed_round_rows": 4
+  },
+  "fight_history": [
+    {
+      "canonical_fight": {
+        "event_id": "ba6bb3ae-b2f2-5365-ac8a-0afd2dbbeef8",
+        "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+        "fighter_a_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+        "fighter_b_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+        "finish_round": 1,
+        "finish_time_sec": 181,
+        "method": "KO_TKO",
+        "promotion": "UFC",
+        "result": "win_loss",
+        "scheduled_rounds": 3,
+        "title_bout": false,
+        "weight_class": "Welterweight",
+        "winner_id": "0951b837-0a62-5fc6-86dc-95bfad5044da"
+      },
+      "event": {
+        "event_date": "2026-02-21",
+        "event_id": "ba6bb3ae-b2f2-5365-ac8a-0afd2dbbeef8",
+        "event_name": "UFC Fight Night: Strickland vs. Hernandez",
+        "event_start_utc": null,
+        "location": "Houston, Texas, USA",
+        "promotion": "UFC"
+      },
+      "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+      "fighter_name": "Jacobe Smith",
+      "fighter_result": "win",
+      "fighter_round_position": [
+        {
+          "back_control_bucket_min": 0,
+          "back_control_lower_sec": 0,
+          "back_control_upper_sec": 59,
+          "clinch_bucket_min": 0,
+          "clinch_lower_sec": 0,
+          "clinch_upper_sec": 59,
+          "distance_bucket_min": 2,
+          "distance_lower_sec": 120,
+          "distance_upper_sec": 179,
+          "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "ground_bucket_min": null,
+          "ground_control_bucket_min": 0,
+          "ground_control_lower_sec": 0,
+          "ground_control_upper_sec": 59,
+          "ground_lower_sec": null,
+          "ground_upper_sec": null,
+          "guard_control_bucket_min": 0,
+          "guard_control_lower_sec": 0,
+          "guard_control_upper_sec": 59,
+          "half_guard_control_bucket_min": 0,
+          "half_guard_control_lower_sec": 0,
+          "half_guard_control_upper_sec": 59,
+          "misc_ground_control_bucket_min": 0,
+          "misc_ground_control_lower_sec": 0,
+          "misc_ground_control_upper_sec": 59,
+          "mount_control_bucket_min": 0,
+          "mount_control_lower_sec": 0,
+          "mount_control_upper_sec": 59,
+          "neutral_bucket_min": 2,
+          "neutral_lower_sec": 120,
+          "neutral_upper_sec": 179,
+          "round": 1,
+          "side_control_bucket_min": 0,
+          "side_control_lower_sec": 0,
+          "side_control_upper_sec": 59,
+          "standing_bucket_min": 2,
+          "standing_lower_sec": 120,
+          "standing_upper_sec": 179,
+          "standups": null
+        }
+      ],
+      "fighter_round_stats": [
+        {
+          "control_sec": 21,
+          "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "knockdowns": 0,
+          "opponent_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+          "reversals": 0,
+          "round": 1,
+          "sig_body_attempted": 10,
+          "sig_body_landed": 9,
+          "sig_clinch_attempted": 0,
+          "sig_clinch_landed": 0,
+          "sig_distance_attempted": 37,
+          "sig_distance_landed": 23,
+          "sig_ground_attempted": 10,
+          "sig_ground_landed": 10,
+          "sig_head_attempted": 29,
+          "sig_head_landed": 18,
+          "sig_leg_attempted": 8,
+          "sig_leg_landed": 6,
+          "sig_strikes_attempted": 47,
+          "sig_strikes_landed": 33,
+          "submission_attempts": 0,
+          "takedowns_attempted": 2,
+          "takedowns_landed": 2,
+          "total_strikes_attempted": 51,
+          "total_strikes_landed": 37
+        }
+      ],
+      "opponent_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+      "opponent_name": "Josiah Harrell",
+      "opponent_round_position": [
+        {
+          "back_control_bucket_min": 0,
+          "back_control_lower_sec": 0,
+          "back_control_upper_sec": 59,
+          "clinch_bucket_min": 0,
+          "clinch_lower_sec": 0,
+          "clinch_upper_sec": 59,
+          "distance_bucket_min": 2,
+          "distance_lower_sec": 120,
+          "distance_upper_sec": 179,
+          "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+          "fighter_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+          "ground_bucket_min": null,
+          "ground_control_bucket_min": 0,
+          "ground_control_lower_sec": 0,
+          "ground_control_upper_sec": 59,
+          "ground_lower_sec": null,
+          "ground_upper_sec": null,
+          "guard_control_bucket_min": 0,
+          "guard_control_lower_sec": 0,
+          "guard_control_upper_sec": 59,
+          "half_guard_control_bucket_min": 0,
+          "half_guard_control_lower_sec": 0,
+          "half_guard_control_upper_sec": 59,
+          "misc_ground_control_bucket_min": 0,
+          "misc_ground_control_lower_sec": 0,
+          "misc_ground_control_upper_sec": 59,
+          "mount_control_bucket_min": 0,
+          "mount_control_lower_sec": 0,
+          "mount_control_upper_sec": 59,
+          "neutral_bucket_min": 2,
+          "neutral_lower_sec": 120,
+          "neutral_upper_sec": 179,
+          "round": 1,
+          "side_control_bucket_min": 0,
+          "side_control_lower_sec": 0,
+          "side_control_upper_sec": 59,
+          "standing_bucket_min": 2,
+          "standing_lower_sec": 120,
+          "standing_upper_sec": 179,
+          "standups": null
+        }
+      ],
+      "opponent_round_stats": [
+        {
+          "control_sec": 1,
+          "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+          "fighter_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+          "knockdowns": 0,
+          "opponent_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "reversals": 0,
+          "round": 1,
+          "sig_body_attempted": 5,
+          "sig_body_landed": 3,
+          "sig_clinch_attempted": 0,
+          "sig_clinch_landed": 0,
+          "sig_distance_attempted": 14,
+          "sig_distance_landed": 7,
+          "sig_ground_attempted": 0,
+          "sig_ground_landed": 0,
+          "sig_head_attempted": 6,
+          "sig_head_landed": 1,
+          "sig_leg_attempted": 3,
+          "sig_leg_landed": 3,
+          "sig_strikes_attempted": 14,
+          "sig_strikes_landed": 7,
+          "submission_attempts": 0,
+          "takedowns_attempted": 2,
+          "takedowns_landed": 0,
+          "total_strikes_attempted": 14,
+          "total_strikes_landed": 7
+        }
+      ],
+      "provenance_key": {
+        "row_key": "a9a94914-944f-5d20-87af-681256304c16",
+        "table_name": "fights"
+      },
+      "weigh_ins": [
+        {
+          "attempt_number": null,
+          "canonical_fighter_name": "Jacobe Smith",
+          "catchweight_bout": null,
+          "contract_limit_lbs": null,
+          "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "missed_weight": null,
+          "official_status_text": null,
+          "pounds_over": null,
+          "purse_penalty_pct": null,
+          "scale_weight_lbs": 171.0,
+          "weigh_in_date": null,
+          "weigh_in_observation_id": "d3b1f701-ae3c-5b50-a3c9-f01490845600"
+        },
+        {
+          "attempt_number": null,
+          "canonical_fighter_name": "Josiah Harrell",
+          "catchweight_bout": null,
+          "contract_limit_lbs": null,
+          "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+          "fighter_id": "7fd3a7bd-ebdb-5498-a78b-bdb838c3bf46",
+          "missed_weight": null,
+          "official_status_text": null,
+          "pounds_over": null,
+          "purse_penalty_pct": null,
+          "scale_weight_lbs": 171.0,
+          "weigh_in_date": null,
+          "weigh_in_observation_id": "97ae1b3b-b54e-5e30-b77f-e0d583d66933"
+        }
+      ]
+    },
+    {
+      "canonical_fight": {
+        "event_id": "d37f92e1-011d-5482-a590-3afacc05bb2d",
+        "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+        "fighter_a_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+        "fighter_b_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+        "finish_round": 2,
+        "finish_time_sec": 243,
+        "method": "SUBMISSION",
+        "promotion": "UFC",
+        "result": "win_loss",
+        "scheduled_rounds": 3,
+        "title_bout": false,
+        "weight_class": "Welterweight",
+        "winner_id": "0951b837-0a62-5fc6-86dc-95bfad5044da"
+      },
+      "event": {
+        "event_date": "2025-06-28",
+        "event_id": "d37f92e1-011d-5482-a590-3afacc05bb2d",
+        "event_name": "UFC 317: Topuria vs. Oliveira",
+        "event_start_utc": null,
+        "location": "Las Vegas, Nevada, USA",
+        "promotion": "UFC"
+      },
+      "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+      "fighter_name": "Jacobe Smith",
+      "fighter_result": "win",
+      "fighter_round_position": [
+        {
+          "back_control_bucket_min": 0,
+          "back_control_lower_sec": 0,
+          "back_control_upper_sec": 59,
+          "clinch_bucket_min": 0,
+          "clinch_lower_sec": 0,
+          "clinch_upper_sec": 59,
+          "distance_bucket_min": 1,
+          "distance_lower_sec": 60,
+          "distance_upper_sec": 119,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "ground_bucket_min": null,
+          "ground_control_bucket_min": 2,
+          "ground_control_lower_sec": 120,
+          "ground_control_upper_sec": 179,
+          "ground_lower_sec": null,
+          "ground_upper_sec": null,
+          "guard_control_bucket_min": 1,
+          "guard_control_lower_sec": 60,
+          "guard_control_upper_sec": 119,
+          "half_guard_control_bucket_min": 0,
+          "half_guard_control_lower_sec": 0,
+          "half_guard_control_upper_sec": 59,
+          "misc_ground_control_bucket_min": 1,
+          "misc_ground_control_lower_sec": 60,
+          "misc_ground_control_upper_sec": 119,
+          "mount_control_bucket_min": 0,
+          "mount_control_lower_sec": 0,
+          "mount_control_upper_sec": 59,
+          "neutral_bucket_min": 1,
+          "neutral_lower_sec": 60,
+          "neutral_upper_sec": 119,
+          "round": 1,
+          "side_control_bucket_min": 0,
+          "side_control_lower_sec": 0,
+          "side_control_upper_sec": 59,
+          "standing_bucket_min": 2,
+          "standing_lower_sec": 120,
+          "standing_upper_sec": 179,
+          "standups": null
+        },
+        {
+          "back_control_bucket_min": 0,
+          "back_control_lower_sec": 0,
+          "back_control_upper_sec": 59,
+          "clinch_bucket_min": 0,
+          "clinch_lower_sec": 0,
+          "clinch_upper_sec": 59,
+          "distance_bucket_min": 1,
+          "distance_lower_sec": 60,
+          "distance_upper_sec": 119,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "ground_bucket_min": null,
+          "ground_control_bucket_min": 2,
+          "ground_control_lower_sec": 120,
+          "ground_control_upper_sec": 179,
+          "ground_lower_sec": null,
+          "ground_upper_sec": null,
+          "guard_control_bucket_min": 1,
+          "guard_control_lower_sec": 60,
+          "guard_control_upper_sec": 119,
+          "half_guard_control_bucket_min": 0,
+          "half_guard_control_lower_sec": 0,
+          "half_guard_control_upper_sec": 59,
+          "misc_ground_control_bucket_min": 0,
+          "misc_ground_control_lower_sec": 0,
+          "misc_ground_control_upper_sec": 59,
+          "mount_control_bucket_min": 0,
+          "mount_control_lower_sec": 0,
+          "mount_control_upper_sec": 59,
+          "neutral_bucket_min": 1,
+          "neutral_lower_sec": 60,
+          "neutral_upper_sec": 119,
+          "round": 2,
+          "side_control_bucket_min": 0,
+          "side_control_lower_sec": 0,
+          "side_control_upper_sec": 59,
+          "standing_bucket_min": 1,
+          "standing_lower_sec": 60,
+          "standing_upper_sec": 119,
+          "standups": null
+        }
+      ],
+      "fighter_round_stats": [
+        {
+          "control_sec": 186,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "knockdowns": 0,
+          "opponent_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+          "reversals": 0,
+          "round": 1,
+          "sig_body_attempted": 4,
+          "sig_body_landed": 3,
+          "sig_clinch_attempted": 1,
+          "sig_clinch_landed": 1,
+          "sig_distance_attempted": 31,
+          "sig_distance_landed": 17,
+          "sig_ground_attempted": 21,
+          "sig_ground_landed": 15,
+          "sig_head_attempted": 46,
+          "sig_head_landed": 27,
+          "sig_leg_attempted": 3,
+          "sig_leg_landed": 3,
+          "sig_strikes_attempted": 53,
+          "sig_strikes_landed": 33,
+          "submission_attempts": 0,
+          "takedowns_attempted": 1,
+          "takedowns_landed": 1,
+          "total_strikes_attempted": 66,
+          "total_strikes_landed": 46
+        },
+        {
+          "control_sec": 155,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "knockdowns": 0,
+          "opponent_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+          "reversals": 0,
+          "round": 2,
+          "sig_body_attempted": 1,
+          "sig_body_landed": 1,
+          "sig_clinch_attempted": 1,
+          "sig_clinch_landed": 1,
+          "sig_distance_attempted": 10,
+          "sig_distance_landed": 5,
+          "sig_ground_attempted": 10,
+          "sig_ground_landed": 7,
+          "sig_head_attempted": 20,
+          "sig_head_landed": 12,
+          "sig_leg_attempted": 0,
+          "sig_leg_landed": 0,
+          "sig_strikes_attempted": 21,
+          "sig_strikes_landed": 13,
+          "submission_attempts": 1,
+          "takedowns_attempted": 1,
+          "takedowns_landed": 1,
+          "total_strikes_attempted": 35,
+          "total_strikes_landed": 27
+        }
+      ],
+      "opponent_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+      "opponent_name": "Niko Price",
+      "opponent_round_position": [
+        {
+          "back_control_bucket_min": 0,
+          "back_control_lower_sec": 0,
+          "back_control_upper_sec": 59,
+          "clinch_bucket_min": 0,
+          "clinch_lower_sec": 0,
+          "clinch_upper_sec": 59,
+          "distance_bucket_min": 1,
+          "distance_lower_sec": 60,
+          "distance_upper_sec": 119,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+          "ground_bucket_min": null,
+          "ground_control_bucket_min": 0,
+          "ground_control_lower_sec": 0,
+          "ground_control_upper_sec": 59,
+          "ground_lower_sec": null,
+          "ground_upper_sec": null,
+          "guard_control_bucket_min": 0,
+          "guard_control_lower_sec": 0,
+          "guard_control_upper_sec": 59,
+          "half_guard_control_bucket_min": 0,
+          "half_guard_control_lower_sec": 0,
+          "half_guard_control_upper_sec": 59,
+          "misc_ground_control_bucket_min": 0,
+          "misc_ground_control_lower_sec": 0,
+          "misc_ground_control_upper_sec": 59,
+          "mount_control_bucket_min": 0,
+          "mount_control_lower_sec": 0,
+          "mount_control_upper_sec": 59,
+          "neutral_bucket_min": 1,
+          "neutral_lower_sec": 60,
+          "neutral_upper_sec": 119,
+          "round": 1,
+          "side_control_bucket_min": 0,
+          "side_control_lower_sec": 0,
+          "side_control_upper_sec": 59,
+          "standing_bucket_min": 2,
+          "standing_lower_sec": 120,
+          "standing_upper_sec": 179,
+          "standups": null
+        },
+        {
+          "back_control_bucket_min": 0,
+          "back_control_lower_sec": 0,
+          "back_control_upper_sec": 59,
+          "clinch_bucket_min": 0,
+          "clinch_lower_sec": 0,
+          "clinch_upper_sec": 59,
+          "distance_bucket_min": 1,
+          "distance_lower_sec": 60,
+          "distance_upper_sec": 119,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+          "ground_bucket_min": null,
+          "ground_control_bucket_min": 0,
+          "ground_control_lower_sec": 0,
+          "ground_control_upper_sec": 59,
+          "ground_lower_sec": null,
+          "ground_upper_sec": null,
+          "guard_control_bucket_min": 0,
+          "guard_control_lower_sec": 0,
+          "guard_control_upper_sec": 59,
+          "half_guard_control_bucket_min": 0,
+          "half_guard_control_lower_sec": 0,
+          "half_guard_control_upper_sec": 59,
+          "misc_ground_control_bucket_min": 0,
+          "misc_ground_control_lower_sec": 0,
+          "misc_ground_control_upper_sec": 59,
+          "mount_control_bucket_min": 0,
+          "mount_control_lower_sec": 0,
+          "mount_control_upper_sec": 59,
+          "neutral_bucket_min": 1,
+          "neutral_lower_sec": 60,
+          "neutral_upper_sec": 119,
+          "round": 2,
+          "side_control_bucket_min": 0,
+          "side_control_lower_sec": 0,
+          "side_control_upper_sec": 59,
+          "standing_bucket_min": 1,
+          "standing_lower_sec": 60,
+          "standing_upper_sec": 119,
+          "standups": null
+        }
+      ],
+      "opponent_round_stats": [
+        {
+          "control_sec": 0,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+          "knockdowns": 0,
+          "opponent_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "reversals": 0,
+          "round": 1,
+          "sig_body_attempted": 5,
+          "sig_body_landed": 3,
+          "sig_clinch_attempted": 1,
+          "sig_clinch_landed": 1,
+          "sig_distance_attempted": 34,
+          "sig_distance_landed": 17,
+          "sig_ground_attempted": 2,
+          "sig_ground_landed": 1,
+          "sig_head_attempted": 26,
+          "sig_head_landed": 10,
+          "sig_leg_attempted": 6,
+          "sig_leg_landed": 6,
+          "sig_strikes_attempted": 37,
+          "sig_strikes_landed": 19,
+          "submission_attempts": 0,
+          "takedowns_attempted": 2,
+          "takedowns_landed": 0,
+          "total_strikes_attempted": 42,
+          "total_strikes_landed": 23
+        },
+        {
+          "control_sec": 0,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+          "knockdowns": 0,
+          "opponent_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "reversals": 0,
+          "round": 2,
+          "sig_body_attempted": 2,
+          "sig_body_landed": 1,
+          "sig_clinch_attempted": 3,
+          "sig_clinch_landed": 2,
+          "sig_distance_attempted": 15,
+          "sig_distance_landed": 10,
+          "sig_ground_attempted": 6,
+          "sig_ground_landed": 3,
+          "sig_head_attempted": 17,
+          "sig_head_landed": 9,
+          "sig_leg_attempted": 5,
+          "sig_leg_landed": 5,
+          "sig_strikes_attempted": 24,
+          "sig_strikes_landed": 15,
+          "submission_attempts": 0,
+          "takedowns_attempted": 0,
+          "takedowns_landed": 0,
+          "total_strikes_attempted": 34,
+          "total_strikes_landed": 23
+        }
+      ],
+      "provenance_key": {
+        "row_key": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+        "table_name": "fights"
+      },
+      "weigh_ins": [
+        {
+          "attempt_number": null,
+          "canonical_fighter_name": "Jacobe Smith",
+          "catchweight_bout": null,
+          "contract_limit_lbs": null,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "missed_weight": null,
+          "official_status_text": null,
+          "pounds_over": null,
+          "purse_penalty_pct": null,
+          "scale_weight_lbs": 170.5,
+          "weigh_in_date": null,
+          "weigh_in_observation_id": "f1827715-6afe-56b8-a9cd-076b9475c9bf"
+        },
+        {
+          "attempt_number": null,
+          "canonical_fighter_name": "Niko Price",
+          "catchweight_bout": null,
+          "contract_limit_lbs": null,
+          "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+          "fighter_id": "6f74e6c4-7236-5501-b354-866a3bc732c1",
+          "missed_weight": null,
+          "official_status_text": null,
+          "pounds_over": null,
+          "purse_penalty_pct": null,
+          "scale_weight_lbs": 170.5,
+          "weigh_in_date": null,
+          "weigh_in_observation_id": "d6b6654d-92d3-532c-88b3-86246e88417e"
+        }
+      ]
+    },
+    {
+      "canonical_fight": {
+        "event_id": "a1e23bed-e6ac-59e3-bed1-bb837aae58fd",
+        "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+        "fighter_a_id": "2e3e5a74-942a-576c-b317-c624c81c785f",
+        "fighter_b_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+        "finish_round": 1,
+        "finish_time_sec": 73,
+        "method": "KO_TKO",
+        "promotion": "UFC",
+        "result": "win_loss",
+        "scheduled_rounds": 3,
+        "title_bout": false,
+        "weight_class": "Welterweight",
+        "winner_id": "0951b837-0a62-5fc6-86dc-95bfad5044da"
+      },
+      "event": {
+        "event_date": "2025-01-11",
+        "event_id": "a1e23bed-e6ac-59e3-bed1-bb837aae58fd",
+        "event_name": "UFC Fight Night: Dern vs. Ribas 2",
+        "event_start_utc": null,
+        "location": "Las Vegas, Nevada, USA",
+        "promotion": "UFC"
+      },
+      "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+      "fighter_name": "Jacobe Smith",
+      "fighter_result": "win",
+      "fighter_round_position": [
+        {
+          "back_control_bucket_min": 0,
+          "back_control_lower_sec": 0,
+          "back_control_upper_sec": 59,
+          "clinch_bucket_min": 0,
+          "clinch_lower_sec": 0,
+          "clinch_upper_sec": 59,
+          "distance_bucket_min": 1,
+          "distance_lower_sec": 60,
+          "distance_upper_sec": 119,
+          "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "ground_bucket_min": null,
+          "ground_control_bucket_min": 0,
+          "ground_control_lower_sec": 0,
+          "ground_control_upper_sec": 59,
+          "ground_lower_sec": null,
+          "ground_upper_sec": null,
+          "guard_control_bucket_min": 0,
+          "guard_control_lower_sec": 0,
+          "guard_control_upper_sec": 59,
+          "half_guard_control_bucket_min": 0,
+          "half_guard_control_lower_sec": 0,
+          "half_guard_control_upper_sec": 59,
+          "misc_ground_control_bucket_min": 0,
+          "misc_ground_control_lower_sec": 0,
+          "misc_ground_control_upper_sec": 59,
+          "mount_control_bucket_min": 0,
+          "mount_control_lower_sec": 0,
+          "mount_control_upper_sec": 59,
+          "neutral_bucket_min": 1,
+          "neutral_lower_sec": 60,
+          "neutral_upper_sec": 119,
+          "round": 1,
+          "side_control_bucket_min": 0,
+          "side_control_lower_sec": 0,
+          "side_control_upper_sec": 59,
+          "standing_bucket_min": 1,
+          "standing_lower_sec": 60,
+          "standing_upper_sec": 119,
+          "standups": null
+        }
+      ],
+      "fighter_round_stats": [
+        {
+          "control_sec": 13,
+          "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "knockdowns": 1,
+          "opponent_id": "2e3e5a74-942a-576c-b317-c624c81c785f",
+          "reversals": 0,
+          "round": 1,
+          "sig_body_attempted": 3,
+          "sig_body_landed": 2,
+          "sig_clinch_attempted": 0,
+          "sig_clinch_landed": 0,
+          "sig_distance_attempted": 21,
+          "sig_distance_landed": 11,
+          "sig_ground_attempted": 2,
+          "sig_ground_landed": 1,
+          "sig_head_attempted": 17,
+          "sig_head_landed": 8,
+          "sig_leg_attempted": 3,
+          "sig_leg_landed": 2,
+          "sig_strikes_attempted": 23,
+          "sig_strikes_landed": 12,
+          "submission_attempts": 0,
+          "takedowns_attempted": 0,
+          "takedowns_landed": 0,
+          "total_strikes_attempted": 23,
+          "total_strikes_landed": 12
+        }
+      ],
+      "opponent_id": "2e3e5a74-942a-576c-b317-c624c81c785f",
+      "opponent_name": "Preston Parsons",
+      "opponent_round_position": [
+        {
+          "back_control_bucket_min": 0,
+          "back_control_lower_sec": 0,
+          "back_control_upper_sec": 59,
+          "clinch_bucket_min": 0,
+          "clinch_lower_sec": 0,
+          "clinch_upper_sec": 59,
+          "distance_bucket_min": 1,
+          "distance_lower_sec": 60,
+          "distance_upper_sec": 119,
+          "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+          "fighter_id": "2e3e5a74-942a-576c-b317-c624c81c785f",
+          "ground_bucket_min": null,
+          "ground_control_bucket_min": 0,
+          "ground_control_lower_sec": 0,
+          "ground_control_upper_sec": 59,
+          "ground_lower_sec": null,
+          "ground_upper_sec": null,
+          "guard_control_bucket_min": 0,
+          "guard_control_lower_sec": 0,
+          "guard_control_upper_sec": 59,
+          "half_guard_control_bucket_min": 0,
+          "half_guard_control_lower_sec": 0,
+          "half_guard_control_upper_sec": 59,
+          "misc_ground_control_bucket_min": 0,
+          "misc_ground_control_lower_sec": 0,
+          "misc_ground_control_upper_sec": 59,
+          "mount_control_bucket_min": 0,
+          "mount_control_lower_sec": 0,
+          "mount_control_upper_sec": 59,
+          "neutral_bucket_min": 1,
+          "neutral_lower_sec": 60,
+          "neutral_upper_sec": 119,
+          "round": 1,
+          "side_control_bucket_min": 0,
+          "side_control_lower_sec": 0,
+          "side_control_upper_sec": 59,
+          "standing_bucket_min": 1,
+          "standing_lower_sec": 60,
+          "standing_upper_sec": 119,
+          "standups": null
+        }
+      ],
+      "opponent_round_stats": [
+        {
+          "control_sec": 0,
+          "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+          "fighter_id": "2e3e5a74-942a-576c-b317-c624c81c785f",
+          "knockdowns": 0,
+          "opponent_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "reversals": 0,
+          "round": 1,
+          "sig_body_attempted": 1,
+          "sig_body_landed": 1,
+          "sig_clinch_attempted": 1,
+          "sig_clinch_landed": 1,
+          "sig_distance_attempted": 13,
+          "sig_distance_landed": 6,
+          "sig_ground_attempted": 0,
+          "sig_ground_landed": 0,
+          "sig_head_attempted": 12,
+          "sig_head_landed": 6,
+          "sig_leg_attempted": 1,
+          "sig_leg_landed": 0,
+          "sig_strikes_attempted": 14,
+          "sig_strikes_landed": 7,
+          "submission_attempts": 0,
+          "takedowns_attempted": 0,
+          "takedowns_landed": 0,
+          "total_strikes_attempted": 15,
+          "total_strikes_landed": 8
+        }
+      ],
+      "provenance_key": {
+        "row_key": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+        "table_name": "fights"
+      },
+      "weigh_ins": [
+        {
+          "attempt_number": null,
+          "canonical_fighter_name": "Jacobe Smith",
+          "catchweight_bout": null,
+          "contract_limit_lbs": null,
+          "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+          "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+          "missed_weight": null,
+          "official_status_text": null,
+          "pounds_over": null,
+          "purse_penalty_pct": null,
+          "scale_weight_lbs": 170.5,
+          "weigh_in_date": null,
+          "weigh_in_observation_id": "8cda22e5-ad71-5d0e-985a-afbf0480630c"
+        },
+        {
+          "attempt_number": null,
+          "canonical_fighter_name": "Preston Parsons",
+          "catchweight_bout": null,
+          "contract_limit_lbs": null,
+          "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+          "fighter_id": "2e3e5a74-942a-576c-b317-c624c81c785f",
+          "missed_weight": null,
+          "official_status_text": null,
+          "pounds_over": null,
+          "purse_penalty_pct": null,
+          "scale_weight_lbs": 171.0,
+          "weigh_in_date": null,
+          "weigh_in_observation_id": "cc867f1a-4fd3-5af6-a4e7-c3b586aba3c3"
+        }
+      ]
+    }
+  ],
+  "fighter": {
+    "identity_physical_context": {
+      "age_as_of_cutoff": 30,
+      "canonical_name": "Jacobe Smith",
+      "dob": "1996-01-17",
+      "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+      "height_cm": 177.8,
+      "leg_reach_cm": null,
+      "reach_cm": 182.88,
+      "stance": "Southpaw"
+    },
+    "trusted_aliases": [],
+    "trusted_source_identity_links": [
+      {
+        "canonical_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+        "entity_type": "fighter",
+        "match_confidence": 1.0,
+        "match_method": "stable_provider_url",
+        "review_status": "trusted",
+        "source_entity_type": "fighter",
+        "source_id": "http://ufcstats.com/fighter-details/85497ffd934ecf7e",
+        "source_name": "greco1899_ufcstats",
+        "source_url": "http://ufcstats.com/fighter-details/85497ffd934ecf7e",
+        "valid_from": null,
+        "valid_to": null
+      },
+      {
+        "canonical_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+        "entity_type": "fighter",
+        "match_confidence": 1.0,
+        "match_method": "repeated_exact_fight_alignment_corner_identity",
+        "review_status": "trusted",
+        "source_entity_type": "athlete",
+        "source_id": "67cd86f2-355b-413d-83ec-4a5b0f8c14a7",
+        "source_name": "ufc_com",
+        "source_url": null,
+        "valid_from": null,
+        "valid_to": null
+      }
+    ]
+  },
+  "metadata": {
+    "artifact_type": "fighter_dossier",
+    "canonical_fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+    "canonical_fighter_name": "Jacobe Smith",
+    "canonical_manifest": {
+      "path": "data/canonical/v0/manifest.json",
+      "sha256": "e68bccf4b1878263c0358dec3fc42390c59ea513650b09956f73f2d5e08af1f8"
+    },
+    "data_contract_version": "0.4.0-draft",
+    "data_freeze": {
+      "path": "provenance/data_phase_freeze_v0.json",
+      "sha256": "d938a48f5b620a08a3255eda7172f5ecdbb3806bb9e6726f18daec2c00b83f70"
+    },
+    "field_provenance": {
+      "note": "Use canonical table primary keys/row keys to audit detailed field provenance.",
+      "path": "data/canonical/v0/field_provenance.csv"
+    },
+    "generated_at_utc": "2026-10-02T17:45:12.977455Z",
+    "generator_commit": "3e2b14a8391ed17d072b4bbb9570b31bc6d12b85",
+    "generator_version": "h00-0.1.0",
+    "information_cutoff": "2026-10-02T17:30:00Z",
+    "packet_schema_version": "0.1.0",
+    "warnings": [
+      "Missing canonical values remain null/absent; H00 does not zero-fill.",
+      "FightMetric positional/TIP time fields are coarse quantized bucket evidence, not exact elapsed seconds.",
+      "Exact round control_sec remains distinct and comes from the canonical exact-control transport.",
+      "Historical rankings are dated observations and only rows strictly before the information cutoff are included.",
+      "Official fighter profiles are point-in-time snapshots and are never backfilled before observed_at_utc.",
+      "Canonical judge-round scores are unavailable in DATA v0 and are not included.",
+      "No canonical pre-cutoff ranking observations are available for this fighter."
+    ]
+  },
+  "profile_snapshots": [
+    {
+      "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+      "fighting_style_text": "Freestyle",
+      "gym_text": "Fortis MMA",
+      "listed_weight_class": "Welterweight",
+      "listed_weight_lbs": 170.5,
+      "observed_at_utc": "2026-08-20T20:40:30.394128Z",
+      "origin_text": "Muskogee, OK, US",
+      "residence_text": "Dallas, TX, US",
+      "status_text": "Active"
+    }
+  ],
+  "ranking_history": [],
+  "substantive_sha256": "85aebfd8a4d2594ac9eabb65cc4ade91db966838200d8913874b41cb5adad389",
+  "weigh_in_history": [
+    {
+      "attempt_number": null,
+      "catchweight_bout": null,
+      "contract_limit_lbs": null,
+      "event": {
+        "event_date": "2026-02-21",
+        "event_id": "ba6bb3ae-b2f2-5365-ac8a-0afd2dbbeef8",
+        "event_name": "UFC Fight Night: Strickland vs. Hernandez",
+        "event_start_utc": null,
+        "location": "Houston, Texas, USA",
+        "promotion": "UFC"
+      },
+      "fight_id": "a9a94914-944f-5d20-87af-681256304c16",
+      "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+      "missed_weight": null,
+      "official_status_text": null,
+      "pounds_over": null,
+      "purse_penalty_pct": null,
+      "scale_weight_lbs": 171.0,
+      "weigh_in_date": null,
+      "weigh_in_observation_id": "d3b1f701-ae3c-5b50-a3c9-f01490845600"
+    },
+    {
+      "attempt_number": null,
+      "catchweight_bout": null,
+      "contract_limit_lbs": null,
+      "event": {
+        "event_date": "2025-06-28",
+        "event_id": "d37f92e1-011d-5482-a590-3afacc05bb2d",
+        "event_name": "UFC 317: Topuria vs. Oliveira",
+        "event_start_utc": null,
+        "location": "Las Vegas, Nevada, USA",
+        "promotion": "UFC"
+      },
+      "fight_id": "60f504c6-b158-5e8f-b959-0671d2292b8a",
+      "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+      "missed_weight": null,
+      "official_status_text": null,
+      "pounds_over": null,
+      "purse_penalty_pct": null,
+      "scale_weight_lbs": 170.5,
+      "weigh_in_date": null,
+      "weigh_in_observation_id": "f1827715-6afe-56b8-a9cd-076b9475c9bf"
+    },
+    {
+      "attempt_number": null,
+      "catchweight_bout": null,
+      "contract_limit_lbs": null,
+      "event": {
+        "event_date": "2025-01-11",
+        "event_id": "a1e23bed-e6ac-59e3-bed1-bb837aae58fd",
+        "event_name": "UFC Fight Night: Dern vs. Ribas 2",
+        "event_start_utc": null,
+        "location": "Las Vegas, Nevada, USA",
+        "promotion": "UFC"
+      },
+      "fight_id": "eb0d0a49-18ee-5e57-966d-24b479a9677d",
+      "fighter_id": "0951b837-0a62-5fc6-86dc-95bfad5044da",
+      "missed_weight": null,
+      "official_status_text": null,
+      "pounds_over": null,
+      "purse_penalty_pct": null,
+      "scale_weight_lbs": 170.5,
+      "weigh_in_date": null,
+      "weigh_in_observation_id": "8cda22e5-ad71-5d0e-985a-afbf0480630c"
+    }
+  ]
+}

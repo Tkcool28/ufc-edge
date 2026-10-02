@@ -1,0 +1,351 @@
+{
+  "descriptive_summary": {
+    "last_3_fights": [],
+    "last_5_fights": [],
+    "method_results": {
+      "losses": {},
+      "wins": {}
+    },
+    "most_recent_fight": null,
+    "observed_external_fights": 0,
+    "observed_total_fights": 0,
+    "observed_ufc_fights": 0,
+    "results": {},
+    "round_stat_totals": {
+      "control_sec": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "knockdowns": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "reversals": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_body_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_body_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_clinch_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_clinch_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_distance_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_distance_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_ground_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_ground_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_head_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_head_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_leg_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_leg_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_strikes_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "sig_strikes_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "submission_attempts": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "takedowns_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "takedowns_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "total_strikes_attempted": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      },
+      "total_strikes_landed": {
+        "created": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        },
+        "suffered": {
+          "observed_rounds": 0,
+          "sum": null,
+          "total_rounds": 0
+        }
+      }
+    },
+    "total_observed_round_rows": 0
+  },
+  "fight_history": [],
+  "fighter": {
+    "identity_physical_context": {
+      "age_as_of_cutoff": 31,
+      "canonical_name": "Anthony Wint",
+      "dob": "1995-09-14",
+      "fighter_id": "bd6f4980-e901-5200-ab5f-f9773dd44ae6",
+      "height_cm": null,
+      "leg_reach_cm": null,
+      "reach_cm": null,
+      "stance": null
+    },
+    "trusted_aliases": [],
+    "trusted_source_identity_links": [
+      {
+        "canonical_id": "bd6f4980-e901-5200-ab5f-f9773dd44ae6",
+        "entity_type": "fighter",
+        "match_confidence": 1.0,
+        "match_method": "stable_provider_url",
+        "review_status": "trusted",
+        "source_entity_type": "fighter",
+        "source_id": "http://ufcstats.com/fighter-details/b34976c022b24568",
+        "source_name": "greco1899_ufcstats",
+        "source_url": "http://ufcstats.com/fighter-details/b34976c022b24568",
+        "valid_from": null,
+        "valid_to": null
+      }
+    ]
+  },
+  "metadata": {
+    "artifact_type": "fighter_dossier",
+    "canonical_fighter_id": "bd6f4980-e901-5200-ab5f-f9773dd44ae6",
+    "canonical_fighter_name": "Anthony Wint",
+    "canonical_manifest": {
+      "path": "data/canonical/v0/manifest.json",
+      "sha256": "e68bccf4b1878263c0358dec3fc42390c59ea513650b09956f73f2d5e08af1f8"
+    },
+    "data_contract_version": "0.4.0-draft",
+    "data_freeze": {
+      "path": "provenance/data_phase_freeze_v0.json",
+      "sha256": "d938a48f5b620a08a3255eda7172f5ecdbb3806bb9e6726f18daec2c00b83f70"
+    },
+    "field_provenance": {
+      "note": "Use canonical table primary keys/row keys to audit detailed field provenance.",
+      "path": "data/canonical/v0/field_provenance.csv"
+    },
+    "generated_at_utc": "2026-10-02T16:46:09.093864Z",
+    "generator_commit": "3e2b14a8391ed17d072b4bbb9570b31bc6d12b85",
+    "generator_version": "h00-0.1.0",
+    "information_cutoff": "2026-10-03T00:00:00Z",
+    "packet_schema_version": "0.1.0",
+    "warnings": [
+      "Missing canonical values remain null/absent; H00 does not zero-fill.",
+      "FightMetric positional/TIP time fields are coarse quantized bucket evidence, not exact elapsed seconds.",
+      "Exact round control_sec remains distinct and comes from the canonical exact-control transport.",
+      "Historical rankings are dated observations and only rows strictly before the information cutoff are included.",
+      "Official fighter profiles are point-in-time snapshots and are never backfilled before observed_at_utc.",
+      "Canonical judge-round scores are unavailable in DATA v0 and are not included.",
+      "No canonical pre-cutoff fight history is available for this fighter.",
+      "No canonical pre-cutoff ranking observations are available for this fighter.",
+      "No canonically time-safe fight-specific weigh-ins are available before this cutoff.",
+      "No canonical profile snapshots are available at or before this cutoff.",
+      "No eligible canonical positional/TIP round evidence is available in this dossier."
+    ]
+  },
+  "profile_snapshots": [],
+  "ranking_history": [],
+  "substantive_sha256": "d6de23d56a3f5ef093cc1011488c9dd9022ada97a583977f392ff41d8d627994",
+  "weigh_in_history": []
+}

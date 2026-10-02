@@ -1,0 +1,21 @@
+{
+  "cache_branch": "handicap-cache",
+  "cache_commit_sha": null,
+  "files": [
+    {
+      "bytes": 141733,
+      "path": "handicap/requests/157/fighter.json",
+      "sha256": "a2773f1bc7cf40ba116eb3d9633bd007cbc856d9c4a5c16dd83d55c5166035e5"
+    }
+  ],
+  "generation_timestamp": "2026-10-02T18:36:34.018519Z",
+  "h00_generator_commit": "3e2b14a8391ed17d072b4bbb9570b31bc6d12b85",
+  "information_cutoff": "2026-10-02T17:30:00Z",
+  "issue_number": 157,
+  "kind": "fighter",
+  "packet_schema_version": "0.1.0",
+  "request_hash": "e51eb67269ef2bcef91c4ad2bb0a3dc73f7d4456da2994939186579fc676b186",
+  "schema": "h01-response-0.1",
+  "source_main_sha": "3e2b14a8391ed17d072b4bbb9570b31bc6d12b85",
+  "status": "complete"
+}
