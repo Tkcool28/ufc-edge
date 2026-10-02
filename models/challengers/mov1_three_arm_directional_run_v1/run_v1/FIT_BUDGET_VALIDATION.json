@@ -1,0 +1,12 @@
+{
+  "Arm_A_refits": 0,
+  "attempted": 164,
+  "completed": 164,
+  "counts": {
+    "inner": 144,
+    "outer": 18,
+    "representative_reproduction": 2
+  },
+  "status": "PASS",
+  "unauthorized_fits": 0
+}

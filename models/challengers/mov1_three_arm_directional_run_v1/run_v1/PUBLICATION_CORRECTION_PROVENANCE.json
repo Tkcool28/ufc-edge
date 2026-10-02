@@ -1,0 +1,6 @@
+{
+  "additional_fits": 0,
+  "frozen_implementation_changed": false,
+  "script": "tools/directional_mov1/apply_sample_governance_v1.py",
+  "sha256": "b95a8aca2fb6628372681f9ddcf5c04fa53a439777afac1963895c51f6adbe73"
+}

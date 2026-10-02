@@ -1,0 +1,14 @@
+{
+  "aggregate_metrics_and_paired_intervals_reproduced": true,
+  "all_12780_arm_scores_present": true,
+  "all_8520_challenger_outer_scores_verified": true,
+  "fit_count_this_verifier": 0,
+  "frozen_source_files_unchanged": true,
+  "inner_selection_records_verified": 144,
+  "max_prediction_regeneration_error": 0.0,
+  "outer_models_verified": 18,
+  "post_boundary_outcomes_accessed": false,
+  "reproduction_records_verified": 2,
+  "saved_native_records_verified": 164,
+  "status": "PASS"
+}

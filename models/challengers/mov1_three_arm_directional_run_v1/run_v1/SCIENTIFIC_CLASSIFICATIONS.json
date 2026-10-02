@@ -1,0 +1,52 @@
+{
+  "composed": {
+    "B-A": "INCONCLUSIVE",
+    "C-A": "SUPPORTED_IMPROVEMENT",
+    "C-B": "SUPPORTED_IMPROVEMENT"
+  },
+  "conditional": {
+    "B-A": "INCONCLUSIVE",
+    "C-A": "SUPPORTED_IMPROVEMENT",
+    "C-B": "SUPPORTED_IMPROVEMENT"
+  },
+  "pathways": {
+    "B3_TD_ACCESS_PLUS_SUB_PRESSURE": {
+      "B-A": "NOT_SUPPORTED",
+      "C-A": "INCONCLUSIVE",
+      "C-B": "INCONCLUSIVE"
+    },
+    "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY": {
+      "B-A": "INCONCLUSIVE",
+      "C-A": "SUPPORTED_CELL_IMPROVEMENT",
+      "C-B": "SUPPORTED_CELL_IMPROVEMENT"
+    }
+  },
+  "preservation": {
+    "A1_KD_CREATION_VS_WEAK_STRIKE_DEFENSE": {
+      "B-A": "RETAINED_SUPPORTED",
+      "C-A": "RETAINED_SUPPORTED",
+      "C-B": "RETAINED_SUPPORTED"
+    },
+    "A2_BOTH_HIGH_DAMAGE_EXCHANGE": {
+      "B-A": "THIN_DESCRIPTIVE",
+      "C-A": "THIN_DESCRIPTIVE",
+      "C-B": "THIN_DESCRIPTIVE"
+    },
+    "A4_KO_HISTORY_VS_KO_VULNERABILITY": {
+      "B-A": "RETAINED_SUPPORTED",
+      "C-A": "RETAINED_SUPPORTED",
+      "C-B": "RETAINED_SUPPORTED"
+    },
+    "Heavyweight": {
+      "B-A": "RETAINED_SUPPORTED",
+      "C-A": "UNCERTAIN",
+      "C-B": "UNCERTAIN"
+    },
+    "Light Heavyweight": {
+      "B-A": "RETAINED_SUPPORTED",
+      "C-A": "UNCERTAIN",
+      "C-B": "RETAINED_SUPPORTED"
+    }
+  },
+  "scope": "historical developmental only; no automatic production promotion"
+}

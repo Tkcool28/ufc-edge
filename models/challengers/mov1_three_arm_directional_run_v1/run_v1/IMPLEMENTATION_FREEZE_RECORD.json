@@ -1,0 +1,19 @@
+{
+  "contract_SHA256": "08386e74b5a9e2257d2650c8925754b5cac61a625cee8746bbc8a19c3d606243",
+  "implementation_files": {
+    ".github/workflows/mov1-three-arm-directional-run-v1.yml": "e5e89fc560020942d68234fcfe5bb2a6b2473b46fe760f50c094142f1a586bd8",
+    "models/challengers/mov1_three_arm_directional_run_v1/PRE_FIT_CHECKS.json": "9d0f54d9efd758d0468a4ee744b213ad12597516ff8a80b79f53345ce39075a6",
+    "models/challengers/mov1_three_arm_directional_run_v1/PRE_FIT_SOURCE_VERIFICATION.json": "4c3436b6896271a99f7ff9c4ffdb077e708b6a09d7284b64cbd7a0438fdecefa",
+    "models/challengers/mov1_three_arm_directional_run_v1/README.md": "e295071ad738e7f5ea2cd54ab531028f6f81bd5968cf52c3f7a791f57e95f25f",
+    "models/challengers/mov1_three_arm_directional_run_v1/implementation.py": "7e007d6e392c69ef050f638e7291854c8d36f167b3665ccd043dbb33aab9b294",
+    "models/challengers/mov1_three_arm_directional_run_v1/reporting.py": "781dfe3da94573dd93fda226895326f706dd554605aabf37fef960951162f2b1",
+    "models/challengers/mov1_three_arm_directional_run_v1/verification.py": "7e532c036483ee6d638415b087708b1371f1f2694262d3501fdf38e5628b5934",
+    "tests/experiments/test_mov1_three_arm_directional_v1.py": "b3d3a8ada5afc6e8559927e1837068bc169e3f8a5c2d76ec07699ac645e659bd",
+    "tools/directional_mov1/run_v1.py": "20128945b96db92c50b6ae525171131f9f046aa753761c1377839c0552b8d2ab",
+    "tools/directional_mov1/verify_v1.py": "39ce42d4a8cbaec9e7fd3cc13a20f3062ba8deee7f2946bc5f7262a602e25317"
+  },
+  "implementation_freeze_SHA": "cd1bb591a98efe39da3e192cfb46c9aa4194f6c2",
+  "manifest_SHA256": "4ae3466b57eba8eb08d9a44815a1df3ba4b84c1ef6da0ebaab76e115c989cc04",
+  "starting_main": "a638fc1c9a66986875e1929949886c3ef6bf6621",
+  "verified_before_first_fit": true
+}

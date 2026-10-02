@@ -1,0 +1,8 @@
+{
+  "Arm_A_K_exact_reference_float64": true,
+  "MOV0_F_exact_reference_float64": true,
+  "matched_fights": 4260,
+  "new_fits": 0,
+  "prefit_implementation_files_unchanged": true,
+  "status": "PASS"
+}
