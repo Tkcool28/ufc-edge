@@ -1,0 +1,11 @@
+{
+  "PR124_merged": true,
+  "full_synthetic_reporting_fixture": "PASS; fabricated labels and illustrative constant probabilities only",
+  "main_SHA": "a638fc1c9a66986875e1929949886c3ef6bf6621",
+  "no_handoff_contract_discrepancy": true,
+  "original_contract_validator": "PASS;384sources/27histories/exact populations and folds",
+  "predictive_fits": 0,
+  "required_sources_verified": true,
+  "status": "PASS",
+  "tests_passed": 20
+}

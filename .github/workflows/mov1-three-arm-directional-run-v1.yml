@@ -1,0 +1,54 @@
+name: MOV1 Three Arm Directional Run V1 (saved-only verification)
+on:
+  pull_request:
+    paths:
+      - 'models/challengers/mov1_three_arm_directional_run_v1/**'
+      - 'tools/directional_mov1/*.py'
+      - 'tests/experiments/test_mov1_three_arm_directional_v1.py'
+      - '.github/workflows/mov1-three-arm-directional-run-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scipy==1.14.1 scikit-learn==1.5.2 pytest==8.3.5
+      - name: Outcome-free engineering tests
+        run: python -m pytest -q tests/experiments/test_mov1_three_arm_directional_v1.py tests/diagnostics/test_mov1_three_arm_contract_v1.py tests/diagnostics/test_mov1_directional_collision_v1.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Frozen contract input verification (zero fits)
+        run: python -W ignore::FutureWarning tools/contracts/validate_mov1_three_arm_contract_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet'
+      - name: Saved-only run verification, if evidence is present
+        run: |
+          evidence=models/challengers/mov1_three_arm_directional_run_v1/run_v1
+          if test -f "$evidence/EVIDENCE_MANIFEST.json"; then
+            python -W ignore::FutureWarning tools/directional_mov1/verify_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet' --output "$evidence"
+          fi
+      - name: Whitespace check
+        run: git diff a638fc1c9a66986875e1929949886c3ef6bf6621 HEAD --check
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('models/challengers/mov1_three_arm_directional_run_v1/run_v1/EVIDENCE_MANIFEST.json') != ''
+        with:
+          name: mov1-three-arm-frozen-run-v1-evidence
+          path: models/challengers/mov1_three_arm_directional_run_v1/run_v1
+          retention-days: 90
+          if-no-files-found: error
