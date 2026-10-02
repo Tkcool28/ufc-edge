@@ -1,0 +1,53 @@
+name: MOV1 PR123 Directional Audit (zero fits)
+on:
+  pull_request:
+    paths:
+      - 'docs/model_diagnostics/mov1_directional_representation_v1/**'
+      - 'tests/diagnostics/test_mov1_directional_collision_v1.py'
+      - 'tools/diagnostics/run_mov1_directional_representation_v1.py'
+      - 'tools/diagnostics/run_mov1_b3_b5_supplement_v1.py'
+      - 'tools/diagnostics/verify_mov1_submission_lineage_v1.py'
+      - 'tools/diagnostics/finalize_mov1_directional_evidence_v1.py'
+      - '.github/workflows/mov1-directional-audit-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scipy==1.14.1 pytest==8.3.5
+      - name: Outcome-free synthetic collision regression
+        run: python -m pytest -q tests/diagnostics/test_mov1_directional_collision_v1.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify corrected F02 SHA and run outcome-blind empirical gates
+        run: python tools/diagnostics/run_mov1_directional_representation_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet' --output '${{ runner.temp }}/pr123-diagnostics'
+      - name: Independent submission and takedown F01 source-lineage reconstruction
+        run: PYTHONPATH=src python tools/diagnostics/verify_mov1_submission_lineage_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet' --output '${{ runner.temp }}/pr123-diagnostics'
+      - name: Saved-only B3/B5 chronology, division, experience and missingness
+        run: python tools/diagnostics/run_mov1_b3_b5_supplement_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet' --output '${{ runner.temp }}/pr123-diagnostics'
+      - name: Finalize all-source evidence manifest and digest
+        run: python tools/diagnostics/finalize_mov1_directional_evidence_v1.py --output '${{ runner.temp }}/pr123-diagnostics'
+      - name: Upload PR123 diagnostic tables
+        uses: actions/upload-artifact@v4
+        with:
+          name: mov1-pr123-saved-only-diagnostics
+          path: ${{ runner.temp }}/pr123-diagnostics
+          retention-days: 90
+          if-no-files-found: error
+      - name: Whitespace check
+        run: git diff HEAD^ HEAD --check

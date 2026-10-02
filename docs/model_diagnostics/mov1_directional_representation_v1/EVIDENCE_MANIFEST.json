@@ -1,0 +1,59 @@
+{
+  "FROZEN_IDENTITIES": {
+    "boosted_predictions_archive_member": "d1899df12dc560e3633b37fee78c45a68246cfae16dcdb6de8627888bd423d02",
+    "corrected_F02": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "linear_predictions": "f8841d5007d0dec1000ed3c93a1d397428b2e5668cfdeedca6d3afc7fe4f2b3a"
+  },
+  "audit": "MOV1_DIRECTIONAL_FEATURE_REPRESENTATION_AUDIT_V1",
+  "base_main": "6f92ce406af77758bacd2ce1f91fbbce0b4fc64b",
+  "calibrator_applied": false,
+  "generated_evidence": {
+    "B3_B5_CHRONOLOGY_DIVISION_EXPERIENCE_MISSINGNESS.csv": {
+      "bytes": 49772,
+      "sha256": "a4fbc37f988f9c7d9993fd2466961e2a27521dd8d3adaa2dc52569d57334ec0d"
+    },
+    "B3_B5_DIAGNOSTIC_MANIFEST.json": {
+      "bytes": 2577,
+      "sha256": "8ae30cf08fce65d4fe7d8906c016b60f1628c635a85a56164f034e1c0befe8d1"
+    },
+    "F02_TRAINING_COMPLETENESS_AND_ALIGNMENT.json": {
+      "bytes": 75387,
+      "sha256": "89683e08fe10f5a0f2f10c81be2e063f87df1888fcbbd0cb87be25692afe77af"
+    },
+    "SUBMISSION_TAKEDOWN_INDEPENDENT_LINEAGE.json": {
+      "bytes": 27001,
+      "sha256": "18f17592c39c1e9291227d187cff5bf6f9ca1c9ced9cad199c04f944d01c35c8"
+    }
+  },
+  "post_boundary_outcome_inspection": false,
+  "prediction_training_fits": 0,
+  "source_SHA256": {
+    ".github/workflows/mov1-directional-audit-v1.yml": "4494a6d601f1c190333b0e4fc1238f960a3b80271677d1137f3079a1eed30c20",
+    "data/canonical/v0/events.csv": "7bd9d33111fab3fd2506eb651a7870b9de2ee38d3db739fe58ac0ee0ad26261e",
+    "data/canonical/v0/fighter_round_stats.csv": "9d35fa234083249a5e3a9bfa0aa7006f7df0ea32317c51fe45f521e3cd1e4f8d",
+    "data/canonical/v0/fights.csv": "b972ebb0c6b1fdfdd512c8d6004129f7e0620fe6759ca8acfa1d2f1184029e76",
+    "docs/model_diagnostics/mov1_directional_representation_v1/MOV1_DIVISION_TRAINING_COMPLETENESS.csv": "604b8070abe5b36b65d34837bd862fa93e2da1cad2fc18495cebdf6089da7772",
+    "docs/model_diagnostics/mov1_directional_representation_v1/MOV1_EXACT_35_COLUMN_INVENTORY.csv": "74b9da7932b5cd8b4288960dfb5b361271f5dbd085210d0d78b52c4bc95c9606",
+    "docs/model_diagnostics/mov1_directional_representation_v1/MOV1_FOLD_SAMPLE_SUPPORT.csv": "e562debe4bfe5042c1ffe55f30fc7a4d3d19d12a90cb98a2686cb43426eea4eb",
+    "docs/model_diagnostics/mov1_directional_representation_v1/MOV1_STATE_CONCEPT_TO_FEATURE_MAP.csv": "3fdd6fcaf73a453dbae5af358e3fc2f6353b8fde0fe863fa310e29ba66794f53",
+    "docs/model_diagnostics/mov1_three_family_finish_pathways_v1/EVIDENCE_MANIFEST.json": "00b02e3442686689b1ffaca00816ea3e050837809c8a3a6cbf94d2bd9328f0d2",
+    "features/feature_catalog.yaml": "e08d2ffe34216f93aeeb23dc205ed498e57c691fbcf8dcfa56b9e1cf9399223a",
+    "governance/finish_method_target_structure_v1/EVIDENCE_MANIFEST.json": "27cccc4ef407f652feaacbe375baa0e2750cadc4f883a3b6e7a792e39bc8dae8",
+    "models/challengers/mov1_boosted_v1/run_v1/EVIDENCE_MANIFEST.json": "2b6c223e31000a0ff2c4c35c8c82006c92767b49e42fd080ef012459602fe410",
+    "models/mov1/contracts/ko_vs_submission_given_finish_v1/mov1_min_allowlist.json": "f0eb5338ccdd00b8b18da9337751139a79ae7865b47d6e5c87fb68aa3f509fc0",
+    "models/mov1/implementation_v1.py": "0949678d73a804abdf05877d120115c79c928c687f93cf987c6a7527fa75b1a6",
+    "models/mov1/run_v1/EVIDENCE_MANIFEST.json": "cb21ff773489f23f4583a6487942e3edb05c817493aa04eff71a470f7b1086c6",
+    "provenance/rulesets/elapsed_exposure_ruleset_registry_v1.json": "9f200da69b7311ba270b39ea0120a429fd98d6623c49b823ee828c59f279f9ea",
+    "src/ufc_edge/features/aggregations.py": "bd95bf9c8813f6e3ed97b99fe16efdaa95c1c2ece3cfa3083f2396481426e324",
+    "src/ufc_edge/features/elapsed_exposure.py": "30c32bc52b9013b68c1a536d032cb912675ae3fdafb91f3cb4c8a48031b19cfc",
+    "src/ufc_edge/features/history.py": "cbd5c282fe4cbd20f0c615e49e7d7b2daffd8e342e6ef37b28740f09f6d4913f",
+    "src/ufc_edge/features/state.py": "416ee8e5789fc38804c0ca3e8011a87b921770e7e22c3e221a4038ffe6ca14ac",
+    "tests/diagnostics/test_mov1_directional_collision_v1.py": "cf45960c88497dfabfe1474209bdd99d5fda3d970104894bc4cb38595bc24841",
+    "tools/contracts/validate_mov1_boosted_contract_v1.py": "26656e45b7a18307945a98089f0f411520d69bfa681e8223975a698d750df20c",
+    "tools/diagnostics/finalize_mov1_directional_evidence_v1.py": "3ff2a3a98dbac999e05ca9b8155cfd5ad35cb28d100026c789bb356e8ac60bc7",
+    "tools/diagnostics/run_mov1_b3_b5_supplement_v1.py": "6966ee85acc16a031f5dd7deaab1caefdec8939ef28d97c0230f2cc4cad119bc",
+    "tools/diagnostics/run_mov1_directional_representation_v1.py": "c2ab6bdb2ee9fdd7de9dd1e14f14dffebee43516f3e796e16fb4e70d68cac91b",
+    "tools/diagnostics/verify_mov1_submission_lineage_v1.py": "a1b584637675db5b21483bc194449e8b70421ad701bfe3a57e7f0c5b84a55745"
+  },
+  "source_artifact_retrieval_run": 35182939981
+}
