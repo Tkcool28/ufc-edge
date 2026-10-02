@@ -1,0 +1,23 @@
+{
+  "KO_preservation": "each A1,A2,A4,HW,LHW: if N>=100, retained_supported requires BOTH fight/event95% upper LL delta<=0.01 and upper Brier delta<=0.005; lower above either margin indicates not preserved; else uncertain. Thin cells descriptive. Compact aggregate success can coexist with a failed pathway; explicitly label tradeoff, never unqualified pathway success.",
+  "complete_system": "same primary/secondary interval rules and annual rules, LL<0 and summed Brier upper<=0.004 both. Independent decision probabilities exactly identical. Report classwise calibration and clipping algebra. Conditional support does not assign composed support automatically.",
+  "current_specification_not_supported": "pooled LL>0 with BOTH interval lower bounds>0, OR pooled Brier>0.002 with BOTH lower bounds>0.002; otherwise mixed criteria => INCONCLUSIVE",
+  "delta": "candidate minus reference; lower LL/Brier favorable; ties abs<=1e-12",
+  "future": "single fixed analysis; same criteria except annual gate replaced by four six-month cohort persistence described in forward protocol; no historical+forward pooling",
+  "inconclusive": "any other valid result, including intervals crossing zero, metrics disagreeing, annual support failing; numerical/identity failure means INVALID_INCOMPLETE not scientific rejection",
+  "limitations": [
+    "outer historical outcomes extensively inspected; architecture motivated by same evidence",
+    "bootstrap conditional on fixed models; event clusters do not remove repeat-fighter dependence or overlapping training",
+    "feature coefficients associations, not mechanism causality; probabilities not hazards/round transitions"
+  ],
+  "pathway_status": "B3 and B5 separately: supportive descriptive correction only if paired LL/Brier point deltas<0 AND abs(mean_K-actual_KO) smaller; require paired fight/event95% LL upper<0 and N>=100 to label supported_cell_improvement. Otherwise INCONCLUSIVE or NOT_SUPPORTED when both losses worsen; panel overlap/inspection precludes independent confirmation.",
+  "priority": "C-A primary; B-A isolation; C-B compact increment; preregistered separate statuses for conditional, pathways, composed and forward",
+  "secondary_multiplicity": "B-A and C-B use97.5% intervals, Bonferroni family-wise5% for the two comparisons. Joint LL superiority and Brier noninferiority required; primary C-A95%. Diagnostic95% descriptive, no confirmatory group winner claims.",
+  "supported_improvement": {
+    "annual": "LL improves >=6 of9 years AND median annual delta<0 AND pooled LL delta after removing each single outer year<0",
+    "brier": "pooled delta<=0 and BOTH interval upper bounds<=0.002 absolute Brier units (noninferiority tolerance)",
+    "calibration": "report ECE, intercept/slope, gap even if discordant; never replace primary criteria with calibration/AUC",
+    "log_loss": "pooled delta<0 and BOTH paired fight/event interval upper bounds<0 at comparison-specific level",
+    "scope": "developmental historical support only; no production promotion"
+  }
+}

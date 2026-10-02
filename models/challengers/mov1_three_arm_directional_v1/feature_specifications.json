@@ -1,0 +1,1141 @@
+{
+  "arms": {
+    "A": {
+      "before_one_hot": 34,
+      "predictors": [
+        {
+          "inputs": [
+            "f1__fs__prior_fight_count__career__raw",
+            "f2__fs__prior_fight_count__career__raw"
+          ],
+          "name": "fs__prior_fight_count__career__raw::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__prior_fight_count__career__raw",
+            "f2__fs__prior_fight_count__career__raw"
+          ],
+          "name": "fs__prior_fight_count__career__raw::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+            "f2__fs__early_finish_profile__r1_finish_win__career__shrunk"
+          ],
+          "name": "fs__early_finish_profile__r1_finish_win__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+            "f2__fs__early_finish_profile__r1_finish_win__career__shrunk"
+          ],
+          "name": "fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+            "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk"
+          ],
+          "name": "fs__early_finish_profile__r1_finish_loss__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+            "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk"
+          ],
+          "name": "fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_win_profile__ko_tko__career__shrunk"
+          ],
+          "name": "fs__finish_method_win_profile__ko_tko__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_win_profile__ko_tko__career__shrunk"
+          ],
+          "name": "fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__submission__career__shrunk",
+            "f2__fs__finish_method_win_profile__submission__career__shrunk"
+          ],
+          "name": "fs__finish_method_win_profile__submission__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__submission__career__shrunk",
+            "f2__fs__finish_method_win_profile__submission__career__shrunk"
+          ],
+          "name": "fs__finish_method_win_profile__submission__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk"
+          ],
+          "name": "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk"
+          ],
+          "name": "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+            "f2__fs__finish_method_loss_profile__submission__career__shrunk"
+          ],
+          "name": "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+            "f2__fs__finish_method_loss_profile__submission__career__shrunk"
+          ],
+          "name": "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__created_per_15__career__shrunk"
+          ],
+          "name": "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__created_per_15__career__shrunk"
+          ],
+          "name": "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__allowed_per_15__career__shrunk"
+          ],
+          "name": "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__allowed_per_15__career__shrunk"
+          ],
+          "name": "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__created_per_15__career__shrunk"
+          ],
+          "name": "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__created_per_15__career__shrunk"
+          ],
+          "name": "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+          ],
+          "name": "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+          ],
+          "name": "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__created_per_15__career__shrunk"
+          ],
+          "name": "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__created_per_15__career__shrunk"
+          ],
+          "name": "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__faced_per_15__career__shrunk"
+          ],
+          "name": "fs__takedown_pressure__faced_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__faced_per_15__career__shrunk"
+          ],
+          "name": "fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+            "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+          ],
+          "name": "directional_knockdown_matchup::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+            "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+          ],
+          "name": "directional_knockdown_matchup::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__success__career__shrunk",
+            "f2__fs__takedown_conversion__success__career__shrunk"
+          ],
+          "name": "fs__takedown_conversion__success__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__success__career__shrunk",
+            "f2__fs__takedown_conversion__success__career__shrunk"
+          ],
+          "name": "fs__takedown_conversion__success__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__defense__career__shrunk",
+            "f2__fs__takedown_conversion__defense__career__shrunk"
+          ],
+          "name": "fs__takedown_conversion__defense__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__defense__career__shrunk",
+            "f2__fs__takedown_conversion__defense__career__shrunk"
+          ],
+          "name": "fs__takedown_conversion__defense__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "scheduled_rounds"
+          ],
+          "name": "scheduled_rounds",
+          "operation": "identity",
+          "rationale": "scheduled exposure",
+          "scaled": true,
+          "units": "rounds"
+        },
+        {
+          "inputs": [
+            "ctx__title_bout"
+          ],
+          "name": "ctx__title_bout",
+          "operation": "identity",
+          "rationale": "title context",
+          "scaled": false,
+          "units": "boolean"
+        }
+      ],
+      "raw_columns": [
+        "scheduled_rounds",
+        "ctx__title_bout",
+        "ctx__weight_class",
+        "f1__fs__prior_fight_count__career__raw",
+        "f2__fs__prior_fight_count__career__raw",
+        "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_win_profile__submission__career__shrunk",
+        "f2__fs__finish_method_win_profile__submission__career__shrunk",
+        "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f2__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw",
+        "f1__fs__takedown_conversion__success__career__shrunk",
+        "f2__fs__takedown_conversion__success__career__shrunk",
+        "f1__fs__takedown_conversion__defense__career__shrunk",
+        "f2__fs__takedown_conversion__defense__career__shrunk"
+      ],
+      "reference": "models/mov1/run_v1/oof_MOV1_MIN.csv",
+      "training": "FORBIDDEN; read frozen historical predictions"
+    },
+    "B": {
+      "before_one_hot": 35,
+      "predictors": [
+        {
+          "inputs": [
+            "f1__fs__prior_fight_count__career__raw",
+            "f2__fs__prior_fight_count__career__raw"
+          ],
+          "name": "fs__prior_fight_count__career__raw::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__prior_fight_count__career__raw",
+            "f2__fs__prior_fight_count__career__raw"
+          ],
+          "name": "fs__prior_fight_count__career__raw::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+            "f2__fs__early_finish_profile__r1_finish_win__career__shrunk"
+          ],
+          "name": "fs__early_finish_profile__r1_finish_win__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+            "f2__fs__early_finish_profile__r1_finish_win__career__shrunk"
+          ],
+          "name": "fs__early_finish_profile__r1_finish_win__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+            "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk"
+          ],
+          "name": "fs__early_finish_profile__r1_finish_loss__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+            "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk"
+          ],
+          "name": "fs__early_finish_profile__r1_finish_loss__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_win_profile__ko_tko__career__shrunk"
+          ],
+          "name": "fs__finish_method_win_profile__ko_tko__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_win_profile__ko_tko__career__shrunk"
+          ],
+          "name": "fs__finish_method_win_profile__ko_tko__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__submission__career__shrunk",
+            "f2__fs__finish_method_win_profile__submission__career__shrunk"
+          ],
+          "name": "fs__finish_method_win_profile__submission__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__submission__career__shrunk",
+            "f2__fs__finish_method_win_profile__submission__career__shrunk"
+          ],
+          "name": "fs__finish_method_win_profile__submission__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk"
+          ],
+          "name": "fs__finish_method_loss_profile__ko_tko__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk"
+          ],
+          "name": "fs__finish_method_loss_profile__ko_tko__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+            "f2__fs__finish_method_loss_profile__submission__career__shrunk"
+          ],
+          "name": "fs__finish_method_loss_profile__submission__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+            "f2__fs__finish_method_loss_profile__submission__career__shrunk"
+          ],
+          "name": "fs__finish_method_loss_profile__submission__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__created_per_15__career__shrunk"
+          ],
+          "name": "fs__knockdown_rate__created_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__created_per_15__career__shrunk"
+          ],
+          "name": "fs__knockdown_rate__created_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__allowed_per_15__career__shrunk"
+          ],
+          "name": "fs__knockdown_rate__allowed_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__allowed_per_15__career__shrunk"
+          ],
+          "name": "fs__knockdown_rate__allowed_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__created_per_15__career__shrunk"
+          ],
+          "name": "fs__submission_attempt_rate__created_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__created_per_15__career__shrunk"
+          ],
+          "name": "fs__submission_attempt_rate__created_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+          ],
+          "name": "fs__submission_attempt_rate__faced_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+          ],
+          "name": "fs__submission_attempt_rate__faced_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__created_per_15__career__shrunk"
+          ],
+          "name": "fs__takedown_pressure__created_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__created_per_15__career__shrunk"
+          ],
+          "name": "fs__takedown_pressure__created_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__faced_per_15__career__shrunk"
+          ],
+          "name": "fs__takedown_pressure__faced_per_15__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__faced_per_15__career__shrunk"
+          ],
+          "name": "fs__takedown_pressure__faced_per_15__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+            "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+          ],
+          "name": "directional_knockdown_matchup::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+            "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+          ],
+          "name": "directional_knockdown_matchup::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__success__career__shrunk",
+            "f2__fs__takedown_conversion__success__career__shrunk"
+          ],
+          "name": "fs__takedown_conversion__success__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__success__career__shrunk",
+            "f2__fs__takedown_conversion__success__career__shrunk"
+          ],
+          "name": "fs__takedown_conversion__success__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__defense__career__shrunk",
+            "f2__fs__takedown_conversion__defense__career__shrunk"
+          ],
+          "name": "fs__takedown_conversion__defense__career__shrunk::mean",
+          "operation": "mean",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__defense__career__shrunk",
+            "f2__fs__takedown_conversion__defense__career__shrunk"
+          ],
+          "name": "fs__takedown_conversion__defense__career__shrunk::absolute_difference",
+          "operation": "absolute_difference",
+          "rationale": "unchanged MIN transformation",
+          "scaled": true,
+          "units": "original governed units"
+        },
+        {
+          "inputs": [
+            "scheduled_rounds"
+          ],
+          "name": "scheduled_rounds",
+          "operation": "identity",
+          "rationale": "scheduled exposure",
+          "scaled": true,
+          "units": "rounds"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+          ],
+          "name": "SUB_DIRECTIONAL_SUM",
+          "operation": "cross_product_sum",
+          "rationale": "restore cross-fighter submission alignment; no max/min alternatives",
+          "scaled": true,
+          "units": "(attempts per 15 minutes)^2"
+        },
+        {
+          "inputs": [
+            "ctx__title_bout"
+          ],
+          "name": "ctx__title_bout",
+          "operation": "identity",
+          "rationale": "title context",
+          "scaled": false,
+          "units": "boolean"
+        }
+      ],
+      "raw_columns": [
+        "scheduled_rounds",
+        "ctx__title_bout",
+        "ctx__weight_class",
+        "f1__fs__prior_fight_count__career__raw",
+        "f2__fs__prior_fight_count__career__raw",
+        "f1__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_win__career__shrunk",
+        "f1__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f2__fs__early_finish_profile__r1_finish_loss__career__shrunk",
+        "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_win_profile__submission__career__shrunk",
+        "f2__fs__finish_method_win_profile__submission__career__shrunk",
+        "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f2__fs__finish_method_loss_profile__submission__career__shrunk",
+        "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f1__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__faced_per_15__career__shrunk",
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw",
+        "f1__fs__takedown_conversion__success__career__shrunk",
+        "f2__fs__takedown_conversion__success__career__shrunk",
+        "f1__fs__takedown_conversion__defense__career__shrunk",
+        "f2__fs__takedown_conversion__defense__career__shrunk"
+      ],
+      "training": "Stage 2 only; original MIN plus exactly one column"
+    },
+    "C": {
+      "before_one_hot": 15,
+      "predictors": [
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__created_per_15__career__shrunk"
+          ],
+          "name": "KD_CREATED_MEAN",
+          "operation": "mean",
+          "rationale": "KO creation intensity",
+          "scaled": true,
+          "units": "KD per 15 minutes"
+        },
+        {
+          "inputs": [
+            "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+            "f2__fs__knockdown_rate__allowed_per_15__career__shrunk"
+          ],
+          "name": "KD_ALLOWED_MEAN",
+          "operation": "mean",
+          "rationale": "KO vulnerability intensity",
+          "scaled": true,
+          "units": "KD per 15 minutes"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_win_profile__ko_tko__career__shrunk"
+          ],
+          "name": "KO_WIN_MEAN",
+          "operation": "mean",
+          "rationale": "KO conversion history, not proportion of wins",
+          "scaled": true,
+          "units": "shrunk proportion per prior fight"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+            "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk"
+          ],
+          "name": "KO_LOSS_MEAN",
+          "operation": "mean",
+          "rationale": "KO loss history, not proportion of losses",
+          "scaled": true,
+          "units": "shrunk proportion per prior fight"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__created_per_15__career__shrunk"
+          ],
+          "name": "SUB_PRESSURE_MEAN",
+          "operation": "mean",
+          "rationale": "submission creation opportunity",
+          "scaled": true,
+          "units": "attempts per 15 minutes"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+          ],
+          "name": "SUB_EXPOSURE_MEAN",
+          "operation": "mean",
+          "rationale": "opponent submission exposure, not conversion susceptibility",
+          "scaled": true,
+          "units": "attempts per 15 minutes"
+        },
+        {
+          "inputs": [
+            "f1__fs__finish_method_win_profile__submission__career__shrunk",
+            "f2__fs__finish_method_win_profile__submission__career__shrunk"
+          ],
+          "name": "SUB_WIN_MEAN",
+          "operation": "mean",
+          "rationale": "historical submission conversion profile",
+          "scaled": true,
+          "units": "shrunk proportion per prior fight"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__created_per_15__career__shrunk"
+          ],
+          "name": "TD_PRESSURE_MEAN",
+          "operation": "mean",
+          "rationale": "grappling entry effort",
+          "scaled": true,
+          "units": "attempts per 15 minutes"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_conversion__defense__career__shrunk",
+            "f2__fs__takedown_conversion__defense__career__shrunk"
+          ],
+          "name": "TD_DEFENSE_MEAN",
+          "operation": "mean",
+          "rationale": "grappling entry resistance",
+          "scaled": true,
+          "units": "fraction [0,1] of opponent attempts prevented"
+        },
+        {
+          "inputs": [
+            "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+            "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+          ],
+          "name": "KD_DIRECTIONAL_MEAN",
+          "operation": "mean",
+          "rationale": "pooled existing signed efficiency contrast",
+          "scaled": true,
+          "units": "difference of KD per significant strike landed/absorbed"
+        },
+        {
+          "inputs": [
+            "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+            "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+          ],
+          "name": "KD_DIRECTIONAL_ABS_DIFF",
+          "operation": "absolute_difference",
+          "rationale": "asymmetry in the two existing directional contrasts",
+          "scaled": true,
+          "units": "difference of KD per significant strike landed/absorbed"
+        },
+        {
+          "inputs": [
+            "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__created_per_15__career__shrunk",
+            "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+            "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+          ],
+          "name": "SUB_DIRECTIONAL_SUM",
+          "operation": "cross_product_sum",
+          "rationale": "restore cross-fighter submission alignment; no max/min alternatives",
+          "scaled": true,
+          "units": "(attempts per 15 minutes)^2"
+        },
+        {
+          "inputs": [
+            "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+            "f2__fs__takedown_pressure__created_per_15__career__shrunk",
+            "f1__fs__takedown_conversion__defense__career__shrunk",
+            "f2__fs__takedown_conversion__defense__career__shrunk"
+          ],
+          "name": "TD_ACCESS_DIRECTIONAL_SUM",
+          "operation": "pressure_against_weakness_sum",
+          "rationale": "entry pressure against opponent defense weakness",
+          "scaled": true,
+          "units": "attempts per 15 minutes"
+        },
+        {
+          "inputs": [
+            "scheduled_rounds"
+          ],
+          "name": "scheduled_rounds",
+          "operation": "identity",
+          "rationale": "scheduled exposure",
+          "scaled": true,
+          "units": "rounds"
+        },
+        {
+          "inputs": [
+            "ctx__title_bout"
+          ],
+          "name": "ctx__title_bout",
+          "operation": "identity",
+          "rationale": "title context",
+          "scaled": false,
+          "units": "boolean"
+        }
+      ],
+      "raw_columns": [
+        "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f1__fs__finish_method_win_profile__submission__career__shrunk",
+        "f2__fs__finish_method_win_profile__submission__career__shrunk",
+        "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f1__fs__takedown_conversion__defense__career__shrunk",
+        "f2__fs__takedown_conversion__defense__career__shrunk",
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw",
+        "scheduled_rounds",
+        "ctx__title_bout",
+        "ctx__weight_class"
+      ],
+      "training": "Stage 2 only; no other predictors"
+    }
+  },
+  "categorical_context": {
+    "column": "ctx__weight_class",
+    "encoding": "original training-only one-hot; lexical categories, drop=None; unseen known class all zeros"
+  },
+  "operations": {
+    "absolute_difference": "abs(x0-x1)",
+    "cross_product_sum": "x0*x3+x1*x2; inputs pressure1,pressure2,exposure1,exposure2",
+    "identity": "x0",
+    "mean": "(x0+x1)/2",
+    "pressure_against_weakness_sum": "x0*(1-x3)+x1*(1-x2); inputs TD1,TD2,defense1,defense2"
+  },
+  "order": "listed scaled numerics; title unscaled; lexical training division one-hot last; intercept excluded from feature counts",
+  "source_concepts": {
+    "KD_ALLOWED": {
+      "columns": [
+        "f1__fs__knockdown_rate__allowed_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__allowed_per_15__career__shrunk"
+      ],
+      "rationale": "KO vulnerability intensity",
+      "units": "KD per 15 minutes"
+    },
+    "KD_CREATED": {
+      "columns": [
+        "f1__fs__knockdown_rate__created_per_15__career__shrunk",
+        "f2__fs__knockdown_rate__created_per_15__career__shrunk"
+      ],
+      "rationale": "KO creation intensity",
+      "units": "KD per 15 minutes"
+    },
+    "KD_DIRECTIONAL": {
+      "columns": [
+        "mx__knockdown_creation_vs_vulnerability__f1_vs_f2__career__raw",
+        "mx__knockdown_creation_vs_vulnerability__f2_vs_f1__career__raw"
+      ],
+      "rationale": "reuse existing governed efficiency contrast; it is not a product or hazard",
+      "units": "difference of KD per significant strike landed/absorbed"
+    },
+    "KO_LOSS": {
+      "columns": [
+        "f1__fs__finish_method_loss_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_loss_profile__ko_tko__career__shrunk"
+      ],
+      "rationale": "KO loss history, not proportion of losses",
+      "units": "shrunk proportion per prior fight"
+    },
+    "KO_WIN": {
+      "columns": [
+        "f1__fs__finish_method_win_profile__ko_tko__career__shrunk",
+        "f2__fs__finish_method_win_profile__ko_tko__career__shrunk"
+      ],
+      "rationale": "KO conversion history, not proportion of wins",
+      "units": "shrunk proportion per prior fight"
+    },
+    "SUB_EXPOSURE": {
+      "columns": [
+        "f1__fs__submission_attempt_rate__faced_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__faced_per_15__career__shrunk"
+      ],
+      "rationale": "opponent submission exposure, not conversion susceptibility",
+      "units": "attempts per 15 minutes"
+    },
+    "SUB_PRESSURE": {
+      "columns": [
+        "f1__fs__submission_attempt_rate__created_per_15__career__shrunk",
+        "f2__fs__submission_attempt_rate__created_per_15__career__shrunk"
+      ],
+      "rationale": "submission creation opportunity",
+      "units": "attempts per 15 minutes"
+    },
+    "SUB_WIN": {
+      "columns": [
+        "f1__fs__finish_method_win_profile__submission__career__shrunk",
+        "f2__fs__finish_method_win_profile__submission__career__shrunk"
+      ],
+      "rationale": "historical submission conversion profile",
+      "units": "shrunk proportion per prior fight"
+    },
+    "TD_DEFENSE": {
+      "columns": [
+        "f1__fs__takedown_conversion__defense__career__shrunk",
+        "f2__fs__takedown_conversion__defense__career__shrunk"
+      ],
+      "rationale": "grappling entry resistance",
+      "units": "fraction [0,1] of opponent attempts prevented"
+    },
+    "TD_PRESSURE": {
+      "columns": [
+        "f1__fs__takedown_pressure__created_per_15__career__shrunk",
+        "f2__fs__takedown_pressure__created_per_15__career__shrunk"
+      ],
+      "rationale": "grappling entry effort",
+      "units": "attempts per 15 minutes"
+    }
+  },
+  "version": "MOV1_THREE_ARM_DIRECTIONAL_CHALLENGER_V1"
+}

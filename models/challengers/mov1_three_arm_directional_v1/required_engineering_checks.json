@@ -1,0 +1,35 @@
+{
+  "Stage2_mandatory": [
+    "exact frozen F02 physical SHA and source manifests",
+    "original population/folds ordered IDs and natural prevalence",
+    "fighter swap features/probabilities including null patterns atol1e-12",
+    "exact SUB sum and TD weakness formula",
+    "KD semantic equality source definitions",
+    "feature construction accepts only literal source columns; label perturbation unchanged",
+    "strict prior and same-date exclusion",
+    "training-only shared source medians; score outliers never alter parameters",
+    "training-only scaling/categories; independent inner fits and fresh outer refit",
+    "no outer-label access in selection/preprocessing",
+    "identical4260 all-eligible IDs and2115 conditional IDs every arm",
+    "same seed pinned library/thread setting, convergence, representative2021 refits",
+    "saved-model regeneration all inner/outer scores within1e-12; prediction CSV round-trip and hashes",
+    "K finite[0,1], SUB=1-K",
+    "F unchanged; sum1 and DEC identical at1e-12",
+    "no class weights/rebalance/resampling",
+    "all existing frozen artifacts hashes unchanged",
+    "original PR123 synthetic exact collision retained"
+  ],
+  "no_training_Stage1": true,
+  "outputs": [
+    "source/implementation freeze before first fit",
+    "all candidate losses and selectedC",
+    "per-fold literal medians/scales/categories and ordered train/validation/score IDs",
+    "2 challenger models/year plus inner records and predictions",
+    "conditional all4260 scores (including decisions) then finish-only evaluation",
+    "three composed systems and matched labels",
+    "per-fight LL/Brier paired deltas and all preregistered panels",
+    "bootstrap indices/procedure,deltas,intervals,persistence,interpretation",
+    "convergence/swap/labelblindness/source completeness/reproducibility evidence",
+    "source/contract/output SHA manifest and completion marker"
+  ]
+}

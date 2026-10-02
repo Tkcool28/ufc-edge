@@ -1,0 +1,32 @@
+{
+  "01-UFC_MODEL_MASTER_PLAN-1-.md": {
+    "normalization": "trailing whitespace removed; content unchanged",
+    "repository_snapshot_SHA256": "a213b1c51bad5c7d6007471971f966fdd655f4406182835df7a77686d174016b",
+    "uploaded_SHA256": "a213b1c51bad5c7d6007471971f966fdd655f4406182835df7a77686d174016b"
+  },
+  "02-UFC_SACRAMENTO_POSTMORTEM_AND_PROCESS_CHANGES-1-.md": {
+    "normalization": "trailing whitespace removed; content unchanged",
+    "repository_snapshot_SHA256": "c41582114197c715958b71904dd966965a19c52f9417f7967959f320de4e0853",
+    "uploaded_SHA256": "c41582114197c715958b71904dd966965a19c52f9417f7967959f320de4e0853"
+  },
+  "03-UFC_EDGE_STEP_2_NEXT_DIRECTION-1-.md": {
+    "normalization": "trailing whitespace removed; content unchanged",
+    "repository_snapshot_SHA256": "606bc0c108d11df5110883730172db852b7fec1654a70db5000d3c627d03e7a1",
+    "uploaded_SHA256": "606bc0c108d11df5110883730172db852b7fec1654a70db5000d3c627d03e7a1"
+  },
+  "04-UFC_EDGE_BETTING_TARGET_FEASIBILITY_MODEL_ARCHITECTURE_AUDIT_V1-1-.md": {
+    "normalization": "trailing whitespace removed; content unchanged",
+    "repository_snapshot_SHA256": "3c10e6615ef15a36edcf64bd8c0ea0a3080406ac22ce260781eb089d88626dd4",
+    "uploaded_SHA256": "800c45f9a9f186049fd3642d9c113ffd44ea0f5c994977184ae12e77977759aa"
+  },
+  "05-UFC_FIGHT_SIMULATOR_DATA_FEASIBILITY_RESEARCH_V1-1-.md": {
+    "normalization": "trailing whitespace removed; content unchanged",
+    "repository_snapshot_SHA256": "56ed971ae861d7530ae08cf0cbc1d17d2106a177ad2e0064d085b48c2d9d0339",
+    "uploaded_SHA256": "8ca3a7f9e3dae7adee2bc17eb7a8e3150f58438df426e6095e62a7bcd74c5e4f"
+  },
+  "06-UFC_EDGE_MOV1_COMPLETION_AND_SIMULATOR_ROADMAP-1-.md": {
+    "normalization": "trailing whitespace removed; content unchanged",
+    "repository_snapshot_SHA256": "0e2e5896e46a8f9343912e4bc5dffae5cba26617f712d45ee133956ddec41868",
+    "uploaded_SHA256": "05807b5373a43f7266243636a6aa86f692069ecdd8706f215b2cabb762278705"
+  }
+}

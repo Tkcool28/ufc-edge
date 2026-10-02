@@ -1,0 +1,54 @@
+{
+  "all_modern_eligible": {
+    "DECISION": 2836,
+    "KO_TKO": 1812,
+    "N": 5658,
+    "SUBMISSION": 1010,
+    "ordered_fight_id_sha256": "906b8d1404e930ca2af49f05af5431ca536e26328cb207e3043b11bb3f44415f"
+  },
+  "conditional_training_population": {
+    "DECISION": 0,
+    "KO_TKO": 1812,
+    "N": 2822,
+    "SUBMISSION": 1010,
+    "ordered_fight_id_sha256": "3170e2f0f8f410ae14b643b8fe75f396e311e8ed40d66bdc454c00ad0d1bc714"
+  },
+  "excluded_from_conditional_training": [
+    "DECISION",
+    "DQ",
+    "NO_CONTEST",
+    "OTHER",
+    "UNKNOWN",
+    "null",
+    "ambiguous"
+  ],
+  "exclusion_reference": {
+    "path": "governance/finish_method_target_structure_v1/excluded_fights.csv",
+    "sha256": "12ca0ca6843538cd58812ab3113d0466fac1b7f1326507404fadb207b9cff03d"
+  },
+  "frozen_snapshot": "2026 is partial historical coverage; future incoming bouts do not change V1 counts. Inference on new bouts requires no outcome label, but evaluation cohort additions require versioned authorization.",
+  "labels": {
+    "KO_TKO": 1,
+    "SUBMISSION": 0
+  },
+  "model_id": "MOV1_KO_VS_SUBMISSION_GIVEN_FINISH_V1",
+  "outer_conditional_evaluation_population": {
+    "DECISION": 0,
+    "KO_TKO": 1361,
+    "N": 2115,
+    "SUBMISSION": 754,
+    "ordered_fight_id_sha256": "5c53f184205ae3a5249e9ac3588967813a0b50cb97615bf0bfe5c7c4c6c9b43c"
+  },
+  "outer_scoring_population": {
+    "DECISION": 2145,
+    "KO_TKO": 1361,
+    "N": 4260,
+    "SUBMISSION": 754,
+    "ordered_fight_id_sha256": "d5b3c693d9e98d7a7693f5d9b479ecb97b0ae03e66f01b9ad322e3ad4ee26086"
+  },
+  "population_policy": "exact frozen MOV0 method policy and PR117 eligible manifest; UFC canonical corrected F02 2015+ intersection; decisions including decision draws score but never train",
+  "source_population_path": "governance/finish_method_target_structure_v1/population_manifest.csv.gz",
+  "source_population_sha256": "49cccb856e53893b16c9d542f9e91ff34b87561fffda2ead5c36a650792d92e0",
+  "starting_main_sha": "4d641e259d4420fd77290603cabcce33c90bf6c8",
+  "target": "P(KO_TKO | STANDARD_FINISH)"
+}

@@ -1,0 +1,38 @@
+{
+  "calibration_minimum_N": 100,
+  "comparisons": [
+    [
+      "C",
+      "A"
+    ],
+    [
+      "B",
+      "A"
+    ],
+    [
+      "C",
+      "B"
+    ]
+  ],
+  "conditional_labels": "KO=1 SUB=0; SUB probability complement",
+  "log_clip": [
+    1e-15,
+    0.999999999999999
+  ],
+  "population": "outer KO_TKO/SUBMISSION only; do not compute KO-vs-SUB loss on decision rows",
+  "primary": "mean[-y log(p)-(1-y) log(1-p)]",
+  "scopes": [
+    "aggregate",
+    "every outer year"
+  ],
+  "secondary": {
+    "ECE": "10 fixed bins [0,.1),...,[.9,1]; sum(Nbin/N * abs(mean_p-observed))",
+    "Wilson": "z=1.959963984540054; binomial count denominator, marginal interval; N=0 gives null",
+    "brier": "mean((p-y)^2)",
+    "calibration": "unpenalized diagnostic y~intercept+slope*logit(p), clip p [1e-6,1-1e-6]; use Newton algorithm in frozen MOV0 calibration_intercept_slope, 100 iterations, step tolerance1e-10; add explicit null/nonconvergent/separated status rather than returning failed fit; never apply to predictions",
+    "mean_prediction": "mean(p)",
+    "prevalence": "mean(y)",
+    "reliability": "all bins including empty; N, mean_p, actual_KO, predicted-minus-observed gap, Wilson95 actual frequency",
+    "roc_auc": "sklearn roc_auc_score; null with explicit one-class status"
+  }
+}

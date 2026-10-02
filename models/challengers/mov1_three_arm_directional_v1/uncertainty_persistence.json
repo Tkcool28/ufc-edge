@@ -1,0 +1,54 @@
+{
+  "bootstrap": {
+    "composed_rows": "all eligible scoring bouts",
+    "conditional_rows": "finishes only",
+    "event": "lexically sorted unique event IDs; sample number-of-events event IDs with replacement and include every paired eligible row for each sampled occurrence; fight-weighted mean",
+    "fight": "sample N paired row indices with replacement",
+    "generator": "numpy.random.default_rng; reset independently per comparison and bootstrap kind",
+    "interval": "two-sided equal-tail; numpy.quantile(method=linear)",
+    "levels": {
+      "diagnostics": 0.95,
+      "primary_C_A": 0.95,
+      "secondary_B_A_and_C_B": 0.975
+    },
+    "limitations": "conditional on fitted OOF predictions; event clustering does not remove repeat-fighter dependence or training overlap",
+    "no_refit": true,
+    "paired_metrics": "same sampled indices/clusters for both metrics and all arms; reset seed17 each scope/kind",
+    "replicates": 10000,
+    "row_order": [
+      "event_date",
+      "event_id",
+      "fight_id"
+    ],
+    "seed": 17
+  },
+  "comparisons": [
+    [
+      "C",
+      "A"
+    ],
+    [
+      "B",
+      "A"
+    ],
+    [
+      "C",
+      "B"
+    ]
+  ],
+  "delta": "candidate minus baseline per-fight log loss; negative favorable",
+  "interpretation": "interpretation_rules.json; no p-value selection battery",
+  "metrics": [
+    "log_loss",
+    "brier"
+  ],
+  "report": [
+    "aggregate delta",
+    "all annual deltas",
+    "favorable/unfavorable/tied years",
+    "median annual delta",
+    "strongest favorable/unfavorable year",
+    "single-best-year share of net improvement using summed losses; null if no net improvement"
+  ],
+  "year_tie_atol": 1e-12
+}

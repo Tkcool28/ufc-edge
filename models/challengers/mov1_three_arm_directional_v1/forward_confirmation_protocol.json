@@ -1,0 +1,23 @@
+{
+  "PIT": "snapshot cutoff event_date00:00UTC or earlier; only prior dates, exclude same-event/same-date stats; scheduled rounds/title/division locked then; previous forward outcomes may enter governed history only after canonical validation and strictly before cutoff, never model fitting",
+  "eligibility": "same canonical UFC win_loss KO_TKO/SUBMISSION; decisions including draws composed only; ambiguous/DQ/NC/other excluded with reasons after labels unsealed; all announced bouts scored before labels, no outcome-dependent scoring. Missingness not exclusion.",
+  "entry": "UFC events on/after2026-10-03 AND after contract merge AND after all3 models frozen with hashes; enrollment starts next UTC day after the latest of these. No backfilled confirmation predictions. Record start timestamp before enrollment.",
+  "features": "exact feature_specifications and frozen2026 medians/scalers/encoders; source-level completeness before imputation; unseen known divisions allzero; unsupported raw label fail closed record without selectively ignoring bout; any scoring failure invalidates cohort completeness until resolved outcome-blind",
+  "historical_boundary": "2026-08-15",
+  "known_forward_composition_prerequisite": "Original retrieved MOV0 artifact lacks fitted coefficients; forward composed evaluation BLOCKED_MISSING_FROZEN_MOV0_RECORD. Before enrollment of composed cohort require separately authorized frozen2026-record recovery and exact historical reproduction. Conditional fixed-model cohort can enroll independently without changing its policy. No scientific redesign or automatic refit.",
+  "labels": "seal until final analysis; governance canonical methods as historical; no market data",
+  "outcomes_accessed_Stage1": false,
+  "persistence": "four fixed6month bins from enrollment; each binN>=100 eligible for interpretation; require >=3 qualifying bins with LL delta<0 and every leave-one-qualifying-bin-out pooled LL<0. If fewer than3 bins qualify, aggregate evidence reported but confirmation status INCONCLUSIVE. Do not substitute event/quarter bins posthoc.",
+  "primary": "C-A conditional LL superiority with paired fight/event95%; Brier noninferiority0.002. B-A/C-B97.5% same metrics; same composition thresholds, calibration secondary",
+  "promotion": "no automatic production replacement, merge or deployment; historical support developmental; forward result requires separate reviewed decision",
+  "retrospective_quarantine": "2026-08-16 through2026-10-02 excluded from independent confirmation; no outcome access in Stage1 or initial Stage2",
+  "sample_gate": {
+    "each_conditional_class_N": 75,
+    "events_N": 30,
+    "finish_N": 500,
+    "subgroup_gates": "unchanged25/50/100; no confirmatory subgroup claims"
+  },
+  "source_versions": "same canonical source definitions, elapsed registry,F01/F02 materializer, governed feature families and division mapping pinned by SOURCE_MANIFEST; only append strict-prior histories from same governed sources. Hash every input snapshot/preprocessor/model/prediction before event. Original F02 immutable; future tables separately versioned. Any semantics/code change pauses confirmation and requires new preregistration before outcomes.",
+  "timing": "one analysis after first full event that reaches500 conditional finishes AND75 ofeach class, or24months after enrollment, whichever comes first. Enrollment selection counts managed independently without releasing model comparative metrics; no interim performance peeks. At24months if gates unmet => insufficient, do not extend/select timing based on performance.",
+  "trained_model_policy": "FIXED_NO_REFITS: all3 use outer2026 records trained2015-2025, C chosen using inner2024/2025. A existing2026 saved reference; B/C Stage2 2026 records. No training throughAug15 addition, no forward selection. Same frozen MOV0_MIN outer2026 record for composition. Need verify MOV0 saved-model origin/reproduction before forward enrollment; if absent, forward composed evaluation blocked, not substitute/retrain."
+}

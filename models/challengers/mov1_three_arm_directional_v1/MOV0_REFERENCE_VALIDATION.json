@@ -1,0 +1,11 @@
+{
+  "SHA256": "786bee7cce8a41eed6a8e7f82fe031a592ed081a10b3a97f85afc31be61d1c57",
+  "artifact_id": 10561085362,
+  "exact_scoring_ID_match": true,
+  "forward_composed_prerequisite": "Original artifact preserves preprocessing but not fitted coefficients. Need separately authorized exact frozen-record recovery for outer2026 MOV0 before forward composition. No MOV0 fitting in Stage1 or historical Stage2; no substitute model. Conditional forward policy is fully frozen regardless; composed forward status remains BLOCKED_MISSING_FROZEN_MOV0_RECORD until record recovered and historical reproduction verified.",
+  "member": "ufc-edge/ufc-edge/models/mov0/run_v1/oof_MOV0_MIN.csv",
+  "preprocessing_metadata_SHA256": "fb0d5ef9bc0fa8abaa2fbec3301238bf2a6a94c38967f9e096c1aeb91229927f",
+  "run_id": 35376956316,
+  "scoring_N": 4260,
+  "status": "PASS"
+}
