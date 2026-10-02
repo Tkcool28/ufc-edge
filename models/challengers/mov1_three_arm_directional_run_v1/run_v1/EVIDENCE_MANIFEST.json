@@ -585,6 +585,10 @@
       "bytes": 678,
       "sha256": "49cf7a104beb521ed45bb965a1282ffd256273f3f4198f3c184a3e74a86082e7"
     },
+    "FROZEN_REPRODUCIBILITY_VERIFICATION.json": {
+      "bytes": 490,
+      "sha256": "f4e77e4384f77392627c52ddae80e2b3ed9008e3b3305953bb377d02854924b1"
+    },
     "IMPLEMENTATION_FREEZE_RECORD.json": {
       "bytes": 1747,
       "sha256": "4f58a31ea1b4f43ea02fb9b6dc150c897851439dde473d2bffc9dbe541d7f4f3"
@@ -641,10 +645,6 @@
       "bytes": 217,
       "sha256": "1edaf9b1796b2adfae538d125e486d5fb6528b06ae56384ec94af3828001e654"
     },
-    "REPRODUCIBILITY_VERIFICATION.json": {
-      "bytes": 490,
-      "sha256": "f4e77e4384f77392627c52ddae80e2b3ed9008e3b3305953bb377d02854924b1"
-    },
     "REPRODUCTION_2021.json": {
       "bytes": 217,
       "sha256": "7c81a1c4c4e8e595099a05ff75d9f7c2c4d185a094e71b3d5059c2b6ae2bcd60"
@@ -676,8 +676,15 @@
     "VALIDATION_TERRAIN_REPORT.md": {
       "bytes": 19958,
       "sha256": "22b67bde3903629660d103ed52c7155035ce55db8f3d454cd702c924697624b0"
+    },
+    "VERIFICATION_OUTPUT_POLICY.json": {
+      "bytes": 465,
+      "sha256": "fec8f68e61d3912dcf4032db06175be89a170b440fb2c74e63959d456c80481b"
     }
   },
   "hash_policy": "no self-reference; all original fitted records preserved in hashed native parts; referenceA read unchanged",
-  "native_records_manifest": "NATIVE_MODELS_MANIFEST.json"
+  "native_records_manifest": "NATIVE_MODELS_MANIFEST.json",
+  "runtime_verification_outputs": [
+    "REPRODUCIBILITY_VERIFICATION.json"
+  ]
 }

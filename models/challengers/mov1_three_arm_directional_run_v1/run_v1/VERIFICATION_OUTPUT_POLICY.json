@@ -1,0 +1,7 @@
+{
+  "immutable_initial_verification": "FROZEN_REPRODUCIBILITY_VERIFICATION.json",
+  "implementation_changed": false,
+  "new_fits": 0,
+  "reason": "The frozen saved-only verifier rewrites its verification report; platform-level floating-point regeneration errors can differ within frozen numerical tolerance. Native model records, saved probabilities and scientific evidence remain immutable.",
+  "runtime_verification_output": "REPRODUCIBILITY_VERIFICATION.json"
+}
