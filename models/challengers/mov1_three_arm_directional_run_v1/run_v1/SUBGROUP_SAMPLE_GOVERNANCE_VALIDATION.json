@@ -1,0 +1,498 @@
+{
+  "additional_fits": 0,
+  "all_fit_records_and_probabilities_unchanged": true,
+  "frozen_N_lt25_suppression_applied": [
+    {
+      "N": 3,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2018
+    },
+    {
+      "N": 5,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2019
+    },
+    {
+      "N": 3,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2020
+    },
+    {
+      "N": 10,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2021
+    },
+    {
+      "N": 9,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2022
+    },
+    {
+      "N": 10,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2023
+    },
+    {
+      "N": 11,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2024
+    },
+    {
+      "N": 17,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2025
+    },
+    {
+      "N": 11,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "B-A",
+      "year": 2026
+    },
+    {
+      "N": 3,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2018
+    },
+    {
+      "N": 5,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2019
+    },
+    {
+      "N": 3,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2020
+    },
+    {
+      "N": 10,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2021
+    },
+    {
+      "N": 9,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2022
+    },
+    {
+      "N": 10,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2023
+    },
+    {
+      "N": 11,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2024
+    },
+    {
+      "N": 17,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2025
+    },
+    {
+      "N": 11,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-A",
+      "year": 2026
+    },
+    {
+      "N": 3,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2018
+    },
+    {
+      "N": 5,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2019
+    },
+    {
+      "N": 3,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2020
+    },
+    {
+      "N": 10,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2021
+    },
+    {
+      "N": 9,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2022
+    },
+    {
+      "N": 10,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2023
+    },
+    {
+      "N": 11,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2024
+    },
+    {
+      "N": 17,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2025
+    },
+    {
+      "N": 11,
+      "cell": "A2_BOTH_HIGH_DAMAGE_EXCHANGE",
+      "comparison": "C-B",
+      "year": 2026
+    },
+    {
+      "N": 19,
+      "cell": "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE",
+      "comparison": "B-A",
+      "year": 2026
+    },
+    {
+      "N": 19,
+      "cell": "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE",
+      "comparison": "C-A",
+      "year": 2026
+    },
+    {
+      "N": 19,
+      "cell": "B2_TD_CONVERSION_VS_WEAK_TD_DEFENSE",
+      "comparison": "C-B",
+      "year": 2026
+    },
+    {
+      "N": 21,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "B-A",
+      "year": 2019
+    },
+    {
+      "N": 18,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "B-A",
+      "year": 2020
+    },
+    {
+      "N": 13,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "B-A",
+      "year": 2026
+    },
+    {
+      "N": 21,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "C-A",
+      "year": 2019
+    },
+    {
+      "N": 18,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "C-A",
+      "year": 2020
+    },
+    {
+      "N": 13,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "C-A",
+      "year": 2026
+    },
+    {
+      "N": 21,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "C-B",
+      "year": 2019
+    },
+    {
+      "N": 18,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "C-B",
+      "year": 2020
+    },
+    {
+      "N": 13,
+      "cell": "B3_TD_ACCESS_PLUS_SUB_PRESSURE",
+      "comparison": "C-B",
+      "year": 2026
+    },
+    {
+      "N": 16,
+      "cell": "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY",
+      "comparison": "B-A",
+      "year": 2026
+    },
+    {
+      "N": 16,
+      "cell": "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY",
+      "comparison": "C-A",
+      "year": 2026
+    },
+    {
+      "N": 16,
+      "cell": "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY",
+      "comparison": "C-B",
+      "year": 2026
+    },
+    {
+      "N": 20,
+      "cell": "Heavyweight",
+      "comparison": "B-A",
+      "year": 2018
+    },
+    {
+      "N": 23,
+      "cell": "Heavyweight",
+      "comparison": "B-A",
+      "year": 2021
+    },
+    {
+      "N": 22,
+      "cell": "Heavyweight",
+      "comparison": "B-A",
+      "year": 2022
+    },
+    {
+      "N": 19,
+      "cell": "Heavyweight",
+      "comparison": "B-A",
+      "year": 2023
+    },
+    {
+      "N": 17,
+      "cell": "Heavyweight",
+      "comparison": "B-A",
+      "year": 2024
+    },
+    {
+      "N": 19,
+      "cell": "Heavyweight",
+      "comparison": "B-A",
+      "year": 2025
+    },
+    {
+      "N": 15,
+      "cell": "Heavyweight",
+      "comparison": "B-A",
+      "year": 2026
+    },
+    {
+      "N": 20,
+      "cell": "Heavyweight",
+      "comparison": "C-A",
+      "year": 2018
+    },
+    {
+      "N": 23,
+      "cell": "Heavyweight",
+      "comparison": "C-A",
+      "year": 2021
+    },
+    {
+      "N": 22,
+      "cell": "Heavyweight",
+      "comparison": "C-A",
+      "year": 2022
+    },
+    {
+      "N": 19,
+      "cell": "Heavyweight",
+      "comparison": "C-A",
+      "year": 2023
+    },
+    {
+      "N": 17,
+      "cell": "Heavyweight",
+      "comparison": "C-A",
+      "year": 2024
+    },
+    {
+      "N": 19,
+      "cell": "Heavyweight",
+      "comparison": "C-A",
+      "year": 2025
+    },
+    {
+      "N": 15,
+      "cell": "Heavyweight",
+      "comparison": "C-A",
+      "year": 2026
+    },
+    {
+      "N": 20,
+      "cell": "Heavyweight",
+      "comparison": "C-B",
+      "year": 2018
+    },
+    {
+      "N": 23,
+      "cell": "Heavyweight",
+      "comparison": "C-B",
+      "year": 2021
+    },
+    {
+      "N": 22,
+      "cell": "Heavyweight",
+      "comparison": "C-B",
+      "year": 2022
+    },
+    {
+      "N": 19,
+      "cell": "Heavyweight",
+      "comparison": "C-B",
+      "year": 2023
+    },
+    {
+      "N": 17,
+      "cell": "Heavyweight",
+      "comparison": "C-B",
+      "year": 2024
+    },
+    {
+      "N": 19,
+      "cell": "Heavyweight",
+      "comparison": "C-B",
+      "year": 2025
+    },
+    {
+      "N": 15,
+      "cell": "Heavyweight",
+      "comparison": "C-B",
+      "year": 2026
+    },
+    {
+      "N": 22,
+      "cell": "Light Heavyweight",
+      "comparison": "B-A",
+      "year": 2020
+    },
+    {
+      "N": 19,
+      "cell": "Light Heavyweight",
+      "comparison": "B-A",
+      "year": 2021
+    },
+    {
+      "N": 18,
+      "cell": "Light Heavyweight",
+      "comparison": "B-A",
+      "year": 2023
+    },
+    {
+      "N": 20,
+      "cell": "Light Heavyweight",
+      "comparison": "B-A",
+      "year": 2024
+    },
+    {
+      "N": 24,
+      "cell": "Light Heavyweight",
+      "comparison": "B-A",
+      "year": 2025
+    },
+    {
+      "N": 22,
+      "cell": "Light Heavyweight",
+      "comparison": "B-A",
+      "year": 2026
+    },
+    {
+      "N": 22,
+      "cell": "Light Heavyweight",
+      "comparison": "C-A",
+      "year": 2020
+    },
+    {
+      "N": 19,
+      "cell": "Light Heavyweight",
+      "comparison": "C-A",
+      "year": 2021
+    },
+    {
+      "N": 18,
+      "cell": "Light Heavyweight",
+      "comparison": "C-A",
+      "year": 2023
+    },
+    {
+      "N": 20,
+      "cell": "Light Heavyweight",
+      "comparison": "C-A",
+      "year": 2024
+    },
+    {
+      "N": 24,
+      "cell": "Light Heavyweight",
+      "comparison": "C-A",
+      "year": 2025
+    },
+    {
+      "N": 22,
+      "cell": "Light Heavyweight",
+      "comparison": "C-A",
+      "year": 2026
+    },
+    {
+      "N": 22,
+      "cell": "Light Heavyweight",
+      "comparison": "C-B",
+      "year": 2020
+    },
+    {
+      "N": 19,
+      "cell": "Light Heavyweight",
+      "comparison": "C-B",
+      "year": 2021
+    },
+    {
+      "N": 18,
+      "cell": "Light Heavyweight",
+      "comparison": "C-B",
+      "year": 2023
+    },
+    {
+      "N": 20,
+      "cell": "Light Heavyweight",
+      "comparison": "C-B",
+      "year": 2024
+    },
+    {
+      "N": 24,
+      "cell": "Light Heavyweight",
+      "comparison": "C-B",
+      "year": 2025
+    },
+    {
+      "N": 22,
+      "cell": "Light Heavyweight",
+      "comparison": "C-B",
+      "year": 2026
+    }
+  ],
+  "no_new_thresholds": true,
+  "original_implementation_freeze_preserved": true,
+  "paired_aggregate_intervals_and_scientific_classifications_unchanged": true,
+  "primary_and_secondary_aggregate_comparisons_unchanged": true,
+  "scope": "publication-only annual subgroup reporting correction",
+  "status": "PASS"
+}

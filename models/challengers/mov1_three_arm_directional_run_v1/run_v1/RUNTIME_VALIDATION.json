@@ -1,0 +1,36 @@
+{
+  "exact_fit_budget": {
+    "Arm_A_refits": 0,
+    "attempted": 164,
+    "completed": 164,
+    "counts": {
+      "inner": 144,
+      "outer": 18,
+      "representative_reproduction": 2
+    },
+    "status": "PASS",
+    "unauthorized_fits": 0
+  },
+  "max_swap_error": 0.0,
+  "natural_training_prevalence_retained": true,
+  "post_boundary_outcomes_accessed": false,
+  "reproduction": [
+    {
+      "arm": "B",
+      "identical_float64": true,
+      "max_probability_error": 0.0,
+      "year": 2021
+    },
+    {
+      "arm": "C",
+      "identical_float64": true,
+      "max_probability_error": 0.0,
+      "year": 2021
+    }
+  ],
+  "saved_predictions_max_error": 0.0,
+  "scoring_precedes_outer_outcome_join": true,
+  "shared_source_imputation_equal": true,
+  "source_artifacts_unchanged": true,
+  "status": "PASS"
+}

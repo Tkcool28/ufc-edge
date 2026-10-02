@@ -1,0 +1,8 @@
+{
+  "N": 4260,
+  "conditional_composed_LL_identity_max_error": 6.661338147750939e-16,
+  "decision_probabilities_identical": true,
+  "log_clipping_exceptions": [],
+  "max_sum_error": 1.1102230246251565e-16,
+  "status": "PASS"
+}

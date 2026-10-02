@@ -1,0 +1,12 @@
+{
+  "Arm_A_refits": 0,
+  "MOV0_refits": 0,
+  "automatically_promoted": false,
+  "completed_fits": 164,
+  "contract_SHA256": "08386e74b5a9e2257d2650c8925754b5cac61a625cee8746bbc8a19c3d606243",
+  "engineering_status": "PASS",
+  "forward_composition": "BLOCKED_MISSING_FROZEN_MOV0_RECORD",
+  "implementation_freeze_SHA": "cd1bb591a98efe39da3e192cfb46c9aa4194f6c2",
+  "marker": "MOV1_THREE_ARM_DIRECTIONAL_CHALLENGER_V1_RUN_COMPLETE",
+  "post_boundary_outcomes_accessed": false
+}

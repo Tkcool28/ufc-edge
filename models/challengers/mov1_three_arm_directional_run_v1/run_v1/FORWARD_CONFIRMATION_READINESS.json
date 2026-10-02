@@ -1,0 +1,22 @@
+{
+  "MOV0_refits": 0,
+  "arms": {
+    "A": "existing models/mov1/run_v1/MODELS/2026_MOV1_MIN.json",
+    "B": {
+      "SHA256": "34273131d836b19759b4587bc5a933e0b0e80a96a3f5335685a264b7c27575a8",
+      "record_path": "MODELS/outer_2026_B_0_C0.03.json"
+    },
+    "C": {
+      "SHA256": "af341831398d4bb38d24e3c54d1a17d097c92a53eaf68e872d64a2f40ec81793",
+      "record_path": "MODELS/outer_2026_C_0_C1.0.json"
+    }
+  },
+  "conditional_status": "FROZEN_MODELS_AVAILABLE_NOT_ENROLLED",
+  "enrollment_rule": "UFC events on/after2026-10-03 AND after contract merge AND after all3 models frozen with hashes; enrollment starts next UTC day after the latest of these. No backfilled confirmation predictions. Record start timestamp before enrollment.",
+  "fixed_year": 2026,
+  "forward_composed_status": "BLOCKED_MISSING_FROZEN_MOV0_RECORD",
+  "historical_composed_status": "PASS",
+  "no_retrospective_forward_predictions": true,
+  "post_boundary_outcomes_accessed": false,
+  "promotion": "NONE"
+}

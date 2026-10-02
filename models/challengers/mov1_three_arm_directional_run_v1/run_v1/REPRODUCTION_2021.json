@@ -1,0 +1,14 @@
+[
+  {
+    "arm": "B",
+    "identical_float64": true,
+    "max_probability_error": 0.0,
+    "year": 2021
+  },
+  {
+    "arm": "C",
+    "identical_float64": true,
+    "max_probability_error": 0.0,
+    "year": 2021
+  }
+]
