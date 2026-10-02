@@ -1,0 +1,11 @@
+{
+  "C_marginals": "one mean for each of9 concepts; no marginal abs differences/min/max; preserve intensity separately from alignment",
+  "KD": "existing signed efficiency gap from shrunk KD per sig strike: creation1-vulnerability2, creation2-vulnerability1. Reuse mean and absolute difference only. Do not add a rate product or duplicate KD sum (2*mean). No KD efficiency marginal means added; gap mean would then be linear combination. KD per15 is different denominator and not algebraically redundant. No claim efficiency difference is calibrated risk.",
+  "SUB": "cross sum cannot be recovered from separate mean/abs summaries; synthetic exact collision retained. Keep P/V means to distinguish marginal activity from product. No MAX/MIN, pressure sum or duplicate cross mean. Exposure is attempts faced, not proven defensive incompetence.",
+  "TD": "mean pressure and mean defense plus cross sum; TD sum against weakness is not recoverable from marginal means generally. No defense weakness mean because1-defense_mean is affine redundancy. No TD success, TD faced or interaction products beyond frozen single sum.",
+  "attribution": "B-A isolates appended relationship; C-A tests entire compact specification; C-B changes several choices, no single-removal causal claim",
+  "context": "full training-only division one-hot and intercept intentionally retained as baseline coding; L2 handles dummy dependence. No outcome-derived division encoding.",
+  "history": "KO/SUB wins and KO losses per prior fight, not method mix among wins/losses. Omit SUB loss because outside compact proposed input surface; no last5/early finish/experience predictors. These omissions are domain design, not outer score selections.",
+  "outcome_free": true,
+  "rank_checks": "synthetic varied input matrix must have rank14 for14 scaled numeric C features, before title/division; historical correlations descriptive only and NEVER select predictors"
+}

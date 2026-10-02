@@ -1,0 +1,51 @@
+name: MOV1 Three Arm Directional Contract V1 (zero training)
+on:
+  pull_request:
+    paths:
+      - 'models/challengers/mov1_three_arm_directional_v1/**'
+      - 'tools/contracts/validate_mov1_three_arm_contract_v1.py'
+      - 'tests/diagnostics/test_mov1_three_arm_contract_v1.py'
+      - '.github/workflows/mov1-three-arm-directional-contract-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==1.26.4 pandas==2.2.3 pyarrow==17.0.0 scipy==1.14.1 scikit-learn==1.5.2 pytest==8.3.5
+      - name: Outcome-free specification tests and PR123 collision
+        run: python -m pytest -q tests/diagnostics/test_mov1_three_arm_contract_v1.py tests/diagnostics/test_mov1_directional_collision_v1.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: No-training source, fold and representation validator
+        run: |
+          python -W ignore::FutureWarning tools/contracts/validate_mov1_three_arm_contract_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet' --output '${{ runner.temp }}/validation.json'
+          cmp '${{ runner.temp }}/validation.json' models/challengers/mov1_three_arm_directional_v1/VALIDATION_EVIDENCE.json
+      - name: Strict-prior independent lineage replay (zero training)
+        run: |
+          PYTHONPATH=src python tools/diagnostics/verify_mov1_submission_lineage_v1.py --f02 '${{ runner.temp }}/f02/winner_modeling_table.parquet' --output '${{ runner.temp }}/lineage'
+          cmp '${{ runner.temp }}/lineage/SUBMISSION_TAKEDOWN_INDEPENDENT_LINEAGE.json' models/challengers/mov1_three_arm_directional_v1/SOURCE_LINEAGE_VALIDATION.json
+      - name: Whitespace check
+        run: git diff 344984d1ffea725c6765802c0a51fe97a3a8a4ba HEAD --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mov1-three-arm-stage1-validation
+          path: |
+            ${{ runner.temp }}/validation.json
+            ${{ runner.temp }}/lineage
+          retention-days: 90
+          if-no-files-found: error

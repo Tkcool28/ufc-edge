@@ -1,0 +1,573 @@
+{
+  "era_start": "2015-01-01",
+  "folds": [
+    {
+      "all_eligible_scoring": {
+        "DECISION": 229,
+        "KO_TKO": 151,
+        "N": 470,
+        "SUBMISSION": 90,
+        "ordered_fight_id_sha256": "9d803e4a2542d005eb2fe398b5cb3edbe1996156695159388929b865ede180cf"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 151,
+        "N": 241,
+        "SUBMISSION": 90,
+        "ordered_fight_id_sha256": "e38202c1108e156170347e6bb0075648d0b94c7f593bc969eb244db8848f49af"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 155,
+            "N": 243,
+            "SUBMISSION": 88,
+            "ordered_fight_id_sha256": "92e34f298ee20e4b34609f453c51c58a8aa5572ba62177aaa8627379add91222"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 151,
+            "N": 239,
+            "SUBMISSION": 88,
+            "ordered_fight_id_sha256": "2971c958d62a2c4913a974d5a96d71103853b71c5eb00d99ad5ec9ee994ef133"
+          },
+          "validation_year": 2016
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 306,
+            "N": 482,
+            "SUBMISSION": 176,
+            "ordered_fight_id_sha256": "819253e0084f6c5ddb9cbf7a3164bfc1e118fe7f8fb1e33e79a0ccba1020ac2e"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 145,
+            "N": 225,
+            "SUBMISSION": 80,
+            "ordered_fight_id_sha256": "282992bc7f3e78d5e4e173b3a7f63df76be1813c5129afa4baed710fe1f07b93"
+          },
+          "validation_year": 2017
+        }
+      ],
+      "outer_year": 2018,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 451,
+        "N": 707,
+        "SUBMISSION": 256,
+        "ordered_fight_id_sha256": "1b925a7a784a21409a95b1cbbbbac59c5e41b8097b79ecfed37e8d9bdbea9601"
+      }
+    },
+    {
+      "all_eligible_scoring": {
+        "DECISION": 276,
+        "KO_TKO": 152,
+        "N": 507,
+        "SUBMISSION": 79,
+        "ordered_fight_id_sha256": "286774a020e4f65b20228b647f11fd62c3a618f0a309eb51ff60f45da9100d83"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 152,
+        "N": 231,
+        "SUBMISSION": 79,
+        "ordered_fight_id_sha256": "914a80dfc3ddf59cb18fa3d34a81c511f0cc11856811774486db24f2b15a3d98"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 306,
+            "N": 482,
+            "SUBMISSION": 176,
+            "ordered_fight_id_sha256": "819253e0084f6c5ddb9cbf7a3164bfc1e118fe7f8fb1e33e79a0ccba1020ac2e"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 145,
+            "N": 225,
+            "SUBMISSION": 80,
+            "ordered_fight_id_sha256": "282992bc7f3e78d5e4e173b3a7f63df76be1813c5129afa4baed710fe1f07b93"
+          },
+          "validation_year": 2017
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 451,
+            "N": 707,
+            "SUBMISSION": 256,
+            "ordered_fight_id_sha256": "1b925a7a784a21409a95b1cbbbbac59c5e41b8097b79ecfed37e8d9bdbea9601"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 151,
+            "N": 241,
+            "SUBMISSION": 90,
+            "ordered_fight_id_sha256": "e38202c1108e156170347e6bb0075648d0b94c7f593bc969eb244db8848f49af"
+          },
+          "validation_year": 2018
+        }
+      ],
+      "outer_year": 2019,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 602,
+        "N": 948,
+        "SUBMISSION": 346,
+        "ordered_fight_id_sha256": "06ef145b7e97f19197d7b2d03ea15f7f24f74e9605a4c2c4f624d351e487c10a"
+      }
+    },
+    {
+      "all_eligible_scoring": {
+        "DECISION": 223,
+        "KO_TKO": 138,
+        "N": 443,
+        "SUBMISSION": 82,
+        "ordered_fight_id_sha256": "2abb3b2cdfbfa5f45a33d2cde21de00b8ab72ce745a43477d74584a903813e8d"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 138,
+        "N": 220,
+        "SUBMISSION": 82,
+        "ordered_fight_id_sha256": "2fab592c5e4244c0b22941c5af64ba01d325c3b2b2ecdedf8eb50cf9e8876e9b"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 451,
+            "N": 707,
+            "SUBMISSION": 256,
+            "ordered_fight_id_sha256": "1b925a7a784a21409a95b1cbbbbac59c5e41b8097b79ecfed37e8d9bdbea9601"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 151,
+            "N": 241,
+            "SUBMISSION": 90,
+            "ordered_fight_id_sha256": "e38202c1108e156170347e6bb0075648d0b94c7f593bc969eb244db8848f49af"
+          },
+          "validation_year": 2018
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 602,
+            "N": 948,
+            "SUBMISSION": 346,
+            "ordered_fight_id_sha256": "06ef145b7e97f19197d7b2d03ea15f7f24f74e9605a4c2c4f624d351e487c10a"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 152,
+            "N": 231,
+            "SUBMISSION": 79,
+            "ordered_fight_id_sha256": "914a80dfc3ddf59cb18fa3d34a81c511f0cc11856811774486db24f2b15a3d98"
+          },
+          "validation_year": 2019
+        }
+      ],
+      "outer_year": 2020,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 754,
+        "N": 1179,
+        "SUBMISSION": 425,
+        "ordered_fight_id_sha256": "360ad37c63e631add2c23faf0fde959104756e7e92ea247bef94fc7d4af362c6"
+      }
+    },
+    {
+      "all_eligible_scoring": {
+        "DECISION": 253,
+        "KO_TKO": 166,
+        "N": 492,
+        "SUBMISSION": 73,
+        "ordered_fight_id_sha256": "ac63d5718059e61a8cc23a280ccbbc855c87da7aa94a9d6d765560f2c52b4060"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 166,
+        "N": 239,
+        "SUBMISSION": 73,
+        "ordered_fight_id_sha256": "3cc2baf441da6199d24b30ce48f4ac2dd442edf8a59974bcfbe1efd049095cb7"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 602,
+            "N": 948,
+            "SUBMISSION": 346,
+            "ordered_fight_id_sha256": "06ef145b7e97f19197d7b2d03ea15f7f24f74e9605a4c2c4f624d351e487c10a"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 152,
+            "N": 231,
+            "SUBMISSION": 79,
+            "ordered_fight_id_sha256": "914a80dfc3ddf59cb18fa3d34a81c511f0cc11856811774486db24f2b15a3d98"
+          },
+          "validation_year": 2019
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 754,
+            "N": 1179,
+            "SUBMISSION": 425,
+            "ordered_fight_id_sha256": "360ad37c63e631add2c23faf0fde959104756e7e92ea247bef94fc7d4af362c6"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 138,
+            "N": 220,
+            "SUBMISSION": 82,
+            "ordered_fight_id_sha256": "2fab592c5e4244c0b22941c5af64ba01d325c3b2b2ecdedf8eb50cf9e8876e9b"
+          },
+          "validation_year": 2020
+        }
+      ],
+      "outer_year": 2021,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 892,
+        "N": 1399,
+        "SUBMISSION": 507,
+        "ordered_fight_id_sha256": "15fb7462bb4e918b16774cb9d1d7a33b0efdd3897ce3d55fa3cbb0d03d1a66b4"
+      }
+    },
+    {
+      "all_eligible_scoring": {
+        "DECISION": 237,
+        "KO_TKO": 171,
+        "N": 505,
+        "SUBMISSION": 97,
+        "ordered_fight_id_sha256": "90af86edea6cd1a3b07f05c833db7f202dc9406afb39f326fc567ed4b2353960"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 171,
+        "N": 268,
+        "SUBMISSION": 97,
+        "ordered_fight_id_sha256": "6a9c55237b5151d37b891e9c8d8f5eca5c4322f17a1047045d8fae162ea2f9ec"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 754,
+            "N": 1179,
+            "SUBMISSION": 425,
+            "ordered_fight_id_sha256": "360ad37c63e631add2c23faf0fde959104756e7e92ea247bef94fc7d4af362c6"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 138,
+            "N": 220,
+            "SUBMISSION": 82,
+            "ordered_fight_id_sha256": "2fab592c5e4244c0b22941c5af64ba01d325c3b2b2ecdedf8eb50cf9e8876e9b"
+          },
+          "validation_year": 2020
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 892,
+            "N": 1399,
+            "SUBMISSION": 507,
+            "ordered_fight_id_sha256": "15fb7462bb4e918b16774cb9d1d7a33b0efdd3897ce3d55fa3cbb0d03d1a66b4"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 166,
+            "N": 239,
+            "SUBMISSION": 73,
+            "ordered_fight_id_sha256": "3cc2baf441da6199d24b30ce48f4ac2dd442edf8a59974bcfbe1efd049095cb7"
+          },
+          "validation_year": 2021
+        }
+      ],
+      "outer_year": 2022,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 1058,
+        "N": 1638,
+        "SUBMISSION": 580,
+        "ordered_fight_id_sha256": "e86a9a3ab60ee7fa218b8c7de43987d43a3f00783f1f4b4655a5251671cf4592"
+      }
+    },
+    {
+      "all_eligible_scoring": {
+        "DECISION": 247,
+        "KO_TKO": 158,
+        "N": 505,
+        "SUBMISSION": 100,
+        "ordered_fight_id_sha256": "4af55a0bec903bb8d7fd86e15c116c3fe7a66f47af2141025fb7b5a8b49309b6"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 158,
+        "N": 258,
+        "SUBMISSION": 100,
+        "ordered_fight_id_sha256": "d672e182fe5307042d01969dbde5e34c9e7fc30376d7a057d2655cb207a990f0"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 892,
+            "N": 1399,
+            "SUBMISSION": 507,
+            "ordered_fight_id_sha256": "15fb7462bb4e918b16774cb9d1d7a33b0efdd3897ce3d55fa3cbb0d03d1a66b4"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 166,
+            "N": 239,
+            "SUBMISSION": 73,
+            "ordered_fight_id_sha256": "3cc2baf441da6199d24b30ce48f4ac2dd442edf8a59974bcfbe1efd049095cb7"
+          },
+          "validation_year": 2021
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 1058,
+            "N": 1638,
+            "SUBMISSION": 580,
+            "ordered_fight_id_sha256": "e86a9a3ab60ee7fa218b8c7de43987d43a3f00783f1f4b4655a5251671cf4592"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 171,
+            "N": 268,
+            "SUBMISSION": 97,
+            "ordered_fight_id_sha256": "6a9c55237b5151d37b891e9c8d8f5eca5c4322f17a1047045d8fae162ea2f9ec"
+          },
+          "validation_year": 2022
+        }
+      ],
+      "outer_year": 2023,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 1229,
+        "N": 1906,
+        "SUBMISSION": 677,
+        "ordered_fight_id_sha256": "78a56071e175b306d2c897e71ecda3ec02548c8a08a708ced8c2ca7bec9cb5cb"
+      }
+    },
+    {
+      "all_eligible_scoring": {
+        "DECISION": 279,
+        "KO_TKO": 141,
+        "N": 502,
+        "SUBMISSION": 82,
+        "ordered_fight_id_sha256": "a14a0046469c67096b7412b878b51fd8492ec519c3778a7c72539c7796178fb3"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 141,
+        "N": 223,
+        "SUBMISSION": 82,
+        "ordered_fight_id_sha256": "c087cdea86244bea7b594e3a771fda38b3a806b9ef0a53530bf54edf21a16db2"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 1058,
+            "N": 1638,
+            "SUBMISSION": 580,
+            "ordered_fight_id_sha256": "e86a9a3ab60ee7fa218b8c7de43987d43a3f00783f1f4b4655a5251671cf4592"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 171,
+            "N": 268,
+            "SUBMISSION": 97,
+            "ordered_fight_id_sha256": "6a9c55237b5151d37b891e9c8d8f5eca5c4322f17a1047045d8fae162ea2f9ec"
+          },
+          "validation_year": 2022
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 1229,
+            "N": 1906,
+            "SUBMISSION": 677,
+            "ordered_fight_id_sha256": "78a56071e175b306d2c897e71ecda3ec02548c8a08a708ced8c2ca7bec9cb5cb"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 158,
+            "N": 258,
+            "SUBMISSION": 100,
+            "ordered_fight_id_sha256": "d672e182fe5307042d01969dbde5e34c9e7fc30376d7a057d2655cb207a990f0"
+          },
+          "validation_year": 2023
+        }
+      ],
+      "outer_year": 2024,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 1387,
+        "N": 2164,
+        "SUBMISSION": 777,
+        "ordered_fight_id_sha256": "138ea421344e3fcdb444535b8e66a692a830ead8a5a915f7fcb43947ae018365"
+      }
+    },
+    {
+      "all_eligible_scoring": {
+        "DECISION": 252,
+        "KO_TKO": 163,
+        "N": 504,
+        "SUBMISSION": 89,
+        "ordered_fight_id_sha256": "b990576264bef5e566492444744fe9b289ba6fa6ea326a46122dfff19f935bc9"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 163,
+        "N": 252,
+        "SUBMISSION": 89,
+        "ordered_fight_id_sha256": "0528828b66e24592d121a9942fca3f364c7af24226389f2da1f1c6e6772e9f06"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 1229,
+            "N": 1906,
+            "SUBMISSION": 677,
+            "ordered_fight_id_sha256": "78a56071e175b306d2c897e71ecda3ec02548c8a08a708ced8c2ca7bec9cb5cb"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 158,
+            "N": 258,
+            "SUBMISSION": 100,
+            "ordered_fight_id_sha256": "d672e182fe5307042d01969dbde5e34c9e7fc30376d7a057d2655cb207a990f0"
+          },
+          "validation_year": 2023
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 1387,
+            "N": 2164,
+            "SUBMISSION": 777,
+            "ordered_fight_id_sha256": "138ea421344e3fcdb444535b8e66a692a830ead8a5a915f7fcb43947ae018365"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 141,
+            "N": 223,
+            "SUBMISSION": 82,
+            "ordered_fight_id_sha256": "c087cdea86244bea7b594e3a771fda38b3a806b9ef0a53530bf54edf21a16db2"
+          },
+          "validation_year": 2024
+        }
+      ],
+      "outer_year": 2025,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 1528,
+        "N": 2387,
+        "SUBMISSION": 859,
+        "ordered_fight_id_sha256": "0bc753a8784967ae86e099b8eca32029449b9175422367fd7f7573d142cf25ac"
+      }
+    },
+    {
+      "all_eligible_scoring": {
+        "DECISION": 149,
+        "KO_TKO": 121,
+        "N": 332,
+        "SUBMISSION": 62,
+        "ordered_fight_id_sha256": "908fce89a0c03c5a70bdd5d7304175d7e76d360a57a555279d0fac84bccd6dcf"
+      },
+      "conditional_validation": {
+        "DECISION": 0,
+        "KO_TKO": 121,
+        "N": 183,
+        "SUBMISSION": 62,
+        "ordered_fight_id_sha256": "410502b547f7bc8b8ba8362cec70584b1f3848cf4774f410c558687dca94d82a"
+      },
+      "inner_folds": [
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 1387,
+            "N": 2164,
+            "SUBMISSION": 777,
+            "ordered_fight_id_sha256": "138ea421344e3fcdb444535b8e66a692a830ead8a5a915f7fcb43947ae018365"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 141,
+            "N": 223,
+            "SUBMISSION": 82,
+            "ordered_fight_id_sha256": "c087cdea86244bea7b594e3a771fda38b3a806b9ef0a53530bf54edf21a16db2"
+          },
+          "validation_year": 2024
+        },
+        {
+          "training": {
+            "DECISION": 0,
+            "KO_TKO": 1528,
+            "N": 2387,
+            "SUBMISSION": 859,
+            "ordered_fight_id_sha256": "0bc753a8784967ae86e099b8eca32029449b9175422367fd7f7573d142cf25ac"
+          },
+          "validation": {
+            "DECISION": 0,
+            "KO_TKO": 163,
+            "N": 252,
+            "SUBMISSION": 89,
+            "ordered_fight_id_sha256": "0528828b66e24592d121a9942fca3f364c7af24226389f2da1f1c6e6772e9f06"
+          },
+          "validation_year": 2025
+        }
+      ],
+      "outer_year": 2026,
+      "training": {
+        "DECISION": 0,
+        "KO_TKO": 1691,
+        "N": 2639,
+        "SUBMISSION": 948,
+        "ordered_fight_id_sha256": "7a809a6b3d6cd3a56c9308555c25cad15f2965606a740ac11166cc7888156b5d"
+      }
+    }
+  ],
+  "id_digest": "SHA256 UTF-8 fight_id + LF for each ordered row; final LF retained",
+  "inner_rule": "two immediately preceding calendar years, training strictly before each inner year, 2015+ only",
+  "inner_selection": "concatenated per-fight conditional inner log loss; independently fit preprocessing for each surface/C/inner history",
+  "outer_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "row_order": [
+    "event_date",
+    "event_id",
+    "fight_id"
+  ],
+  "scoring_filter": [
+    "KO_TKO",
+    "SUBMISSION",
+    "DECISION"
+  ],
+  "training_filter": [
+    "KO_TKO",
+    "SUBMISSION"
+  ]
+}

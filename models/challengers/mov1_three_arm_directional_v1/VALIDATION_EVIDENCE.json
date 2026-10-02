@@ -1,0 +1,926 @@
+{
+  "F02_physical_SHA256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+  "KD_semantic_equal_rows": 13784,
+  "PR123_manifest_SHA256": "e04409314831753ab00a218bc07f04273c73f19d28507581099f4e1adc5f6488",
+  "challenger_predictions": 0,
+  "checks": [
+    "source identities",
+    "population and original exact folds",
+    "shared source imputation",
+    "original MIN prefix preserved",
+    "train-only moments/categories",
+    "all outer IDs unchanged",
+    "swap plus asymmetric nulls",
+    "label blindness",
+    "KD signed-efficiency semantic equality",
+    "SUB/TD formulas and synthetic collision",
+    "composition algebra",
+    "source artifacts immutable",
+    "zero predictive entrypoints"
+  ],
+  "feature_counts_before_one_hot": {
+    "A": 34,
+    "B": 35,
+    "C": 15
+  },
+  "frozen_sources_verified": 384,
+  "history_checks": [
+    {
+      "cutoff_year": 2018,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2018,
+      "phase": "outer",
+      "score_N": 470,
+      "submission_complete_training_N": 561,
+      "training_N": 707
+    },
+    {
+      "cutoff_year": 2016,
+      "dimensions": {
+        "B": 46,
+        "C": 26
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2018,
+      "phase": "inner",
+      "score_N": 239,
+      "submission_complete_training_N": 200,
+      "training_N": 243
+    },
+    {
+      "cutoff_year": 2017,
+      "dimensions": {
+        "B": 47,
+        "C": 27
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2018,
+      "phase": "inner",
+      "score_N": 225,
+      "submission_complete_training_N": 383,
+      "training_N": 482
+    },
+    {
+      "cutoff_year": 2019,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2019,
+      "phase": "outer",
+      "score_N": 507,
+      "submission_complete_training_N": 751,
+      "training_N": 948
+    },
+    {
+      "cutoff_year": 2017,
+      "dimensions": {
+        "B": 47,
+        "C": 27
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2019,
+      "phase": "inner",
+      "score_N": 225,
+      "submission_complete_training_N": 383,
+      "training_N": 482
+    },
+    {
+      "cutoff_year": 2018,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2019,
+      "phase": "inner",
+      "score_N": 241,
+      "submission_complete_training_N": 561,
+      "training_N": 707
+    },
+    {
+      "cutoff_year": 2020,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2020,
+      "phase": "outer",
+      "score_N": 443,
+      "submission_complete_training_N": 931,
+      "training_N": 1179
+    },
+    {
+      "cutoff_year": 2018,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2020,
+      "phase": "inner",
+      "score_N": 241,
+      "submission_complete_training_N": 561,
+      "training_N": 707
+    },
+    {
+      "cutoff_year": 2019,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2020,
+      "phase": "inner",
+      "score_N": 231,
+      "submission_complete_training_N": 751,
+      "training_N": 948
+    },
+    {
+      "cutoff_year": 2021,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2021,
+      "phase": "outer",
+      "score_N": 492,
+      "submission_complete_training_N": 1098,
+      "training_N": 1399
+    },
+    {
+      "cutoff_year": 2019,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2021,
+      "phase": "inner",
+      "score_N": 231,
+      "submission_complete_training_N": 751,
+      "training_N": 948
+    },
+    {
+      "cutoff_year": 2020,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2021,
+      "phase": "inner",
+      "score_N": 220,
+      "submission_complete_training_N": 931,
+      "training_N": 1179
+    },
+    {
+      "cutoff_year": 2022,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2022,
+      "phase": "outer",
+      "score_N": 505,
+      "submission_complete_training_N": 1297,
+      "training_N": 1638
+    },
+    {
+      "cutoff_year": 2020,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2022,
+      "phase": "inner",
+      "score_N": 220,
+      "submission_complete_training_N": 931,
+      "training_N": 1179
+    },
+    {
+      "cutoff_year": 2021,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2022,
+      "phase": "inner",
+      "score_N": 239,
+      "submission_complete_training_N": 1098,
+      "training_N": 1399
+    },
+    {
+      "cutoff_year": 2023,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2023,
+      "phase": "outer",
+      "score_N": 505,
+      "submission_complete_training_N": 1522,
+      "training_N": 1906
+    },
+    {
+      "cutoff_year": 2021,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2023,
+      "phase": "inner",
+      "score_N": 239,
+      "submission_complete_training_N": 1098,
+      "training_N": 1399
+    },
+    {
+      "cutoff_year": 2022,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2023,
+      "phase": "inner",
+      "score_N": 268,
+      "submission_complete_training_N": 1297,
+      "training_N": 1638
+    },
+    {
+      "cutoff_year": 2024,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2024,
+      "phase": "outer",
+      "score_N": 502,
+      "submission_complete_training_N": 1721,
+      "training_N": 2164
+    },
+    {
+      "cutoff_year": 2022,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2024,
+      "phase": "inner",
+      "score_N": 268,
+      "submission_complete_training_N": 1297,
+      "training_N": 1638
+    },
+    {
+      "cutoff_year": 2023,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2024,
+      "phase": "inner",
+      "score_N": 258,
+      "submission_complete_training_N": 1522,
+      "training_N": 1906
+    },
+    {
+      "cutoff_year": 2025,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2025,
+      "phase": "outer",
+      "score_N": 504,
+      "submission_complete_training_N": 1904,
+      "training_N": 2387
+    },
+    {
+      "cutoff_year": 2023,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2025,
+      "phase": "inner",
+      "score_N": 258,
+      "submission_complete_training_N": 1522,
+      "training_N": 1906
+    },
+    {
+      "cutoff_year": 2024,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2025,
+      "phase": "inner",
+      "score_N": 223,
+      "submission_complete_training_N": 1721,
+      "training_N": 2164
+    },
+    {
+      "cutoff_year": 2026,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2026,
+      "phase": "outer",
+      "score_N": 332,
+      "submission_complete_training_N": 2103,
+      "training_N": 2639
+    },
+    {
+      "cutoff_year": 2024,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2026,
+      "phase": "inner",
+      "score_N": 223,
+      "submission_complete_training_N": 1721,
+      "training_N": 2164
+    },
+    {
+      "cutoff_year": 2025,
+      "dimensions": {
+        "B": 48,
+        "C": 28
+      },
+      "division_categories": [
+        "Bantamweight",
+        "Catch Weight",
+        "Featherweight",
+        "Flyweight",
+        "Heavyweight",
+        "Light Heavyweight",
+        "Lightweight",
+        "Middleweight",
+        "Welterweight",
+        "Women's Bantamweight",
+        "Women's Featherweight",
+        "Women's Flyweight",
+        "Women's Strawweight"
+      ],
+      "outer_year": 2026,
+      "phase": "inner",
+      "score_N": 252,
+      "submission_complete_training_N": 1904,
+      "training_N": 2387
+    }
+  ],
+  "original_validator": {
+    "F02_columns": 211,
+    "F02_physical_sha256": "d8a82dc7baf3d6e85c987e7fbfc63bb6329d59407cd8a66e5f228e0012e6b580",
+    "F02_rows": 9252,
+    "checks": [
+      "foundation hashes",
+      "canonical labels",
+      "literal corrected F02 schema",
+      "existing PIT-governed career families",
+      "symmetric pair closure",
+      "categorical mapping",
+      "outer and inner exact counts and ID digests",
+      "finish-only training, complete scoring coverage",
+      "finite training support",
+      "illustrative composition and symmetry algebra"
+    ],
+    "conditional_finish_N": 2822,
+    "future_runtime_checks": [
+      "fitted probability swap invariance1e-12",
+      "fitted preprocessing train-only behavior",
+      "convergence",
+      "conditional and complete-system metrics",
+      "immutable MOV0 OOF join hashes"
+    ],
+    "modern_all_eligible_N": 5658,
+    "no_model_fit_no_predictions_no_performance_evaluation": true,
+    "outer_all_scoring_N": 4260,
+    "outer_conditional_N": 2115,
+    "predictors_checked": 55,
+    "starting_main_sha": "4d641e259d4420fd77290603cabcce33c90bf6c8",
+    "status": "CONTRACT_INPUT_VALIDATION_PASSED",
+    "training_support": [
+      {
+        "finish_training_N": 707,
+        "history": "outer_2018",
+        "minimum_finite_pooled_pair_values": 1122
+      },
+      {
+        "finish_training_N": 243,
+        "history": "outer_2018_inner_2016",
+        "minimum_finite_pooled_pair_values": 400
+      },
+      {
+        "finish_training_N": 482,
+        "history": "outer_2018_inner_2017",
+        "minimum_finite_pooled_pair_values": 766
+      },
+      {
+        "finish_training_N": 948,
+        "history": "outer_2019",
+        "minimum_finite_pooled_pair_values": 1502
+      },
+      {
+        "finish_training_N": 482,
+        "history": "outer_2019_inner_2017",
+        "minimum_finite_pooled_pair_values": 766
+      },
+      {
+        "finish_training_N": 707,
+        "history": "outer_2019_inner_2018",
+        "minimum_finite_pooled_pair_values": 1122
+      },
+      {
+        "finish_training_N": 1179,
+        "history": "outer_2020",
+        "minimum_finite_pooled_pair_values": 1862
+      },
+      {
+        "finish_training_N": 707,
+        "history": "outer_2020_inner_2018",
+        "minimum_finite_pooled_pair_values": 1122
+      },
+      {
+        "finish_training_N": 948,
+        "history": "outer_2020_inner_2019",
+        "minimum_finite_pooled_pair_values": 1502
+      },
+      {
+        "finish_training_N": 1399,
+        "history": "outer_2021",
+        "minimum_finite_pooled_pair_values": 2196
+      },
+      {
+        "finish_training_N": 948,
+        "history": "outer_2021_inner_2019",
+        "minimum_finite_pooled_pair_values": 1502
+      },
+      {
+        "finish_training_N": 1179,
+        "history": "outer_2021_inner_2020",
+        "minimum_finite_pooled_pair_values": 1862
+      },
+      {
+        "finish_training_N": 1638,
+        "history": "outer_2022",
+        "minimum_finite_pooled_pair_values": 2594
+      },
+      {
+        "finish_training_N": 1179,
+        "history": "outer_2022_inner_2020",
+        "minimum_finite_pooled_pair_values": 1862
+      },
+      {
+        "finish_training_N": 1399,
+        "history": "outer_2022_inner_2021",
+        "minimum_finite_pooled_pair_values": 2196
+      },
+      {
+        "finish_training_N": 1906,
+        "history": "outer_2023",
+        "minimum_finite_pooled_pair_values": 3044
+      },
+      {
+        "finish_training_N": 1399,
+        "history": "outer_2023_inner_2021",
+        "minimum_finite_pooled_pair_values": 2196
+      },
+      {
+        "finish_training_N": 1638,
+        "history": "outer_2023_inner_2022",
+        "minimum_finite_pooled_pair_values": 2594
+      },
+      {
+        "finish_training_N": 2164,
+        "history": "outer_2024",
+        "minimum_finite_pooled_pair_values": 3442
+      },
+      {
+        "finish_training_N": 1638,
+        "history": "outer_2024_inner_2022",
+        "minimum_finite_pooled_pair_values": 2594
+      },
+      {
+        "finish_training_N": 1906,
+        "history": "outer_2024_inner_2023",
+        "minimum_finite_pooled_pair_values": 3044
+      },
+      {
+        "finish_training_N": 2387,
+        "history": "outer_2025",
+        "minimum_finite_pooled_pair_values": 3808
+      },
+      {
+        "finish_training_N": 1906,
+        "history": "outer_2025_inner_2023",
+        "minimum_finite_pooled_pair_values": 3044
+      },
+      {
+        "finish_training_N": 2164,
+        "history": "outer_2025_inner_2024",
+        "minimum_finite_pooled_pair_values": 3442
+      },
+      {
+        "finish_training_N": 2639,
+        "history": "outer_2026",
+        "minimum_finite_pooled_pair_values": 4206
+      },
+      {
+        "finish_training_N": 2164,
+        "history": "outer_2026_inner_2024",
+        "minimum_finite_pooled_pair_values": 3442
+      },
+      {
+        "finish_training_N": 2387,
+        "history": "outer_2026_inner_2025",
+        "minimum_finite_pooled_pair_values": 3808
+      }
+    ]
+  },
+  "post_boundary_outcomes_accessed": false,
+  "predictive_fits": 0,
+  "status": "PASS"
+}

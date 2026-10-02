@@ -1,0 +1,26 @@
+{
+  "features_before_one_hot": {
+    "A": 34,
+    "B": 35,
+    "C": 15
+  },
+  "marker": "MOV1_THREE_ARM_DIRECTIONAL_CHALLENGER_V1_CONTRACT_COMPLETE",
+  "new_challenger_predictions": 0,
+  "no_merge": true,
+  "outer_model_feature_counts": {
+    "A": 47,
+    "B": 48,
+    "C": 28
+  },
+  "post_boundary_outcomes_accessed": false,
+  "predictive_fits": 0,
+  "raw_feature_counts": {
+    "A": 35,
+    "B": 35,
+    "C": 23
+  },
+  "stage": 1,
+  "stage2_authorized": false,
+  "starting_main": "344984d1ffea725c6765802c0a51fe97a3a8a4ba",
+  "validation": "VALIDATION_EVIDENCE.json plus9 outcome-free tests and independent strict-prior source replay"
+}
