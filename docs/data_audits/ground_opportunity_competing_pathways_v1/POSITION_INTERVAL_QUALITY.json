@@ -1,0 +1,30 @@
+[
+  {
+    "field": "ground",
+    "lower_bound_exceeds_elapsed_rows": 6,
+    "observed_bucket_rows": 10240,
+    "round_duration_eligible_rows": 10232,
+    "zero_bucket_rows": 5964
+  },
+  {
+    "field": "ground_control",
+    "lower_bound_exceeds_elapsed_rows": 2,
+    "observed_bucket_rows": 23695,
+    "round_duration_eligible_rows": 23651,
+    "zero_bucket_rows": 18758
+  },
+  {
+    "field": "standing",
+    "lower_bound_exceeds_elapsed_rows": 8,
+    "observed_bucket_rows": 23696,
+    "round_duration_eligible_rows": 23652,
+    "zero_bucket_rows": 2826
+  },
+  {
+    "field": "back_control",
+    "lower_bound_exceeds_elapsed_rows": 1,
+    "observed_bucket_rows": 23714,
+    "round_duration_eligible_rows": 23670,
+    "zero_bucket_rows": 23190
+  }
+]

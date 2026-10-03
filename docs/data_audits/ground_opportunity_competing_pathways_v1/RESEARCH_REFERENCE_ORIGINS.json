@@ -1,0 +1,14 @@
+[
+  {
+    "normalization": "remove Markdown trailing line whitespace; content preserved",
+    "original_uploaded_SHA256": "8ca3a7f9e3dae7adee2bc17eb7a8e3150f58438df426e6095e62a7bcd74c5e4f",
+    "reference": "UFC_FIGHT_SIMULATOR_DATA_FEASIBILITY_RESEARCH_V1.md",
+    "repository_reference_SHA256": "56ed971ae861d7530ae08cf0cbc1d17d2106a177ad2e0064d085b48c2d9d0339"
+  },
+  {
+    "normalization": "remove Markdown trailing line whitespace; content preserved",
+    "original_uploaded_SHA256": "e6cda2d1f165fab4fc1523cb56c5e9540896c2addc3d55f7581504861de0d39c",
+    "reference": "UFC_EDGE_SUBMISSION_MECHANISM_AND_GRAPPLING_DATA_RESEARCH_V1.md",
+    "repository_reference_SHA256": "e6cda2d1f165fab4fc1523cb56c5e9540896c2addc3d55f7581504861de0d39c"
+  }
+]

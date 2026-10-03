@@ -1,0 +1,25 @@
+{
+  "all_state_dates_strict_prior": "PASS",
+  "elapsed_exposure_tests_passed": 15,
+  "fits": 0,
+  "frozen_source_tree_unchanged": "PASS",
+  "independently_regenerated_identical_measurement_outputs": [
+    "B3_B5_candidate_coverage.csv",
+    "B3_B5_descriptive_correlations.csv",
+    "B3_B5_measurement_distributions.csv",
+    "B3_B5_strict_prior_states.csv.gz",
+    "B3_FROZEN_CELL.json",
+    "B5_FROZEN_CELL.json",
+    "CONVERSION_MEASUREMENT_CHECK.json",
+    "POSITION_INTERVAL_QUALITY.json",
+    "STRICT_PRIOR_VERIFICATION.json",
+    "boundary_coverage.csv",
+    "bout_measurements.csv.gz",
+    "fold_state_coverage.csv",
+    "strict_prior_fighter_states.csv.gz",
+    "year_field_coverage.csv"
+  ],
+  "status": "PASS",
+  "support_bin_uniqueness_and_conservation": "PASS",
+  "zero_denominator_conversion_estimates_withheld": "PASS"
+}

@@ -1,0 +1,14 @@
+{
+  "all_state_latest_dates_strictly_before_cutoff": true,
+  "career_fighter_target_pairs": 11316,
+  "fits": 0,
+  "frozen_evaluation_archive_SHA256": "c5a07566ad7f7a919b625285880eb5bb4a82f84af7eddc2d470c23c05258f0fb",
+  "frozen_membership_equal": true,
+  "future_stat_mutation_invariant": true,
+  "max_allowed_event_date": "2026-08-15",
+  "prospective_confirmation_outcomes_accessed": false,
+  "scope": "retrospective event-date strict prior; 2026 snapshots do not establish historical publication vintages",
+  "state_rows": 22632,
+  "status": "PASS",
+  "target_and_same_date_excluded": true
+}
