@@ -1,0 +1,17 @@
+cell,window,a,b,paired_states,spearman
+B3,career,submission_attempts,sig_ground_attempted,797,0.5793681866
+B3,career,submission_attempts,control_sec,797,0.7173759092
+B3,career,takedowns_landed,control_sec,797,0.9191813946
+B3,career,standups,reversals,461,0.3895094316
+B3,last5,submission_attempts,sig_ground_attempted,797,0.3060171544
+B3,last5,submission_attempts,control_sec,797,0.4913459835
+B3,last5,takedowns_landed,control_sec,797,0.8523101424
+B3,last5,standups,reversals,318,0.2087775287
+B5,career,submission_attempts,sig_ground_attempted,1173,0.6011067131
+B5,career,submission_attempts,control_sec,1173,0.6830507843
+B5,career,takedowns_landed,control_sec,1173,0.9168108569
+B5,career,standups,reversals,755,0.4079941157
+B5,last5,submission_attempts,sig_ground_attempted,1173,0.2373040219
+B5,last5,submission_attempts,control_sec,1173,0.3842917164
+B5,last5,takedowns_landed,control_sec,1173,0.8304866387
+B5,last5,standups,reversals,580,0.1168841485

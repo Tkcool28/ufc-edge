@@ -1,0 +1,7 @@
+{
+  "Arm_C_predicted_SUB": 0.4805724511255612,
+  "all_scored_bouts": 591,
+  "fixed_membership_column": "B5_SUB_PRESSURE_VS_SUB_VULNERABILITY",
+  "observed_SUB": 0.5492957746478874,
+  "standard_finishes": 355
+}

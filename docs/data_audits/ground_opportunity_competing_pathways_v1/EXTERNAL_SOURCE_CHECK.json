@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-10-03",
+  "external_data_ingested": false,
+  "licensing_conclusion": "UNVERIFIED; no legal interpretation or grant asserted",
+  "official_urls": [
+    "https://www.ufc.com/terms",
+    "https://www.ufc.com/news/terms-use"
+  ],
+  "provider_backfill_claims_verified": false,
+  "result": "terms URL fetch failed; news/terms-use 403. Search excerpt does not establish a data/modeling license.",
+  "scope": "rights ascertainability only; after existing-repository ground-exposure gap established"
+}

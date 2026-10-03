@@ -1,0 +1,9 @@
+concept,windows,shrinkage,minimum_support
+sig_environment_mix,"career, last5",composition_v1,Raw composition requires 20 observed environment attempts; shrunk composition may use less known support.
+takedown_pressure,"career, last3, last5, EWMA365d",time_rate_v1,Raw display requires 5 eligible minutes; shrunk estimate may use smaller known support.
+takedown_conversion,"career, last5, EWMA365d",attempt_probability_v1,Raw estimate requires 5 attempts; shrinkage retains smaller known support.
+control_rate,"career, last3, last5, EWMA365d",time_rate_v1,Raw display requires 5 eligible minutes; shrunk estimate may use smaller known support.
+submission_attempt_rate,"career, last3, last5, EWMA365d",time_rate_v1,Raw display requires 5 eligible minutes; shrunk estimate may use smaller known support.
+reversal_rate,career,time_rate_v1,Raw display requires 10 eligible minutes; shrunk estimate may use smaller known support.
+finish_method_win_profile,"career, last5",fight_rate_v1,Raw rate requires 3 eligible prior fights; shrinkage supports smaller known samples.
+finish_method_loss_profile,"career, last5",fight_rate_v1,Raw rate requires 3 eligible prior fights; shrinkage supports smaller known samples.

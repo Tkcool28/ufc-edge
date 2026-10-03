@@ -1,0 +1,23 @@
+field,nonnull_fraction,nonnull_rows,seen_rows,status
+grap_rev_land,0.8412916942595239,48275,57382,raw transport only; summaries/duplicates included
+grap_stand_land,0.6211181206650169,35641,57382,raw transport only; summaries/duplicates included
+grap_sub_att,0.9443205186295354,54187,57382,raw transport only; summaries/duplicates included
+grap_take_att,0.9443205186295354,54187,57382,raw transport only; summaries/duplicates included
+grap_take_land,0.9443205186295354,54187,57382,raw transport only; summaries/duplicates included
+ground_body_str_att,0.9442856644940922,54185,57382,raw transport only; summaries/duplicates included
+ground_body_str_land,0.9442856644940922,54185,57382,raw transport only; summaries/duplicates included
+ground_ctl_time,0.6481997839043603,37195,57382,raw transport only; summaries/duplicates included
+ground_head_str_att,0.9442856644940922,54185,57382,raw transport only; summaries/duplicates included
+ground_head_str_land,0.9442856644940922,54185,57382,raw transport only; summaries/duplicates included
+ground_leg_str_att,0.9442856644940922,54185,57382,raw transport only; summaries/duplicates included
+ground_leg_str_land,0.9442856644940922,54185,57382,raw transport only; summaries/duplicates included
+ground_sig_kick_att,0.3151859468125893,18086,57382,raw transport only; summaries/duplicates included
+ground_sig_kick_land,0.3151859468125893,18086,57382,raw transport only; summaries/duplicates included
+ground_sig_punch_att,0.03861838207103273,2216,57382,raw transport only; summaries/duplicates included
+ground_sig_punch_land,0.03861838207103273,2216,57382,raw transport only; summaries/duplicates included
+ground_sig_str_att,0.6677529538879788,38317,57382,raw transport only; summaries/duplicates included
+ground_sig_str_land,0.6677529538879788,38317,57382,raw transport only; summaries/duplicates included
+ground_str_att,0.9442856644940922,54185,57382,raw transport only; summaries/duplicates included
+ground_str_land,0.9442856644940922,54185,57382,raw transport only; summaries/duplicates included
+ground_time,0.299153044508731,17166,57382,raw transport only; summaries/duplicates included
+msc_ground_ctl__time,0.6394862500435676,36695,57382,raw transport only; summaries/duplicates included

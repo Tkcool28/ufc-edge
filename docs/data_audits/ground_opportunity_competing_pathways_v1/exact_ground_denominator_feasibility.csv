@@ -1,0 +1,28 @@
+outer_year,measurement,eligible_exact_ground_exposure_states,missing_exact_ground_exposure_pct,reason
+2018,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2018,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2018,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2019,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2019,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2019,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2020,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2020,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2020,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2021,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2021,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2021,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2022,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2022,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2022,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2023,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2023,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2023,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2024,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2024,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2024,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2025,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2025,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2025,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2026,SUB attempts per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2026,ground significant strikes per grounded minute,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure
+2026,opponent escape opportunity rate,0,100,no validated exact ground-duration field; coarse partial buckets withheld as exact exposure

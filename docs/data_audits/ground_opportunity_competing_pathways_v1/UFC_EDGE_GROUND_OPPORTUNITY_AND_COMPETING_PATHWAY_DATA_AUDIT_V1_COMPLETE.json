@@ -1,0 +1,9 @@
+{
+  "conclusion": "B",
+  "evidence_manifest_SHA256": "6fe5387b3d4b184fc61e2c1c1ca1fe0844daa8b6b6e056ac83e62c86d5dd447b",
+  "fits": 0,
+  "frozen_models_changed": false,
+  "merged": false,
+  "starting_repository_SHA": "3e2b14a8391ed17d072b4bbb9570b31bc6d12b85",
+  "status": "UFC_EDGE_GROUND_OPPORTUNITY_AND_COMPETING_PATHWAY_DATA_AUDIT_V1_COMPLETE"
+}
