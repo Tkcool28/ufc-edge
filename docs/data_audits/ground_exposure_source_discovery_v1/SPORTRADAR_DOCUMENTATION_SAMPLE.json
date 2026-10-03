@@ -1,0 +1,26 @@
+{
+  "source_url": "https://docs.sportradar.com/ufc/stream-endpoints-websocket/fight-stats",
+  "evidence_type": "PUBLIC_DOCUMENTATION_EXAMPLE_NOT_AUTHENTICATED_FINAL_API_RESPONSE",
+  "selection": "provider-selected convenience example, separate from frozen 28-fight panel",
+  "event_date": "2025-04-26",
+  "timestamp": "2025-04-27T04:34:07.047372Z",
+  "fightId": 9325,
+  "fightCardId": 953,
+  "seqNum": 763,
+  "fighters": {"red":{"name":"Ian Machado Garry","fighterId":3742,"ufcFighterId":"3717"},"blue":{"name":"Carlos Prates","fighterId":4147,"ufcFighterId":"4075"}},
+  "units": "M:SS converted arithmetically to integer seconds; observed display resolution does not certify accuracy",
+  "top_bottom_time": "NOT EXPLICITLY SUPPLIED; groundControlTime is not automatically synonymous with top/bottom occupancy",
+  "round_common": [
+    {"round":1,"elapsed_sec":300,"ground_sec":12,"clinch_sec":2,"distance_sec":286},
+    {"round":2,"elapsed_sec":300,"ground_sec":4,"clinch_sec":29,"distance_sec":267},
+    {"round":3,"elapsed_sec":300,"ground_sec":66,"clinch_sec":41,"distance_sec":193},
+    {"round":4,"elapsed_sec":300,"ground_sec":32,"clinch_sec":81,"distance_sec":187},
+    {"round":5,"elapsed_sec":300,"ground_sec":61,"clinch_sec":49,"distance_sec":190}
+  ],
+  "round_fighter": {
+    "red":[{"round":1,"ground_control_sec":12,"control_sec":12,"sub_attempts":0,"ground_sig_landed":4,"ground_sig_attempted":5,"ground_total_landed":4,"ground_total_attempted":5}, {"round":2,"ground_control_sec":0,"control_sec":0,"sub_attempts":0,"ground_sig_landed":0,"ground_sig_attempted":0,"ground_total_landed":0,"ground_total_attempted":0}, {"round":3,"ground_control_sec":66,"control_sec":85,"sub_attempts":0,"ground_sig_landed":0,"ground_sig_attempted":0,"ground_total_landed":7,"ground_total_attempted":9}, {"round":4,"ground_control_sec":32,"control_sec":58,"sub_attempts":0,"ground_sig_landed":0,"ground_sig_attempted":0,"ground_total_landed":2,"ground_total_attempted":2}, {"round":5,"ground_control_sec":0,"control_sec":34,"sub_attempts":0,"ground_sig_landed":0,"ground_sig_attempted":1,"ground_total_landed":0,"ground_total_attempted":1}],
+    "blue":[{"round":1,"ground_control_sec":0,"control_sec":2,"sub_attempts":0,"ground_sig_landed":0,"ground_sig_attempted":0,"ground_total_landed":0,"ground_total_attempted":0}, {"round":2,"ground_control_sec":4,"control_sec":24,"sub_attempts":0,"ground_sig_landed":0,"ground_sig_attempted":0,"ground_total_landed":0,"ground_total_attempted":0}, {"round":3,"ground_control_sec":0,"control_sec":19,"sub_attempts":0,"ground_sig_landed":0,"ground_sig_attempted":0,"ground_total_landed":0,"ground_total_attempted":0}, {"round":4,"ground_control_sec":0,"control_sec":0,"sub_attempts":0,"ground_sig_landed":0,"ground_sig_attempted":0,"ground_total_landed":0,"ground_total_attempted":0}, {"round":5,"ground_control_sec":61,"control_sec":61,"sub_attempts":0,"ground_sig_landed":14,"ground_sig_attempted":16,"ground_total_landed":15,"ground_total_attempted":17}]
+  },
+  "fight_totals":{"ground_sec":175,"clinch_sec":202,"distance_sec":1123,"red_ground_control_sec":110,"blue_ground_control_sec":65,"red_control_sec":189,"blue_control_sec":106},
+  "cautions":["Live near-end cumulative packet; provider directs finalized checks to detailedresults.","The documentation JSON includes a missing comma after one ufcFighterId; this is a factual field extraction, not an executable replay of that JSON.","Round-stat fighterId types vary between strings and integers.","Blue standups reports attempts=0, landed=4 in totals; no escape success rate can be assumed."]
+}

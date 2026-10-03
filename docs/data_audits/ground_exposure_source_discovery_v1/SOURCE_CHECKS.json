@@ -1,0 +1,105 @@
+{
+  "checked_on": "2026-10-03",
+  "local_evidence_sha256": {
+    "fightgeek_precision.txt": "b2b8e93a70058cafbad3e0a2ac121fe3187d58decc05c26931854c6707f9c32d",
+    "pr158_manifest.json": "6fe5387b3d4b184fc61e2c1c1ca1fe0844daa8b6b6e056ac83e62c86d5dd447b",
+    "record_book_career.txt": "65eae5187791af814f9a000ad39723a6fb23f0f8101781bb3285488f3a0f991a",
+    "record_book_fight.txt": "4fb5c41c6e2a41d38ebd104eb254bb4c57fb98d9385392e957a2965654d09b03",
+    "record_book_fight_comb.txt": "05ccd22d2535ff57ad8735a077a0f0bebeee2a48590e8d7dae0e8314532b47e4",
+    "record_book_js.txt": "ecf4caf798422a170cee63f52ce78be2887e34dfd6399131cacabe85d8eac716",
+    "record_book_round.txt": "54c1bcb8845995d810fba56d18f02d541e2d705f73366766f8c422763edbdf1b",
+    "record_book_round_comb.txt": "d1fa4b340aec84c94b4d4e9b2e6615b76783480187c7b5c52cac290ffb87a7c6",
+    "requests_second_batch.json": "3cada2ac38b3847ee7ffeee21bbfc005924ff2d18dff09c53abf29bcd4e941d1",
+    "sportradar_fight_stats.txt": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+    "sportradar_index.txt": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+    "sportsdata_dictionary.txt": "8896930d6b3e3435b041a8643b50f879ff42730b20f533df05811fcb8de04340",
+    "ufcalendar_developers.txt": "76dcc217d5f53be990206a2d81ae546db7d712e9378f946b3010d679a6bbce84",
+    "ufcalendar_openapi.txt": "3d688199d6b81f9b95d96cea8a3a4a96d8676a6c7b93b24edc5e4864a4cbfb08",
+    "ufcalendar_plans.txt": "e7521d1dfc316016a0dd44396a0723872c842160921719538da40c60129a6ada",
+    "ufcalendar_stats_auth_probe.txt": "f50893d56aa7fb83f90c9087ca71622ec6161ad16fed328fff147944ee68bbd4",
+    "ufcalendar_stats_page.txt": "a28c307b9906a369e18d52a893ba64971a794a8a012970858d83b069106168b7",
+    "ufcalendar_terms.txt": "33bd6e11f05c09fe06aae90f76915c0dc58b47ccd22527e62c66d190e94c00ac"
+  },
+  "raw_fetch_caveat": "Sportradar raw fetch files contain 403 responses, not successful documentation captures; facts came from public web-rendered documentation. Hashes alone do not prove semantic claims. Full raw webpages are not redistributed.",
+  "record_book": {
+    "backend_lineage": "unresolved",
+    "career_top_bottom_totals": true,
+    "displayed_update": "2026-09-30 07:45 GMT",
+    "fight_round_ground_duration_export_found": false,
+    "public_scope": "UFC 28 onward"
+  },
+  "requests_second_batch": [
+    {
+      "bytes": 90361,
+      "name": "ufcalendar_terms",
+      "status": 200,
+      "url": "https://www.ufcalendar.com/developers/terms"
+    },
+    {
+      "bytes": 123566,
+      "name": "ufcalendar_stats_page",
+      "status": 200,
+      "url": "https://www.ufcalendar.com/developers/ufc-stats-api"
+    },
+    {
+      "bytes": 209080,
+      "name": "ufcalendar_developers",
+      "status": 200,
+      "url": "https://www.ufcalendar.com/developers"
+    },
+    {
+      "bytes": 170,
+      "name": "fightgeek_precision",
+      "status": 502,
+      "url": "https://fightgeek.co/precision/"
+    },
+    {
+      "bytes": 243392,
+      "name": "sportsdata_dictionary",
+      "status": 200,
+      "url": "https://sportsdata.io/developers/data-dictionary/mma"
+    },
+    {
+      "bytes": 120351,
+      "name": "record_book_career",
+      "status": 200,
+      "url": "https://statleaders.ufc.com/"
+    },
+    {
+      "bytes": 55915,
+      "name": "record_book_fight_comb",
+      "status": 200,
+      "url": "https://statleaders.ufc.com/en/fight-comb"
+    },
+    {
+      "bytes": 60505,
+      "name": "record_book_round_comb",
+      "status": 200,
+      "url": "https://statleaders.ufc.com/en/round-comb"
+    }
+  ],
+  "scope": "bounded public documentation and example requests; no authentication/account/purchase; web-rendered Sportradar example transcribed separately",
+  "starting_main": "b8194cd37831348bd856900cba134d05ff21e430",
+  "ufcalendar_fields": {
+    "FightStatLine": [
+      "ground_time_sec",
+      "clinch_time_sec",
+      "distance_time_sec",
+      "control_time_sec"
+    ],
+    "RoundStatLine": [
+      "ground_time_sec",
+      "clinch_time_sec",
+      "distance_time_sec",
+      "control_time_sec"
+    ],
+    "precision": "unverified",
+    "sample_probe": {
+      "candidate_values_observed": 0,
+      "status": 401,
+      "url": "https://api.ufcalendar.com/v1/fights/83379/stats"
+    },
+    "schema_unit": "nullable integer seconds"
+  },
+  "verification": "multi-era external candidate records unacquired; one supplemental public documentation example; no approved historical backfill"
+}
