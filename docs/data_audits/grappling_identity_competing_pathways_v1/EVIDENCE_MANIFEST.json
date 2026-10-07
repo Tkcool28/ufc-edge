@@ -1,0 +1,152 @@
+{
+  "artifacts": {
+    "B3_B5_identity_distributions.csv": {
+      "bytes": 89503,
+      "sha256": "bd8bb689f87ff72b4c0ef31f407d2120f33ef2bcef234682b0231d2cebb9a134"
+    },
+    "B3_B5_identity_states.csv.gz": {
+      "bytes": 472535,
+      "sha256": "ec6c1e0a39f1e4b83a63c172026aec2a1e9a46dfbf5730c0744d855d4e80ed87"
+    },
+    "B3_B5_saved_prediction_movement.csv": {
+      "bytes": 294,
+      "sha256": "6951f3623f07515f1a1734271c6b93a81a0516054040127b2d5e48cbd59a2d9a"
+    },
+    "B3_FROZEN.json": {
+      "bytes": 216,
+      "sha256": "79f4596fa6bfc2f2bde2b6a76472cebf7cd01602f10cafa67261c1bdae9abe6a"
+    },
+    "B3_GRAPPLING_IDENTITY_ANALYSIS.md": {
+      "bytes": 2376,
+      "sha256": "6d22ee7528c632f155bbf0f06213c8837de3aea745a42413f2bb0ee0733b60a5"
+    },
+    "B5_FROZEN.json": {
+      "bytes": 223,
+      "sha256": "793ded92bb1511d9ae52d846c5725491a36f3959009e7f59d11e89986f85e302"
+    },
+    "B5_GRAPPLING_IDENTITY_ANALYSIS.md": {
+      "bytes": 2684,
+      "sha256": "3d44108d419e6c23bc65d9927b23186529dfbb8b7bf90fc84bbc18e3c07ad1bd"
+    },
+    "CONTROL_BEHAVIOR_DIAGNOSTIC.md": {
+      "bytes": 2172,
+      "sha256": "78f3976943b5a81a513cd6d552ba5b7619b07cec779fb49f307337f46f31ed24"
+    },
+    "DECISION_VS_FINISH_CONTROL_ANALYSIS.md": {
+      "bytes": 2320,
+      "sha256": "f0d3781b7c3b76d97168916d8f3ec4e4999253cb71741aa3126dd4b045990735"
+    },
+    "DIAGNOSTIC_PROTOCOL.md": {
+      "bytes": 3039,
+      "sha256": "10e2813608ff190f55b6abb0b090f9b7c8142e6f05319a5ce74444b332bb51f4"
+    },
+    "DIRECTIONAL_MATCHUP_IDENTITY_FEASIBILITY.md": {
+      "bytes": 1906,
+      "sha256": "9cc0d8dd57850df97b10c385e8ae286eab14bae6d159f4d562fee5c2c9323051"
+    },
+    "EARLY_FOLD_IDENTITY_SUPPORT.md": {
+      "bytes": 6761,
+      "sha256": "33d127a0d0c602fa6b49caae9318e8fe0f2bd1349f954bf97156764ce5b5a36a"
+    },
+    "EXTERNAL_BACKGROUND_SOURCES.json": {
+      "bytes": 1573,
+      "sha256": "a5de453f435144efcd824046d4951d341c00e1b8c404bf7c7a7f7436cb7edace"
+    },
+    "FINISH_TIMING_DIAGNOSTIC.md": {
+      "bytes": 2399,
+      "sha256": "02daa8d18e0ef2875e18fc8534cdcf869867ddd854ae22380c1ee4af27d4043f"
+    },
+    "GRAPPLING_IDENTITY_SOURCE_LINEAGE.md": {
+      "bytes": 4180,
+      "sha256": "ee43a6587ce1a7666999c92d414b1c2532fb69a52134d3e791115930bb8e1257"
+    },
+    "GROUND_AND_POUND_ORIENTATION_DIAGNOSTIC.md": {
+      "bytes": 2560,
+      "sha256": "5fdecd14a46dc13a3ff1d45c70e8451a9c6a63c534b997218694508bfad7a6fa"
+    },
+    "NEXT_EXPERIMENT_RECOMMENDATION.md": {
+      "bytes": 5102,
+      "sha256": "bb9c3e4688cbfbb69d255c4ac4644d5bb1bf7788cb00093c04cd720124295011"
+    },
+    "README.md": {
+      "bytes": 1769,
+      "sha256": "17cd558c625a01dea24c1ec5a6de913fce404667b214ab88a6d39c17abcbf4de"
+    },
+    "REPRODUCIBILITY.json": {
+      "bytes": 2488,
+      "sha256": "2d4896d15ac94dd0a6128dca5535383d12d1c238951d7aad22dccb5f8404d93d"
+    },
+    "RESEARCH_CONTEXT_IDENTITIES.json": {
+      "bytes": 1597,
+      "sha256": "48694514ec8fc9d840e3d168651380d1a39ebe3a712dbc578397b8b9fdff74c3"
+    },
+    "SUBMISSION_ORIENTATION_DIAGNOSTIC.md": {
+      "bytes": 2649,
+      "sha256": "1bb12be2c53674472a09f58a6eb674e6d07773a6067c604e6a111f6c9d8786ff"
+    },
+    "TRAINING_BACKGROUND_FEASIBILITY.md": {
+      "bytes": 3753,
+      "sha256": "540358d973dbdd8a6d54a39e7be974f9d152d127cafd493e1e4a5863602e64a8"
+    },
+    "VALIDATION.json": {
+      "bytes": 512,
+      "sha256": "d44206d2eabc0bd8ade86ab6366bb9a95d105b42062a9133f05326f27a608a81"
+    },
+    "chronological_support.csv": {
+      "bytes": 1276963,
+      "sha256": "dfdc7b860e9a60f4d45608ca1d041b967c31767e9c4325d1330e6a887163dd98"
+    },
+    "duration_associations.csv": {
+      "bytes": 807,
+      "sha256": "ea3b65cab2ac6c20c3583ea58ddbfcb6706c786882317d6313ac528923bca676"
+    },
+    "finish_timing.csv": {
+      "bytes": 11491,
+      "sha256": "171c164630b35e347df047253cb02d14512079db6cdb191267693aeb6e291ae1"
+    },
+    "identity_states.csv.gz": {
+      "bytes": 2303359,
+      "sha256": "44ff44805f7c94007a32db168763ffc6ef6443919b8f8cee54ec9625def18044"
+    },
+    "matched_access_dimensions.csv": {
+      "bytes": 20187,
+      "sha256": "c324e640dad796b9607064901449d226aabf14c0f6e088ad012ef5c5276a31cf"
+    },
+    "measurement_definitions.csv": {
+      "bytes": 1654,
+      "sha256": "ac4f1d7612e97f96999139091ade6e691da05513d180d8c8f3b3063485853467"
+    },
+    "nonoverlapping_stability.csv": {
+      "bytes": 39728,
+      "sha256": "7f1f5afddb4a338e7339fae41d55e821dc0a392924f403e87967b5a14d631768"
+    },
+    "outcome_separated_prior_states.csv.gz": {
+      "bytes": 3663486,
+      "sha256": "ef908a2c06b30d1dd68831d80fb8a0b9e61b5d2f3444ad06e04b280e6c50d8cc"
+    },
+    "paired_decision_finish_control.csv": {
+      "bytes": 1282804,
+      "sha256": "c494fc4a7cf3eaa22ae472f7c9b8d122aca096735972464446458ad8987db536"
+    },
+    "repeat_finish_timing.csv": {
+      "bytes": 1302,
+      "sha256": "0d4f99b4e5791f76c31a421d75d13c19e697d607bb26a27024cdcec9fe3422a9"
+    },
+    "requirements.txt": {
+      "bytes": 41,
+      "sha256": "65b97f7db87e4cdcb0f4157240cfece5b48363b3e6a18fdccf72d6528ebcbf85"
+    }
+  },
+  "branch": "audit/grappling-identity-competing-pathways-v1",
+  "conclusion": "B \u2014 PARTIAL IDENTITY IS SUPPORTABLE",
+  "fits": 0,
+  "scripts": {
+    ".github/workflows/grappling-identity-diagnostic-v1.yml": "46b616951174cf9c46e82cfd139912f63155128c463db24a8d3220ae5046851b",
+    "tools/audits/audit_grappling_identity_v1.py": "d3b9a891b843060a78341b08f7b7d98e5b69433a2fd7aec0f77a778f8a9b7cf9",
+    "tools/audits/report_grappling_identity_v1.py": "75ca135f1897b6a96ba6fba6057f6280b01704d44a97ea0e56bfedd179404723",
+    "tools/audits/verify_grappling_identity_v1.py": "44a2baf59908d85b37b3a692d554d62393a4839612dd4cf7b609e5f209d7e25b"
+  },
+  "sealed_through": "2026-08-15",
+  "starting_main": "b8194cd37831348bd856900cba134d05ff21e430",
+  "upstream_manifest_sha256": "6fe5387b3d4b184fc61e2c1c1ca1fe0844daa8b6b6e056ac83e62c86d5dd447b"
+}

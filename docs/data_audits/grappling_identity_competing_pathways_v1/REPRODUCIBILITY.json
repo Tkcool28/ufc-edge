@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "independent_process_recomputed_tables": [
+    {
+      "file": "B3_B5_identity_distributions.csv",
+      "sha256": "bd8bb689f87ff72b4c0ef31f407d2120f33ef2bcef234682b0231d2cebb9a134",
+      "byte_identical": true
+    },
+    {
+      "file": "B3_B5_identity_states.csv.gz",
+      "sha256": "ec6c1e0a39f1e4b83a63c172026aec2a1e9a46dfbf5730c0744d855d4e80ed87",
+      "byte_identical": true
+    },
+    {
+      "file": "B3_FROZEN.json",
+      "sha256": "79f4596fa6bfc2f2bde2b6a76472cebf7cd01602f10cafa67261c1bdae9abe6a",
+      "byte_identical": true
+    },
+    {
+      "file": "B5_FROZEN.json",
+      "sha256": "793ded92bb1511d9ae52d846c5725491a36f3959009e7f59d11e89986f85e302",
+      "byte_identical": true
+    },
+    {
+      "file": "VALIDATION.json",
+      "sha256": "d44206d2eabc0bd8ade86ab6366bb9a95d105b42062a9133f05326f27a608a81",
+      "byte_identical": true
+    },
+    {
+      "file": "chronological_support.csv",
+      "sha256": "dfdc7b860e9a60f4d45608ca1d041b967c31767e9c4325d1330e6a887163dd98",
+      "byte_identical": true
+    },
+    {
+      "file": "duration_associations.csv",
+      "sha256": "ea3b65cab2ac6c20c3583ea58ddbfcb6706c786882317d6313ac528923bca676",
+      "byte_identical": true
+    },
+    {
+      "file": "finish_timing.csv",
+      "sha256": "171c164630b35e347df047253cb02d14512079db6cdb191267693aeb6e291ae1",
+      "byte_identical": true
+    },
+    {
+      "file": "identity_states.csv.gz",
+      "sha256": "44ff44805f7c94007a32db168763ffc6ef6443919b8f8cee54ec9625def18044",
+      "byte_identical": true
+    },
+    {
+      "file": "matched_access_dimensions.csv",
+      "sha256": "c324e640dad796b9607064901449d226aabf14c0f6e088ad012ef5c5276a31cf",
+      "byte_identical": true
+    },
+    {
+      "file": "nonoverlapping_stability.csv",
+      "sha256": "7f1f5afddb4a338e7339fae41d55e821dc0a392924f403e87967b5a14d631768",
+      "byte_identical": true
+    },
+    {
+      "file": "outcome_separated_prior_states.csv.gz",
+      "sha256": "ef908a2c06b30d1dd68831d80fb8a0b9e61b5d2f3444ad06e04b280e6c50d8cc",
+      "byte_identical": true
+    },
+    {
+      "file": "paired_decision_finish_control.csv",
+      "sha256": "c494fc4a7cf3eaa22ae472f7c9b8d122aca096735972464446458ad8987db536",
+      "byte_identical": true
+    },
+    {
+      "file": "repeat_finish_timing.csv",
+      "sha256": "0d4f99b4e5791f76c31a421d75d13c19e697d607bb26a27024cdcec9fe3422a9",
+      "byte_identical": true
+    }
+  ],
+  "elapsed_exposure_tests": 15,
+  "predictive_fits": 0
+}

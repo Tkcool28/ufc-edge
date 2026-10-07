@@ -1,0 +1,7 @@
+cell,metric,bouts_both_sides_measured,spearman
+B3,control_share,385,-0.1068537195
+B3,sub_attempts_per_min,385,-0.1067614169
+B3,ground_attempts_per_min,385,-0.05698325315
+B5,control_share,582,-0.06037688978
+B5,sub_attempts_per_min,582,0.009202102996
+B5,ground_attempts_per_min,582,0.02980220492
