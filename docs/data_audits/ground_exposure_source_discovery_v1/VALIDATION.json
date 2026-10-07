@@ -1,0 +1,42 @@
+{
+  "common_partition_sums_match_elapsed": true,
+  "divisions": [
+    "Featherweight",
+    "Flyweight",
+    "Heavyweight",
+    "Light Heavyweight",
+    "Lightweight",
+    "Middleweight",
+    "Welterweight",
+    "Women's Bantamweight",
+    "Women's Flyweight",
+    "Women's Strawweight"
+  ],
+  "fighters_csv_sha256": "7b1dc1c531c1c086e01f358750991e5eae092c9271a8b99257f1eb2ed4ce73e6",
+  "frozen_artifacts_modified": false,
+  "ground_control_sum_matches_common_per_round": true,
+  "ground_seconds_round_sum": 175,
+  "model_fits": 0,
+  "panel_candidate_ground_observations": 0,
+  "panel_date_max": "2026-01-24",
+  "panel_date_min": "2004-01-31",
+  "panel_fighter_rounds": 156,
+  "panel_fights": 28,
+  "pr158_manifest_digest": "6fe5387b3d4b184fc61e2c1c1ca1fe0844daa8b6b6e056ac83e62c86d5dd447b",
+  "prospective_outcomes_read": false,
+  "sample_verification_gate": "INCOMPLETE_ACCESS_GATED; one documentation example cannot verify historical backfill",
+  "starting_commit": "b8194cd37831348bd856900cba134d05ff21e430",
+  "supplemental_control_exact_matches": 10,
+  "supplemental_fighter_rounds": 10,
+  "supplemental_fights": 1,
+  "supplemental_ground_sig_attempted_matches": 8,
+  "supplemental_ground_sig_landed_matches": 9,
+  "supplemental_sub_exact_matches": 10,
+  "verified_input_sha256": {
+    "events.csv": "7bd9d33111fab3fd2506eb651a7870b9de2ee38d3db739fe58ac0ee0ad26261e",
+    "fighter_round_position.csv": "b3995ee7a1342e6a372efffbba8cc383a0d394cd7425d73e1b4945cb8968626a",
+    "fighter_round_stats.csv": "9d35fa234083249a5e3a9bfa0aa7006f7df0ea32317c51fe45f521e3cd1e4f8d",
+    "fights.csv": "b972ebb0c6b1fdfdd512c8d6004129f7e0620fe6759ca8acfa1d2f1184029e76",
+    "source_identity_links.csv": "026c273ad8c5212260db8167a6f9f2763c3f7442ab3b2f4108f0625de5f1018f"
+  }
+}

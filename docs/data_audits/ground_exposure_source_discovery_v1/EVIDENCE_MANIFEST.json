@@ -1,0 +1,69 @@
+{
+  "decision": "D \u2014 no suitable broad historical archive verified; conditional commercial leads",
+  "exclusions": [
+    "self",
+    "completion marker",
+    "pinned inputs",
+    "intermediate raw web captures"
+  ],
+  "files": [
+    {
+      "bytes": 4412,
+      "path": "NEXT_GITHUB_HANDOFF.md",
+      "sha256": "1caf4d7165872a4efe6ca6c5c2a170d01c5e4de4616dcc081d68560e527d60b3"
+    },
+    {
+      "bytes": 989,
+      "path": "REPRODUCE.md",
+      "sha256": "30ea1ae93ac5fbfc0a3f29e0dd208e6acfba1bcc1225be4f78290ae947e70e09"
+    },
+    {
+      "bytes": 19975,
+      "path": "SAMPLE_PANEL.csv",
+      "sha256": "b1e6c5cc81ada80ee29da8e4f65e96a924dd01f47a5b4cc8ec96a2741fa51b54"
+    },
+    {
+      "bytes": 55529,
+      "path": "SAMPLE_ROUND_COMPARISON.csv",
+      "sha256": "794f492f23c9a01eab85ae3c6443db39115c5e498b16c0d36ffaa1063d9ef654"
+    },
+    {
+      "bytes": 2257,
+      "path": "SAMPLE_SELECTION.json",
+      "sha256": "3c20ca48f0789705e629c14f7058e845a75c5f14c11b77999be4ad80f635c662"
+    },
+    {
+      "bytes": 4467,
+      "path": "SOURCE_CHECKS.json",
+      "sha256": "090aa4267b0b5837cb7980232459937f3bb46481dfaeccc99ace8f95fcc0e9b6"
+    },
+    {
+      "bytes": 3590,
+      "path": "SPORTRADAR_DOCUMENTATION_SAMPLE.json",
+      "sha256": "bf90b1e8547eae89251de6a292a04a2811fdf191ef2a93c78afac0857ab08ecc"
+    },
+    {
+      "bytes": 3507,
+      "path": "SUPPLEMENTAL_DOCUMENTATION_COMPARISON.csv",
+      "sha256": "1d03ea324982f7013db7e90a231447ff7f4c58d77dc44d1fce8ceafc73822e41"
+    },
+    {
+      "bytes": 25882,
+      "path": "UFC_EDGE_GROUND_EXPOSURE_SOURCE_DISCOVERY_AND_BACKFILL_FEASIBILITY_V1.md",
+      "sha256": "bf5cd4f47762e0e097dd63b88438d9ad59d3060db5e4cd85cff28f328653f929"
+    },
+    {
+      "bytes": 1766,
+      "path": "VALIDATION.json",
+      "sha256": "a353a095b24dcb6094003471f570b15e0a2a95af524d3e2f82c362a131ba3e7a"
+    },
+    {
+      "bytes": 9416,
+      "path": "reproduce_sample_audit.py",
+      "sha256": "1f93f5ba130a8179e49aa26412e975036292f8b5bf1bf188fbfc192920473de3"
+    }
+  ],
+  "prior_evidence_manifest_sha256": "6fe5387b3d4b184fc61e2c1c1ca1fe0844daa8b6b6e056ac83e62c86d5dd447b",
+  "sample_gate": "INCOMPLETE_ACCESS_GATED",
+  "starting_commit": "b8194cd37831348bd856900cba134d05ff21e430"
+}

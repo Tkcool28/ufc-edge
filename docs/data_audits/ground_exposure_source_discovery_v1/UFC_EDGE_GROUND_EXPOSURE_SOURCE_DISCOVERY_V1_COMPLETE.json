@@ -1,0 +1,9 @@
+{
+  "status": "UFC_EDGE_GROUND_EXPOSURE_SOURCE_DISCOVERY_V1_COMPLETE",
+  "research_delivered": true,
+  "historical_source_verified": false,
+  "sample_gate_passed": false,
+  "candidate_panel_fights_acquired": 0,
+  "manifest_sha256": "a553a89ea4ece9770eebb48f9f8039425c7eb734415c1f4a114ada0e0d631c61",
+  "next_handoff": "UFC_EDGE_GROUND_EXPOSURE_VENDOR_SAMPLE_AND_RIGHTS_GATE_V1"
+}
