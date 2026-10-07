@@ -1,0 +1,47 @@
+{
+  "checked_utc_date": "2026-10-07",
+  "method": "read-only web source feasibility; no biography ingestion",
+  "sources": [
+    {
+      "provider": "NCAA",
+      "url": "https://www.ncaa.org/championships/statistics-and-records/",
+      "observed": "Official championship record links observed"
+    },
+    {
+      "provider": "UWW",
+      "url": "https://uww.org/historical-results",
+      "observed": "Official shell observed; export depth unverified"
+    },
+    {
+      "provider": "IBJJF",
+      "url": "https://ibjjf.com/certified-black-belts",
+      "observed": "Current certified-belt surface observed"
+    },
+    {
+      "provider": "IBJJF ranking",
+      "url": "https://help.ibjjf.com/ranking/",
+      "observed": "Current-belt-only ranking guidance observed"
+    },
+    {
+      "provider": "ADCC",
+      "url": "https://adcombat.com/event-category/adcc-worlds/",
+      "observed": "Historical edition archive observed"
+    },
+    {
+      "provider": "IJF",
+      "url": "https://www.ijf.org/results",
+      "observed": "Official dated results surface observed"
+    },
+    {
+      "provider": "FIAS",
+      "url": "https://sambo.sport/en/news/pobediteli-i-prizyery-kubka-baykala-po-boevomu-sambo/",
+      "observed": "Dated official sample medal list observed"
+    },
+    {
+      "provider": "UFC",
+      "url": "https://www.ufc.com/athlete/pat-sabatini",
+      "observed": "Official profile credential Q&A observed; mutable biography"
+    }
+  ],
+  "limitation": "No bulk exports, historical publication vintages, complete coverage or modeling rights verified"
+}

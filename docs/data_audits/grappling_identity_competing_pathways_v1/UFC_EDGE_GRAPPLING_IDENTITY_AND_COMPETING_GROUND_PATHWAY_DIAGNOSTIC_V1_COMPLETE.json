@@ -1,0 +1,10 @@
+{
+  "branch": "audit/grappling-identity-competing-pathways-v1",
+  "conclusion": "B \u2014 PARTIAL IDENTITY IS SUPPORTABLE",
+  "evidence_manifest_sha256": "8c2c660722743607733f77b5c86013d36dcca46daa2417ed39487e31d1cfa849",
+  "fits": 0,
+  "independent_state_scalar_checks": 7878,
+  "marker": "UFC_EDGE_GRAPPLING_IDENTITY_AND_COMPETING_GROUND_PATHWAY_DIAGNOSTIC_V1_COMPLETE",
+  "starting_main": "b8194cd37831348bd856900cba134d05ff21e430",
+  "status": "COMPLETE"
+}

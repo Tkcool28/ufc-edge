@@ -1,0 +1,14 @@
+{
+  "fits": 0,
+  "frozen_evaluation_archive_sha256": "c5a07566ad7f7a919b625285880eb5bb4a82f84af7eddc2d470c23c05258f0fb",
+  "frozen_membership_equal": true,
+  "future_same_date_mutation_invariant": true,
+  "independent_canonical_bout_field_checks": 122098,
+  "prospective_outcomes_accessed": false,
+  "sealed_through": "2026-08-15",
+  "starting_main": "b8194cd37831348bd856900cba134d05ff21e430",
+  "state_rows": 11316,
+  "status": "PASS",
+  "strict_prior_all_states": true,
+  "upstream_manifest_verified": true
+}
