@@ -1,0 +1,275 @@
+year,scope,group,metric,n,spearman,pearson,ci_low,ci_high,direction_agreement
+2018,division,Bantamweight,control,5,,,,,0.5
+2018,division,Bantamweight,submission,5,,,,,0.75
+2018,division,Catch Weight,control,1,,,,,
+2018,division,Catch Weight,submission,1,,,,,
+2018,division,Featherweight,control,9,,,,,0.7142857143
+2018,division,Featherweight,submission,9,,,,,1
+2018,division,Flyweight,control,6,,,,,0.8333333333
+2018,division,Flyweight,submission,6,,,,,1
+2018,division,Heavyweight,control,4,,,,,1
+2018,division,Heavyweight,submission,4,,,,,0.5
+2018,division,Light Heavyweight,control,9,,,,,0.75
+2018,division,Light Heavyweight,submission,9,,,,,0.75
+2018,division,Lightweight,control,24,,,,,0.7083333333
+2018,division,Lightweight,submission,24,,,,,0.5833333333
+2018,division,Middleweight,control,14,,,,,0.4285714286
+2018,division,Middleweight,submission,14,,,,,1
+2018,division,Welterweight,control,24,,,,,0.7083333333
+2018,division,Welterweight,submission,24,,,,,0.7083333333
+2018,division,Women's Bantamweight,control,3,,,,,0.5
+2018,division,Women's Bantamweight,submission,3,,,,,1
+2018,division,Women's Strawweight,control,12,,,,,0.6666666667
+2018,division,Women's Strawweight,submission,12,,,,,1
+2018,era,2015plus,control,38,0.2339261289,0.366461671,-0.1226533434,0.5363773243,0.5789473684
+2018,era,2015plus,submission,38,0.5547242971,0.3942760269,0.2740365873,0.7597281221,0.6842105263
+2018,era,pre2015,control,73,0.4566047783,0.3572295496,0.2367862749,0.6317775996,0.6944444444
+2018,era,pre2015,submission,73,0.3794295442,0.1875411938,0.1626933487,0.5811898567,0.7361111111
+2019,division,Bantamweight,control,6,,,,,0.1666666667
+2019,division,Bantamweight,submission,6,,,,,0.8333333333
+2019,division,Catch Weight,control,1,,,,,
+2019,division,Catch Weight,submission,1,,,,,
+2019,division,Featherweight,control,9,,,,,0.7142857143
+2019,division,Featherweight,submission,9,,,,,1
+2019,division,Flyweight,control,6,,,,,0.8333333333
+2019,division,Flyweight,submission,6,,,,,1
+2019,division,Heavyweight,control,6,,,,,0.6666666667
+2019,division,Heavyweight,submission,6,,,,,1
+2019,division,Light Heavyweight,control,9,,,,,0.75
+2019,division,Light Heavyweight,submission,9,,,,,0.75
+2019,division,Lightweight,control,23,,,,,0.8181818182
+2019,division,Lightweight,submission,23,,,,,0.6818181818
+2019,division,Middleweight,control,15,,,,,0.4285714286
+2019,division,Middleweight,submission,15,,,,,1
+2019,division,Welterweight,control,25,0.5997307285,0.6099457582,0.2719295877,0.8235984659,0.7826086957
+2019,division,Welterweight,submission,25,0.4243178729,0.1254590458,0.02184234578,0.7611838432,0.7083333333
+2019,division,Women's Bantamweight,control,5,,,,,0.25
+2019,division,Women's Bantamweight,submission,5,,,,,1
+2019,division,Women's Strawweight,control,13,,,,,0.75
+2019,division,Women's Strawweight,submission,13,,,,,0.5833333333
+2019,era,2015plus,control,46,0.08659717511,0.3370856362,-0.2374784925,0.3757837968,0.5
+2019,era,2015plus,submission,46,0.4545550731,0.3558637115,0.1967816753,0.6808631425,0.7391304348
+2019,era,pre2015,control,72,0.4703389655,0.3749976951,0.2601273708,0.6422474067,0.6944444444
+2019,era,pre2015,submission,72,0.3707492751,0.18565258,0.1443421514,0.5834314296,0.7222222222
+2020,division,Bantamweight,control,7,,,,,0.3333333333
+2020,division,Bantamweight,submission,7,,,,,0.8333333333
+2020,division,Featherweight,control,14,,,,,0.7142857143
+2020,division,Featherweight,submission,14,,,,,0.6428571429
+2020,division,Flyweight,control,7,,,,,0.8333333333
+2020,division,Flyweight,submission,7,,,,,1
+2020,division,Heavyweight,control,8,,,,,0.625
+2020,division,Heavyweight,submission,8,,,,,1
+2020,division,Light Heavyweight,control,9,,,,,0.75
+2020,division,Light Heavyweight,submission,9,,,,,0.75
+2020,division,Lightweight,control,28,0.5527253015,0.5194326145,0.2853783906,0.7317315253,0.75
+2020,division,Lightweight,submission,28,0.5001674781,0.52794954,0.1568762856,0.7457399858,0.6071428571
+2020,division,Middleweight,control,20,,,,,0.65
+2020,division,Middleweight,submission,20,,,,,1
+2020,division,Welterweight,control,22,,,,,0.7272727273
+2020,division,Welterweight,submission,22,,,,,0.6818181818
+2020,division,Women's Bantamweight,control,8,,,,,0.625
+2020,division,Women's Bantamweight,submission,8,,,,,1
+2020,division,Women's Flyweight,control,1,,,,,
+2020,division,Women's Flyweight,submission,1,,,,,
+2020,division,Women's Strawweight,control,15,,,,,0.6428571429
+2020,division,Women's Strawweight,submission,15,,,,,0.6666666667
+2020,era,2015plus,control,69,0.2703068191,0.3947942648,0.0436443671,0.4744509399,0.5882352941
+2020,era,2015plus,submission,69,0.4668595842,0.412792354,0.2582908249,0.6395488455,0.7205882353
+2020,era,pre2015,control,70,0.4764496465,0.3689473486,0.2616952884,0.6466014084,0.7142857143
+2020,era,pre2015,submission,70,0.4024737188,0.1818640806,0.1886269727,0.6104195782,0.7428571429
+2021,division,Bantamweight,control,15,,,,,0.5714285714
+2021,division,Bantamweight,submission,15,,,,,0.5384615385
+2021,division,Catch Weight,control,1,,,,,
+2021,division,Catch Weight,submission,1,,,,,
+2021,division,Featherweight,control,17,,,,,0.6875
+2021,division,Featherweight,submission,17,,,,,1
+2021,division,Flyweight,control,7,,,,,0.8333333333
+2021,division,Flyweight,submission,7,,,,,1
+2021,division,Heavyweight,control,9,,,,,0.5
+2021,division,Heavyweight,submission,9,,,,,1
+2021,division,Light Heavyweight,control,10,,,,,0.7
+2021,division,Light Heavyweight,submission,10,,,,,0.7
+2021,division,Lightweight,control,32,0.5215477806,0.4763982582,0.2727911218,0.7008763991,0.84375
+2021,division,Lightweight,submission,32,0.5407048212,0.5562720101,0.2626295112,0.7596320032,0.59375
+2021,division,Middleweight,control,20,,,,,0.5
+2021,division,Middleweight,submission,20,,,,,1
+2021,division,Welterweight,control,26,0.5594118735,0.4856563846,0.2355254121,0.7647150178,0.8076923077
+2021,division,Welterweight,submission,26,0.5922614433,0.3291387473,0.3028300039,0.8434413035,0.6538461538
+2021,division,Women's Bantamweight,control,8,,,,,0.625
+2021,division,Women's Bantamweight,submission,8,,,,,1
+2021,division,Women's Flyweight,control,3,,,,,1
+2021,division,Women's Flyweight,submission,3,,,,,
+2021,division,Women's Strawweight,control,15,,,,,0.7142857143
+2021,division,Women's Strawweight,submission,15,,,,,0.5714285714
+2021,era,2015plus,control,92,0.3621832709,0.4515033781,0.176126654,0.5317301643,0.597826087
+2021,era,2015plus,submission,92,0.4309301866,0.3080785325,0.2481133401,0.588766454,0.6847826087
+2021,era,pre2015,control,71,0.5121544293,0.3943186262,0.3126816357,0.6626842759,0.7428571429
+2021,era,pre2015,submission,71,0.3828057368,0.1715233743,0.1746027174,0.5840357575,0.7142857143
+2022,division,Bantamweight,control,14,,,,,0.5833333333
+2022,division,Bantamweight,submission,14,,,,,0.5
+2022,division,Catch Weight,control,1,,,,,
+2022,division,Catch Weight,submission,1,,,,,
+2022,division,Featherweight,control,22,,,,,0.5909090909
+2022,division,Featherweight,submission,22,,,,,0.6363636364
+2022,division,Flyweight,control,8,,,,,0.875
+2022,division,Flyweight,submission,8,,,,,1
+2022,division,Heavyweight,control,12,,,,,0.75
+2022,division,Heavyweight,submission,12,,,,,
+2022,division,Light Heavyweight,control,10,,,,,0.7
+2022,division,Light Heavyweight,submission,10,,,,,0.7
+2022,division,Lightweight,control,38,0.5042964328,0.4635469405,0.2645001816,0.6952951923,0.7105263158
+2022,division,Lightweight,submission,38,0.5688078745,0.3919683575,0.3138092756,0.7538959531,0.7105263158
+2022,division,Middleweight,control,21,,,,,0.55
+2022,division,Middleweight,submission,21,,,,,1
+2022,division,Welterweight,control,28,0.7028876486,0.5825636885,0.4764867106,0.8464979997,0.75
+2022,division,Welterweight,submission,28,0.5189794601,0.309206055,0.1762822167,0.7807405725,0.6785714286
+2022,division,Women's Bantamweight,control,10,,,,,0.8
+2022,division,Women's Bantamweight,submission,10,,,,,0.6
+2022,division,Women's Flyweight,control,6,,,,,0.3333333333
+2022,division,Women's Flyweight,submission,6,,,,,0.3333333333
+2022,division,Women's Strawweight,control,18,,,,,0.6666666667
+2022,division,Women's Strawweight,submission,18,,,,,0.5
+2022,era,2015plus,control,119,0.3601448488,0.5119327366,0.1801569346,0.5100096712,0.6440677966
+2022,era,2015plus,submission,119,0.400778745,0.2419145357,0.2460509121,0.542735919,0.6902654867
+2022,era,pre2015,control,69,0.5227989152,0.3934996473,0.3223777096,0.6747206355,0.6764705882
+2022,era,pre2015,submission,69,0.3581874759,0.1663626842,0.1377000651,0.5700779305,0.6617647059
+2023,division,Bantamweight,control,20,,,,,0.65
+2023,division,Bantamweight,submission,20,,,,,0.6
+2023,division,Catch Weight,control,1,,,,,
+2023,division,Catch Weight,submission,1,,,,,
+2023,division,Featherweight,control,24,,,,,0.5833333333
+2023,division,Featherweight,submission,24,,,,,0.6666666667
+2023,division,Flyweight,control,10,,,,,0.8
+2023,division,Flyweight,submission,10,,,,,0.6
+2023,division,Heavyweight,control,13,,,,,0.5833333333
+2023,division,Heavyweight,submission,13,,,,,
+2023,division,Light Heavyweight,control,12,,,,,0.6666666667
+2023,division,Light Heavyweight,submission,12,,,,,0.5833333333
+2023,division,Lightweight,control,41,0.5174051366,0.4650365808,0.2785077196,0.7111767735,0.825
+2023,division,Lightweight,submission,41,0.5611956966,0.3991948565,0.3177316762,0.7559373756,0.725
+2023,division,Middleweight,control,22,,,,,0.5454545455
+2023,division,Middleweight,submission,22,,,,,1
+2023,division,Welterweight,control,31,0.6698931372,0.5444205697,0.4192059416,0.8180562281,0.7666666667
+2023,division,Welterweight,submission,31,0.5314939821,0.3240679237,0.216613735,0.7739775767,0.7
+2023,division,Women's Bantamweight,control,11,,,,,0.7
+2023,division,Women's Bantamweight,submission,11,,,,,0.7
+2023,division,Women's Flyweight,control,9,,,,,0.625
+2023,division,Women's Flyweight,submission,9,,,,,0.75
+2023,division,Women's Strawweight,control,18,,,,,0.6666666667
+2023,division,Women's Strawweight,submission,18,,,,,0.5
+2023,era,2015plus,control,143,0.4255164619,0.545330346,0.2651259418,0.5562943271,0.661971831
+2023,era,2015plus,submission,143,0.4094468849,0.2439013371,0.2623821298,0.5402127245,0.6985294118
+2023,era,pre2015,control,69,0.5227989152,0.3934996473,0.3223777096,0.6747206355,0.6764705882
+2023,era,pre2015,submission,69,0.3581874759,0.1663626842,0.1377000651,0.5700779305,0.6617647059
+2024,division,Bantamweight,control,22,,,,,0.6818181818
+2024,division,Bantamweight,submission,22,,,,,0.5909090909
+2024,division,Catch Weight,control,1,,,,,
+2024,division,Catch Weight,submission,1,,,,,
+2024,division,Featherweight,control,29,0.2744518354,0.3910880715,-0.1368923376,0.6205703092,0.5357142857
+2024,division,Featherweight,submission,29,0.2546321116,0.1263666632,-0.1385638934,0.6119524853,0.5357142857
+2024,division,Flyweight,control,12,,,,,0.75
+2024,division,Flyweight,submission,12,,,,,0.5
+2024,division,Heavyweight,control,16,,,,,0.625
+2024,division,Heavyweight,submission,16,,,,,
+2024,division,Light Heavyweight,control,13,,,,,0.6666666667
+2024,division,Light Heavyweight,submission,13,,,,,0.6666666667
+2024,division,Lightweight,control,41,0.5221747863,0.4524913531,0.2884795759,0.6988978843,0.75
+2024,division,Lightweight,submission,41,0.4699841305,0.2956417235,0.1870883255,0.6957821024,0.7
+2024,division,Middleweight,control,26,0.6061652722,0.6179765144,0.2290947035,0.8499883451,0.5769230769
+2024,division,Middleweight,submission,26,0.590832203,0.5231993167,0.2420368956,0.8660750955,1
+2024,division,Welterweight,control,31,0.7180883389,0.5737877333,0.5034652603,0.8377687928,0.8
+2024,division,Welterweight,submission,31,0.5934397926,0.421258615,0.3169586506,0.8135818884,0.7
+2024,division,Women's Bantamweight,control,11,,,,,0.6
+2024,division,Women's Bantamweight,submission,11,,,,,1
+2024,division,Women's Flyweight,control,9,,,,,0.625
+2024,division,Women's Flyweight,submission,9,,,,,0.625
+2024,division,Women's Strawweight,control,19,,,,,0.6666666667
+2024,division,Women's Strawweight,submission,19,,,,,0.5555555556
+2024,era,2015plus,control,162,0.4679396856,0.5584554053,0.3310253762,0.5793874468,0.6666666667
+2024,era,2015plus,submission,162,0.3799662712,0.2354519919,0.2388789269,0.5066473683,0.6604938272
+2024,era,pre2015,control,68,0.5500692115,0.4166307266,0.3561077418,0.6939063311,0.7205882353
+2024,era,pre2015,submission,68,0.4037333244,0.2136166753,0.1837614041,0.6068115545,0.6764705882
+2025,division,Bantamweight,control,24,,,,,0.625
+2025,division,Bantamweight,submission,24,,,,,0.5909090909
+2025,division,Catch Weight,control,1,,,,,
+2025,division,Catch Weight,submission,1,,,,,
+2025,division,Featherweight,control,32,0.2298808433,0.3564257154,-0.1947836371,0.5672184468,0.5
+2025,division,Featherweight,submission,32,0.2666637957,0.1253732052,-0.09774385069,0.6051365433,0.6875
+2025,division,Flyweight,control,15,,,,,0.8571428571
+2025,division,Flyweight,submission,15,,,,,0.5714285714
+2025,division,Heavyweight,control,17,,,,,0.6875
+2025,division,Heavyweight,submission,17,,,,,
+2025,division,Light Heavyweight,control,14,,,,,0.5714285714
+2025,division,Light Heavyweight,submission,14,,,,,0.7142857143
+2025,division,Lightweight,control,43,0.5483176621,0.4746497426,0.3130702278,0.7105492984,0.8333333333
+2025,division,Lightweight,submission,43,0.4657411465,0.3037050318,0.1968308638,0.6757090151,0.6904761905
+2025,division,Middleweight,control,28,0.5215132328,0.5896549053,0.1301261227,0.7982706648,0.6071428571
+2025,division,Middleweight,submission,28,0.6230618602,0.5532531923,0.3112064682,0.8734634952,1
+2025,division,Welterweight,control,34,0.727689495,0.5983259537,0.5127243879,0.8399104535,0.7941176471
+2025,division,Welterweight,submission,34,0.4357540927,0.3632462105,0.102016113,0.7118016737,0.6470588235
+2025,division,Women's Bantamweight,control,12,,,,,0.75
+2025,division,Women's Bantamweight,submission,12,,,,,0.5833333333
+2025,division,Women's Flyweight,control,10,,,,,0.7
+2025,division,Women's Flyweight,submission,10,,,,,0.6
+2025,division,Women's Strawweight,control,21,,,,,0.7
+2025,division,Women's Strawweight,submission,21,,,,,0.55
+2025,era,2015plus,control,182,0.4823755851,0.5527314042,0.3620782273,0.5876966222,0.6923076923
+2025,era,2015plus,submission,182,0.3748160612,0.2436621574,0.2380331285,0.4997155408,0.6483516484
+2025,era,pre2015,control,69,0.553824798,0.4180256879,0.352191332,0.6992961343,0.7352941176
+2025,era,pre2015,submission,69,0.3954830482,0.2142306322,0.1715387756,0.5928419756,0.7058823529
+2026,division,Bantamweight,control,25,0.5051943055,0.5203314705,0.09944844077,0.7883456343,0.7083333333
+2026,division,Bantamweight,submission,25,0.3224133052,0.1851911499,-0.06221835481,0.664464524,0.6086956522
+2026,division,Catch Weight,control,1,,,,,
+2026,division,Catch Weight,submission,1,,,,,
+2026,division,Featherweight,control,36,0.2794439439,0.3700081226,-0.1115423456,0.5805936306,0.6111111111
+2026,division,Featherweight,submission,36,0.1717910415,0.02158917106,-0.1752516881,0.4909703369,0.6388888889
+2026,division,Flyweight,control,16,,,,,0.875
+2026,division,Flyweight,submission,16,,,,,0.625
+2026,division,Heavyweight,control,16,,,,,0.75
+2026,division,Heavyweight,submission,16,,,,,
+2026,division,Light Heavyweight,control,14,,,,,0.5714285714
+2026,division,Light Heavyweight,submission,14,,,,,0.7142857143
+2026,division,Lightweight,control,46,0.5427628538,0.4588742345,0.3250334717,0.6952422637,0.8043478261
+2026,division,Lightweight,submission,46,0.4344843202,0.2969599191,0.1870204569,0.661429821,0.652173913
+2026,division,Middleweight,control,29,0.5373616909,0.5691256886,0.1811658429,0.795255064,0.6428571429
+2026,division,Middleweight,submission,29,0.6369655919,0.5685313742,0.3248483634,0.8685264247,1
+2026,division,Welterweight,control,36,0.7375128794,0.6109760719,0.5327053412,0.8418830125,0.8055555556
+2026,division,Welterweight,submission,36,0.4884323243,0.4166060057,0.1889117487,0.7436683496,0.6666666667
+2026,division,Women's Bantamweight,control,14,,,,,0.7857142857
+2026,division,Women's Bantamweight,submission,14,,,,,0.5714285714
+2026,division,Women's Featherweight,control,1,,,,,
+2026,division,Women's Featherweight,submission,1,,,,,
+2026,division,Women's Flyweight,control,11,,,,,0.6
+2026,division,Women's Flyweight,submission,11,,,,,0.6
+2026,division,Women's Strawweight,control,21,,,,,0.7
+2026,division,Women's Strawweight,submission,21,,,,,0.55
+2026,era,2015plus,control,197,0.5139864451,0.5574650666,0.3967007737,0.6097202823,0.7040816327
+2026,era,2015plus,submission,197,0.3547843299,0.2020706019,0.2238639272,0.4735800323,0.6275510204
+2026,era,pre2015,control,69,0.5359048474,0.4013374478,0.3290341211,0.684311919,0.7058823529
+2026,era,pre2015,submission,69,0.369798546,0.2047315514,0.1429711661,0.5804737509,0.6911764706
+2026,leave_division_out,Middleweight,control,237,0.5434265339,0.5140096799,,,0.7161016949
+2026,leave_division_out,Middleweight,submission,237,0.3213108303,0.1840536729,,,0.5957446809
+2026,leave_division_out,Light Heavyweight,control,252,0.5398570747,0.5098758682,,,0.6892430279
+2026,leave_division_out,Light Heavyweight,submission,252,0.3529885334,0.2003356012,,,0.6150793651
+2026,leave_division_out,Welterweight,control,230,0.5080104621,0.5003263324,,,0.6739130435
+2026,leave_division_out,Welterweight,submission,230,0.3418112196,0.1881999458,,,0.6173913043
+2026,leave_division_out,Lightweight,control,220,0.5374781426,0.5416751831,,,0.6863636364
+2026,leave_division_out,Lightweight,submission,220,0.3472739448,0.1930606614,,,0.6333333333
+2026,leave_division_out,Featherweight,control,230,0.5729014107,0.5427394099,,,0.7
+2026,leave_division_out,Featherweight,submission,230,0.3809114789,0.2500851181,,,0.647826087
+2026,leave_division_out,Heavyweight,control,250,0.5493850561,0.5210780209,,,0.696
+2026,leave_division_out,Heavyweight,submission,250,0.3602667986,0.1978514367,,,0.62
+2026,leave_division_out,Flyweight,control,250,0.5380677087,0.5136031405,,,0.6907630522
+2026,leave_division_out,Flyweight,submission,250,0.3663058789,0.2122484201,,,0.632
+2026,leave_division_out,Women's Strawweight,control,245,0.5466685781,0.5169941181,,,0.7008196721
+2026,leave_division_out,Women's Strawweight,submission,245,0.3756433412,0.2136075666,,,0.6475409836
+2026,leave_division_out,Women's Flyweight,control,255,0.5431457231,0.5140810686,,,0.7007874016
+2026,leave_division_out,Women's Flyweight,submission,255,0.3779972268,0.2095707144,,,0.625984252
+2026,leave_division_out,Bantamweight,control,241,0.5393006736,0.5177385081,,,0.6958333333
+2026,leave_division_out,Bantamweight,submission,241,0.3651400174,0.209932735,,,0.625
+2026,leave_division_out,Catch Weight,control,265,0.5396348064,0.5188544269,,,0.6931818182
+2026,leave_division_out,Catch Weight,submission,265,0.3703086783,0.2106717236,,,0.625
+2026,leave_division_out,Women's Bantamweight,control,252,0.5302038892,0.5155309116,,,0.6825396825
+2026,leave_division_out,Women's Bantamweight,submission,252,0.3788723786,0.2204995033,,,0.6111111111
+2026,leave_division_out,Women's Featherweight,control,265,0.5404220458,0.5172165794,,,0.6984732824
+2026,leave_division_out,Women's Featherweight,submission,265,0.3597287283,0.20539486,,,0.6212121212

@@ -1,0 +1,25 @@
+{
+  "computed_artifacts_rerun_byte_identical": [
+    "VALIDATION.json",
+    "access_edges.csv",
+    "block_states.csv.gz",
+    "boundary_redundancy.csv",
+    "boundary_states.csv.gz",
+    "cell_distributions.csv",
+    "cell_states.csv.gz",
+    "division_era.csv",
+    "fighter_states.csv.gz",
+    "region_replication.csv",
+    "regions.csv",
+    "replication.csv",
+    "sensitivity.csv",
+    "separation.csv",
+    "support.csv"
+  ],
+  "frozen_membership_equal": true,
+  "independent_block_selector_checks": 101,
+  "independent_scalar_checks": 6060,
+  "reports_rerun_identical": true,
+  "scoring_support_reconciled": true,
+  "status": "PASS"
+}

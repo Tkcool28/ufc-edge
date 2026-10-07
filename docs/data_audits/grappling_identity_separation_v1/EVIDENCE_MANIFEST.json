@@ -1,0 +1,146 @@
+{
+  "artifacts": {
+    "ACCESS_MATCHING_SPECIFICATION.md": {
+      "bytes": 1269,
+      "sha256": "d894ef331a8dbb01f136f455f05ba3807e63651c9c0fdb8ea40ed99d7ddea8a7"
+    },
+    "B3_B5_IDENTITY_DISTRIBUTIONS.md": {
+      "bytes": 2624,
+      "sha256": "a4f14e43937be0be186d8928ae9c6cc52fd972467aee6694eb2fd608fba56cba"
+    },
+    "COMPARABLE_ACCESS_SEPARATION_RESULTS.md": {
+      "bytes": 3947,
+      "sha256": "5d6a260baafd2ad3ec79454cf9e32f769fc148ad353b7ef584c6c1a807e31498"
+    },
+    "CONTROL_IDENTITY_MEASUREMENT.md": {
+      "bytes": 2133,
+      "sha256": "063d9060f05f8c658de1479d87014d2a1668caa2dea3f8ce949bfc87262d42a0"
+    },
+    "DIRECTIONAL_MATCHUP_READINESS.md": {
+      "bytes": 1287,
+      "sha256": "12f93290b01828d9acab17b15566bd073f608be509e63dbc687823bd31eecf69"
+    },
+    "DIVISION_ERA_STABILITY.md": {
+      "bytes": 6355,
+      "sha256": "80d887fa4b66cd97b701164586fcb5e485bdba3eb16b8e73b0011415de026c05"
+    },
+    "EARLY_FOLD_SUPPORT.md": {
+      "bytes": 1951,
+      "sha256": "3dd121eebfd61ee83259d3a2daec165863893c7b61e93bf33a074d307420b29c"
+    },
+    "GATE_DECISIONS.json": {
+      "bytes": 550,
+      "sha256": "b619c1ce84cf373c67059539c2a433d75087296a8e75f7ef4484e904aebe1813"
+    },
+    "GNP_IDENTITY_MEASUREMENT.md": {
+      "bytes": 1847,
+      "sha256": "824c9e8a5cd6526660092307215a9726340b1c12e9d8f184b6070f3b4f48fb07"
+    },
+    "GRAPPLING_IDENTITY_EXPERIMENT_PROTOCOL.md": {
+      "bytes": 7600,
+      "sha256": "1dcc8db77e17bd28e41b6f7ce910dee7e2d479e32fea3cf16451f7fd0e629d6e"
+    },
+    "NONOVERLAPPING_REPLICATION_RESULTS.md": {
+      "bytes": 5725,
+      "sha256": "1ad9efe72ec4dcd992ef484046e5b4425b109720400451bb5193c98b9bab49e3"
+    },
+    "README.md": {
+      "bytes": 1145,
+      "sha256": "f93b8395602669a55fc8db85540d827a12d0e53a853168764b6f506f696585c8"
+    },
+    "REPRODUCIBILITY.json": {
+      "bytes": 643,
+      "sha256": "5c4d70c4f33cb3d0f3ae8947db039a534b59662fc5fffa16be00fb52222da714"
+    },
+    "SIMULATOR_IDENTITY_RECOMMENDATION.md": {
+      "bytes": 3002,
+      "sha256": "cefd0e4f15b524d481fd9bef4adfbd559fa2ba48214ff7d3ad852958ecf4c875"
+    },
+    "SUBMISSION_IDENTITY_MEASUREMENT.md": {
+      "bytes": 1017,
+      "sha256": "f45a3df44a94f5da3357e1ad81d2a83e0580ad0c7606ddc80ffe2ab1561d2a10"
+    },
+    "VALIDATION.json": {
+      "bytes": 311,
+      "sha256": "d5ac83e44c4480524a8cc3c5c803ba75b6affee7f47aa656962f3544c55e338b"
+    },
+    "access_edges.csv": {
+      "bytes": 621,
+      "sha256": "c01b891cda727f4c823a7b5c6ce9a6cacf498554859512fe5b5350e24db1fc22"
+    },
+    "block_states.csv.gz": {
+      "bytes": 1421492,
+      "sha256": "a93dc8db1542c4daf109a2f9d81fdf1aed0b04cda6c828c50bf2b0b4bfeb59ce"
+    },
+    "boundary_redundancy.csv": {
+      "bytes": 512,
+      "sha256": "f8761138c9a631e6573af9357f38c3c06431d40cdf33730e2f701290c6a242fa"
+    },
+    "boundary_states.csv.gz": {
+      "bytes": 1605267,
+      "sha256": "2956c39ef4c1e7def2b83b30e36536ab65cab5a74b08e2f6d05bac8a4ab08808"
+    },
+    "cell_distributions.csv": {
+      "bytes": 32639,
+      "sha256": "3b881644192268d6c2cc64a539492ae386cfa4206a7a9dc53a62decd844b0237"
+    },
+    "cell_states.csv.gz": {
+      "bytes": 309909,
+      "sha256": "98a17b98c648f9042d0bfaf4bcc1c6ff79b7c52baebe4a84b938dbe2fc5303fd"
+    },
+    "division_era.csv": {
+      "bytes": 18973,
+      "sha256": "e59460f6242333b357b274473ba1d9a7473a419d3df9278fa8311919db34bd65"
+    },
+    "fighter_states.csv.gz": {
+      "bytes": 1846592,
+      "sha256": "32df4fb2c92365aa871d4fd6db55b9b67f2f599b30d482029f360ada14af5cd1"
+    },
+    "region_replication.csv": {
+      "bytes": 3432,
+      "sha256": "44056764936e4283082dd032b850f0e4870bd24ba37d5cf6f292421190fef6e1"
+    },
+    "regions.csv": {
+      "bytes": 3642,
+      "sha256": "a9f556fffe40add95e23bd9897a27c93070c8cc2de31efe5918fae1b403e8d11"
+    },
+    "replication.csv": {
+      "bytes": 20396,
+      "sha256": "93f1f2b6707cb437c170c1be6f07812c9170397526bcff58d41bd4b9ac42aaea"
+    },
+    "requirements.txt": {
+      "bytes": 41,
+      "sha256": "65b97f7db87e4cdcb0f4157240cfece5b48363b3e6a18fdccf72d6528ebcbf85"
+    },
+    "sensitivity.csv": {
+      "bytes": 3977,
+      "sha256": "3e67f888880d1df07376652d3c1b2add6ec631f65463bb52d9eebc76f05428ba"
+    },
+    "separation.csv": {
+      "bytes": 10634,
+      "sha256": "271b05da7bef67f732484e7c3ff331efd94ef9afa630badb9f49be8ab077417f"
+    },
+    "support.csv": {
+      "bytes": 85870,
+      "sha256": "334521ca744d206859ff354b9f5c06fcb50fc7889dcebc2da295dcf3c5191d8f"
+    },
+    "support_secondary_separation.csv": {
+      "bytes": 8513,
+      "sha256": "6eb6ca8f67c78915c544527f37a65164cedbae19103ad69e472ef31ba4c3da73"
+    }
+  },
+  "branch": "feat/grappling-identity-separation-v1",
+  "conclusion": "B \u2014 PARTIAL SEPARATION SUPPORTED",
+  "fits": 0,
+  "protocol_freeze_commit": "8be3a32181ec90471902482161826301ffb74110",
+  "scripts": {
+    ".github/workflows/grappling-identity-separation-v1.yml": "ea9bddb302a5abdb98d01ce3cce8416b33e5791cc0db415382456a4aae76a140",
+    "tools/audits/grappling_identity_separation_v1.py": "0cc9640633eea535ba7e4ce70a23636ac82787c71ce02ed9a3ed7e2566344d83",
+    "tools/audits/report_grappling_identity_separation_v1.py": "c4744e0700ef0ef92323aaa6a9b8eb7d9c7d9bdf2cc16eff47a0a17b4434036f",
+    "tools/audits/secondary_grappling_identity_separation_v1.py": "1e18f425d2493ebf6680e771b930eb20f1dcc35a49f10d2f3a1800a7004f3360",
+    "tools/audits/verify_grappling_identity_separation_v1.py": "6d4336777d525c160eea8d4047db4d208bb797500fde68fcff505f5f4a365065"
+  },
+  "sealed_through": "2026-08-15",
+  "starting_main": "4a202a2eeb599b790323d1463288690addf3bd47",
+  "upstream_manifest_sha256": "8c2c660722743607733f77b5c86013d36dcca46daa2417ed39487e31d1cfa849"
+}
