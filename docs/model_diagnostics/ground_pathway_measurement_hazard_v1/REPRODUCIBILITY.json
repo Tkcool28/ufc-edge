@@ -1,0 +1,30 @@
+{
+  "byte_identical_regenerated_files": 24,
+  "hashes": {
+    "B3_B5_sensitivity.png": "9c9273c02a62c795a01b2df9bbd30a4c656552c984f2d0d213c3ddabfeae2994",
+    "PAPER_SOURCE.json": "192e50168b99c0408e9ca0a022592e746d3b1606c02fcb4bc31200c99942e186",
+    "SOURCE_HASHES.json": "0bbb320e6d3f3ce0323bb64863d42163257c531110841694ed9b6d4d0f6260cf",
+    "VALIDATION.json": "2b0a0e9fd6a4b65e4715405473eebe175d216e542aad5a5f8946fddd26909aa2",
+    "ability_support_distribution.csv": "455126f6e808a485ed6135e4218f6cc687fb715bcbc24d08b1248e8a2fa07b21",
+    "annual_rewards.csv": "7fd23f8360b24de979fe36cae2481a90ca4f418bd779c315bfcd68915a0cfffe",
+    "annual_support_coverage.csv": "ecfd5d2ad9ad2aea7a23c3c751cb97fef5beeada6df36ce7fe5f59f0eeba3328",
+    "cohort_abilities.csv": "3e746ff2775a793beac8ccc1c65dfd72177a96d429afd5cfd228d32ecafa9508",
+    "conversion_variance.json": "ccf571e90a0b0d70202e51ee5ed39f6d2f0d604c92bddf4a8e4f67e10a05ade1",
+    "diagnostic_summary.csv": "423b20548cdeb8c69d233abf1096ce0399b40bb29125f932357cdad636ac201f",
+    "directional_defense_distribution.csv": "57a3a8f635fc4790d21b13b2dc1fa495de0c8c5384e11e45aedc46895deed2e4",
+    "fight_hazard_accounting.csv.gz": "09bf4a0355ecc5aee251686eb707c97ad0b14c2983de4fb6f76aaa0645bad775",
+    "finish_cohort_rewards.csv": "93df7cbd6004af995d683051443d9b6f82f10880c6b1d9dd4c7ddcffa424ae86",
+    "oracle_attempts.csv.gz": "41c6605436a68a10ab52d15ec8f589763fb0956640e085b08e45adbb31cc5cac",
+    "oracle_combined.csv.gz": "e6e1ecdaeac58bbb1c2f749bc8df0a2bc7b749bb834a613eb096b3572944a643",
+    "oracle_conversion_pool.csv.gz": "8b639a6f2baeab49d5d8585ffb98c5cc52ccacf5d47c29dddbcca1e63cee12e0",
+    "oracle_occupancy.csv.gz": "c5f93e7266b953c3ad8a1ff9237c773e942c7f2c2ecc43e330c59842265f9036",
+    "reference_A.csv": "31fafbd11eff7f9ad37fb107e982dbfbec2a5a9c011c6151783bf1c90338c6a1",
+    "reference_C.csv": "09dafd1b0b03e186203b8d226673ba941108f9c5de694f334ba5406ac63d1a91",
+    "reference_pooled_conversion.csv": "6c1b7c38e7f5502439a8d78fbd33847ade12e0ecefca913db5fa5877412577fe",
+    "reference_population.csv": "14b47a40fe5f1813c6119d03f7447df3201761ff99742da24e8697165f9b109e",
+    "reward_distributions.csv": "9fd4285eea1b8e521be1a0d7f1c5ea8219eef683b08d3009d120407f17432c9e",
+    "sensitivity.png": "43f4cbb0a0d425c8f0df15e1448c784ae256676ed76b2f0ea694d46c4ef61bc7",
+    "training_oracle_parameters.csv": "e1319dbc376ea9f342d8bd29e7167d605dac92bf79909a34faf9a6f8956dfcaf"
+  },
+  "status": "PASS"
+}

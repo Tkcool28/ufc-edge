@@ -1,0 +1,11 @@
+# Next poc decision
+
+Primary classification **E — MULTIPLE MEASUREMENT-TO-HAZARD ERRORS ARE MATERIAL**, centered on coupled opportunity/entry/persistence mapping. The total-time access gate, unilateral occupancy inversion embedded in a bilateral reset chain, and CTRL-conditioned work reconstruction do not conserve observed activity exposure. Favorable occupancy and attempt diagnostics establish recovery potential; they do not uniquely identify true positional causes. A and B remain competing descriptions of the same coupled opportunity error, rather than independently proven physical causes. Conversion compression is real but not a primary aggregate explanation; missing escape and latent KO attribution remain limitations. Generic-ground architecture is not disproved (F unsupported).
+
+Identity contributes: frozen identity-versus-population LL −0.021370, while primary-versus-Arm C +0.020172. This audit preserves both facts. No oracle beats Arm C overall, even when B3/B5 improve; A2 can deteriorate. Mean SUB calibration recovery is not a deployable result.
+
+A further POC is scientifically justified **only after** a specific training-only correction contract passes. Exact next milestone: **UFC_EDGE_GROUND_OPPORTUNITY_REWARD_CONSISTENCY_CONTRACT_V1**. Freeze a rule connecting total-time TD/SUB/GnP rates to mutually exclusive state opportunity; jointly account for both actor states, round resets and competing absorption; require training-only aggregate reward consistency and explicit infeasible-target handling. Separate generic CTRL from submission-capable ground opportunity and preserve missingness. Specify individual-loss/striking gates and unchanged baselines before any new outer evaluation. No numeric factor from this audit is recommended. If this contract cannot produce a defensible, predefinable exposure rule, do not run a second POC. No challenger is authorized or built here.
+
+Validation source_hashes and VALIDATION.json confirm unchanged PR163 records and exact baseline/half/double reproduction. The audit uses exact propagation, so Monte Carlo seeds/counts are irrelevant. Repeat-run verification and publication hashes accompany the manifest.
+
+Diagnostic only. No constants selected, replacement model trained, frozen definitions changed, prospective outcomes accessed or promotion authorized.

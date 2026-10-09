@@ -1,0 +1,8 @@
+{
+  "status": "UFC_EDGE_GROUND_PATHWAY_POC_MEASUREMENT_AND_HAZARD_AUDIT_V1_COMPLETE",
+  "evidence_manifest_sha256": "677556ef4195474218bb8bcd62de82402ef8bd6f31e528fc7cf816a7f921dd31",
+  "classification": "E",
+  "no_model_trained": true,
+  "no_selected_constants": true,
+  "no_promotion": true
+}

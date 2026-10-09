@@ -1,0 +1,24 @@
+{
+  "baseline_max_error": 8.104628079763643e-15,
+  "half_double_max_error": 8.215650382226158e-15,
+  "swap_max_error": 3.6637359812630166e-15,
+  "one_second_max_error": 7.216449660063518e-15,
+  "source_files": 119,
+  "scored_fights": 4260,
+  "record_count": 21300,
+  "outer_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "source_unchanged": true,
+  "training_cutoffs_valid": true,
+  "independent_quadrature_max_error": 3.375077994860476e-14,
+  "negative_hazard_rejected": true
+}
