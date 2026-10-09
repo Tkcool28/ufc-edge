@@ -1,0 +1,8 @@
+{
+  "completion": "UFC_EDGE_GROUND_OPPORTUNITY_REWARD_CONSISTENCY_CONTRACT_V1_COMPLETE",
+  "starting_main_sha": "675da47d6ad9b937c4b01dcd3986250b72308948",
+  "evidence_manifest_sha256": "7a5fd85dcc5b84b610374f7cc1ff219a2892e58e69e098df57d468e1478e955e",
+  "POC_B_executed": false,
+  "outer_performance_inspected": false,
+  "scope": "contract freeze and invented synthetic validation only; real-state feasibility not established"
+}
