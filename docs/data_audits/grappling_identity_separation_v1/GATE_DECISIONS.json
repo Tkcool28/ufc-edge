@@ -1,0 +1,15 @@
+{
+  "conclusion": "B \u2014 PARTIAL SEPARATION SUPPORTED",
+  "divisions_passing": 4,
+  "gates": {
+    "G1_repeatability": true,
+    "G2_nonredundancy": true,
+    "G3_regions_and_replication": false,
+    "G4_support_and_chronology": true,
+    "G5_division_and_era": true
+  },
+  "next_milestone": "UFC_EDGE_GROUND_IDENTITY_SUPPORT_AWARE_REPRESENTATION_CONTRACT_V1",
+  "partial_gate": true,
+  "protocol_freeze_commit": "8be3a32181ec90471902482161826301ffb74110",
+  "protocol_sha256": "1dcc8db77e17bd28e41b6f7ce910dee7e2d479e32fea3cf16451f7fd0e629d6e"
+}

@@ -1,0 +1,10 @@
+{
+  "conclusion": "B \u2014 PARTIAL SEPARATION SUPPORTED",
+  "evidence_manifest_sha256": "8e232aaa3442ae90f4697681d21a67deb22dd6b7ec0b321a7f73d7bbffc6856d",
+  "fits": 0,
+  "marker": "UFC_EDGE_GRAPPLING_IDENTITY_SEPARATION_V1_COMPLETE",
+  "next_milestone": "UFC_EDGE_GROUND_IDENTITY_SUPPORT_AWARE_REPRESENTATION_CONTRACT_V1",
+  "protocol_freeze_commit": "8be3a32181ec90471902482161826301ffb74110",
+  "starting_main": "4a202a2eeb599b790323d1463288690addf3bd47",
+  "status": "COMPLETE"
+}

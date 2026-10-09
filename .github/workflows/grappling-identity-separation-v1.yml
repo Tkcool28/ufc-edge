@@ -1,0 +1,23 @@
+name: Frozen grappling identity separation V1
+on:
+  pull_request:
+    paths:
+      - 'docs/data_audits/grappling_identity_separation_v1/**'
+      - 'tools/audits/*grappling_identity_separation_v1.py'
+      - '.github/workflows/grappling-identity-separation-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r docs/data_audits/grappling_identity_separation_v1/requirements.txt
+      - run: python tools/audits/verify_grappling_identity_separation_v1.py --rerun
+      - run: PYTHONPATH=src python -m unittest discover -s tests/features -p test_elapsed_exposure.py
+      - run: git diff --check

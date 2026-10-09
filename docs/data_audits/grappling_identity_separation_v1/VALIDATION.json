@@ -1,0 +1,12 @@
+{
+  "blocks_disjoint": true,
+  "fits": 0,
+  "frozen_membership_source_verified": true,
+  "independent_scalar_checks": 4343,
+  "prospective_outcomes_accessed": false,
+  "same_date_future_mutation_invariant": true,
+  "sealed_through": "2026-08-15",
+  "states": 11316,
+  "status": "PASS",
+  "strict_prior": true
+}
