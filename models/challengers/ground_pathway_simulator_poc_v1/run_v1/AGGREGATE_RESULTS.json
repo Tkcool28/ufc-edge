@@ -1,0 +1,254 @@
+{
+  "A": {
+    "N": 4260,
+    "N_finish": 2115,
+    "actual_DEC": 0.5035211267605634,
+    "actual_KO": 0.31948356807511735,
+    "actual_SUB": 0.17699530516431924,
+    "actual_conditional_SUB": 0.35650118203309694,
+    "calibration_DEC": {
+      "intercept": -0.08025875848660742,
+      "slope": 0.8321088868699619,
+      "status": "CONVERGED"
+    },
+    "calibration_KO": {
+      "intercept": -0.0964821823619829,
+      "slope": 0.8359681828789779,
+      "status": "CONVERGED"
+    },
+    "calibration_SUB": {
+      "intercept": -0.1316807528265417,
+      "slope": 0.8299148377437164,
+      "status": "CONVERGED"
+    },
+    "conditional_brier": 0.21361421429488797,
+    "conditional_calibration": {
+      "intercept": 0.010552102943345147,
+      "slope": 0.8306575823084529,
+      "status": "CONVERGED"
+    },
+    "conditional_ll": 0.6153655880481265,
+    "mean_DEC": 0.5267590927180245,
+    "mean_KO": 0.3146900102802675,
+    "mean_SUB": 0.15855089700170794,
+    "mean_conditional_SUB": 0.3368477103241156,
+    "multiclass_ll": 0.9757543208590812,
+    "summed_brier": 0.5862061701259923
+  },
+  "C": {
+    "N": 4260,
+    "N_finish": 2115,
+    "actual_DEC": 0.5035211267605634,
+    "actual_KO": 0.31948356807511735,
+    "actual_SUB": 0.17699530516431924,
+    "actual_conditional_SUB": 0.35650118203309694,
+    "calibration_DEC": {
+      "intercept": -0.08025875848660742,
+      "slope": 0.8321088868699619,
+      "status": "CONVERGED"
+    },
+    "calibration_KO": {
+      "intercept": -0.050789622913489325,
+      "slope": 0.8756066317526545,
+      "status": "CONVERGED"
+    },
+    "calibration_SUB": {
+      "intercept": 0.04561028954432155,
+      "slope": 0.9596233067585994,
+      "status": "CONVERGED"
+    },
+    "conditional_brier": 0.21010027923538216,
+    "conditional_calibration": {
+      "intercept": -0.037952071062040744,
+      "slope": 0.9711482094439711,
+      "status": "CONVERGED"
+    },
+    "conditional_ll": 0.6077766761670896,
+    "mean_DEC": 0.5267590927180245,
+    "mean_KO": 0.3109167170860339,
+    "mean_SUB": 0.1623241901959415,
+    "mean_conditional_SUB": 0.3450637115272576,
+    "multiclass_ll": 0.9719865864392707,
+    "summed_brier": 0.5845470762335202
+  },
+  "identity": {
+    "N": 4260,
+    "N_finish": 2115,
+    "actual_DEC": 0.5035211267605634,
+    "actual_KO": 0.31948356807511735,
+    "actual_SUB": 0.17699530516431924,
+    "actual_conditional_SUB": 0.35650118203309694,
+    "calibration_DEC": {
+      "intercept": -0.08025875856065906,
+      "slope": 0.8321088870156308,
+      "status": "CONVERGED"
+    },
+    "calibration_KO": {
+      "intercept": -0.21420981299511946,
+      "slope": 0.8505898323005059,
+      "status": "CONVERGED"
+    },
+    "calibration_SUB": {
+      "intercept": 0.1508973492157541,
+      "slope": 0.863386040666384,
+      "status": "CONVERGED"
+    },
+    "conditional_brier": 0.21775177496152476,
+    "conditional_calibration": {
+      "intercept": -0.3116907304088094,
+      "slope": 0.857963070438987,
+      "status": "CONVERGED"
+    },
+    "conditional_ll": 0.6279490894007715,
+    "mean_DEC": 0.5267590927180246,
+    "mean_KO": 0.3457992391557028,
+    "mean_SUB": 0.1274416681262726,
+    "mean_conditional_SUB": 0.2700667696214033,
+    "multiclass_ll": 0.9820017634320491,
+    "summed_brier": 0.5876381734686722
+  },
+  "pooled_conversion": {
+    "N": 4260,
+    "N_finish": 2115,
+    "actual_DEC": 0.5035211267605634,
+    "actual_KO": 0.31948356807511735,
+    "actual_SUB": 0.17699530516431924,
+    "actual_conditional_SUB": 0.35650118203309694,
+    "calibration_DEC": {
+      "intercept": -0.08025875856065906,
+      "slope": 0.8321088870156308,
+      "status": "CONVERGED"
+    },
+    "calibration_KO": {
+      "intercept": -0.2170362270633212,
+      "slope": 0.8447447260753139,
+      "status": "CONVERGED"
+    },
+    "calibration_SUB": {
+      "intercept": 0.12887746576317577,
+      "slope": 0.8521191354670514,
+      "status": "CONVERGED"
+    },
+    "conditional_brier": 0.2181473922522623,
+    "conditional_calibration": {
+      "intercept": -0.2967483909338296,
+      "slope": 0.844075286734172,
+      "status": "CONVERGED"
+    },
+    "conditional_ll": 0.6289361604939524,
+    "mean_DEC": 0.5267590927180246,
+    "mean_KO": 0.345656919103476,
+    "mean_SUB": 0.12758398817849947,
+    "mean_conditional_SUB": 0.2703995264021814,
+    "multiclass_ll": 0.9824918233761988,
+    "summed_brier": 0.5878337070181174
+  },
+  "population": {
+    "N": 4260,
+    "N_finish": 2115,
+    "actual_DEC": 0.5035211267605634,
+    "actual_KO": 0.31948356807511735,
+    "actual_SUB": 0.17699530516431924,
+    "actual_conditional_SUB": 0.35650118203309694,
+    "calibration_DEC": {
+      "intercept": -0.08025875856065906,
+      "slope": 0.8321088870156308,
+      "status": "CONVERGED"
+    },
+    "calibration_KO": {
+      "intercept": -0.24039654884474607,
+      "slope": 0.7608286050482432,
+      "status": "CONVERGED"
+    },
+    "calibration_SUB": {
+      "intercept": -0.23436488423202984,
+      "slope": 0.6920237654981067,
+      "status": "CONVERGED"
+    },
+    "conditional_brier": 0.22676260119407732,
+    "conditional_calibration": {
+      "intercept": -0.08424388023220641,
+      "slope": 0.6904281582678707,
+      "status": "CONVERGED"
+    },
+    "conditional_ll": 0.6493192916096765,
+    "mean_DEC": 0.5267590927180246,
+    "mean_KO": 0.33877539323514994,
+    "mean_SUB": 0.13446551404682552,
+    "mean_conditional_SUB": 0.28166671136392785,
+    "multiclass_ll": 0.9926116173456252,
+    "summed_brier": 0.5925336918862535
+  },
+  "return_double": {
+    "N": 4260,
+    "N_finish": 2115,
+    "actual_DEC": 0.5035211267605634,
+    "actual_KO": 0.31948356807511735,
+    "actual_SUB": 0.17699530516431924,
+    "actual_conditional_SUB": 0.35650118203309694,
+    "calibration_DEC": {
+      "intercept": -0.08025875856065906,
+      "slope": 0.8321088870156308,
+      "status": "CONVERGED"
+    },
+    "calibration_KO": {
+      "intercept": -0.32348276482054356,
+      "slope": 0.8553871732207126,
+      "status": "CONVERGED"
+    },
+    "calibration_SUB": {
+      "intercept": 0.28524922073749215,
+      "slope": 0.8085780400078991,
+      "status": "CONVERGED"
+    },
+    "conditional_brier": 0.23210133541866723,
+    "conditional_calibration": {
+      "intercept": -0.6059804602492427,
+      "slope": 0.8472575427837482,
+      "status": "CONVERGED"
+    },
+    "conditional_ll": 0.6701284451851769,
+    "mean_DEC": 0.5267590927180246,
+    "mean_KO": 0.3737067178191842,
+    "mean_SUB": 0.09953418946279126,
+    "mean_conditional_SUB": 0.21110925977909528,
+    "multiclass_ll": 1.0029429224658561,
+    "summed_brier": 0.5945749088175214
+  },
+  "return_half": {
+    "N": 4260,
+    "N_finish": 2115,
+    "actual_DEC": 0.5035211267605634,
+    "actual_KO": 0.31948356807511735,
+    "actual_SUB": 0.17699530516431924,
+    "actual_conditional_SUB": 0.35650118203309694,
+    "calibration_DEC": {
+      "intercept": -0.08025875856065906,
+      "slope": 0.8321088870156308,
+      "status": "CONVERGED"
+    },
+    "calibration_KO": {
+      "intercept": -0.13530851502004104,
+      "slope": 0.8398940585138222,
+      "status": "CONVERGED"
+    },
+    "calibration_SUB": {
+      "intercept": 0.04294347033490289,
+      "slope": 0.8934613527151725,
+      "status": "CONVERGED"
+    },
+    "conditional_brier": 0.21213046428307375,
+    "conditional_calibration": {
+      "intercept": -0.10871143903632573,
+      "slope": 0.8586507055138448,
+      "status": "CONVERGED"
+    },
+    "conditional_ll": 0.6128656452281098,
+    "mean_DEC": 0.5267590927180246,
+    "mean_KO": 0.32500129592291016,
+    "mean_SUB": 0.14823961135906524,
+    "mean_conditional_SUB": 0.3140203668812081,
+    "multiclass_ll": 0.9745131520646362,
+    "summed_brier": 0.5848472997952798
+  }
+}

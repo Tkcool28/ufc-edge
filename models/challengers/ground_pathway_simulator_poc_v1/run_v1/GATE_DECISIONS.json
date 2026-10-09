@@ -1,0 +1,15 @@
+{
+  "classification": "B",
+  "favorable_years_vs_C": 1,
+  "gates": {
+    "B3_or_B5": false,
+    "chronological_persistence": false,
+    "conditional_Brier": false,
+    "conditional_LL": false,
+    "identity_contribution": true,
+    "striking_preservation": false,
+    "three_way_and_calibration": false
+  },
+  "interpretation_limit": "Single preregistered assumption-driven model; cannot identify positional necessity or disprove mechanistic modeling.",
+  "recommended_next_milestone": "UFC_EDGE_GROUND_PATHWAY_POC_MEASUREMENT_AND_HAZARD_AUDIT_V1"
+}

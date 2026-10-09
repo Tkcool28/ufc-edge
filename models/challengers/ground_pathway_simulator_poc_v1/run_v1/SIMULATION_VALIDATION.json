@@ -1,0 +1,67 @@
+{
+  "all_frozen_reference_probabilities_unchanged": true,
+  "byte_identical_full_ability_prediction_reconstruction": [
+    "prediction_only.csv",
+    "fighter_abilities.csv.gz",
+    "population_priors.json",
+    "simulator_records.json",
+    "ABILITY_VALIDATION.json"
+  ],
+  "chronology": {
+    "experienced_fighter_target_same_date_future_mutation_checks": 44
+  },
+  "exact_outer_fight_identity_matching": true,
+  "frozen_B3_B5_A1_A2_A4_matching": true,
+  "independent_canonical_scalar_checks": 87112,
+  "max_probability_regeneration_error": 0.0,
+  "metrics_and_gate_reproduction": true,
+  "monte_carlo": {
+    "count_convergence": [
+      {
+        "estimated": [
+          0.3233,
+          0.0869,
+          0.5898
+        ],
+        "exact": [
+          0.3212088955564076,
+          0.08924049509194881,
+          0.5895506093516436
+        ],
+        "max_absolute_error": 0.0023404950919488077,
+        "n": 10000,
+        "six_se_bound": 0.06
+      },
+      {
+        "estimated": [
+          0.3244,
+          0.08751,
+          0.58809
+        ],
+        "exact": [
+          0.3212088955564076,
+          0.08924049509194881,
+          0.5895506093516436
+        ],
+        "max_absolute_error": 0.0031911044435924407,
+        "n": 100000,
+        "six_se_bound": 0.018973665961010275
+      }
+    ],
+    "method": "event-driven Gillespie",
+    "seed": 161163,
+    "seed_reproducible": true
+  },
+  "numerical": {
+    "analytic_no_ground_case": true,
+    "closed_form_absorption": true,
+    "invalid_input_fail_closed": true,
+    "nonnegative_bounded_transitions": true,
+    "normalization": true,
+    "one_second_vs_round_max_error": 1.9984014443252818e-14
+  },
+  "prospective_outcomes_accessed": false,
+  "saved_transition_records_regenerated": 21300,
+  "source_hashes_unchanged": true,
+  "status": "PASS"
+}

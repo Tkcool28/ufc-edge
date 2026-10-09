@@ -1,0 +1,28 @@
+name: Independent ground-pathway simulator POC V1
+on:
+  pull_request:
+    paths:
+      - 'models/challengers/ground_pathway_simulator_poc_v1/**'
+      - '.github/workflows/ground-pathway-simulator-poc-v1-independent.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r models/challengers/ground_pathway_simulator_poc_v1/requirements.txt
+      - run: PYTHONPATH=src python -m unittest discover -s tests/features -p test_elapsed_exposure.py
+      - run: python models/challengers/ground_pathway_simulator_poc_v1/publication.py --verify-isolated
+      - run: python models/challengers/ground_pathway_simulator_poc_v1/publication.py --check
+      - run: git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: independent-ground-pathway-poc-v1-evidence
+          path: models/challengers/ground_pathway_simulator_poc_v1/run_v1/
+          retention-days: 90

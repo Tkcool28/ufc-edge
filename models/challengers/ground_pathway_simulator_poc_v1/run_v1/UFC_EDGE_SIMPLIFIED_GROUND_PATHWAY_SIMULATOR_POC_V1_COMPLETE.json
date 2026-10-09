@@ -1,0 +1,17 @@
+{
+  "branch": "feat/ground-pathway-simulator-poc-v1-independent",
+  "classification": "B",
+  "draft_pr": 163,
+  "evidence_manifest_sha256": "839587507aa470f8d0cf8df7b66f13c04a665790ebde1b2802abfc0c99f07d8b",
+  "marker": "UFC_EDGE_SIMPLIFIED_GROUND_PATHWAY_SIMULATOR_POC_V1_COMPLETE",
+  "merged": false,
+  "preregistration_sha": "b224f68a78558e55a9734d92ef6207967fef8f01",
+  "promoted": false,
+  "prospective_outcomes_accessed": false,
+  "scientific_success": false,
+  "scored_fights": 4260,
+  "scored_standard_finishes": 2115,
+  "starting_main": "f70848818005e54d2db000ec73677f2fd27be033",
+  "status": "COMPLETE_VALID_NEGATIVE_RESULT",
+  "verification": "PASS"
+}
