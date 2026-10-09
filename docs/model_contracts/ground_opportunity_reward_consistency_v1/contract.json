@@ -1,0 +1,137 @@
+{
+  "contract_id": "UFC_EDGE_GROUND_OPPORTUNITY_REWARD_CONSISTENCY_CONTRACT_V1",
+  "starting_main_sha": "675da47d6ad9b937c4b01dcd3986250b72308948",
+  "mode": "CONTRACT_AND_SYNTHETIC_VALIDATION_ONLY",
+  "exposure_proxy": "A_DECISION_CTRL_GENERIC_OPPORTUNITY_NOT_OBSERVED_GROUND_TIME",
+  "states": [
+    "STANDING",
+    "GROUND_A_ACTIVE",
+    "GROUND_B_ACTIVE",
+    "KO",
+    "SUB"
+  ],
+  "round_minutes": 5.0,
+  "scheduled_rounds": [
+    3,
+    5
+  ],
+  "reward_basis": "EXPECTED_ELAPSED_ALIVE_MINUTES_RATIO_OF_EXPECTATIONS",
+  "eligible_share_floor": 0.02,
+  "legacy_control_proxy_ceiling": 0.8,
+  "maximum_implicit_opportunity_scale": 50.0,
+  "raw_control_proxy": "sqrt(actor.control * opponent.control_allowed)",
+  "control_target": "legacy_clip(raw_control_proxy,0.02,0.8); record raw, target, regularization flag; reject infeasible bilateral sum",
+  "total_time_targets": {
+    "TD": "actor.access",
+    "SUB": "sqrt(actor.submission * opponent.sub_faced)",
+    "GNP": "sqrt(actor.gnp * opponent.ground_allowed)"
+  },
+  "TD_success": "sqrt(actor.td_conversion * (1-opponent.td_resistance))",
+  "SUB_conversion": "sqrt(actor.sub_conversion * opponent.sub_conversion_allowed); existing 50-attempt prior",
+  "GNP_conversion": "unchanged PR163 pooled latent ground_conversion",
+  "standing_KO": "unchanged PR163 identity standing_ko hazard; no new standing reward fitting",
+  "solver": {
+    "method": "scipy.optimize.least_squares bounded TRF, normalized return variables",
+    "bounds": [
+      0.0,
+      1.0
+    ],
+    "initial": [
+      0.5,
+      0.5
+    ],
+    "ftol": 1e-12,
+    "xtol": 1e-12,
+    "gtol": 1e-12,
+    "max_nfev": 400,
+    "occupancy_absolute_tolerance": 1e-08,
+    "reward_relative_tolerance": 1e-07,
+    "probability_absolute_tolerance": 1e-10,
+    "flux_budget_tolerance_per_minute": 1e-12,
+    "projection": "NONE; explicit unavailable, never alter action rewards or silently cap/proportionally renormalize CTRL",
+    "multiple_root_rule": "fixed pinned solver, single fixed initialization, first accepted tolerance-qualified root; save residual and Jacobian; no multistart or outcome selection",
+    "finite_round_ceiling_certificate": "when every terminal hazard is zero: total ground target <= 1-(1-exp(-5*sum(entry)))/(5*sum(entry)); otherwise no finish-free ceiling claim",
+    "closed_form_conditional_equivalence_tolerance": 1e-08
+  },
+  "fallback": "original support-aware division/global priors inside abilities only; no solver-dependent fallback",
+  "future_preflight": {
+    "supported_feasible_fraction_min": 0.99,
+    "outer_feasible_fraction_required_for_scoring": 1.0,
+    "drop_unavailable_rows": false
+  },
+  "arms": [
+    "POC_A_EXACT_PR163_SAVED_REFERENCE",
+    "POC_B_OPPORTUNITY_MAPPING_ONLY"
+  ],
+  "outer_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "historical_seal": "2026-08-15",
+  "source_population": {
+    "fights": 4260,
+    "standard_finishes": 2115
+  },
+  "bootstrap": {
+    "unit": "event",
+    "paired_draws": 2000,
+    "seed": 164165,
+    "interval": [
+      0.025,
+      0.975
+    ]
+  },
+  "gates": {
+    "overall_SUB_positive_deficit_ratio_max_vs_A": 0.5,
+    "overall_SUB_absolute_gap_max": 0.025,
+    "overall_KO_absolute_gap_increase_max_vs_A": 0.005,
+    "each_B3_B5_positive_deficit_ratio_max_vs_A": 0.75,
+    "each_B3_B5_absolute_gap_increase_max_vs_A": 0.0,
+    "each_B3_B5_LL_increase_max_vs_A": 0.0,
+    "each_B3_B5_Brier_increase_max_vs_A": 0.002,
+    "at_least_one_B3_B5_LL_improvement_min": 0.01,
+    "at_least_one_B3_B5_event_CI_upper_required": 0.0,
+    "conditional_LL_improvement_min_vs_A": 0.01,
+    "conditional_LL_event_CI_upper_required_vs_A": 0.0,
+    "conditional_Brier_increase_max_vs_A": 0.002,
+    "multiclass_LL_improvement_min_vs_A": 0.003,
+    "summed_Brier_increase_max_vs_A": 0.003,
+    "each_A1_A4_positive_LL_gap_ratio_max_to_Arm_C": 0.5,
+    "each_A1_A2_A4_LL_increase_max_vs_Arm_C": 0.01,
+    "each_A1_A2_A4_Brier_increase_max_vs_Arm_C": 0.005,
+    "annual_LL_improved_years_min_vs_A": 6,
+    "annual_LL_increase_max_vs_A": 0.01,
+    "subgroup_N_finish_min": 25,
+    "competitive_LL_improvement_min_vs_Arm_C": 0.005,
+    "competitive_LL_event_CI_upper_required": 0.0,
+    "competitive_Brier_increase_max_vs_Arm_C": 0.002,
+    "competitive_annual_LL_improved_years_min_vs_Arm_C": 6
+  },
+  "prohibited": [
+    "POC_B_execution_in_this_task",
+    "outer_performance_inspection_in_this_task",
+    "Holmes_2x_constant",
+    "new_features",
+    "new_positions",
+    "new_fits",
+    "F01_F02_changes",
+    "B3_B5_changes",
+    "prospective_unsealing",
+    "odds_ROI_EV",
+    "automatic_merge"
+  ],
+  "required_multiplier_reports": [
+    "SUB_hazard / directional_total_SUB_reward, null if denominator zero",
+    "SUB_hazard / attacker_shrunk_total_SUB_rate, null if denominator zero",
+    "directional_total_SUB_reward / attacker_shrunk_total_SUB_rate",
+    "opportunity_scale_operator=1/actor_ground_share"
+  ],
+  "conditional_reward_identity": "KO/SUB ratio = (standing_KO*standing_share + sum(total_GNP*ground_conversion)) / (standing_KO*standing_share + sum(total_GNP*ground_conversion) + sum(total_SUB*SUB_conversion)); require engine equivalence, not an extra arm"
+}
