@@ -1,0 +1,38 @@
+{
+  "status": "PARTIAL_EXECUTION_ONLY",
+  "files": {
+    "posterior_H1_2018.nc": {
+      "sha256": "fa3f2a433e4f534b70b0d1446843deba6da3f7c1867b9ec1affa993fb794eed8",
+      "bytes": 2137706
+    },
+    "posterior_H1_2019.nc": {
+      "sha256": "6e6705d3e199a1011cf69dacccdaed7d6c2ba86df75be239dc2f922d96bd4c0d",
+      "bytes": 2137164
+    },
+    "posterior_H1_2020.nc": {
+      "sha256": "9feab01229936d8ddd7761b6d623386477bcc96dbd68b60f87647baea529e73c",
+      "bytes": 2139609
+    },
+    "posterior_H1_2021.nc": {
+      "sha256": "e71d48576b071fd199170a12ccf7c87e4444ab4a21c2b67511a24c5bb4dba2f4",
+      "bytes": 2140573
+    },
+    "posterior_H2_2018.nc": {
+      "sha256": "bfd9f65e27df01589d8f9b780a7c6c9b9c41598d06abd3a644492f265c7e857a",
+      "bytes": 8049389
+    },
+    "posterior_H2_2019.nc": {
+      "sha256": "825c8d4f46d93b49824d5f3302fe36d9e3bbeb47067ca7fd1a167684e4beaa05",
+      "bytes": 8048242
+    },
+    "posterior_H2_2020.nc": {
+      "sha256": "fd1d5e6cc537786b80f8e020b04219c7a9bf5e106ba27c7bb4dd56edde5bc6ba",
+      "bytes": 8049266
+    },
+    "posterior_H2_2021.nc": {
+      "sha256": "db8da02792728c8740875874982cb17e461a8666b12f7e108539f69e22478b07",
+      "bytes": 8049016
+    }
+  },
+  "failed_fit_retained_for_inference_audit": true
+}

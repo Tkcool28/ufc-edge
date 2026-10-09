@@ -1,0 +1,6 @@
+{
+  "max_abs_probability_delta": 0.0,
+  "posterior_arrays_identical": true,
+  "predictions_identical": true,
+  "scope": "first H1 fold exact same environment repeat"
+}

@@ -1,0 +1,128 @@
+{
+  "contract_commit": "bc5f9df5436402915915aa34da304bbfa46cbccb",
+  "contract_sha256": "89636e1eeb20a18c714cb9187c669892ce152afd6020c01f5c5cc81cc4e7157c",
+  "files": {
+    "BLOCKED.json": {
+      "bytes": 36934,
+      "sha256": "32bd64189bceed91ccf453b9ad167f3584eaf55883f61a890716952a909f5a49"
+    },
+    "BLOCKER_REPORT.md": {
+      "bytes": 5313,
+      "sha256": "10d11640f58188a60563857f781fb75b0513dab0c6df3030fb5ce0c58daebfa5"
+    },
+    "HELPED_HURT_UNCHANGED.md": {
+      "bytes": 215,
+      "sha256": "bf1d3968f00999bbdf670afc0ecee9010272f75ca239022be93d6155cd0a5273"
+    },
+    "IMPLICATIONS_FOR_HYBRID_SIMULATOR.md": {
+      "bytes": 319,
+      "sha256": "e16c11724aae66d69f4219e0be6dc3c92e0a417ba95e89384cd698d8d02750d9"
+    },
+    "IMPLICATIONS_FOR_MOV1.md": {
+      "bytes": 241,
+      "sha256": "828e95db847e61c893f08b42f6dbbd6a3d52be8679ea9d0fb89ab4a49d261c53"
+    },
+    "effects_H1_2018.json.gz": {
+      "bytes": 2521,
+      "sha256": "bba478df850b3298ff5db1f3f203ee69f1a91d46cc370d2513dffbe4d225a70d"
+    },
+    "effects_H1_2019.json.gz": {
+      "bytes": 2531,
+      "sha256": "9424c4c867ab8d8c47ae6c24d222d43ff0af07bd19d271309536e7bf34a63890"
+    },
+    "effects_H1_2020.json.gz": {
+      "bytes": 2530,
+      "sha256": "ce42e16b1fc5abad440930ba9998402e1bcf2548c51b53ed18ce867ecfb4670d"
+    },
+    "effects_H1_2021.json.gz": {
+      "bytes": 2516,
+      "sha256": "657ca076e2b3b7294d1c7ce9b4a76cdc7a24778568c8dc8d7953850bae484725"
+    },
+    "effects_H2_2018.json.gz": {
+      "bytes": 18165,
+      "sha256": "267ae25714e6c8b0e3f572d88e19d041ebf0a7c0cfba1ce3ca2e7546b028d143"
+    },
+    "effects_H2_2019.json.gz": {
+      "bytes": 18215,
+      "sha256": "b6cd2055f687638ca280bc8f687e894f0ea87016c7e9d8ed969f88cb4ead0598"
+    },
+    "effects_H2_2020.json.gz": {
+      "bytes": 18211,
+      "sha256": "5228b1935bd449c6c660a5c846e3bd8ae7ca3be73e84eae7f3eca52478ade056"
+    },
+    "effects_H2_2021.json.gz": {
+      "bytes": 18225,
+      "sha256": "70a2fa72972e5d07f13713ba8e4385ecf97333eb6294b664aec0b35fe2631bff"
+    },
+    "execution_identity.json": {
+      "bytes": 1856,
+      "sha256": "a120acece54c5ed1fbfe7a7a8e8bcea1bdd01a27626b76e4e4b8a9e937450173"
+    },
+    "fit_diagnostics.json.gz": {
+      "bytes": 18843,
+      "sha256": "03ed2b620e52319a01bd0bde9fd83d259870f5702136364dd8f8a39a714c112f"
+    },
+    "fold_H1_2018.csv.gz": {
+      "bytes": 27824,
+      "sha256": "2255d83904aaa03e1e214b5d7f465b6c29df4cd7e049b5d6298d16c9b22921d1"
+    },
+    "fold_H1_2019.csv.gz": {
+      "bytes": 29945,
+      "sha256": "33ed14a2c416d9bb8a7aee6d53c025af931281fa41bc5a6f3df4582281b1d0d3"
+    },
+    "fold_H1_2020.csv.gz": {
+      "bytes": 26337,
+      "sha256": "111baccc3b3bbcddbe8296913b3d98467ffeabb022653f0818927caef40ccaff"
+    },
+    "fold_H1_2021.csv.gz": {
+      "bytes": 29278,
+      "sha256": "72d0c424726b32d991bac1e4f111ed17a549d10040a1d3eeebed7c762f09de35"
+    },
+    "fold_H2_2018.csv.gz": {
+      "bytes": 27806,
+      "sha256": "74f0562fdd36788150c94721ee0b058ae74f6469e16b43c9946458ef9d1528a7"
+    },
+    "fold_H2_2019.csv.gz": {
+      "bytes": 29953,
+      "sha256": "435c90049ff38262b0ecf78b5b5cd475c9656ad2d03414cf60ec98f1df530cff"
+    },
+    "fold_H2_2020.csv.gz": {
+      "bytes": 26382,
+      "sha256": "b326ed5dc63d83fc95bef134d91e5624a37e61880a0e349c2e77827c8205396d"
+    },
+    "posterior_trace_manifest.json": {
+      "bytes": 1261,
+      "sha256": "d561d0fc72f4cde7bac01c3622d35f5e4574e5445de0da9a4bd3744078f8bc73"
+    },
+    "preprocessing_2018.json": {
+      "bytes": 8729,
+      "sha256": "d04b7e90c8b7350ee022a88004194a1ce4398a11785bcc49730b5071a291fd78"
+    },
+    "preprocessing_2019.json": {
+      "bytes": 8970,
+      "sha256": "ef042c27e69bcfad783c609eef002d15ba6562f0de368a54a4ea32476d7cd72f"
+    },
+    "preprocessing_2020.json": {
+      "bytes": 8984,
+      "sha256": "e46c20d3924541676cb654cf7ce40f8c1a324c0951774f7d96d67d064f3e5162"
+    },
+    "preprocessing_2021.json": {
+      "bytes": 8985,
+      "sha256": "1f19e518bdf93c719f944c3b24490832af8b7a78ca6d0a152a17b013f7f88907"
+    },
+    "reproducibility.json": {
+      "bytes": 168,
+      "sha256": "e17f091349e2122396c815eb9f2f890ee5f790933f40f76be43d8a1a0035bf85"
+    }
+  },
+  "immutable_sources": {
+    "docs/model_diagnostics/mov0_conditional_feature_interaction_archetype_v1/feature_state_thresholds.json": "066d525e3660fbbee9accba47ea3b56468179e6eff6d78d4aebabe7e45c8daad",
+    "governance/model_validation_bucket_v1/MODEL_VALIDATION_BUCKET_ASSIGNMENTS_V1.csv.gz": "d3358cfc468a791861ee6fb87473f119f949d705c54abfcb504d9ebbecdcb5d2",
+    "models/mov0/feature_surface_v1.json": "5cad139d1ef956c7fec6ea2c8d9b86a117195bf8be221cfd757740275e4edb2b",
+    "models/mov0/model_contract_v1.json": "6a28238798563d6f7c538eac30048e46c9f4bc3a05d23c30381462ae0655a8e0",
+    "models/mov0/validation_plan_v1.json": "962229624ccb95ad47f7846aae38735aebe88b0d404692a1bc9789a94589db35",
+    "src/ufc_edge/models/mov0.py": "15cd6d669b61c7e9e8fea456a9e944ad561d02ff5e376e5b3ca95dfd3564362b",
+    "tools/diagnostics/run_mov0_conditional_feature_interaction_archetype_v1.py": "8e517481e34f402d6457968f4a6838351ba799a4b756115196ccfd6d07f2be50"
+  },
+  "status": "BLOCKED_CONVERGENCE"
+}

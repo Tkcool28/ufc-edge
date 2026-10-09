@@ -1,0 +1,90 @@
+name: MOV0 Hierarchical Partial Pooling Challenger V1
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/mov0-hierarchical-partial-pooling-v1.yml'
+      - 'models/challengers/mov0_hierarchical_v1/**'
+      - 'tools/models/*mov0_hierarchical_v1.py'
+      - 'tests/models/test_mov0_hierarchical_v1.py'
+  workflow_dispatch:
+    inputs:
+      execute_challenger:
+        type: boolean
+        default: false
+        description: Run preregistered 18 fits, repeat check, and evaluation
+permissions:
+  contents: read
+  actions: read
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PYTHONPATH: src
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r models/challengers/mov0_hierarchical_v1/requirements.lock
+      - run: git merge-base --is-ancestor bc5f9df5436402915915aa34da304bbfa46cbccb HEAD
+      - run: python -m pytest -q tests/models/test_mov0_hierarchical_v1.py tests/models/test_mov0.py tests/models/test_mov0_contract.py
+      - run: git diff origin/main...HEAD --check
+      - name: Verify durable partial evidence when published
+        run: |
+          if [ -f models/challengers/mov0_hierarchical_v1/partial_evidence/MANIFEST.json ]; then
+            python tools/models/verify_mov0_hierarchical_evidence_v1.py --evidence-dir models/challengers/mov0_hierarchical_v1/partial_evidence
+          fi
+  challenger:
+    needs: tests
+    if: github.event_name == 'workflow_dispatch' && inputs.execute_challenger
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      PYTHONPATH: src
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r models/challengers/mov0_hierarchical_v1/requirements.lock
+      - uses: actions/download-artifact@v4
+        with:
+          name: physical-profile-corrected-f02-v1
+          path: ${{ runner.temp }}/f02
+          repository: Tkcool28/ufc-edge
+          run-id: 35182939981
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: mov0-standard-finish-probability-v1
+          path: ${{ runner.temp }}/mov0
+          repository: Tkcool28/ufc-edge
+          run-id: 35376956316
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Fit and evaluate frozen specification
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/models/run_mov0_hierarchical_v1.py --f02-dir "${{ runner.temp }}/f02" --mov0-run-dir "${{ runner.temp }}/mov0/ufc-edge/ufc-edge/models/mov0/run_v1" --output-dir "${{ runner.temp }}/evidence" 2>&1 | tee "${{ runner.temp }}/console.log"
+          python tools/models/evaluate_mov0_hierarchical_v1.py --f02-dir "${{ runner.temp }}/f02" --mov0-run-dir "${{ runner.temp }}/mov0/ufc-edge/ufc-edge/models/mov0/run_v1" --evidence-dir "${{ runner.temp }}/evidence"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mov0-hierarchical-partial-pooling-v1
+          path: |
+            ${{ runner.temp }}/evidence
+            ${{ runner.temp }}/console.log
+          if-no-files-found: error
+          retention-days: 90
