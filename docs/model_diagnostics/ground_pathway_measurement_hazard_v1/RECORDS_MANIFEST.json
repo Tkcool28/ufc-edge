@@ -1,0 +1,169 @@
+{
+  "archive_bytes": 2772300,
+  "archive_sha256": "23f418a1ba69774ffc94f0adb09a1e3eb3c88dc9d7d1364caff4991548be921b",
+  "format": "Concatenate numbered parts, verify archive hash, extract plain CSV records. Primary archive table retains identifiers, unchanged cell membership, F and every reward; duplicate frozen reference columns are omitted. Oracle records retain all reward columns. Full original merged table regenerates with audit.py.",
+  "parts": [
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part000",
+      "sha256": "004e344a0561034d043872b1691fa72d8113a461d221d96f0e52ff5040f554af"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part001",
+      "sha256": "e3c76f5b886a1faaf8b55f2c092f85e3f9879c33e918fc4f036d68674fa48d4e"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part002",
+      "sha256": "221d61b744c1e2b90fcd36b70a42343516da1c9927d175c3345ceb3a716f6053"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part003",
+      "sha256": "1dda85f41ebf4a96b19fd5739bfc9615ef0cf5a7525a95879c762b74396c0d8e"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part004",
+      "sha256": "552ec4a863a1400812527a2e47bcb609c34a643a9e42ae24d1aa245b56b49f90"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part005",
+      "sha256": "df10f66f8f94ac6843de30bdad1d5730e82dc34308f33783ae1ef9a2f000e936"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part006",
+      "sha256": "5f8e1d2798fb96f9590d9f9034545d9cbc115383b5d722f757ef927e6d40eb10"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part007",
+      "sha256": "c68b6db9841c9c6170cbbb431469cf8816b4de65dcc14d8cfdcab2c9c2cff84f"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part008",
+      "sha256": "c849018d3763ba96e280462da65706de171d30f5885feeff023c88cf9a0e8599"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part009",
+      "sha256": "c15f34faaa30396482fa7b08549440b982b7111a9148db4dfa1ce2b40065be43"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part010",
+      "sha256": "7cdf4a37bbb4a2fd14f1cf8c78486056a5d4108bbfa7c900974eccb53e71c9cd"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part011",
+      "sha256": "30b78e24fae0009f651c6a7359b14fe93585f6451624cbe7fcfa52e964b0818f"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part012",
+      "sha256": "0052b77f2feb7c026dab4d0231f7df3ce94fcdb32d18f46210239259de041960"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part013",
+      "sha256": "5b781cdd7154fbbea0058f3245fdf52c572e9667123e84ad68566f397129d6a3"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part014",
+      "sha256": "746a044b26f52d70c6e5aea5248aff64ff3aaa5d41a2a329713cd6afbc388e11"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part015",
+      "sha256": "b0107f05d7a8fa889f681669689ea753bcf98f1d368a0319daa6d296ecc0e4da"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part016",
+      "sha256": "69215669928cf23819529e055a3bfab5c96320298608a133446ce3f271cbe991"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part017",
+      "sha256": "865e6cde52d19cb400c98b4614aa40eab96875766d369b085eb090aebc01908e"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part018",
+      "sha256": "f0c3692a220a5edfa2c9de64ee1876bdfdef5f1b72455a4fd3f863033bccdc73"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part019",
+      "sha256": "5cb677a856986d376057fd3db0c728faabf857dc0694db3a5e609d9227b0ccdf"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part020",
+      "sha256": "cb271027450bbe67af4962347095440c7ee68fca17be32168ccb3428289511a9"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part021",
+      "sha256": "0702ff83bb4a79734a2c3b1c50143f1ed9b2680a7b6d7f72bfd138e34081a405"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part022",
+      "sha256": "5468992d84bd49b9a9a820e73e723a4db3e18efc94430190178888fec12a54e1"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part023",
+      "sha256": "a8286620ed6394c467744775d76c900284fc508a66f0e95e78759c9e0d8db907"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part024",
+      "sha256": "c74c0f044df0a051dccac1192befd412d59e6def9e263e90642ec467c2a79f28"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part025",
+      "sha256": "192368e17cf5e5f4965402cd072122faeacbe200d69d056df2647b2f0c87590f"
+    },
+    {
+      "bytes": 100000,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part026",
+      "sha256": "106187f1cf4266ad62882878c18dc6be8d1aad7f4374a218f11e64af30f4bdb3"
+    },
+    {
+      "bytes": 72300,
+      "name": "DIAGNOSTIC_RECORDS.tar.xz.part027",
+      "sha256": "318b7a5f2ab145cba1bc50901603f797bdd2112be166924643726838428ef86c"
+    }
+  ],
+  "records": {
+    "fight_hazard_accounting.csv": {
+      "bytes": 2037976,
+      "sha256": "245bfb69b9cd04d99e06ee0204871e430d8ad07a427187af0d905dd1c832d9a1"
+    },
+    "oracle_attempts.csv": {
+      "bytes": 1411259,
+      "sha256": "9484dc468ff88e806e9fc61af0dc6f991c4ed729a344c3ccaba2f48814aef9af"
+    },
+    "oracle_combined.csv": {
+      "bytes": 1409361,
+      "sha256": "783c427290a3761e713a9c4c2cf9eba90a0622aa8559878a1df3338596f19d5d"
+    },
+    "oracle_conversion_pool.csv": {
+      "bytes": 1411218,
+      "sha256": "7c0570daddc907c6d11805b065272e52f6c6fbb3abcf89dbdb8c52e6462b4b3a"
+    },
+    "oracle_occupancy.csv": {
+      "bytes": 1425556,
+      "sha256": "e991898aa20ddc44b731e3873ae520de35dfd6af9136c620124efc8d88ed6529"
+    }
+  }
+}

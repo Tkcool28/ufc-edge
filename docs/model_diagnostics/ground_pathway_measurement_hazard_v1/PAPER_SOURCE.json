@@ -1,0 +1,14 @@
+{
+  "doi": "10.1016/j.ijforecast.2022.01.007",
+  "publisher_pdf_url": "https://prod-dcd-datasets-public-files-eu-west-1.s3.eu-west-1.amazonaws.com/05bdcbd7-50e1-4f75-95e5-693192fd2708",
+  "pages": 18,
+  "sha256": "5338f63a8ae1cbbbdf9e7022777cdd93fb95cf50321cf3017554aec49575077a",
+  "retrieval_date": "2026-10-09",
+  "checked_sections": [
+    "3",
+    "4",
+    "7",
+    "Appendix B"
+  ],
+  "quoted_words": 0
+}
