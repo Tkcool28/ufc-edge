@@ -1,7 +1,9 @@
 {
+  "cross_runtime_frozen_tolerances_pass": true,
   "exact_regeneration": true,
   "maximum_boundary_flux_residual": 4.6629367034256575e-15,
   "maximum_conditional_identity_error": 2.993586600830156e-09,
   "maximum_reward_residual": 3.013327672926006e-08,
+  "same_runtime_deterministic": true,
   "saved_records_replayed": 4260
 }

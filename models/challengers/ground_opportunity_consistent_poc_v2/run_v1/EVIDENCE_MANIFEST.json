@@ -6,7 +6,7 @@
     "models/challengers/ground_opportunity_consistent_poc_v2/opportunity.py": "473d1ab3531c17a5b4014d5c4b41b81d50b7432ae5a85c4af7b229923adc245b",
     "models/challengers/ground_opportunity_consistent_poc_v2/preflight.py": "d6d1b653161dad2c6bb195cb85baaf121200b998b1fd9410d9c4dfd3928b612f",
     "models/challengers/ground_opportunity_consistent_poc_v2/publish_evidence.py": "3c274aaa600991fe5873a2686b93501ea215d25df1b61a1194929143c5d6d9d1",
-    "models/challengers/ground_opportunity_consistent_poc_v2/report.py": "41b162a8936ecbc747d4ce07e47d644f718fc853505c79a0091607da695a73d1",
+    "models/challengers/ground_opportunity_consistent_poc_v2/report.py": "31fff7ea1e5ee6d770e526f6acae815407e9a9995bc9fae1c02066cf143c85da",
     "models/challengers/ground_opportunity_consistent_poc_v2/requirements.txt": "d1e817948151834b56e6851d7639177460a7980937a81363bef2731fc96dc50f",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/GATE_TABLE.json": "6f8a221be77a015d6900af064fdcae1398b88b6578b680a03c9dda90be09cb32",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/NEXT_MILESTONE.md": "aca8163ff4a3132281900337f1e91f6f013a7244faefef9e9ebc8efa3586b616",
@@ -14,11 +14,11 @@
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_ARM_C_COMPARISON.md": "d795dedd8cece390de744ae5b43fdab9fc8ebe68a182c715e0cf44a2eac74749",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_B3_B5_RESULTS.md": "7e1f20521e7cc96a3a5d3d84a7a249800d26c4a10da3c0e9c7899131825d972f",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_CONDITIONAL_RESULTS.md": "38270b14c834e26e06ef1f9d988a909e0cee5adb0ffcc447ee92ba4d89716fc9",
-    "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_IMPLEMENTATION_SPEC.md": "54eadab80f200c1fd03d8157be5cf4c8e6fcbfc8d8050c0c3738cc67b51eec1b",
+    "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_IMPLEMENTATION_SPEC.md": "80e48f08851e0ebfc72916e88eb701e7c2f61dff3ba151ad3706e293603b0853",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_IMPLICIT_MULTIPLIERS.md": "1d0205d58c92009fcd15d0ce55cd0f80154a075fbf74b4c664b4c5b31dbf10bb",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_PREDICTION_SEAL.md": "ab011333c377b60c1642a4544c0b3ba5d432f185e59febd34c9c8016102860f8",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_PREFLIGHT_FEASIBILITY.md": "86bac4ec0eedfa58fb21e31eff1e776625d962322e27eb5366d7fd873e14a68d",
-    "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_REWARD_CONSERVATION.md": "636fffae11aa1a63c7f2a577dc2032cce4d107a430a4f2c9c4ea2641cadc6d14",
+    "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_REWARD_CONSERVATION.md": "3bc16667b9b290868b0d6ad12fe4e1cb3129e605a7d17df8eb30dcad4d7168bd",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_STRIKING_PRESERVATION.md": "e5de8f2012127d8ac1a26bc94d9e22f55e03b6cdee910b21c9e69575cfb62a00",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_SUBMISSION_CALIBRATION.md": "aea08c3a4bd65d7f38bf92e4bf858e3e24f1dd57f7fa8535e849c568437573d1",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/POC_V2_SUPPORT_RESULTS.md": "eda99d32ef0d0dc2fb6fa6e74ffa337670be37915aa275865f2d35aff358d0d5",
@@ -158,13 +158,13 @@
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/RECORDS.tar.xz.part130": "ab8d4fd4de5214d3225059b3f6b4d7e8a6d557a5dd3121f014d12ed499bc12c4",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/RECORDS.tar.xz.part131": "7e062d0a140dccbfe23d7b7c6f70086535262aabe2e221622e8a0ba4143907f3",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/RECORDS_MANIFEST.json": "5a569e755d00866783f49708aeedf0af1e5b661b4d9e65c8f99780065b60ca30",
-    "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/REGENERATION.json": "5998d81e162a17f8a0d4ab30aef81f8cb43345949c61f5a6a5e9cd188ce81972",
+    "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/REGENERATION.json": "8b4bbb7a5aa1d8242aa4892936b46a824b39dd03178798958f05cf1b51816b51",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/VALIDATION.json": "b21d3a8ff24e1513e9384ddd187ddb4dd3f2dd94486f3e55b9b719a70a524224",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/breakdown.json": "f516a97f2e641f958229645708bf1b595579b8626ae000fbec99f2c34d4134b1",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/multiplier_distribution.csv": "e0e964c409d149f1430eab5bd09cd0114b4c1b4ff52a94ff8a9bd1579ea877d1",
     "models/challengers/ground_opportunity_consistent_poc_v2/run_v1/scoring_records.json": "0248d37e76aba09a3478f52ffb0fe863a0e9c9743cc02a97e29ba9e7d9c8b5d0",
     "models/challengers/ground_opportunity_consistent_poc_v2/test_opportunity.py": "afd1e9f6339d34ac6ebc9d56b440d75dc8d17ec72431548d49de4da9877c3566",
-    "models/challengers/ground_opportunity_consistent_poc_v2/verify_records.py": "1e9a904c322b6a2d7c24af9ae9dd9a9c04b8119d2c6e1e36a5383280e0c9edd3"
+    "models/challengers/ground_opportunity_consistent_poc_v2/verify_records.py": "196b89273c58a07f86a9b291cd13b8b8397317c3a061e5807e227b4ad5fc3eae"
   },
   "contract_manifest_sha256": "7a5fd85dcc5b84b610374f7cc1ff219a2892e58e69e098df57d468e1478e955e",
   "restored_records": {
@@ -176,5 +176,5 @@
   },
   "source_lock_sha256": "c42886c224c9635fd8aedb597798d56b152d776e0ca26aa39f101b014ab3c0ad",
   "starting_main_sha": "222c7a76bc75bd66e0517930863ebeab41baf99f",
-  "workflow_sha256": "48b9d443bc1ac19fe3f8163da1150fac7f27a94f7754c5d823f2853eff01dbb8"
+  "workflow_sha256": "490c3405681fbae0356a88f7874672c4f449bd94b22c0c152595febfcdd03efc"
 }
