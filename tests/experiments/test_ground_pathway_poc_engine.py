@@ -1,5 +1,4 @@
 import unittest
-from dataclasses import fields
 from ground_pathway_poc.engine import HazardSet, propagate, compose_external_mov0
 
 
@@ -39,8 +38,9 @@ class EngineTests(unittest.TestCase):
             self.assertLess(abs(a[k] - b[k]), .01)
 
     def test_external_composition(self):
-        self.assertEqual(compose_external_mov0(.6, .7),
-                         {"ko": .42, "submission": .18, "decision": .4})
+        actual = compose_external_mov0(.6, .7)
+        for key, expected in {"ko": .42, "submission": .18, "decision": .4}.items():
+            self.assertAlmostEqual(actual[key], expected)
 
 
 if __name__ == "__main__":
