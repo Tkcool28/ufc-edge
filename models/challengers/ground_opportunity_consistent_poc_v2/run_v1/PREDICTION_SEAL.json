@@ -1,0 +1,11 @@
+{
+  "complete_valid_prediction_population": false,
+  "hashes": {
+    "ability_records.csv.gz": "ce9c545e371b16c34bc8c94235c466fb17ed3b1e4669e874aeca322014d44cab",
+    "feasibility_rows.csv": "eb9f644798f4b962a439c1643ef0962b710b5ec8f7c9b4bb6831c5f1b0f5bc71",
+    "opportunity_transition_reward_records.json": "0f7cb1ddf27c00137f7f9b8e5495c77dd2891a12674e807ac0026dc377cf4733",
+    "prediction_only_UNSEALED.csv": "c64b2197813b1f1e2e4e3a5c25fed1deaa2ee86f264d5fa76ef4f38e5964b361"
+  },
+  "outcomes_scored": 0,
+  "status": "NOT_SEALED_FEASIBILITY_BLOCKED"
+}

@@ -1,0 +1,3 @@
+# Next scientific milestone
+
+Investigate the unresolved finite-round inversions using target-independent mathematics and measurements. Determine whether failed roots reflect solver limits or provable fixed-entry/occupancy contradictions; no structural certificate exists in this run. Any proof or broader numerical diagnostic must preserve the current result and must not score outcomes. Any changed architecture, measurement semantics or feasibility rule requires a separately reviewed contract. Do not tune or run outcome comparisons on the feasible subset. This blocked result does not establish whether opportunity consistency improves predictive performance, whether detailed positions are necessary, or whether every coarse architecture fails.
