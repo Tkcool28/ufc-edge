@@ -1,0 +1,9 @@
+# Evidence access and reproducibility
+
+The scientifically frozen contract and implementation are at b224f68a78558e55a9734d92ef6207967fef8f01, before any new outer predictions. Publication code only packages records and verifies results; it does not change scores or specifications.
+
+Large exact outputs are stored losslessly as RECORDS.tar.xz.partNNN under run_v1/. RECORDS_MANIFEST.json hashes archive, every part and every restored member. It contains prediction_only.csv, predictions.csv.gz, fighter_abilities.csv.gz, population_priors.json and simulator_records.json. To extract: concatenate lexical RECORDS.tar.xz.part* files and open the resulting tar.xz, or use publication.restore(output_directory) from Python.
+
+Fresh clone verification: `python models/challengers/ground_pathway_simulator_poc_v1/publication.py --verify-isolated`. It restores records to a temporary directory, reconstructs every ability/prediction from strict-prior governed source, regenerates every saved simulator result, verifies numeric metrics/gates and preserves immutable publication hashes. `--check` verifies all publication bytes alone. Use the publication wrapper for verification: it reads the saved 17-digit prediction CSV with round-trip floating parsing. The frozen verifier default parser perturbs diagnostic BFGS calibration coefficients by ~5e-10; lossless parsing fixes the mismatch without changing the frozen verifier, original source readers, predictions, metrics, calibration outputs, tolerances or gates.
+
+Run_v1 includes all primary/sensitivity/ablation probabilities; 8520 fighter abilities; 21300 simulator records; all population support; every outer year; fixed pathway diagnostics, classwise reliability/calibration, paired uncertainty, numerical/chronology/Monte Carlo validation; source and evidence manifests and completion marker. Sources and original model references remain frozen. No prospective confirmation outcomes are inspected.

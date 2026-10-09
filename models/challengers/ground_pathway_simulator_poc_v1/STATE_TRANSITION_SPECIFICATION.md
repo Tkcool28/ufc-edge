@@ -1,0 +1,6 @@
+# State specification
+S standing; GA generic ground active-A; GB generic ground active-B; KO absorbing; SUB absorbing. GA/GB duplicate one generic ground state only to retain actor/opponent direction; no top/bottom or positional claim. Start S. S→GA/GB entry hazards; S→KO sum of two standing KO hazards. GA/GB→S return proxy; GA/GB→KO ground hazard; GA/GB→SUB creation times conversion. Nonconverting attempts/ground strikes and continued control are self events, integrated out by Poisson thinning. No measured escape or exact state sequence asserted; ground-active actor is a modeling approximation, may miss defensive submissions.
+
+Generator diagonals negative row sums. P=exp(5Q) per five-minute round. At round expiration reset all surviving mass to standing; preserve absorbing mass. Three/five governed scheduled rounds. No interround hazard, fatigue or position states. Exact propagation eliminates Monte Carlo prediction error. Reject invalid generators/probabilities, do not silently clamp substantive invalid inputs. Only <1e-12 floating roundoff correction allowed.
+
+Primary K=raw KO/(raw KO+raw SUB). External unchanged archived MOV0 F gives KO=F*K, SUB=F*(1-K), DEC=1-F. Raw three-way state probabilities also saved as diagnostic, not primary. MOV0 is external. No Arm A/C/MOV0 refitting or enrollment.
