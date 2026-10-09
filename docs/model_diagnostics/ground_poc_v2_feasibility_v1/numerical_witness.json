@@ -1,0 +1,22 @@
+[
+  {
+    "applied_to_POC_B": false,
+    "diagnostic_TRF_error": 2.7755575615628914e-17,
+    "diagnostic_TRF_gtol": 1e-15,
+    "diagnostic_TRF_returns": [
+      0.0339055225551346,
+      9.12556634834494e-05
+    ],
+    "fight_id": "47abea85-6f5a-54e9-ab10-fc83e0690b97",
+    "flux_residual": 1.1102230246251565e-16,
+    "occupancy_error": 1.1102230246251565e-16,
+    "original_error": 3.281426852463909e-08,
+    "original_scaled_gradient": 9.949176643251464e-13,
+    "reward_residual": 4.589015606900751e-16,
+    "root_returns": [
+      0.033905522555134696,
+      9.125566348355509e-05
+    ],
+    "supported": true
+  }
+]
