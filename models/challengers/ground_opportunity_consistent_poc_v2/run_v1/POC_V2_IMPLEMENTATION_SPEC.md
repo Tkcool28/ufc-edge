@@ -1,0 +1,14 @@
+# POC V2 implementation specification
+
+The immutable PR165 contract is authoritative. opportunity.py copies its numeric equations, single bounded TRF solve, bounds, initialization and tolerances unchanged; additional evidence fields retain failed-solver residual/Jacobian/returns. preflight.py reconstructs all original strict-prior abilities and Jan1 division priors and compares every field to the saved PR163 records. It recreates only the primary POC-A transition probabilities for reference verification, never rerunning its ablations.
+
+POC-B changes only total-time TD/SUB/GnP reward to eligible-state hazard mapping and joint finite-round return inversion. Raw control proxy, legacy regularization, bilateral feasibility, standing KO, submission conversion, latent ground KO, priors and round resets are frozen. No projection, reward reduction, multistart, fallback or empirical multiplier. Every required row is attempted; invalid rows are unavailable.
+
+Broadly supported preflight rows require both fighters to meet all four existing PR163 access/control/submission/GnP broad support flags (control: one decision and 15 decision minutes; other dimensions: three measured bouts and 15 minutes). All 4260 outer contexts are attempted and preserved regardless of support. Supported fraction is a descriptor; even 100% supported feasibility would not permit scoring with any invalid outer row.
+
+The saved source archive is verified byte-for-byte. Only prediction-only, ability, pool and primary transition records are parsed; the archive's target-outcome member is hashed but never parsed. Current canonical history is permitted solely for strict-prior ability reconstruction and prior pooling. No evaluation outcomes, prospective confirmation outcomes, archived F or Arm C losses are loaded by this blocked execution. Their original frozen bytes remain in the verified source lock.
+
+Reproduce: python preflight.py from repository root creates run_v1; python verify_records.py regenerates every saved valid/unavailable record exactly. Python3.12, NumPy2.3.5, SciPy1.17.0; pandas2.2.3 lossless saved-float reader. Artifact restoration is byte-exact. Original local replay was bit-identical; cross-runtime solver replay checks the same frozen occupancy/reward/flux/probability tolerances, identical inputs/status/failure codes, and exact deterministic repeated solves within each runtime. It does not require identical low-order floating-point solver/Jacobian bits across Python patch or BLAS builds. No scientific tolerance or solver setting is changed. No scoring is implemented or invoked after this blocked preflight.
+Starting main: `222c7a76bc75bd66e0517930863ebeab41baf99f`. Branch: `feat/ground-opportunity-consistent-poc-v2`.
+
+Status: **BLOCKED_OPPORTUNITY_FEASIBILITY**. No target outcomes recovered for scoring; zero outcomes scored.

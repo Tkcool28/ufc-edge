@@ -1,0 +1,19 @@
+{
+  "certified_structural_rows": 0,
+  "classification": "E",
+  "failure_codes": {
+    "UNRESOLVED_FINITE_ROUND_TARGET": 1838
+  },
+  "invalid_outer_rows": 1838,
+  "outcomes_scored": 0,
+  "outer_rows": 4260,
+  "overall_feasibility_fraction": 0.5685446009389671,
+  "prospective_outcomes_accessed": false,
+  "starting_main_sha": "222c7a76bc75bd66e0517930863ebeab41baf99f",
+  "status": "BLOCKED_OPPORTUNITY_FEASIBILITY",
+  "supported_feasibility_fraction": 0.4924279433317049,
+  "supported_rows": 2047,
+  "supported_valid_rows": 1008,
+  "unresolved_or_numerical_rows": 1838,
+  "valid_outer_rows": 2422
+}

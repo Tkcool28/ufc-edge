@@ -1,0 +1,51 @@
+name: Opportunity-consistent ground POC V2
+on:
+  pull_request:
+    paths:
+      - 'models/challengers/ground_opportunity_consistent_poc_v2/**'
+      - '.github/workflows/ground-opportunity-consistent-poc-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  outcome-blind-reproduction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r models/challengers/ground_opportunity_consistent_poc_v2/requirements.txt
+      - name: Frozen source hashes and synthetic equations
+        run: |
+          python docs/model_contracts/ground_opportunity_reward_consistency_v1/verify.py
+          python docs/model_contracts/ground_opportunity_reward_consistency_v1/test_contract.py
+          python docs/model_contracts/ground_opportunity_reward_consistency_v1/save_synthetic_records.py --check
+          python models/challengers/ground_opportunity_consistent_poc_v2/test_opportunity.py
+      - name: Exact saved construction replay and evidence hashes
+        run: python models/challengers/ground_opportunity_consistent_poc_v2/publish_evidence.py
+      - name: Reconstruct all strict-prior abilities and all outer states
+        run: |
+          python models/challengers/ground_opportunity_consistent_poc_v2/preflight.py --output /tmp/poc-v2-replay
+          python - <<'PY'
+          from pathlib import Path
+          saved=Path('models/challengers/ground_opportunity_consistent_poc_v2/run_v1')
+          replay=Path('/tmp/poc-v2-replay')
+          for name in ['ability_records.csv.gz','feasibility_rows.csv','PREFLIGHT_RESULT.json','breakdown.json']:
+              import gzip
+              left=(saved/name).read_bytes();right=(replay/name).read_bytes()
+              if name.endswith('.gz'):left=gzip.decompress(left);right=gzip.decompress(right)
+              assert left==right, name
+          import sys
+          sys.path.insert(0, str(saved.parent))
+          from verify_records import compare_record
+          import json
+          a=json.loads((saved/'opportunity_transition_reward_records.json').read_text())
+          b=json.loads((replay/'opportunity_transition_reward_records.json').read_text())
+          assert [r['fight_id'] for r in a]==[r['fight_id'] for r in b]
+          for old,new in zip(a,b): compare_record(old,new)
+          PY
+      - name: Clean tracked tree
+        run: |
+          git diff --check
+          git diff --exit-code

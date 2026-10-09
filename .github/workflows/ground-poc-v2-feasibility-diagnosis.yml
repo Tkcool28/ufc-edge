@@ -1,0 +1,31 @@
+name: Ground POC V2 feasibility diagnosis
+on:
+  pull_request:
+    paths:
+      - 'docs/model_diagnostics/ground_poc_v2_feasibility_v1/**'
+      - '.github/workflows/ground-poc-v2-feasibility-diagnosis.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  outcome-blind-proof-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r docs/model_diagnostics/ground_poc_v2_feasibility_v1/requirements.txt
+      - name: Evidence and original source locks
+        run: python docs/model_diagnostics/ground_poc_v2_feasibility_v1/verify.py
+      - name: Frozen synthetic tests and certificate enclosures
+        run: |
+          python docs/model_contracts/ground_opportunity_reward_consistency_v1/test_contract.py
+          python models/challengers/ground_opportunity_consistent_poc_v2/test_opportunity.py
+          python docs/model_diagnostics/ground_poc_v2_feasibility_v1/test_certificates.py
+      - name: Rebuild all certificates and numerical witness without outcomes
+        run: python docs/model_diagnostics/ground_poc_v2_feasibility_v1/verify.py --replay
+      - name: Original tracked evidence untouched
+        run: |
+          git diff --check
+          git diff --exit-code

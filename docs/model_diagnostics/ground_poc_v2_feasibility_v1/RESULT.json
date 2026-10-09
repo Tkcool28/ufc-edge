@@ -1,0 +1,19 @@
+{
+  "certified_structural": 1837,
+  "certified_supported": 1038,
+  "classification": "D_FOR_FROZEN_MAPPING_WITH_ONE_NUMERICAL_MISS",
+  "counts": {
+    "CERTIFIED_ANALYTIC_ENVELOPE": 1590,
+    "CERTIFIED_INTERVAL_DOMAIN_COVER": 247,
+    "SOLVER_MISSED_VALID_SOLUTION": 1
+  },
+  "maximum_feasibility_after_numerical_repair": 0.5687793427230047,
+  "maximum_valid_after_numerical_repair": 2423,
+  "missed_valid_roots": 1,
+  "original_POC_B_modified": false,
+  "original_rows": 4260,
+  "original_unavailable": 1838,
+  "original_valid": 2422,
+  "outcomes_read_for_scoring": 0,
+  "unresolved": 0
+}

@@ -1,0 +1,310 @@
+[
+  {
+    "cell": "2018",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 184
+    },
+    "invalid": 184,
+    "rows": 470,
+    "valid": 286
+  },
+  {
+    "cell": "2019",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 230
+    },
+    "invalid": 230,
+    "rows": 507,
+    "valid": 277
+  },
+  {
+    "cell": "2020",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 206
+    },
+    "invalid": 206,
+    "rows": 443,
+    "valid": 237
+  },
+  {
+    "cell": "2021",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 248
+    },
+    "invalid": 248,
+    "rows": 492,
+    "valid": 244
+  },
+  {
+    "cell": "2022",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 226
+    },
+    "invalid": 226,
+    "rows": 505,
+    "valid": 279
+  },
+  {
+    "cell": "2023",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 208
+    },
+    "invalid": 208,
+    "rows": 505,
+    "valid": 297
+  },
+  {
+    "cell": "2024",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 205
+    },
+    "invalid": 205,
+    "rows": 502,
+    "valid": 297
+  },
+  {
+    "cell": "2025",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 210
+    },
+    "invalid": 210,
+    "rows": 504,
+    "valid": 294
+  },
+  {
+    "cell": "2026",
+    "certified_structural": 0,
+    "dimension": "outer_year",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 121
+    },
+    "invalid": 121,
+    "rows": 332,
+    "valid": 211
+  },
+  {
+    "cell": "Bantamweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 139
+    },
+    "invalid": 139,
+    "rows": 488,
+    "valid": 349
+  },
+  {
+    "cell": "Catch Weight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 18
+    },
+    "invalid": 18,
+    "rows": 59,
+    "valid": 41
+  },
+  {
+    "cell": "Featherweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 155
+    },
+    "invalid": 155,
+    "rows": 502,
+    "valid": 347
+  },
+  {
+    "cell": "Flyweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 33
+    },
+    "invalid": 33,
+    "rows": 252,
+    "valid": 219
+  },
+  {
+    "cell": "Heavyweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 203
+    },
+    "invalid": 203,
+    "rows": 316,
+    "valid": 113
+  },
+  {
+    "cell": "Light Heavyweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 208
+    },
+    "invalid": 208,
+    "rows": 319,
+    "valid": 111
+  },
+  {
+    "cell": "Lightweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 207
+    },
+    "invalid": 207,
+    "rows": 576,
+    "valid": 369
+  },
+  {
+    "cell": "Middleweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 179
+    },
+    "invalid": 179,
+    "rows": 476,
+    "valid": 297
+  },
+  {
+    "cell": "Welterweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 287
+    },
+    "invalid": 287,
+    "rows": 546,
+    "valid": 259
+  },
+  {
+    "cell": "Women's Bantamweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 118
+    },
+    "invalid": 118,
+    "rows": 158,
+    "valid": 40
+  },
+  {
+    "cell": "Women's Featherweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 19
+    },
+    "invalid": 19,
+    "rows": 27,
+    "valid": 8
+  },
+  {
+    "cell": "Women's Flyweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 133
+    },
+    "invalid": 133,
+    "rows": 266,
+    "valid": 133
+  },
+  {
+    "cell": "Women's Strawweight",
+    "certified_structural": 0,
+    "dimension": "division",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 139
+    },
+    "invalid": 139,
+    "rows": 275,
+    "valid": 136
+  },
+  {
+    "cell": "0",
+    "certified_structural": 0,
+    "dimension": "support_stratum",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 199
+    },
+    "invalid": 199,
+    "rows": 843,
+    "valid": 644
+  },
+  {
+    "cell": "1-2",
+    "certified_structural": 0,
+    "dimension": "support_stratum",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 487
+    },
+    "invalid": 487,
+    "rows": 1178,
+    "valid": 691
+  },
+  {
+    "cell": "3-7",
+    "certified_structural": 0,
+    "dimension": "support_stratum",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 722
+    },
+    "invalid": 722,
+    "rows": 1416,
+    "valid": 694
+  },
+  {
+    "cell": "8+",
+    "certified_structural": 0,
+    "dimension": "support_stratum",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 430
+    },
+    "invalid": 430,
+    "rows": 823,
+    "valid": 393
+  },
+  {
+    "cell": "3",
+    "certified_structural": 0,
+    "dimension": "scheduled_rounds",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 1627
+    },
+    "invalid": 1627,
+    "rows": 3837,
+    "valid": 2210
+  },
+  {
+    "cell": "5",
+    "certified_structural": 0,
+    "dimension": "scheduled_rounds",
+    "failure_codes": {
+      "UNRESOLVED_FINITE_ROUND_TARGET": 211
+    },
+    "invalid": 211,
+    "rows": 423,
+    "valid": 212
+  }
+]

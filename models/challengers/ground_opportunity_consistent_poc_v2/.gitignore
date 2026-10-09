@@ -1,0 +1,6 @@
+__pycache__/
+run_v1/ability_records.csv.gz
+run_v1/opportunity_transition_reward_records.json
+run_v1/implicit_multipliers_valid_only.csv.gz
+run_v1/feasibility_rows.csv
+run_v1/prediction_only_UNSEALED.csv

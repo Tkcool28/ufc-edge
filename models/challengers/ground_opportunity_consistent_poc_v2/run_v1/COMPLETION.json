@@ -1,0 +1,8 @@
+{
+  "classification": "E",
+  "evidence_manifest_sha256": "5ed906bd1852eea3e16ac20d7551dc4926141aaf75dbe6b9c49a578e03f772f3",
+  "invalid_outer_rows": 1838,
+  "merged": false,
+  "outcomes_scored": 0,
+  "status": "BLOCKED_OPPORTUNITY_FEASIBILITY"
+}
